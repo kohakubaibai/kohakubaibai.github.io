@@ -142,39 +142,39 @@ $(function () {
 		});
 	}
 
-	function setKeyword(json) {
-		var keywordItem = '';
-		for(let f = 0; f < json.length; f++) {
-			switch(f) {
-				case 0:
-					keywordItem += '<div class="keyword__item active"><div class="card"><div class="card__front"><div class="media"><img src="assets/images/keyword/'+json[f]["img-1"]+'" alt="'+json[f]["key_alt"]+'"></div>';
-					keywordItem += '<div class="txt"><div class="number">'+json[f]["no"]+'</div><div class="heading">'+json[f]["heading"]+'</div></div></div>';
-					keywordItem += '<div class="card__back"><div class="wrap"><div class="mark">'+json[f]["title"]+'</div><div class="depiction">'+json[f]["intro"]+'</div>';
-					if (json[f]["speakers"].length > 0) {
-						for (let g = 0; g < json[f]["speakers"].length; g++) {
-							keywordItem += '<div class="presenter"><button type="button" class="speakerBtn speaker-more" data-name="' + json[f]["speakers"][g]["nameZh"] + '"><div class="speakerBtn__pic"><img src="assets/images/speaker/'+ json[f]["speakers"][g]["img"] +'" alt="' + json[f]["speakers"][g]["nameZh"] + '" class="speaker-img mx-auto"></div><div class="speakerBtn__txt"><div class="name">主講人／<span>' + json[f]["speakers"][g]["nameZh"] + '</span></div><span class="title">' + json[f]["speakers"][g]["titleZh"] + '</span></div></button>'
-						}
-					}
-					keywordItem += '</div></div></div></div></div>';
-					break;
-				case 1:
-				case 2:
-					keywordItem += '<div class="keyword__item"><div class="card"><div class="card__front"><div class="media"><img src="assets/images/keyword/'+json[f]["img-1"]+'" alt="'+json[f]["key_alt"]+'"></div>';
-					keywordItem += '<div class="txt"><div class="number">'+json[f]["no"]+'</div><div class="heading">'+json[f]["heading"]+'</div></div></div>';
-					keywordItem += '<div class="card__back"><div class="wrap"><div class="mark">'+json[f]["title"]+'</div><div class="depiction">'+json[f]["intro"]+'</div>';
-					if (json[f]["speakers"].length > 0) {
-						for (let g = 0; g < json[f]["speakers"].length; g++) {
-							keywordItem += '<div class="presenter"><button type="button" class="speakerBtn speaker-more"data-name="' + json[f]["speakers"][g]["nameZh"] + '"><div class="speakerBtn__pic"><img src="assets/images/speaker/'+ json[f]["speakers"][g]["img"] +'" alt="' + json[f]["speakers"][g]["nameZh"] + '" class="speaker-img mx-auto"></div><div class="speakerBtn__txt"><div class="name">主講人／<span>' + json[f]["speakers"][g]["nameZh"] + '</span></div><span class="title">' + json[f]["speakers"][g]["titleZh"] + '</span></div></button>'
-						}
-					}
-					keywordItem += '</div></div></div></div></div>';
-					break;
-			}
+	// function setKeyword(json) {
+	// 	var keywordItem = '';
+	// 	for(let f = 0; f < json.length; f++) {
+	// 		switch(f) {
+	// 			case 0:
+	// 				keywordItem += '<div class="keyword__item active"><div class="card"><div class="card__front"><div class="media"><img src="assets/images/keyword/'+json[f]["img-1"]+'" alt="'+json[f]["key_alt"]+'"></div>';
+	// 				keywordItem += '<div class="txt"><div class="number">'+json[f]["no"]+'</div><div class="heading">'+json[f]["heading"]+'</div></div></div>';
+	// 				keywordItem += '<div class="card__back"><div class="wrap"><div class="mark">'+json[f]["title"]+'</div><div class="depiction">'+json[f]["intro"]+'</div>';
+	// 				if (json[f]["speakers"].length > 0) {
+	// 					for (let g = 0; g < json[f]["speakers"].length; g++) {
+	// 						keywordItem += '<div class="presenter"><button type="button" class="speakerBtn speaker-more" data-name="' + json[f]["speakers"][g]["nameZh"] + '"><div class="speakerBtn__pic"><img src="assets/images/speaker/'+ json[f]["speakers"][g]["img"] +'" alt="' + json[f]["speakers"][g]["nameZh"] + '" class="speaker-img mx-auto"></div><div class="speakerBtn__txt"><div class="name">主講人／<span>' + json[f]["speakers"][g]["nameZh"] + '</span></div><span class="title">' + json[f]["speakers"][g]["titleZh"] + '</span></div></button>'
+	// 					}
+	// 				}
+	// 				keywordItem += '</div></div></div></div></div>';
+	// 				break;
+	// 			case 1:
+	// 			case 2:
+	// 				keywordItem += '<div class="keyword__item"><div class="card"><div class="card__front"><div class="media"><img src="assets/images/keyword/'+json[f]["img-1"]+'" alt="'+json[f]["key_alt"]+'"></div>';
+	// 				keywordItem += '<div class="txt"><div class="number">'+json[f]["no"]+'</div><div class="heading">'+json[f]["heading"]+'</div></div></div>';
+	// 				keywordItem += '<div class="card__back"><div class="wrap"><div class="mark">'+json[f]["title"]+'</div><div class="depiction">'+json[f]["intro"]+'</div>';
+	// 				if (json[f]["speakers"].length > 0) {
+	// 					for (let g = 0; g < json[f]["speakers"].length; g++) {
+	// 						keywordItem += '<div class="presenter"><button type="button" class="speakerBtn speaker-more"data-name="' + json[f]["speakers"][g]["nameZh"] + '"><div class="speakerBtn__pic"><img src="assets/images/speaker/'+ json[f]["speakers"][g]["img"] +'" alt="' + json[f]["speakers"][g]["nameZh"] + '" class="speaker-img mx-auto"></div><div class="speakerBtn__txt"><div class="name">主講人／<span>' + json[f]["speakers"][g]["nameZh"] + '</span></div><span class="title">' + json[f]["speakers"][g]["titleZh"] + '</span></div></button>'
+	// 					}
+	// 				}
+	// 				keywordItem += '</div></div></div></div></div>';
+	// 				break;
+	// 		}
 			
 			
-		}
-		$('#keyword').html(keywordItem);
-	}
+	// 	}
+	// 	$('#keyword').html(keywordItem);
+	// }
 
 	$(document).on('click','.agenda-text button', function(){
 		let agendaHeadTop =  $(this).parent().parent().parent().parent().parent().parent('.agenda-head').offset().top,
