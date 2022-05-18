@@ -232,7 +232,7 @@ function loadingFunction() {
 loadingFunction();
 
 function makeTimer() {
-	var endTime = new Date("31 May 2022 23:59:59 GMT+08:00");
+	var endTime = new Date("19 June 2022 23:59:59 GMT+08:00");
 		endTime = (Date.parse(endTime) / 1000);
 	var now = new Date();
 		now = (Date.parse(now) / 1000);
