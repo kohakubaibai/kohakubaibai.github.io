@@ -66,7 +66,7 @@ $(function () {
 				});
 				keywordJSON[i]["speakers"] = returnVal;
 			}
-			setKeyword(keywordJSON)
+			// setKeyword(keywordJSON)
 		});
 	});
 	
