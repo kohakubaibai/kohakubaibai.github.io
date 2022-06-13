@@ -79,9 +79,9 @@ $(function () {
 				case 2:
 				case 5:
 					agendaItem += '<div class="agenda-item agenda-item--center"><div class="container agenda-head"><div class="row"><div class="col-12"><div class="row"><div class="col-md-9 col-sm-10"><div class="agenda-text"><div class="agenda-sequence"><span>'+ json[f]["sequence"] +'</span></div><div class="agenda-title h3 font-weight-500 my-0 text-center">' + json[f]["title"] + '</div><div class="agenda-intro text-md-center">' + json[f]["intro"] + '</div>';
-					if (json[f]["speakers"].length > 0) {
-						agendaItem += '<button class="btn btn--standard btn--agenda mx-auto"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
-					}
+					// if (json[f]["speakers"].length > 0) {
+					// 	agendaItem += '<button class="btn btn--standard btn--agenda mx-auto"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
+					// }
 					agendaItem += '</div><div class="agenda-img agenda-img-main mt-20"><img src="assets/images/agenda/' + json[f]["img-1"] + '" alt="' + json[f]["topic_alt"] + '"></div></div></div></div></div></div>';
 					
 					if (json[f]["speakers"].length > 0) {
@@ -98,9 +98,9 @@ $(function () {
 				// 右大左小文字在左：議題二
 				case 3:
 					agendaItem += '<div class="agenda-item agenda-item--side"><div class="container agenda-head"><div class="row"><div class="col-md-9 col-sm-10"><div class="row"><div class="col-agenda-4"><div class="agenda-text"><div class="agenda-sequence"><span>'+ json[f]["sequence"] +'</span></div><div class="agenda-title h3 font-weight-500 my-0 text-xs-center text-md-left">' + json[f]["title"] + '</div><div class="agenda-intro">' + json[f]["intro"] + '</div>';
-					if (json[f]["speakers"].length > 0) {
-						agendaItem += '<button class="btn btn--standard btn--agenda mx-xs-auto mx-md-0"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
-					}
+					// if (json[f]["speakers"].length > 0) {
+					// 	agendaItem += '<button class="btn btn--standard btn--agenda mx-xs-auto mx-md-0"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
+					// }
 					agendaItem += '</div><div class="agenda-img agenda-img-landscape mt-60"><img src="assets/images/agenda/' + json[f]["img-1"] + '" alt="' + json[f]["topic_alt"] + '"></div></div><div class="col-agenda-6"><div class="agenda-img agenda-img-vertical"><img src="assets/images/agenda/' + json[f]["img-2"] + '" alt="' + json[f]["title"] + '"></div></div></div></div></div></div>';
 					if ( json[f]["speakers"].length > 0 ) {
 						agendaItem += '<div class="agenda-body"><div class="container"><div class="row">';
@@ -115,9 +115,9 @@ $(function () {
 				// 左大右小文字在右：議題三
 				case 4:
 					agendaItem += '<div class="agenda-item agenda-item--side"><div class="container agenda-head"><div class="row"><div class="col-md-9 col-sm-10"><div class="row row-reverse"><div class="col-agenda-4"><div class="agenda-text"><div class="agenda-sequence"><span>'+ json[f]["sequence"] +'</span></div><div class="agenda-title h3 font-weight-500 my-0 text-xs-center text-md-left">' + json[f]["title"] + '</div><div class="agenda-intro">' + json[f]["intro"] + '</div>';
-					if (json[f]["speakers"].length > 0) {
-						agendaItem += '<button class="btn btn--standard btn--agenda mx-xs-auto mx-md-0"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
-					}
+					// if (json[f]["speakers"].length > 0) {
+					// 	agendaItem += '<button class="btn btn--standard btn--agenda mx-xs-auto mx-md-0"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
+					// }
 					agendaItem += '</div><div class="agenda-img agenda-img-landscape mt-60"><img src="assets/images/agenda/' + json[f]["img-1"] + '" alt="' + json[f]["topic_alt"] + '"></div></div><div class="col-agenda-6"><div class="agenda-img agenda-img-vertical"><img src="assets/images/agenda/' + json[f]["img-2"] + '" alt="' + json[f]["title"] + '"></div></div></div></div></div></div>';
 					if ( json[f]["speakers"].length > 0 ) {
 						agendaItem += '<div class="agenda-body"><div class="container"><div class="row">';
