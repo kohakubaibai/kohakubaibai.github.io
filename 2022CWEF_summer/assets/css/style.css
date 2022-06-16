@@ -6746,6 +6746,7 @@ footer {
 }
 @media only screen and (min-width: 1024px) {
   .keyword__group {
+    width: 848px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6757,20 +6758,13 @@ footer {
 }
 .keyword__item {
   width: 100%;
+  margin-bottom: 10px;
   overflow: hidden;
+  border: 1px solid #E1E1E1;
 }
 @media only screen and (min-width: 1024px) {
   .keyword__item {
-    width: 25%;
-  }
-  .keyword__item .card {
     width: 100%;
-    height: 100%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .keyword__item.active {
-    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6779,48 +6773,36 @@ footer {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .keyword__item .card {
+    width: 100%;
+    height: 100%;
+  }
 }
 @media only screen and (min-width: 1024px) {
-  .keyword__item.active .card__front {
-    width: 50%;
-  }
-  .keyword__item.active .card__front .media:before {
-    padding-top: 100%;
+  .keyword__item .card__front {
+    width: 50.1237623762%;
   }
 }
-.keyword__item.active .card__front:after {
+.keyword__item .card__front:after {
   display: none;
 }
-.keyword__item.active .card__back {
-  border-style: solid;
-}
 @media only screen and (min-width: 320px) {
-  .keyword__item.active .card__back {
+  .keyword__item .card__back {
     max-height: 9999px;
   }
-  .keyword__item.active .card__back .wrap {
+  .keyword__item .card__back .wrap {
     height: 100%;
     padding: 20px 30px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .keyword__item.active .card__back {
+  .keyword__item .card__back {
     max-height: unset;
     height: 100%;
-    left: 50%;
+    left: 50.1237623762%;
   }
-  .keyword__item.active .card__back .wrap {
+  .keyword__item .card__back .wrap {
     padding: 40px 30px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .keyword__item:nth-child(odd) .card__front .txt {
-    bottom: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .keyword__item:nth-child(even) .card__front .txt {
-    top: 0;
   }
 }
 
@@ -6852,23 +6834,36 @@ footer {
 }
 @media only screen and (min-width: 1024px) {
   .card__front .media:before {
-    padding-top: 100%;
+    padding-top: 89.3827160494%;
   }
 }
 .card__front .media:after {
   content: "";
   display: block;
-  width: 100%;
-  height: 54%;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 2;
-  background: #00a0e9;
-  background: -webkit-gradient(linear, left bottom, left top, from(#00a0e9), to(rgba(0, 160, 233, 0)));
-  background: linear-gradient(0deg, #00a0e9 0%, rgba(0, 160, 233, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a0e9",endColorstr="#00a0e9",GradientType=1);
   opacity: 0.6;
+}
+@media only screen and (min-width: 320px) {
+  .card__front .media:after {
+    width: 54%;
+    height: 100%;
+    background: #00a0e9;
+    background: -webkit-gradient(linear, left top, right top, from(#00a0e9), to(rgba(0, 160, 233, 0)));
+    background: linear-gradient(90deg, #00a0e9 0%, rgba(0, 160, 233, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a0e9",endColorstr="#00a0e9",GradientType=1);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .card__front .media:after {
+    width: 100%;
+    height: 54%;
+    background: -webkit-gradient(linear, left bottom, left top, from(#00a0e9), to(rgba(0, 160, 233, 0)));
+    background: linear-gradient(0deg, #00a0e9 0%, rgba(0, 160, 233, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a0e9",endColorstr="#00a0e9",GradientType=1);
+  }
 }
 .card__front .media img {
   position: absolute;
@@ -6883,19 +6878,10 @@ footer {
 .card__front .txt {
   position: absolute;
   left: 0;
+  bottom: 0;
   color: #fff;
   z-index: 3;
-}
-@media only screen and (min-width: 320px) {
-  .card__front .txt {
-    top: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .card__front .txt {
-    top: auto;
-    bottom: 0;
-  }
+  bottom: 0;
 }
 .card__front .txt .number {
   display: inline-block;
@@ -6912,24 +6898,9 @@ footer {
   font-weight: bold;
   font-family: "Noto Serif TC", "思源宋體 TC", "思源宋體 TW", "思源宋體", serif;
 }
-.card__front:after {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 22px;
-  background-image: url("../images/deco-more.png");
-  background-size: 56px 22px;
-  position: absolute;
-  right: 20px;
-  bottom: 8px;
-  z-index: 10;
-}
 .card__back {
   z-index: 5;
   overflow: hidden;
-  border-width: 1px;
-  border-color: #E1E1E1;
-  border-style: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.5s ease-in;
@@ -6962,6 +6933,9 @@ footer {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
+}
+.card__back .depiction p:first-child {
+  margin-top: 0;
 }
 @media only screen and (min-width: 320px) {
   .card__back .presenter {
