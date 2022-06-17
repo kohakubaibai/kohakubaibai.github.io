@@ -6719,11 +6719,11 @@ footer {
 }
 .keyword {
   background-color: #FFFFFF;
-  padding: 40px 20px 0;
+  padding: 40px 20px;
 }
 @media only screen and (min-width: 1024px) {
   .keyword {
-    padding: 80px 0 0;
+    padding: 80px 0;
   }
 }
 .keyword__title {
@@ -6758,7 +6758,6 @@ footer {
 }
 .keyword__item {
   width: 100%;
-  margin-bottom: 10px;
   overflow: hidden;
   border: 1px solid #E1E1E1;
 }
@@ -6804,6 +6803,12 @@ footer {
   .keyword__item .card__back .wrap {
     padding: 40px 30px;
   }
+}
+.keyword .keyword__item {
+  margin-bottom: 10px;
+}
+.keyword .keyword__item:last-child {
+  margin-bottom: 0;
 }
 
 .card {
@@ -7013,7 +7018,7 @@ footer {
 }
 
 .register {
-  background-color: #FFFFFF;
+  background-color: #F9F9F9;
 }
 @media only screen and (min-width: 1024px) {
   .register .section__content {
@@ -7109,7 +7114,12 @@ footer {
 }
 
 .sponsor {
-  border-top: 1px solid #dddddd;
+  background-color: #FFFFFF;
+}
+.sponsor .section__title {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .message {
@@ -7365,11 +7375,11 @@ footer {
 @media only screen and (min-width: 768px) {
   .file .img-group li img,
 .sponsor .img-group li img {
-    width: 150px;
+    height: 70px;
   }
   .file .img-group li img.img--large,
 .sponsor .img-group li img.img--large {
-    width: 180px;
+    height: 62px;
   }
 }
 .file a.btn,

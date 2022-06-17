@@ -1230,10 +1230,10 @@ footer {
 
 .keyword {
     background-color: $white;
-    padding: 40px 20px 0; 
+    padding: 40px 20px; 
 
     @include laptops {
-        padding: 80px 0 0;
+        padding: 80px 0;
     }
 
     &__title {
@@ -1266,7 +1266,6 @@ footer {
 
     &__item {
         width: 100%;
-        margin-bottom: 10px;
         overflow: hidden;
         border: 1px solid #E1E1E1;
 
@@ -1310,6 +1309,14 @@ footer {
                     padding: 40px 30px;
                 }
             }
+        }
+    }
+
+    .keyword__item {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }
@@ -1538,8 +1545,7 @@ footer {
 }
 
 .register {
-    // background-color: #F9F9F9;
-    background-color: $white;
+    background-color: #F9F9F9;
 
     .section__content {
         @include laptops {
@@ -1656,9 +1662,11 @@ footer {
 }
 
 .sponsor {
-    border-top: 1px solid #dddddd;
+    background-color: $white;
 
-    
+    .section__title {
+        justify-content: left;
+    }
 }
 
 .message {
@@ -1905,10 +1913,10 @@ footer {
                 width: 100%;
 
                 @include pad {
-                    width: 150px;
+                    height: 70px;
 
                     &.img--large {
-                        width: 180px;
+                        height: 62px;
                     }
                 }
             }
