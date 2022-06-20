@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap");
+@import url("../fonts/didot_regular.ttf");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "utils/variables",
         "utils/mixin";
@@ -12,19 +12,9 @@ img {
     display: block;
 }
 
-.clearfix,
-.clearfix::before,
-.clearfix::after {
-    display: table;
-    clear: both;
-}
 //font styles
-.serif {
-    font-family: "Noto Serif TC", "思源宋體 TC", "思源宋體 TW", "思源宋體", serif;
-}
-
-.noto {
-    font-family: 'Roboto', sans-serif;
+.didot {
+    font-family: 'Didot', 'Didot LT STD';
 }
 
 h1, h2, h3, h4, h5, h6 ,
@@ -97,53 +87,16 @@ h6, .h6 {
     list-style-type: disc;
 }
 
-.number__brackets {
-    li {
-        position: relative;
-        padding-left: 2em;
-        line-height: 1.5;
-
-        span {
-            position: absolute;
-            left: 0;
-        }
-    }
-}
-
-.list-reset {
-    @include list-reset;
-}
-
-.container {
+.wrapper {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 
     @include mobile {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    @include pad {
-        width: 95%;
     }
 
     @include desktop {
-        width: 1140px;
-    }
-}
-
-.row {
-    @include flex-obj(center, center);
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
-
-    @include mobile {
-        margin-left: -20px;
-        margin-right: -20px;
+        width: 1230px;
     }
 }
 
@@ -230,239 +183,7 @@ a,button {
     }
 }
 
-header {
-    @include flex-obj(center, center);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 15px 0;
-    // background-color: rgba(0, 0, 0, 0.9);
-    border-bottom-color: #dddddd;
-    height: 90px;
-    @include transition(all, .1s, ease);
-    @include mobile {
-        z-index: 1000;
-    }
-
-    @include laptops {
-        z-index: 200;
-    }
-
-    &.scroll {
-        height: 70px;
-        background-color: $white;
-        box-shadow: 0 3px 10px rgba(0,0,0,.15); 
-    }
-
-    .container {
-        @include flex-obj(center, space-between);
-    }
-
-    a {
-        display: block;
-
-        &.logo {
-            img {
-
-                display: block;
-                height: 40px;
-            }
-        }
-    }
-
-    .logo__set {
-        @include flex-obj(center, flex-start);
-        position: relative;
-        flex-wrap: wrap;
-        z-index: 2;
-
-        & > a {
-            display: block;
-            align-self: auto;
-
-            & > img {
-                display: block;
-                width: auto;
-                height: auto;
-
-                @include mobile {
-                    height: 35px;
-                }
-
-                @include pad {
-                    height: 40px;
-                }
-            }
-
-            &:first-child {
-                margin-right: 10px;
-            }
-        }
-
-        & > .slogan {
-            width: 100%;
-            max-width: 170px;
-            margin-top: 6px;
-            margin-left: 5px;
-            @include pad {
-                max-width: 205px;
-                margin-left: 2.5px;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-
-        & > img {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-    }
-
-    .hamburger {
-        position: relative;
-        width: 30px;
-        height: 25px;
-        z-index: 1005;
-
-        @include laptops {
-            display: none;
-        }
-
-        span {
-            position: absolute;
-            left: 0;
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: $main;
-
-            &:nth-child(1) {
-                top: 0;
-            }
-
-            &:nth-child(2) {
-                top: 50%;
-                @include translateY(-50%);
-            }
-
-            &:nth-child(3) {
-                bottom: 0;
-            }
-        }
-
-        &.active {
-            span {
-                background-color: $white;
-
-                &:nth-child(1) {
-                    top: 50%;
-                    @include rotate(-45);
-                }
-
-                &:nth-child(2) {
-                    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-                    opacity: 0;
-                }
-
-                &:nth-child(3) {
-                    top: 50%;
-                    bottom: auto;
-                    @include rotate(45);
-                }
-            }
-        }
-    }
-
-    nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: $sub;
-
-        @include mobile {
-            width: 100%;
-            padding: 100px 20px 20px 20px;
-            height: 100vh;
-            text-align: center;
-            z-index: 1000;
-        }
-
-        @include laptops {
-            display: block;
-            position: static;
-            font-size: 0;
-            padding: 0;
-            width: auto;
-            height: auto;
-            background-color: transparent;
-            z-index: 3;
-        }
-
-        ul {
-            @include list-reset;
-
-            li {
-                margin-bottom: 25px;
-                
-                @include laptops {
-                    display: inline-block;
-                    margin-bottom: 0;
-                    margin-left: 20px;
-                }
-                
-                @include desktop {
-                    margin-left: 30px;
-                }
-                
-                a {
-                    font-size: 1.125rem;
-
-                    @include laptops {
-                        font-size: 1rem;
-                    }
-
-                    &.btn {
-                        display: block;
-                    }
-
-                    &.link {
-                        @include mobile {
-                            color: $white;
-                        }
-                        
-                        @include laptops {
-                            color: #595757;
-
-                            &:hover {
-                                color: $sub;
-                            }
-                        }
-                    }
-
-                    &.btn--register {
-                        padding: 8px 30px;
-
-                        @include mobile {
-                            display: inline-block;
-                            background-color: $white !important;
-                        }
-
-                        @include laptops {
-                            background-color: $btn-register !important;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.fixed-countdown {
+.fixedTool {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -470,86 +191,6 @@ header {
     background-color: $main;
     border-top: 1px solid $white;
     z-index: 999;
-
-    .activity-title {
-        font-size: 1rem;
-
-        @include mobile {
-            width: 100%;
-        }
-
-        @include laptops {
-            font-size: 1.25rem;
-        }
-    }
-
-    .countdown {
-        display: inline;
-
-        &__item {
-            .number {
-                font-size: 18px;
-                padding: 0 5px;
-
-                @include pad {
-                    font-size: 30px;
-                    padding: 0 10px;
-                }
-            }
-
-            .units {
-                font-size: 14px;
-
-                @include pad {
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-
-    .timer {
-        flex-wrap: wrap;
-        line-height: 1.15;
-        color: $white;
-
-        .title {
-            font-size: 14px;
-
-            @include pad {
-                font-size: 18px;
-            }
-        }
-
-        &__item {
-            &.slogan {
-                font-size: 12px;
-                @include laptops {
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-
-    .btn {
-        @media only screen and (min-width: 320px) {
-            padding: 10px 8px;
-            font-size: 12px;
-        }
-        @media only screen and (min-width: 375px) {
-            padding: 10px 16px;
-            font-size: 14px;
-        }
-
-        @include laptops {
-            padding: 12px 30px;
-            font-size: 16px;
-        }
-    }
-}
-
-footer {
-    background-color: $main;
-    color: $white;
 }
 
 .section {
