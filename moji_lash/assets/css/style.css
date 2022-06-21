@@ -5418,12 +5418,14 @@ a .icon, button .icon {
 
 @media only screen and (min-width: 320px) {
   .kv {
+    min-height: 100vh;
     padding-top: 65px;
     padding-bottom: 155px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .kv {
+    min-height: auto;
     padding-top: 225px;
     padding-bottom: 0;
   }
@@ -5456,7 +5458,7 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 320px) {
   .kv__main:before {
-    height: calc(100vh - 65px);
+    padding-top: 112.9518072289%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -5466,30 +5468,55 @@ a .icon, button .icon {
   }
 }
 .kv__main .media {
+  position: absolute;
   z-index: 5;
+}
+@media only screen and (min-width: 320px) {
+  .kv__main .media {
+    width: calc(100% - 20px);
+    left: 20px;
+    bottom: -50%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .kv__main .media {
-    position: absolute;
+    width: auto;
     bottom: 86px;
     left: 50px;
   }
 }
 .kv__main .text {
+  display: inline-block;
+  position: absolute;
   z-index: 5;
+}
+@media only screen and (min-width: 320px) {
+  .kv__main .text {
+    left: 20px;
+    top: 25px;
+    text-align: left;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .kv__main .text {
-    position: absolute;
+    top: auto;
+    left: auto;
     right: 70px;
     bottom: 70px;
+    text-align: right;
   }
 }
 .kv__main .text .logo {
-  text-align: right;
+  display: inline-block;
 }
 .kv__main .text .logoCH {
   display: inline-block;
+  margin: 0 0 20px;
+}
+@media only screen and (min-width: 320px) {
+  .kv__main .text .logoCH {
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .kv__main .text .logoCH {
@@ -5503,7 +5530,7 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 320px) {
   .kv__main .text .logoEN {
-    font-size: 31px;
+    font-size: 40px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -5519,6 +5546,7 @@ a .icon, button .icon {
 @media only screen and (min-width: 320px) {
   .kv__main .text .slogan {
     font-size: 12px;
+    text-align: right;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -5551,6 +5579,11 @@ a .icon, button .icon {
   display: inline-block;
   position: relative;
 }
+@media only screen and (min-width: 320px) {
+  .card--kv {
+    width: 100%;
+  }
+}
 .card--kv .card__front:before,
 .card--kv .card__back:before {
   content: "";
@@ -5559,6 +5592,11 @@ a .icon, button .icon {
 }
 .card--kv .card__front {
   z-index: 10;
+}
+@media only screen and (min-width: 320px) {
+  .card--kv .card__front {
+    width: 60%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .card--kv .card__front {
@@ -5569,6 +5607,13 @@ a .icon, button .icon {
   z-index: 5;
   position: absolute;
   background-color: #FFF4F5;
+}
+@media only screen and (min-width: 320px) {
+  .card--kv .card__back {
+    width: 60%;
+    top: -17%;
+    left: 23%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .card--kv .card__back {

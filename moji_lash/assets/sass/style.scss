@@ -205,10 +205,12 @@ a,button {
 
 .kv {
     @include mobile {
+        min-height: 100vh;
         padding-top: 65px;
         padding-bottom: 155px;
     }
     @include laptops {
+        min-height: auto;
         padding-top: 225px;
         padding-bottom: 0;
     }
@@ -240,7 +242,7 @@ a,button {
             background-color: $bg-main;
 
             @include mobile {
-                height: calc(100vh - 65px);
+                padding-top: (375/332)*100%;
             }
             @include laptops {
                 height: auto;
@@ -249,40 +251,52 @@ a,button {
         }
 
 
-        
-
         .media {
+            position: absolute;
             z-index: 5;
-
+            
             @include mobile {
-
+                width: calc(100% - 20px);
+                left: 20px;
+                bottom: -50%;
             }
-
+            
             @include laptops {
-                position: absolute;
+                width: auto;
                 bottom: 86px;
                 left: 50px;
             }
         }
 
         .text {
+            display: inline-block;
+            position: absolute;
             z-index: 5;
 
-            @include mobile {}
+            @include mobile {
+                left: 20px;
+                top: 25px;
+                text-align: left;
+            }
 
             @include laptops {
-                position: absolute;
+                top: auto;
+                left: auto;
                 right: 70px;
                 bottom: 70px;
+                text-align: right;
             }
 
             .logo {
-                text-align: right; 
+                display: inline-block;
             }
 
             .logoCH {
                 display: inline-block;
+                margin: 0 0 20px;
+
                 @include mobile {
+                    width: 50%;
                 }
                 @include laptops {
                     width: 260px;
@@ -295,7 +309,7 @@ a,button {
                 color: $main;
 
                 @include mobile {
-                    font-size: 31px;
+                    font-size: 40px;
                 }
 
                 @include laptops {
@@ -310,6 +324,7 @@ a,button {
                 
                 @include mobile {
                     font-size: 12px;
+                    text-align: right;
                 }
 
                 @include laptops {
@@ -346,6 +361,10 @@ a,button {
     position: relative;
 
     &--kv {
+        @include mobile {
+            width: 100%;
+        }
+
         .card__front,
         .card__back {
             &:before {
@@ -357,6 +376,10 @@ a,button {
 
         .card__front {
             z-index: 10;
+
+            @include mobile {
+                width: (150/250)*100%;
+            }
             @include laptops {
                 width: 333px;
             }
@@ -366,6 +389,12 @@ a,button {
             z-index: 5;
             position: absolute;
             background-color: $bg-light;
+
+            @include mobile {
+                width: (150/250)*100%;
+                top: -17%;
+                left: 23%;
+            }
 
             @include laptops {
                 width: 300px;
