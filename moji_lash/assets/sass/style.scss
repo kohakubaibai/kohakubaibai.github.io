@@ -461,8 +461,9 @@ a,button {
 
 .comments {
     background-color: $bg-light;
+
     @include mobile {
-        padding: 25px 0;
+        padding: 25px 0 80px;
     }
 
     @include pad {
@@ -527,6 +528,7 @@ a,button {
                     width: 16px;
                     height: 16px;
                     background-image: url('../images/deco-rank.png');
+                    background-repeat: no-repeat;
                     background-size: 16px;
 
                     &:last-child {
@@ -568,19 +570,24 @@ a,button {
         position: absolute;
         width: 16px;
         height: 32px;
+        padding: 0;
         border: none;
         z-index: 1000;
         top: 50%;
         background-size: 16px 32px;
         background-color: transparent;
+        background-repeat: no-repeat;
         @include translateY(-50%);
+        
 
         &--prev {
             background-image: url('../images/arrow-slider-prev.png');
             left: 0;
+            right: auto;
         }
         &--next {
             background-image: url('../images/arrow-slider-next.png');
+            left: auto;
             right: 0;
         }
     }
