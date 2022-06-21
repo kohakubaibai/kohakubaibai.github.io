@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 ,
     margin-top: 1em;
     margin-bottom: 1em;
 
-    @include laptops {
+    @include desktop {
         font-weight: 500;
     }
 }
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 ,
 h1, .h1 {
     font-size: 2.75rem;//44px
 
-    @include laptops {
+    @include desktop {
         font-size: 2.875rem;//46px
     }
 }
@@ -38,7 +38,7 @@ h1, .h1 {
 h2, .h2 {
     font-size: 1.75rem;//28px
 
-    @include laptops {
+    @include desktop {
         font-size: 1.875rem;//30px
     }
 }
@@ -46,7 +46,7 @@ h2, .h2 {
 h3, .h3 {
     font-size: 1.375rem;//22px
 
-    @include laptops {
+    @include desktop {
         font-size: 1.5rem;//24px
     }
 }
@@ -54,7 +54,7 @@ h3, .h3 {
 h4, .h4 {
     font-size: 1.25rem;//20px
 
-    @include laptops {
+    @include desktop {
         font-size: 1.375rem;//22px
     }
 }
@@ -62,14 +62,14 @@ h4, .h4 {
 h5, .h5 {
     font-size: 1.125rem;//18px
 
-    @include laptops {
+    @include desktop {
         font-size: 1.125rem;//18px
     }
 }
 
 h6, .h6 {
     font-size: 1rem;//16px
-    @include laptops {
+    @include desktop {
         font-size: 1rem;//16px
     }
 }
@@ -93,6 +93,10 @@ h6, .h6 {
     margin-right: auto;
 
     @include mobile {
+    }
+
+    @include laptops {
+        width: 992px;
     }
 
     @include desktop {
@@ -205,12 +209,16 @@ a,button {
 
 .kv {
     @include mobile {
-        min-height: 100vh;
         padding-top: 65px;
-        padding-bottom: 155px;
+        padding-bottom: 60%;
     }
+
     @include laptops {
-        min-height: auto;
+        padding-top: 165px;
+        padding-bottom: 0;
+    }
+
+    @include desktop {
         padding-top: 225px;
         padding-bottom: 0;
     }
@@ -218,19 +226,21 @@ a,button {
     .wrapper {
         position: relative;
 
-
         @include mobile {
             padding: 0 25px;
         }
 
         @include laptops {
+            padding: 0 40px;
+        }
+
+        @include desktop {
             padding: 0 60px; 
         }
     }
 
     &__main {
         position: relative;
-        display: inline-block;
         width: 100%;
         bottom: 0;
         
@@ -244,12 +254,12 @@ a,button {
             @include mobile {
                 padding-top: (375/332)*100%;
             }
+
             @include laptops {
                 height: auto;
                 padding-top: (770/1110)*100%;
             }
         }
-
 
         .media {
             position: absolute;
@@ -259,6 +269,10 @@ a,button {
                 width: calc(100% - 20px);
                 left: 20px;
                 bottom: -50%;
+            }
+
+            @include pad {
+                bottom: -30%;
             }
             
             @include laptops {
@@ -299,6 +313,10 @@ a,button {
                     width: 50%;
                 }
                 @include laptops {
+                    width: 200px;
+                }
+
+                @include desktop {
                     width: 260px;
                 }
             }
@@ -313,6 +331,10 @@ a,button {
                 }
 
                 @include laptops {
+                    font-size: 60px;
+                }
+
+                @include desktop {
                     font-size: 82px;
                 }
             }
@@ -327,7 +349,11 @@ a,button {
                     text-align: right;
                 }
 
-                @include laptops {
+                @include desktop {
+                    font-size: 18px;
+                }
+
+                @include desktop {
                     font-size: 22px;
                 }
 
@@ -380,7 +406,12 @@ a,button {
             @include mobile {
                 width: (150/250)*100%;
             }
+
             @include laptops {
+                width: 270px;
+            }
+
+            @include desktop {
                 width: 333px;
             }
         }
@@ -397,6 +428,12 @@ a,button {
             }
 
             @include laptops {
+                width: 270px;
+                top: -100px;
+                left: 95px;
+            }
+
+            @include desktop {
                 width: 300px;
                 top: -169px;
                 left: 275px;
@@ -422,4 +459,157 @@ a,button {
     }
 }
 
+.comments {
+    background-color: $bg-light;
+    @include mobile {
+        padding: 25px 0;
+    }
+
+    @include pad {
+        padding: 90px 0;
+    }
+
+    .wrapper {
+        position: relative;
+
+        @include mobile {
+            padding: 0 25px;
+        }
+
+        @include laptops {
+            padding: 0 40px;
+        }
+
+        @include desktop {
+            padding: 0 48px; 
+        }
+    }
+
+    .slides {
+        padding: 0 25px;
+    }
+}
+
+.commentItem {
+    padding: 12px 8px;
+    border: 1px solid #B0AFB6;
+
+    &__head {
+        .media {
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #B7B7BE;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            span {
+                color: $white;
+                line-height: 48px;
+                font-size: 24px;
+            }
+        }
+        .text {
+            display: inline-block;
+            vertical-align: middle;
+
+            &__name {
+                color: $main;
+                font-size: 26px;
+            }
+
+            &__rank {
+                line-height: 1;
+
+                span {
+                    display: inline-block;
+                    margin-right: 3px;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../images/deco-rank.png');
+                    background-size: 16px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__body {
+        span {
+            @include mobile {
+                display: inline;
+            }
+
+            @include pad {
+                display: block;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: lighter;
+            margin: 30px 0 0;
+            min-height: 15px*1.6*6;
+        }
+    }
+}
+
+.slides {
+
+    &__item {
+        margin: 0 12px;
+    }
+
+    &__arrow {
+        @include appearance(none);
+        position: absolute;
+        width: 16px;
+        height: 32px;
+        border: none;
+        z-index: 1000;
+        top: 50%;
+        background-size: 16px 32px;
+        background-color: transparent;
+        @include translateY(-50%);
+
+        &--prev {
+            background-image: url('../images/arrow-slider-prev.png');
+            left: 0;
+        }
+        &--next {
+            background-image: url('../images/arrow-slider-next.png');
+            right: 0;
+        }
+    }
+
+    &__dots {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        text-align: center;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+
+        & > li {
+            display: inline-block;
+            margin: 0 3px;
+        }
+
+        button {
+            border: none;
+            font-size: 0;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #B7B7BE;
+            border-radius: 50%;
+            padding: 0;
+        }
+    }
+}
 /*# sourceMappingURL=style.css.map */
