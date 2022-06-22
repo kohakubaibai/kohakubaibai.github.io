@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <section id="kv" class="section kv">
+    <section id="kv" class="section section--kv kv">
         <div class="wrapper">
             <div class="kv__main">
                 <div class="text">
@@ -48,11 +48,11 @@
             </div>
         </div>
     </section>
-    <section id="comments" class="section comments">
+    <section id="comments" class="section section--comments comments">
         <div class="wrapper">
             <div class="section__content">
                 <div class="carousel" style="visibility: hidden;">
-                    <div class="slides slides--comments" data-slick-slider="comment">
+                    <div class="slides slides--comments" data-slick-slider="comments">
                         <div class="slides__item">
                             <div class="commentItem">
                                 <div class="commentItem__head">
@@ -250,10 +250,37 @@
             </div>
         </div>
     </section>
-    <section id="staff" class="section staff">
+    <section id="staff" class="section section--staff staff">
         <div class="wrapper">
             <div class="section__content">
-                <div class="teacher">某則師資</div>
+                <div class="teacher">
+                    <div class="teacher__media">
+                        <div class="carousel" style="visibility: hidden;">
+                            <div class="slides slides--teacher" data-slick-slider="teacher">
+                                <div class="slides__item"><img src="assets/images/img-teacher-01.jpg" alt=""></div>
+                                <div class="slides__item"><img src="assets/images/img-teacher-02.jpg" alt=""></div>
+                                <div class="slides__item"><img src="assets/images/img-teacher-03.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="dialog dialog--fixed">
+                            <div class="dialog__line"></div>
+                            <div class="dialog__content didot"><span>Work</span></div>
+                        </div>
+                    </div>
+                    <div class="teacher__text">
+                        <div class="top">
+                            <h3 class="name">小倩</h3>
+                            <h4 class="title">專業甲級美睫師</h4>
+                        </div>
+                        <div class="body">
+                            <p>
+                                手法輕柔無感<br>
+                                睫毛排列整齊<br>
+                                細心文靜
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
