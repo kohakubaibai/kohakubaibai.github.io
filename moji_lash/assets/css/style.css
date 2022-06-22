@@ -5798,26 +5798,60 @@ a .icon, button .icon {
     padding: 0 60px;
   }
 }
+.staff .teacher:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 320px) {
+  .staff .teacher {
+    margin-bottom: 30%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .staff .teacher {
+    margin-bottom: 130px;
+  }
+}
 
+.teacher {
+  position: relative;
+}
 .teacher:after {
   content: "";
   display: table;
   clear: both;
 }
 .teacher__media {
-  float: left;
   position: relative;
   z-index: 10;
 }
 @media only screen and (min-width: 320px) {
   .teacher__media {
-    width: 60%;
+    width: 62%;
   }
 }
 @media only screen and (min-width: 1024px) {
   .teacher__media {
     width: 528px;
   }
+}
+.teacher__media--left {
+  float: left;
+}
+.teacher__media--right {
+  float: right;
+}
+@media only screen and (min-width: 320px) {
+  .teacher__media--right {
+    position: relative;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__media--right {
+    position: static;
+  }
+}
+.teacher__media .dialog {
+  text-align: center;
 }
 .teacher__media .dialog__line {
   position: relative;
@@ -5837,24 +5871,40 @@ a .icon, button .icon {
   display: inline-block;
   background-color: #616c83;
 }
+@media only screen and (min-width: 320px) {
+  .teacher__media .dialog__content {
+    padding: 10px 50px;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .teacher__media .dialog__content {
     padding: 20px 120px;
   }
 }
 .teacher__media .dialog__content > span {
-  font-size: 32px;
   color: #FFFFFF;
 }
-.teacher__media .dialog--fixed {
-  text-align: center;
+@media only screen and (min-width: 320px) {
+  .teacher__media .dialog__content > span {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__media .dialog__content > span {
+    font-size: 32px;
+  }
 }
 .teacher__media .dialog--fixed .dialog__line {
   margin: -5px auto 0;
+  width: 1px;
+}
+@media only screen and (min-width: 320px) {
+  .teacher__media .dialog--fixed .dialog__line {
+    height: 25px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .teacher__media .dialog--fixed .dialog__line {
-    width: 1px;
     height: 55px;
   }
 }
@@ -5863,14 +5913,98 @@ a .icon, button .icon {
   left: 50%;
   margin-left: -5px;
 }
+@media only screen and (min-width: 1024px) {
+  .teacher__media .dialog--reverse {
+    position: absolute;
+    left: 20px;
+    z-index: 10;
+    bottom: 165px;
+  }
+}
+.teacher__media .dialog--reverse .dialog__line {
+  vertical-align: middle;
+  margin: -5px auto 0;
+}
+@media only screen and (min-width: 320px) {
+  .teacher__media .dialog--reverse .dialog__line.sp {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__media .dialog--reverse .dialog__line.sp {
+    display: none;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__media .dialog--reverse .dialog__line.pc {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__media .dialog--reverse .dialog__line.pc {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__media .dialog--reverse .dialog__line {
+    width: 1px;
+    height: 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__media .dialog--reverse .dialog__line {
+    display: inline-block;
+    width: 255px;
+    height: 1px;
+    margin-left: -5px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__media .dialog--reverse .dialog__line:before {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__media .dialog--reverse .dialog__line:before {
+    top: 50%;
+    left: auto;
+    margin-left: 0;
+    margin-top: -5px;
+    right: -5px;
+  }
+}
 .teacher__text {
-  float: left;
-  position: relative;
   z-index: 5;
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text {
+    width: auto;
+    float: left;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text .top {
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 55px;
+  }
 }
 .teacher__text .top .name {
   font-weight: lighter;
+  line-height: 1;
   color: #685256;
+  margin: 0;
 }
 @media only screen and (min-width: 320px) {
   .teacher__text .top .name {
@@ -5884,44 +6018,142 @@ a .icon, button .icon {
     display: inline-block;
   }
 }
+@media only screen and (min-width: 320px) {
+  .teacher__text .top .name span {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text .top .name span {
+    display: inline;
+  }
+}
 .teacher__text .top .title {
   font-weight: lighter;
+  line-height: 1;
   color: #616c83;
+  margin: 0;
 }
 @media only screen and (min-width: 320px) {
   .teacher__text .top .title {
     font-size: 12px;
     display: block;
+    margin-top: 10px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .teacher__text .top .title {
     font-size: 32px;
     display: inline-block;
+    margin-top: 0;
+    margin-left: 24px;
   }
 }
 .teacher__text .body {
   position: relative;
-  background-color: #CCCCD0;
 }
 .teacher__text .body:before {
   content: "";
-  display: block;
-  padding-top: 129.5977011494%;
+  background-color: #CCCCD0;
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text .body:before {
+    display: inline-block;
+    width: 64%;
+    padding-top: 90%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text .body:before {
+    display: block;
+    width: auto;
+    padding-top: 129.5977011494%;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text .body {
+    margin-top: 20px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .teacher__text .body {
-    margin-left: -235px;
+    margin-top: 0;
     width: 540px;
+    text-align: left;
   }
 }
 .teacher__text .body p {
   position: absolute;
 }
+@media only screen and (min-width: 320px) {
+  .teacher__text .body p {
+    text-align: left;
+    top: 20px;
+    font-size: 12px;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .teacher__text .body p {
-    top: 0;
-    left: 255px;
+    top: 130px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text--right .top {
+    padding-left: 64%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text--right .top {
+    padding-left: 40px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text--right .body {
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text--right .body {
+    margin-left: -235px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text--right .body p {
+    left: 64%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text--right .body p {
+    left: 270px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text--left .top {
+    padding-right: 64%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text--left .top {
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text--left .body {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .teacher__text--left .body p {
+    right: 64%;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .teacher__text--left .body p {
+    right: auto;
+    left: 20px;
+    text-align: left;
   }
 }
 

@@ -580,24 +580,56 @@ a,button {
             padding: 0 60px; 
         }
     }
+
+    .teacher {
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include mobile {
+            margin-bottom: 30%;
+        }
+    
+        @include laptops {
+            margin-bottom: 130px;
+        }
+    }
 }
 
 .teacher {
     @include clearfix;
+    position: relative;
 
     &__media {
-        float: left;
         position: relative;
         z-index: 10;
 
         @include mobile {
-            width: 60%;
+            width: 62%;
         }
+
         @include laptops {
             width: 528px;
         }
 
+        &--left {
+            float: left;
+        }
+
+        &--right {
+            float: right;
+            
+            @include mobile {
+                position: relative;
+            }
+
+            @include laptops {
+                position: static;
+            }
+        }
+
         .dialog{
+            text-align: center;
 
             &__line {
                 position: relative;
@@ -614,28 +646,43 @@ a,button {
                     border-radius: 50%;
                 }
             }
+
             &__content {
                 display: inline-block;
                 background-color: $main;
+
+                @include mobile {
+                    padding: 10px 50px;
+                }
 
                 @include laptops {
                     padding: 20px 120px;
                 }
 
                 & > span {
-                    font-size: 32px;
                     color: $white;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+
+                    @include laptops {
+                        font-size: 32px;
+                    }
                 }
             }
 
             &--fixed {
-                text-align: center;
 
                 .dialog__line {
                     margin: -5px auto 0;
+                    width: 1px;
+
+                    @include mobile {
+                        height: 25px;
+                    }
                     
                     @include laptops {
-                        width: 1px;
                         height: 55px;
                     }
 
@@ -647,21 +694,98 @@ a,button {
                 }
             }
 
-            @include laptops {
-                
+            &--reverse {
+
+                @include laptops {
+                    position: absolute;
+                    left: 20px;
+                    z-index: 10;
+                    bottom: 165px;
+                }
+
+                .dialog__line {
+                    vertical-align: middle;
+                    margin: -5px auto 0;
+
+                    &.sp {
+                        @include mobile {
+                            display: block;
+                        }
+                        @include laptops {
+                            display: none;
+                        }
+                    }
+
+                    &.pc {
+                        @include mobile {
+                            display: none;
+                        }
+                        @include laptops {
+                            display: inline-block;
+                        }
+                    }
+                    
+                    @include mobile {
+                        width: 1px;
+                        height: 25px;
+                    }
+                    
+                    @include laptops {
+                        display: inline-block;
+                        width: 255px;
+                        height: 1px;
+                        margin-left: -5px;
+                    }
+
+                    &:before {
+
+                        @include mobile {
+                            top: 0;
+                            left: 50%;
+                            margin-left: -5px;
+                        }
+
+                        @include laptops{
+                            top: 50%;
+                            left: auto;
+                            margin-left: 0;
+                            margin-top: -5px;
+                            right: -5px;
+                        }
+                    }
+                }
             }
         }
     }
 
     &__text {
-        float: left;
-        position: relative;
         z-index: 5;
 
+        @include mobile {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        @include laptops {
+            width: auto;
+            float: left;
+            position: relative;
+        }
+
         .top {
+            @include laptops {
+                padding-left: 0;
+                margin-top: 30px;
+                margin-bottom: 55px;
+            }
+
             .name {
                 font-weight: lighter;
+                line-height: 1;
                 color: $sub;
+                margin: 0;
 
                 @include mobile {
                     font-size: 28px;
@@ -671,42 +795,141 @@ a,button {
                     font-size: 84px;
                     display: inline-block;
                 }
+
+                span {
+                    @include mobile {
+                        display: block;
+                    }
+
+                    @include laptops {
+                        display: inline;
+                    }
+                }
             }
+
             .title {
                 font-weight: lighter;
+                line-height: 1;
                 color: $main;
+                margin: 0;
 
                 @include mobile {
                     font-size: 12px;
                     display: block;
+                    margin-top: 10px;
                 }
                 @include laptops {
                     font-size: 32px;
                     display: inline-block;
+                    margin-top: 0;
+                    margin-left: 24px;
                 }
             }
         }
 
         .body {
             position: relative;
-            background-color: #CCCCD0;
 
             &:before {
                 content: '';
-                display: block;
-                padding-top: (451/348)*100%;
+                background-color: #CCCCD0;
+
+                @include mobile {
+                    display: inline-block;
+                    width: 64%;
+                    padding-top: 90%;
+                }
+
+                @include laptops {
+                    display: block;
+                    width: auto;
+                    padding-top: (451/348)*100%;
+                }
+            }
+
+            @include mobile {
+                margin-top: 20px;
             }
 
             @include laptops {
-                margin-left: -235px;
+                margin-top: 0;
                 width: 540px;
+                text-align: left;
             }
 
             p {
                 position: absolute;
+                @include mobile {
+                    text-align: left;
+                    top: 20px;
+                    font-size: 12px;
+                }
+
                 @include laptops {
-                    top: 0;
-                    left: 255px;
+                    top: 130px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &--right {
+            .top {
+                @include mobile {
+                    padding-left: 64%;
+                }
+
+                @include laptops {
+                    padding-left: 40px;
+                }
+            }
+
+            .body {
+                @include mobile {
+                    text-align: right;
+                }
+
+                @include laptops {
+                    margin-left: -235px;
+                }
+
+                p {
+                    @include mobile {
+                        left: 64%;
+                    }
+
+                    @include laptops {
+                        left: 270px;
+                    }
+                }
+            }
+        }
+
+        &--left {
+            .top {
+                @include mobile {
+                    padding-right: 64%;
+                }
+                @include laptops {
+                    padding-right: 0;
+                }
+            }
+
+            .body {
+                @include mobile {
+                    text-align: left;
+                }
+
+                p {
+                    @include mobile {
+                        right: 64%;
+                        text-align: right;
+                    }
+
+                    @include laptops {
+                        right: auto;
+                        left: 20px;
+                        text-align: left;
+                    }
                 }
             }
         }
