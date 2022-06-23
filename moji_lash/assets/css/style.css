@@ -6285,7 +6285,7 @@ a .icon, button .icon {
 @media only screen and (min-width: 1024px) {
   .category__name > .en, .category__name > .ch {
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: baseline;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -6298,6 +6298,7 @@ a .icon, button .icon {
   .category__name > .en {
     font-size: 52px;
     margin-bottom: 0;
+    margin-right: 5px;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -6309,6 +6310,9 @@ a .icon, button .icon {
   .category__name > .ch {
     font-size: 32px;
   }
+}
+.category__intro {
+  color: #694e3d;
 }
 .category__intro:after {
   content: "";
@@ -6339,6 +6343,7 @@ a .icon, button .icon {
   .category__intro .feature {
     float: left;
     width: 40%;
+    padding-left: 20px;
     margin-top: 20px;
   }
 }
@@ -6352,10 +6357,27 @@ a .icon, button .icon {
     font-size: 22px;
   }
 }
+.category__intro .feature > li .label {
+  display: inline-block;
+  vertical-align: top;
+}
+.category__intro .feature > li .label:first-child {
+  margin-right: 6px;
+}
+@media only screen and (min-width: 320px) {
+  .category__intro .feature > li .label > span {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__intro .feature > li .label > span {
+    display: block;
+  }
+}
 @media only screen and (min-width: 320px) {
   .category__table {
     width: 100%;
-    font-size: 10px;
+    font-size: 11px;
     margin-bottom: 10px;
   }
 }
@@ -6385,11 +6407,50 @@ a .icon, button .icon {
   background-color: #FFF4F5;
 }
 .category__table tbody tr td {
+  color: #694e3d;
   padding: 10px 5px;
   text-align: center;
 }
 .category__table tbody tr td.narrative {
   text-align: left;
+}
+@media only screen and (min-width: 320px) {
+  .category__table tbody tr td .cv {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__table tbody tr td .cv {
+    font-size: 15px;
+  }
+}
+.category__table tbody tr.best {
+  position: relative;
+}
+.category__table tbody tr.best:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  background-image: url("../images/deco-best.png");
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 320px) {
+  .category__table tbody tr.best:after {
+    width: 29px;
+    height: 13px;
+    left: -25px;
+    background-size: 29px 13px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__table tbody tr.best:after {
+    left: -53px;
+    width: 58px;
+    height: 25px;
+    background-size: 58px 25px;
+  }
 }
 @media only screen and (min-width: 320px) {
   .category__image {
@@ -6471,6 +6532,7 @@ a .icon, button .icon {
     top: auto;
     right: auto;
     line-height: 1;
+    margin-top: 10px;
   }
 }
 .category__foot .chName {
@@ -6547,6 +6609,124 @@ a .icon, button .icon {
 @media only screen and (min-width: 1024px) {
   .category__foot .chName .characteristic > span {
     font-size: 32px;
+  }
+}
+
+.services {
+  background-color: #cbbdc1;
+}
+@media only screen and (min-width: 320px) {
+  .services {
+    padding: 30px 0 30px 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .services {
+    padding: 90px 0;
+  }
+}
+
+.serviceGroup {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.serviceGroup:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 1024px) {
+  .serviceGroup {
+    margin: 0 -10px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .serviceGroup > li {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .serviceGroup > li {
+    float: left;
+    width: 50%;
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+}
+
+.service {
+  background-color: #fff;
+}
+@media only screen and (min-width: 320px) {
+  .service {
+    padding: 25px 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .service {
+    padding: 50px 40px;
+  }
+}
+.service__title .ch,
+.service__title .en {
+  display: block;
+  line-height: 1;
+}
+.service__title .ch {
+  color: #685256;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #685256;
+}
+@media only screen and (min-width: 320px) {
+  .service__title .ch {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .service__title .ch {
+    font-size: 32px;
+  }
+}
+.service__title .en {
+  color: #616c83;
+  padding-top: 5px;
+}
+@media only screen and (min-width: 320px) {
+  .service__title .en {
+    font-size: 17px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .service__title .en {
+    font-size: 34px;
+  }
+}
+.service__table {
+  margin-top: 20px;
+  width: 100%;
+}
+.service__table tbody tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+.service__table tbody tr:nth-child(even) {
+  background-color: #FFF4F5;
+}
+.service__table tbody tr td {
+  width: 50%;
+  color: #685256;
+  padding: 10px 5px;
+  text-align: left;
+}
+@media only screen and (min-width: 320px) {
+  .service__table tbody tr td .cv {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .service__table tbody tr td .cv {
+    font-size: 15px;
   }
 }
 

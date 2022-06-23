@@ -53,9 +53,9 @@ $(function () {
 		formulaItem += '<div class="category"><div class="category__main"><div class="category__head"><div class="category__name"><span class="en didot">' + formula[i]["formula_en"] +'</span><span class="ch">' + formula[i]["formula_ch"] +'</span></div><div class="category__intro"><p class="paragraph">' + formula[i]["intro"] +'</p><ul class="feature">';
 		var featureItem = '';
 		for (let k = 0; k < formula[i].feature.length; k++) {
-			featureItem += '<li>顏色: ' + formula[i].feature[k]["color"] +'</li>';
-			featureItem += '<li>Size: ' + formula[i].feature[k]["size"] +'</li>';
-			featureItem += '<li>Skill: ' + formula[i].feature[k]["skill"] +'</li>';
+			featureItem += '<li><span class="label">顏色:</span><span class="label">' + formula[i].feature[k]["color"] +'</span></li>';
+			featureItem += '<li><span class="label">Size:</span><span class="label">' + formula[i].feature[k]["size"] +'</span></li>';
+			featureItem += '<li><span class="label">Skill:</span><span class="label">' + formula[i].feature[k]["skill"] +'</li></span>';
 		}	
 		formulaItem += featureItem;
 		formulaItem += '</ul></div></div><div class="category__body"><table class="category__table"><thead><tr><th>雙眼根數</th><th>定價</th><th>體驗價</th><th class="narrative">妝感說明</th></tr></thead><tbody>';
