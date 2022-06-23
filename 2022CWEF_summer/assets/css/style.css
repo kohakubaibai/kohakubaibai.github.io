@@ -7370,7 +7370,10 @@ footer {
 .file .img-group li img,
 .sponsor .img-group li img {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 @media only screen and (min-width: 768px) {
   .file .img-group li img,

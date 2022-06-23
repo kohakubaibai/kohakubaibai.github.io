@@ -1909,7 +1909,9 @@ footer {
 
             img {
                 display: block;
-                width: 100%;
+                width: auto;
+                max-width: 100%;
+                align-self: flex-start;
 
                 @include pad {
                     height: 70px;
