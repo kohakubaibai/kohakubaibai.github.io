@@ -6157,6 +6157,399 @@ a .icon, button .icon {
   }
 }
 
+.categories {
+  background-color: #cbbdc1;
+}
+@media only screen and (min-width: 320px) {
+  .categories {
+    padding: 30px 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .categories {
+    padding: 90px 0;
+  }
+}
+.categories .wrapper {
+  position: relative;
+}
+@media only screen and (min-width: 320px) {
+  .categories .wrapper {
+    padding: 0 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .categories .wrapper {
+    padding: 0 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .categories .wrapper {
+    padding: 0 60px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .categories .section__title {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .categories .section__title {
+    margin-bottom: 70px;
+  }
+}
+.categories .section__title .text {
+  color: #685256;
+  line-height: 1;
+}
+@media only screen and (min-width: 320px) {
+  .categories .section__title .text {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .categories .section__title .text {
+    font-size: 84px;
+  }
+}
+.categories .section__content {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 320px) {
+  .categories .section__content {
+    padding-left: 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .categories .section__content {
+    width: 992px;
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .categories .section__content {
+    width: 1100px;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .categoryGroup .category {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .categoryGroup .category {
+    margin-bottom: 100px;
+  }
+}
+.categoryGroup .category:last-child {
+  margin-bottom: 0;
+}
+
+.category__main {
+  background-color: #FFFFFF;
+}
+@media only screen and (min-width: 320px) {
+  .category__main {
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__main {
+    padding: 70px 40px;
+  }
+}
+.category__head {
+  margin-bottom: 20px;
+}
+.category__body {
+  position: relative;
+}
+.category__body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.category__name {
+  color: #616c83;
+}
+.category__name > .en, .category__name > .ch {
+  line-height: 1;
+}
+@media only screen and (min-width: 320px) {
+  .category__name > .en, .category__name > .ch {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__name > .en, .category__name > .ch {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .category__name > .en {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__name > .en {
+    font-size: 52px;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .category__name > .ch {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__name > .ch {
+    font-size: 32px;
+  }
+}
+.category__intro:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 320px) {
+  .category__intro .paragraph {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__intro .paragraph {
+    float: left;
+    width: 60%;
+    font-size: 22px;
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+}
+.category__intro .feature {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media only screen and (min-width: 1024px) {
+  .category__intro .feature {
+    float: left;
+    width: 40%;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .category__intro .feature > li {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__intro .feature > li {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .category__table {
+    width: 100%;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__table {
+    float: left;
+    width: 73%;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}
+.category__table thead {
+  background-color: #685256;
+}
+.category__table thead th {
+  padding: 10px 5px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.category__table thead th.narrative {
+  text-align: left;
+}
+.category__table tbody tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+.category__table tbody tr:nth-child(even) {
+  background-color: #FFF4F5;
+}
+.category__table tbody tr td {
+  padding: 10px 5px;
+  text-align: center;
+}
+.category__table tbody tr td.narrative {
+  text-align: left;
+}
+@media only screen and (min-width: 320px) {
+  .category__image {
+    width: 75%;
+    position: absolute;
+    z-index: 15;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__image {
+    position: relative;
+    float: right;
+    width: 27%;
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+.category__foot {
+  position: relative;
+}
+.category__foot:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 320px) {
+  .category__foot:before {
+    content: "";
+    display: block;
+    width: 66%;
+    padding-top: 75%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__foot:before {
+    display: none;
+  }
+}
+.category__foot .enName {
+  position: relative;
+  z-index: 10;
+  background-color: #cbbdc1;
+}
+.category__foot .enName span {
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 320px) {
+  .category__foot .enName span {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__foot .enName span {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .category__foot .enName {
+    font-size: 18px;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    line-height: 0.8;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__foot .enName {
+    float: left;
+    font-size: 36px;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    padding-right: 10px;
+    position: relative;
+    top: auto;
+    right: auto;
+    line-height: 1;
+  }
+}
+.category__foot .chName {
+  position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .category__foot .chName {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    right: 0;
+    text-align: right;
+    -webkit-transform: translate(60px, -10%);
+    transform: translate(60px, -10%);
+  }
+}
+.category__foot .chName .line {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #616c83;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.category__foot .chName .characteristic {
+  position: relative;
+  display: inline-block;
+  background-color: #616c83;
+}
+.category__foot .chName .characteristic:before, .category__foot .chName .characteristic:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #616c83;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -5px;
+}
+@media only screen and (min-width: 320px) {
+  .category__foot .chName .characteristic {
+    padding: 10px 50px;
+  }
+  .category__foot .chName .characteristic:before {
+    display: none;
+  }
+  .category__foot .chName .characteristic:after {
+    display: inline-block;
+    right: -5px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__foot .chName .characteristic {
+    padding: 10px 95px;
+  }
+  .category__foot .chName .characteristic:before {
+    display: inline-block;
+    left: -5px;
+  }
+  .category__foot .chName .characteristic:after {
+    display: none;
+  }
+}
+.category__foot .chName .characteristic > span {
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 320px) {
+  .category__foot .chName .characteristic > span {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .category__foot .chName .characteristic > span {
+    font-size: 32px;
+  }
+}
+
 .slides--comments .slides__item {
   margin: 0 12px;
 }

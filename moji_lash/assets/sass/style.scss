@@ -565,6 +565,7 @@ a,button {
         padding-top: 65px;
         padding-bottom: 65px;
     }
+
     .wrapper {
         position: relative;
 
@@ -933,6 +934,386 @@ a,button {
                 }
             }
         }
+    }
+}
+
+.categories {
+    background-color: $bg-main;
+
+    @include mobile {
+        padding: 30px 0;
+    }
+
+    @include laptops {
+        padding: 90px 0;
+    }
+
+    .wrapper {
+        position: relative;
+
+        @include mobile {
+            padding: 0 25px;
+        }
+
+        @include laptops {
+            padding: 0 40px;
+        }
+
+        @include desktop {
+            padding: 0 60px; 
+        }
+    }
+
+    .section__title {
+        @include mobile {
+            margin-bottom: 30px;
+        }
+
+        @include laptops {
+            margin-bottom: 70px;
+        }
+
+        .text {
+            color: $sub;
+            line-height: 1;
+
+            @include mobile {
+                font-size: 26px;
+            }
+            @include laptops {
+                font-size: 84px;
+            }
+        }
+    }
+    .section__content {
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mobile {
+            padding-left: 25px;
+        }
+
+        @include laptops {
+            width: 992px;
+            padding-left: 0;
+        }
+
+        @include desktop {
+            width: 1100px;
+        }
+    }
+}
+
+.categoryGroup {
+    .category {
+        @include mobile {
+            margin-bottom: 40px;
+        }
+        @include laptops {
+            margin-bottom: 100px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.category {
+
+    &__main {
+        background-color: $white;
+        
+        @include mobile {
+            padding: 20px;
+        }
+
+        @include laptops {
+            padding: 70px 40px;
+        }
+    }
+
+    &__head {
+        margin-bottom: 20px;
+        @include mobile {
+        }
+    }
+    &__body {
+        position: relative;
+        @include clearfix;
+    }
+
+    &__name {
+        color: $main;
+
+        & > .en,
+        & > .ch {
+            line-height: 1;
+
+            @include mobile {
+                display: block;
+            }
+
+            @include laptops {
+                display: inline-block;
+                vertical-align: bottom;
+            }
+        }
+
+        & > .en {
+            @include mobile {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+            @include laptops {
+                font-size: 52px;
+                margin-bottom: 0;
+            }
+        }
+
+        & > .ch {
+            @include mobile {
+                font-size: 16px;
+            }
+            @include laptops {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__intro {
+        @include clearfix;
+
+        .paragraph {
+            @include mobile {
+                margin-bottom: 20px;
+                font-size: 12px;
+            }
+            @include laptops {
+                float: left;
+                width: 60%;
+                font-size: 22px;
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+        }
+
+        .feature {
+            @include list-reset;
+
+            @include laptops {
+                float: left;
+                width: 40%;
+                margin-top: 20px;
+            }
+            
+            & > li {
+                @include mobile {
+                    font-size: 12px;
+                }
+                @include laptops {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    &__table {
+        @include mobile {
+            width: 100%;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+
+        @include laptops {
+            float: left;
+            width: 73%;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        thead {
+            background-color: $sub;
+
+            th {
+                padding: 10px 5px;
+                color: $white;
+                text-align: center;
+
+                &.narrative {
+                    text-align: left;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background-color: $white;
+                }
+                &:nth-child(even) {
+                    background-color: $bg-light;
+                }
+
+                td {
+                    padding: 10px 5px;
+                    text-align: center;
+
+                    &.narrative {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    &__image {
+        @include mobile {
+            width: 75%;
+            position: absolute;
+            z-index: 15;
+        }
+        @include laptops {
+            position: relative;
+            float: right;
+            width: 27%;
+            @include translateX(100px);
+        }
+    }
+
+    &__foot {
+        @include clearfix;
+        position: relative;
+
+        @include mobile {
+            &:before {
+                content: '';
+                display: block;
+                width: 66%;
+                padding-top: 75%;
+            }
+        }
+
+        @include laptops {
+            &:before {
+                display: none;
+            }
+        }
+        
+        .enName {
+            position: relative;
+            z-index: 10;
+            background-color: $bg-main;
+
+            span {
+                color: $white;
+                @include mobile {
+                    display: block;
+                }
+                @include laptops {
+                    display: inline;
+                }
+            }
+            
+            @include mobile {
+                font-size: 18px;
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                position: absolute;
+                top: 20px;
+                right: 25px;
+                line-height: 0.8;
+            }
+            @include laptops {
+                float: left;
+                font-size: 36px;
+                writing-mode: horizontal-tb;
+                padding-right: 10px;
+                position: relative;
+                top: auto;
+                right: auto;
+                line-height: 1;
+            }
+        }
+
+        .chName {
+            position: relative;
+            @include laptops {
+                position: absolute;
+                z-index: 5;
+                width: 100%;
+                right: 0;
+                text-align: right;
+                @include translate(60px, -10%);
+            }
+
+            .line {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: 1px;
+                background-color: $main;
+                @include translateY(-50%);
+            }
+    
+            .characteristic {
+                position: relative;
+                display: inline-block;
+                background-color: $main;
+    
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: $white;
+                    border: 1px solid $main;
+                    border-radius: 50%;
+                    top: 50%;
+                    margin-top: -5px;
+                }
+    
+                @include mobile {
+                    padding: 10px 50px;
+
+                    &:before {
+                        display: none;
+                    }
+    
+                    &:after {
+                        display: inline-block;
+                        right: -5px;
+                    }
+                }
+    
+                @include laptops {
+                    padding: 10px 95px;
+    
+                    &:before {
+                        display: inline-block;
+                        left: -5px;
+                    }
+    
+                    &:after {
+                        display: none;
+                    }
+                }
+    
+                & > span {
+                    color: $white;
+    
+                    @include mobile {
+                        font-size: 16px;
+                    }
+    
+                    @include laptops {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+
+        
     }
 }
 
