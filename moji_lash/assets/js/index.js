@@ -15,10 +15,17 @@ $(function () {
 		dotsClass: 'slides__dots slides__dots--comments',
 		responsive: [
 			{
-				breakpoint: 992,
+				breakpoint: 1440,
 				settings: {
 					slidesToShow: 4,
 					slidesToScroll: 4
+				}
+			},
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
 				}
 			},
 			{
@@ -46,7 +53,7 @@ $(function () {
 		nextArrow: '<button class="slick-next slides__arrow slides__arrow--teacher next" aria-label="Next" type="button"></button>',
 		dotsClass: 'slides__dots slides__dots--teacher'
 	});
-
+	// formula datas inject
 	var formulaGroup = '';
 	for(let i = 0; i < formula.length; i++) {
 		var formulaItem = '';
@@ -74,4 +81,20 @@ $(function () {
 		formulaGroup += formulaItem;
 	}
 	$('#category').html(formulaGroup);
+
+	// service datas inject
+	var serviceGroup = '';
+	for(let m = 0; m < service.length; m++) {
+		var serviceItem = '';
+		serviceItem += '<li><div class="service"><div class="service__title"><span class="ch">' + service[m]["service_ch"] + '</span><span class="en didot">' + service[m]["service_ch"] + '</span></div>';
+		serviceItem += '<table class="service__table"><tbody>';
+		var serviceContent = '';
+		for (let n = 0; n < service[m].services.length; n++) {
+			serviceContent += '<tr><td>' + service[m].services[n]["name"] +'</td><td><span class="cv didot">NT.</span><span class="value">' + service[m].services[n]["price"] +'</span></td></tr>';
+		}
+		serviceItem += serviceContent;
+		serviceItem += '</tbody></table></div></li>';
+		serviceGroup += serviceItem;
+	}
+	$('#service').html(serviceGroup);
 });

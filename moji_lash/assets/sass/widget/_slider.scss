@@ -1,0 +1,89 @@
+.slides {
+    &--comments {
+        .slides__item {
+            margin: 0 12px;
+        }
+    }
+
+    &__arrow {
+        @include appearance(none);
+        position: absolute;
+        width: 16px;
+        height: 32px;
+        padding: 0;
+        border: none;
+        z-index: 1000;
+        top: 50%;
+        background-size: 16px 32px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        @include translateY(-50%);
+        
+
+        &--comments {
+            &.prev {
+                background-image: url('../images/arrow-comment-prev.png');
+                left: 0;
+            }
+
+            &.next {
+                background-image: url('../images/arrow-comment-next.png');
+                right: 0;
+            }
+        }
+
+        &--teacher {
+            &.prev {
+                background-image: url('../images/arrow-teacher-prev.png');
+                left: 10px;
+            }
+
+            &.next {
+                background-image: url('../images/arrow-teacher-next.png');
+                right: 10px;
+            }
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+
+        & > li {
+            display: inline-block;
+            margin: 0 3px;
+        }
+
+        button {
+            border: none;
+            font-size: 0;
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            padding: 0;
+        }
+
+        &--comments {  
+            bottom: -40px;
+
+            button {
+                background-color: #B7B7BE;
+            }
+        }
+
+        &--teacher {
+            bottom: 10px;
+
+            button {
+                background-color: $white;
+            }
+        }
+    }
+}

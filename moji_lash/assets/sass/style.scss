@@ -5,6 +5,7 @@
         "utils/mixin";
 @import "normalize";
 @import "widget/icon",
+        "widget/slider",
         "bootstrap/bootstrap-setting";
 
 img {
@@ -566,6 +567,19 @@ a,button {
         padding-bottom: 65px;
     }
 
+    @include pad {
+        padding-bottom: 110px;
+    }
+
+    @include laptops {
+        padding-top: 130px;
+        padding-bottom: 190px;
+    }
+
+    @include desktop {
+        padding-bottom: 130px;
+    }
+
     .wrapper {
         position: relative;
 
@@ -590,8 +604,12 @@ a,button {
         @include mobile {
             margin-bottom: 30%;
         }
-    
+
         @include laptops {
+            margin-bottom: 10%;
+        }
+    
+        @include desktop {
             margin-bottom: 130px;
         }
     }
@@ -624,7 +642,7 @@ a,button {
                 position: relative;
             }
 
-            @include laptops {
+            @include desktop {
                 position: static;
             }
         }
@@ -683,7 +701,7 @@ a,button {
                         height: 25px;
                     }
                     
-                    @include laptops {
+                    @include desktop {
                         height: 55px;
                     }
 
@@ -697,7 +715,7 @@ a,button {
 
             &--reverse {
 
-                @include laptops {
+                @include desktop {
                     position: absolute;
                     left: 20px;
                     z-index: 10;
@@ -712,7 +730,7 @@ a,button {
                         @include mobile {
                             display: block;
                         }
-                        @include laptops {
+                        @include desktop {
                             display: none;
                         }
                     }
@@ -721,7 +739,7 @@ a,button {
                         @include mobile {
                             display: none;
                         }
-                        @include laptops {
+                        @include desktop {
                             display: inline-block;
                         }
                     }
@@ -731,7 +749,7 @@ a,button {
                         height: 25px;
                     }
                     
-                    @include laptops {
+                    @include desktop {
                         display: inline-block;
                         width: 255px;
                         height: 1px;
@@ -746,7 +764,7 @@ a,button {
                             margin-left: -5px;
                         }
 
-                        @include laptops{
+                        @include desktop {
                             top: 50%;
                             left: auto;
                             margin-left: 0;
@@ -769,7 +787,7 @@ a,button {
             left: 0;
         }
 
-        @include laptops {
+        @include desktop {
             width: auto;
             float: left;
             position: relative;
@@ -802,7 +820,7 @@ a,button {
                         display: block;
                     }
 
-                    @include laptops {
+                    @include desktop {
                         display: inline;
                     }
                 }
@@ -842,6 +860,10 @@ a,button {
                 }
 
                 @include laptops {
+                    padding-top: 70%;
+                }
+
+                @include desktop {
                     display: block;
                     width: auto;
                     padding-top: (451/348)*100%;
@@ -852,7 +874,7 @@ a,button {
                 margin-top: 20px;
             }
 
-            @include laptops {
+            @include desktop {
                 margin-top: 0;
                 width: 540px;
                 text-align: left;
@@ -860,6 +882,7 @@ a,button {
 
             p {
                 position: absolute;
+
                 @include mobile {
                     text-align: left;
                     top: 20px;
@@ -879,7 +902,7 @@ a,button {
                     padding-left: 64%;
                 }
 
-                @include laptops {
+                @include desktop {
                     padding-left: 40px;
                 }
             }
@@ -889,7 +912,7 @@ a,button {
                     text-align: right;
                 }
 
-                @include laptops {
+                @include desktop {
                     margin-left: -235px;
                 }
 
@@ -898,7 +921,7 @@ a,button {
                         left: 64%;
                     }
 
-                    @include laptops {
+                    @include desktop {
                         left: 270px;
                     }
                 }
@@ -910,7 +933,7 @@ a,button {
                 @include mobile {
                     padding-right: 64%;
                 }
-                @include laptops {
+                @include desktop {
                     padding-right: 0;
                 }
             }
@@ -926,7 +949,7 @@ a,button {
                         text-align: right;
                     }
 
-                    @include laptops {
+                    @include desktop {
                         right: auto;
                         left: 20px;
                         text-align: left;
@@ -978,13 +1001,14 @@ a,button {
             line-height: 1;
 
             @include mobile {
-                font-size: 26px;
+                font-size: 28px;
             }
             @include laptops {
                 font-size: 84px;
             }
         }
     }
+
     .section__content {
         margin-left: auto;
         margin-right: auto;
@@ -1232,10 +1256,19 @@ a,button {
             position: absolute;
             z-index: 15;
         }
+
+        @include pad {
+            width: 55%;
+        }
+
         @include laptops {
             position: relative;
             float: right;
             width: 27%;
+            @include translateX(40px);
+        }
+
+        @include desktop {
             @include translateX(100px);
         }
     }
@@ -1250,6 +1283,12 @@ a,button {
                 display: block;
                 width: 66%;
                 padding-top: 75%;
+            }
+        }
+
+        @include pad {
+            &:before {
+                padding-top: 60%;
             }
         }
 
@@ -1283,6 +1322,11 @@ a,button {
                 right: 25px;
                 line-height: 0.8;
             }
+
+            @include pad {
+                font-size: 38px;
+            }
+
             @include laptops {
                 float: left;
                 font-size: 36px;
@@ -1298,12 +1342,17 @@ a,button {
 
         .chName {
             position: relative;
+
             @include laptops {
                 position: absolute;
                 z-index: 5;
                 width: 100%;
                 right: 0;
                 text-align: right;
+                @include translate(10px, -10%);
+            }
+
+            @include desktop {
                 @include translate(60px, -10%);
             }
 
@@ -1373,8 +1422,6 @@ a,button {
                 }
             }
         }
-
-        
     }
 }
 
@@ -1382,11 +1429,11 @@ a,button {
     background-color: $bg-main;
 
     @include mobile {
-        padding: 30px 0 30px 25px;
+        padding: 10px 0 30px 25px;
     }
 
     @include laptops {
-        padding: 90px 0;
+        padding: 0 0 90px;
     }
 }
 
@@ -1489,97 +1536,352 @@ a,button {
                             font-size: 15px;
                         }
                     }
+
+                    .value {
+                        & > span {
+                            font-family: 'Didot', 'Didot LT STD';
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-.slides {
-    &--comments {
-        .slides__item {
-            margin: 0 12px;
+.about {
+    @include mobile {}
+
+    @include pad {
+        @include clearfix;
+    }
+
+    &__media {
+        @include pad {
+            float: left;
+            width: 48%;
         }
     }
 
-    &__arrow {
-        @include appearance(none);
-        position: absolute;
-        width: 16px;
-        height: 32px;
-        padding: 0;
-        border: none;
-        z-index: 1000;
-        top: 50%;
-        background-size: 16px 32px;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        @include translateY(-50%);
-        
+    &__text {
+        position: relative;
+        background-color: $bg-light;
 
-        &--comments {
-            &.prev {
-                background-image: url('../images/arrow-comment-prev.png');
-                left: 0;
-            }
-
-            &.next {
-                background-image: url('../images/arrow-comment-next.png');
-                right: 0;
+        @include pad {
+            float: right;
+            width: 52%;
+            
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-top: (916/744)*100%;
             }
         }
 
-        &--teacher {
-            &.prev {
-                background-image: url('../images/arrow-teacher-prev.png');
-                left: 10px;
+        .title {
+            color: $main;
+            margin: 0;
+            text-align: center;
+
+            @include mobile {
+                @include translateY(-45px);
             }
 
-            &.next {
-                background-image: url('../images/arrow-teacher-next.png');
-                right: 10px;
+            @include pad {
+                position: absolute;
+                top: 0;
+                left: -55px;
+                @include translateY(0);
+            }
+
+            @include laptops {
+                left: -80px;
+            }
+
+            &__text {
+                @include mobile {
+                    font-size: 32px;
+                }
+
+                @include pad {
+                    font-size: 56px;
+                }
+
+                @include laptops {
+                    font-size: 82px;
+                }
+            }
+
+            &__line {
+                position: relative;
+                background-color: $main;
+
+                @include mobile {
+                    display: inline-block;
+                    width: 1px;
+                    height: 65px;
+                }
+
+                @include pad {
+                    display: none;
+                }
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: $white;
+                    border: 1px solid $main;
+                    border-radius: 50%;
+                    left: 50%;
+                    margin-left: -5px;
+                }
+            }
+        }
+
+        .paragraph {
+            color: $sub;
+
+            @include mobile {
+                font-size: 10px;
+                text-align: center;
+                position: relative;
+                top: -45px;
+            }
+
+            @include pad {
+                position: absolute;
+                text-align: left;
+                font-size: 14px;
+                top: 50%;
+                left: 60px;
+                padding-right: 20px;
+                @include translateY(-50%);
+            }
+
+            @include laptops {
+                padding-right: 0;
+                font-size: 20px;
+            }
+        }
+
+        .story {
+
+            @include mobile {
+                text-align: center;
+                position: relative;
+                top: -30px;
+            }
+            
+            @include pad {
+                position: absolute;
+                width: calc(100% - 60px);
+                left: 60px;
+                bottom: 20px;
+                top: auto;
+            }
+
+            @include laptops {
+                bottom: 60px;
+            }
+
+            &__line {
+                position: absolute;
+                z-index: 5;
+                background-color: $main;
+
+                @include mobile {
+                    display: none;
+                }
+                @include pad {
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    top: 50%;
+                    @include translateY(-50%);
+
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        background-color: $white;
+                        border: 1px solid $main;
+                        border-radius: 50%;
+                        right: 0;
+                        top: 50%;
+                        margin-top: -5px;
+                    }
+                }
+            }
+
+            &__dialog {
+                display: inline-block;
+                position:relative;
+                z-index: 5;
+                background-color: $main;
+
+                @include mobile {
+                    padding: 10px 50px;
+                }
+
+                @include laptops {
+                    padding: 20px 120px;
+                }
+
+                & > span {
+                    color: $white;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+
+                    @include laptops {
+                        font-size: 32px;
+                    }
+                }
             }
         }
     }
+}
 
-    &__dots {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        list-style: none;
-        margin: 0 auto;
-        padding: 0;
-        text-align: center;
+.maintenance {
 
-        & > li {
-            display: inline-block;
-            margin: 0 3px;
+    .wrapper {
+        position: relative;
+
+        @include mobile {
+            padding: 0 25px;
         }
 
-        button {
-            border: none;
-            font-size: 0;
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            padding: 0;
+        @include laptops {
+            padding: 0 40px;
         }
 
-        &--comments {  
-            bottom: -40px;
+        @include desktop {
+            padding: 0 60px; 
+        }
+    }
 
-            button {
-                background-color: #B7B7BE;
+    .section__title {
+        @include mobile {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        @include laptops {
+            margin-bottom: 70px;
+        }
+
+        .text {
+            color: $sub;
+            line-height: 1;
+
+            @include mobile {
+                font-size: 28px;
+            }
+            @include laptops {
+                font-size: 84px;
             }
         }
+    }
+    
+    .section__content {
+        margin-left: auto;
+        margin-right: auto;
 
-        &--teacher {
-            bottom: 10px;
+        @include laptops {
+            width: 992px;
+            padding-left: 0;
+        }
 
-            button {
-                background-color: $white;
+        @include desktop {
+            width: 1100px;
+        }
+    }
+}
+
+.maintain {
+    background-color: $sub;
+
+    @include mobile {
+        padding: 30px 25px;
+    }
+
+    @include laptops {
+        padding: 70px 40px;
+    }
+
+    &__list {
+        @include list-reset;
+        padding: 0 20px;
+
+        .item {
+            @include clearfix;
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
+            @include laptops {
+                margin-bottom: 60px;
+            }
+
+            &__media {
+                float: left;
+
+                @include mobile {
+                    width: 60px;
+                }
+                @include laptops {
+                    width: 125px;
+                }
+            }
+
+            &__text {
+                float: left;
+                color: $white;
+                
+                @include mobile {
+                    padding-left: 10px;
+                    width: calc(100% - 60px);
+                }
+
+                @include laptops {
+                    padding-left: 20px;
+                    width: calc(100% - 125px);
+                }
+
+                .title {
+                    letter-spacing: 2px;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+
+                    @include laptops {
+                        font-size: 32px;
+                    }
+                }
+
+                .content {
+                    letter-spacing: 1px;
+
+                    @include mobile {
+                        font-size: 10px;
+                    }
+
+                    @include laptops {
+                        font-size: 20px;
+                    }
+
+                    & > span {
+                        color: $main;
+                        background-color: $white;
+                    }
+                }
             }
         }
     }
