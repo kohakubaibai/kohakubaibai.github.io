@@ -57,7 +57,7 @@ $(function () {
 	var formulaGroup = '';
 	for(let i = 0; i < formula.length; i++) {
 		var formulaItem = '';
-		formulaItem += '<div class="category"><div class="category__main"><div class="category__head"><div class="category__name"><span class="en didot">' + formula[i]["formula_en"] +'</span><span class="ch">' + formula[i]["formula_ch"] +'</span></div><div class="category__intro"><p class="paragraph">' + formula[i]["intro"] +'</p><ul class="feature">';
+		formulaItem += '<div class="category wow fadeInLeft"><div class="category__main"><div class="category__head"><div class="category__name"><span class="en didot">' + formula[i]["formula_en"] +'</span><span class="ch">' + formula[i]["formula_ch"] +'</span></div><div class="category__intro"><p class="paragraph">' + formula[i]["intro"] +'</p><ul class="feature">';
 		var featureItem = '';
 		for (let k = 0; k < formula[i].feature.length; k++) {
 			featureItem += '<li><span class="label">顏色:</span><span class="label">' + formula[i].feature[k]["color"] +'</span></li>';
@@ -86,7 +86,7 @@ $(function () {
 	var serviceGroup = '';
 	for(let m = 0; m < service.length; m++) {
 		var serviceItem = '';
-		serviceItem += '<li><div class="service"><div class="service__title"><span class="ch">' + service[m]["service_ch"] + '</span><span class="en didot">' + service[m]["service_ch"] + '</span></div>';
+		serviceItem += '<li class="wow fadeInDown"><div class="service"><div class="service__title"><span class="ch">' + service[m]["service_ch"] + '</span><span class="en didot">' + service[m]["service_ch"] + '</span></div>';
 		serviceItem += '<table class="service__table"><tbody>';
 		var serviceContent = '';
 		for (let n = 0; n < service[m].services.length; n++) {
@@ -97,4 +97,7 @@ $(function () {
 		serviceGroup += serviceItem;
 	}
 	$('#service').html(serviceGroup);
+
+	//WOW master
+	new WOW().init();
 });

@@ -125,63 +125,8 @@ h6, .h6 {
     align-items: center;
 }
 
-a,button {
-    &.btn {
-        display: table;
-        border-width: 0;
-
-        &.btn--disabled {
-            color: #909090 !important;
-            background-color: #dddddd !important;
-            cursor: not-allowed !important;
-        }
-
-        &.btn--register {
-            color: $font-black;
-            background-color: $btn-register;
-            font-weight: 500;
-
-            &:hover {
-                background-color: $btn-register-hover;
-            }
-        }
-
-        &.btn--outlined {
-            color: #909090;
-            background-color: $white;
-            border: 1px solid #909090;
-
-            &:hover {
-                color: $main;
-                border-color: $main;
-            }
-        }
-
-        &.btn--100 {
-            width: 100%;
-        }
-
-        &.btn--standard {
-            padding: 10px 18px;
-            font-size: 1rem;
-        }
-
-        &.btn--large {
-            padding: 10px 30px;
-            font-size: 1rem;
-        }
-
-        &.btn--agenda {
-            color: $font-black;
-            background-color: $sub;
-            font-weight: 500;
-
-            &:hover {
-                background-color: $sub;
-            }
-        }
-    }
-
+a, button {
+    
     .icon {
         display: inline-block;
         vertical-align: middle;
@@ -1549,7 +1494,6 @@ a,button {
 }
 
 .about {
-    @include mobile {}
 
     @include pad {
         @include clearfix;
@@ -1595,7 +1539,12 @@ a,button {
             }
 
             @include laptops {
+                top: 30px;
                 left: -80px;
+            }
+            
+            @include desktop {
+                top: 60px;
             }
 
             &__text {
@@ -1663,6 +1612,10 @@ a,button {
 
             @include laptops {
                 padding-right: 0;
+                font-size: 16px;
+            }
+
+            @include desktop {
                 font-size: 20px;
             }
         }
@@ -1685,6 +1638,7 @@ a,button {
 
             @include laptops {
                 bottom: 60px;
+                text-align: left;
             }
 
             &__line {
@@ -1728,8 +1682,9 @@ a,button {
                     padding: 10px 50px;
                 }
 
-                @include laptops {
+                @include desktop {
                     padding: 20px 120px;
+                    left: 0;
                 }
 
                 & > span {
@@ -1749,6 +1704,10 @@ a,button {
 }
 
 .maintenance {
+
+    @include laptops {
+        padding-top: 80px;
+    }
 
     .wrapper {
         position: relative;
@@ -1817,7 +1776,23 @@ a,button {
 
     &__list {
         @include list-reset;
+        @include clearfix;
         padding: 0 20px;
+
+        & > li {
+            @include mobile {
+                width: 100%;
+            }
+
+            @include pad {
+                float: left;
+                width: 50%;
+
+                &:nth-child(2n+1) {
+                    clear: left;
+                }
+            }
+        }
 
         .item {
             @include clearfix;
@@ -1873,6 +1848,10 @@ a,button {
                         font-size: 10px;
                     }
 
+                    @include mobile {
+                        font-size: 14px;
+                    }
+
                     @include laptops {
                         font-size: 20px;
                     }
@@ -1883,6 +1862,884 @@ a,button {
                     }
                 }
             }
+        }
+
+        .list {
+            @include list-reset;
+
+            & > li {
+                position: relative;
+                color: $white;
+                
+                @include mobile {
+                    padding-left: 15px;
+                }
+
+                @include laptops {
+                    padding-left: 20px;
+                }
+
+                &:before {
+                    content: '';
+                    display:  block;
+                    border-radius: 50%;
+                    background-color: $white;
+                    position: absolute;
+                    left: 0;
+
+                    @include mobile {
+                        width: 5px;
+                        height: 5px;
+                        top: 4px;
+                    }
+    
+                    @include laptops {
+                        width: 10px;
+                        height: 10px;
+                        top: 3px;
+                    }
+                }
+                @include mobile {
+                    font-size: 10px;
+                }
+
+                @include pad {
+                    font-size: 16px;
+                }
+
+                @include laptops {
+                    font-size: 20px;
+                }
+
+                & > span {
+                    color: $main;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+.fallout {
+    margin-top: 20px;
+    
+    &__title {
+        color: $white;
+
+        @include mobile {
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        @include pad {
+            font-size: 24px;
+        }
+
+        @include laptops {
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__image {
+        .show {
+            &--sp {
+                @include mobile {
+                    display: block;
+                }
+                @include pad {
+                    display: none;
+                }
+            }
+            &--pc {
+                @include mobile {
+                    display: none;
+                }
+                @include pad {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__note {
+        position: relative;
+        margin-top: 10px;
+
+        @include mobile {
+            padding-left: 15px;
+        }
+
+        @include laptops {
+            padding-left: 20px;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            background-color: $white;
+            border-radius: 50%;
+            left: 0;
+            position: absolute;
+
+            @include mobile {
+                width: 5px;
+                height: 5px;
+                top: 10px;
+            }
+
+            @include laptops {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        & > span {
+            display: inline-block;
+            vertical-align: middle;
+            color: $white;
+
+            @include mobile {
+                font-size: 10px;
+            }
+
+            @include pad {
+                font-size: 16px;
+            }
+
+            @include laptops {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.operateGroup {
+
+    @include laptops {
+        padding-top: 80px;
+    }
+
+    .wrapper {
+        position: relative;
+
+        @include mobile {
+            padding: 0 25px;
+        }
+
+        @include laptops {
+            padding: 0 40px;
+        }
+
+        @include desktop {
+            padding: 0 60px; 
+        }
+    }
+
+    &__title {
+        @include mobile {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        @include laptops {
+            margin-bottom: 70px;
+        }
+
+        .text {
+            color: $sub;
+            line-height: 1;
+            font-weight: lighter;
+
+            @include mobile {
+                font-size: 28px;
+            }
+            @include laptops {
+                font-size: 84px;
+            }
+        }
+    }
+    
+    &__content {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 5;
+            background-color: #ccccd0;
+
+            @include mobile {
+                right: 0;
+                width: 70%;
+                height: 100%;
+            }
+
+            @include laptops {
+                width: 428px;
+                height: 688px;
+                right: 50%;
+            }
+        }
+
+        @include mobile {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        @include laptops {
+            width: 992px;
+            padding-left: 0;
+            @include clearfix;
+        }
+
+        @include desktop {
+            width: 1100px;
+        }
+
+        .media {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+
+            @include laptops {
+                float: left;
+            }
+
+            &__line {
+                position: relative;
+                display: block;
+                width: 1px;
+                background-color: $main;
+                margin: 0 auto;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    border-radius: 50%;
+                    border: 1px solid $main;
+                    background-color: $white;
+                    @include translateX(-50%);
+                    
+                    @include mobile {
+                        width: 5px;
+                        height: 5px;
+                        bottom: -5px;
+                    }
+                    @include mobile {
+                        width: 10px;
+                        height: 10px;
+                        bottom: -10px;
+                    }
+                }
+
+                @include mobile {
+                    height: 30px;
+                }
+
+                @include laptops {
+                    height: 330px;
+                }
+            }
+
+            &__image {
+                @include mobile {
+                    width: 58%;
+                }
+                @include laptops {
+                    width: 350px;
+                }
+            }
+        }
+
+        .text {
+            position: relative;
+            z-index: 10;
+
+            @include mobile {
+                padding-bottom: 20px;
+            }
+
+            @include laptops {
+                float: right;
+                padding-left: 100px;
+                padding-bottom: 0;
+                width: calc(100% - 350px);
+            }
+
+            .list {
+                @include list-reset;
+                
+                @include mobile {
+                    margin-top: 20px;
+                }
+
+                @include laptops {
+                    margin-top: 50px;
+                }
+
+                & > li {
+                    position: relative;
+
+                    @include mobile {
+                        padding-left: 20px;
+                        margin-bottom: 6px;
+                    }
+                    @include pad {
+                        padding-left: 25px;
+                        margin-bottom: 20px;
+                    }
+
+                    @include laptops {
+                        padding-left: 46px;
+                        margin-bottom: 30px;
+                    }
+
+                    .num {
+                        position: absolute;
+                        left: 0;
+
+                        @include mobile {
+                            font-size: 22px;
+                            color: $main;
+                            top: -6px;                      
+                        }
+
+                        @include pad {
+                            font-size: 30px; 
+                            top: -16px;  
+                        }
+
+                        @include laptops {
+                            font-size: 54px;
+                            color: $white;
+                            top: -36px; 
+                        }
+                    }
+                    .content {
+                        color: #694e3d;
+
+                        @include mobile {
+                            font-size: 10px;
+                            letter-spacing: 1px;                         
+                        }
+
+                        @include pad {
+                            font-size: 16px;
+                            letter-spacing: 2px;
+                        }
+
+                        @include laptops {
+                            font-size: 20px;
+                            letter-spacing: 3px;
+                        }
+
+                        & > span {
+                            @include mobile {
+                                display: inline;
+                            }
+
+
+                            @include pad {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    .wrapper {
+        @include mobile {
+            padding: 0 25px;
+        }
+    }
+
+    @include mobile {
+        padding: 30px 0;
+    }
+
+    @include laptops {
+        padding: 100px 0;
+    }
+    
+    .section__content {
+        position: relative;
+        
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 5;
+            background-color: $bg-light;
+            height: 100%;
+
+            @include mobile {
+                width: calc(100% - 40px);
+                left: 20px;
+            }
+
+            @include laptops {
+                width: 600px;
+                left: auto;
+                right: 30px;
+                top: 0;
+            }
+
+            @include desktop {
+                width: 710px;
+                right: 60px;
+            }
+        }
+    }
+
+    .map {
+        position: relative;
+        z-index: 10;
+
+        @include mobile {
+            padding: 100px 20px 0;
+        }
+
+        @include pad {
+            padding: 30px 20px 0;
+        }
+
+        @include laptops {
+            @include clearfix;
+            padding: 0;
+        }
+
+        &__image {
+            @include mobile {
+                display: none;
+            }
+
+            @include laptops {
+                display: block;
+                float: right;
+                width: 440px;
+                @include translateY(-10%);
+            }
+
+            @include desktop {
+                width: 644px;
+            }
+        }
+
+        &__text {
+            @include laptops {
+                float: left;
+            }
+
+            .title {
+                color: $main;
+
+                @include laptops {
+                    padding-left: 20px;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                }
+
+                &__text {
+                    @include mobile {
+                        font-size: 31px;
+                    }
+
+                    @include laptops {
+                        font-size: 82px;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+
+            .infos {
+                @include list-reset;
+
+                & > li {
+                    @include clearfix;
+                    
+                    @include mobile {
+                        margin-bottom: 20px;
+                    }
+
+                    @include laptops {
+                        margin-bottom: 30px;
+                    }
+
+                    .icon {
+                        float: left;
+                        margin-right: 3px;
+                    }
+
+                    .content {
+                        float: left;
+
+                        @include mobile {
+                            font-size: 10px;
+                        }
+
+                        @include pad {
+                            font-size: 16px;
+                        }
+
+                        @include laptops {
+                            font-size: 20px;
+                        }
+
+                        .way {
+                            float: left;
+                            color: $sub;
+                            margin-right: 5px;
+                        }
+
+                        .text {
+                            float: left;
+                            color: $sub;
+                            text-decoration: none;
+
+                            & > span {
+                                padding: 3px;
+                                color: $main;
+
+                                @include mobile {
+                                    background-color: $white;
+                                }
+
+                                @include laptops {
+                                    background-color: $bg-light;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sns {
+        position: relative;
+        z-index: 10;
+
+        @include mobile {
+            padding: 0 20px 20px;
+        }
+
+        @include laptops {
+            padding: 0 0 50px;
+        }
+
+        @include desktop {
+            padding: 0 0 85px;
+        }
+
+        &__title {
+            text-align: right;
+            position: relative;
+
+            @include mobile {
+                right: -20px;
+            }
+
+            @include laptops {
+                right: 0;
+            }
+
+            .line {
+                display: block;
+                position: absolute;
+                top: 50%;
+                height: 1px;
+                background-color: $main;
+                @include translateY(-50%);
+
+                @include mobile {
+                    left: -65px;
+                    width: calc(100% - 50px);
+                }
+
+                @include pad {
+                    width: calc(100% - 103px);
+                }
+
+                @include laptops{
+                    left: 0;
+                    width: calc(100% - 240px);
+                }
+
+                @include desktop{
+                    width: calc(100% - 340px);
+                }
+            }
+
+            .text {
+                position: relative;
+                display: inline-block;
+                color: $sub;
+                font-weight: lighter;
+                
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    background-color: $white;
+                    @include translateY(-50%);
+                    border: 1px solid $main;
+                    border-radius: 50%;
+                    
+                    @include mobile {
+                        left: -5px;
+                        width: 5px;
+                        height: 5px;
+                    }
+
+                    @include laptops {
+                        left: -10px;
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    @include desktop {
+
+                    }
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                }
+
+                @include pad {
+                    font-size: 42px;
+                }
+
+                @include laptops {
+                    font-size: 60px;
+                }
+
+                @include desktop {
+                    font-size: 84px;
+                }
+            }
+        }
+
+        &__content {
+
+            @include pad {
+                @include clearfix;
+            }
+
+            .text {
+                text-align: right;
+
+                @include pad {
+                    float: right;
+                    margin-top: 24px;
+                }
+
+                @include laptops {
+                    font-size: 20px;
+                }
+
+                & > p {
+                    margin: 0;
+                
+                    @include mobile{
+                        padding-right: 10px;
+                        font-size: 10px;
+                    }
+    
+                    @include pad {
+                        font-size: 16px;
+                    }
+
+                    @include laptops {
+                        font-size: 20px;
+                        padding-right: 32px;
+                    }
+                }
+
+                .dialog {
+                    display: inline-block;
+                    background-color: $main;
+
+                    @include mobile {
+                        padding: 10px 50px;
+                        margin-top: 16px;
+                    }
+
+                    @include pad {
+                        padding: 10px 75px;
+                        margin-right: -20px;
+                    }
+
+                    @include laptops {
+                        padding: 15px 75px;
+                        margin-right: 0;
+                    }
+
+                    @include desktop {
+                        padding: 20px 100px;
+                    }
+
+                    &__text {
+                        color: $white;
+                
+                        @include mobile{
+                            font-size: 16px;
+                        }
+        
+                        @include pad {
+                            font-size: 24px;
+                        }
+    
+                        @include laptops {
+                            font-size: 32px;
+                        }
+                        
+                    }
+                }
+            }
+
+            .links {
+                @include list-reset;
+
+                @include mobile {
+                    @include clearfix;
+                    margin: 20px -22px 0;
+                    overflow: hidden;
+                }
+
+                @include pad {
+                    float: left;
+                }
+
+                @include laptops {
+                    margin-top: 35px;
+                }
+
+                @include desktop {
+                    margin-top: 45px;
+                }
+
+                & > li {
+
+                    @include mobile {
+                        float: left;
+                        width: (100%/3);
+                        padding: 0 2px;
+                    }
+
+                    @include pad {
+                        display: inline-block;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.icon {
+    
+    &__traffic {
+        display: inline-block;
+        background-image: url('../images/icon-traffic.png');
+        background-repeat: no-repeat;
+
+        @include mobile {
+            width: 17px;
+            height: 17px;
+            background-size: 17px 51px;
+        }
+
+        @include pad {
+            width: 23px;
+            height: 23px;
+            background-size: 23px 69px;
+        }
+
+        @include laptops {
+            width: 34px;
+            height: 34px;
+            background-size: 34px 102px;
+        }
+
+        &--address {
+            background-position: 0 0;
+        }
+
+        &--mass {
+            @include mobile {
+                background-position: 0 -17px;
+            }
+
+            @include pad {
+                background-position: 0 -23px;
+            }
+
+            @include laptops {
+                background-position: 0 -34px;
+            }
+        }
+
+        &--drive {
+            @include mobile {
+                background-position: 0 -34px;
+            }
+
+            @include pad {
+                background-position: 0 -46px;
+            }
+
+            @include laptops {
+                background-position: 0 -68px;
+            }
+        }
+    }
+
+    &__sns {
+        display: block;
+        width: 100%;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        @include mobile {
+            background-size: cover;
+        }
+
+        @include pad {
+            width: 130px;
+            height: 130px;
+        }
+
+        @include laptops{
+            width: 150px;
+            height: 150px;
+        }
+
+        &--line {
+            background-image: url('../images/icon-sns-line.png');
+        }
+
+        &--ig {
+            background-image: url('../images/icon-sns-ig.png');
+        }
+
+        &--fb {
+            background-image: url('../images/icon-sns-fb.png');
         }
     }
 }
