@@ -61,17 +61,17 @@ $(function () {
 		var featureItem = '';
 		for (let k = 0; k < formula[i].feature.length; k++) {
 			featureItem += '<li><span class="label">顏色:</span><span class="label">' + formula[i].feature[k]["color"] +'</span></li>';
-			featureItem += '<li><span class="label">Size:</span><span class="label">' + formula[i].feature[k]["size"] +'</span></li>';
-			featureItem += '<li><span class="label">Skill:</span><span class="label">' + formula[i].feature[k]["skill"] +'</li></span>';
+			featureItem += '<li><span class="label didot">Size:</span><span class="label">' + formula[i].feature[k]["size"] +'</span></li>';
+			featureItem += '<li><span class="label didot">Skill:</span><span class="label">' + formula[i].feature[k]["skill"] +'</li></span>';
 		}	
 		formulaItem += featureItem;
 		formulaItem += '</ul></div></div><div class="category__body"><table class="category__table"><thead><tr><th>雙眼根數</th><th>定價</th><th>體驗價</th><th class="narrative">妝感說明</th></tr></thead><tbody>';
 		var priceGroup = '';
 		for (let l = 0; l < formula[i].price.length; l++) {
 			if(formula[i].price[l]["best"]== true) {
-				priceGroup += '<tr class="best"><td>' + formula[i].price[l]["amount"] +'</td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["fixed_price"] +'</span></td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["exp_price"] +'</span></td><td class="narrative">' + formula[i].price[l]["narrative"] +'</td></tr>';
+				priceGroup += '<tr class="best"><td><span class="value">' + formula[i].price[l]["amount"] +'</span>根</td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["fixed_price"] +'</span></td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["exp_price"] +'</span></td><td class="narrative">' + formula[i].price[l]["narrative"] +'</td></tr>';
 			} else {
-				priceGroup += '<tr><td>' + formula[i].price[l]["amount"] +'</td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["fixed_price"] +'</span></td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["exp_price"] +'</span></td><td class="narrative">' + formula[i].price[l]["narrative"] +'</td></tr>';
+				priceGroup += '<tr><td><span class="value">' + formula[i].price[l]["amount"] +'</span>根</td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["fixed_price"] +'</span></td><td><span class="cv didot">NT.</span><span class="value">' + formula[i].price[l]["exp_price"] +'</span></td><td class="narrative">' + formula[i].price[l]["narrative"] +'</td></tr>';
 			}
 		}
 		formulaItem += priceGroup;
@@ -86,7 +86,7 @@ $(function () {
 	var serviceGroup = '';
 	for(let m = 0; m < service.length; m++) {
 		var serviceItem = '';
-		serviceItem += '<li class="wow fadeInDown"><div class="service"><div class="service__title"><span class="ch">' + service[m]["service_ch"] + '</span><span class="en didot">' + service[m]["service_ch"] + '</span></div>';
+		serviceItem += '<li class="wow fadeInDown"><div class="service"><div class="service__title"><span class="ch">' + service[m]["service_ch"] + '</span><span class="en didot">' + service[m]["service_en"] + '</span></div>';
 		serviceItem += '<table class="service__table"><tbody>';
 		var serviceContent = '';
 		for (let n = 0; n < service[m].services.length; n++) {

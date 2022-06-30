@@ -257,59 +257,59 @@ body {
 }
 
 .icon-arrow-down:before {
-  content: "";
+  content: "\e900";
 }
 
 .icon-arrow-left:before {
-  content: "";
+  content: "\e901";
 }
 
 .icon-arrow-right:before {
-  content: "";
+  content: "\e902";
 }
 
 .icon-arrow-up:before {
-  content: "";
+  content: "\e903";
 }
 
 .icon-check:before {
-  content: "";
+  content: "\e904";
 }
 
 .icon-chevron-down:before {
-  content: "";
+  content: "\e905";
 }
 
 .icon-chevron-left:before {
-  content: "";
+  content: "\e906";
 }
 
 .icon-chevron-right:before {
-  content: "";
+  content: "\e907";
 }
 
 .icon-chevron-up:before {
-  content: "";
+  content: "\e908";
 }
 
 .icon-eye:before {
-  content: "";
+  content: "\e909";
 }
 
 .icon-eye-slash:before {
-  content: "";
+  content: "\e90a";
 }
 
 .icon-minus:before {
-  content: "";
+  content: "\e90b";
 }
 
 .icon-plus:before {
-  content: "";
+  content: "\e90c";
 }
 
 .icon-x:before {
-  content: "";
+  content: "\e90d";
 }
 
 .slides--comments .slides__item {
@@ -5311,6 +5311,10 @@ img {
   font-family: "Didot", "Didot LT STD";
 }
 
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 1em;
@@ -5437,16 +5441,6 @@ h6, .h6 {
 a .icon, button .icon {
   display: inline-block;
   vertical-align: middle;
-}
-
-.fixedTool {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #616c83;
-  border-top: 1px solid #FFFFFF;
-  z-index: 999;
 }
 
 @media only screen and (min-width: 320px) {
@@ -5653,6 +5647,37 @@ a .icon, button .icon {
 }
 .card--kv .card__front {
   z-index: 10;
+}
+.card--kv .card__front:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: #FFFFFF;
+}
+@media only screen and (min-width: 320px) {
+  .card--kv .card__front:after {
+    height: 116%;
+    bottom: 2%;
+    left: 10%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card--kv .card__front:after {
+    bottom: 1%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .card--kv .card__front:after {
+    height: 127%;
+    bottom: 1%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card--kv .card__front:after {
+    bottom: -5px;
+    height: 620px;
+  }
 }
 @media only screen and (min-width: 320px) {
   .card--kv .card__front {
@@ -6138,18 +6163,26 @@ a .icon, button .icon {
 }
 .teacher__text .body p {
   position: absolute;
+  color: #685256;
 }
 @media only screen and (min-width: 320px) {
   .teacher__text .body p {
     text-align: left;
     top: 20px;
     font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .teacher__text .body p {
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .teacher__text .body p {
     top: 130px;
     font-size: 20px;
+    letter-spacing: 3px;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -6213,6 +6246,17 @@ a .icon, button .icon {
 
 .categories {
   background-color: #cbbdc1;
+  position: relative;
+}
+.categories:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc((100vw - 1230px) / 2);
+  width: 1px;
+  height: 100%;
+  background-color: #685256;
 }
 @media only screen and (min-width: 320px) {
   .categories {
@@ -6255,6 +6299,7 @@ a .icon, button .icon {
 .categories .section__title .text {
   color: #685256;
   line-height: 1;
+  font-weight: lighter;
 }
 @media only screen and (min-width: 320px) {
   .categories .section__title .text {
@@ -6355,6 +6400,10 @@ a .icon, button .icon {
     margin-right: 5px;
   }
 }
+.category__name > .ch {
+  margin-left: 10px;
+  font-weight: lighter;
+}
 @media only screen and (min-width: 320px) {
   .category__name > .ch {
     font-size: 16px;
@@ -6443,6 +6492,11 @@ a .icon, button .icon {
     margin-bottom: 0;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .category__table {
+    width: 755px;
+  }
+}
 .category__table thead {
   background-color: #685256;
 }
@@ -6453,6 +6507,9 @@ a .icon, button .icon {
 }
 .category__table thead th.narrative {
   text-align: left;
+}
+.category__table thead th:nth-child(1), .category__table thead th:nth-child(2), .category__table thead th:nth-child(3) {
+  width: 18%;
 }
 .category__table tbody tr:nth-child(odd) {
   background-color: #FFFFFF;
@@ -6477,6 +6534,12 @@ a .icon, button .icon {
   .category__table tbody tr td .cv {
     font-size: 15px;
   }
+}
+.category__table tbody tr td .value {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.category__table tbody tr td:nth-child(1), .category__table tbody tr td:nth-child(2), .category__table tbody tr td:nth-child(3) {
+  width: 18%;
 }
 .category__table tbody tr.best {
   position: relative;
@@ -6529,8 +6592,10 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1200px) {
   .category__image {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
+    width: 325px;
+    margin-right: -60px;
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
   }
 }
 .category__foot {
@@ -6763,11 +6828,18 @@ a .icon, button .icon {
 @media only screen and (min-width: 320px) {
   .service__title .ch {
     font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .service__title .ch {
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .service__title .ch {
     font-size: 32px;
+    letter-spacing: 3px;
   }
 }
 .service__title .en {
@@ -6809,9 +6881,6 @@ a .icon, button .icon {
   .service__table tbody tr td .cv {
     font-size: 15px;
   }
-}
-.service__table tbody tr td .value > span {
-  font-family: "Didot", "Didot LT STD";
 }
 
 @media only screen and (min-width: 768px) {
@@ -6926,6 +6995,7 @@ a .icon, button .icon {
     text-align: center;
     position: relative;
     top: -45px;
+    letter-spacing: 1px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -6938,12 +7008,14 @@ a .icon, button .icon {
     padding-right: 20px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .about__text .paragraph {
     padding-right: 0;
     font-size: 16px;
+    letter-spacing: 3px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -7074,6 +7146,7 @@ a .icon, button .icon {
 .maintenance .section__title .text {
   color: #685256;
   line-height: 1;
+  font-weight: lighter;
 }
 @media only screen and (min-width: 320px) {
   .maintenance .section__title .text {
@@ -7196,22 +7269,22 @@ a .icon, button .icon {
     font-size: 32px;
   }
 }
-.maintain__list .item__text .content {
-  letter-spacing: 1px;
-}
 @media only screen and (min-width: 320px) {
   .maintain__list .item__text .content {
+    letter-spacing: 1px;
     font-size: 10px;
   }
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 768px) {
   .maintain__list .item__text .content {
     font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .maintain__list .item__text .content {
     font-size: 20px;
+    letter-spacing: 3px;
   }
 }
 .maintain__list .item__text .content > span {
@@ -8072,6 +8145,39 @@ a .icon, button .icon {
   }
 }
 
+.fixedTool {
+  position: fixed;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media only screen and (min-width: 320px) {
+  .fixedTool {
+    top: 25px;
+    right: 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .fixedTool {
+    top: 110px;
+    right: 35px;
+  }
+}
+.fixedTool > li {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+@media only screen and (min-width: 320px) {
+  .fixedTool > li {
+    padding: 8px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .fixedTool > li {
+    padding: 15px;
+  }
+}
+
 .icon__traffic {
   display: inline-block;
   background-image: url("../images/icon-traffic.png");
@@ -8166,4 +8272,39 @@ a .icon, button .icon {
 }
 .icon__sns--fb {
   background-image: url("../images/icon-sns-fb.png");
+}
+.icon__fixedTool {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  background-repeat: no-repeat;
+}
+.icon__fixedTool:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+@media only screen and (min-width: 320px) {
+  .icon__fixedTool {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .icon__fixedTool {
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+  }
+}
+.icon__fixedTool--line {
+  background-image: url("../images/icon-fixed-line.png");
+}
+.icon__fixedTool--ig {
+  background-image: url("../images/icon-fixed-ig.png");
+}
+.icon__fixedTool--fb {
+  background-image: url("../images/icon-fixed-fb.png");
 }
