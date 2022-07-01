@@ -8,6 +8,38 @@
         "widget/slider",
         "bootstrap/bootstrap-setting";
 
+body {
+    position: relative;
+
+    @include mobile {
+        background-color: $white;
+    }
+
+    @include laptops {
+        background-image: url('../images/bg-pc-min.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    &:before {
+        @include mobile {
+            content: '';
+            position: fixed;
+            display: block;
+            width: 100%;
+            z-index: -1;
+            padding-top: (890/640)*100%;
+            background-image: url('../images/bg-sp-min.jpg');
+            background-size: auto 100%;
+            background-position: center top;
+        }
+
+        @include laptops {
+            display: none;
+        }
+    }
+}
+
 img {
     display: block;
     width: 100%;
@@ -418,6 +450,10 @@ a, button {
     }
 }
 
+.container {
+    background-color: $white;
+}
+
 .comments {
     background-color: $bg-light;
 
@@ -520,6 +556,8 @@ a, button {
 }
 
 .staff {
+    background-color: $white;
+
     @include mobile {
         padding-top: 65px;
         padding-bottom: 65px;
@@ -574,8 +612,9 @@ a, button {
 }
 
 .teacher {
-    @include clearfix;
+    background-color: $white;
     position: relative;
+    @include clearfix;
 
     &__media {
         position: relative;
@@ -1498,8 +1537,8 @@ a, button {
 }
 
 .serviceGroup {
-    @include clearfix;
     overflow: hidden;
+    @include clearfix;
     @include list-reset;
 
     @include mobile {
@@ -1524,7 +1563,7 @@ a, button {
 }
 
 .service {
-    background-color: #fff;
+    background-color: $white;
 
     @include mobile {
         padding: 25px 20px;
@@ -1628,6 +1667,7 @@ a, button {
 }
 
 .about {
+    background-color: $white;
 
     @include pad {
         @include clearfix;
@@ -1853,7 +1893,8 @@ a, button {
 }
 
 .maintenance {
-
+    background-color: $white;
+    
     @include laptops {
         padding-top: 80px;
     }
@@ -2202,6 +2243,7 @@ a, button {
 }
 
 .operateGroup {
+    background-color: $white;
 
     @include laptops {
         padding-top: 80px;
@@ -2456,6 +2498,8 @@ a, button {
 }
 
 .contact {
+    background-color: $white;
+    
     .wrapper {
         @include mobile {
             padding: 0 25px;

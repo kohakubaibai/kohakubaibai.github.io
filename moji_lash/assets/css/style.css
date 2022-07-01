@@ -5302,6 +5302,40 @@ body {
     line-height: 2;
   }
 }
+body {
+  position: relative;
+}
+@media only screen and (min-width: 320px) {
+  body {
+    background-color: #FFFFFF;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("../images/bg-pc-min.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media only screen and (min-width: 320px) {
+  body:before {
+    content: "";
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: -1;
+    padding-top: 139.0625%;
+    background-image: url("../images/bg-sp-min.jpg");
+    background-size: auto 100%;
+    background-position: center top;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body:before {
+    display: none;
+  }
+}
+
 img {
   display: block;
   width: 100%;
@@ -5734,6 +5768,10 @@ a .icon, button .icon {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.container {
+  background-color: #FFFFFF;
+}
+
 .comments {
   background-color: #FFF4F5;
 }
@@ -5828,6 +5866,9 @@ a .icon, button .icon {
   min-height: 144px;
 }
 
+.staff {
+  background-color: #FFFFFF;
+}
 @media only screen and (min-width: 320px) {
   .staff {
     padding-top: 65px;
@@ -5888,6 +5929,7 @@ a .icon, button .icon {
 }
 
 .teacher {
+  background-color: #FFFFFF;
   position: relative;
 }
 .teacher:after {
@@ -6868,7 +6910,7 @@ a .icon, button .icon {
 }
 
 .service {
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 @media only screen and (min-width: 320px) {
   .service {
@@ -6971,6 +7013,9 @@ a .icon, button .icon {
   }
 }
 
+.about {
+  background-color: #FFFFFF;
+}
 @media only screen and (min-width: 768px) {
   .about:after {
     content: "";
@@ -7211,6 +7256,9 @@ a .icon, button .icon {
   }
 }
 
+.maintenance {
+  background-color: #FFFFFF;
+}
 @media only screen and (min-width: 1024px) {
   .maintenance {
     padding-top: 80px;
@@ -7595,6 +7643,9 @@ a .icon, button .icon {
   }
 }
 
+.operateGroup {
+  background-color: #FFFFFF;
+}
 @media only screen and (min-width: 1024px) {
   .operateGroup {
     padding-top: 80px;
@@ -7874,6 +7925,9 @@ a .icon, button .icon {
   background-color: #FFF4F5;
 }
 
+.contact {
+  background-color: #FFFFFF;
+}
 @media only screen and (min-width: 320px) {
   .contact .wrapper {
     padding: 0 25px;
