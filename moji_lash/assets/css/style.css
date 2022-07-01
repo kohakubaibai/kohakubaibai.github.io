@@ -5313,6 +5313,7 @@ img {
 
 .arial {
   font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -5952,7 +5953,16 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1024px) {
   .teacher__media .dialog__content {
-    padding: 20px 120px;
+    padding: 0;
+    width: 246px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .teacher__media .dialog__content {
+    width: 325px;
   }
 }
 .teacher__media .dialog__content > span {
@@ -5963,7 +5973,12 @@ a .icon, button .icon {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
+  .teacher__media .dialog__content > span {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .teacher__media .dialog__content > span {
     font-size: 32px;
   }
@@ -6425,16 +6440,29 @@ a .icon, button .icon {
 @media only screen and (min-width: 320px) {
   .category__intro .paragraph {
     margin-bottom: 20px;
-    font-size: 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .category__intro .paragraph {
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .category__intro .paragraph {
     float: left;
-    width: 60%;
-    font-size: 22px;
+    width: 65%;
+    font-size: 16px;
     margin-bottom: 0;
     margin-top: 20px;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .category__intro .paragraph {
+    font-size: 20px;
   }
 }
 .category__intro .feature {
@@ -6445,19 +6473,32 @@ a .icon, button .icon {
 @media only screen and (min-width: 1024px) {
   .category__intro .feature {
     float: left;
-    width: 40%;
+    width: 35%;
     padding-left: 20px;
     margin-top: 20px;
   }
 }
 @media only screen and (min-width: 320px) {
   .category__intro .feature > li {
-    font-size: 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .category__intro .feature > li {
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .category__intro .feature > li {
-    font-size: 22px;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .category__intro .feature > li {
+    font-size: 20px;
   }
 }
 .category__intro .feature > li .label {
@@ -6480,21 +6521,30 @@ a .icon, button .icon {
 @media only screen and (min-width: 320px) {
   .category__table {
     width: 100%;
-    font-size: 11px;
     margin-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .category__table {
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .category__table {
     float: left;
-    width: 73%;
-    font-size: 20px;
+    width: 665px;
     margin-bottom: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .category__table {
     width: 755px;
+    font-size: 20px;
   }
 }
 .category__table thead {
@@ -6585,7 +6635,7 @@ a .icon, button .icon {
   .category__image {
     position: relative;
     float: right;
-    width: 27%;
+    width: 246px;
     -webkit-transform: translateX(40px);
     transform: translateX(40px);
   }
@@ -6685,8 +6735,8 @@ a .icon, button .icon {
     width: 100%;
     right: 0;
     text-align: right;
-    -webkit-transform: translate(10px, -10%);
-    transform: translate(10px, -10%);
+    -webkit-transform: translate(0, -10%);
+    transform: translate(0, -10%);
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -6734,7 +6784,11 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1024px) {
   .category__foot .chName .characteristic {
-    padding: 10px 95px;
+    padding: 0;
+    width: 246px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
   }
   .category__foot .chName .characteristic:before {
     display: inline-block;
@@ -6744,15 +6798,26 @@ a .icon, button .icon {
     display: none;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .category__foot .chName .characteristic {
+    width: 325px;
+  }
+}
 .category__foot .chName .characteristic > span {
   color: #FFFFFF;
+  font-weight: lighter;
 }
 @media only screen and (min-width: 320px) {
   .category__foot .chName .characteristic > span {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
+  .category__foot .chName .characteristic > span {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .category__foot .chName .characteristic > span {
     font-size: 32px;
   }
@@ -6871,6 +6936,29 @@ a .icon, button .icon {
   color: #685256;
   padding: 10px 5px;
   text-align: left;
+}
+@media only screen and (min-width: 320px) {
+  .service__table tbody tr td {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .service__table tbody tr td {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .service__table tbody tr td {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .service__table tbody tr td {
+    font-size: 20px;
+  }
 }
 @media only screen and (min-width: 320px) {
   .service__table tbody tr td .cv {
@@ -7089,9 +7177,18 @@ a .icon, button .icon {
     padding: 10px 50px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .about__text .story__dialog {
+    padding: 0;
+    text-align: center;
+    width: 246px;
+    height: 70px;
+    line-height: 70px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .about__text .story__dialog {
-    padding: 20px 120px;
+    width: 325px;
     left: 0;
   }
 }
@@ -7103,7 +7200,12 @@ a .icon, button .icon {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
+  .about__text .story__dialog > span {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .about__text .story__dialog > span {
     font-size: 32px;
   }
@@ -7283,8 +7385,13 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1024px) {
   .maintain__list .item__text .content {
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .maintain__list .item__text .content {
+    font-size: 20px;
   }
 }
 .maintain__list .item__text .content > span {
@@ -7322,27 +7429,45 @@ a .icon, button .icon {
   .maintain__list .list > li:before {
     width: 5px;
     height: 5px;
-    top: 4px;
+    top: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .maintain__list .list > li:before {
+    top: 9px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .maintain__list .list > li:before {
     width: 10px;
     height: 10px;
-    top: 3px;
+    top: 7px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .maintain__list .list > li:before {
+    top: 10px;
   }
 }
 @media only screen and (min-width: 320px) {
   .maintain__list .list > li {
     font-size: 10px;
+    letter-spacing: 1px;
   }
 }
 @media only screen and (min-width: 768px) {
   .maintain__list .list > li {
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
+  .maintain__list .list > li {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .maintain__list .list > li {
     font-size: 20px;
   }
@@ -7421,13 +7546,24 @@ a .icon, button .icon {
   .fallout__note:before {
     width: 5px;
     height: 5px;
-    top: 10px;
+    top: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .fallout__note:before {
+    top: 9px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .fallout__note:before {
     width: 10px;
     height: 10px;
+    top: 8px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .fallout__note:before {
+    top: 10px;
   }
 }
 .fallout__note > span {
@@ -7438,14 +7574,22 @@ a .icon, button .icon {
 @media only screen and (min-width: 320px) {
   .fallout__note > span {
     font-size: 10px;
+    letter-spacing: 1px;
   }
 }
 @media only screen and (min-width: 768px) {
   .fallout__note > span {
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
+  .fallout__note > span {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .fallout__note > span {
     font-size: 20px;
   }
@@ -7536,6 +7680,7 @@ a .icon, button .icon {
   .operateGroup__content {
     width: 992px;
     padding-left: 0;
+    padding-right: 0;
   }
   .operateGroup__content:after {
     content: "";
@@ -7606,7 +7751,7 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1024px) {
   .operateGroup__content .media__image {
-    width: 350px;
+    width: 345px;
   }
 }
 .operateGroup__content .text {
@@ -7621,9 +7766,9 @@ a .icon, button .icon {
 @media only screen and (min-width: 1024px) {
   .operateGroup__content .text {
     float: right;
-    padding-left: 100px;
+    padding-left: 90px;
     padding-bottom: 0;
-    width: calc(100% - 350px);
+    width: calc(100% - 345px);
   }
 }
 .operateGroup__content .text .list {
@@ -7646,25 +7791,26 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 320px) {
   .operateGroup__content .text .list > li {
-    padding-left: 20px;
+    padding-left: 23px;
     margin-bottom: 6px;
   }
 }
 @media only screen and (min-width: 768px) {
   .operateGroup__content .text .list > li {
-    padding-left: 25px;
+    padding-left: 30px;
     margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .operateGroup__content .text .list > li {
-    padding-left: 46px;
+    padding-left: 56px;
     margin-bottom: 30px;
   }
 }
 .operateGroup__content .text .list > li .num {
   position: absolute;
   left: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media only screen and (min-width: 320px) {
   .operateGroup__content .text .list > li .num {
@@ -7697,14 +7843,19 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 768px) {
   .operateGroup__content .text .list > li .content {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .operateGroup__content .text .list > li .content {
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .operateGroup__content .text .list > li .content {
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -7716,6 +7867,11 @@ a .icon, button .icon {
   .operateGroup__content .text .list > li .content > span {
     display: block;
   }
+}
+.operateGroup__content .text .list > li .content > .bg {
+  font-style: normal;
+  color: #616c83;
+  background-color: #FFF4F5;
 }
 
 @media only screen and (min-width: 320px) {
@@ -7855,7 +8011,7 @@ a .icon, button .icon {
 }
 .contact .map__text .infos > li .icon {
   float: left;
-  margin-right: 3px;
+  margin-right: 8px;
 }
 .contact .map__text .infos > li .content {
   float: left;
@@ -7863,14 +8019,22 @@ a .icon, button .icon {
 @media only screen and (min-width: 320px) {
   .contact .map__text .infos > li .content {
     font-size: 10px;
+    letter-spacing: 1px;
   }
 }
 @media only screen and (min-width: 768px) {
   .contact .map__text .infos > li .content {
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
+  .contact .map__text .infos > li .content {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .contact .map__text .infos > li .content {
     font-size: 20px;
   }
@@ -7892,10 +8056,17 @@ a .icon, button .icon {
 @media only screen and (min-width: 320px) {
   .contact .map__text .infos > li .content .text > span {
     background-color: #FFFFFF;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contact .map__text .infos > li .content .text > span {
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .contact .map__text .infos > li .content .text > span {
+    letter-spacing: 3px;
     background-color: #FFF4F5;
   }
 }
@@ -8032,27 +8203,43 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1024px) {
   .contact .sns__content .text {
+    text-align: left;
     font-size: 20px;
+    margin-top: 45px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact .sns__content .text {
+    margin-top: 140px;
   }
 }
 .contact .sns__content .text > p {
   margin: 0;
+  color: #685256;
 }
 @media only screen and (min-width: 320px) {
   .contact .sns__content .text > p {
     padding-right: 10px;
     font-size: 10px;
+    letter-spacing: 1px;
   }
 }
 @media only screen and (min-width: 768px) {
   .contact .sns__content .text > p {
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .contact .sns__content .text > p {
-    font-size: 20px;
+    font-size: 16px;
     padding-right: 32px;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact .sns__content .text > p {
+    font-size: 20px;
   }
 }
 .contact .sns__content .text .dialog {
@@ -8073,13 +8260,17 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1024px) {
   .contact .sns__content .text .dialog {
-    padding: 15px 75px;
+    padding: 0;
+    text-align: center;
+    width: 246px;
+    height: 70px;
+    line-height: 70px;
     margin-right: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
   .contact .sns__content .text .dialog {
-    padding: 20px 100px;
+    width: 325px;
   }
 }
 .contact .sns__content .text .dialog__text {
@@ -8095,7 +8286,7 @@ a .icon, button .icon {
     font-size: 24px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .contact .sns__content .text .dialog__text {
     font-size: 32px;
   }
@@ -8142,6 +8333,11 @@ a .icon, button .icon {
   .contact .sns__content .links > li {
     display: inline-block;
     width: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .contact .sns__content .links > li {
+    padding: 0 8px;
   }
 }
 
@@ -8262,6 +8458,12 @@ a .icon, button .icon {
   .icon__sns {
     width: 150px;
     height: 150px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .icon__sns {
+    width: 245px;
+    height: 245px;
   }
 }
 .icon__sns--line {

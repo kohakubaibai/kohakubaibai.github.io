@@ -20,6 +20,7 @@ img {
 
 .arial {
     font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 ,
@@ -632,7 +633,15 @@ a, button {
                 }
 
                 @include laptops {
-                    padding: 20px 120px;
+                    padding: 0;
+                    width: 246px;
+                    height: 70px;
+                    line-height: 70px;
+                    text-align: center;
+                }
+
+                @include desktop {
+                    width: 325px;
                 }
 
                 & > span {
@@ -642,7 +651,11 @@ a, button {
                         font-size: 16px;
                     }
 
-                    @include laptops {
+                    @include pad {
+                        font-size: 24px;
+                    }
+
+                    @include desktop {
                         font-size: 32px;
                     }
                 }
@@ -1093,14 +1106,26 @@ a, button {
         .paragraph {
             @include mobile {
                 margin-bottom: 20px;
-                font-size: 12px;
+                font-size: 10px;
+                letter-spacing: 1px;
             }
+
+            @include pad {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+
             @include laptops {
                 float: left;
-                width: 60%;
-                font-size: 22px;
+                width: 65%;
+                font-size: 16px;
                 margin-bottom: 0;
                 margin-top: 20px;
+                letter-spacing: 3px;
+            }
+
+            @include desktop {
+                font-size: 20px
             }
         }
 
@@ -1109,17 +1134,29 @@ a, button {
 
             @include laptops {
                 float: left;
-                width: 40%;
+                width: 35%;
                 padding-left: 20px;
                 margin-top: 20px;
             }
             
             & > li {
                 @include mobile {
-                    font-size: 12px;
+                    font-size: 10px;
+                    letter-spacing: 1px;
                 }
+
+                @include pad {
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                }
+
                 @include laptops {
-                    font-size: 22px;
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                }
+
+                @include desktop {
+                    font-size: 20px;
                 }
 
                 .label {
@@ -1146,19 +1183,27 @@ a, button {
     &__table {
         @include mobile {
             width: 100%;
-            font-size: 11px;
             margin-bottom: 10px;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        @include pad {
+            font-size: 14px;
+            letter-spacing: 2px;
         }
 
         @include laptops {
             float: left;
-            width: 73%;
-            font-size: 20px;
+            width: 665px;
             margin-bottom: 0;
+            font-size: 16px;
+            letter-spacing: 3px;
         }
 
         @include desktop {
             width: 755px;
+            font-size: 20px;
         }
 
         thead {
@@ -1264,7 +1309,7 @@ a, button {
         @include laptops {
             position: relative;
             float: right;
-            width: 27%;
+            width: 246px;
             @include translateX(40px);
         }
 
@@ -1351,7 +1396,7 @@ a, button {
                 width: 100%;
                 right: 0;
                 text-align: right;
-                @include translate(10px, -10%);
+                @include translate(0, -10%);
             }
 
             @include desktop {
@@ -1399,8 +1444,12 @@ a, button {
                 }
     
                 @include laptops {
-                    padding: 10px 95px;
-    
+                    padding: 0;
+                    width: 246px;
+                    height: 70px;
+                    line-height: 70px;
+                    text-align: center;
+
                     &:before {
                         display: inline-block;
                         left: -5px;
@@ -1410,15 +1459,24 @@ a, button {
                         display: none;
                     }
                 }
+
+                @include desktop {
+                    width: 325px;
+                }
     
                 & > span {
                     color: $white;
+                    font-weight: lighter;
     
                     @include mobile {
                         font-size: 16px;
                     }
+
+                    @include pad {
+                        font-size: 24px;
+                    }
     
-                    @include laptops {
+                    @include desktop {
                         font-size: 32px;
                     }
                 }
@@ -1533,6 +1591,25 @@ a, button {
                     color: $sub;
                     padding: 10px 5px;
                     text-align: left;
+
+                    @include mobile {
+                        font-size: 10px;
+                        letter-spacing: 1px;
+                    }
+
+                    @include pad {
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                    }
+
+                    @include laptops {
+                        font-size: 16px;
+                        letter-spacing: 3px;
+                    }
+
+                    @include laptops {
+                        font-size: 20px;
+                    }
 
                     .cv {
 
@@ -1742,8 +1819,16 @@ a, button {
                     padding: 10px 50px;
                 }
 
+                @include laptops {
+                    padding: 0;
+                    text-align: center;
+                    width: 246px;
+                    height: 70px;
+                    line-height: 70px;
+                }
+
                 @include desktop {
-                    padding: 20px 120px;
+                    width: 325px;
                     left: 0;
                 }
 
@@ -1754,7 +1839,11 @@ a, button {
                         font-size: 16px;
                     }
 
-                    @include laptops {
+                    @include pad {
+                        font-size: 24px;
+                    }
+
+                    @include desktop {
                         font-size: 32px;
                     }
                 }
@@ -1915,8 +2004,12 @@ a, button {
                     }
 
                     @include laptops {
-                        font-size: 20px;
+                        font-size: 16px;
                         letter-spacing: 3px;
+                    }
+
+                    @include desktop {
+                        font-size: 20px;
                     }
 
                     & > span {
@@ -1953,24 +2046,39 @@ a, button {
                     @include mobile {
                         width: 5px;
                         height: 5px;
-                        top: 4px;
+                        top: 5px;
+                    }
+
+                    @include pad {
+                        top: 9px;
                     }
     
                     @include laptops {
                         width: 10px;
                         height: 10px;
-                        top: 3px;
+                        top: 7px;
+                    }
+
+                    @include desktop {
+                        top: 10px;
                     }
                 }
                 @include mobile {
                     font-size: 10px;
+                    letter-spacing: 1px;
                 }
 
                 @include pad {
-                    font-size: 16px;
+                    font-size: 14px;
+                    letter-spacing: 2px;
                 }
 
                 @include laptops {
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                }
+
+                @include desktop {
                     font-size: 20px;
                 }
 
@@ -2048,12 +2156,21 @@ a, button {
             @include mobile {
                 width: 5px;
                 height: 5px;
-                top: 10px;
+                top: 5px;
+            }
+
+            @include pad {
+                top: 9px;
             }
 
             @include laptops {
                 width: 10px;
                 height: 10px;
+                top: 8px;
+            }
+
+            @include laptops {
+                top: 10px;
             }
         }
 
@@ -2064,13 +2181,20 @@ a, button {
 
             @include mobile {
                 font-size: 10px;
+                letter-spacing: 1px;
             }
 
             @include pad {
-                font-size: 16px;
+                font-size: 14px;
+                letter-spacing: 2px;
             }
 
             @include laptops {
+                font-size: 16px;
+                letter-spacing: 3px;
+            }
+
+            @include desktop {
                 font-size: 20px;
             }
         }
@@ -2156,6 +2280,7 @@ a, button {
         @include laptops {
             width: 992px;
             padding-left: 0;
+            padding-right: 0;
             @include clearfix;
         }
 
@@ -2214,7 +2339,7 @@ a, button {
                     width: 58%;
                 }
                 @include laptops {
-                    width: 350px;
+                    width: 345px;
                 }
             }
         }
@@ -2229,9 +2354,9 @@ a, button {
 
             @include laptops {
                 float: right;
-                padding-left: 100px;
+                padding-left: 90px;
                 padding-bottom: 0;
-                width: calc(100% - 350px);
+                width: calc(100% - 345px);
             }
 
             .list {
@@ -2249,22 +2374,23 @@ a, button {
                     position: relative;
 
                     @include mobile {
-                        padding-left: 20px;
+                        padding-left: 23px;
                         margin-bottom: 6px;
                     }
                     @include pad {
-                        padding-left: 25px;
+                        padding-left: 30px;
                         margin-bottom: 20px;
                     }
 
                     @include laptops {
-                        padding-left: 46px;
+                        padding-left: 56px;
                         margin-bottom: 30px;
                     }
 
                     .num {
                         position: absolute;
                         left: 0;
+                        font-family: Arial, Helvetica, sans-serif;
 
                         @include mobile {
                             font-size: 22px;
@@ -2292,24 +2418,35 @@ a, button {
                         }
 
                         @include pad {
-                            font-size: 16px;
+                            font-size: 14px;
                             letter-spacing: 2px;
                         }
 
                         @include laptops {
-                            font-size: 20px;
+                            font-size: 16px;
                             letter-spacing: 3px;
                         }
 
+                        @include desktop {
+                            font-size: 20px;
+                        }
+
                         & > span {
+                            
                             @include mobile {
                                 display: inline;
                             }
 
-
                             @include pad {
                                 display: block;
                             }
+
+                        }
+
+                        & > .bg {
+                            font-style: normal;
+                            color: $main;
+                            background-color: $bg-light;
                         }
                     }
                 }
@@ -2439,7 +2576,7 @@ a, button {
 
                     .icon {
                         float: left;
-                        margin-right: 3px;
+                        margin-right: 8px;
                     }
 
                     .content {
@@ -2447,13 +2584,20 @@ a, button {
 
                         @include mobile {
                             font-size: 10px;
+                            letter-spacing: 1px;
                         }
 
                         @include pad {
-                            font-size: 16px;
+                            font-size: 14px;
+                            letter-spacing: 2px;
                         }
 
                         @include laptops {
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                        }
+
+                        @include desktop {
                             font-size: 20px;
                         }
 
@@ -2474,9 +2618,15 @@ a, button {
 
                                 @include mobile {
                                     background-color: $white;
+                                    letter-spacing: 1px;
+                                }
+
+                                @include pad {
+                                    letter-spacing: 2px;
                                 }
 
                                 @include laptops {
+                                    letter-spacing: 3px;
                                     background-color: $bg-light;
                                 }
                             }
@@ -2608,24 +2758,38 @@ a, button {
                 }
 
                 @include laptops {
+                    text-align: left;
                     font-size: 20px;
+                    margin-top: 45px;
+                }
+
+                @include desktop {
+                    margin-top: 140px;
                 }
 
                 & > p {
                     margin: 0;
+                    color: $sub;
                 
                     @include mobile{
                         padding-right: 10px;
                         font-size: 10px;
+                        letter-spacing: 1px;
                     }
     
                     @include pad {
-                        font-size: 16px;
+                        font-size: 14px;
+                        letter-spacing: 2px;
                     }
 
                     @include laptops {
-                        font-size: 20px;
+                        font-size: 16px;
                         padding-right: 32px;
+                        letter-spacing: 3px;
+                    }
+
+                    @include desktop {
+                        font-size: 20px;
                     }
                 }
 
@@ -2644,12 +2808,16 @@ a, button {
                     }
 
                     @include laptops {
-                        padding: 15px 75px;
+                        padding: 0;
+                        text-align: center;
+                        width: 246px;
+                        height: 70px;
+                        line-height: 70px;
                         margin-right: 0;
                     }
 
                     @include desktop {
-                        padding: 20px 100px;
+                        width: 325px;
                     }
 
                     &__text {
@@ -2663,10 +2831,9 @@ a, button {
                             font-size: 24px;
                         }
     
-                        @include laptops {
+                        @include desktop {
                             font-size: 32px;
                         }
-                        
                     }
                 }
             }
@@ -2703,6 +2870,10 @@ a, button {
                     @include pad {
                         display: inline-block;
                         width: auto;
+                    }
+
+                    @include laptops {
+                        padding: 0 8px;
                     }
                 }
             }
@@ -2819,6 +2990,11 @@ a, button {
         @include laptops{
             width: 150px;
             height: 150px;
+        }
+
+        @include desktop{
+            width: 245px;
+            height: 245px;
         }
 
         &--line {

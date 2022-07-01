@@ -67,11 +67,11 @@ var formula = [
     {
         "formula_en": "USA REAL MINK",
         "formula_ch": "美式好萊塢妝感",
-        "intro": '接完宛如天生的真睫毛，好氣色好精神的秘密武器。<br>120-150根之間，真假分不清、只知道更有神了。<br>200-250根之間，愛化妝的好幫手，再也不用裝自然款假睫毛。',
+        "intro": '接完宛如天生的真睫毛，好氣色好精神的秘密武器。<br><span class="arial">120-150</span>根之間，真假分不清、只知道更有神了。<br><span class="arial">200-250</span>根之間，愛化妝的好幫手，再也不用裝自然款假睫毛。',
         "feature": [{
-            "color": '<span>霧面、80%黑色</span>',
-            "size": '0.12',
-            "skill": '3D',
+            "color": '<span>霧面、<span class="arial">80%</span>黑色</span>',
+            "size": '<span><span class="arial">0.12</span></span>',
+            "skill": '<span><span class="arial">3</span><span class="didot">D</span></span>',
         }],
         "price": [
             {
@@ -125,11 +125,11 @@ var formula = [
     {
         "formula_en": "CAMELLIA 6D",
         "formula_ch": "極度無感山茶花",
-        "intro": '濃密、自然縮放自如。接完濃，一個月後掉到自然款。<br>300-450根之間，上班族的最愛;有妝能多睡20分的秘密。<br>500-650根之間，可以維持一個月，從濃密到自然的體驗，<br>適合懶惰寶貝。',
+        "intro": '濃密、自然縮放自如。接完濃，一個月後掉到自然款。<br><span class="arial">300-450</span>根之間，上班族的最愛;有妝能多睡<span class="arial">20</span>分的秘密。<br><span class="arial">500-650</span>根之間，可以維持一個月，從濃密到自然的體驗，<br>適合懶惰寶貝。',
         "feature": [{
-            "color": '<span>霧面、</span><span>100%黑色或80%黑巧克力</span>',
-            "size": '0.12',
-            "skill": '3D',
+            "color": '<span>霧面、</span><span><span class="arial">100%</span>黑色或<span class="arial">80%</span>黑巧克力</span>',
+            "size": '<span><span class="arial">0.07</span></span>',
+            "skill": '<span><span class="arial">6</span><span class="didot">D</span></span>',
         }],
         "price": [
             {
