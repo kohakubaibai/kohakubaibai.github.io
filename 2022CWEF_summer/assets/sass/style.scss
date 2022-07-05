@@ -1744,6 +1744,10 @@ footer {
     }
 }
 
+.agenda_file {
+    background-color: #f0f0f0;
+}
+
 .report-list {
     padding-top: 60px;
     @include flex-obj(stretch, flex-start);

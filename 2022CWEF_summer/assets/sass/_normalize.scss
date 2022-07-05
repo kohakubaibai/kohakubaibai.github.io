@@ -230,17 +230,9 @@ body {
         overflow: hidden;
     }
 
-    @media only screen and (min-width: 320px) {
-        padding-bottom: 62px;
-    }
-    @media only screen and (min-width: 375px) {
-        padding-bottom: 65px;
-    }
-
     @include laptops {
         font-family: "Roboto", "Noto Sans TC", "思源黑體 TC", "思源黑體 TW", "思源黑體", "微軟正黑體", "繁黑體", "Microsoft JhengHei", "Lato", "Arial", "Segoe UI Emoji", "Segoe UI Symbol", "新細明體", sans-serif;
         font-display: swap;
-        padding-bottom: 71px;
     }
 }
 
