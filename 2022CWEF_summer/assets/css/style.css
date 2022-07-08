@@ -6296,65 +6296,50 @@ footer {
   }
 }
 .opening.opening-inner {
-  height: 345px;
-  padding-top: 70px;
-  padding-bottom: 0px;
-  background-image: url("../images/opening.jpg");
-  background-size: cover;
-  background-position: center 30px;
+  background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
+}
+@media only screen and (min-width: 320px) {
+  .opening.opening-inner {
+    height: 390px;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    background-image: url("../images/kv/mobile-report-kv.jpg");
+    background-size: auto 100%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .opening.opening-inner {
-    background-position: center 60%;
-  }
-}
-.opening.opening-inner .opening__title {
-  position: absolute;
-  width: 100%;
-  color: #FFFFFF;
-  top: calc(50% + 80px);
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding: 0 20px 70px;
-}
-.opening.opening-inner .opening__title:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 20px;
-  left: -50px;
-  background-image: url("../images/deco-title.png");
-  background-size: 313px 176px;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-@media only screen and (min-width: 768px) {
-  .opening.opening-inner .opening__title:before {
-    bottom: -10px;
-    background-position: left bottom;
+    background-image: url("../images/kv/pad-report-kv.jpg");
   }
 }
 @media only screen and (min-width: 1024px) {
-  .opening.opening-inner .opening__title:before {
-    left: -120px;
-    background-size: 464px 261px;
+  .opening.opening-inner {
+    height: 345px;
+    padding-top: 138px;
+    padding-bottom: 138px;
+    background-size: 100% auto;
+    background-image: url("../images/kv/report-kv.jpg");
   }
+}
+.opening.opening-inner .opening__title {
+  text-align: center;
 }
 .opening.opening-inner .opening__title span {
   position: relative;
   z-index: 2;
   margin: 0;
-  display: block;
+  display: inline-block;
 }
 .opening.opening-inner .opening__title span.zh {
   font-size: 46px;
+  color: #000000;
 }
 .opening.opening-inner .opening__title span.en {
   font-size: 20px;
+  color: #7D7E80;
+  margin-left: 5px;
 }
 
 @media (max-width: 767px) {

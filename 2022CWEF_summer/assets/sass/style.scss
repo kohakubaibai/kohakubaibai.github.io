@@ -763,63 +763,48 @@ footer {
     }
 
     &.opening-inner {
-        height: 345px;
-        padding-top: 70px;
-        padding-bottom: 0px;
-        background-image: url("../images/opening.jpg");
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center 30px;
+        background-repeat: no-repeat;
+        background-position: center;
         overflow: hidden;
 
+        @include mobile {
+            height: 390px;
+            padding-top: 160px;
+            padding-bottom: 160px;
+            background-image: url("../images/kv/mobile-report-kv.jpg");
+            background-size: auto 100%;
+        }
+        
         @include pad {
-            background-position: center 60%;
+            background-image: url("../images/kv/pad-report-kv.jpg");
+        }
+
+        @include laptops {
+            height: 345px;
+            padding-top: 138px;
+            padding-bottom: 138px;
+            background-size: 100% auto;
+            background-image: url("../images/kv/report-kv.jpg");
         }
 
         .opening__title {
-            position: absolute;
-            width: 100%;
-            color: $white;
-            top: calc(50% + 80px);
-            @include box-sizing(border-box);
-            @include translateY(-50%);
-            padding: 0 20px 70px;
-
-            &:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                bottom: 20px;
-                left: -50px;
-                background-image: url('../images/deco-title.png');
-                background-size: 313px 176px;
-                background-repeat: no-repeat;
-                z-index: 1;
-                @include pad {
-                    bottom: -10px;
-                    background-position: left bottom;
-                }
-                @include laptops {
-                    left: -120px;
-                    background-size: 464px 261px;
-                }
-            }
+            text-align: center;
 
             span {
                 position: relative;
                 z-index: 2;
                 margin: 0;
-                display: block;
+                display: inline-block;
 
                 &.zh {
                     font-size: 46px;
+                    color: #000000;
                 }
 
                 &.en {
                     font-size: 20px;
+                    color: #7D7E80;
+                    margin-left: 5px;
                 }
             }
         }
