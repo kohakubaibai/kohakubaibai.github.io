@@ -53,6 +53,22 @@ $(function () {
 		nextArrow: '<button class="slick-next slides__arrow slides__arrow--teacher next" aria-label="Next" type="button"></button>',
 		dotsClass: 'slides__dots slides__dots--teacher'
 	});
+
+	var $kvSlider = $('[data-slick-slider="kv"]');
+	$kvSlider.on('init', function(event, slick){
+		$(this).closest('.carousel').css({'visibility':'visible'});
+	}).slick({
+		infinite: true,
+		rows: 0,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: false,
+		dots: false,
+		autoplay: true,
+		autoplaySpeed: 2000
+	});
+
 	// formula datas inject
 	var formulaGroup = '';
 	for(let i = 0; i < formula.length; i++) {

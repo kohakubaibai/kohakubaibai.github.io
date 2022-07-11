@@ -59,7 +59,7 @@ var formula = [
                 "best": false
             }
         ],
-        "image": "assets/images/img-category-01.jpg",
+        "image": "assets/images/img-category-01.png",
         "alt": "JP LASH 日系無感嫁接",
         "characteristic": "亮面 極黑",
         "en": "<span>EYELASH</span>&nbsp;<span>EXTENSION</span>"
@@ -117,7 +117,7 @@ var formula = [
                 "best": false
             }
         ],
-        "image": "assets/images/img-category-02.jpg",
+        "image": "assets/images/img-category-02.png",
         "alt": "USA REAL MINK 美式好萊塢妝感",
         "characteristic": "霧面 水貂",
         "en": "<span>ROYAL REALMINK</span>&nbsp;<span>EXTENSION</span>"
@@ -182,7 +182,7 @@ var formula = [
                 "best": false
             }
         ],
-        "image": "assets/images/img-category-03.jpg",
+        "image": "assets/images/img-category-03.png",
         "alt": "CAMELLIA 6D 極度無感山茶花",
         "characteristic": "亮面 雙色",
         "en": "<span>CAMELLIA 6D</span>&nbsp;<span>EXTENSION</span>"

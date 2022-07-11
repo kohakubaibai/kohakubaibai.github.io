@@ -315,6 +315,19 @@ body {
 .slides--comments .slides__item {
   margin: 0 12px;
 }
+.slides--kv {
+  height: 100%;
+}
+.slides--kv .slick-list {
+  height: 100%;
+}
+.slides--kv .slick-track {
+  height: 100%;
+}
+.slides--kv .slick-slide {
+  position: relative;
+  height: 100%;
+}
 .slides__arrow {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5674,7 +5687,18 @@ a .icon, button .icon {
     width: 100%;
   }
 }
-.card--kv .card__front:before,
+.card--kv .card__front:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.card--kv .card__front .carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
 .card--kv .card__back:before {
   content: "";
   display: block;
@@ -5726,7 +5750,7 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 1200px) {
   .card--kv .card__front {
-    width: 333px;
+    width: 405px;
   }
 }
 .card--kv .card__back {

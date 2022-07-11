@@ -5,6 +5,23 @@
         }
     }
 
+    &--kv {
+        height: 100%;
+        
+        .slick-list {
+            height: 100%;
+        }
+
+        .slick-track {
+            height: 100%;;
+        }
+
+        .slick-slide {
+            position: relative;
+            height: 100%;
+        }
+    }
+
     &__arrow {
         @include appearance(none);
         position: absolute;
