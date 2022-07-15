@@ -338,7 +338,8 @@ body {
     }
 
     &--strike,
-    &--object {
+    &--object,
+    &--rumor {
         .wrapper {
             @include clearfix;
             
@@ -374,6 +375,7 @@ body {
 
     &--object {
         background-color: $white;
+
         @include sp {
             padding: 2rem 0 2.25rem;
         }
@@ -406,6 +408,84 @@ body {
 
                 &__text {
                     color: $white;
+
+                    @include sp {
+                        font-size: 2rem;
+                    }
+
+                    @include laptops {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        .section__content {
+            @include sp {
+                margin-top: 1.7rem;
+            }
+
+            @include laptops {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    &--rumor {
+        background-color: $third;
+
+        @include sp {
+            padding: 3rem 0 1.5rem;
+        }
+    
+        @include laptops {
+            padding: 88px 0 73px;
+        }
+
+        .section__title {
+
+            @include sp {
+                margin-bottom: 3.3rem;
+            }
+            @include laptops {
+                margin-bottom: 50px;
+            }
+
+            .title {
+                background-color: #F4AD01;
+
+                &:before,
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-image: url('#{$imgPath}/deco-rumor.svg');
+
+                    @include sp {
+                        width: 2.15rem;
+                        height: 2.5rem;
+                    }
+
+                    @include laptops {
+                        width: 43.75px;
+                        height: 50px;
+                    }
+                }
+                
+                @include sp {
+                    padding: 1.5rem 0;
+                    border-radius: 2.5rem;
+                }
+
+                @include laptops {
+                    padding: 30px 65px;
+                    border-radius: 50px;
+                }
+
+                &__text {
+                    color: $white;
+                    display: inline-block;
+                    vertical-align: middle;
 
                     @include sp {
                         font-size: 2rem;
@@ -1220,6 +1300,10 @@ body {
             margin: 50px 0 0;
         }
     }
+}
+
+.rumor {
+    
 }
 
 .gridList {
