@@ -1,0 +1,1565 @@
+//color
+$main: #6B95C8;
+$sub: #3B9688;
+$third: #6B76C8;
+$light: #6BC8B3;
+$white: #ffffff;
+$sec-dark: #10223F;
+$font-dark: #595857;
+
+$imgPath : "img/page/lp/new";
+
+@mixin clearfix {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin box-sizing($type) {
+    -moz-box-sizing: $type;
+    -webkit-box-sizing: $type;
+    box-sizing: $type;
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+@mixin translateX ($x) {
+    @include transform(translateX($x));
+}
+
+@mixin translateY ($y) {
+    @include transform(translateY($y));
+}
+
+@mixin f-hiragino {
+    font-family: "Hiragino Sans";
+}
+@mixin f-tsukushiA {
+    font-family: "Tsukushi A Round Gothic";
+    font-weight: bold;
+}
+@mixin f-aotf {
+    font-family: "a-otf-jun-pro";
+}
+@mixin f-hirakakuW3 {
+    font-family: "ヒラギノ角ゴ Pro W3";
+}
+
+// ========== Media Queries ==========
+//Small devices (portrait phones, 320 and down)
+@mixin sp {
+    @media only screen and (min-width: 320px) {
+        @content;
+    }
+}
+
+//Large devices (laptops, 1024 and down)
+@mixin laptops {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+//Medium devices (portrait tablets,landscape phone, 768px and down)
+@mixin desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+html {
+    @include sp {
+        font-size: 2.67vw;
+    }
+}
+
+body {
+    margin: 0;
+
+    @include sp {
+        font-size: 100%;
+    }
+}
+
+//common setting
+.wrapper {
+    margin: 0 auto;
+    @include box-sizing(border-box);
+
+    @include sp {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include desktop {
+        max-width: 1200px;
+
+    }
+}
+
+.page--lp {
+    img {
+        display: block;
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+@include sp {
+    .display--pc {
+        display: none;
+    }
+
+    .display--sp {
+        display: block;
+    }
+}
+
+@include laptops {
+    .display--pc {
+        display: block;
+    }
+
+    .display--sp {
+        display: none;
+    }
+}
+
+//header
+.lp-header {
+    background-color: $white;
+    position: static;
+    height: auto;
+    border-bottom: none;
+    @include box-sizing(border-box);
+
+    @include sp {
+        
+    }
+
+    @include laptops {
+        padding: 27px 0 16px;
+    }
+
+    .wrapper {
+        @include clearfix;
+
+        @include sp {
+            
+        }
+
+        @include laptops {
+            padding: 0 40px;
+        }
+        
+        @include desktop {
+            padding: 0 60px;
+        }
+    }
+
+    .top {
+        @include clearfix;
+        text-align: right;
+
+        @include sp {
+            padding: 1.2rem 1.25rem 0;
+        }
+
+        @include laptops {
+            padding: 0;
+            float: left;
+        }
+    }
+
+    .logo {
+        @include f-hiragino;
+        max-width: none;
+        font-weight: 700;
+        float: left;
+        font-size: unset;
+        margin: 0;
+
+        &__image {
+            display: inline-block;
+            vertical-align: middle;
+
+            @include sp {
+                width: 2.4rem;
+            }
+
+            @include desktop {
+                width: 60px;
+            }
+        }
+
+        &__text {
+            vertical-align: middle;
+            letter-spacing: 1.8px;
+            color: #3C97CB;
+            
+            @include sp {
+                font-size: 1.65rem;
+                letter-spacing: 0.08rem;
+            }
+            @include desktop {
+                font-size: 36px;
+                letter-spacing: 1.8px;
+            }
+        }
+    }
+
+    .topic {
+        display: inline-block;
+        padding: 0.5rem 0.8rem;
+        background-color: $main;
+        border-radius: 1.75rem;
+        color: $white;
+        font-size: 0.7rem;
+        line-height: 1;
+        margin-top: 0.3rem;
+        transform-origin: top right;
+
+        @include laptops {
+            display: none;
+        }
+    }
+
+    .nav {
+
+        @include sp {
+            margin-top: 1rem;
+        }
+        
+        @include laptops {
+            float: right;
+            margin-top: 0;
+        }
+
+        &__sns {
+            @include clearfix;
+            @include list-reset;
+
+            @include sp {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            @include laptops {
+                display: block;
+            }
+
+            & > li {
+
+                @include laptops {
+                    float: left;
+                    margin-right: 4px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__txt {
+            color: $sub;
+            @include f-hiragino;
+            font-weight: 600;
+
+            @include sp {
+                display: none;
+            }
+
+            @include laptops {
+                display: block;
+                font-size: 14px;
+                margin-top: 7px;
+            }
+        }
+    }
+}
+
+.section {
+    overflow: hidden;
+
+    &__title {
+        text-align: center;
+
+        .title {
+            font-size: 0;
+
+            @include sp {
+                display: block;
+            }
+
+            @include laptops {
+                display: inline-block;
+            }
+
+            &__text {
+                line-height: 1;
+            }
+        }
+    }
+
+    &--kv {
+        background-color: $main;
+
+        @include sp {
+            padding-top: 2rem;
+        }
+
+        @include desktop {
+            padding-top: 40px;
+        }
+    }
+
+    &--strike,
+    &--object {
+        .wrapper {
+            @include clearfix;
+            
+            @include sp {
+                padding: 0 1.25rem;
+            }
+    
+            @include laptops {
+                padding: 0 40px;
+            }
+    
+            @include laptops {
+                padding: 0 60px;
+            }
+        }
+
+        .section__title {
+            margin-top: 0;
+        }
+    }
+
+    &--strike {
+        background-color: $sub;
+    
+        @include sp {
+            padding: 2rem 0;
+        }
+    
+        @include laptops {
+            padding: 40px 0;
+        }
+    }
+
+    &--object {
+        background-color: $white;
+        @include sp {
+            padding: 2rem 0 2.25rem;
+        }
+    
+        @include laptops {
+            padding: 70px 0;
+        }
+
+        .section__title {
+
+            @include sp {
+                margin-bottom: 1.7rem;
+            }
+            @include laptops {
+                margin-bottom: 25px;
+            }
+
+            .title {
+                background-color: $third;
+                
+                @include sp {
+                    padding: 1.5rem 0;
+                    border-radius: 2.5rem;
+                }
+
+                @include laptops {
+                    padding: 30px 65px;
+                    border-radius: 50px;
+                }
+
+                &__text {
+                    color: $white;
+
+                    @include sp {
+                        font-size: 2rem;
+                    }
+
+                    @include laptops {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        .section__content {
+            @include sp {
+                margin-top: 1.7rem;
+            }
+
+            @include laptops {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+//kv
+.kv {
+
+    .wrapper {
+        @include sp {
+            padding-left: 1.25rem;
+        }
+
+        @include desktop {
+            padding-left: 60px;
+        }
+    }
+
+    &__head {
+        @include f-tsukushiA;
+        line-height: 1;
+
+        .topic__line1,
+        .topic__line2 {
+            color: $white;
+
+            @include sp {
+                text-shadow: 0 0.15rem 0.3rem rgba(0,0,0,.16);
+            }
+
+            @include desktop {
+                text-shadow: 0 3px 6px rgba(0,0,0,.16);
+            }
+            
+        }
+
+        .topic__line1 {
+
+            @include sp {
+                font-size: 2.83rem;
+                letter-spacing: -0.057rem;
+            }
+
+            @include laptops {
+                font-size: 78px;
+            }
+
+            @include desktop {
+                font-size: 90px;
+                letter-spacing: -1.8px;
+            }
+        }
+
+        .topic__line2 {
+            
+            @include sp {
+                font-size: 4rem;
+                letter-spacing: -0.08rem;
+            }
+
+            @include laptops {
+                font-size: 110px;
+            }
+
+            @include desktop {
+                font-size: 126px;
+                letter-spacing: -2.52px;
+            }
+        }
+
+        .topic__sub {
+            display: inline-block;
+            background-color: #E97501;
+            color: $white;
+            
+            @include sp {
+                padding: 0.5rem 1rem;
+                font-size: 1.45rem;
+                letter-spacing: -0.0725rem;
+                border-radius: 1.3rem;
+                margin-top: 0.85rem;
+            }
+
+            @include laptops {
+                font-size: 39px;
+                margin-top: 14px;
+            }
+            
+            @include desktop {
+                padding: 5px 24px;
+                font-size: 44px;
+                letter-spacing: -0.88px;
+                border-radius: 27px;
+                margin-top: 15px;
+            }
+        }
+    }
+    &__body {
+        position: relative;
+        @include clearfix;
+
+        @include sp {
+            padding-right: 1.25rem;
+            margin-top: -0.5rem;
+        }
+
+        @include laptops {
+            margin-top: -5px;
+            padding-right: 0;
+        }
+
+        .media {
+
+            @include laptops {
+                float: right;
+                width: (591/1140)*100%;
+            }
+        }
+
+        .kvSlogan {
+            margin-top: -2rem;
+            margin-bottom: 0.7rem;
+        }
+    }
+
+    &__foot {
+        position: relative;
+        @include clearfix;
+
+        @include sp {
+            padding-bottom: 1rem;
+        }
+        
+        @include laptops {
+            padding-top: 14px;
+            padding-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            background-image: url('#{$imgPath}/img-kv-sp.png'); 
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+            @include sp {
+                width: 11.3rem;
+                height: 11.3rem;
+                right: -1.8rem;
+            }
+
+            @include laptops {
+                width: 213px;
+                height: 213px;
+                right: auto;
+                left: -90px;
+            }
+        }
+
+        .kvSlogan {
+            position: relative;
+            z-index: 5;
+            float: right;
+
+            @include laptops {
+                padding-right: 40px;
+            }
+
+            @include desktop {
+                padding-right: 60px;
+            }
+        }
+    }
+
+    .featureList {
+        position: relative;
+        @include clearfix;
+        @include list-reset;
+
+        @include sp {
+            padding: 0px 4rem;
+        }
+
+        @include laptops {
+            padding: 0;
+            margin-left: -20px;
+            left: 0;
+            top: 30px;
+            position: absolute;
+            width: 60%;
+        }
+
+        & > li {
+            float: left;
+            @include box-sizing(border-box);
+            
+            &:nth-of-type(3n+1) {
+                clear: left;
+            }
+            @include sp {
+                width: (100%/3);
+                padding: 0 1rem;
+                margin-bottom: 0.7rem;
+            }
+            
+            @include laptops {
+                max-width: 160px;
+                padding: 0 20px;
+
+                &:nth-of-type(4) {
+                    margin-left: 60px;
+                }
+            }
+            
+            @include desktop {
+                max-width: 180px;
+
+                &:nth-of-type(4) {
+                    margin-left: 90px;
+                }
+            }
+        }
+    }
+
+    .kvSlogan {
+        @include f-tsukushiA;
+        text-align: center;
+        line-height: 1;
+        text-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+        &__head {
+            color: $white;
+
+            @include sp {
+                font-size: 1.8rem;
+            }
+            
+            @include laptops {
+                font-size: 36px;
+            }
+        }
+
+        &__body {
+
+            .left {
+                display: inline-block;
+                color: $white;
+                
+                @include sp {
+                    vertical-align: middle;
+
+                    .lv1 {
+                        font-size: 1rem;
+                    }
+
+                    .lv2 {
+                        font-size: 2rem;
+                    }
+                }
+
+                @include laptops {
+                    vertical-align: baseline;
+
+                    .lv1 {
+                        font-size: 20px;
+                    }
+
+                    .lv2 {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .right {
+                @include f-hiragino;
+                color: #F9DA01;
+                display: inline-block;
+                
+                @include sp {
+                    vertical-align: middle;
+                    font-size: 5.2rem;
+
+                    & > span {
+                        font-size: 3rem;
+                    }
+                }
+
+                @include laptops {
+                    vertical-align: baseline;
+                    font-size: 104px;
+
+                    & > span {
+                        font-size: 61px;
+                    }
+                }
+            }
+        }
+    }
+
+    .postWay {
+        position: relative;
+        z-index: 5;
+        @include box-sizing(border-box);
+
+        @include sp {
+            padding-right: 5rem;
+        }
+
+        @include laptops {
+            float: left;
+            width: calc(100% - 400px);
+            padding-left: 120px;
+            padding-right: 0;
+            margin-top: -30px;
+        }
+        
+        @include desktop {
+            width: calc(100% - 450px);
+        }
+
+        &__title {
+            @include f-tsukushiA;
+            line-height: 1;
+            color: $white;
+            
+            @include sp {
+                font-size: 2rem;
+                margin-bottom: 0.75rem;
+            }
+
+            @include laptops {
+                font-size: 32px;
+                margin-bottom: 14px;
+            }
+        }
+
+        &__tagList {
+            @include list-reset;
+            @include clearfix;
+
+            & > li {
+                float: left;
+
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+
+                @include sp {
+                    margin-right: 0.9rem;
+                    margin-bottom: 0.75rem;
+                }
+
+                @include laptops {
+                    margin-right: 18px;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+}
+
+//strike
+.strike {
+    @include clearfix;
+
+    &__tel {
+
+        @include laptops {
+            float: left;
+        }
+
+        .link {
+
+            @include sp {
+                display: block;
+                margin-bottom: 1.5rem;
+            }
+
+            @include laptops {
+                display: inline-block;
+                vertical-align: middle;
+                margin-bottom: 20px;
+            }
+            
+            @include desktop {
+                float: left;
+                margin-bottom: 0;
+            }
+        }
+
+        .feature {
+            text-align: center;
+
+            &.display--sp {
+                margin-top: 1.5rem;
+            }
+
+            &.display--pc {
+                @include laptops {
+                    margin-top: 10px;
+                }
+                @include desktop {
+                    float: left;
+                    display: block;
+                    margin-top: 0;
+                    margin-left: 14px;
+                }
+            }
+        }
+    }
+
+    &__other {
+
+        @include sp {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        @include laptops {
+            float: right;
+            margin-top: 25px;
+            text-align: left
+        }
+
+        @include desktop {
+            margin-top: 0;
+        }
+
+        .txt {
+            @include f-hiragino;
+            font-weight: 600;
+            color: $white;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+
+            @include sp {
+                font-size: 1.3rem;
+            }
+
+            @include laptops {
+                font-size: 18px;
+            }
+
+            @include desktop {
+                @include translateX(10px);
+            }
+        }
+
+        .link {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .feature {
+        @include f-hiragino;
+        font-weight: 700;
+        @include list-reset;
+        @include clearfix;
+
+        & > li {
+            display: inline-block;
+            vertical-align: middle;
+
+            @include sp {
+                margin-left: 0.75rem;
+                margin-right: 0.75rem;
+            }
+
+            @include laptops {
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+
+                &:first-child {
+                    float: left
+                }
+
+                &:last-child {
+                    float: right;
+                }
+            }
+
+            @include desktop {
+
+                &:first-child {
+                    float: left;
+                    margin-left: 0;
+                    margin-right: 8px;
+                }
+
+                &:last-child {
+                    float: left;
+                    margin-left: 0;
+                }
+            }
+
+            .feature__txt {
+                display: inline-block;
+                color: $sub;
+                background-color: $white;
+                
+                @include sp {
+                    font-size: 1rem;
+                    line-height: 1;
+                    padding: 0.7rem 1.25rem;
+                    border-radius: 1.25rem;
+                }
+
+                @include laptops {
+                    font-size: 17px;
+                    line-height: 1.2;
+                    padding: 15px 21px;
+                    border-radius: 35px;
+                }
+
+                @include desktop {
+                    strong {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .link {
+        @include list-reset;
+
+        & > li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include sp {}
+
+            @include desktop {
+                margin-left: -6px;
+            }
+        }
+    }
+}
+
+.object {
+    .objList {
+        @include clearfix;
+        @include list-reset;
+
+        @include sp {
+            padding-left: 1.2rem;
+        }
+
+        @include laptops {
+            padding: 0;
+        }
+
+        & > li {
+            float: left;
+
+            @include sp {
+                margin-right: 0.5rem;
+                margin-bottom: 0.9rem;
+            }
+
+            @include laptops {
+                margin-right: 10px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .samples {
+
+        @include sp {
+            margin-top: 1.9rem;
+            padding: 0 0.5rem;
+        }
+
+        @include laptops {
+            margin-top: 24px;
+            padding: 0;
+        }
+
+        &__title {
+            @include f-hiragino;
+            line-height: 1;
+            font-weight: 700;
+            text-align: center;
+
+            @include sp {
+                margin-bottom: 2.5rem;
+                font-size: 1.8rem;
+            }
+
+            @include laptops {
+                margin-bottom: 56px;
+                font-size: 30px;
+            }
+        }
+
+        &__content {
+
+        }
+    }
+
+    .sampleItem {
+        position: relative;
+        background-color: $third;
+        @include clearfix;
+        @include box-sizing(border-box);
+
+        @include sp {
+            padding: 3.2rem 1.3rem 0.9rem 1.65rem;
+            height: 15rem;
+            border-radius: 1rem;
+        }
+
+        @include laptops {
+            padding: 64px 0 15px;
+            height: auto;
+            border-radius: 20px;
+        }
+        
+        @include desktop {
+            padding-top: 86px;
+        }
+
+        &__top {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            @include box-sizing(border-box);
+
+            @include sp {
+                top: -1.2rem;
+                padding: 0 1rem;
+            }
+
+            @include laptops {
+                top: -24px;
+                padding: 0 14px;
+            }
+
+            .title {
+                @include f-hiragino;
+                font-weight: 600;
+                background-color: #F9DA01;
+                text-align: center;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+                @include sp {
+                    border-radius: 1.6rem;
+                    font-size: 1.4rem;
+                    line-height: 1;
+                    padding: 0.9rem 0;
+
+                    &.ex {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                @include laptops {
+                    font-size: 16px;
+                    line-height: 1.15;
+                    border-radius: 45px;
+                    padding: 11px 0 10px;
+
+                    &.ex {
+                        font-size: 16px;
+                    }
+                }
+
+                @include desktop {
+                    font-size: 20px;
+
+                    &.ex {
+                        font-size: 16px;
+                    }
+                }
+
+                & > strong {
+    
+                    @include sp {
+                        display: inline;
+                    }
+    
+                    @include laptops {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__body {
+            @include clearfix;
+
+            @include sp {}
+            @include laptops {
+                padding: 0 14px;
+            }
+
+            .media,
+            .txt {
+                @include box-sizing(border-box);
+
+                @include sp {
+                    float: left;
+                }
+    
+                @include laptops {
+                    float: none;
+                }
+            }
+    
+            .media {
+                position: relative;
+
+                @include sp {
+                    width: (269/621)*100%;
+                }
+    
+                @include laptops {
+                    width: auto;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        padding-top: (188/232)*100%;
+                    }
+
+                    img {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                    }
+                }
+    
+                &.ex {
+                    @include sp {
+                        padding-left: 1rem; 
+                    }
+    
+                    @include laptops {
+                        padding-left: 0;
+                    }
+                }
+            }
+    
+            .txt {
+                @include f-hirakakuW3;
+                color: $white;
+                line-height: 1.5;
+                margin: 0;
+
+                @include sp {
+                    font-size: 1.4rem;
+                    width: 53%;
+                    padding-left: 1.2rem;
+                }
+
+                @include laptops {
+                    font-size: 12px;
+                    width: auto;
+                    padding-left: 0;
+                }
+    
+                @include desktop {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .slogan {
+        @include f-hiragino;
+        font-weight: 700;
+        text-align: center;
+
+        @include sp {
+            font-size: 1.4rem;
+            margin: 2.2rem 0 0;
+        }
+
+        @include laptops {
+            font-size: 30px;
+            margin: 50px 0 0;
+        }
+    }
+}
+
+.gridList {
+    @include list-reset;
+
+    & > li {
+        @include box-sizing(border-box);
+    }
+
+    &--samples {
+
+        @include laptops {
+            @include clearfix;
+            margin: 0 -6px;
+        }
+
+        & > li {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @include sp {
+                margin-bottom: 2rem
+            }
+
+            @include laptops {
+                margin-bottom: 0;
+                float: left;
+                width: (100%/4);
+                padding: 0 6px;
+            }
+        }
+    }
+}
+
+//widget
+.tag {
+    line-height: 1;
+
+    &--way {
+        @include f-tsukushiA;
+        display: block;
+        background-color: $white;
+        color: $font-dark;
+
+        @include sp {
+            font-size: 1.1rem;
+            padding: 0.325rem 1rem;
+            border-radius: 1.05rem;
+        }
+
+        @include laptops {
+            font-size: 16px;
+            padding: 7.5px 20px;
+            border-radius: 21px;
+        }
+        
+        @include desktop {
+            font-size: 22px;
+        }
+    }
+
+    &--object {
+        @include f-hiragino;
+        display: block;
+        font-weight: 300;
+        background-color: $white;
+
+        @include sp {
+            font-size: 1.2rem;
+            padding: 0.2rem 1.1rem;
+            border-radius: 0.8rem;
+            border: 0.1rem solid #000000;
+        }
+
+        @include laptops {
+            font-size: 24px;
+            padding: 4px 22px;
+            border-radius: 16px;
+            border: 2px solid #000000;
+        }
+    }
+}
+
+.btn {
+
+    &__sns {
+        text-decoration: none;
+        display: block;
+        line-height: 1;
+        @include box-sizing(border-box);
+
+        @include sp {
+            padding: 0.8rem 0.6rem;
+            height: 3.3rem;
+            line-height: 1.6rem;
+            border-radius: 0.7rem 0.7rem 0 0;
+        }
+
+        @include laptops {
+            height: auto;
+            padding: 0;
+            line-height: 1;
+            border-radius: 0;
+        }
+        
+        .btn__text {
+            display: inline-block;
+            vertical-align: middle;
+            @include f-hiragino;
+            color: $white;
+            font-weight: bold;
+            line-height: 1;
+
+            @include sp {
+                font-size: 1.45rem;
+            }
+            @include laptops {
+                font-size: 29px;
+            }
+        }
+
+        &.i--tel {
+            background-color: $sub;
+
+            @include laptops {
+                padding: 5px 27px 8px 20px;
+                border-radius: 35px;
+            }
+
+            &:before {
+
+                @include sp {
+                    width: 1.2rem;
+                    height: 1.4rem;
+                }
+
+                @include laptops {
+                    width: 26px;
+                    height: 28px;
+                }
+            }
+        }
+
+        &.i--line,
+        &.i--mail {
+
+            @include sp {
+                background-color: $sub;
+            }
+
+            @include laptops {
+                background-color: transparent;
+            }
+
+            .btn__text {
+                @include laptops {
+                    display: none;
+                }
+            }
+        }
+
+        &.i--line {
+
+            &:before {
+                @include sp {
+                    width: 1.8rem;
+                    height: 1.7rem;
+                }
+
+                @include laptops {
+                    width: 56px;
+                    height: 53px;
+                }
+            }
+        }
+
+        &.i--mail {
+            &:before {
+                @include sp {
+                    width: 1.8rem;
+                    height: 1.4rem;
+                }
+
+                @include laptops {
+                    width: 46px;
+                    height: 55px;
+                }
+            }
+        }
+    }
+
+    &__strike {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+
+        &.i--tel {
+            background-color: $white;
+
+            @include sp {
+                padding: 0.9rem 0;
+                border-radius: 2.5rem;
+            }
+
+            @include laptops {
+                padding: 5px 27px 8px 20px;
+                border-radius: 35px;
+            }
+    
+            &:before {
+    
+                @include sp {
+                    width: 2.5rem;
+                    height: 2.8rem;
+                }
+    
+                @include laptops {
+                    width: 31px;
+                    height: 34px;
+                }
+            }
+
+            .btn__text {
+                display: inline-block;
+                vertical-align: middle;
+                @include f-hiragino;
+                font-weight: bold;
+                line-height: 1;
+                color: $sub;
+    
+                @include sp {
+                    font-size: 3.2rem;
+                }
+                @include laptops {
+                    font-size: 36px;
+                }
+            }
+        }
+        
+        &.i--strikeLine,
+        &.i--strikeMail {
+            font-size: 0;
+
+            .btn__text {
+                font-size: 0;
+            }
+        }
+
+        &.i--strikeLine {
+            &:before {
+                @include sp {
+                    width: 4.05rem;
+                    height: 3.85rem;
+                }
+
+                @include laptops {
+                    width: 68px;
+                    height: 65px;
+                }
+            }
+        }
+
+        &.i--strikeMail {
+            &:before {
+                @include sp {
+                    width: 3.55rem;
+                    height: 4.2rem;
+                }
+
+                @include laptops {
+                    width: 56px;
+                    height: 66px;
+                }
+            }
+        }
+    }
+}
+
+.lp-icon {
+
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.i {
+
+    &--tel {
+
+        &.tel-nav {
+            &:before {
+                background-image: url('#{$imgPath}/icon-sns-tel-sp.svg');
+            }
+        }
+
+        &.tel-strike {
+            &:before {
+                background-image: url('#{$imgPath}/icon-strike-tel.svg');
+            }
+        }
+    }
+
+    &--line {
+        &:before {
+            @include sp {
+                background-image: url('#{$imgPath}/icon-sns-line-sp.svg');
+            }
+
+            @include laptops {
+                background-image: url('#{$imgPath}/icon-line-fill.png');
+            }
+        }
+    }
+
+    &--mail {
+        &:before {
+            @include sp {
+                background-image: url('#{$imgPath}/icon-sns-mail-sp.svg');
+            }
+
+            @include laptops {
+                background-image: url('#{$imgPath}/icon-mail-fill.png');
+            }
+        }
+    }
+
+    &--strikeLine {
+        &:before {
+            background-image: url('#{$imgPath}/icon-strike-line.svg');
+        }
+    }
+
+    &--strikeMail {
+        &:before {
+            background-image: url('#{$imgPath}/icon-strike-mail.svg');
+        }
+    }
+}
