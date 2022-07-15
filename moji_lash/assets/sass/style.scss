@@ -1321,27 +1321,32 @@ a, button {
                 }
 
                 &.best {
-                    position: relative;
+                    & > td {
+                        &:first-child {
+                            position: relative;
 
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        display: block;
-                        top: 50%;
-                        background-image: url('../images/deco-best.png');
-                        @include translateY(-50%);
-                        
-                        @include mobile {
-                            width: 29px;
-                            height: 13px;
-                            left: -25px;
-                            background-size: 29px 13px;
-                        }
-                        @include laptops {
-                            left: -53px;
-                            width: 58px;
-                            height: 25px;
-                            background-size: 58px 25px;
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                display: block;
+                                top: 50%;
+                                background-image: url('../images/deco-best.png');
+                                @include translateY(-50%);
+                                
+                                @include mobile {
+                                    width: 29px;
+                                    height: 13px;
+                                    left: -25px;
+                                    background-size: 29px 13px;
+                                }
+                                
+                                @include laptops {
+                                    left: -53px;
+                                    width: 58px;
+                                    height: 25px;
+                                    background-size: 58px 25px;
+                                }
+                            }
                         }
                     }
                 }

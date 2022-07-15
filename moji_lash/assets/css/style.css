@@ -6657,10 +6657,10 @@ a .icon, button .icon {
 .category__table tbody tr td:nth-child(1), .category__table tbody tr td:nth-child(2), .category__table tbody tr td:nth-child(3) {
   width: 18%;
 }
-.category__table tbody tr.best {
+.category__table tbody tr.best > td:first-child {
   position: relative;
 }
-.category__table tbody tr.best:after {
+.category__table tbody tr.best > td:first-child:after {
   content: "";
   position: absolute;
   display: block;
@@ -6670,7 +6670,7 @@ a .icon, button .icon {
   transform: translateY(-50%);
 }
 @media only screen and (min-width: 320px) {
-  .category__table tbody tr.best:after {
+  .category__table tbody tr.best > td:first-child:after {
     width: 29px;
     height: 13px;
     left: -25px;
@@ -6678,7 +6678,7 @@ a .icon, button .icon {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .category__table tbody tr.best:after {
+  .category__table tbody tr.best > td:first-child:after {
     left: -53px;
     width: 58px;
     height: 25px;
