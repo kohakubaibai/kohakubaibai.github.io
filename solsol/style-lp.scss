@@ -460,6 +460,7 @@ body {
                     display: inline-block;
                     vertical-align: middle;
                     background-image: url('#{$imgPath}/deco-rumor.svg');
+                    background-size: cover;
 
                     @include sp {
                         width: 2.15rem;
@@ -1054,6 +1055,7 @@ body {
     }
 }
 
+//object
 .object {
     .objList {
         @include clearfix;
@@ -1303,7 +1305,173 @@ body {
 }
 
 .rumor {
-    
+    .rumorList {
+
+        @include laptops {
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-image: url('#{$imgPath}/img-risk.png');
+            background-size: (330/1080)*100% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .rumorList__group {
+            @include laptops {
+                width: (375/1080)*100%;
+                @include box-sizing(border-box);
+
+                &:first-of-type {
+                    padding-right: 20px;
+                }
+
+                &:last-of-type {
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        &__group {
+            @include sp {
+                margin-bottom: 3.75rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include laptops {
+                margin-bottom: 0;
+            }
+
+            & > .title {
+                @include f-hiragino;
+                font-weight: 700;
+                color: #F4AD01;
+                text-align: center;
+                line-height: 1;
+
+                @include sp {
+                    font-size: 2.65rem;
+                    margin-bottom: 1.35rem;
+                }
+                
+                @include laptops {
+                    font-size: 24px;
+                    margin-bottom: 15px;
+                }
+                
+                @include desktop {
+                    font-size: 30px;
+                }
+            }
+
+            & > .list {
+                @include list-reset;
+
+                & > li {
+                    @include sp {
+                        padding: 3rem 2rem;
+                        border-top: 0.2rem solid #636DB4;
+                    }
+
+                    @include laptops {
+                        padding: 24px 0;
+                        border-top: none;
+                    }
+
+                    @include desktop {
+                        padding: 36px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .rumorItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__media {
+            @include sp {
+                width: (160/700)*100%;
+            }
+
+            @include laptops {
+                width: 65px;
+            }
+
+            @include desktop {
+                width: 95px;
+            }
+        }
+
+        &__txt {
+            @include f-hiragino;
+            font-weight: 600;
+
+            @include sp {
+                padding-left: 2rem;
+            }
+
+            @include laptops {
+                padding-left: 15px;
+            }
+
+            @include desktop {
+                padding-left: 20px;
+            }
+
+            .topic {
+                color: $white;
+
+                @include sp {
+                    font-size: 1.6rem;
+                    line-height: (38/32);
+                    margin-bottom: 1.35rem;
+                }
+
+
+                @include laptops {
+                    font-size: 16px;
+                    line-height: (24/20);
+                    margin-bottom: 10px;
+                }
+                
+                @include desktop {
+                    font-size: 20px;
+                }
+            }
+
+            .content {
+                line-height: 1.5;
+
+                & > p {
+                    color: #F4AD01;
+
+                    & > span {
+                        color: $white;
+                    }
+                }
+
+                @include sp {
+                    font-size: 1.3rem;
+                }
+
+                @include laptops {
+                    font-size: 14px;
+                }
+
+                @include desktop {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 }
 
 .gridList {
