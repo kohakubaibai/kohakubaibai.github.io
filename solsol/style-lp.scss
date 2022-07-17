@@ -351,7 +351,7 @@ body {
                 padding: 0 40px;
             }
     
-            @include laptops {
+            @include desktop {
                 padding: 0 60px;
             }
         }
@@ -402,7 +402,10 @@ body {
                 }
 
                 @include laptops {
-                    padding: 30px 65px;
+                    width: 730px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 30px 0;
                     border-radius: 50px;
                 }
 
@@ -417,16 +420,6 @@ body {
                         font-size: 40px;
                     }
                 }
-            }
-        }
-
-        .section__content {
-            @include sp {
-                margin-top: 1.7rem;
-            }
-
-            @include laptops {
-                margin-top: 25px;
             }
         }
     }
@@ -479,7 +472,10 @@ body {
                 }
 
                 @include laptops {
-                    padding: 30px 65px;
+                    width: 730px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 25px 0;
                     border-radius: 50px;
                 }
 
@@ -498,14 +494,96 @@ body {
                 }
             }
         }
+    }
 
-        .section__content {
+    &--advantage {
+        background-color: $main;
+
+        @include sp {
+            padding: 3.5rem 0 1.5rem 0;
+        }
+    
+        @include laptops {
+            padding: 93px 0 88px;
+        }
+
+        .wrapper {
+            @include clearfix;
+            
             @include sp {
-                margin-top: 1.7rem;
+                padding: 0 1.25rem;
+            }
+    
+            @include laptops {
+                padding: 0 40px;
+            }
+    
+            @include desktop {
+                padding: 0 140px;
+            }
+        }
+
+        .section__title {
+            margin-top: 0;
+
+            @include sp {
+                margin-bottom: 2.4rem;
+            }
+            @include laptops {
+                margin-bottom: 55px;
             }
 
-            @include laptops {
-                margin-top: 25px;
+            .title {
+                position: relative;
+                background-color: $white;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    @include translateY(-50%);
+                    background-image: url('#{$imgPath}/deco-advantage.svg');
+                    background-size: cover;
+
+                    @include sp {
+                        width: 9rem;
+                        height: 9rem;
+                        left: -2.3rem;
+                    }
+
+                    @include laptops {
+                        width: 203px;
+                        height: 203px;
+                        left: -150px;
+                    }
+                }
+                
+                @include sp {
+                    padding: 1.5rem 0;
+                    border-radius: 2.5rem;
+                }
+
+                @include laptops {
+                    width: 730px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 30px 0;
+                    border-radius: 50px;
+                }
+
+                &__text {
+                    color: $main;
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    @include sp {
+                        font-size: 2rem;
+                    }
+
+                    @include laptops {
+                        font-size: 40px;
+                    }
+                }
             }
         }
     }
@@ -1304,6 +1382,7 @@ body {
     }
 }
 
+//rumor
 .rumor {
     .rumorList {
 
@@ -1474,6 +1553,131 @@ body {
     }
 }
 
+.advantage {
+    &__feature {
+        @include sp {
+            margin-bottom: 3rem;
+        }
+
+        @include laptops {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        @include list-reset;
+        @include clearfix;
+
+        @include sp {
+            margin-bottom: 1.75rem;
+        }
+        @include laptops {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        & > li {
+            display: inline-block;
+
+            @include sp {
+                margin-bottom: 1.2rem;
+                margin-right: 0.65rem;
+            }
+
+            @include laptops {
+                margin-bottom: 16px;
+                margin-right: 12px;
+            }
+        }
+    }
+
+    &__table {
+        margin-left: auto;
+        margin-right: auto;
+
+        @include sp {
+            width: 100%;
+        }
+
+        @include laptops {
+            max-width: 867px;
+        }
+    }
+    
+    .advantageItem {
+        &__media {
+            
+            @include sp {
+                margin-bottom: 0.6rem;
+
+                &.advantageItem__media-01 {
+                    padding: 0 8.2rem;
+                }
+                &.advantageItem__media-02 {
+                    padding: 0 6.8rem;
+                }
+                &.advantageItem__media-03 {
+                    padding: 0 6.8rem;
+                }
+                &.advantageItem__media-04 {
+                    padding: 0 8.7rem;
+                }
+            }
+
+            @include laptops {
+                height: 255px;
+                margin-bottom: 15px;
+
+                &.advantageItem__media-01,
+                &.advantageItem__media-02,
+                &.advantageItem__media-03,
+                &.advantageItem__media-04 {
+                    padding: 0;
+                }
+            }
+
+            img {
+                margin: 0 auto;
+                width: auto;
+            }
+        }
+
+        &__txt {
+            color: $white;
+            text-align: center;
+
+            .topic {
+                line-height: (40/33);
+
+                @include sp {
+                    font-size: 1.65rem;
+                }
+
+                @include laptops {
+                    font-size: 33px;
+                }
+            }
+
+            .content {
+                @include f-hiragino;
+                font-weight: 300;
+
+                @include sp {
+                    font-size: 1.2rem;
+                    margin-top: 0.55rem;
+                    line-height: (26/24);
+                }
+
+                @include laptops {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: (26/16);
+                }
+            }
+        }
+    }
+}
+
 .gridList {
     @include list-reset;
 
@@ -1502,6 +1706,46 @@ body {
                 float: left;
                 width: (100%/4);
                 padding: 0 6px;
+
+                &:nth-child(4n+1) {
+                    clear: left;
+                }
+            }
+        }
+    }
+
+    &--advantage {
+
+        @include laptops {
+            @include clearfix;
+            margin: 0 -25px;
+        }
+
+        & > li {
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @include sp {
+                margin-bottom: 3.5rem
+            }
+
+            @include laptops {
+                margin-bottom: 0;
+                float: left;
+                width: (100%/2);
+                padding: 0 25px;
+                margin-bottom: 50px;
+
+                &:nth-child(2n+1) {
+                    clear: left;
+                }
+
+                &.full {
+                    width: 100%;
+                    clear: both;
+                }
             }
         }
     }
@@ -1552,6 +1796,26 @@ body {
             padding: 4px 22px;
             border-radius: 16px;
             border: 2px solid #000000;
+        }
+    }
+
+    &--advantage {
+        @include f-hiragino;
+        display: inline-block;
+        font-weight: 300;
+        background-color: $white;
+        color: $main;
+
+        @include sp {
+            font-size: 1.1rem;
+            padding: 0.8rem 1.3rem;
+            border-radius: 1.2rem;
+        }
+
+        @include laptops {
+            font-size: 20px;
+            padding: 14px 21px;
+            border-radius: 24px;
         }
     }
 }
