@@ -1895,41 +1895,66 @@ body {
 
 .process {
     &__flow {
+        @include f-hiragino;
+        font-weight: 600;
         @include list-reset;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
 
         & > li {
-        }
+            @include box-sizing(border-box);
 
+            &.flow--full {
+                width: 100%;
+                clear: both;
+            }
+    
+            &.flow--left {
+                float: left;
+    
+                @include sp {
+                    width: (160/350)*100%;
+                }
+    
+                @include laptops {
+                    width: 50%;
+                    padding-right: 20px;
+                }
+            }
+    
+            &.flow--right {
+                float: right;
+                position: relative;
 
-        .flow--full {
-            flex-grow: 2;
-            width: 100%;
-        }
+                &:before {
+                    content: '';
+                    display: block;
+                }
+    
+                @include sp {
+                    width: (180/350)*100%;
 
-        .flow--left {
-            flex-grow: 1;
+                    &:before {
+                        height: 26rem;
+                    }
+                }
+    
+                @include laptops {
+                    width: 50%;
+                    padding-left: 20px;
 
-            @include sp {
-                padding-right: 0.5rem;
+                    &:before {
+                        height: 540px;
+                    }
+                }
             }
 
-            @include laptops {
-                padding-right: 20px;
-            }
-        }
-
-        .flow--right {
-            flex-grow: 1;
-
-            @include sp {
-                padding-left: 0.5rem;
-            }
-
-            @include laptops {
-                padding-left: 20px;
+            &.end {
+                @include sp {
+                    padding-top: 2.1rem;
+                }
+    
+                @include laptops {
+                    padding-top: 60px;
+                }
             }
         }
     }
@@ -1937,6 +1962,45 @@ body {
     .flowItem {
         background-color: $main;
         color: $white;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include box-sizing(border-box);
+
+        @include sp {
+            padding: 1.5rem 0 1.5rem 3.3rem;
+        }
+
+        @include laptops {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &.free {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                background-image: url('#{$imgPath}/deco-free.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                @include sp {
+                    width: 4.3rem;
+                    height: 4.3rem;
+                    left: -0.4rem;
+                    top: -0.4rem;
+                }
+
+                @include laptops {
+                    width: 86px;
+                    height: 86px;
+                    left: -8px;
+                    top: -8px;
+                }
+            }
+        }
 
         &--01 {
             @include sp {
@@ -1968,23 +2032,131 @@ body {
 
         &--03 {
             @include sp {
-                height: 26rem;
-            }
-
-            @include laptops {
-                height: 540px;
-            }
-        }
-
-        &--04 {
-            @include sp {
                 height: 7rem;
-                margin-top: 2.1rem;
             }
 
             @include laptops {
                 height: 140px;
-                margin-top: 60px;
+            }
+        }
+
+        &__step,
+        &__txt {
+            @include sp {
+                display: block;
+            }
+            
+        }
+
+        &__step {
+            display: flex;
+
+            @include sp {
+                flex-direction: column;
+            }
+
+            @include laptops {
+                flex-direction: row;
+            }
+
+            &.ex {
+                @include sp {
+                    flex-direction: row;
+                }
+            }
+
+            .media {
+
+                img {
+                    @include sp {
+                        width: auto;
+                        height: 1.5rem;
+                    }
+    
+                    @include laptops {
+                        height: 30px;
+                    }
+                }
+            }
+
+            .txt {
+                span {
+                    @include sp {
+                        font-size: 1.2rem;
+                    }
+    
+                    @include laptops {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .flowDeco {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        @include box-sizing(border-box);
+        background-color: $main;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            @include translateX(-50%);
+            background-image: url('#{$imgPath}/deco-lawyer.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+
+
+            @include sp {
+                width: 100%;
+                height: 10.9rem;
+                bottom: -0.4rem;
+                background-position-x: 0.5rem;
+            }
+
+            @include laptops {
+                width: 341px;
+                height: 218px;
+                bottom: -8px;
+                background-position-x: 0;
+            }
+        }
+
+        .title,
+        .content {
+            text-align: center;
+            color: $white;
+            display: block;
+        }
+
+        @include sp {
+            width: 100%;
+            padding-top: 8.7rem;
+
+            .title {
+                font-size: 2.4rem;
+            }
+
+            .content{
+                font-size: 0.95rem;
+            }
+        }
+
+        @include laptops {
+            width: calc(100% - 20px);
+            padding-top: 206px;
+
+            .title {
+                font-size: 48px;
+            }
+
+            .content{
+                font-size: 19px;
             }
         }
     }
