@@ -57,11 +57,11 @@ $imgPath : "img/page/lp/new";
     font-family: "Hiragino Sans";
 }
 @mixin f-tsukushiA {
-    font-family: "Tsukushi A Round Gothic";
+    font-family: fot-tsukuardgothic-std, sans-serif;
     font-weight: bold;
 }
 @mixin f-aotf {
-    font-family: "a-otf-jun-pro";
+    font-family: a-otf-jun-pro, sans-serif;;
 }
 @mixin f-hirakakuW3 {
     font-family: "ヒラギノ角ゴ Pro W3";
@@ -93,6 +93,10 @@ html {
     @include sp {
         font-size: 2.67vw;
     }
+
+    @include laptops {
+        font-size: 10px;
+    }
 }
 
 body {
@@ -100,6 +104,10 @@ body {
 
     @include sp {
         font-size: 100%;
+    }
+
+    @include laptops {
+        font-size: 1.4rem;
     }
 }
 
@@ -339,7 +347,8 @@ body {
 
     &--strike,
     &--object,
-    &--rumor {
+    &--rumor,
+    &--process {
         .wrapper {
             @include clearfix;
             
@@ -575,6 +584,211 @@ body {
                     color: $main;
                     display: inline-block;
                     vertical-align: middle;
+
+                    @include sp {
+                        font-size: 2rem;
+                    }
+
+                    @include laptops {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    &--process {
+        background-color: $white;
+
+        @include sp {
+            padding: 4.5rem 0 2.75rem 0;
+        }
+    
+        @include laptops {
+            padding: 110px 0 70px;
+        }
+
+        .section__title {
+
+            @include sp {
+                margin-bottom: 3rem;
+            }
+            @include laptops {
+                margin-bottom: 60px;
+            }
+
+            .title {
+                background-color: $main;
+                
+                @include sp {
+                    padding: 1.5rem 0;
+                    border-radius: 2.5rem;
+                }
+
+                @include laptops {
+                    width: 730px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 30px 0;
+                    border-radius: 50px;
+                }
+
+                &__text {
+                    color: $white;
+
+                    @include sp {
+                        font-size: 2rem;
+                    }
+
+                    @include laptops {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    &--price {
+        background-color: $white;
+
+        @include sp {
+            padding: 2.75rem 0 4.1rem 0;
+        }
+    
+        @include laptops {
+            padding: 70px 0 85px;
+        }
+
+        .section__title {
+            margin-top: 0;
+
+            @include sp {
+                margin-bottom: 3rem;
+            }
+            @include laptops {
+                margin-bottom: 60px;
+            }
+
+            .wrapper {
+                @include clearfix;
+                
+                @include sp {
+                    padding: 0 1.25rem;
+                }
+        
+                @include laptops {
+                    padding: 0 40px;
+                }
+        
+                @include desktop {
+                    padding: 0 60px;
+                }
+            }
+
+            .title {
+                background-color: $main;
+                
+                @include sp {
+                    padding: 1.5rem 0;
+                    border-radius: 2.5rem;
+                }
+
+                @include laptops {
+                    width: 730px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 30px 0;
+                    border-radius: 50px;
+                }
+
+                &__text {
+                    color: $white;
+
+                    @include sp {
+                        font-size: 2rem;
+                    }
+
+                    @include laptops {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        .section__content {
+            .wrapper {
+                @include clearfix;
+                
+                @include sp {
+                    padding: 0;
+                }
+        
+                @include laptops {
+                    padding: 0 40px;
+                }
+        
+                @include desktop {
+                    padding: 0 200px;
+                }
+            }
+        }
+    }
+
+    &--contact {
+        background-color: $main;
+
+        @include sp {
+            padding: 2.3rem 0 3.5rem 0;
+        }
+    
+        @include laptops {
+            padding: 85px 0 84px;
+        }
+
+        .wrapper {
+            @include clearfix;
+            
+            @include sp {
+                padding: 0 1.2rem;
+            }
+    
+            @include laptops {
+                padding: 0 40px;
+            }
+    
+            @include desktop {
+                padding: 0 60px;
+            }
+        }
+
+        .section__title {
+            margin-top: 0;
+            
+            @include sp {
+                margin-bottom: 1.7rem;
+            }
+            @include laptops {
+                margin-bottom: 25px;
+            }
+
+            .title {
+                background-color: $white;
+                
+                @include sp {
+                    padding: 1.5rem 0;
+                    border-radius: 2.5rem;
+                }
+
+                @include laptops {
+                    width: 730px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 30px 0;
+                    border-radius: 50px;
+                }
+
+                &__text {
+                    color: $main;
 
                     @include sp {
                         font-size: 2rem;
@@ -1553,6 +1767,7 @@ body {
     }
 }
 
+//advantage
 .advantage {
     &__feature {
         @include sp {
@@ -1634,11 +1849,11 @@ body {
                 &.advantageItem__media-04 {
                     padding: 0;
                 }
-            }
 
-            img {
-                margin: 0 auto;
-                width: auto;
+                img {
+                    margin: 0 auto;
+                    width: auto;
+                }
             }
         }
 
@@ -1675,6 +1890,444 @@ body {
                 }
             }
         }
+    }
+}
+
+.process {
+    &__flow {
+        @include list-reset;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & > li {
+        }
+
+
+        .flow--full {
+            flex-grow: 2;
+            width: 100%;
+        }
+
+        .flow--left {
+            flex-grow: 1;
+
+            @include sp {
+                padding-right: 0.5rem;
+            }
+
+            @include laptops {
+                padding-right: 20px;
+            }
+        }
+
+        .flow--right {
+            flex-grow: 1;
+
+            @include sp {
+                padding-left: 0.5rem;
+            }
+
+            @include laptops {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .flowItem {
+        background-color: $main;
+        color: $white;
+
+        &--01 {
+            @include sp {
+                height: 9.5rem;
+                margin-bottom: 2.1rem;
+            }
+
+            @include laptops {
+                height: 140px;
+                margin-bottom: 60px;
+            }
+        }
+
+        &--02 {
+            @include sp {
+                height: 7rem;
+                margin-bottom: 2.5rem;
+            }
+
+            @include laptops {
+                height: 140px;
+                margin-bottom: 60px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &--03 {
+            @include sp {
+                height: 26rem;
+            }
+
+            @include laptops {
+                height: 540px;
+            }
+        }
+
+        &--04 {
+            @include sp {
+                height: 7rem;
+                margin-top: 2.1rem;
+            }
+
+            @include laptops {
+                height: 140px;
+                margin-top: 60px;
+            }
+        }
+    }
+}
+
+.price {
+    .priceTable {
+        @include f-hiragino;
+        font-weight: 300;
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
+
+        th,
+        td {
+            background-color: #F5FCFF;
+            @include box-sizing(border-box);
+
+            @include sp {
+                border: 0.1rem solid #6B95C8;
+            }
+            @include laptops {   
+                border: 1px solid #6B95C8;
+            }
+        }
+
+        th {
+            text-align: left;
+            width: (580/800)*100%;
+            font-weight: normal;
+
+            @include sp {
+                border-left: none;
+            }
+
+            @include laptops {
+                border-left: 1px solid #6B95C8;
+                padding: 20px 9px 20px 22px;
+            }
+        }
+
+        td {
+            @include sp {
+                border-right: none;
+            }
+
+            @include laptops {
+                border-right: 1px solid #6B95C8;
+                padding: 20px 17px;
+            }
+        }
+    }
+}
+
+/***************
+ お問い合わせ
+****************/
+.contact {
+
+    &__note {
+        @include f-hirakakuW3;
+        font-weight: 300;
+        color: $white;
+        text-align: center;
+
+        @include sp {
+            font-size: 1rem;
+        }
+
+        @include laptops {
+            font-size: 16px;
+        }
+
+        span {
+            color: #FF0000;
+        }
+    }
+
+    &__form {
+        margin: 0 auto;
+        @include box-sizing(border-box);
+
+        dl {
+
+            dt {
+                position: relative;
+                @include f-hirakakuW3;
+                font-weight: 600;
+                color: $white;
+                @include box-sizing(border-box);
+
+                &:nth-of-type(odd) {
+                    &:after {
+                        content: '*';
+                        color: $white;
+                        display: inline-block;
+                        vertical-align: sub;
+                        @include box-sizing(border-box);
+                        text-align: center;
+                        line-height: 1.5;
+                        color: #dd0000;
+                        text-align: left;
+                    }
+                }
+            }
+
+            dd {
+                input,
+                textarea,
+                select {
+                    font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic, 'Avenir','Meiryo', 'MS Pゴシック', sans-serif;
+                    border: none;
+                    text-align: left;
+                    box-sizing: border-box;
+                    -webkit-appearance: none;
+                    width: 100%;
+                    padding-left: 1.75rem;
+                    border-radius: 0;
+                    color: #000000;
+                }
+
+                input,
+                textarea {
+                    &::placeholder {
+                        color: #BEBEBE;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .contact_bottom_txt {
+
+            p {
+                color: $white;
+                @include f-hirakakuW3;
+                font-weight: 300;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        .submit {
+            margin: 0 auto;
+            text-align: center;
+
+            input {
+                &[type="submit"] {
+                    color: $main;
+                    border: none;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    background: $white;
+                    display: inline-block;
+                    position: revert;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        @include sp {
+            width: 100%;
+            padding: 0;
+            
+            dl {
+                display: block;
+                padding: 0 4rem;
+                margin-top: 2.5rem; 
+
+                dt {
+                    font-size: 1.2rem;
+                    letter-spacing: 0.12rem;
+                    margin-bottom: 0.5rem;
+
+                    &:nth-of-type(odd) {
+
+                        &:after {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                dd {
+                    font-size: 1.6rem;
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: 10px;
+
+                    input,
+                    textarea,
+                    select {
+                        font-size: 1.2rem;
+                    }
+                    
+
+                    input,
+                    textarea {
+                        width: 100%;
+                    }
+                    
+                    select {
+                        height: 3.1rem;
+                    }
+
+                    input {
+                        height: 3.1rem;
+                    }
+
+                    textarea {
+                        height: 15.5rem;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .contact_bottom_txt {
+                margin-bottom: 2rem;
+
+                p {
+                    font-size: 0.9rem;
+                    line-height: (31/18);
+                }
+            }
+
+            .submit {                
+                width: 14.5rem;
+                height: 2.5rem;
+
+                input {
+
+                    &[type="submit"] {
+                        font-size: 1.1rem;
+                        letter-spacing: 0.11rem;
+                        border-radius: 1.25rem;
+                    }
+                }
+            }
+        }
+        
+        @include laptops {
+            width: 910px;
+
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0;
+
+                dt {
+                    font-size: 16px;
+                    line-height: 40px;
+                    letter-spacing: 1.6px;
+                    width: 180px;
+                    height: 40px;
+
+                    &:nth-child(odd) {
+                        &:after {
+                            font-size: 16px;
+                            padding: 0 0 0 3px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+
+                dd {
+                    width: 377px;
+                    margin-left: 15px;
+                    margin-bottom: 40px;
+
+                    &:nth-last-child(1) {
+                        margin-bottom: 25px;
+                    }
+
+                    input,
+                    textarea,
+                    select {
+                        padding: 5px;
+                    }
+
+                    select {
+                        height: 40px;
+                        padding: 5px 12px;
+                    }
+
+                    input {
+                        height: 40px;
+                    }
+
+                    textarea {
+                        height: 200px;
+                        max-width: 500px;
+                    }
+
+                    input,
+                    textarea {
+                        &::placeholder {
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+
+            .contact_bottom_txt {
+                margin-bottom: 48px;
+
+                p {
+                    font-size: 14px;
+                    line-height: (24/14);
+                }
+            }
+
+            .submit {
+                margin-top: 48px;
+                width: 290px;
+                height: 50px;
+
+                input {
+                    &[type="submit"] {
+                        font-size: 22px;
+                        letter-spacing: 2.2px;
+                        border-radius: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-image: url(./img/common/icon_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    background-position: right 10px center;
+
+    &::-ms-expand {
+        display: none;
     }
 }
 
