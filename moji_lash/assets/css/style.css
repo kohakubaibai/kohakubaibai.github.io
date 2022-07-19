@@ -7959,7 +7959,7 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 320px) {
   .contact {
-    padding: 30px 0;
+    padding: 100px 0;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -8004,7 +8004,7 @@ a .icon, button .icon {
 }
 @media only screen and (min-width: 320px) {
   .contact .map {
-    padding: 100px 20px 0;
+    padding: 150px 20px 0;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -8022,13 +8022,37 @@ a .icon, button .icon {
     clear: both;
   }
 }
+.contact .map__image:before {
+  content: "";
+  display: block;
+}
+.contact .map__image > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 @media only screen and (min-width: 320px) {
   .contact .map__image {
-    display: none;
+    position: absolute;
+    right: -25px;
+    top: -50px;
+    width: 78.125%;
+  }
+  .contact .map__image:before {
+    padding-top: 75%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contact .map__image {
+    width: 52.0833333333%;
+    right: -20px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .contact .map__image {
+    position: static;
     display: block;
     float: right;
     width: 440px;
