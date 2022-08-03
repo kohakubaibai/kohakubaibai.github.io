@@ -315,6 +315,8 @@ body {
 
     &__title {
         text-align: center;
+        @include f-hiragino;
+        font-weight: 700;
 
         .title {
             font-size: 0;
@@ -509,7 +511,7 @@ body {
         background-color: $main;
 
         @include sp {
-            padding: 3.5rem 0 1.5rem 0;
+            padding: 3.5rem 0 0;
         }
     
         @include laptops {
@@ -595,6 +597,143 @@ body {
                 }
             }
         }
+    }
+
+    &--combat {
+        background-color: #6BB3C8;
+        position: relative;
+        overflow: hidden;
+
+        @include sp {
+            padding: 4.1rem 0 3.15rem;
+        }
+    
+        @include laptops {
+            padding: 94px 0 66px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 15rem;
+            height: 22.1rem;
+            right: -3.25rem;
+            top: 7.1rem;
+            background-image: url('#{$imgPath}/bg-combat-sp.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @include sp {
+                 display: block;
+            }
+
+            @include laptops {
+                display: none;
+            }
+        }
+
+        .wrapper {
+            @include clearfix;
+            position: relative;
+            z-index: 5;
+            
+            @include sp {
+                padding: 0 1.25rem;
+            }
+    
+            @include laptops {
+                padding: 0 40px;
+            }
+        }
+
+        .section__title {
+            margin-top: 0;
+
+            @include sp {
+                margin-bottom: 3.6rem;
+            }
+            @include laptops {
+                margin-bottom: 41px;
+            }
+
+            .title {
+                position: relative;
+                background-color: #E5DB96;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    @include translateY(-50%);
+                    background-image: url('#{$imgPath}/deco-combat.svg');
+                    background-size: cover;
+
+                    @include sp {
+                        width: 9rem;
+                        height: 9rem;
+                        left: -2.3rem;
+                    }
+
+                    @include laptops {
+                        width: 203px;
+                        height: 203px;
+                        left: -150px;
+                    }
+                }
+                
+                @include sp {
+                    padding: 1.5rem 0;
+                    border-radius: 2.5rem;
+                }
+
+                @include laptops {
+                    width: 730px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 30px 0;
+                    border-radius: 50px;
+                }
+
+                &__text {
+                    color: #000000;
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    @include sp {
+                        font-size: 2rem;
+                    }
+
+                    @include laptops {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    &--assess {
+        background-color: $light;
+
+        @include sp {
+            padding: 3rem 0 1.7rem;
+        }
+    
+        @include laptops {
+            padding: 100px 0 74px;
+        }
+
+        .wrapper {
+            
+            @include sp {
+                padding: 0 1.2rem;
+            }
+    
+            @include laptops {
+                padding: 0 90px;
+            }
+        }
+
     }
 
     &--process {
@@ -801,9 +940,67 @@ body {
             }
         }
     }
+
+    &--comData {
+        background-color: $white;
+
+        @include sp {
+            padding: 4.75rem 0 3rem;
+        }
+    
+        @include laptops {
+            padding: 80px 0;
+        }
+
+        .wrapper {
+            @include clearfix;
+            
+            @include sp {
+                padding: 0 2.25rem;
+            }
+    
+            @include laptops {
+                padding: 0 250px;
+            }
+        }
+
+        .section__title {
+            text-align: center;
+
+            margin-top: 0;
+            
+            @include sp {
+                margin-bottom: 1.5rem;
+            }
+            @include laptops {
+                margin-bottom: 50px;
+            }
+
+            .title {
+
+                &__text {
+                    @include f-hiragino;
+                    font-weight: 700;
+                    color: $main;
+
+                    @include sp {
+                        font-size: 1.8rem;
+                        letter-spacing: 0.168rem;
+                    }
+
+                    @include laptops {
+                        font-size: 30px;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+    }
 }
 
-//kv
+/***************
+ kv
+ ****************/
 .kv {
 
     .wrapper {
@@ -1162,7 +1359,9 @@ body {
     }
 }
 
-//strike
+/***************
+ strike
+ ****************/
 .strike {
     @include clearfix;
 
@@ -1347,7 +1546,9 @@ body {
     }
 }
 
-//object
+/***************
+ object
+ ****************/
 .object {
     .objList {
         @include clearfix;
@@ -1501,7 +1702,6 @@ body {
         &__body {
             @include clearfix;
 
-            @include sp {}
             @include laptops {
                 padding: 0 14px;
             }
@@ -1555,19 +1755,24 @@ body {
             }
     
             .txt {
-                @include f-hirakakuW3;
                 color: $white;
-                line-height: 1.5;
                 margin: 0;
+
+                strong {
+                    @include f-hirakakuW3;
+                    font-weight: 300;
+                }
 
                 @include sp {
                     font-size: 1.4rem;
+                    line-height: (37/28);
                     width: 53%;
                     padding-left: 1.2rem;
                 }
 
                 @include laptops {
                     font-size: 12px;
+                    line-height: 1.5;
                     width: auto;
                     padding-left: 0;
                 }
@@ -1596,7 +1801,9 @@ body {
     }
 }
 
-//rumor
+/***************
+ rumor
+****************/
 .rumor {
     .rumorList {
 
@@ -1767,7 +1974,9 @@ body {
     }
 }
 
-//advantage
+/***************
+ advantage
+****************/
 .advantage {
     &__feature {
         @include sp {
@@ -1893,6 +2102,364 @@ body {
     }
 }
 
+/***************
+ combat
+****************/
+.combat {
+    &__content {
+        @include sp {
+            & > .media {
+                display: none;
+            }
+
+            & > .txt {
+
+                .txt__title {
+                    font-size: 2.3rem;
+                    margin-bottom: 3.45rem;
+
+                    span {
+                        font-size: 3rem;
+                    }
+
+                    strong {
+                        display: none;
+                    }
+                }
+
+                .txt__list {
+                    & > li {
+                        margin-bottom: 1.3rem;
+                        padding: 0 0.25rem;
+                        border-radius: 1.5rem;
+                        height: 3rem;
+                        line-height: 3rem;
+
+                        &:before {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+
+                        .wording {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+        @include laptops {
+            display: flex;
+            align-items: center;
+
+            & > .media {
+                display: block;
+                width: (410/1120)*100%;
+            }
+
+            & > .txt {
+                .txt__title {
+                    font-size: 46px;
+                    margin-bottom: 52px;
+
+                    span {
+                        font-size: 60px;
+                    }
+
+                    strong {
+                        display: inline;
+                    }
+                }
+
+                .txt__list {
+                    & > li {
+                        margin-bottom: 26px;
+                        padding: 0 5px;
+                        border-radius: 30px;
+                        height: 60px;
+                        line-height: 60px;
+
+                        &:before {
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        .wording {
+                            font-size: 28px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .media {}
+        & > .txt {
+            @include f-hiragino;
+            line-height: (80/46);
+
+            .txt__title {
+                font-weight: 700;
+                margin-top: 0;
+            }
+
+            .txt__list {
+                font-weight: 600;
+
+                & > li {
+                    background-color: #E5DB96;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:before {
+                        content: '';
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-image: url('#{$imgPath}/deco-combat_list.svg');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+
+                    .wording {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+    &__feature {
+        @include list-reset;
+        @include clearfix;
+        padding: 0 1.7rem;
+        margin-top: 1.2rem;
+
+        & > li {
+            float: left;
+            width: (100%/2);
+            padding: 0 1.9rem;
+            @include box-sizing(border-box);
+        }
+    }
+}
+
+/***************
+ assess
+****************/
+.assess {
+    &__top {
+        color: $white;
+        text-align: center;
+
+        .intro {
+            line-height: (40/32);
+
+            @include sp {
+                padding: 0 1rem;
+                font-size: 1.6rem;
+            }
+
+            @include laptops {
+                padding: 0;
+                font-size: 32px;
+            }
+        }
+
+        .topic {
+            line-height: 1;
+
+            h3 {
+                margin: 0;
+                color: $white;
+            }
+
+            @include sp {
+                margin-top: 0.9rem;
+
+                h3 {
+                    font-size: 5rem;
+                }
+
+                span {
+                    font-size: 1.6rem;
+                    display: block;
+                    text-align: right;
+                    padding: 0 1.5rem;
+                }
+            }
+
+            @include laptops {
+                margin-top: 24px;
+
+                h3 {
+                    font-size: 101px;
+                    display: inline-block;
+                }
+
+                span {
+                    font-size: 32px;
+                    display: inline-block;
+                    text-align: left;
+                    padding: 0;
+                    position: absolute;
+                    bottom: 0;
+                    width: 230px;
+                }
+            }
+        }
+    }
+
+    &__body {
+        @include f-hiragino;
+        font-weight: 700;
+        text-align: center;
+
+        .intro {
+            color: $white;
+
+            @include sp {
+                font-size: 2rem;
+            }
+
+            @include laptops {
+                font-size: 44px;
+            }
+        }
+
+        .number {
+            display: inline-block;
+            margin: 0 auto;
+            line-height: 1;
+            background-color: $white;
+
+            &__txt {
+                color: $light;
+            }
+
+            &__value {
+                color: $light;
+                .num,
+                .percent {
+                    display: inline-block;
+                }
+            }
+        }
+
+        @include sp {
+            margin-top: 2.4rem;
+
+            .intro {
+                margin-bottom: 1.2rem;
+            }
+
+            .number {
+                width: 32rem;
+                padding: 1.5rem 0;
+                border-radius: 10rem;
+
+                &__txt {
+                    font-size: 2.35rem;
+                }
+
+                &__value {
+                    margin-top: 1.2rem;
+
+                    .num {
+                        font-size: 11.7rem;
+                    }
+    
+                    .percent {
+                        font-size: 3.65rem;
+                    }
+                }
+            }
+        }
+
+        @include laptops {
+            margin-top: 74px;
+
+            .intro {
+                margin-bottom: 25px;
+            }
+
+            .number {
+                width: 706px;
+                padding: 32px 0 37px;
+                border-radius: 200px;
+
+                &__txt {
+                    font-size: 53px;
+                }
+
+                &__value {
+                    margin-top: 25px;
+
+                    .num {
+                        font-size: 260px;
+                    }
+    
+                    .percent {
+                        font-size: 81px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__feature {
+        @include list-reset;
+
+        @include sp {
+            margin-top: 2.5rem;
+
+            & > li {
+                text-align: center;
+                margin-bottom: 1.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .note {
+                    font-size: 1.45rem;
+                }
+            }
+        }
+
+        @include laptops {
+            margin-top: 37px;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            & > li {
+                margin-bottom: 0;
+
+                .note {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        & > li {
+            .note {
+                @include f-hiragino;
+                font-size: 600;
+                text-align: center;
+                color: $white;
+            }
+        }
+    }
+}
+
+/***************
+ process
+****************/
 .process {
     &__flow {
         @include f-hiragino;
@@ -1964,17 +2531,18 @@ body {
         color: $white;
         position: relative;
         display: flex;
-        align-items: center;
         @include box-sizing(border-box);
 
         @include sp {
             padding: 1.5rem 0 1.5rem 3.3rem;
+            flex-direction: column;
         }
 
         @include laptops {
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            flex-direction: row;
         }
 
         &.free {
@@ -1999,6 +2567,13 @@ body {
                     left: -8px;
                     top: -8px;
                 }
+            }
+        }
+
+        &.ex {
+            @include laptops {
+                padding-right: 23px;
+                justify-content: space-between;
             }
         }
 
@@ -2045,50 +2620,124 @@ body {
             @include sp {
                 display: block;
             }
-            
         }
 
         &__step {
-            display: flex;
 
             @include sp {
                 flex-direction: column;
+                justify-content: center;
             }
 
             @include laptops {
+                display: flex;
                 flex-direction: row;
+                align-items: center;
             }
 
             &.ex {
+                .media,
+                .txt {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
                 @include sp {
-                    flex-direction: row;
+                    margin-bottom: 2rem;
+
+                    .txt {
+                        margin-top: 0;
+                        padding-left: 1.2rem;
+                    }
+                }
+
+                @include laptops {
+                    margin-bottom: 0;
+                    
+                    .txt {
+                        padding-left: 40px;
+                    }
                 }
             }
 
             .media {
-
-                img {
-                    @include sp {
+                @include sp {
+                    img {
                         width: auto;
                         height: 1.5rem;
                     }
-    
-                    @include laptops {
+                }
+
+                @include laptops {
+                    img {
                         height: 30px;
                     }
                 }
             }
 
             .txt {
-                span {
-                    @include sp {
+
+                @include sp {
+                    margin-top: 0.9rem;
+
+                    span {
                         font-size: 1.2rem;
                     }
-    
-                    @include laptops {
+                }
+                @include laptops {
+                    margin-top: 0;
+                    padding-left: 40px;
+
+                    span {
                         font-size: 24px;
                     }
                 }
+                
+                &.finish {
+                    position: relative;
+                    display: inline-block;
+
+                    @include sp {
+                        padding-right: 3rem;
+                    }
+                    @include laptops {
+                        padding-right: 70px;
+                    }
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        background-image: url('#{$imgPath}/deco-finish.png');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        
+                        @include sp {
+                            width: 2.1rem;
+                            height: 2.1rem;
+                            top: 50%;
+                            @include translateY(-50%);
+                        }
+
+                        @include laptops {
+                            width: 54px;
+                            height: 54px;
+                            top: auto;
+                            bottom: 0;
+                            @include translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__list {
+            @include list-reset;
+
+            & > li {
+                display: inline-block;
+                vertical-align: middle;
             }
         }
     }
@@ -2162,13 +2811,26 @@ body {
     }
 }
 
+/***************
+ price
+****************/
 .price {
     .priceTable {
         @include f-hiragino;
         font-weight: 300;
         width: 100%;
-        border: none;
         border-collapse: collapse;
+
+        @include sp {
+            border-top: none;
+            border-bottom: none;
+            border-left: 0.1rem solid #6B95C8;
+            border-right: 0.1rem solid #6B95C8;
+        }
+
+        @include laptops {
+            border: none;
+        }
 
         th,
         td {
@@ -2176,23 +2838,27 @@ body {
             @include box-sizing(border-box);
 
             @include sp {
+                font-size: 0.9rem;
                 border: 0.1rem solid #6B95C8;
             }
-            @include laptops {   
+            @include laptops {
+                font-size: 18px;
                 border: 1px solid #6B95C8;
             }
         }
 
         th {
             text-align: left;
-            width: (580/800)*100%;
             font-weight: normal;
 
             @include sp {
+                width: (580/750)*100%;
                 border-left: none;
+                padding: 1rem 0.45rem 1rem 1rem;
             }
 
             @include laptops {
+                width: (580/800)*100%;
                 border-left: 1px solid #6B95C8;
                 padding: 20px 9px 20px 22px;
             }
@@ -2201,6 +2867,7 @@ body {
         td {
             @include sp {
                 border-right: none;
+                padding: 1rem 0.85rem;
             }
 
             @include laptops {
@@ -2212,7 +2879,7 @@ body {
 }
 
 /***************
- お問い合わせ
+ contact
 ****************/
 .contact {
 
@@ -2503,6 +3170,65 @@ select {
     }
 }
 
+/***************
+ comData
+ ****************/
+.comData {
+    .comTable {
+        color: #595857;
+        @include f-hirakakuW3;
+        border: none;
+        width: 100%;
+        
+        th,
+        td {
+            border: none;
+            vertical-align: top;
+        }
+
+        th {
+            font-weight: 600;
+            text-align: left;
+        }
+
+        td {
+            font-weight: 300;
+        }
+        
+
+        @include sp {
+
+            tr {
+                border-bottom: 0.1rem solid $main;
+            }
+
+            th {
+                padding: 1.2rem 0.5rem;
+            }
+
+            td {
+                padding: 1.2rem  0.8rem;
+            }
+        }
+
+        @include laptops {
+
+            tr {
+                border-bottom: 1px solid $main;
+            }
+
+            th {
+                padding: 12px 0 12px 42px;
+            }
+
+            td {
+                padding: 12px 24px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
 .gridList {
     @include list-reset;
 
@@ -2643,6 +3369,26 @@ select {
             border-radius: 24px;
         }
     }
+
+    &--assess {
+        @include f-hiragino;
+        font-weight: 700;
+        display: inline-block;
+        background-color: $white;
+        color: $light;
+
+        @include sp {
+            font-size: 1.6rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 1.3rem;
+        }
+
+        @include laptops {
+            font-size: 32px;
+            padding: 10px 15px;
+            border-radius: 26px;
+        }
+    }
 }
 
 .btn {
@@ -2770,6 +3516,10 @@ select {
                 padding: 5px 27px 8px 20px;
                 border-radius: 35px;
             }
+
+            @include desktop {
+                padding: 17px 27px 17px 20px;
+            }
     
             &:before {
     
@@ -2838,6 +3588,101 @@ select {
             }
         }
     }
+
+    &__step {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+
+        &.i--tel {
+    
+            &:before {
+    
+                @include sp {
+                    width: 1.66rem;
+                    height: 1.83rem;
+                }
+    
+                @include laptops {
+                    width: 33px;
+                    height: 36px;
+                }
+            }
+
+            .btn__text {
+                display: inline-block;
+                vertical-align: middle;
+                @include f-hiragino;
+                font-weight: 600;
+                line-height: 1;
+                color: $white;
+    
+                @include sp {
+                    font-size: 2.1rem;
+                }
+
+                @include laptops {
+                    font-size: 30px;
+                }
+
+                @include desktop {
+                    font-size: 42px;
+                }
+            }
+        }
+        
+        &.i--stepLine,
+        &.i--stepMail {
+            font-size: 0;
+
+            .btn__text {
+                font-size: 0;
+            }
+        }
+
+        &.i--stepLine {
+            @include sp {
+                margin-left: 2.2rem;
+            }
+
+            @include laptops {
+                margin-left: 20px;
+            }
+
+            &:before {
+                @include sp {
+                    width: 3.42rem;
+                    height: 3.258rem;
+                }
+
+                @include laptops {
+                    width: 68px;
+                    height: 65px;
+                }
+            }
+        }
+
+        &.i--stepMail {
+            @include sp {
+                margin-left: 1.5rem;
+            }
+
+            @include laptops {
+                margin-left: 20px;
+            }
+            &:before {
+                @include sp {
+                    width: 2.8rem;
+                    height: 3.3rem;
+                }
+
+                @include laptops {
+                    width: 56px;
+                    height: 66px;
+                }
+            }
+        }
+    }
 }
 
 .lp-icon {
@@ -2864,6 +3709,12 @@ select {
         &.tel-strike {
             &:before {
                 background-image: url('#{$imgPath}/icon-strike-tel.svg');
+            }
+        }
+
+        &.tel-step {
+            &:before {
+                background-image: url('#{$imgPath}/icon-step-tel.svg');
             }
         }
     }
@@ -2901,6 +3752,18 @@ select {
     &--strikeMail {
         &:before {
             background-image: url('#{$imgPath}/icon-strike-mail.svg');
+        }
+    }
+
+    &--stepLine {
+        &:before {
+            background-image: url('#{$imgPath}/icon-step-line.svg');
+        }
+    }
+
+    &--stepMail {
+        &:before {
+            background-image: url('#{$imgPath}/icon-step-mail.svg');
         }
     }
 }

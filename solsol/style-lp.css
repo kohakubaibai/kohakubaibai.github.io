@@ -248,6 +248,8 @@ body {
 }
 .section__title {
   text-align: center;
+  font-family: "Hiragino Sans";
+  font-weight: 700;
 }
 .section__title .title {
   font-size: 0;
@@ -450,7 +452,7 @@ body {
 }
 @media only screen and (min-width: 320px) {
   .section--advantage {
-    padding: 3.5rem 0 1.5rem 0;
+    padding: 3.5rem 0 1.5rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -548,6 +550,157 @@ body {
 @media only screen and (min-width: 1024px) {
   .section--advantage .section__title .title__text {
     font-size: 40px;
+  }
+}
+.section--combat {
+  background-color: #6BB3C8;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 320px) {
+  .section--combat {
+    padding: 4.1rem 0 3.15rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--combat {
+    padding: 94px 0 66px;
+  }
+}
+.section--combat:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 15rem;
+  height: 22.1rem;
+  right: -3.25rem;
+  top: 7.1rem;
+  background-image: url("img/page/lp/new/bg-combat-sp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 320px) {
+  .section--combat:before {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--combat:before {
+    display: none;
+  }
+}
+.section--combat .wrapper {
+  position: relative;
+  z-index: 5;
+}
+.section--combat .wrapper:before, .section--combat .wrapper:after {
+  content: "";
+  display: table;
+}
+.section--combat .wrapper:after {
+  clear: both;
+}
+@media only screen and (min-width: 320px) {
+  .section--combat .wrapper {
+    padding: 0 1.25rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--combat .wrapper {
+    padding: 0 40px;
+  }
+}
+.section--combat .section__title {
+  margin-top: 0;
+}
+@media only screen and (min-width: 320px) {
+  .section--combat .section__title {
+    margin-bottom: 3.6rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--combat .section__title {
+    margin-bottom: 41px;
+  }
+}
+.section--combat .section__title .title {
+  position: relative;
+  background-color: #E5DB96;
+}
+.section--combat .section__title .title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("img/page/lp/new/deco-combat.svg");
+  background-size: cover;
+}
+@media only screen and (min-width: 320px) {
+  .section--combat .section__title .title:before {
+    width: 9rem;
+    height: 9rem;
+    left: -2.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--combat .section__title .title:before {
+    width: 203px;
+    height: 203px;
+    left: -150px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .section--combat .section__title .title {
+    padding: 1.5rem 0;
+    border-radius: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--combat .section__title .title {
+    width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0;
+    border-radius: 50px;
+  }
+}
+.section--combat .section__title .title__text {
+  color: #000000;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 320px) {
+  .section--combat .section__title .title__text {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--combat .section__title .title__text {
+    font-size: 40px;
+  }
+}
+.section--assess {
+  background-color: #6BC8B3;
+}
+@media only screen and (min-width: 320px) {
+  .section--assess {
+    padding: 3rem 0 1.7rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--assess {
+    padding: 100px 0 74px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .section--assess .wrapper {
+    padding: 0 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--assess .wrapper {
+    padding: 0 90px;
   }
 }
 .section--process {
@@ -784,7 +937,71 @@ body {
     font-size: 40px;
   }
 }
+.section--comData {
+  background-color: #ffffff;
+}
+@media only screen and (min-width: 320px) {
+  .section--comData {
+    padding: 4.75rem 0 3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--comData {
+    padding: 80px 0;
+  }
+}
+.section--comData .wrapper:before, .section--comData .wrapper:after {
+  content: "";
+  display: table;
+}
+.section--comData .wrapper:after {
+  clear: both;
+}
+@media only screen and (min-width: 320px) {
+  .section--comData .wrapper {
+    padding: 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--comData .wrapper {
+    padding: 0 250px;
+  }
+}
+.section--comData .section__title {
+  text-align: center;
+  margin-top: 0;
+}
+@media only screen and (min-width: 320px) {
+  .section--comData .section__title {
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--comData .section__title {
+    margin-bottom: 50px;
+  }
+}
+.section--comData .section__title .title__text {
+  font-family: "Hiragino Sans";
+  font-weight: 700;
+  color: #6B95C8;
+}
+@media only screen and (min-width: 320px) {
+  .section--comData .section__title .title__text {
+    font-size: 1.8rem;
+    letter-spacing: 0.168rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section--comData .section__title .title__text {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+}
 
+/***************
+ kv
+ ****************/
 @media only screen and (min-width: 320px) {
   .kv .wrapper {
     padding-left: 1.25rem;
@@ -1175,6 +1392,9 @@ body {
   }
 }
 
+/***************
+ strike
+ ****************/
 .strike:before, .strike:after {
   content: "";
   display: table;
@@ -1364,6 +1584,9 @@ body {
   }
 }
 
+/***************
+ object
+ ****************/
 .object .objList {
   margin: 0;
   padding: 0;
@@ -1594,14 +1817,17 @@ body {
   }
 }
 .object .sampleItem__body .txt {
-  font-family: "ヒラギノ角ゴ Pro W3";
   color: #ffffff;
-  line-height: 1.5;
   margin: 0;
+}
+.object .sampleItem__body .txt strong {
+  font-family: "ヒラギノ角ゴ Pro W3";
+  font-weight: 300;
 }
 @media only screen and (min-width: 320px) {
   .object .sampleItem__body .txt {
     font-size: 1.4rem;
+    line-height: 1.3214285714;
     width: 53%;
     padding-left: 1.2rem;
   }
@@ -1609,6 +1835,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .object .sampleItem__body .txt {
     font-size: 12px;
+    line-height: 1.5;
     width: auto;
     padding-left: 0;
   }
@@ -1636,6 +1863,9 @@ body {
   }
 }
 
+/***************
+ rumor
+****************/
 @media only screen and (min-width: 1024px) {
   .rumor .rumorList {
     display: -webkit-box;
@@ -1822,6 +2052,9 @@ body {
   }
 }
 
+/***************
+ advantage
+****************/
 @media only screen and (min-width: 320px) {
   .advantage__feature {
     margin-bottom: 3rem;
@@ -1950,6 +2183,330 @@ body {
   }
 }
 
+/***************
+ combat
+****************/
+@media only screen and (min-width: 320px) {
+  .combat__content > .media {
+    display: none;
+  }
+  .combat__content > .txt .txt__title {
+    font-size: 2.3rem;
+    margin-bottom: 3.45rem;
+  }
+  .combat__content > .txt .txt__title span {
+    font-size: 3rem;
+  }
+  .combat__content > .txt .txt__title strong {
+    display: none;
+  }
+  .combat__content > .txt .txt__list > li {
+    margin-bottom: 1.3rem;
+    padding: 0 0.25rem;
+    border-radius: 1.5rem;
+    height: 3rem;
+    line-height: 3rem;
+  }
+  .combat__content > .txt .txt__list > li:before {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .combat__content > .txt .txt__list > li .wording {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .combat__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .combat__content > .media {
+    display: block;
+    width: 36.6071428571%;
+  }
+  .combat__content > .txt .txt__title {
+    font-size: 46px;
+    margin-bottom: 52px;
+  }
+  .combat__content > .txt .txt__title span {
+    font-size: 60px;
+  }
+  .combat__content > .txt .txt__title strong {
+    display: inline;
+  }
+  .combat__content > .txt .txt__list > li {
+    margin-bottom: 26px;
+    padding: 0 5px;
+    border-radius: 30px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .combat__content > .txt .txt__list > li:before {
+    width: 50px;
+    height: 50px;
+  }
+  .combat__content > .txt .txt__list > li .wording {
+    font-size: 28px;
+    margin-left: 5px;
+  }
+}
+.combat__content > .txt {
+  font-family: "Hiragino Sans";
+  line-height: 1.7391304348;
+}
+.combat__content > .txt .txt__title {
+  font-weight: 700;
+  margin-top: 0;
+}
+.combat__content > .txt .txt__list {
+  font-weight: 600;
+}
+.combat__content > .txt .txt__list > li {
+  background-color: #E5DB96;
+}
+.combat__content > .txt .txt__list > li:last-child {
+  margin-bottom: 0;
+}
+.combat__content > .txt .txt__list > li:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("img/page/lp/new/deco-combat_list.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.combat__content > .txt .txt__list > li .wording {
+  display: inline-block;
+  vertical-align: middle;
+}
+.combat__feature {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 0 1.7rem;
+  margin-top: 1.2rem;
+}
+.combat__feature:before, .combat__feature:after {
+  content: "";
+  display: table;
+}
+.combat__feature:after {
+  clear: both;
+}
+.combat__feature > li {
+  float: left;
+  width: 50%;
+  padding: 0 1.9rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/***************
+ assess
+****************/
+.assess__top {
+  color: #ffffff;
+  text-align: center;
+}
+.assess__top .intro {
+  line-height: 1.25;
+}
+@media only screen and (min-width: 320px) {
+  .assess__top .intro {
+    padding: 0 1rem;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .assess__top .intro {
+    padding: 0;
+    font-size: 32px;
+  }
+}
+.assess__top .topic {
+  line-height: 1;
+}
+.assess__top .topic h3 {
+  margin: 0;
+  color: #ffffff;
+}
+@media only screen and (min-width: 320px) {
+  .assess__top .topic {
+    margin-top: 0.9rem;
+  }
+  .assess__top .topic h3 {
+    font-size: 5rem;
+  }
+  .assess__top .topic span {
+    font-size: 1.6rem;
+    display: block;
+    text-align: right;
+    padding: 0 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .assess__top .topic {
+    margin-top: 24px;
+  }
+  .assess__top .topic h3 {
+    font-size: 101px;
+    display: inline-block;
+  }
+  .assess__top .topic span {
+    font-size: 32px;
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 230px;
+  }
+}
+.assess__body {
+  font-family: "Hiragino Sans";
+  font-weight: 700;
+  text-align: center;
+}
+.assess__body .intro {
+  color: #ffffff;
+}
+@media only screen and (min-width: 320px) {
+  .assess__body .intro {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .assess__body .intro {
+    font-size: 44px;
+  }
+}
+.assess__body .number {
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1;
+  background-color: #ffffff;
+}
+.assess__body .number__txt {
+  color: #6BC8B3;
+}
+.assess__body .number__value {
+  color: #6BC8B3;
+}
+.assess__body .number__value .num,
+.assess__body .number__value .percent {
+  display: inline-block;
+}
+@media only screen and (min-width: 320px) {
+  .assess__body {
+    margin-top: 2.4rem;
+  }
+  .assess__body .intro {
+    margin-bottom: 1.2rem;
+  }
+  .assess__body .number {
+    width: 32rem;
+    padding: 1.5rem 0;
+    border-radius: 10rem;
+  }
+  .assess__body .number__txt {
+    font-size: 2.35rem;
+  }
+  .assess__body .number__value {
+    margin-top: 1.2rem;
+  }
+  .assess__body .number__value .num {
+    font-size: 11.7rem;
+  }
+  .assess__body .number__value .percent {
+    font-size: 3.65rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .assess__body {
+    margin-top: 74px;
+  }
+  .assess__body .intro {
+    margin-bottom: 25px;
+  }
+  .assess__body .number {
+    width: 706px;
+    padding: 32px 0 37px;
+    border-radius: 200px;
+  }
+  .assess__body .number__txt {
+    font-size: 53px;
+  }
+  .assess__body .number__value {
+    margin-top: 25px;
+  }
+  .assess__body .number__value .num {
+    font-size: 260px;
+  }
+  .assess__body .number__value .percent {
+    font-size: 81px;
+  }
+}
+.assess__feature {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media only screen and (min-width: 320px) {
+  .assess__feature {
+    margin-top: 2.5rem;
+  }
+  .assess__feature > li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .assess__feature > li:last-child {
+    margin-bottom: 0;
+  }
+  .assess__feature > li .note {
+    font-size: 1.45rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .assess__feature {
+    margin-top: 37px;
+    padding: 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .assess__feature > li {
+    margin-bottom: 0;
+  }
+  .assess__feature > li .note {
+    font-size: 20px;
+  }
+}
+.assess__feature > li .note {
+  font-family: "Hiragino Sans";
+  font-size: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+/***************
+ process
+****************/
 .process__flow {
   font-family: "Hiragino Sans";
   font-weight: 600;
@@ -2021,15 +2578,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media only screen and (min-width: 320px) {
   .process .flowItem {
     padding: 1.5rem 0 1.5rem 3.3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -2043,6 +2601,10 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 .process .flowItem.free:before {
@@ -2067,6 +2629,14 @@ body {
     height: 86px;
     left: -8px;
     top: -8px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .process .flowItem.ex {
+    padding-right: 23px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -2111,33 +2681,51 @@ body {
     display: block;
   }
 }
-.process .flowItem__step {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 @media only screen and (min-width: 320px) {
   .process .flowItem__step {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media only screen and (min-width: 1024px) {
   .process .flowItem__step {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
+}
+.process .flowItem__step.ex .media,
+.process .flowItem__step.ex .txt {
+  display: inline-block;
+  vertical-align: middle;
 }
 @media only screen and (min-width: 320px) {
   .process .flowItem__step.ex {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    margin-bottom: 2rem;
+  }
+  .process .flowItem__step.ex .txt {
+    margin-top: 0;
+    padding-left: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .process .flowItem__step.ex {
+    margin-bottom: 0;
+  }
+  .process .flowItem__step.ex .txt {
+    padding-left: 40px;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -2152,14 +2740,72 @@ body {
   }
 }
 @media only screen and (min-width: 320px) {
+  .process .flowItem__step .txt {
+    margin-top: 0.9rem;
+  }
   .process .flowItem__step .txt span {
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 1024px) {
+  .process .flowItem__step .txt {
+    margin-top: 0;
+    padding-left: 40px;
+  }
   .process .flowItem__step .txt span {
     font-size: 24px;
   }
+}
+.process .flowItem__step .txt.finish {
+  position: relative;
+  display: inline-block;
+}
+@media only screen and (min-width: 320px) {
+  .process .flowItem__step .txt.finish {
+    padding-right: 3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .process .flowItem__step .txt.finish {
+    padding-right: 70px;
+  }
+}
+.process .flowItem__step .txt.finish:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  background-image: url("img/page/lp/new/deco-finish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media only screen and (min-width: 320px) {
+  .process .flowItem__step .txt.finish:after {
+    width: 2.1rem;
+    height: 2.1rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .process .flowItem__step .txt.finish:after {
+    width: 54px;
+    height: 54px;
+    top: auto;
+    bottom: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.process .flowItem__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.process .flowItem__list > li {
+  display: inline-block;
+  vertical-align: middle;
 }
 .process .flowDeco {
   position: absolute;
@@ -2228,12 +2874,27 @@ body {
   }
 }
 
+/***************
+ price
+****************/
 .price .priceTable {
   font-family: "Hiragino Sans";
   font-weight: 300;
   width: 100%;
-  border: none;
   border-collapse: collapse;
+}
+@media only screen and (min-width: 320px) {
+  .price .priceTable {
+    border-top: none;
+    border-bottom: none;
+    border-left: 0.1rem solid #6B95C8;
+    border-right: 0.1rem solid #6B95C8;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .price .priceTable {
+    border: none;
+  }
 }
 .price .priceTable th,
 .price .priceTable td {
@@ -2244,27 +2905,31 @@ body {
 @media only screen and (min-width: 320px) {
   .price .priceTable th,
 .price .priceTable td {
+    font-size: 0.9rem;
     border: 0.1rem solid #6B95C8;
   }
 }
 @media only screen and (min-width: 1024px) {
   .price .priceTable th,
 .price .priceTable td {
+    font-size: 18px;
     border: 1px solid #6B95C8;
   }
 }
 .price .priceTable th {
   text-align: left;
-  width: 72.5%;
   font-weight: normal;
 }
 @media only screen and (min-width: 320px) {
   .price .priceTable th {
+    width: 77.3333333333%;
     border-left: none;
+    padding: 1rem 0.45rem 1rem 1rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .price .priceTable th {
+    width: 72.5%;
     border-left: 1px solid #6B95C8;
     padding: 20px 9px 20px 22px;
   }
@@ -2272,6 +2937,7 @@ body {
 @media only screen and (min-width: 320px) {
   .price .priceTable td {
     border-right: none;
+    padding: 1rem 0.85rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -2282,7 +2948,7 @@ body {
 }
 
 /***************
- お問い合わせ
+ contact
 ****************/
 .contact__note {
   font-family: "ヒラギノ角ゴ Pro W3";
@@ -2541,6 +3207,51 @@ select::-ms-expand {
   display: none;
 }
 
+/***************
+ comData
+ ****************/
+.comData .comTable {
+  color: #595857;
+  font-family: "ヒラギノ角ゴ Pro W3";
+  border: none;
+  width: 100%;
+}
+.comData .comTable th,
+.comData .comTable td {
+  border: none;
+  vertical-align: top;
+}
+.comData .comTable th {
+  font-weight: 600;
+  text-align: left;
+}
+.comData .comTable td {
+  font-weight: 300;
+}
+@media only screen and (min-width: 320px) {
+  .comData .comTable tr {
+    border-bottom: 0.1rem solid #6B95C8;
+  }
+  .comData .comTable th {
+    padding: 1.2rem 0.5rem;
+  }
+  .comData .comTable td {
+    padding: 1.2rem 0.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .comData .comTable tr {
+    border-bottom: 1px solid #6B95C8;
+  }
+  .comData .comTable th {
+    padding: 12px 0 12px 42px;
+  }
+  .comData .comTable td {
+    padding: 12px 24px;
+    font-weight: 300;
+  }
+}
+
 .gridList {
   margin: 0;
   padding: 0;
@@ -2690,6 +3401,27 @@ select::-ms-expand {
     border-radius: 24px;
   }
 }
+.tag--assess {
+  font-family: "Hiragino Sans";
+  font-weight: 700;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #6BC8B3;
+}
+@media only screen and (min-width: 320px) {
+  .tag--assess {
+    font-size: 1.6rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tag--assess {
+    font-size: 32px;
+    padding: 10px 15px;
+    border-radius: 26px;
+  }
+}
 
 .btn__sns {
   text-decoration: none;
@@ -2812,6 +3544,11 @@ select::-ms-expand {
     border-radius: 35px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .btn__strike.i--tel {
+    padding: 17px 27px 17px 20px;
+  }
+}
 @media only screen and (min-width: 320px) {
   .btn__strike.i--tel:before {
     width: 2.5rem;
@@ -2872,6 +3609,96 @@ select::-ms-expand {
     height: 66px;
   }
 }
+.btn__step {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+@media only screen and (min-width: 320px) {
+  .btn__step.i--tel:before {
+    width: 1.66rem;
+    height: 1.83rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn__step.i--tel:before {
+    width: 33px;
+    height: 36px;
+  }
+}
+.btn__step.i--tel .btn__text {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Hiragino Sans";
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+@media only screen and (min-width: 320px) {
+  .btn__step.i--tel .btn__text {
+    font-size: 2.1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn__step.i--tel .btn__text {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .btn__step.i--tel .btn__text {
+    font-size: 42px;
+  }
+}
+.btn__step.i--stepLine, .btn__step.i--stepMail {
+  font-size: 0;
+}
+.btn__step.i--stepLine .btn__text, .btn__step.i--stepMail .btn__text {
+  font-size: 0;
+}
+@media only screen and (min-width: 320px) {
+  .btn__step.i--stepLine {
+    margin-left: 2.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn__step.i--stepLine {
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .btn__step.i--stepLine:before {
+    width: 3.42rem;
+    height: 3.258rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn__step.i--stepLine:before {
+    width: 68px;
+    height: 65px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .btn__step.i--stepMail {
+    margin-left: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn__step.i--stepMail {
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .btn__step.i--stepMail:before {
+    width: 2.8rem;
+    height: 3.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn__step.i--stepMail:before {
+    width: 56px;
+    height: 66px;
+  }
+}
 
 .lp-icon:before {
   content: "";
@@ -2886,6 +3713,9 @@ select::-ms-expand {
 }
 .i--tel.tel-strike:before {
   background-image: url("img/page/lp/new/icon-strike-tel.svg");
+}
+.i--tel.tel-step:before {
+  background-image: url("img/page/lp/new/icon-step-tel.svg");
 }
 @media only screen and (min-width: 320px) {
   .i--line:before {
@@ -2912,4 +3742,10 @@ select::-ms-expand {
 }
 .i--strikeMail:before {
   background-image: url("img/page/lp/new/icon-strike-mail.svg");
+}
+.i--stepLine:before {
+  background-image: url("img/page/lp/new/icon-step-line.svg");
+}
+.i--stepMail:before {
+  background-image: url("img/page/lp/new/icon-step-mail.svg");
 }
