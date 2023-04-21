@@ -9,7 +9,7 @@
 }
 
 .wrap {
-	max-width: 1200px;
+	// max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
 	@include box-sizing(border-box);
@@ -33,11 +33,6 @@
 
 	.wrap {
 		position: relative;
-		max-width: 100%;
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: center;
 	}
 
 	.logo {
@@ -45,6 +40,32 @@
 		width: 238px;
 		height: 56px;
 		background-size: 238px 56px;
+	}
+
+	&--flex {
+		.wrap {
+			position: relative;
+			max-width: 100%;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&--float {
+		.wrap {
+			@include clearfix;
+		}
+
+		.logo {
+			float: left;
+		}
+
+		.navigation {
+			float: right;
+			margin-top: calc((56px - 21.17px) / 2);
+		}
 	}
 }
 
@@ -117,15 +138,6 @@
 	.menu {
 		@include list-reset;
 
-		& > li {
-			float: left;
-			margin-right: 15px;
-
-			&:last-of-type {
-				margin-right: 0;
-			}
-		}
-
 		&__name {
 			display: inline-block;
 			position: relative;
@@ -145,6 +157,31 @@
 				width: 12px;
 				height: 1px;
 				background-color: #666;
+			}
+		}
+
+		&--float {
+			@include clearfix;
+
+			& > li {
+				float: left;
+				margin-right: 15px;
+	
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&--flex {
+			display: flex;
+
+			& > li {
+				margin-right: 15px;
+
+				&:last-of-type {
+					margin-right: 0;
+				}
 			}
 		}
 	}

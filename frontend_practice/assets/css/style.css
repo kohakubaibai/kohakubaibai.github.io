@@ -4098,7 +4098,6 @@ th {
 }
 
 .wrap {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
@@ -4125,6 +4124,17 @@ th {
 }
 .header .wrap {
   position: relative;
+}
+.header .logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 238px;
+          flex: 0 0 238px;
+  width: 238px;
+  height: 56px;
+  background-size: 238px 56px;
+}
+.header--flex .wrap {
+  position: relative;
   max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4138,13 +4148,19 @@ th {
       -ms-flex-align: center;
           align-items: center;
 }
-.header .logo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 238px;
-          flex: 0 0 238px;
-  width: 238px;
-  height: 56px;
-  background-size: 238px 56px;
+.header--float .wrap:before, .header--float .wrap:after {
+  content: "";
+  display: table;
+}
+.header--float .wrap:after {
+  clear: both;
+}
+.header--float .logo {
+  float: left;
+}
+.header--float .navigation {
+  float: right;
+  margin-top: 17.415px;
 }
 
 .logo {
@@ -4207,13 +4223,6 @@ th {
   padding: 0;
   list-style: none;
 }
-.navigation .menu > li {
-  float: left;
-  margin-right: 15px;
-}
-.navigation .menu > li:last-of-type {
-  margin-right: 0;
-}
 .navigation .menu__name {
   display: inline-block;
   position: relative;
@@ -4232,6 +4241,31 @@ th {
   width: 12px;
   height: 1px;
   background-color: #666;
+}
+.navigation .menu--float:before, .navigation .menu--float:after {
+  content: "";
+  display: table;
+}
+.navigation .menu--float:after {
+  clear: both;
+}
+.navigation .menu--float > li {
+  float: left;
+  margin-right: 15px;
+}
+.navigation .menu--float > li:last-of-type {
+  margin-right: 0;
+}
+.navigation .menu--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navigation .menu--flex > li {
+  margin-right: 15px;
+}
+.navigation .menu--flex > li:last-of-type {
+  margin-right: 0;
 }
 
 .kv {
