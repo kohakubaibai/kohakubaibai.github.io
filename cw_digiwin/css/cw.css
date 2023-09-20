@@ -248,6 +248,9 @@ body.dark .edina_tm_hero .deco {
   max-width: none;
   width: 100px;
 }
+.edina_tm_mobile_menu .mobile_in .edina_tm_title {
+  float: none;
+}
 
 .star-block {
   background-size: 100% auto;
