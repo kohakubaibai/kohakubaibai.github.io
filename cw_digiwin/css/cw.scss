@@ -608,10 +608,20 @@ body {
             display: block;
         }
 
+        @include desktop {
+            &:hover {
+                .articleItem__text .link .anchor  {
+                    color: #80E3F9;
+                }
+            }
+        }
+
         &__media {
+            display: block;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
+            text-decoration: none;
 
             &:before {
                 content: '';
@@ -647,6 +657,8 @@ body {
         }
 
         &__text {
+            display: block;
+            text-decoration: none;
 
             .title {
                 color: #80E3F9;
@@ -733,7 +745,7 @@ body {
             .listItem {
                 position: relative;
                 border-bottom: 1px solid #5C8A94;
-                background: #151F7C;
+                background-color: #151F7C;
     
                 @include mobile {
                     padding: 15px 16px 15px 40px;
@@ -741,6 +753,10 @@ body {
                 
                 @include desktop {
                     padding: 29px 46px 23px 58px;
+
+                    &:hover {
+                        background-color: #08105c;
+                    }
                 }
     
                 &:before {
@@ -928,11 +944,20 @@ body {
     }
 
     .newsItem {
+        @include desktop {
+            &:hover {
+                .newsItem__text .link .anchor  {
+                    color: #80E3F9;
+                }
+            }
+        }
 
         &__media {
+            display: block;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
+            text-decoration: none;
 
             &:before {
                 content: '';
@@ -959,6 +984,9 @@ body {
         }
 
         &__text {
+            display: block;
+            text-decoration: none;
+
             @include mobile {
                 margin-top: 12px;
             }
@@ -1044,9 +1072,17 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            &:hover {
+                .futureItem__text .link .anchor  {
+                    color: #80E3F9;
+                }
+            }
         }
 
         &__text {
+            display: block;
+            text-decoration: none;
 
             @include desktop {
                 flex: 0 0 812px;
@@ -1128,9 +1164,11 @@ body {
         }
 
         &__media {
+            display: block;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
+            text-decoration: none;
 
             @include mobile {
                 margin-top: 20px;
