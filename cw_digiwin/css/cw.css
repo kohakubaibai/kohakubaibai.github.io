@@ -152,6 +152,20 @@ body.dark .edina_tm_hero .bg {
 body.dark .edina_tm_hero .content {
   z-index: 5;
 }
+@media only screen and (min-width: 320px) {
+  body.dark .edina_tm_hero .content {
+    top: 40%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body.dark .edina_tm_hero .content {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
 body.dark .edina_tm_hero .content .slogan {
   font-family: "Mulish", sans-serif;
   color: #80E3F9;
@@ -226,13 +240,23 @@ body.dark .edina_tm_hero .content .title > li:last-child {
 }
 body.dark .edina_tm_hero .deco {
   position: absolute;
-  width: 113px;
-  height: 237px;
   z-index: 10;
   left: 50%;
   bottom: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+@media only screen and (min-width: 320px) {
+  body.dark .edina_tm_hero .deco {
+    width: 92px;
+    height: 193px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body.dark .edina_tm_hero .deco {
+    width: 113px;
+    height: 237px;
+  }
 }
 
 .edina_tm_mainpart {
@@ -269,30 +293,30 @@ body.dark .edina_tm_hero .deco {
 }
 
 @media only screen and (min-width: 320px) {
-  .topic {
+  .mainIntro {
     padding: 124px 0 60px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .topic {
+  .mainIntro {
     padding: 210px 0 50px;
   }
 }
-.topic .wrapper {
+.mainIntro .wrapper {
   max-width: 800px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 320px) {
-  .topic .wrapper {
+  .mainIntro .wrapper {
     padding: 0 20px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .topic .wrapper {
+  .mainIntro .wrapper {
     padding: 0;
   }
 }
-.topic__title {
+.mainIntro__title {
   font-size: 30px;
   font-weight: 500;
   line-height: 43px;
@@ -300,13 +324,13 @@ body.dark .edina_tm_hero .deco {
   color: #80E3F9;
   margin-bottom: 80px;
 }
-.topic__content p {
+.mainIntro__content p {
   font-size: 20px;
   color: #fff;
   line-height: 34px;
   margin-bottom: 40px;
 }
-.topic__content p:last-child {
+.mainIntro__content p:last-child {
   margin-bottom: 0;
 }
 
@@ -391,7 +415,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .respondents .talkItem {
-    padding: 47px 70px 55px 49px;
+    padding: 47px 70px 10px 49px;
   }
 }
 .respondents .talkItem__data {

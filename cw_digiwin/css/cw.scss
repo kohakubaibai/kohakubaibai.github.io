@@ -122,6 +122,16 @@ body {
             .content {
                 z-index: 5;
 
+                @include mobile {
+                    top: 40%;
+                    transform: translateY(-40%);
+                }
+
+                @include desktop {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
                 .slogan {
                     font-family: 'Mulish', sans-serif;
                     color: #80E3F9;
@@ -196,12 +206,19 @@ body {
 
             .deco {
                 position: absolute;
-                width: 113px;
-                height: 237px;
                 z-index: 10;
                 left: 50%;
                 bottom: 0;
                 transform: translateX(-50%);
+
+                @include mobile {
+                    width: 92px;
+                    height: 193px;
+                }
+                @include desktop {
+                    width: 113px;
+                    height: 237px;
+                }
             }
         }
     }
@@ -242,7 +259,7 @@ body {
     }
 }
 
-.topic {
+.mainIntro {
     
     @include mobile {
         padding: 124px 0 60px;
@@ -366,7 +383,7 @@ body {
         }
         
         @include desktop {
-            padding: 47px 70px 55px 49px;
+            padding: 47px 70px 10px 49px;
         }
 
         &__data {

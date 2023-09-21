@@ -232,6 +232,7 @@ function edina_tm_preloader(){
 		}, 800);
 		setTimeout(function() {
 			preloader.remove();
+			$('[data-wow-item="true"]').addClass('wow');
 		}, 2000);
 
 	} else {
