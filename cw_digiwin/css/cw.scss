@@ -28,13 +28,14 @@
     }
 }
 
-$text-shadow: 3px 0 1px #EDFCFF, 2px 0 1px #EDFCFF, 4px 0 1px #EDFCFF, 
-  3px 0   0 #D7F7FE, 2px 0   0 #D7F7FE, 4px 0   0 #D7F7FE,
-  3px 0  3px #B9EFFB, 2px 0  3px #B9EFFB, 4px 0  3px #B9EFFB,
-  3px 0   2vw #B9EFFB, 2px 0   2vw #B9EFFB, 4px 0   2vw #B9EFFB, 
-  3px 0  3px #92EBFF, 2px 0  3px #92EBFF, 4px 0   5vw #92EBFF, 
-  3px 0   5vw #00D1FF, 2px 0  20vw #00D1FF, 4px 0  10vw #00D1FF,
-  3px 0  10vw #04C3ED, 2px 0  30vw #04C3ED, 4px 0  10vw #04C3ED;
+$text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 
+  0 0 0 #D7F7FE, 0 0   0 #D7F7FE, 0 0  0 #D7F7FE,
+  0 0 3px #B9EFFB, 0 0  3px #B9EFFB, 0 0  3px #B9EFFB,
+  0 0 2px #B9EFFB, 0 0   2px #B9EFFB, 0 0  2px #B9EFFB, 
+  0 0 3px #92EBFF, 0 0  3px #92EBFF, 0 0  5px #92EBFF, 
+  0 0 5px #00D1FF, 0 0  30px #00D1FF, 0 0  10px #00D1FF,
+  0 0 20px #04C3ED, 0 0  40px #04C3ED, 0 0  20px #04C3ED,
+  0 0 5px #00D1FF, 0 0  30px #00D1FF, 0 0  20px #00D1FF;
 
 .neon-text {
   text-align: center;
@@ -45,14 +46,11 @@ $text-shadow: 3px 0 1px #EDFCFF, 2px 0 1px #EDFCFF, 4px 0 1px #EDFCFF,
 @keyframes text-glow {
   0% { text-shadow: none; }
   15% { text-shadow: $text-shadow; }
-  17% { text-shadow: none; }
+  17% { text-shadow: $text-shadow; }
   19% { text-shadow: $text-shadow; }
-  
-  50% { text-shadow: none; }
-  55% { text-shadow: $text-shadow; }
-  57% { text-shadow: none; }
-  65% { text-shadow: $text-shadow; }
-  
+  50% { text-shadow: $text-shadow; }
+  85% { text-shadow: $text-shadow; }
+  87% { text-shadow: $text-shadow; }
   100% { text-shadow: $text-shadow; }
 }
 
@@ -64,7 +62,7 @@ $text-shadow: 3px 0 1px #EDFCFF, 2px 0 1px #EDFCFF, 4px 0 1px #EDFCFF,
     -webkit-background-clip: text;
     color: transparent !important;
     background-position: 100% center;
-    animation: loader 10s ease infinite reverse;
+    animation: loader 10s ease 2 reverse;
 }
 
 @keyframes loader{
@@ -95,8 +93,8 @@ body {
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                -webkit-animation: grow infinite alternate ease-in 7s;
-                animation: grow infinite alternate ease-in 7s;
+                -webkit-animation: grow infinite alternate ease-in 10s;
+                animation: grow infinite alternate ease-in 10s;
                 -webkit-animation-direction: normal;
                 animation-direction: normal;
                 
@@ -113,9 +111,13 @@ body {
                     transform: scale(1);
                 }
         
-                100% {
-                    transform: scale(1.2);
+                50% {
+                    transform: scale(1.1);
         
+                }
+
+                100% {
+                    transform: scale(1);
                 }
             }
 
@@ -338,6 +340,7 @@ body {
         
         @include desktop {
             font-size: 40px;
+            padding: 0 20px;
         }
     }
 
@@ -357,8 +360,14 @@ body {
         }
 
         .owl-carousel {
+        
+            @include desktop {
+                padding: 0 20px;
+            }
+
             .owl-stage {
                 display: flex;
+                z-index: 10;
             }
             .owl-item {
                 display: flex;
@@ -367,7 +376,51 @@ body {
             .talkItem {
                 height: 100%;
             }
+            .owl-dots {
+                margin-top: 45px;
+            }
+
+            .owl-nav {
+                position: absolute;
+                z-index: 5;
+                left: 0;
+                right: 0;
+                top: 40%;
+                height: 30px;
+                transform: translateY(-40%);
+
+                .owl-prev,
+                .owl-next {
+                    position: absolute;
+                    margin: 0;
+                    padding: 0;
+                    width: 30px;
+                    height: 30px;
+                    background-color: transparent;
+                    mask-size: 30px 30px;
+                    opacity: 0.7;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .owl-prev {
+                    left: -40px;
+                    background-color: #fff;
+                    -webkit-mask-image: url('../img/fi-rs-arrow-circle-left.svg');
+                    mask-image: url('../img/fi-rs-arrow-circle-left.svg');
+                }
+
+                .owl-next {
+                    right: -40px;
+                    background-color: #fff;
+                    -webkit-mask-image: url('../img/fi-rs-arrow-circle-right.svg');
+                    mask-image: url('../img/fi-rs-arrow-circle-right.svg');
+                }
+            }
         }
+
     }
 
     .carousel {
@@ -383,7 +436,7 @@ body {
         }
         
         @include desktop {
-            padding: 47px 70px 10px 49px;
+            padding: 47px 70px 20px 49px;
         }
 
         &__data {
@@ -398,7 +451,7 @@ body {
 
             .text {
                 margin-left: 33px;
-                color: #fff;
+                color: #80E3F9;
 
                 &__name {
                     font-size: 18px;
@@ -414,7 +467,7 @@ body {
 
             p {
                 font-size: 18px;
-                color: #80E3F9;
+                color: #ffffff;
                 line-height: 30px;
             }
         }
@@ -574,8 +627,8 @@ body {
 
 .articleBox {
     @include desktop {
-        max-width: 1202px;
-        margin: 0 auto;
+        max-width: calc(100% - 518px);
+        padding-left: calc((100vw - 1202px)/2);
         position: relative;
     }
     
@@ -584,10 +637,8 @@ body {
             padding: 0 20px;
         }
 
-        @include desktop {
+        @include mobile {
             padding: 0;
-            max-width: 916px;
-            padding-right: 139px;
         }
     }
 

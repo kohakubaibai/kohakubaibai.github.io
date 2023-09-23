@@ -58,7 +58,7 @@ function edina_tm_owl_carousel(){
 			lazyLoad: false,
 			margin: 30,
 			autoplay: true,
-			autoplayTimeout: 7000,
+			autoplayTimeout: 10000,
 			rtl: rtlMode,
 			dots: true,
 			nav: false,
@@ -77,14 +77,16 @@ function edina_tm_owl_carousel(){
 		autoplayTimeout: 7000,
 		rtl: rtlMode,
 		dots: true,
-		nav: false,
 		navSpeed: false,
 		responsive : {
 				0 : {
-					items: 1
+					items: 1,
+					nav: false
 				},
 				768 : {
-					items: 2
+					items: 2,
+					nav: true,
+					navText: ["",""]
 				}
 			}
 	});
