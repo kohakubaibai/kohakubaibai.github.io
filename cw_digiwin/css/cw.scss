@@ -40,7 +40,12 @@ $text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF,
 .neon-text {
   text-align: center;
   color: #ffffff;
-  animation: text-glow 5s linear infinite forwards;
+  animation-name: text-glow;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
 }
 
 @keyframes text-glow {
