@@ -104,6 +104,9 @@
     background-position: 100% center;
   }
 }
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
 body.dark .edina_tm_hero {
   float: none;
   overflow: hidden;

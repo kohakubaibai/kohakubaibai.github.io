@@ -83,6 +83,8 @@ $text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF,
 }
 
 body {
+    font-family: 'Noto Sans TC', sans-serif;
+    
     &.dark {
         .edina_tm_hero {
             float: none;
