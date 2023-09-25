@@ -33,13 +33,15 @@ $text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF,
   0 0 3px #B9EFFB, 0 0  3px #B9EFFB, 0 0  3px #B9EFFB,
   0 0 2px #B9EFFB, 0 0   2px #B9EFFB, 0 0  2px #B9EFFB, 
   0 0 3px #92EBFF, 0 0  3px #92EBFF, 0 0  5px #92EBFF, 
-  0 0 5px #00D1FF, 0 0  30px #00D1FF, 0 0  10px #00D1FF,
+  0 0 5px #00D1FF, 0 0  3px #00D1FF, 0 0  10px #00D1FF,
   0 0 20px #04C3ED, 0 0  40px #04C3ED, 0 0  20px #04C3ED,
   0 0 5px #00D1FF, 0 0  30px #00D1FF, 0 0  20px #00D1FF;
+$text-shadow2: 0 0 10px #80E3F9;
 
 .neon-text {
   text-align: center;
   color: #ffffff;
+  text-shadow: 0 0 10px #80E3F9;
   animation-name: text-glow;
   animation-duration: 5s;
   animation-delay: 3s;
@@ -49,14 +51,15 @@ $text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF,
 }
 
 @keyframes text-glow {
-  0% { text-shadow: none; }
+  0% { text-shadow: 0 0 10px #80E3F9; }
   15% { text-shadow: $text-shadow; }
   17% { text-shadow: $text-shadow; }
   19% { text-shadow: $text-shadow; }
   50% { text-shadow: $text-shadow; }
-  85% { text-shadow: $text-shadow; }
-  87% { text-shadow: $text-shadow; }
-  100% { text-shadow: $text-shadow; }
+  85% { text-shadow: $text-shadow2; }
+  85% { text-shadow: $text-shadow2; }
+  87% { text-shadow: $text-shadow2; }
+  100% { text-shadow: $text-shadow2; }
 }
 
 .flash-text {
@@ -67,7 +70,7 @@ $text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF,
     -webkit-background-clip: text;
     color: transparent !important;
     background-position: 100% center;
-    animation: loader 10s ease 2 reverse;
+    animation: loader 10s ease 1 reverse;
 }
 
 @keyframes loader{

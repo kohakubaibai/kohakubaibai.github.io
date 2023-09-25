@@ -2,6 +2,7 @@
 .neon-text {
   text-align: center;
   color: #ffffff;
+  text-shadow: 0 0 10px #80E3F9;
   -webkit-animation-name: text-glow;
           animation-name: text-glow;
   -webkit-animation-duration: 5s;
@@ -18,55 +19,61 @@
 
 @-webkit-keyframes text-glow {
   0% {
-    text-shadow: none;
+    text-shadow: 0 0 10px #80E3F9;
   }
   15% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   17% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   19% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   50% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   85% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 10px #80E3F9;
+  }
+  85% {
+    text-shadow: 0 0 10px #80E3F9;
   }
   87% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 10px #80E3F9;
   }
   100% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 10px #80E3F9;
   }
 }
 
 @keyframes text-glow {
   0% {
-    text-shadow: none;
+    text-shadow: 0 0 10px #80E3F9;
   }
   15% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   17% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   19% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   50% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 3px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
   }
   85% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 10px #80E3F9;
+  }
+  85% {
+    text-shadow: 0 0 10px #80E3F9;
   }
   87% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 10px #80E3F9;
   }
   100% {
-    text-shadow: 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 1px #EDFCFF, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 0 #D7F7FE, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 3px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 2px #B9EFFB, 0 0 3px #92EBFF, 0 0 3px #92EBFF, 0 0 5px #92EBFF, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 10px #00D1FF, 0 0 20px #04C3ED, 0 0 40px #04C3ED, 0 0 20px #04C3ED, 0 0 5px #00D1FF, 0 0 30px #00D1FF, 0 0 20px #00D1FF;
+    text-shadow: 0 0 10px #80E3F9;
   }
 }
 .flash-text {
@@ -78,7 +85,7 @@
   -webkit-background-clip: text;
   color: transparent !important;
   background-position: 100% center;
-  animation: loader 10s ease 2 reverse;
+  animation: loader 10s ease 1 reverse;
 }
 
 @-webkit-keyframes loader {
