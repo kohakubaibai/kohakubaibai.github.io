@@ -89,6 +89,32 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
     
     &.dark {
+
+        .edina_tm_sidebar {
+            background-color: transparent;
+
+            &.scroll {
+                background-color: rgba(0,0,0,.5);
+            }
+
+            .logo {
+                padding: 26px 20px;
+                width: auto;
+                display: inline-flex;
+
+                a {
+                    display: block;
+
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+
+            .menu {
+                width: auto;
+            }
+        }
         .edina_tm_hero {
             float: none;
             overflow: hidden;
@@ -103,8 +129,8 @@ body {
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                -webkit-animation: grow infinite alternate ease-in 10s;
-                animation: grow infinite alternate ease-in 10s;
+                -webkit-animation: grow 1 alternate ease-in 10s;
+                animation: grow 1 alternate ease-in 10s;
                 -webkit-animation-direction: normal;
                 animation-direction: normal;
                 
@@ -120,14 +146,9 @@ body {
                 0% {
                     transform: scale(1);
                 }
-        
-                50% {
-                    transform: scale(1.1);
-        
-                }
 
                 100% {
-                    transform: scale(1);
+                    transform: scale(1.1);
                 }
             }
 
@@ -235,6 +256,7 @@ body {
         }
     }
 }
+
 .edina_tm_mainpart {
     float: none;
     background-image: url('../img/bg-extend-pc.jpg');
@@ -278,7 +300,7 @@ body {
     }
 
     @include desktop {
-        padding: 210px 0 50px;
+        padding: 300px 0 50px;
     }
 
     .wrapper {
@@ -295,12 +317,21 @@ body {
     }
 
     &__title {
-        font-size: 30px;
         font-weight: 500;
-        line-height: 43px;
         text-align: center;
         color: #80E3F9;
-        margin-bottom: 80px;
+
+        @include mobile {
+            font-size: 26px;
+            line-height: 38px;
+            margin-bottom: 30px;
+        }
+
+        @include desktop {
+            font-size: 30px;
+            line-height: 43px;
+            margin-bottom: 80px;
+        }
     }
 
     &__content {
@@ -340,17 +371,20 @@ body {
     }
 
     &__title {
-        color: #fff;
         font-weight: 500;
-        line-height: normal;
-        
+        text-align: center;
+        color: #80E3F9;
+
         @include mobile {
-            font-size: 30px;
+            font-size: 26px;
+            line-height: 38px;
+            margin-bottom: 30px;
         }
-        
+
         @include desktop {
-            font-size: 40px;
-            padding: 0 20px;
+            font-size: 30px;
+            line-height: 43px;
+            margin-bottom: 80px;
         }
     }
 
@@ -438,8 +472,9 @@ body {
     }
 
     .talkItem {
-        border-radius: 40px 40px 40px 0px;
+        border-radius: 40px;
         border: 1px solid #80E3F9;
+        background-color: rgba(0,0,0,.4);
 
         @include mobile {
             padding: 30px;
@@ -490,7 +525,7 @@ body {
             padding: 60px 0;
         }
         @include desktop {
-            padding: 100px 0;
+            padding: 100px 0 120px;
         }
         .section__title {
             max-width: 1202px;
@@ -525,7 +560,7 @@ body {
             padding: 60px 0;
         }
         @include desktop {
-            padding: 100px 0;
+            padding: 100px 120px;
         }
 
         .wrapper {
@@ -558,7 +593,7 @@ body {
             padding: 40px 0 60px;
         }
         @include desktop {
-            padding: 100px 0;
+            padding: 100px 0 120px;
         }
         
         .section__title {
@@ -593,7 +628,7 @@ body {
             padding: 60px 0;
         }
         @include desktop {
-            padding: 100px 0;
+            padding: 100px 0 120px;
         }
 
         .wrapper {
@@ -608,6 +643,18 @@ body {
                 padding: 0;
             }
         }
+
+        .section__title {
+            .wrapper {
+
+                @include mobile {
+                    margin-bottom: 47px;
+                }
+                @include desktop {
+                    margin-bottom: 80px;
+                }
+            }
+        }
     }
 
     &__title {
@@ -615,6 +662,7 @@ body {
             color: #FFF;
             font-weight: 500;
             line-height: normal;
+            font-family: 'Noto Serif TC', serif;
 
             @include mobile {
                 font-size: 30px;
@@ -1030,7 +1078,7 @@ body {
                 }
 
                 @include desktop {
-                    padding-top: (333/390)*100%;
+                    padding-top: 130%;
                 }
             }
 
@@ -1146,8 +1194,8 @@ body {
             text-decoration: none;
 
             @include desktop {
-                flex: 0 0 812px;
-                padding-right: 175px;
+                flex: 0 0 50%;
+                padding-right: 160px;
             }
 
             .slogan {
@@ -1236,7 +1284,7 @@ body {
             }
 
             @include desktop {
-                width: 390px;
+                width: 50%;
                 margin-top: 0;
                 float: right;
             }
@@ -1251,7 +1299,7 @@ body {
                 }
 
                 @include desktop {
-                    padding-top: (333/390)*100%;
+                    padding-top: (333/601)*100%;
                 }
             }
 

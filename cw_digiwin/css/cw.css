@@ -114,6 +114,28 @@
 body {
   font-family: "Noto Sans TC", sans-serif;
 }
+body.dark .edina_tm_sidebar {
+  background-color: transparent;
+}
+body.dark .edina_tm_sidebar.scroll {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body.dark .edina_tm_sidebar .logo {
+  padding: 26px 20px;
+  width: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+body.dark .edina_tm_sidebar .logo a {
+  display: block;
+}
+body.dark .edina_tm_sidebar .logo a img {
+  width: 120px;
+}
+body.dark .edina_tm_sidebar .menu {
+  width: auto;
+}
 body.dark .edina_tm_hero {
   float: none;
   overflow: hidden;
@@ -128,8 +150,8 @@ body.dark .edina_tm_hero .bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-animation: grow infinite alternate ease-in 10s;
-  animation: grow infinite alternate ease-in 10s;
+  -webkit-animation: grow 1 alternate ease-in 10s;
+  animation: grow 1 alternate ease-in 10s;
   -webkit-animation-direction: normal;
   animation-direction: normal;
 }
@@ -148,13 +170,9 @@ body.dark .edina_tm_hero .bg {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  50% {
+  100% {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 @keyframes grow {
@@ -162,13 +180,9 @@ body.dark .edina_tm_hero .bg {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  50% {
+  100% {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 body.dark .edina_tm_hero .content {
@@ -321,7 +335,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .mainIntro {
-    padding: 210px 0 50px;
+    padding: 300px 0 50px;
   }
 }
 .mainIntro .wrapper {
@@ -339,12 +353,23 @@ body.dark .edina_tm_hero .deco {
   }
 }
 .mainIntro__title {
-  font-size: 30px;
   font-weight: 500;
-  line-height: 43px;
   text-align: center;
   color: #80E3F9;
-  margin-bottom: 80px;
+}
+@media only screen and (min-width: 320px) {
+  .mainIntro__title {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mainIntro__title {
+    font-size: 30px;
+    line-height: 43px;
+    margin-bottom: 80px;
+  }
 }
 .mainIntro__content p {
   font-size: 20px;
@@ -381,19 +406,22 @@ body.dark .edina_tm_hero .deco {
   }
 }
 .respondents__title {
-  color: #fff;
   font-weight: 500;
-  line-height: normal;
+  text-align: center;
+  color: #80E3F9;
 }
 @media only screen and (min-width: 320px) {
   .respondents__title {
-    font-size: 30px;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 30px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .respondents__title {
-    font-size: 40px;
-    padding: 0 20px;
+    font-size: 30px;
+    line-height: 43px;
+    margin-bottom: 80px;
   }
 }
 .respondents__content {
@@ -475,8 +503,9 @@ body.dark .edina_tm_hero .deco {
   list-style: none;
 }
 .respondents .talkItem {
-  border-radius: 40px 40px 40px 0px;
+  border-radius: 40px;
   border: 1px solid #80E3F9;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 @media only screen and (min-width: 320px) {
   .respondents .talkItem {
@@ -530,7 +559,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .section.article {
-    padding: 100px 0;
+    padding: 100px 0 120px;
   }
 }
 .section.article .section__title {
@@ -568,7 +597,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .section.news {
-    padding: 100px 0;
+    padding: 100px 120px;
   }
 }
 .section.news .wrapper {
@@ -602,7 +631,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .section.contact {
-    padding: 100px 0;
+    padding: 100px 0 120px;
   }
 }
 .section.contact .section__title .wrapper {
@@ -632,7 +661,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .section.future {
-    padding: 100px 0;
+    padding: 100px 0 120px;
   }
 }
 .section.future .wrapper {
@@ -649,10 +678,21 @@ body.dark .edina_tm_hero .deco {
     padding: 0;
   }
 }
+@media only screen and (min-width: 320px) {
+  .section.future .section__title .wrapper {
+    margin-bottom: 47px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .section.future .section__title .wrapper {
+    margin-bottom: 80px;
+  }
+}
 .section__title h3 {
   color: #FFF;
   font-weight: 500;
   line-height: normal;
+  font-family: "Noto Serif TC", serif;
 }
 @media only screen and (min-width: 320px) {
   .section__title h3 {
@@ -1040,7 +1080,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .news .newsItem__media:before {
-    padding-top: 85.3846153846%;
+    padding-top: 130%;
   }
 }
 .news .newsItem__media > img {
@@ -1149,9 +1189,9 @@ body.dark .edina_tm_hero .deco {
 @media only screen and (min-width: 1200px) {
   .future .futureItem__text {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 812px;
-            flex: 0 0 812px;
-    padding-right: 175px;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding-right: 160px;
   }
 }
 .future .futureItem__text .slogan {
@@ -1235,7 +1275,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .future .futureItem__media {
-    width: 390px;
+    width: 50%;
     margin-top: 0;
     float: right;
   }
@@ -1252,7 +1292,7 @@ body.dark .edina_tm_hero .deco {
 }
 @media only screen and (min-width: 1200px) {
   .future .futureItem__media:before {
-    padding-top: 85.3846153846%;
+    padding-top: 55.4076539101%;
   }
 }
 .future .futureItem__media > img {

@@ -23,6 +23,7 @@ jQuery(document).ready(function(){
 	edina_tm_data_images();
 	edina_tm_contact_form();
 	articleTab();
+	header_bg();
 	
 	jQuery(window).load('body', function(){
 		edina_tm_my_load();
@@ -505,5 +506,17 @@ function articleTab() {
 		var tab_target = $(this).data('tab-target');
 		$(this).addClass('active').siblings().removeClass('active');
 		$('[data-tab-id="'+ tab_target +'"]').addClass('active').siblings('[data-tab-item="content"]').removeClass('active');
+	});
+}
+
+function header_bg() {
+	$(window).on("scroll", function () {
+		var scroll = $(window).scrollTop(),
+			introY = $('.mainIntro').offset().top;
+		if (scroll > introY) {
+			$(".edina_tm_sidebar").addClass("scroll");
+		} else {
+			$(".edina_tm_sidebar").removeClass("scroll");
+		}
 	});
 }
