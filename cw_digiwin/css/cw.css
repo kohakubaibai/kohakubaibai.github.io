@@ -150,8 +150,8 @@ body.dark .edina_tm_hero .bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-animation: grow 1 alternate ease-in 10s;
-  animation: grow 1 alternate ease-in 10s;
+  -webkit-animation: grow 1 forwards ease-in 10s;
+  animation: grow 1 forwards ease-in 10s;
   -webkit-animation-direction: normal;
   animation-direction: normal;
 }
@@ -678,15 +678,11 @@ body.dark .edina_tm_hero .deco {
     padding: 0;
   }
 }
-@media only screen and (min-width: 320px) {
-  .section.future .section__title .wrapper {
-    margin-bottom: 47px;
-  }
+.section.future .section__title {
+  margin-bottom: 20px;
 }
-@media only screen and (min-width: 1200px) {
-  .section.future .section__title .wrapper {
-    margin-bottom: 80px;
-  }
+.section.future .section__title h3 {
+  line-height: 1;
 }
 .section__title h3 {
   color: #FFF;
@@ -713,10 +709,16 @@ body.dark .edina_tm_hero .deco {
   letter-spacing: 3.96px;
 }
 
+@media only screen and (min-width: 320px) {
+  .articleBox {
+    padding: 0 20px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .articleBox {
     max-width: calc(100% - 518px);
     padding-left: calc((100vw - 1202px) / 2);
+    padding-right: 0;
     position: relative;
   }
 }
@@ -1174,9 +1176,9 @@ body.dark .edina_tm_hero .deco {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .future .futureItem:hover .futureItem__text .link .anchor {
     color: #80E3F9;
@@ -1191,7 +1193,7 @@ body.dark .edina_tm_hero .deco {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    padding-right: 160px;
+    padding-right: 150px;
   }
 }
 .future .futureItem__text .slogan {
