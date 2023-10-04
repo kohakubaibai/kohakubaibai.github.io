@@ -45,6 +45,7 @@ function edina_tm_owl_carousel(){
 	
 	var newsOwl			= jQuery('#newsOwl');
 	var respondentsOwl		= jQuery('#respondentsOwl');
+	var articleOwl		= jQuery('#articleOwl');
 	
 	var rtlMode	= false;
 
@@ -80,16 +81,40 @@ function edina_tm_owl_carousel(){
 		dots: true,
 		navSpeed: false,
 		responsive : {
-				0 : {
-					items: 1,
-					nav: false
-				},
-				768 : {
-					items: 2,
-					nav: true,
-					navText: ["",""]
-				}
+			0 : {
+				items: 1,
+				nav: false
+			},
+			768 : {
+				items: 2,
+				nav: true,
+				navText: ["",""]
 			}
+		}
+	});
+
+	articleOwl.owlCarousel({
+		loop: true,
+		items: 1,
+		lazyLoad: false,
+		autoplay: true,
+		autoplayTimeout: 7000,
+		rtl: rtlMode,
+		navSpeed: false,
+		navText: ["",""],
+		responsive : {
+			0 : {
+				items: 1,
+				nav: false,
+				dots: true,
+			},
+			768 : {
+				items: 1,
+				nav: true,
+				navText: ["",""],
+				dots: false,
+			}
+		}
 	});
 	edina_tm_imgtosvg();
 }

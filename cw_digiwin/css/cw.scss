@@ -98,16 +98,30 @@ body {
             }
 
             .logo {
-                padding: 26px 20px;
+                padding: 26px 20px 26px 50px;
                 width: auto;
                 display: inline-flex;
 
                 a {
-                    display: block;
+                    display: inline-block;
+                    vertical-align: middle;
 
-                    img {
-                        width: 120px;
+                    &.cwLogo {
+                        img {
+                            width: 90px;
+                        }
                     }
+
+                    &.digiwinLogo {
+                        
+                        img {
+                            width: 120px;
+                        }
+                    }
+                }
+
+                img {
+                    display: block;
                 }
             }
 
@@ -358,7 +372,7 @@ body {
     }
 
     .wrapper {
-        max-width: 1135px;
+        max-width: 1136px;
         margin: 0 auto;
 
         @include mobile {
@@ -391,6 +405,10 @@ body {
     &__content {
         margin-top: 50px;
 
+        .owl-stage-outer {
+            z-index: 10;
+        }
+
         .owl-theme .owl-nav.disabled+.owl-dots {
             margin-top: 45px;
         }
@@ -404,6 +422,7 @@ body {
         }
 
         .owl-carousel {
+            list-style: none;
         
             @include desktop {
                 padding: 0 20px;
@@ -467,10 +486,6 @@ body {
 
     }
 
-    .carousel {
-        list-style: none;
-    }
-
     .talkItem {
         border-radius: 40px;
         border: 1px solid #80E3F9;
@@ -527,19 +542,17 @@ body {
         @include desktop {
             padding: 100px 0 120px;
         }
-        .section__title {
+        .wrapper {
             max-width: 1202px;
             margin: 0 auto;
-
-            .wrapper {
-                @include mobile {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                }
-                
-                @include desktop {
-                    padding: 0;
-                }
+            
+            @include mobile {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            @include desktop {
+                padding: 0;
             }
         }
 
@@ -679,6 +692,192 @@ body {
     }
 }
 
+.article {
+    .owl-carousel {
+        list-style: none;
+
+        @include desktop {
+            padding: 0 98px;
+        }
+    }
+
+    .owl-stage-outer {
+        z-index: 10;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        margin: 0 7px;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+        background: #fff;
+    }
+
+
+    .owl-nav {
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 48px;
+        transform: translateY(-50%);
+
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 48px;
+            height: 48px;
+            background-color: transparent;
+            mask-size: 48px 48px;
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .owl-prev {
+            left: 0;
+            background-color: #fff;
+            -webkit-mask-image: url('../img/fi-rs-arrow-circle-left.svg');
+            mask-image: url('../img/fi-rs-arrow-circle-left.svg');
+        }
+
+        .owl-next {
+            right: 0;
+            background-color: #fff;
+            -webkit-mask-image: url('../img/fi-rs-arrow-circle-right.svg');
+            mask-image: url('../img/fi-rs-arrow-circle-right.svg');
+        }
+    }
+}
+
+.articleItem {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    @include desktop {
+        &:hover {
+            .articleItem__text .link .anchor  {
+                color: #80E3F9;
+            }
+        }
+    }
+
+    &__media {
+        display: block;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        text-decoration: none;
+
+        &:before {
+            content: '';
+            display: block;
+            background-color: #80E3F9;
+
+            @include mobile {
+                padding-top: (351/349)*100%;
+            }
+
+            @include desktop {
+                padding-top: (333/589)*100%;
+            }
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include desktop {
+            float: left;
+            width: 589px;
+        }
+
+        & > img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        display: block;
+        text-decoration: none;
+
+        .title {
+            color: #80E3F9;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 3.96px;
+        }
+        .intro {
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            
+            @include mobile {
+                margin-top: 18px;
+            }
+            
+            @include desktop {
+                margin-top: 20px;
+            }
+        }
+
+        .link {
+
+            .anchor {
+                color: #FFF;
+                font-family: 'Mulish', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 28px;
+                text-decoration-line: underline;
+            }
+
+            @include mobile {
+                margin-top: 0;
+            }
+            
+            @include desktop {
+                margin-top: 10px;
+            }
+        }
+
+        @include mobile {
+            margin-top: 8px;
+        }
+
+        @include desktop {
+            margin-top: 17px;
+            float: left;
+            width: calc(100% - 589px);
+            padding-left: 77px;
+        }
+    }
+}
+
 .articleBox {
 
     @include mobile {
@@ -699,130 +898,6 @@ body {
 
         @include mobile {
             padding: 0;
-        }
-    }
-
-    .articleItem {
-        display: none;
-
-        &:before,
-        &:after {
-            content: "";
-            display: table;
-        }
-
-        &:after {
-            clear: both;
-        }
-
-        &.active {
-            display: block;
-        }
-
-        @include desktop {
-            &:hover {
-                .articleItem__text .link .anchor  {
-                    color: #80E3F9;
-                }
-            }
-        }
-
-        &__media {
-            display: block;
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            text-decoration: none;
-
-            &:before {
-                content: '';
-                display: block;
-                background-color: #80E3F9;
-
-                @include mobile {
-                    padding-top: (351/349)*100%;
-                }
-
-                @include desktop {
-                    padding-top: (333/390)*100%;
-                }
-            }
-
-            @include mobile {
-                width: 100%;
-            }
-
-            @include desktop {
-                float: left;
-                width: 390px;
-            }
-
-            & > img {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        &__text {
-            display: block;
-            text-decoration: none;
-
-            .title {
-                color: #80E3F9;
-                font-size: 22px;
-                font-weight: 500;
-                line-height: normal;
-                letter-spacing: 3.96px;
-            }
-            .intro {
-                color: #FFF;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 28px;
-                
-                @include mobile {
-                    margin-top: 18px;
-                }
-                
-                @include desktop {
-                    margin-top: 20px;
-                }
-            }
-
-            .link {
-
-                .anchor {
-                    color: #FFF;
-                    font-family: 'Mulish', sans-serif;
-                    font-size: 14px;
-                    font-weight: 700;
-                    line-height: 28px;
-                    text-decoration-line: underline;
-                }
-
-                @include mobile {
-                    margin-top: 0;
-                }
-                
-                @include desktop {
-                    margin-top: 10px;
-                }
-            }
-
-            @include mobile {
-                margin-top: 8px;
-            }
-
-            @include desktop {
-                margin-top: 17px;
-                float: left;
-                width: calc(100% - 390px);
-                padding-left: 46px;
-            }
         }
     }
 }
