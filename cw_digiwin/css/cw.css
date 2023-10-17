@@ -1020,9 +1020,6 @@ body.dark .edina_tm_hero .deco {
   color: #000;
 }
 
-.contactForm .hbspt-form {
-  background-color: #000;
-}
 @media only screen and (min-width: 320px) {
   .contactForm .hbspt-form {
     padding: 20px;
