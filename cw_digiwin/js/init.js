@@ -58,7 +58,7 @@ function edina_tm_owl_carousel(){
 			loop: false,
 			items: 3,
 			lazyLoad: false,
-			margin: 30,
+			margin: 40,
 			autoplay: true,
 			autoplayTimeout: 10000,
 			rtl: rtlMode,
