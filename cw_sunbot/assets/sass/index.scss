@@ -9,9 +9,55 @@
         "bootstrap/bootstrap-setting",
         "chartanimate";
 
-.kv {}
+body {
+    max-height: 100vh;
+}
+
+.opening  {
+    height: calc(100vh - 39px);
+
+    .wrapper {
+        height: 100%;
+        position: relative;
+    }
+
+    &__charts {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        position: relative;
+        height: 100%;
+
+        .kv {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .text {
+            .mainSlogan {
+                margin: 0;
+            }
+        }
+    }
+}
 
 .charts {
+    &--bar {
+        @include list-reset;
+
+        & > li {
+            margin-bottom: 20px;
+        }
+    }
+
     &--donuts {
         @include list-reset;
 

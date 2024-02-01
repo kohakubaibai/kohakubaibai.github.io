@@ -47,7 +47,7 @@
         <div class="wrapper">
             <div class="logo__set">
                 <a href="https://www.cw.com.tw/">
-                    <img src="assets/images/cw-logo.svg" alt="">
+                    <img src="assets/images/cw-logo.png" alt="">
                 </a>
             </div>
             <div class="hamburger">
@@ -56,15 +56,54 @@
                 <span></span>
             </div>
             <nav class="nav">
-                <ul>
-                    <li><a class="btn btn--nav" href="#">作者介紹</a></li>
-                    <li><a class="btn btn--nav" href="#">購買本書</a></li>
-                </ul>
+                <a class="btn btn--nav" href="#">作者介紹</a>
+                <a class="btn btn--nav" href="#">購買本書</a>
             </nav>
         </div>
     </header>
     <section id="opening" class="opening">
         <div class="wrapper">
+            <div class="opening__charts">
+                <div class="left">
+                    <ul class="charts--bar">
+                        <li><div class="barChart barChart--line1"><span class="value"></span></div></li>
+                        <li><div class="barChart barChart--line2"><span class="value"></span></div></li>
+                        <li><div class="barChart barChart--line3"><span class="value"></span></div></li>
+                        <li><div class="barChart barChart--line4"><span class="value"></span></div></li>
+                    </ul>
+                    <div class="charts--areaGraph">
+                        <svg viewBox="0 0 158 158" xmlns="http://www.w3.org/2000/svg" width="158" height="158" version="1.1" class="areaGraph">
+                            <defs>
+                                <pattern id="p" patternUnits="userSpaceOnUse" width="21" height="21">
+                                <rect class='grid-back' width="20" height="20" x="0" y="0"></rect>
+                                </pattern>
+                            </defs>
+                            <rect width="158" height="158" fill="url(#p)" />
+                            <g id='chart-container'></g>
+                            <rect class='overlay-border' width="158" height="158"/>
+                        </svg>
+                    </div>
+                    <div class="charts--polyline">
+                        <svg class="polyline" width="290px" height="153px" viewBox="30 27 529 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="graph-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(30.000000, 27.000000)">
+                                <g id="GRAPHS" transform="translate(0, 16.000000)" stroke-linecap="round" stroke-width="8" stroke-linejoin="round">
+                                    <polyline id="polyline1" stroke="#BADEFA" points="0 1 88.0438662 1 128.985782 137 180.170616 137 224.189573 182 256.947867 91 301.990521 137 346.009479 91 392.087202 91 429.952607 179"></polyline>
+                                    <polyline id="polyline2" stroke="#CCD0D7" points="2.04739336 183 54.2559242 227 96.2274882 47 133.080569 1 302.018438 1 346.680361 44.6280822 386.957346 0 427.905213 43"></polyline>
+                                    <polyline id="polyline3" stroke="#8CC8F7" points="1.04739336 120 53.273159 180 99.2985782 91 137.175355 47 219.077488 47 256.947867 90 301.990521 47 349.080569 137 398.228672 137 432 91"></polyline>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul class="charts--donuts">
+                        <li><div class="percentage percentage--circle1"></div></li>
+                        <li><div class="percentage percentage--circle2"></div></li>
+                        <li><div class="percentage percentage--circle3"></div></li>
+                    </ul>
+                </div>
+            </div>
             <div class="opening__text">
                 <div class="kv"><img src="/assets/images/img-kv.png" alt="孫主任的經濟筆記 AI版"></div>
                 <div class="text">
@@ -84,44 +123,7 @@
                     <a href="#" class="btn btn--link">立即體驗</a>
                 </div>
             </div>
-            <div class="opening__charts">
-                <div class="left">
-                    <div class="charts--bar"></div>
-                    <div class="charts--areaGraph">
-                        <svg viewBox="0 0 158 158" xmlns="http://www.w3.org/2000/svg" width="158" height="158" version="1.1" class="areaGraph">
-                            <defs>
-                                <pattern id="p" patternUnits="userSpaceOnUse" width="21" height="21">
-                                <rect class='grid-back' width="20" height="20" x="0" y="0"></rect>
-                                </pattern>
-                            </defs>
-                            <rect width="158" height="158" fill="url(#p)" />
-                            <g id='chart-container'></g>
-                            <rect class='overlay-border' width="158" height="158"/>
-                        </svg>
-                    </div>
-                    <div class="charts--polyline">
-                        <svg class="polyline" width="231px" height="122px" viewBox="30 27 529 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
-                            <desc>Created with Sketch.</desc>
-                            <defs></defs>
-                            <g id="graph-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(30.000000, 27.000000)">
-                                <g id="GRAPHS" transform="translate(64.000000, 16.000000)" stroke-linecap="round" stroke-width="8" stroke-linejoin="round">
-                                    <polyline id="polyline1" stroke="#BADEFA" points="0 1 88.0438662 1 128.985782 137 180.170616 137 224.189573 182 256.947867 91 301.990521 137 346.009479 91 392.087202 91 429.952607 179"></polyline>
-                                    <polyline id="polyline2" stroke="#CCD0D7" points="2.04739336 183 54.2559242 227 96.2274882 47 133.080569 1 302.018438 1 346.680361 44.6280822 386.957346 0 427.905213 43"></polyline>
-                                    <polyline id="polyline3" stroke="#8CC8F7" points="1.04739336 120 53.273159 180 99.2985782 91 137.175355 47 219.077488 47 256.947867 90 301.990521 47 349.080569 137 398.228672 137 432 91"></polyline>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="right">
-                    <ul class="charts--donuts">
-                        <li><div class="percentage percentage--circle1"></div></li>
-                        <li><div class="percentage percentage--circle2"></div></li>
-                        <li><div class="percentage percentage--circle3"></div></li>
-                    </ul>
-                </div>
-            </div>
+            
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
