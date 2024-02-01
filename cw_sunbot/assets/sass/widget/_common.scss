@@ -1,0 +1,22 @@
+
+img {
+    display: block;
+}
+
+//font styles
+.serif {
+    font-family: "Noto Serif TC", "思源宋體 TC", "思源宋體 TW", "思源宋體", serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    
+    @include laptops {
+        padding: 0 75px;
+    }
+}
