@@ -272,6 +272,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 20px;
+  z-index: 100;
 }
 .header .wrapper {
   display: -webkit-box;
@@ -284,10 +286,16 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header .nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.header .nav__link {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 1px solid #000000;
+  color: #000000;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
 }
 .header .hamburger {
   display: none;
@@ -4779,20 +4787,27 @@ body {
 }
 body {
   max-height: 100vh;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
-.opening {
-  height: calc(100vh - 39px);
+@media only screen and (min-width: 1024px) {
+  .opening {
+    height: calc(100vh - 70px);
+  }
 }
 .opening .wrapper {
   height: 100%;
+}
+.opening__wrap {
   position: relative;
+  height: 100%;
 }
 .opening__charts {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4809,20 +4824,45 @@ body {
 }
 .opening__text .kv {
   position: absolute;
-  right: 0;
+  width: 80%;
+  right: 5%;
   bottom: 0;
+}
+.opening__text .kv:before {
+  content: "";
+  display: block;
+  padding-top: 50.5531914894%;
+}
+.opening__text .kv .img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .opening__text .text .mainSlogan {
   margin: 0;
+}
+.opening__text .text .mainSlogan__text {
+  font-size: 72px;
+}
+.opening__text .text .mainSlogan__text span {
+  font-size: 46px;
 }
 
 .charts--bar {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 64px;
 }
 .charts--bar > li {
   margin-bottom: 20px;
+}
+.charts--areaGraph {
+  margin-bottom: 47px;
 }
 .charts--donuts {
   margin: 0;
@@ -4831,4 +4871,15 @@ body {
 }
 .charts--donuts > li {
   margin-bottom: 30px;
+}
+.charts--donuts > li:last-child {
+  margin-bottom: 0;
+}
+.charts--donuts > li:nth-child(2), .charts--donuts > li:nth-child(3) {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .charts--donuts > li:nth-child(2), .charts--donuts > li:nth-child(3) {
+    display: block;
+  }
 }
