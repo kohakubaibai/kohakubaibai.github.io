@@ -94,8 +94,20 @@ $(function () {
 		});
 	};
 	
-	var typing_html = '<div>孫主任<span>的</span><br></div><div>閱讀筆記</div>';
+	var typing_html = '<div><div data-speed="120"><span class="f-large">孫主任</span><span class="f-small">的</span></div><div data-speed="120" data-delay="600"><span class="f-large">閱讀筆記</span></div></div>';
 	$("#typing").typing({
 		sourceElement: typing_html
 	});
+
+	//WOW master
+	new WOW().init();
+
+	$('[data-nav-item="nav-open"]').on('click', function(){
+		$('body').addClass('openNav');
+	});
+
+	$('[data-nav-item="nav-close"]').on('click', function(){
+		$('body').removeClass('openNav');
+	});
+
 });

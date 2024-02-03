@@ -1,6 +1,8 @@
+$path: '../images';
 
 img {
     display: block;
+    width: 100%;
 }
 
 //font styles
@@ -14,6 +16,12 @@ img {
 
 body {
     background-color: #ECE8E4;
+
+    &.openNav {
+        .nav {
+            right: 0;
+        }
+    }
 }
 
 .header {
@@ -21,8 +29,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 20px;
     z-index: 100;
+
+    @include mobile {
+        padding: 2rem 2rem 0;
+    }
+
+    @include laptops {
+        padding: 20px 0 0;
+    }
 
     .wrapper {
         display: flex;
@@ -30,26 +45,160 @@ body {
         justify-content: space-between;
     }
 
-    .nav {
-        &__link {
-            display: inline-block;
-            padding: 12px 32px;
-            border: 1px solid #000000;
-            color: #000000;
-            border-radius: 4px;
-            background-color: #FFFFFF;
-            font-size: 16px;
-            font-weight: 500;
-            letter-spacing: 2.5px;
+    .logo {
+        @include mobile {
+            width: 8.4rem;
+            display: block;
+        }
+
+        @include laptops {
+            width: 103px;
         }
     }
 
-    .hamburger {
-        display: none;
+    .nav {
+        display: flex;
+
+        @include mobile {
+            right: -100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #4593D0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            padding-top: 15rem;
+            @include transition(right,.3s,ease-in);
+        }
+
+        @include laptops {
+            display: flex;
+            position: static;
+            background-color: transparent;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            padding-top: 0;
+        }
+
+        .nav__close {
+            display: block;
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            background-image: url('#{$path}/icon-header_close.svg');
+            background-size: 3.2rem;
+            background-repeat: no-repeat;
+
+            @include laptops {
+                display: none;
+            }
+        }
+
+        .nav__links {
+            text-align: center;
+            display: flex;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            @include laptops {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+            }
+
+            .link {
+                font-weight: 500;
+
+                @include mobile {
+                    font-size: 1.6rem;
+                    letter-spacing: 0.25rem;
+                    color: #FFFFFF;
+                    margin-bottom: 3rem;
+                }
+    
+                @include laptops {
+                    display: block;
+                    padding: 12px 32px;
+                    border: 1px solid #000000;
+                    color: #000000;
+                    border-radius: 4px;
+                    background-color: #FFFFFF;
+                    margin-right: 20px;
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    letter-spacing: 2.5px;
+                    @include transition(all,.3s,ease-in);
+    
+                    &:hover {
+                        opacity: 0.5;
+                    }
+    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .nav__footer {
+            padding: 0 2rem 3rem;
+
+            .copyright {
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 1.5;
+                text-align: center;
+                color: #FFF;
+            }
+
+            .links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2rem;
+
+                .links__link {
+                    margin: 0 1rem;
+                    color: #FFF;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+            }
+
+            @include laptops {
+                display: none;
+            }
+        }
     }
 
-    .nav {
+    .burger {
 
+        @include mobile {
+            display: block;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            background-image: url('#{$path}/icon-header_burger.svg');
+            background-size: 3.2rem;
+            background-repeat: no-repeat;
+        }
+
+        @include laptops {
+            display: none;
+        }
     }
 }
 
@@ -59,5 +208,274 @@ body {
     
     @include laptops {
         padding: 0 75px;
+    }
+}
+
+.footer {
+    @include mobile {
+        padding: 2rem;
+        background-color: #ECE8E4;
+        border-top: 0.1rem solid #828282;
+    }
+
+    @include laptops {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        display: block;
+        background-color: transparent;
+        padding: 0 0 20px;
+        border-top: none;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include laptops {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__copyright {
+        font-weight: 300;
+        color: #424141;
+
+        @include mobile {
+            font-size: 1.4rem;
+        }
+
+        @include laptops {
+            font-size: 14px;
+        }
+    }
+
+    &__nav {
+        @include list-reset;
+        display: flex;
+
+        @include mobile {
+            margin-top: 1rem;
+        }
+
+        @include laptops {
+            margin-top: 0;
+            margin-left: 20px;
+        }
+
+        & > li {
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include mobile {
+                margin-right: 2rem;
+            }
+
+            @include laptops {
+                margin-right: 20px;
+            }
+        }
+
+        .link {
+            display: block;
+            color: #424141;
+            font-weight: 500;
+            
+            @include mobile {
+                font-size: 1.4rem;
+            }
+
+            @include laptops {
+                font-size: 14px;
+                @include transition(all,.3s,ease-in);
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }            
+        }
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%,-50%);
+
+        .wrap {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgb(255,255,255);
+            background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 100%);
+            background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 100%);
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+
+            @include mobile {
+                padding: 6rem 3rem 3rem;
+            }
+
+            @include laptops {
+                padding: 60px 30px 30px;
+            }
+
+            .popupClose {
+                position: absolute;
+                text-align: right;
+
+                @include mobile {
+                    right: 2.2rem;
+                    top: 2.2rem;
+                }
+
+                @include laptops {
+                    right: 22px;
+                    top: 22px;
+                }
+
+                .popupClose__btn {
+                    border: none;
+                    background-color: transparent;
+                    background-image: url('#{$path}/btn-popup_close.svg');
+                    background-repeat: no-repeat;
+
+                    @include mobile {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+
+                    @include laptops {
+                        width: 30px;
+                        height: 30px;
+                        background-size: 30px 30px;
+                        @include transition(all,.3s,ease-in);
+
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+
+            .popupContent {
+                position: relative;
+
+                &__title {
+                    text-align: center;
+                    font-weight: 500;
+
+                    @include mobile {
+                        font-size: 2.2rem;
+                        margin-bottom: 1.6rem;
+                    }
+
+                    @include laptops {
+                        font-size: 22px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &__info {
+                    text-align: center;
+                    line-height: 1.8;
+                    font-weight: 300;
+
+                    @include mobile {
+                        font-size: 1.8rem;
+                    }
+
+                    @include laptops {
+                        font-size: 18px;
+                    }
+                }
+
+                &__action {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile {
+                        margin-top: 40px;
+                    }
+
+                    @include laptops {
+                        margin-top: 40px;
+                    }
+
+                    .link {
+                        display: block;
+                        @include transition(all,.3s,ease-in);
+
+                        &:hover {
+                            opacity: 0.6;
+                        }
+
+                        &--button {
+                            background-color: #000000;
+                            color: #F9FBFB;
+                            font-weight: 500;
+                            line-height: 1.5;
+
+                            @include mobile {
+                                padding: 1.2rem 3.2rem;
+                                border-radius: 0.4rem;
+                                font-size: 1.6rem;
+                                letter-spacing: 0.25rem;
+                                text-indent: 0.25rem;
+                                margin: 0 1rem;
+                            }
+
+                            @include laptops {
+                                padding: 12px 32px;
+                                border-radius: 4px;
+                                font-size: 16px;
+                                letter-spacing: 2.5px;
+                                text-indent: 2.5px;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--alert {
+        @include mobile {
+            .popup__content {
+                width: calc(100% - 2rem);
+            }
+        }
+        @include laptops {
+            .popup__content{
+                max-width: 400px;
+            }
+        }
     }
 }

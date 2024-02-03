@@ -114,27 +114,27 @@
 }
 
 // ========== Media Queries ==========
-//Small devices (portrait phones, 320 and down)
+//Small devices (portrait phones, 320 and up)
 @mixin mobile {
     @media only screen and (min-width: 320px) {
         @content;
     }
 }
-//Medium devices (portrait tablets,landscape phone, 768px and down)
+//Medium devices (portrait tablets,landscape phone, 768px and up)
 @mixin pad {
     @media only screen and (min-width: 768px) {
         @content;
     }
 }
-//Large devices (laptops, 1024 and down)
+//Large devices (laptops, 1024 and up)
 @mixin laptops {
     @media only screen and (min-width: 1024px) {
         @content;
     }
 }
-//Extra Large devices (laptops and desktop, 1200 and down)
+//Extra Large devices (laptops and desktop, 1441 and up)
 @mixin desktop {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1441px) {
         @content;
     }
 }
