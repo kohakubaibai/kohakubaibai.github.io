@@ -112,11 +112,11 @@ $(function () {
 		$('body').removeClass('openNav');
 		
 		//if user is NOT logged in
-		$('[data-popup-name="' + target + '"]').fadeIn();
+		$('[data-popup-name="' + target + '"]').show();
 	});
 
 	//close popup
 	$('[data-popup-item="close"]').on('click', function(){
-		$(this).closest('[data-popup-item="group"]').fadeOut();
+		$(this).closest('[data-popup-item="group"]').hide();
 	});
 });

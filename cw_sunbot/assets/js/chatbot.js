@@ -16,20 +16,20 @@ $(function () {
 		$('body').removeClass('openNav');
 		
 		//if user is NOT logged in
-		$('[data-popup-name="' + target + '"]').fadeIn();
+		$('[data-popup-name="' + target + '"]').show();
 
 		//if user accept exchange
 		if(target == 'exchange') {
-			$('[data-popup-name="trial"]').fadeOut();
+			$('[data-popup-name="trial"]').hide();
 		}
 
 		if(target == 'accept') {
-			$('[data-popup-name="exchange"]').fadeOut();
+			$('[data-popup-name="exchange"]').hide();
 		}
 	});
 
 	//close popup
 	$('[data-popup-item="close"]').on('click', function(){
-		$(this).closest('[data-popup-item="group"]').fadeOut();
+		$(this).closest('[data-popup-item="group"]').hide();
 	});
 });
