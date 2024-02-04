@@ -49,7 +49,6 @@ $(function () {
 	}
 
 	// Get length and angle between two points
-	// Reference: https://medium.com/@francoisromain/smooth-a-svg-path-with-cubic-bezier-curves-e37b49d46c74
 	const line = (pointA, pointB) => {
 		const lengthX = pointB[0] - pointA[0];
 		const lengthY = pointB[1] - pointA[1];
@@ -60,7 +59,6 @@ $(function () {
 	};
 
 	// Get a control point for curve line
-	// Reference: https://medium.com/@francoisromain/smooth-a-svg-path-with-cubic-bezier-curves-e37b49d46c74
 	const controlPoint = (current, previous, next, reverse) => {
 		const p = previous || current;
 		const n = next || current;
@@ -79,8 +77,6 @@ $(function () {
 		let line = generateSvgPath(data, color);
 		$("#chart-container").append(line);
 		$("#chart-container").html($("#chart-container").html());
-		// append doesn't refresh svg, this is why:
-		// https://stackoverflow.com/questions/3642035/jquerys-append-not-working-with-svg-element
 	};
 
 	addLineToSVG(line1Data, "primary");
@@ -102,12 +98,25 @@ $(function () {
 	//WOW master
 	new WOW().init();
 
+	//open & close navigation
 	$('[data-nav-item="nav-open"]').on('click', function(){
 		$('body').addClass('openNav');
 	});
-
 	$('[data-nav-item="nav-close"]').on('click', function(){
 		$('body').removeClass('openNav');
 	});
 
+	//open popup
+	$('[data-button-item="popup"]').on('click', function(){
+		var target = $(this).data('popup-target');
+		$('body').removeClass('openNav');
+		
+		//if user is NOT logged in
+		$('[data-popup-name="' + target + '"]').fadeIn();
+	});
+
+	//close popup
+	$('[data-popup-item="close"]').on('click', function(){
+		$(this).closest('[data-popup-item="group"]').fadeOut();
+	});
 });

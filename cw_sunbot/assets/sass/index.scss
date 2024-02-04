@@ -12,7 +12,7 @@ $path: '../images';
 
 html {
     @include mobile {
-        font-size: (100vw/37.5);
+        font-size: (100vw/39);
     }
 
     @include laptops {
@@ -26,9 +26,9 @@ body {
     &.fixed {
         height: 100dvh;
 
-        .opening {
+        .main {
             @include mobile {
-                height: calc(100dvh - 16rem);
+                height: calc(100dvh - 16.6rem);
             }
         
             @include laptops {
@@ -41,9 +41,9 @@ body {
     &.nofixed {
         height: 100vh;
 
-        .opening {
+        .main {
             @include mobile {
-                height: calc(100vh - 16rem);
+                height: calc(100vh - 16.6rem);
             }
         
             @include laptops {
@@ -55,13 +55,7 @@ body {
 }
 
 .opening  {
-    // @include mobile {
-    //     height: calc(100dvh - 16rem);
-    // }
-
-    // @include laptops {
-    //     height: calc(100dvh - 70px);
-    // }
+    height: 100%;
 
     .wrapper {
         height: 100%;
