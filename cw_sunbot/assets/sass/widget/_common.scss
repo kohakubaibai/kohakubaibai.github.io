@@ -258,8 +258,9 @@ body {
 
         .wrapper {
             @include mobile {
-                flex-direction: row;
+                flex-direction: column;
                 flex-wrap: wrap;
+                align-items: flex-start;
             }
     
             @include laptops {
@@ -408,7 +409,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 9999;
+    z-index: 9000;
     top: 0;
     left: 0;
 
@@ -1085,12 +1086,13 @@ body {
 }
 
 .ajaxLoading {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 9000;
+    z-index: 9999;
     background-color: rgba(0,0,0,.5);
 
     .loadingio-spinner-pulse {
