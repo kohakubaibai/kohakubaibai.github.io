@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://etu.cw.com.tw/srv.html?14 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<script src="./json2.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+//***************************
+// dump to nothing if console is not available
+//***************************
+if (!window.console){ console = {log: function() {}, debug: function() {} } };
+
+//var API_PATH = document.location.origin + "/service/session/json/";
+var API_PATH = document.location.protocol + "//" + document.location.host + "/service/session/json/",
+    REQUEST_ASYNC = true,
+    ETU={},
+	ER_UID = "__eruid";
+	
+ETU.cookieObj = new function(){
+	'use strict';
+	var COOKIE_EXPIRES_DAYS = 365; // a year 
+	return{
+		getCookie : function(_name){
+			var nameEQ = _name + "=";
+			var ca = document.cookie.split(';');
+			for ( var i = 0, leng = ca.length; i < leng; i++) {
+				var c = (ca[i]).trim();
+				if (c.indexOf(nameEQ) === 0){
+					return c.substring(nameEQ.length);
+				}
+			}
+			return '';
+		},
+
+		setCookie : function(_name, _value, _days) {
+
+			if (!_days) { // default 365days.  --jun
+				_days = COOKIE_EXPIRES_DAYS;
+			} 
+			var expires = "",
+				date = new Date();
+			date.setTime(date.getTime() + (_days * 24 * 60 * 60 * 1000)); // days in second.  --jun
+			expires = ";expires=" + date.toGMTString();
+			
+			document.cookie = _name + "=" + _value + expires + ";path=/";
+		}
+	};
+}();
+ETU.mainProcess = new function(){
+	'use strict';
+	var ETU_SSID = "__ETU_SNO", // ETU serial Number. --jun
+		ETU_SSID_TIMESTAMP = "__ETU_SNO_TS",
+		EXPIRED_DURATION = 30 * 60 * 1000; // 30min in ms. --jun
+
+	function __checkUID( _erUid ){
+		var localUID = null;
+		if ( !__isValueMeaningful(_erUid) ){
+
+			localUID = localStorage.getItem(ER_UID);
+			if( !__isValueMeaningful(localUID) ){
+				_erUid = __generateErUid();
+				localStorage.setItem(ER_UID, _erUid);
+			}else{
+				_erUid = localUID;
+			}
+			ETU.cookieObj.setCookie(ER_UID, _erUid);
+		}
+
+		return _erUid;
+	}
+	function __checkSSID(_ssid) {
+		if(!__isValueMeaningful(_ssid)) {  // ssid doesn't exist.  --jun
+			_ssid = __generateSSID();
+		} else {
+			if(__isSSIDExpired(_ssid)) { // ssid does exist but expired.  --jun
+				_ssid = __generateSSID();
+			}
+		}
+		// Update the verification time of ssid in cookie.  --jun
+		// 	* The verification of ssid-expired (function __isSSIDExpired()) is depends on how long hasn't this ssid been verified last time.
+		ETU.cookieObj.setCookie(ETU_SSID_TIMESTAMP, new Date().getTime());
+		return _ssid;
+	}
+	function __generateSSID() {
+		var new_ssid = ("000000000000" + Math.floor(Math.random() * 0x1000000000000 /* 16^12 */).toString(16) ).slice(-12);
+		console.debug("new ssid: " + new_ssid);
+		ETU.cookieObj.setCookie(ETU_SSID, new_ssid);		
+		return new_ssid;
+	}
+	function __generateErUid(){
+		// var s4 = function(){ return Math.floor(Math.random() * 0x10000 /* 65536 */).toString(16); };
+		var s4 = function(){
+			return ("0000" + (Math.floor(Math.random() * 0x10000 /* 65536 */).toString(16)) ).slice(-4); 
+		};
+		return (s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4());
+	}
+	function __isValueMeaningful( _value ){
+		var result = true;
+		if( _value === null || _value === undefined || _value.trim() === "" || _value.length === 0 ){
+			result = false;
+		}
+		return result;
+	}
+	function __isSSIDExpired(_ssid) {
+		var isExpired = true,
+			ssidTS = parseInt(ETU.cookieObj.getCookie(ETU_SSID_TIMESTAMP)),
+			currentTimestamp = new Date().getTime();
+		// The ssid would be expired if it haven't been update for 30min.  --jun
+		isExpired = (currentTimestamp - ssidTS) > EXPIRED_DURATION ? true : false;
+		return isExpired;
+	}
+	function __msgBack(_event){
+		var data = JSON.parse(_event.data),
+			// clientUID = data.eruid, // erUid from client side.  --jun
+			erUid = __checkUID( ETU.cookieObj.getCookie(ER_UID)),
+			ssid = __checkSSID(ETU.cookieObj.getCookie(ETU_SSID)),
+			returnDataString = JSON.stringify({
+				id: data.id, 
+				key:data.key, 
+				value: erUid, 
+				ssid: ssid
+			});
+		_event.source.postMessage(returnDataString, _event.origin); // Send data-obj back to etu.js!  --jun
+	}
+	this.getCrxDomainData = function(){
+
+		function handleRequest(event){
+			// httpSSID(API_PATH, msgBack, event);
+			__msgBack(event);
+		}
+
+		if(window.addEventListener){
+			window.addEventListener("message", handleRequest, false);
+		} else if (window.attachEvent){
+			window.attachEvent("onmessage", handleRequest);
+		}
+	};
+}();
+
+
+/**
+function httpSSID(_url, _ssidCallback, _event){
+	var xmlHttp = null;
+	if( window.XMLHttpRequest ){
+		xmlHttp = new XMLHttpRequest();
+	}else{
+		try{
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}catch(e){
+			console.log("ssid http error: "+e);
+			return;
+		}
+	}
+
+	xmlHttp = new XMLHttpRequest();
+	xmlHttp.open( "GET", _url, REQUEST_ASYNC );
+	xmlHttp.send();
+
+	//Work-around IE8 issue by making a new object with extracting elements from _event 
+	// Refer to https://etu-apps.sourcerepo.com/redmine/etu/issues/940. 
+	xmlHttp.onreadystatechange = (function(_e){
+		return function(){
+			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200){
+				_ssidCallback(_e, xmlHttp.responseText);
+				// return xmlHttp.responseText;
+			}
+		};
+	})({data: _event.data, source: _event.source, origin: _event.origin});
+}
+*/
+(function(){
+	if (!String.prototype.trim) {
+		String.prototype.trim = function() {
+			return this.replace(/^\s+|\s+$/g, '');
+		};
+	}
+	// getCrxDomainData();
+	ETU.mainProcess.getCrxDomainData();
+})();
+
+</script>
+
+
+</body></html>
