@@ -1,0 +1,64 @@
+
+<!-- saved from url=(0187)https://a.huei2flowershop.com/tools/trace/v1.1/_g.php?d=02x&p=www.cheers.com.tw%2FsubChannel.action%3FidSubChannel%3D675&n=www.cheers.com.tw%2FmasterChannel.action%3FidMasterChannel%3D112 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+       <iframe id="step2" style="width:100%;height:100%;background:#fff;" src="./_i.html"></iframe> 
+  
+    
+<script>
+var n='HCTUID'; 
+var v='02x3659769353.1708012592935.'+Math.floor(new Date().getTime()).toString()+'.'+Math.floor(Math.random()*99999).toString();
+var c=getCookie(n);  
+var tmp='www.cheers.com.tw/subChannel.action?idSubChannel=675'; 
+
+if(c=='' || c==null || (tmp.indexOf('crossing.cw.com.tw')>-1 && c.indexOf('02x')>-1) ){
+    setCookie(n,v,365);
+    c=v;
+}
+
+
+var  url='https://a.huei2flowershop.com/tools/trace/v1.1/_i.php?d=02x&c='+c+'&p='+encodeURIComponent('www.cheers.com.tw/subChannel.action?idSubChannel=675')+'&n='+encodeURIComponent('www.cheers.com.tw/masterChannel.action?idMasterChannel=112');
+console.log("LOG",c);
+
+
+ document.getElementById('step2').src=url;
+ 
+function getCookie(n) {
+  var name = n + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i]; 
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+    
+  }
+  return "";
+}
+
+function setCookie(n,v,e)
+{
+  var d = new Date();
+  d.setTime(d.getTime()+(e*24*60*60*1000));
+  
+  var expires = "expires="+d.toUTCString();
+  document.cookie = n + "=" + v + "; " + expires+"; SameSite=None; Secure"; 
+ 
+}
+</script>
+
+
+
+ 
+   
+    
+
+
+
+</body></html>
