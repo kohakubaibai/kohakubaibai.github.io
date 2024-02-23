@@ -7,6 +7,21 @@ $(function () {
         return false;
     });
 
+    var winH = $(window).outerHeight(true);
+    $(window).on('scroll', function(){
+        var scrollTop = $(this).scrollTop();
+
+        if(scrollTop >= (winH / 4)) {
+            $('#pediaGoTop').addClass('active');
+        } else {
+            $('#pediaGoTop').removeClass('active');
+        }
+    });
+
+    $('#pediaGoTop').on('click',function(){
+		$('html,body').animate({ scrollTop: 0 }, 1200);
+    });
+
     var popupType1 = `<div class="pediaTooltip__wrapper">
                         <div class="close" data-pedia-popupitem="close"></div>
                         <div class="title">
@@ -26,6 +41,7 @@ $(function () {
                             <span class="title__en">:title_En</span>
                         </div>
                         <div class="content">:content</div>
+                        <div class="action"><a href=":more_link">瞭解更多</a></div>
                     </div>`
     var popupType3 = `<div class="pediaTooltip__wrapper">
                         <div class="close" data-pedia-popupitem="close"></div>
@@ -109,7 +125,8 @@ $(function () {
                         .replace(':link1', result.link1 ?? '')
                         .replace(':topic1', result.topic1 ?? '')
                         .replace(':link2', result.link2 ?? '')
-                        .replace(':topic2', result.topic2 ?? '');
+                        .replace(':topic2', result.topic2 ?? '')
+                        .replace(':more_link', result.moreLink ?? '');
             
             $('[data-pedia-popupitem="group"]').html(clonePopup);
 

@@ -18,6 +18,7 @@ $(function () {
                             <span class="title__en">:title_En</span>
                         </div>
                         <div class="content">:content</div>
+                        <div class="action"><a href=":more_link">瞭解更多</a></div>
                     </div>`
     var popupType3 = `<div class="pediaTooltip__wrapper">
                         <div class="close" data-pedia-popupitem="close"></div>
@@ -101,7 +102,8 @@ $(function () {
                         .replace(':link1', result.link1 ?? '')
                         .replace(':topic1', result.topic1 ?? '')
                         .replace(':link2', result.link2 ?? '')
-                        .replace(':topic2', result.topic2 ?? '');
+                        .replace(':topic2', result.topic2 ?? '')
+                        .replace(':more_link', result.moreLink ?? '');
             
             $('[data-pedia-popupitem="group"]').html(clonePopup);
 

@@ -73,8 +73,11 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="./pedia_detail_files/main.css">
   <!--  Page CSS file  -->
-  <link rel="stylesheet" href="./pedia_detail_files/article.css">
+  
+  <!-- 商業百科新增CSS start -->
   <link rel="stylesheet" href="assets/css/pediapage.css">
+  <!-- 商業百科新增CSS end -->
+
   <!-- Google Tag Manager -->
   <!-- End Google Tag Manager -->
 </head>
@@ -771,9 +774,9 @@
     </div>
   </div>
 
-  <div id="main" class="main article common cheerspedia">
-
-    <article class="article article--pedia">
+  <!-- 商業百科新增區塊 start -->
+  <div id="main" class="main common cheerspedia">
+    <article class="article--pedia">
       <div class="wrap">
         <div class="wrapper scroll-article-wrapper">
           <ul class="breadcrumb">
@@ -800,6 +803,8 @@
       </div>
     </article>
   </div>
+  <!-- 商業百科新增區塊 end -->
+
   <div class="overlay" data-id="close-body-status"></div>
   <footer class="talent-footer">
     <div class="container wider footer-container">
@@ -1063,118 +1068,6 @@
   <script src="./pedia_detail_files/app.js"></script>
   <script src="./pedia_detail_files/rwd.js"></script>
   <script src="./pedia_detail_files/main.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/pedia_detail.js"></script>
-  <!-- 商業百科 保留js start -->
-  <script>
-    $(function () {
-      const localArticleFontSize = localStorage.getItem('articleFontSize');
-      const shareButtons = document.querySelectorAll('#share-buttons-1 li');
-      
-      if (localArticleFontSize) {
-        const editorBlocks = document.querySelectorAll('.editorBlock');
-        const fontSizeContents = document.querySelectorAll('.fontsize .content');
-        [].slice.call(editorBlocks).map(editorBlock => {
-          editorBlock.style.fontSize = localArticleFontSize;
-        });
-        [].slice.call(fontSizeContents).map(fontSizeContent => {
-          fontSizeContent.innerText = `字體大小 - ${localArticleFontSize === '20px' ? '小' : '大'}`;
-        });
-      }
-
-      function onClickShareButtons(e) {
-        const { type } = e.target.dataset;
-        const articleRoute = "https://www.cheers.com.tw/article/article.action?id=5102795";
-        switch (type) {
-          case 'facebook':
-            window.open(
-              'https://www.facebook.com/sharer.php?sdk=joey&u=' +
-              articleRoute +
-              '&utm_source=fb_website_share-icon&utm_medium=Social&utm_campaign=fb_website_share-icon', '_blank', 'width = 700, height = 650'
-              );
-            break;
-          case 'line':
-            window.open(
-              'https://social-plugins.line.me/lineit/share?url=' +
-              articleRoute +
-              '&utm_source=line_website_share-icon&utm_medium=Social&utm_campaign=line_website_share-icon'
-              );
-              break;
-              case 'linkedin':
-                window.open(
-              'https://www.linkedin.com/sharing/share-offsite/?url=' +
-              encodeURIComponent(articleRoute + '&utm_source=linkedin_website_share-icon&utm_medium=Social&utm_campaign=linkedin_website_share-icon')
-              );
-              break;
-              case 'link':
-                const articleUrl = location.href;
-            navigator.clipboard.writeText(articleUrl).then(() => {
-              const copyLinkContent = document.querySelector('#copy_link_content');
-              copyLinkContent.innerText = '已複製';
-              setTimeout(() => {
-                copyLinkContent.innerText = '複製連結';
-              }, 1000);
-            });
-            break;
-          case 'fontsize':
-            const editorBlocks = document.querySelectorAll('.editorBlock');;
-            const newFontSize = (editorBlocks[0].style.fontSize === '20px') ? '18px' : '20px';
-            const newFontSizeContent = (editorBlocks[0].style.fontSize === '20px') ? '大' : '小';
-            const fontSizeContents = document.querySelectorAll('.fontsize .content');
-            [].slice.call(editorBlocks).map(editorBlock => {
-              editorBlock.style.fontSize = newFontSize;
-            });
-            [].slice.call(fontSizeContents).map(fontSizeContent => {
-              fontSizeContent.innerText = `字體大小 - ${newFontSizeContent}`;
-            });
-            localStorage.setItem('articleFontSize', newFontSize);
-            break;
-
-          default:
-            break;
-        }
-        e.target.classList.add('active');
-        setTimeout(() => {
-          e.target.classList.remove('active');
-        }, 300);
-      }
-
-      function onScrollShareButtonsVisible() {
-        const shareButtons = document.querySelector('#share-buttons-1');
-        const reference = document.querySelector(`#reference`);
-        const referenceBlock = reference.getBoundingClientRect();
-        const articleInfo = document.querySelector('#articleInfo');
-        const articleInfoBlock = articleInfo.getBoundingClientRect();
-        
-        // 內文到達 viewport 的 1/4；參考資料到達 viewport 的 2/3.
-        if (((articleInfoBlock.top + articleInfoBlock.height) <= (window.innerHeight / 4)) && ((referenceBlock.top + referenceBlock.height) > (window.innerHeight / 3 * 2))) {
-          shareButtons.classList.add('active');
-        }
-        if (((articleInfoBlock.top + articleInfoBlock.height) >= (window.innerHeight / 4)) || ((referenceBlock.top + referenceBlock.height) <= (window.innerHeight / 3 * 2))) {
-          shareButtons.classList.remove('active');
-        }
-      }
-
-      Array.from(shareButtons).map(shareButton => {
-        shareButton.addEventListener('click', onClickShareButtons);
-      });
-
-      window.addEventListener('scroll', onScrollShareButtonsVisible);
-
-      $('#share-buttons-1 .mobile-list-button').on('click', () => {
-        if ($('#share-buttons-1').hasClass('mobile-open')) {
-          $('#share-buttons-1').addClass('mobile-close');
-          setTimeout(() => {
-            $('#share-buttons-1').removeClass('mobile-open mobile-close');
-          }, 400);
-        } else {
-          $('#share-buttons-1').addClass('mobile-open');
-        }
-      });
-    });
-    </script>
-  <!-- 商業百科 保留js end -->
-  <div class="pediaTooltip" data-pedia-popupitem="group"></div>
 </body>
 
 </html>

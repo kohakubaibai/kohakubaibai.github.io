@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import "variables",
+        "mixin",
+        "normalize",
+        "layout",
+        "widget";
+
+.home-page {
+    .container {
+        article {
+            .hot-list {
+                .hot-item {
+                    a {
+                        //請在此include line-clamp(2)達成字句若超過2行以刪節號「...」之效果
+                        @include line-clamp(2);
+                    }
+                }
+            }
+
+            .pedia-list {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .pedia-item {
+                    width: calc((100% - 10px) / 2);
+                    margin-bottom: 10px;
+
+                    a {
+                        display: block;
+                        text-align: left;
+                        padding: 5px 10px;
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #373737;
+                        transition: .3s;
+                        line-height: 30.6px;
+                        background-color: #EFEFEF;
+
+                        &:hover {
+                            background-color: #FFCC00;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.title-block--pedia {
+    display: flex;
+    margin-top: 26px;
+}

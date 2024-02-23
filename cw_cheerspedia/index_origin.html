@@ -176,6 +176,11 @@
   <link rel="stylesheet" href="./index_origin_files/main.css">
   <!--  Page CSS file  -->
   <link rel="stylesheet" href="./index_origin_files/index.css"> <!-- Google Tag Manager -->
+
+  <!-- 商業百科新增CSS start -->
+  <link rel="stylesheet" href="assets/css/index_extra.css">
+  <!-- 商業百科新增CSS end -->
+  
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -2576,61 +2581,6 @@
     src="./index_origin_files/AGSKWxWyP4iVm5dJv2six9x0tQ9a9bSiGVYAhDUX6mQ8yZqKWYawE5YL5cZ5KGHYq8Ua49YK-N4EoxXzBzCXL5UCrRb4cajBdNu8Z4lD2iTceDB4jkKeLWDwKlULHMlsbPc_Cw7Vn5eGWA=="></script>
   <script async=""
     src="./index_origin_files/AGSKWxWdZcIODxjv0DuDSamdZfgRyuTzoU_-IjZtph49Iv1vryc_iSgTI54WRG2_1nywCmp8Vfahov-jmE6RaBc8Fj2MzqnQ5brk1dV5HaL9a5fzXmV6B5mSyqzgNOawIFtbA108bxFhuw=="></script>
-  <!-- 商業百科新增 start -->
-  <style>
-    @media screen and (max-width: 768px) {
-      .title-block--pedia {
-        display: none !important;
-      }
-
-      .home-page .container article .pedia-list {
-        display: none !important;
-      }
-    }
-
-    .home-page .container article .hot-list .hot-item a {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .title-block--pedia {
-      display: flex;
-      margin-top: 26px;
-    }
-
-    .home-page .container article .pedia-list {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .home-page .container article .pedia-list .pedia-item {
-      width: calc((100% - 10px) / 2);
-      margin-bottom: 10px;
-    }
-
-    .home-page .container article .pedia-list .pedia-item a {
-      display: block;
-      text-align: left;
-      padding: 5px 10px;
-      width: 100%;
-      font-size: 18px;
-      font-weight: 700;
-      color: #373737;
-      transition: .3s;
-      line-height: 30.6px;
-      background-color: #EFEFEF;
-    }
-
-    .home-page .container article .pedia-list .pedia-item a:hover {
-      background-color: #FFCC00;
-    }
-  </style>
-  <!-- 商業百科新增 end -->
 </head>
 
 <body style="">
@@ -3640,15 +3590,16 @@
                 </div>
               </li>
             </ul>
+
             <!-- 商業百科新增區塊 start -->
-            <div class="title-block title-block--pedia">
+            <div class="title-block title-block--pedia mobile-hide">
               <h2 class="title">商業百科</h2>
               <a href="#" class="more">more</a>
             </div>
-            <ul class="pedia-list">
-              <li class="pedia-item"><a href="#">人力資源管理管理</a></li>
-              <li class="pedia-item"><a href="#">馬斯洛理論</a></li>
-              <li class="pedia-item"><a href="#">SMART原則</a></li>
+            <ul class="pedia-list mobile-hide">
+              <li class="pedia-item"><a href="#">一二三四五六七</a></li>
+              <li class="pedia-item"><a href="#">這裡最多七個字</a></li>
+              <li class="pedia-item"><a href="#">ABCDEFG</a></li>
               <li class="pedia-item"><a href="#">產品生命週期</a></li>
               <li class="pedia-item"><a href="#">畢馬龍效應</a></li>
               <li class="pedia-item"><a href="#">RFM模型</a></li>
@@ -3656,6 +3607,7 @@
               <li class="pedia-item"><a href="#">5S</a></li>
             </ul>
             <!-- 商業百科新增區塊 end -->
+            
           </section>
         </article>
 

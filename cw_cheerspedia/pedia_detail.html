@@ -73,8 +73,11 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="./pedia_detail_files/main.css">
   <!--  Page CSS file  -->
-  <link rel="stylesheet" href="./pedia_detail_files/article.css">
+
+  <!-- 商業百科新增CSS start -->
   <link rel="stylesheet" href="assets/css/pediapage.css">
+  <!-- 商業百科新增CSS end -->
+
   <!-- Google Tag Manager -->
   <!-- End Google Tag Manager -->
 </head>
@@ -771,8 +774,8 @@
     </div>
   </div>
 
+  <!-- 商業百科新增區塊 start -->
   <div id="main" class="main article common cheerspedia">
-
     <article class="article article--pedia">
       <div class="wrap">
         <div class="wrapper scroll-article-wrapper">
@@ -827,7 +830,7 @@
                       <h2>通貨膨脹的由來</h2>
                       <ol>
                         <li>需求拉動型通貨膨脹（demand-pull inflation）：當商品的供給量，遠低於市場需求，商品價格就會上漲。</li>
-                        <li>成本推動型通貨膨脹（cost-push inflation）：勞工薪水、原料價格、運輸等成本上漲，公司為減少<a href="#" class="pediaLink" title="通貨膨脹" data-pedia-popup="true">通貨膨脹</a>壓力，將增加的成本轉嫁給消費者，導致商品漲價。</li>
+                        <li>成本推動型通貨膨脹（cost-push inflation）：勞工薪水、原料價格、運輸等成本上漲，公司為減少<a href="#" class="pediaLink" target="_blank" title="通貨膨脹" data-pedia-popup="true">通貨膨脹</a>壓力，將增加的成本轉嫁給消費者，導致商品漲價。</li>
                         <li>固有型通貨膨脹（Built-in inflation）：因為「心理預期」而產生的通貨膨脹。</li>
                       </ol>
                       <h2>通貨膨脹怎麼計算？</h2>
@@ -840,7 +843,7 @@
                         <li>潛進型通貨膨脹（creeping inflation）：通貨膨脹率在2%以下的狀況。消費者預期未來市場會小幅度漲價，所以想先買一點商品屯起來。這種大家都在撿便宜的心態，能夠提振社會經濟</li>
                         <li>溫和通貨膨脹（walking inflation）：通貨膨脹率介於2%～10%的情形。人們開始擔心漲價太多，所以購買數量往往比實際需求更多，在供不應求的情況下，導致更嚴重的通貨膨脹。</li>
                         <li>急遽的通貨膨脹（galloping inflation）：當通貨膨脹率提升到10%以上，可能對經濟造成嚴重破壞，此時只能仰賴政府出手，設法阻止通貨膨脹。</li>
-                        <li>惡性通貨膨脹（hyper-inflation）：通貨膨脹率超過50%，經濟崩毀，比如1945年的匈牙利，通貨膨脹率高達150,000%，物價每15.6小時翻倍，造成貨幣迅速<a href="#" class="pediaLink" title="貶值" data-pedia-popup="true">貶值</a>。</li>
+                        <li>惡性通貨膨脹（hyper-inflation）：通貨膨脹率超過50%，經濟崩毀，比如1945年的匈牙利，通貨膨脹率高達150,000%，物價每15.6小時翻倍，造成貨幣迅速<a href="#" class="pediaLink" target="_blank" title="貶值" data-pedia-popup="true">貶值</a>。</li>
                         <li>通貨緊縮（deflation）：跟通貨膨脹相反，指市場上的流通貨幣變少，或是產品物價的平均價格隨著時間連續下跌。</li>
                       </ol>
                       <h2>如何應對通貨膨脹？</h2>
@@ -861,9 +864,9 @@
             </div>
             <div class="section__bd">
               <ul class="lists lists--reference">
-                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</a></li>
-                <li><a href="#">Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</a></li>
-                <li><a href="#">Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</a></li>
+                <li><a href="#" target="_blank">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</a></li>
+                <li><a href="#" target="_blank">Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</a></li>
+                <li><a href="#" target="_blank">Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</a></li>
               </ul>
             </div>
           </section>
@@ -916,6 +919,8 @@
       </div>
     </article>
   </div>
+  <!-- 商業百科新增區塊 end -->
+
   <div class="overlay" data-id="close-body-status"></div>
   <footer class="talent-footer">
     <div class="container wider footer-container">
@@ -1173,15 +1178,21 @@
       </div>
     </div>
   </div>
-
+  <div class="pediaTooltip" data-pedia-popupitem="group"></div>
   <script src="./pedia_detail_files/manifest.js"></script>
   <script src="./pedia_detail_files/vendor.js"></script>
   <script src="./pedia_detail_files/app.js"></script>
   <script src="./pedia_detail_files/rwd.js"></script>
   <script src="./pedia_detail_files/main.js"></script>
+  <!-- 商業百科新增popup假資料 start -->
   <script src="assets/js/popup.js"></script>
+  <!-- 商業百科新增popup假資料 end -->
+
+  <!-- 商業百科新增JS start -->
   <script src="assets/js/pedia_detail.js"></script>
-  <!-- 商業百科 保留js start -->
+  <!-- 商業百科新增區塊 end -->
+
+  <!-- 商業百科新增 沿用article之JS區段 start -->
   <script>
     $(function () {
       const localArticleFontSize = localStorage.getItem('articleFontSize');
@@ -1255,6 +1266,7 @@
         }, 300);
       }
 
+      // 商業百科新增JS start
       function onScrollShareButtonsVisible() {
         const shareButtons = document.querySelector('#share-buttons-1');
         const reference = document.querySelector(`#reference`);
@@ -1270,6 +1282,7 @@
           shareButtons.classList.remove('active');
         }
       }
+      // 商業百科新增JS end
 
       Array.from(shareButtons).map(shareButton => {
         shareButton.addEventListener('click', onClickShareButtons);
@@ -1289,8 +1302,8 @@
       });
     });
     </script>
-  <!-- 商業百科 保留js end -->
-  <div class="pediaTooltip" data-pedia-popupitem="group"></div>
+  <!-- 商業百科新增 沿用article之JS區段 end -->
+  
 </body>
 
 </html>

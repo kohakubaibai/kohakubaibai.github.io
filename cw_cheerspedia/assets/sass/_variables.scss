@@ -1,0 +1,55 @@
+
+// Body
+$bg-main: #ffffff;
+$bg-sponsor: #e6e3e3;
+
+// Ethnic
+$ethnic-junior: #f4c217;//新鮮菜鳥
+$ethnic-senior: #822f00;//資深職人
+$ethnic-supervisor: #05756c;//新手主管
+$ethnic-director: #0042b4;//中高階經理人
+$ethnic-job: #e96244;//求職轉職
+$ethnic-innovation: #bd0c30;//創新創業
+$ethnic-common: #4daee9;
+
+// social
+$social-yt: #ff0000;
+$social-line: #00b901;
+$social-ig: #cd2660;
+$social-fb: #415891;
+$social-epaper: #f4c217;
+
+//color
+$colors: (
+    p100: #f6f6f6,
+    p300: #eeeeee,
+    p500: #dadada,
+    p700: #9b9b9b,
+    p900: #373737,
+    danger: #e62310,
+    submit: #e60019,
+    white: #ffffff,
+    cheers: #f7d254,
+    junior: $ethnic-junior,
+    junior-opacity: rgba(244, 194, 23, 0.7),
+    senior: $ethnic-senior,
+    senior-opacity: rgba(130, 47, 0, 0.7),
+    supervisor: $ethnic-supervisor,
+    supervisor-opacity: rgba(5, 117, 108, 0.7),
+    director: $ethnic-director,
+    director-opacity: rgba(0, 66, 180, 0.7),
+    job: $ethnic-job,
+    job-opacity: rgba(233, 98, 68, 0.7),
+    innovation: $ethnic-innovation,
+    innovation-opacity: rgba(189, 12, 48, 0.7),
+    common: $ethnic-common,
+    youtube: $social-yt,
+    line: $social-line,
+    ig: $social-ig,
+    fb: $social-fb,
+    epaper: $social-epaper,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
