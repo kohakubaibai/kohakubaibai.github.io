@@ -38,6 +38,7 @@
                         transition: .3s;
                         line-height: 30.6px;
                         background-color: #EFEFEF;
+                        @include transition(all,.3s,linear);
 
                         &:hover {
                             background-color: #FFCC00;

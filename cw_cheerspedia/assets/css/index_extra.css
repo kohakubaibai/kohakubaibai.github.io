@@ -4566,6 +4566,8 @@ textbox {
   transition: 0.3s;
   line-height: 30.6px;
   background-color: #EFEFEF;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .home-page .container article .pedia-list .pedia-item a:hover {
   background-color: #FFCC00;
