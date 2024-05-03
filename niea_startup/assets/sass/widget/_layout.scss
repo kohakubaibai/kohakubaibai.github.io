@@ -1,0 +1,64 @@
+$path: '../images';
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .burger {
+    }
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    
+}
+
+.footer {
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__powerby {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .label {
+        }
+        .logo {
+        }
+    }
+
+    &__copyright {
+        
+    }
+
+    &__nav {
+    }
+}
