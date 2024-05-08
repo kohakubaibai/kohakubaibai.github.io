@@ -22,36 +22,42 @@ $(function () {
 		$('html,body').animate({ scrollTop: 0 }, 1200);
     });
 
-    var popupType1 = `<div class="pediaTooltip__wrapper">
-                        <div class="close" data-pedia-popupitem="close"></div>
-                        <div class="title">
-                            <span class="title__zh">:title_Zh</span>
-                            <span class="title__en">:title_En</span>
+    var popupType1 = `<div class="pediaTooltip" data-pedia-popupitem="group">
+                        <div class="pediaTooltip__wrapper">
+                            <div class="close" data-pedia-popupitem="close"></div>
+                            <div class="title">
+                                <span class="title__zh">:title_Zh</span>
+                                <span class="title__en">:title_En</span>
+                            </div>
+                            <div class="content">:content</div>
+                            <ul class="links">
+                                <li><a href=":link1" target="blank">:topic1</a></li>
+                                <li><a href=":link2" target="blank">:topic2</a></li>
+                            </ul>
                         </div>
-                        <div class="content">:content</div>
-                        <ul class="links">
-                            <li><a href=":link1" target="blank">:topic1</a></li>
-                            <li><a href=":link2" target="blank">:topic2</a></li>
-                        </ul>
                     </div>`
-    var popupType2 = `<div class="pediaTooltip__wrapper">
-                        <div class="close" data-pedia-popupitem="close"></div>
-                        <div class="title">
-                            <span class="title__zh">:title_Zh</span>
-                            <span class="title__en">:title_En</span>
+    var popupType2 = `<div class="pediaTooltip" data-pedia-popupitem="group">
+                        <div class="pediaTooltip__wrapper">
+                            <div class="close" data-pedia-popupitem="close"></div>
+                            <div class="title">
+                                <span class="title__zh">:title_Zh</span>
+                                <span class="title__en">:title_En</span>
+                            </div>
+                            <div class="content">:content</div>
+                            <div class="action"><a href=":more_link">瞭解更多</a></div>
                         </div>
-                        <div class="content">:content</div>
-                        <div class="action"><a href=":more_link">瞭解更多</a></div>
                     </div>`
-    var popupType3 = `<div class="pediaTooltip__wrapper">
-                        <div class="close" data-pedia-popupitem="close"></div>
-                        <div class="title">
-                            <span class="title__zh">:title_Zh</span>
-                            <span class="title__en">:title_En</span>
-                        </div>
-                        <div class="content is-maintain">
-                            <span class="maintainTxt">請您稍後再試，謝謝。</span>
-                            <span class="maintainTxt">百科資料正在維護中，</span>
+    var popupType3 = `<div class="pediaTooltip" data-pedia-popupitem="group">
+                        <div class="pediaTooltip__wrapper">
+                            <div class="close" data-pedia-popupitem="close"></div>
+                            <div class="title">
+                                <span class="title__zh">:title_Zh</span>
+                                <span class="title__en">:title_En</span>
+                            </div>
+                            <div class="content is-maintain">
+                                <span class="maintainTxt">請您稍後再試，謝謝。</span>
+                                <span class="maintainTxt">百科資料正在維護中，</span>
+                            </div>
                         </div>
                     </div>`
 
@@ -62,15 +68,13 @@ $(function () {
     
     if (!isMobile()) {
         let enterData = {
-            x: null,
-            y: null,
             pediaword: null,
         };
 
         let popupCloseTimeout = null;
 
         $('[data-pedia-popup="true"]').on('mouseenter', function (e) {
-            var pediaword = $(this).attr('title');
+            var pediaword = $(this).data('title');
 
             clearTimout();
 
@@ -78,14 +82,10 @@ $(function () {
                 resetPopup();
             }
 
-            if (enterData.x === null || enterData.y === null) {
-                enterData.x = e.pageX;
-                enterData.y = e.pageY;
-            }
-
             enterData.pediaword = pediaword;
 
-            setPopup();
+            setPopup($(this));
+            console.log($(this))
             openPopup();
         }).on('mouseleave', function(){
             popupCloseTimeout = closePopup();
@@ -101,7 +101,7 @@ $(function () {
             resetPopup();
         });
 
-        function setPopup() {
+        function setPopup(target) {
             var result = data.find(item => item.titleZh == enterData.pediaword);
 
             if (result != undefined) {
@@ -127,49 +127,24 @@ $(function () {
                         .replace(':link2', result.link2 ?? '')
                         .replace(':topic2', result.topic2 ?? '')
                         .replace(':more_link', result.moreLink ?? '');
-            
-            $('[data-pedia-popupitem="group"]').html(clonePopup);
-
-            var popupWidth = 350;
-            var range = $('[data-pedia-range="true"]'),
-                rangeL = range.offset().left,
-                rangeW = range.width(),
-                rangeMax = rangeL + rangeW;
-        
-            var fixRight = ($(window).outerWidth(true) - 1000) / 2;
-            if(enterData.x + popupWidth >= rangeMax) {
-                $('[data-pedia-popupitem="group"]').css({
-                    right: fixRight,
-                    left: 'auto',
-                    top: enterData.y + 'px',
-                })
-            } else {
-                $('[data-pedia-popupitem="group"]').css({
-                    top: enterData.y + 'px',
-                    left: enterData.x,
-                    right: 'auto'
-                });
-            }
-            
+            target.closest('li').append(clonePopup);
         }
 
         function openPopup() {
             setTimeout(() => {
                 $('[data-pedia-popupitem="group"]').addClass('is-active');
-            }, 500);
+            }, 300);
         }
 
         function closePopup() {
             return setTimeout(() => {
                 resetPopup();
-            }, 500);
+            }, 300);
         }
 
         function resetPopup() {
-            $('[data-pedia-popupitem="group"]').removeClass('is-active');
+            $('[data-pedia-popupitem="group"]').remove().removeClass('is-active');
             enterData = {
-                x: null,
-                y: null,
                 pediaword: null
             };
         }

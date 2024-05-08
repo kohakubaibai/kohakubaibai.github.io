@@ -47,7 +47,7 @@ $(function () {
         let popupCloseTimeout = null;
 
         $('[data-pedia-popup="true"]').on('mouseenter', function (e) {
-            var pediaword = $(this).attr('title');
+            var pediaword = $(this).data('title');
 
             clearTimout();
 
@@ -133,13 +133,13 @@ $(function () {
         function openPopup() {
             setTimeout(() => {
                 $('[data-pedia-popupitem="group"]').addClass('is-active');
-            }, 500);
+            }, 300);
         }
 
         function closePopup() {
             return setTimeout(() => {
                 resetPopup();
-            }, 500);
+            }, 300);
         }
 
         function resetPopup() {

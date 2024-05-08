@@ -397,7 +397,60 @@ body {
                     }
                 }
             }
+
+            svg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 4.6rem;
+                height: 4.6rem;
+                transform: rotateY(0) rotateZ(-90deg);
+        
+                circle {
+                    stroke-dasharray: 1440;
+                    stroke-dashoffset: 1440;
+                    stroke-linecap: round;
+                    stroke-width: 0.3rem;
+                    stroke: #FFF;
+                    fill: none;
+                    cx: 2.3rem;
+                    cy: 2.3rem;
+                    r: 2rem;
+                }
+        
+                &.is-animate {
+                    circle {
+                        -webkit-animation: countdown 100s linear 0.01s forwards;
+                        -moz-animation: countdown 100s linear 0.01s forwards;
+                        -o-animation: countdown 100s linear 0.01s forwards;
+                        animation: countdown 100s linear 0.01s forwards;
+                    }
+                }
+            }
         }
+    }
+}
+
+@-webkit-keyframes countdown {
+    100% {
+      stroke-dashoffset: 0;
+    }
+}
+@-moz-keyframes countdown {
+    100% {
+      stroke-dashoffset: 0;
+    }
+}
+
+@-ms-keyframes countdown {
+    100% {
+      stroke-dashoffset: 0;
+    }
+}
+
+@keyframes countdown {
+    100% {
+      stroke-dashoffset: 0;
     }
 }
 

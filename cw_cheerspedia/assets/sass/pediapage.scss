@@ -7,6 +7,10 @@
 
 $path: '../images';
 
+#main {
+    padding-bottom: 0;
+}
+
 //pedia_common
 .cheerspedia {
     padding: 20px 0;
@@ -63,7 +67,7 @@ $path: '../images';
         justify-content: flex-start;
 
         & > li {
-            flex: 0 0 280px;
+            flex: 0 0 calc((100% - 60px) / 3);
             margin-right: 30px;
             margin-bottom: 20px;
 
@@ -361,6 +365,10 @@ $path: '../images';
 .pediaSubscribe {
     padding: 40px 0;
     background-color: #FFE28A;
+
+    .wrapper {
+        padding-top: 0;
+    }
 
     &__title {
         font-size: 22px;
@@ -745,7 +753,9 @@ $path: '../images';
     .article__main {
         .content {
             .scrolling {
-                width: 100%;          
+                float: right;
+                width: calc(100% - 70px);
+                position: relative;
             }
         }
     }
@@ -1116,6 +1126,16 @@ $path: '../images';
                 }
             }
         }
+
+        .article__main {
+            .content {
+                .scrolling {
+                    width: 100%;
+                    float: none;
+                }
+            }
+        }
+
         .share-buttons {
             top:auto;
             bottom: 94px;

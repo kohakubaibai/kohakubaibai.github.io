@@ -2,9 +2,177 @@
 @import "utils/variables",
         "utils/mixin";
 @import "widget/layout",
-        "widget/icon";
+        "widget/button";
 $path: '../images';
 
-body {
 
+.outsourcing_body {
+    overflow: hidden;
+    background-color: #FAFAFA;
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .el-wrap {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        top: 0;
+        z-index: -1;
+        -webkit-animation: rotate360 60s ease infinite;
+        animation: rotate360 60s ease infinite;
+        -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+
+        .circle {
+            position: absolute;
+            border-radius: 100%;
+            height: 538px;
+            width: 538px;
+            opacity: .75;
+
+            &.left {
+                -webkit-animation: float-circle 25s ease-in infinite alternate;
+                animation: float-circle 25s ease-in infinite alternate;
+                background: rgb(207,248,245);
+                background: radial-gradient(circle, rgba(207,248,245,1) 0%, rgba(250,250,250,0) 75%);
+                bottom: -15%;
+                left: 0;
+                z-index: 0;
+            }
+
+            &.right {
+                -webkit-animation: float-circle 25s ease-out infinite alternate-reverse;
+                animation: float-circle 25s ease-out infinite alternate-reverse;
+                background: rgb(255,244,133);
+                background: radial-gradient(circle, rgba(255,244,133,1) 0%, rgba(250,250,250,0) 75%);
+                bottom: -25%;
+                right: -5%;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.outsourcing_main {
+    position: relative;
+    z-index: 5;
+
+    .section {
+        position: relative;
+        z-index: 5;
+
+        &--kv {
+            .swiper-slide {
+                width: 1140px !important;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            .swiper-pagination {
+                width: 100%;
+            }
+
+            .swiper-pagination-bullet {
+                margin: 0 6px;
+            }
+        }
+
+        &--services {
+
+        }
+    }
+}
+
+@-webkit-keyframes rotate360 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes float-circle {
+    0% {
+        -webkit-transform: translateX(0) translateZ(0);
+        transform: translateX(0) translateZ(0)
+    }
+
+    20% {
+        -webkit-transform: translateX(120) translateZ(0);
+        transform: translateX(120) translateZ(0)
+    }
+
+    40% {
+        -webkit-transform: translateX(240) translateZ(0);
+        transform: translateX(240) translateZ(0)
+    }
+
+    60% {
+        -webkit-transform: translateX(360) translateZ(0);
+        transform: translateX(360) translateZ(0)
+    }
+
+    80% {
+        -webkit-transform: translateX(120) translateZ(0);
+        transform: translateX(120) translateZ(0)
+    }
+
+    to {
+        -webkit-transform: translateX(0) translateZ(0);
+        transform: translateX(0) translateZ(0)
+    }
+}
+
+@keyframes float-circle {
+    0% {
+        -webkit-transform: translateX(0) translateZ(0);
+        transform: translateX(0) translateZ(0)
+    }
+
+    20% {
+        -webkit-transform: translateX(120) translateZ(0);
+        transform: translateX(120) translateZ(0)
+    }
+
+    40% {
+        -webkit-transform: translateX(240) translateZ(0);
+        transform: translateX(240) translateZ(0)
+    }
+
+    60% {
+        -webkit-transform: translateX(360) translateZ(0);
+        transform: translateX(360) translateZ(0)
+    }
+
+    80% {
+        -webkit-transform: translateX(120) translateZ(0);
+        transform: translateX(120) translateZ(0)
+    }
+
+    to {
+        -webkit-transform: translateX(0) translateZ(0);
+        transform: translateX(0) translateZ(0)
+    }
 }

@@ -4529,6 +4529,10 @@ textbox {
     height: 100%;
   }
 }
+#main {
+  padding-bottom: 0;
+}
+
 .cheerspedia {
   padding: 20px 0;
 }
@@ -4587,8 +4591,8 @@ textbox {
 }
 .lists--furthers > li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 280px;
-          flex: 0 0 280px;
+      -ms-flex: 0 0 calc((100% - 60px) / 3);
+          flex: 0 0 calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 20px;
 }
@@ -4872,6 +4876,9 @@ textbox {
 .pediaSubscribe {
   padding: 40px 0;
   background-color: #FFE28A;
+}
+.pediaSubscribe .wrapper {
+  padding-top: 0;
 }
 .pediaSubscribe__title {
   font-size: 22px;
@@ -5208,7 +5215,9 @@ textbox {
   margin-right: 0;
 }
 .article .article__main .content .scrolling {
-  width: 100%;
+  float: right;
+  width: calc(100% - 70px);
+  position: relative;
 }
 .article .share-buttons {
   position: fixed;
@@ -5521,6 +5530,10 @@ textbox {
   }
   .article .article__info .datas > li:last-child {
     margin-bottom: 0;
+  }
+  .article .article__main .content .scrolling {
+    width: 100%;
+    float: none;
   }
   .article .share-buttons {
     top: auto;

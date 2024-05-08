@@ -6591,7 +6591,41 @@ body.nofixed {
     background-color: #c18961;
   }
 }
+.opening__text .action svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4.6rem;
+  height: 4.6rem;
+  -webkit-transform: rotateY(0) rotateZ(-90deg);
+          transform: rotateY(0) rotateZ(-90deg);
+}
+.opening__text .action svg circle {
+  stroke-dasharray: 1440;
+  stroke-dashoffset: 1440;
+  stroke-linecap: round;
+  stroke-width: 0.3rem;
+  stroke: #FFF;
+  fill: none;
+  cx: 2.3rem;
+  cy: 2.3rem;
+  r: 2rem;
+}
+.opening__text .action svg.is-animate circle {
+  -webkit-animation: countdown 100s linear 0.01s forwards;
+  animation: countdown 100s linear 0.01s forwards;
+}
 
+@-webkit-keyframes countdown {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes countdown {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 @media only screen and (min-width: 320px) {
   @-webkit-keyframes change {
     0% {
