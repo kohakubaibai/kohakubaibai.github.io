@@ -19,5 +19,35 @@ $path: '../images';
         display: block;
         width: 44px;
         height: 44px;
+        background-color: $java700;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-size: 0;
+        border-radius: 50%;
+
+        &:hover,
+        &:active {
+            background-color: $java800;
+        }
+    }
+
+    &--fontSizeSelect {
+        background-image: url('#{$path}/icon-textSize.svg');
+    }
+    &--langSwitch {
+        background-image: url('#{$path}/icon-siteLang.svg');
+    }
+
+    &--search {
+        display: block;
+        width: 44px;
+        height: 100%;
+        padding: 8px 10px;
+        background-color: $java600;
+        border-radius: 0 4px 4px 0;
+
+        &.is-available {
+            background-color: $java800;
+        }
     }
 }

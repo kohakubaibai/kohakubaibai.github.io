@@ -1,0 +1,14 @@
+$path: '../images';
+
+.fancyForm {
+    &--text {
+        border: none;
+        @include fs(16);
+        padding: 9px 12px;
+        line-height: 1.25;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

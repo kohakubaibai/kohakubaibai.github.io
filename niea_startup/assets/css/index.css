@@ -1,3 +1,8 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tfoot, thead, th, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 微軟正黑體, Microsoft JhengHei;
+}
+
 img {
   display: block;
   width: 100%;
@@ -10,9 +15,13 @@ img {
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 8px 0;
 }
-.outsourcing_header .wrapper {
+.outsourcing_header .header_logo {
+  max-width: 150px;
+  height: 60px;
+  display: block;
+}
+.outsourcing_header .header_main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,21 +32,14 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.outsourcing_header .header_logo {
-  width: 150px;
-}
-.outsourcing_header .header_navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 .outsourcing_header .header_links {
+  background-color: #156A70;
+  padding: 10px 15px;
+}
+.outsourcing_header .header_links .linkList {
   margin: 0;
   padding: 0;
   list-style: none;
-  position: absolute;
-  right: 108px;
-  top: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,19 +50,25 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-.outsourcing_header .header_links > li {
-  margin: 0 6px;
+.outsourcing_header .header_links .linkList > li {
+  margin: 0 10px;
 }
-.outsourcing_header .header_links > li a {
+.outsourcing_header .header_links .linkList > li:first-child {
+  margin-left: 0;
+}
+.outsourcing_header .header_links .linkList > li:last-child {
+  margin-right: 0;
+}
+.outsourcing_header .header_links .linkList > li a {
   display: block;
+  color: #FFFFFF;
+  font-size: 0.9375rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-.outsourcing_header .header_links > li a.login {
-  border: 1px solid #156A70;
-  border-radius: 24px;
-  padding: 9px 29px;
 }
 .outsourcing_header .header_tool {
   display: -webkit-box;
@@ -73,13 +81,29 @@ img {
 .outsourcing_header .header_tool .header_tool__item {
   margin-left: 10px;
 }
+.outsourcing_header .header_tool .header_tool__item:first-child {
+  margin-left: 0;
+}
 .outsourcing_header .header_tool .fontSizeSelect {
   display: none;
 }
+.outsourcing_header .header_tool .loginBtn {
+  border: 1px solid #156A70;
+  border-radius: 24px;
+  padding: 9px 29px;
+  color: #156A70;
+  font-size: 1rem;
+}
+.outsourcing_header .header_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .outsourcing_header .header_search {
-  position: absolute;
-  top: 0;
-  left: 180px;
+  display: none;
 }
 .outsourcing_header .searchWrap {
   display: -webkit-box;
@@ -95,6 +119,45 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  overflow: hidden;
+}
+.outsourcing_header .searchWrap__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.outsourcing_header .searchWrap__item select {
+  width: 88px;
+}
+.outsourcing_header .searchWrap__item input[type=text] {
+  width: 206px;
+}
+.outsourcing_header .searchWrap .select2 {
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #D1D1D1;
+}
+.outsourcing_header .searchWrap .select2-container .select2-selection--single {
+  height: 100%;
+}
+.outsourcing_header .searchWrap .select2-container--default .select2-selection--single {
+  border: none;
+}
+.outsourcing_header .searchWrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 38px;
+  padding-right: 27px;
+  padding-left: 15px;
+}
+.outsourcing_header .searchWrap .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 38px;
+  top: 0;
+  right: 0;
+}
+.outsourcing_header .searchWrap .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .outsourcing_header .searchWrap .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-radius: 4px 0 0 4px;
+}
+.outsourcing_header .searchWrap .fancyForm {
+  border: 1px solid #D1D1D1;
+  border-left: none;
 }
 
 .outsourcing_footer {
@@ -120,6 +183,37 @@ img {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
+@media only screen and (min-width: 1200px) {
+  .outsourcing_header .header_links {
+    padding: 0;
+    position: absolute;
+    right: 274px;
+    top: 50%;
+    background-color: transparent;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .outsourcing_header .header_links .linkList > li a {
+    color: #222222;
+  }
+  .outsourcing_header .header_search {
+    display: block;
+    margin-left: 30px;
+  }
+  .outsourcing_header .header_main {
+    padding: 8px 0;
+  }
+}
+.fancyForm--text {
+  border: none;
+  font-size: 1rem;
+  padding: 9px 12px;
+  line-height: 1.25;
+}
+.fancyForm--text:focus {
+  outline: none;
+}
+
 .outsourcing_btn {
   text-align: center;
   cursor: pointer;
@@ -141,6 +235,31 @@ img {
   display: block;
   width: 44px;
   height: 44px;
+  background-color: #156A70;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0;
+  border-radius: 50%;
+}
+.outsourcing_btn--fontSizeSelect:hover, .outsourcing_btn--fontSizeSelect:active, .outsourcing_btn--langSwitch:hover, .outsourcing_btn--langSwitch:active {
+  background-color: #165359;
+}
+.outsourcing_btn--fontSizeSelect {
+  background-image: url("../images/icon-textSize.svg");
+}
+.outsourcing_btn--langSwitch {
+  background-image: url("../images/icon-siteLang.svg");
+}
+.outsourcing_btn--search {
+  display: block;
+  width: 44px;
+  height: 100%;
+  padding: 8px 10px;
+  background-color: #15868C;
+  border-radius: 0 4px 4px 0;
+}
+.outsourcing_btn--search.is-available {
+  background-color: #165359;
 }
 
 .outsourcing_body {

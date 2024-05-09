@@ -23,6 +23,20 @@
     list-style: none;
 }
 
+@mixin line-clamp($line) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin ellipsis {
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 @mixin appearance($value) {
     -webkit-appearance: $value;
     -moz-appearance: $value;
