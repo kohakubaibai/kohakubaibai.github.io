@@ -9,6 +9,7 @@ $path: '../images';
     background-color: transparent;
     @include box-sizing(border-box);
     @include appearance(none);
+    background-repeat: no-repeat;
 
     &:focus {
         outline: none;
@@ -17,25 +18,21 @@ $path: '../images';
     &--fontSizeSelect,
     &--langSwitch {
         display: block;
-        width: 44px;
-        height: 44px;
+        width: 32px;
+        height: 32px;
         background-color: $java700;
         background-position: center;
-        background-repeat: no-repeat;
         font-size: 0;
         border-radius: 50%;
-
-        &:hover,
-        &:active {
-            background-color: $java800;
-        }
     }
 
     &--fontSizeSelect {
         background-image: url('#{$path}/icon-textSize.svg');
+        background-size: 14px 12px;
     }
     &--langSwitch {
         background-image: url('#{$path}/icon-siteLang.svg');
+        background-size: 18px 18px;
     }
 
     &--search {
@@ -48,6 +45,39 @@ $path: '../images';
 
         &.is-available {
             background-color: $java800;
+        }
+    }
+
+    &--burger {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('#{$path}/icon-burger.svg');
+        background-size: 24px 24px;
+        font-size: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .outsourcing_btn {
+    
+        &--fontSizeSelect,
+        &--langSwitch {
+            width: 44px;
+            height: 44px;
+    
+            &:hover,
+            &:active {
+                background-color: $java800;
+            }
+        }
+
+        &--fontSizeSelect {
+            background-size: 18px 15px;
+        }
+        
+        &--langSwitch {
+            background-size: 26px 26px;
         }
     }
 }

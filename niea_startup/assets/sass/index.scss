@@ -8,7 +8,6 @@ $path: '../images';
 
 
 .outsourcing_body {
-    overflow: hidden;
     background-color: #FAFAFA;
 
     .wrapper {
@@ -62,6 +61,7 @@ $path: '../images';
 
 .outsourcing_main {
     position: relative;
+    overflow: hidden;
     z-index: 5;
 
     .section {

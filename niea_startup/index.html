@@ -73,27 +73,27 @@
 	<div class="outsourcing_body">
 		<header class="outsourcing_header">
 			<div class="wrapper">
-				<div class="header_links">
+				<div class="header_siteFunction">
 					<ul class="linkList">
-						<li><a href="#">網站導覽</a></li>
-						<li><a href="#">問題反映</a></li>
-						<li><a href="#">下載專區</a></li>
+						<li><a href="#" title="網站導覽">網站導覽</a></li>
+						<li><a href="#" title="問題反映">問題反映</a></li>
+						<li><a href="#" title="下載專區">下載專區</a></li>
 					</ul>
 				</div>
-				<div class="header_main">
-					<div class="header_section">
-						<a href="#" class="header_logo" title="新創圓夢網">
+				<div class="header_mainContent">
+					<div class="headerWrap">
+						<a href="#" class="logo" title="新創圓夢網">
 							<img src="assets/images/logo.png" alt="新創圓夢網" />
 						</a>
-						<form class="header_search">
-							<div class="searchWrap">
-								<div class="searchWrap__item">
+						<form class="searchForm">
+							<div class="searchForm__wrap">
+								<div class="searchWrapItem">
 									<select name="" id="" data-js-id="fancyitem-select">
 										<option value="all">全站</option>
 										<option value="source">找資源</option>
 									</select>
 								</div>
-								<div class="searchWrap__item">
+								<div class="searchWrapItem">
 									<input type="text" class="fancyForm fancyForm--text" />
 									<button type="button" class="outsourcing_btn outsourcing_btn--search">
 										<img src="assets/images/icon-search.svg" alt="" />
@@ -102,33 +102,29 @@
 							</div>
 						</form>
 					</div>
-					<div class="header_section">
-						<div class="header_tool">
-							<div class="header_tool__item header_tool__item--login">
+					<div class="headerWrap">
+						<div class="userFunction">
+							<div class="userFunction__item">
 								<a href="" class="loginBtn">登入/註冊</a>
 							</div>
-							<div class="header_tool__item header_tool__item--select">
-								<button type="button" class="outsourcing_btn outsourcing_btn--fontSizeSelect">切換文字大小</button>
-								<ul class="fontSizeSelect">
-									<li>
-										<button class="outsourcing_btn outsourcing_btn--fontSize">小</button>
-									</li>
-									<li>
-										<button class="outsourcing_btn outsourcing_btn--fontSize">中</button>
-									</li>
-									<li>
-										<button class="outsourcing_btn outsourcing_btn--fontSize">大</button>
-									</li>
+							<div class="userFunction__item dropdown">
+								<button type="button" class="outsourcing_btn outsourcing_btn--fontSizeSelect dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="切換文字大小">切換文字大小</button>
+								<ul class="fontSizeSelect dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<li><button class="outsourcing_btn outsourcing_btn--fontSize">小</button></li>
+									<li><button class="outsourcing_btn outsourcing_btn--fontSize">中</button></li>
+									<li><button class="outsourcing_btn outsourcing_btn--fontSize">大</button></li>
 								</ul>
 							</div>
-							<div class="header_tool__item header_tool__item--select">
+							<div class="userFunction__item">
 								<button type="button" class="outsourcing_btn outsourcing_btn--langSwitch">切換語言</button>
+							</div>
+							<div class="userFunction__item userFunction__item--burger">
+								<button type="button" class="outsourcing_btn outsourcing_btn--burger" title="開啟選單與搜尋">開啟選單與搜尋</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
 			<nav class="navigation">
 				<div class="wrapper">
 					<ul class="megamenu">
@@ -239,6 +235,7 @@
 	<script src="assets/js/index.js"></script>
 	<script>
 		$(function () {
+			$('.dropdown-toggle').dropdown()
 			//輪播圖的設定
 			var mySwiper = new Swiper(".swiper-container", {
 				loop: true,

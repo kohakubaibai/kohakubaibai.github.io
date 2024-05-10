@@ -21,19 +21,7 @@ img {
     width: 100%;
     z-index: 100;
 
-    .header_logo {
-        max-width: 150px;
-        height: 60px;
-        display: block;
-    }
-
-    .header_main {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .header_links {
+    .header_siteFunction {
         background-color: $java700;
         padding: 10px 15px;      
 
@@ -65,86 +53,104 @@ img {
         }
     }
 
-    .header_tool {
+    .header_mainContent {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        padding: 11.5px 20px;
 
-        .header_tool__item {
-            margin-left: 10px;
-
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-
-        .fontSizeSelect {
-            display: none;
-        }
-
-        .loginBtn {
-            border: 1px solid $java700;
-            border-radius: 24px;
-            padding: 9px 29px;
-            color: $java700;
-            @include fs(16);
-        }
-    }
-
-    .header_section {
-        display: flex;
-        align-items: center;
-    }
-
-    .header_search {
-        display: none;
-    }
-
-    .searchWrap {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        overflow: hidden;
-        
-        &__item {
+        .headerWrap {
             display: flex;
-
-            select {
-                width: 88px;
-            }
-
-            input[type="text"] {
-                width: 206px;
-            }
+            align-items: center;
         }
+    
+        .logo {
+            max-width: 88px;
+            height: 35px;
+            display: block;
+        }
+
+        .searchForm {
+            display: none;
+
+            .searchForm__wrap {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                overflow: hidden;
+                
+                .searchWrapItem {
+                    display: flex;
         
-        .select2 {
-            border-radius: 4px 0 0 4px;
-            border: 1px solid $black200;
-        }
-        .select2-container .select2-selection--single {
-            height: 100%;
-        }
-        .select2-container--default .select2-selection--single {
-            border: none;
-        }
-        .select2-container--default .select2-selection--single .select2-selection__rendered {
-            line-height: 38px;
-            padding-right: 27px;
-            padding-left: 15px;
-        }
-        .select2-container--default .select2-selection--single .select2-selection__arrow {
-            height: 38px;
-            top: 0;
-            right: 0;
-        }
-        .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
-            border-radius: 4px 0 0 4px;
+                    select {
+                        width: 88px;
+                    }
+        
+                    input[type="text"] {
+                        width: 206px;
+                    }
+                }
+                
+                .select2 {
+                    border-radius: 4px 0 0 4px;
+                    border: 1px solid $black200;
+                }
+                .select2-container .select2-selection--single {
+                    height: 100%;
+                }
+                .select2-container--default .select2-selection--single {
+                    border: none;
+                }
+                .select2-container--default .select2-selection--single .select2-selection__rendered {
+                    line-height: 38px;
+                    padding-right: 27px;
+                    padding-left: 15px;
+                }
+                .select2-container--default .select2-selection--single .select2-selection__arrow {
+                    height: 38px;
+                    top: 0;
+                    right: 0;
+                }
+                .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+                    border-radius: 4px 0 0 4px;
+                }
+        
+                .fancyForm {
+                    border: 1px solid $black200;
+                    border-left: none;
+                }
+            }
         }
 
-        .fancyForm {
-            border: 1px solid $black200;
-            border-left: none;
+        .userFunction {
+            display: flex;
+            align-items: center;
+    
+            .userFunction__item {
+                margin-left: 5px;
+    
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                
+                &--burger {
+                    margin-left: 10px;
+                }
+            }
+    
+            .fontSizeSelect {
+                min-width: 100%;
+            }
+    
+            .loginBtn {
+                border: 1px solid $java700;
+                border-radius: 24px;
+                padding: 7px 18px;
+                color: $java700;
+                @include fs(16);
+            }
         }
     }
 }
@@ -180,7 +186,7 @@ img {
 @media only screen and (min-width: 1200px) {
     .outsourcing_header {
 
-        .header_links {
+        .header_siteFunction {
             padding: 0;
             position: absolute;
             right: 274px;
@@ -189,24 +195,44 @@ img {
             @include translateY(-50%);
 
             .linkList {
-        
                 & > li {
-    
                     a {
                         color: $black950;
                     }
                 }
             }
         }
-    
-        .header_search {
-            display: block;
-            margin-left: 30px;
-        }
-    
-        .header_main {
-            padding: 8px 0;
-        }
 
+        .header_mainContent {
+            padding: 8px 20px;
+
+            .logo {
+                max-width: 150px;
+                height: 60px;
+            }
+
+            .searchForm {
+                display: block;
+                margin-left: 30px;                
+            }
+
+            .userFunction {
+                .userFunction__item {
+                    margin-left: 10px;
+        
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &--burger {
+                        display: none;
+                    }
+                }
+
+                .loginBtn {
+                    padding: 9px 29px;
+                }
+            }
+        }
     }
 }
