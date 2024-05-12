@@ -88,15 +88,15 @@
 						<form class="searchForm">
 							<div class="searchForm__wrap">
 								<div class="searchWrapItem">
-									<select name="" id="" data-js-id="fancyitem-select">
+									<select name="" id="" data-js-id="fancyitem-select" style="width: 100%">
 										<option value="all">全站</option>
 										<option value="source">找資源</option>
 									</select>
 								</div>
 								<div class="searchWrapItem">
-									<input type="text" class="fancyForm fancyForm--text" />
+									<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" />
 									<button type="button" class="outsourcing_btn outsourcing_btn--search">
-										<img src="assets/images/icon-search.svg" alt="" />
+										<img src="assets/images/icon-search_pc.svg" alt="" />
 									</button>
 								</div>
 							</div>
@@ -119,17 +119,126 @@
 								<button type="button" class="outsourcing_btn outsourcing_btn--langSwitch">切換語言</button>
 							</div>
 							<div class="userFunction__item userFunction__item--burger">
-								<button type="button" class="outsourcing_btn outsourcing_btn--burger" title="開啟選單與搜尋">開啟選單與搜尋</button>
+								<button id="toggle-menu" type="button" class="outsourcing_btn outsourcing_btn--burger" title="開啟選單與搜尋">開啟選單與搜尋</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<nav class="navigation">
+			<nav id="header_nav" class="header_nav">
 				<div class="wrapper">
+					<form class="searchForm">
+						<div class="searchForm__wrap">
+							<div class="searchWrapItem searchWrapItem--select">
+								<select name="" id="" data-js-id="fancyitem-select" style="width: 100%">
+									<option value="all">全站</option>
+									<option value="source">找資源</option>
+								</select>
+							</div>
+							<div class="searchWrapItem searchWrapItem--input">
+								<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" />
+								<button type="button" class="outsourcing_btn outsourcing_btn--search">
+									<img src="assets/images/icon-search_mb.svg" alt="" />
+								</button>
+							</div>
+						</div>
+					</form>
 					<ul class="megamenu">
-						<li class="navItem">
-							<a href="#" class="navItem__link">連結</a>
+						<li class="megamenu__item">
+							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="新創分眾服務指南" data-id="0"><span>新創分眾服務指南</span></a>
+							<ul id="mmContent0" class="mmContent mmContent--service">
+								<li>
+									<a href="#" class="mmContent__link">資源總覽</a>
+									<div class="sideMenu">
+										<p class="sideMenu__text">
+											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
+										</p>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="mmContent__link">種子期</a>
+									<div class="sideMenu">
+										<p class="sideMenu__text">
+											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
+										</p>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="mmContent__link">創建期</a>
+									<div class="sideMenu">
+										<p class="sideMenu__text">
+											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
+										</p>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="mmContent__link">成長期</a>
+									<div class="sideMenu">
+										<p class="sideMenu__text">
+											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
+										</p>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="mmContent__link">擴張期</a>
+									<div class="sideMenu">
+										<p class="sideMenu__text">
+											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
+										</p>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="megamenu__item">
+							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="找資源" data-id="1">找資源</a>
+							<ul id="mmContent1" class="mmContent">
+								<li><a href="#" class="mmContent__link">資金快搜</a></li>
+								<li><a href="#" class="mmContent__link">各縣市資源地圖</a></li>
+								<li><a href="#" class="mmContent__link">創育機構</a></li>
+								<li><a href="#" class="mmContent__link">創業常見問答</a></li>
+								<li><a href="#" class="mmContent__link">創業補給站</a></li>
+								<li><a href="#" class="mmContent__link">預約諮詢</a></li>
+							</ul>
+						</li>
+						<li class="megamenu__item">
+							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="主題策展" data-id="2">主題策展</a>
+							<ul id="mmContent2" class="mmContent">
+								<li><a href="#" class="mmContent__link">新手創業</a></li>
+								<li><a href="#" class="mmContent__link">淨零排放</a></li>
+								<li><a href="#" class="mmContent__link">新創國際資源</a></li>
+								<li><a href="#" class="mmContent__link">創業亮點</a></li>
+								<li><a href="#" class="mmContent__link">創業星光幫</a></li>
+							</ul>
+						</li>
+						<li class="megamenu__item">
+							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="服務據點" data-id="3">服務據點</a>
+							<ul id="mmContent3" class="mmContent">
+								<li><a href="#" class="mmContent__link">新創基地</a></li>
+								<li><a href="#" class="mmContent__link">林口新創園</a></li>
+								<li><a href="#" class="mmContent__link">亞灣新創園</a></li>
+								<li><a href="#" class="mmContent__link">社會創新實驗中心</a></li>
+								<li><a href="#" class="mmContent__link">新竹生醫產業及育成中心</a></li>
+							</ul>
+						</li>
+						<li class="megamenu__item">
+							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="最新動態" data-id="4">最新動態</a>
+							<ul id="mmContent4" class="mmContent">
+								<li><a href="#" class="mmContent__link">創業新訊</a></li>
+								<li><a href="#" class="mmContent__link">近期活動</a></li>
+								<li><a href="#" class="mmContent__link">台灣新創生態系報告</a></li>
+							</ul>
+						</li>
+						<li class="megamenu__item">
+							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="關於我們" data-id="5">關於我們</a>
+							<ul id="mmContent5" class="mmContent">
+								<li><a href="#" class="mmContent__link">認識圓夢網</a></li>
+								<li><a href="#" class="mmContent__link">網站導覽</a></li>
+								<li><a href="#" class="mmContent__link">訂閱電子報</a></li>
+								<li><a href="#" class="mmContent__link">聯絡我們</a></li>
+							</ul>
+						</li>
+						<li class="megamenu__item">
+							<a href="javascript:void(0);" class="mmBtn mmBtn--link" title="Foreigner info" data-id="6">Foreigner info</a>
 						</li>
 					</ul>
 				</div>
@@ -210,9 +319,13 @@
 							</div>
 						</div>
 					</div>
-					<!-- 導航按钮 -->
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
+					<div class="buttonWrap">
+						<div class="wrapper">
+							<!-- 導航按钮 -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
 					<!-- 分頁器 -->
 					<div class="swiper-pagination"></div>
 				</div>
@@ -235,7 +348,46 @@
 	<script src="assets/js/index.js"></script>
 	<script>
 		$(function () {
-			$('.dropdown-toggle').dropdown()
+			$('.dropdown-toggle').dropdown();
+			// 開關開啟主選單列表
+			$('#toggle-menu').on('click', function () {
+				$('body').addClass('openNav');
+            	$('#header_nav').addClass('is-active');
+			});
+
+			$('.megamenu__item').on('click', function (e) {
+				e.preventDefault();
+				var active = $(this).hasClass('is-active');
+				if (active) {
+					$(this).removeClass("is-active").children('.mmContent').slideUp();
+				} else {
+					$(this).addClass('is-active').children('.mmContent').slideDown();
+					$(this).siblings('.megamenu__item').children('.mmContent').slideUp();
+				}
+			});
+
+			$('.mmBtn').mouseover(function () {
+				$(".mmContent").hide();
+				$(".mmBtn").removeClass("is-active");
+				$(this).toggleClass("is-active");
+				var id = $(this).attr("data-id");
+				$("#mmContent" + id).toggle();
+			});
+			
+			$('.megamenu__item').mouseleave(function () {
+				$(".mmContent").hide();
+				$(".mmBtn").removeClass("is-active");
+			});
+			
+			//主選單列表點空白處收起來
+			$('body').on('click', function (event) {
+				if (!$(event.target).is('.mmBtn')) {
+					$(".mmBtn").removeClass("is-active");
+					$(".mmContent").hide();
+				}
+			});
+			
+			
 			//輪播圖的設定
 			var mySwiper = new Swiper(".swiper-container", {
 				loop: true,

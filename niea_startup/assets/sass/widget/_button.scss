@@ -11,10 +11,6 @@ $path: '../images';
     @include appearance(none);
     background-repeat: no-repeat;
 
-    &:focus {
-        outline: none;
-    }
-
     &--fontSizeSelect,
     &--langSwitch {
         display: block;
@@ -30,6 +26,13 @@ $path: '../images';
         background-image: url('#{$path}/icon-textSize.svg');
         background-size: 14px 12px;
     }
+
+    &--fontSize {
+        @include fs(16);
+        color: $java900;
+        font-weight: 500;
+    }
+
     &--langSwitch {
         background-image: url('#{$path}/icon-siteLang.svg');
         background-size: 18px 18px;
@@ -40,7 +43,6 @@ $path: '../images';
         width: 44px;
         height: 100%;
         padding: 8px 10px;
-        background-color: $java600;
         border-radius: 0 4px 4px 0;
 
         &.is-available {
@@ -65,15 +67,22 @@ $path: '../images';
         &--langSwitch {
             width: 44px;
             height: 44px;
-    
-            &:hover,
-            &:active {
+
+            &:hover{
                 background-color: $java800;
             }
         }
 
         &--fontSizeSelect {
             background-size: 18px 15px;
+        }
+
+        &--fontSize {
+            &:hover {
+                &:hover {
+                    background-color: $java50;
+                }
+            }
         }
         
         &--langSwitch {

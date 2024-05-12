@@ -63,29 +63,106 @@ $path: '../images';
     position: relative;
     overflow: hidden;
     z-index: 5;
+    padding-top: 20px;
 
     .section {
         position: relative;
         z-index: 5;
 
         &--kv {
+            .swiper-carousel {
+                position: relative;
+                padding: 0 20px;
+            }
+
             .swiper-slide {
-                width: 1140px !important;
-                border-radius: 20px;
+                width: 100%;
+                border-radius: 10px;
                 overflow: hidden;
             }
 
             .swiper-pagination {
                 width: 100%;
+                left: 0;
             }
 
             .swiper-pagination-bullet {
                 margin: 0 6px;
             }
+
+            .buttonWrap {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                @include translate(-50%, -50%);
+                z-index: 10;
+                width: 100%;
+
+                .wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    position: relative;
+                    margin-top: 0;
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                }
+
+                .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+                    left: 0;
+                    background-image: url('#{$path}/arrow-slider_prev.svg');
+                }
+
+                .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+                    right: 0;
+                    background-image: url('#{$path}/arrow-slider_next.svg');
+                }
+            }
         }
 
         &--services {
 
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .outsourcing_main {
+        padding-top: 40px;
+
+        .section {
+            &--kv {
+                .swiper-carousel {
+                    padding: 0;
+                }
+
+                .swiper-slide {
+                    width: 1140px !important;
+                    border-radius: 20px;
+                }
+
+                .buttonWrap {
+    
+                    .swiper-button-prev,
+                    .swiper-button-next {
+                        width: 36px;
+                        height: 36px;
+                    }
+    
+                    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+                        left: 0;
+                    }
+    
+                    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+                        right: 0;
+                    }
+                }
+            }
         }
     }
 }
