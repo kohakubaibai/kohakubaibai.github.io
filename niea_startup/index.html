@@ -128,8 +128,8 @@
 				</div>
 			</div>
 			<nav id="header_nav" class="header_nav">
+				<div class="closeNav"><button id="close-menu" type="button" title="關閉選單" class="outsourcing_btn--closeNav"><img src="assets/images/icon-close_nav.svg" alt="關閉選單"></button></div>
 				<div class="wrapper">
-					<img src="assets/images/icon-searchtools.svg" alt="">
 					<form class="searchForm" data-form-name="search">
 						<div class="searchForm__wrap">
 							<div class="searchWrapItem searchWrapItem--select">
@@ -149,12 +149,13 @@
 							</div>
 						</div>
 					</form>
+					<p id="console"></p>
 					<ul class="megamenu">
 						<li class="megamenu__item">
 							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="新創分眾服務指南" data-id="0"><span>新創分眾服務指南</span></a>
 							<ul id="mmContent0" class="mmContent mmContent--service">
 								<li>
-									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="0">資源總覽</a>
+									<a href="#" class="mmContent__link default" data-side-link="true" data-service-id="0">資源總覽</a>
 									<div id="sideMenu0" class="sideMenu default">
 										<p class="sideMenu__text">
 											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
@@ -260,12 +261,13 @@
 							</ul>
 						</li>
 						<li class="megamenu__item">
-							<a href="javascript:void(0);" class="mmBtn mmBtn--link" title="Foreigner info" data-id="6">Foreigner info</a>
+							<a href="https://startup.sme.gov.tw/en/" class="mmBtn mmBtn--link" title="Foreigner info">Foreigner info</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
+		<h1>新創圓夢網</h1>
 		<main class="outsourcing_main">
 			<!-- 輪播圖 start -->
 			<section class="section section--kv">
@@ -414,7 +416,30 @@
 			<!-- 輪播圖 end -->
 			<!-- 新創分眾 服務指南 start -->
 			<section class="section section--services" style="height: 300px">
-				<!-- <h2>新創分眾 服務指南</h2> -->
+				<div class="wrapper">
+					<div class="section__title">
+						<h2 class="topic"><span>新創分眾</span><span>服務指南</span></h2>
+						<p class="description">請按照您的新創成長階段找尋合適的政府創業資源。</p>
+					</div>
+					<div class="section__content">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+							</li>
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+							</li>
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">home content</div>
+							<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">profile content</div>
+							<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">contact content</div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<!-- 新創分眾 服務指南 end -->
 		</main>
@@ -425,107 +450,8 @@
 	<script type="text/javascript" src="https://startup.sme.gov.tw/home/js/jquery-3.6.0.min.js"></script>
 	<script src="https://startup.sme.gov.tw/home/js/bootstrap.bundle.min"></script>
 	<script src="https://startup.sme.gov.tw/home/js/swiper.js"></script>
+	<script src="assets/js/common.js"></script>
 	<script src="assets/js/index.js"></script>
-	<script>
-		$(function () {
-			$('.dropdown-toggle').dropdown();
-			// 開關開啟主選單列表
-			$('#toggle-menu').on('click', function () {
-				$('body').addClass('openNav');
-            	$('#header_nav').addClass('is-active');
-			});
-
-			$('.megamenu__item').on('click', function (e) {
-				e.preventDefault();
-				var active = $(this).hasClass('is-active');
-				if (active) {
-					$(this).removeClass("is-active").children('.mmContent').slideUp();
-				} else {
-					$(this).addClass('is-active').children('.mmContent').slideDown();
-					$(this).siblings('.megamenu__item').children('.mmContent').slideUp();
-				}
-			});
-
-			$('.mmBtn').mouseover(function () {
-				$(".mmContent").hide();
-				$(".mmBtn").removeClass("is-active");
-				$(this).toggleClass("is-active");
-				var id = $(this).attr("data-id");
-				$("#mmContent" + id).toggle();
-			});
-			
-			$('.megamenu__item').mouseleave(function () {
-				$(".mmContent").hide();
-				$(".mmBtn").removeClass("is-active");
-			});
-
-			//分眾服務hover顯示&隱藏內容
-			$('[data-side-link="true"]').on('focus mouseover', function () {
-				$(".sideMenu").hide();
-				$('[data-side-link="true"]').removeClass("is-active");
-				$(this).toggleClass("is-active");
-				var id = $(this).attr("data-service-id");
-				$("#sideMenu" + id).show();
-			});
-			
-			$('.megamenu__item').mouseleave(function () {
-				$(".sideMenu").hide();
-				$('[data-side-link="true"]').removeClass("is-active");
-			});
-			
-			//主選單列表點空白處收起來
-			$('body').on('click', function (event) {
-				if (!$(event.target).is('.mmBtn')) {
-					$(".mmBtn").removeClass("is-active");
-					$(".mmContent").hide();
-				}
-			});
-
-			//搜尋框輸入後按鈕顯示
-			$('[data-form-element="input-search"]').on('keyup', function(){
-				var formItem = $(this).closest('[data-form-name="search"]');
-				var inputValue = $(this).val();
-				if (inputValue != '') {
-					formItem.find('[data-form-element="btn-clear"]').show();
-					formItem.find('[data-form-element="btn-submit"]').addClass('is-available');
-				} else {
-					formItem.find('[data-form-element="btn-clear"]').hide();
-					formItem.find('[data-form-element="btn-submit"]').removeClass('is-available');
-				}
-			});
-
-			//清除搜尋框
-			$('[data-form-element="btn-clear"]').on('click', function(e){
-				e.preventDefault();
-				var formItem = $(this).closest('[data-form-name="search"]');
-				formItem.find('[data-form-element="input-search"]').val('');
-				formItem.find('[data-form-element="btn-clear"]').hide();
-				formItem.find('[data-form-element="btn-submit"]').removeClass('is-available');
-			});
-			
-			//輪播圖的設定
-			var mySwiper = new Swiper(".swiper-container", {
-				loop: true,
-				spaceBetween: 40,
-				slidesPerView: "auto",
-				centeredSlides: true,
-				autoResize: false,
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-				speed: 800,
-				autoplay: {
-					delay: 8000,
-				},
-				mousewheel: true,
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-				},
-			});
-		});
-	</script>
 </body>
 
 </html>
