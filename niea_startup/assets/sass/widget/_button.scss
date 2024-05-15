@@ -38,6 +38,14 @@ $path: '../images';
         background-size: 18px 18px;
     }
 
+    &--clearInput {
+        width: 12px;
+        height: 12px;
+        font-size: 0;
+        background-image: url('#{$path}/icon-clear_search.svg');
+        background-size: contain;
+    }
+
     &--search {
         display: block;
         width: 44px;
@@ -46,7 +54,7 @@ $path: '../images';
         border-radius: 0 4px 4px 0;
 
         &.is-available {
-            background-color: $java800;
+            background-color: $java300 !important;
         }
     }
 
@@ -87,6 +95,13 @@ $path: '../images';
         
         &--langSwitch {
             background-size: 26px 26px;
+        }
+
+        &--search {
+    
+            &.is-available {
+                background-color: $java800 !important;
+            }
         }
     }
 }

@@ -39,7 +39,6 @@
 	<link href="https://startup.sme.gov.tw/home/css/common.css" rel="stylesheet" type="text/css" />
 	<link href="https://startup.sme.gov.tw/home/css/style.css" rel="stylesheet" type="text/css" />
 	<link href="https://startup.sme.gov.tw/home/css/style_2021.css" rel="stylesheet" type="text/css" />
-	<link href="assets/js/select2-develop/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/index.css" rel="stylesheet" type="text/css" />
 
 	<!--[if lt IE 9]> <![endif]-->
@@ -85,17 +84,20 @@
 						<a href="#" class="logo" title="新創圓夢網">
 							<img src="assets/images/logo.png" alt="新創圓夢網" />
 						</a>
-						<form class="searchForm">
+						<form class="searchForm" data-form-name="search">
 							<div class="searchForm__wrap">
-								<div class="searchWrapItem">
-									<select name="" id="" data-js-id="fancyitem-select" style="width: 100%">
+								<div class="searchWrapItem searchWrapItem--select">
+									<select name="" id="" class="fancyForm fancyForm--selectSearch">
 										<option value="all">全站</option>
 										<option value="source">找資源</option>
 									</select>
 								</div>
-								<div class="searchWrapItem">
-									<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" />
-									<button type="button" class="outsourcing_btn outsourcing_btn--search">
+								<div class="searchWrapItem searchWrapItem--input">
+									<div class="textInputWrap">
+										<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" data-form-element="input-search" />
+										<button class="outsourcing_btn outsourcing_btn--clearInput" title="清除搜尋" data-form-element="btn-clear">清除搜尋</button>
+									</div>
+									<button type="button" class="outsourcing_btn outsourcing_btn--search" data-form-element="btn-submit">
 										<img src="assets/images/icon-search_pc.svg" alt="" />
 									</button>
 								</div>
@@ -127,17 +129,21 @@
 			</div>
 			<nav id="header_nav" class="header_nav">
 				<div class="wrapper">
-					<form class="searchForm">
+					<img src="assets/images/icon-searchtools.svg" alt="">
+					<form class="searchForm" data-form-name="search">
 						<div class="searchForm__wrap">
 							<div class="searchWrapItem searchWrapItem--select">
-								<select name="" id="" data-js-id="fancyitem-select" style="width: 100%">
+								<select name="" id="" class="fancyForm fancyForm--selectSearch">
 									<option value="all">全站</option>
 									<option value="source">找資源</option>
 								</select>
 							</div>
 							<div class="searchWrapItem searchWrapItem--input">
-								<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" />
-								<button type="button" class="outsourcing_btn outsourcing_btn--search">
+								<div class="textInputWrap">
+									<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" data-form-element="input-search" />
+									<button class="outsourcing_btn outsourcing_btn--clearInput" title="清除搜尋" data-form-element="btn-clear">清除搜尋</button>
+								</div>
+								<button type="button" class="outsourcing_btn outsourcing_btn--search" data-form-element="btn-submit">
 									<img src="assets/images/icon-search_mb.svg" alt="" />
 								</button>
 							</div>
@@ -148,40 +154,56 @@
 							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="新創分眾服務指南" data-id="0"><span>新創分眾服務指南</span></a>
 							<ul id="mmContent0" class="mmContent mmContent--service">
 								<li>
-									<a href="#" class="mmContent__link">資源總覽</a>
-									<div class="sideMenu">
+									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="0">資源總覽</a>
+									<div id="sideMenu0" class="sideMenu default">
 										<p class="sideMenu__text">
 											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
 										</p>
 									</div>
 								</li>
 								<li>
-									<a href="#" class="mmContent__link">種子期</a>
-									<div class="sideMenu">
+									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="1">種子期</a>
+									<div id="sideMenu1" class="sideMenu">
+										<div class="sideMenu__title">
+											<div class="media"><img src="assets/images/img-service-1.svg" alt="種子期"></div>
+											<div class="text">種子期</div>
+										</div>
 										<p class="sideMenu__text">
 											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
 										</p>
 									</div>
 								</li>
 								<li>
-									<a href="#" class="mmContent__link">創建期</a>
-									<div class="sideMenu">
+									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="2">創建期</a>
+									<div id="sideMenu2" class="sideMenu">
+										<div class="sideMenu__title">
+											<div class="media"><img src="assets/images/img-service-2.svg" alt="創建期"></div>
+											<div class="text">創建期</div>
+										</div>
+										<p class="sideMenu__text">
+											有創業概念、產品及服務未成型的新創團隊。
+										</p>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="3">成長期</a>
+									<div id="sideMenu3" class="sideMenu">
+										<div class="sideMenu__title">
+											<div class="media"><img src="assets/images/img-service-3.svg" alt="成長期"></div>
+											<div class="text">成長期</div>
+										</div>
 										<p class="sideMenu__text">
 											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
 										</p>
 									</div>
 								</li>
 								<li>
-									<a href="#" class="mmContent__link">成長期</a>
-									<div class="sideMenu">
-										<p class="sideMenu__text">
-											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
-										</p>
-									</div>
-								</li>
-								<li>
-									<a href="#" class="mmContent__link">擴張期</a>
-									<div class="sideMenu">
+									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="4">擴張期</a>
+									<div id="sideMenu4" class="sideMenu">
+										<div class="sideMenu__title">
+											<div class="media"><img src="assets/images/img-service-4.svg" alt="擴張期"></div>
+											<div class="text">擴張期</div>
+										</div>
 										<p class="sideMenu__text">
 											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
 										</p>
@@ -256,65 +278,124 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/calendar/detail/?sId=6823">
-									<img src="https://startup.sme.gov.tw/home/upload/gallery/20240426094446snz.jpg"
-										alt="Talent Meet 國際新創生態與新創人才媒合會 歡迎參加" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240426094446snz.jpg" alt="Talent Meet 國際新創生態與新創人才媒合會 歡迎參加" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>
+												「潛力新創」選拔，自即日起受理推薦申請至4月30日止
+											</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/news/detial.php?sId=1858">
-									<img src="https://startup.sme.gov.tw/home/upload/gallery/20240328103858egg.png"
-										alt="「2024綠色科技新創競賽」即日起開放報名至5月31日止，1國際城市與30家國際企業共出39道題目，歡迎新創踴躍參與解題！"
-										class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240328103858egg.png" alt="「2024綠色科技新創競賽」即日起開放報名至5月31日止，1國際城市與30家國際企業共出39道題目，歡迎新創踴躍參與解題！" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content"><p>文案</p></div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/startupaward/"
 									onclick="trackOutboundLink('https://startup.sme.gov.tw/startupaward/','首頁'); return false;"
 									title="新創事業獎 募集8年內之優秀新創" target="_blank">
-									<img src="https://startup.sme.gov.tw/home/upload/gallery/20240424024113gqf.jpg"
-										alt="新創事業獎 募集8年內之優秀新創" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240424024113gqf.jpg" alt="新創事業獎 募集8年內之優秀新創" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/calendar/detail/?sId=6832">
-									<img src="https://startup.sme.gov.tw/home/upload/gallery/20240430060323gha.jpg"
-										alt="【徵件開跑】2024 第八屆G Camp 國際創新創業訓練營" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240430060323gha.jpg" alt="【徵件開跑】2024 第八屆G Camp 國際創新創業訓練營" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/">
-									<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic01.jpg"
-										alt="新創圓夢網" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic01.jpg" alt="新創圓夢網" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/funding/">
-									<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic02.jpg"
-										alt="找資金" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic02.jpg" alt="找資金" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案文案文案文案文案文案文案文案文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/calendar/">
-									<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic03.jpg"
-										alt="看活動" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic03.jpg" alt="看活動" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/rProject/">
-									<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic04.jpg"
-										alt="搜資源" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic04.jpg" alt="搜資源" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/rmap/creative_space_list.php">
-									<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic05.jpg"
-										alt="尋空間" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic05.jpg" alt="尋空間" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案文案文案文案文案文案文案文案文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://startup.sme.gov.tw/home/modules/talk/">
-									<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic06.jpg"
-										alt="疑解惑" class="w-100" />
+									<div class="image">
+										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic06.jpg" alt="疑解惑" class="w-100" />
+									</div>
+									<div class="textBox">
+										<div class="textBox__content">
+											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+										</div>
+									</div>
 								</a>
 							</div>
 						</div>
@@ -344,7 +425,6 @@
 	<script type="text/javascript" src="https://startup.sme.gov.tw/home/js/jquery-3.6.0.min.js"></script>
 	<script src="https://startup.sme.gov.tw/home/js/bootstrap.bundle.min"></script>
 	<script src="https://startup.sme.gov.tw/home/js/swiper.js"></script>
-	<script src="assets/js/select2-develop/dist/js/select2.min.js"></script>
 	<script src="assets/js/index.js"></script>
 	<script>
 		$(function () {
@@ -378,6 +458,20 @@
 				$(".mmContent").hide();
 				$(".mmBtn").removeClass("is-active");
 			});
+
+			//分眾服務hover顯示&隱藏內容
+			$('[data-side-link="true"]').on('focus mouseover', function () {
+				$(".sideMenu").hide();
+				$('[data-side-link="true"]').removeClass("is-active");
+				$(this).toggleClass("is-active");
+				var id = $(this).attr("data-service-id");
+				$("#sideMenu" + id).show();
+			});
+			
+			$('.megamenu__item').mouseleave(function () {
+				$(".sideMenu").hide();
+				$('[data-side-link="true"]').removeClass("is-active");
+			});
 			
 			//主選單列表點空白處收起來
 			$('body').on('click', function (event) {
@@ -386,7 +480,28 @@
 					$(".mmContent").hide();
 				}
 			});
-			
+
+			//搜尋框輸入後按鈕顯示
+			$('[data-form-element="input-search"]').on('keyup', function(){
+				var formItem = $(this).closest('[data-form-name="search"]');
+				var inputValue = $(this).val();
+				if (inputValue != '') {
+					formItem.find('[data-form-element="btn-clear"]').show();
+					formItem.find('[data-form-element="btn-submit"]').addClass('is-available');
+				} else {
+					formItem.find('[data-form-element="btn-clear"]').hide();
+					formItem.find('[data-form-element="btn-submit"]').removeClass('is-available');
+				}
+			});
+
+			//清除搜尋框
+			$('[data-form-element="btn-clear"]').on('click', function(e){
+				e.preventDefault();
+				var formItem = $(this).closest('[data-form-name="search"]');
+				formItem.find('[data-form-element="input-search"]').val('');
+				formItem.find('[data-form-element="btn-clear"]').hide();
+				formItem.find('[data-form-element="btn-submit"]').removeClass('is-available');
+			});
 			
 			//輪播圖的設定
 			var mySwiper = new Swiper(".swiper-container", {
@@ -408,11 +523,6 @@
 					el: ".swiper-pagination",
 					clickable: true,
 				},
-			});
-
-			//select 2
-			$('[data-js-id="fancyitem-select"]').select2({
-				minimumResultsForSearch: -1
 			});
 		});
 	</script>

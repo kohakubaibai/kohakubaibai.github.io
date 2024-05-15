@@ -81,6 +81,52 @@ img {
         }
     }
 
+    .searchForm__wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        
+        .searchWrapItem {
+            display: flex;
+            overflow: hidden;
+
+            &--select {
+                width: 88px;
+                border-radius: 4px 0 0 4px;
+                border: 1px solid $black200;
+            }
+
+            &--input {
+                border-left: none;
+                border-radius: 0 4px 4px 0;
+            }
+
+            .textInputWrap {
+                position: relative;
+                
+                input[type="text"] {
+                    width: 100%;
+                    position: relative;
+                    z-index: 5;
+                    border: 1px solid $black200;
+                    border-left: none;
+                    padding-right: 36px;
+                }
+
+                .outsourcing_btn--clearInput {
+                    display: none;
+                    position: absolute;
+                    right: 12px;
+                    top: 50%;
+                    @include translateY(-50%);
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
     .header_mainContent {
         display: flex;
         align-items: center;
@@ -100,59 +146,19 @@ img {
 
         .searchForm {
             display: none;
+            overflow: hidden;
 
             .searchForm__wrap {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-                overflow: hidden;
-                
-                .searchWrapItem {
-                    display: flex;
-        
-                    select {
-                        width: 88px;
-                    }
-        
-                    input[type="text"] {
-                        width: 206px;
-                    }
+                &--input {
+                    width: 250px;
+                }
 
-                    button {
-                        background-color: $java600;;
-                    }
+                .textInputWrap {
+                    width: 206px;
                 }
-                
-                .select2 {
-                    border-radius: 4px 0 0 4px;
-                    overflow: hidden;
-                    border: 1px solid $black200;
-                }
-                .select2-container .select2-selection--single {
-                    height: 100%;
-                }
-                .select2-container--default .select2-selection--single {
-                    border: none;
-                    border-radius: 0;
-                }
-                .select2-container--default .select2-selection--single .select2-selection__rendered {
-                    line-height: 38px;
-                    padding-right: 27px;
-                    padding-left: 15px;
-                }
-                .select2-container--default .select2-selection--single .select2-selection__arrow {
-                    height: 38px;
-                    top: 0;
-                    right: 0;
-                }
-                .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
-                    border-radius: 4px 0 0 4px;
-                }
-        
-                .fancyForm {
-                    border: 1px solid $black200;
-                    border-left: none;
+
+                .outsourcing_btn--search {
+                    background-color: $java600;;
                 }
             }
         }
@@ -240,67 +246,23 @@ img {
         -webkit-overflow-scrolling: touch;
         @include transition(all,0.3s,ease-in);
 
-        .searchForm__wrap {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            overflow: hidden;
-            
-            .searchWrapItem {
-                display: flex;
+        .searchForm {
+            .searchForm__wrap {
+                margin-bottom: 20px;
 
-                &--select {
-                    width: 88px;
-                }
-    
-                &--input {
-                    width: calc(100% - 88px);
-                }
-    
-                select {
-                    width: 88px;
-                }
-    
-                input[type="text"] {
-                    width: calc(100% - 44px);
-                }
+                .searchWrapItem {
+                    &--input {
+                        width: calc(100% - 88px);
+                    }
 
-                button {
-                    background-color: $java200;
+                    .textInputWrap {
+                        width: calc(100% - 44px);
+                    }
+
+                    .outsourcing_btn--search {
+                        background-color: $java200;
+                    }
                 }
-            }
-            
-            .select2 {
-                border-radius: 4px 0 0 4px;
-                overflow: hidden;
-                border: 1px solid $black200;
-            }
-            .select2-container .select2-selection--single {
-                height: 100%;
-            }
-            .select2-container--default .select2-selection--single {
-                border: none;
-                border-radius: 0;
-            }
-            .select2-container--default .select2-selection--single .select2-selection__rendered {
-                line-height: 38px;
-                padding-right: 27px;
-                padding-left: 15px;
-            }
-            .select2-container--default .select2-selection--single .select2-selection__arrow {
-                height: 38px;
-                top: 0;
-                right: 0;
-            }
-            .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
-                border-radius: 4px 0 0 4px;
-            }
-    
-            .fancyForm {
-                border: 1px solid $black200;
-                border-left: none;
             }
         }
         
@@ -440,6 +402,11 @@ img {
 
                 .loginBtn {
                     padding: 9px 29px;
+
+                    &:hover {
+                        background-color: $java700;
+                        color: $white;
+                    }
                 }
             }
         }
@@ -457,6 +424,7 @@ img {
     
             .megamenu {
                 flex-direction: row;
+                justify-content: center;
                 
                 & > li {
                     margin: 0 25px;
@@ -498,6 +466,12 @@ img {
 
             &--service {
                 width: 380px;
+                left: -25px;
+                @include translateX(0);
+
+                .mmContent__link {
+                    width: 180px;
+                }
             }
     
             & > li {
@@ -510,11 +484,26 @@ img {
                 }
 
                 .sideMenu {
+                    display: none;
                     position: absolute;
-                    left: 100%;
+                    left: 180px;
                     top: 0;
                     width: 200px;
-                    height: 100%;
+
+                    &.default {
+                        display: block !important;
+                    }
+                }
+            }
+
+            .sideMenu {
+                height: 100%;
+                background-color: $black50;
+                padding: 30px 20px;
+
+                &__text {
+                    @include fs(14);
+                    line-height: 1.5;
                 }
             }
     
