@@ -374,10 +374,6 @@ img {
                 background-color: $java600;
             }
         }
-
-        &--service {
-            
-        }
     }
 }
 
@@ -577,9 +573,15 @@ img {
                     &:after {
                         display: none;
                     }
+                    
                     a {
                         color: $black950;
                         @include fs(15);
+                        @include transition(all,.3s,ease-in);
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
                     }
                 }
             }

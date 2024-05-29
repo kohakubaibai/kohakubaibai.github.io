@@ -358,6 +358,7 @@ img {
 .outsourcing_header .mmContent .mmContent__link.is-active, .outsourcing_header .mmContent .mmContent__link:focus {
   background-color: #15868C;
 }
+
 .outsourcing_footer {
   background-color: #16474B;
   padding: 40px 0;
@@ -560,6 +561,11 @@ img {
   .outsourcing_header .header_siteFunction .linkList > li a {
     color: #222222;
     font-size: 0.9375rem;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  .outsourcing_header .header_siteFunction .linkList > li a:hover {
+    opacity: 0.8;
   }
   .outsourcing_header .header_mainContent {
     padding: 8px 20px;
