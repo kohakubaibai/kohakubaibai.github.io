@@ -1,0 +1,317 @@
+$path: '../images';
+
+.fancyForm {
+    &--text {
+        border: none;
+        @include fs(16);
+        height: 100%;
+        padding: 7px 12px;
+        line-height: 1.25;
+        border-radius: 0;
+        border: none;
+    }
+
+    &--selectSearch {
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 7px 8px;
+        display: block;
+        @include appearance(none);
+        background-color: $white;
+        color: $black950;
+    }
+
+    &--selectNews {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        border: 1px solid $black400;
+        padding: 7px 8px;
+        @include appearance(none);
+        background-color: $white;
+        color: $java700;
+    }
+
+    &--reportText {
+        width: 100%;
+        resize: none;
+        border: 1px solid $black400;
+        border-radius: 5px;
+        padding: 9px 7px;
+        @include fs(16);
+        line-height: calc(20/16);
+    }
+
+    &--textarea {
+        width: 100%;
+        height: 100%;
+        resize: none;
+        border: 1px solid $black400;
+        border-radius: 5px;
+        padding: 9px 11px;
+        @include fs(16);
+        line-height: calc(20/16);
+    }
+
+    &--radio {
+        display: none;
+
+        &:checked {
+            & + .fancyForm--optionLabel {
+                &:after {
+                    background-color: $java600;
+                }
+            }
+        }
+    }
+
+    &--optionLabel {
+        margin-bottom: 0;
+        color: $black950;
+        cursor: pointer;
+        @include fs(16);
+        line-height: (40/16);
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            background-color: transparent;
+            border-radius: 50%;
+            top: 50%;
+            @include translateY(-50%);
+        }
+
+        &:before {
+            width: 19px;
+            height: 19px;
+            left: 0;
+            border: 1px solid $black400;
+        }
+
+        &:after {
+            width: 11px;
+            height: 11px;
+            left: 4px;
+            @include transition(all,.1s,ease-in);
+        }
+    }
+}
+
+.searchWrapItem--select {
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 13px;
+        height: 12px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include translateY(-50%);
+    }
+}
+
+.reportForm {
+
+    &__head {
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 10px;
+
+        .title {
+            @include fs(24);
+            color: $java900;
+        }
+
+        .desc {
+            margin-top: 5px;
+            margin-bottom: 0;
+            @include fs(16);
+            color: $black600;
+        }
+    }
+
+    &__body {
+        .formRow {
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__foot {
+        margin-top: 8px;
+        text-align: center;
+
+        .annoText {
+            text-align: left;
+            @include fs(16);
+            margin-bottom: 10px;
+            line-height: calc(24/16);
+
+            a {
+                color: $java600;
+            }
+        }
+    }
+
+    .formRow {
+        display: flex;
+        flex-wrap: nowrap;
+        @include fs(16);
+        align-items: flex-start;
+
+        &.is-error {
+            .fancyForm--reportText {
+                border-color: #EC1B1B;
+            }
+
+            .errMsg {
+                display: block !important;
+            }
+        }
+        
+        .formLabel {
+            flex: 0 0 60px;
+            @include fs(16);
+            line-height: calc(24/16);
+            margin-top: 8px;
+            color: $black950;
+
+            &.is-necessary {
+
+                span {
+                    position: relative;
+
+                    &:after {
+                        content: '*';
+                        color: #EC1B1B;
+                        @include fs(14);
+                        position: absolute;
+                        top: -3px;
+                        right: -5px;
+                    }
+                }
+            }
+        }
+
+        .formElement {
+            margin-left: 10px;
+
+            &--input,
+            &--checkOption,
+            &--textarea {
+                flex: 0 0 calc(100% - 60px);
+            }
+
+            &--textarea {
+                height: 183px;
+            }
+
+            .errMsg {
+                display: none;
+                @include fs(14);
+                font-weight: 400;
+                line-height: calc(20/14);
+                color: #EC1B1B;
+            }
+        }
+    }
+
+    .optionList {
+        @include list-reset;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        
+        & > li {
+            position: relative;
+            padding-left: 21px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .fancyForm {
+        &--text {
+            padding: 7px 12px;
+        }
+    
+        &--selectSearch {
+            padding: 7px 8px;
+        }
+    }
+
+    .reportForm {
+
+        &__head {
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 30px;
+
+            .title {
+                @include fs(24);
+                color: $java900;
+            }
+
+            .desc {
+                margin-top: 5px;
+                @include fs(16);
+                color: $black600;
+            }
+        }
+
+        &__body {
+            .formRow {
+                margin-bottom: 8px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__foot {
+            margin-top: 30px;
+        }
+
+        .formRow {
+            display: flex;
+            flex-wrap: nowrap;
+            @include fs(16);
+            
+            .formLabel {
+                width: 60px;
+            }
+
+            .formElement {
+                margin-left: 20px;
+                
+                &--checkOption,
+                &--textarea {
+                    width: calc(100% - 60px);
+                }
+
+                &--input {
+                    width: 206px;
+                }
+            }
+        }
+        .optionList {
+            @include list-reset;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+$path: '../images';
+
+.outsourcingTab {
+    .nav-item {
+        flex-wrap: nowrap;
+        
+        .nav-link {
+            width: 100%;
+            background-color: $white;
+            margin-bottom: 0;
+            border: none;
+        }
+    }
+    &--service {
+
+        .nav {
+            .nav-item {
+                flex: 0 0 calc((100% - 30px) / 4);
+                margin-right: 10px;
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .tab-content {
+            margin-top: 13px;
+            background-color: $white;
+            padding: 30px 15px;
+            border-radius: 5px;
+        }
+    }
+
+    &--news {
+        .nav {
+            display: none;
+        }
+
+        .tab-content {
+            margin-top: 15px;
+            background-color: transparent;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .outsourcingTab {
+        &--service {
+
+            .nav {
+                .nav-item {
+                    flex: 0 0 calc((100% - 30px) / 4);
+                    margin-right: 10px;
+                }
+            }
+
+            .tab-content {
+                margin-top: 25px;
+                padding: 30px 30px 19px;
+                border-radius: 10px;
+            }
+        }
+
+        &--news {
+
+            .nav {
+                display: flex;
+                background-color: $white;
+                box-shadow: 0 0 7px #99D3D5;
+                border-radius: 47px;
+
+                .nav-item {
+                    flex: 0 0 calc(100%/5);
+                }
+            }
+
+            .tab-content {
+                margin-top: 40px;
+            }
+        }
+    }
+}

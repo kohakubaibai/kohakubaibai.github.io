@@ -1,0 +1,79 @@
+$path: '../images';
+
+body {
+    &.openPopup,
+    &.openAlert {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.outsourcing_popup {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    width: 100dvw;
+    height: 100dvh;
+    left: 0;
+    top: 0;
+
+    .popup__overlay {
+        background-color: rgba(0,0,0,.1);
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup__wrapper {
+        width: 100%;
+        padding: 0 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include box-sizing(border-box);
+        @include translate(-50%, -50%);
+    }
+}
+
+.popupBox {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 0;
+        z-index: 10;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 17px;
+            height: 16px;
+            background-image: url('#{$path}/btn-close_popup.svg');
+            background-repeat: no-repeat;
+            background-size: 17px 16px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .outsourcing_popup {
+
+        .popup__wrapper {
+            width: 660px;
+        }
+    }
+
+    .popupBox {
+        padding: 40px;
+    }
+}

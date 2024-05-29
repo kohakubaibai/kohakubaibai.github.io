@@ -1,0 +1,285 @@
+$path: '../images';
+
+$fm-noto: 'Noto Sans TC', '微軟正黑體', sans-serif;
+$fm-roboto: "Roboto", sans-serif;
+
+.outsourcingBtn {
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    @include box-sizing(border-box);
+    @include appearance(none);
+    background-repeat: no-repeat;
+
+    &--fontSizeSelect,
+    &--langSwitch {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-color: $java700;
+        background-position: center;
+        font-size: 0;
+        border-radius: 50%;
+    }
+
+    &--fontSizeSelect {
+        background-image: url('#{$path}/icon-textSize.svg');
+        background-size: 14px 12px;
+    }
+
+    &--fontSize {
+        @include fs(16);
+        color: $java900;
+        font-weight: 500;
+    }
+
+    &--langSwitch {
+        background-image: url('#{$path}/icon-siteLang.svg');
+        background-size: 18px 18px;
+    }
+
+    &--clearInput {
+        width: 12px;
+        height: 12px;
+        font-size: 0;
+        background-image: url('#{$path}/icon-clear_search.svg');
+        background-size: contain;
+    }
+
+    &--search {
+        display: block;
+        width: 44px;
+        height: 100%;
+        padding: 8px 10px;
+        border-radius: 0 4px 4px 0;
+
+        &.is-available {
+            background-color: $java300 !important;
+        }
+    }
+
+    &--burger {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('#{$path}/icon-burger.svg');
+        background-size: 24px 24px;
+        font-size: 0;
+    }
+
+    &--closeNav {
+        display: block;
+        background-color: transparent;
+        border: none;
+        width: 22px;
+        height: 22px;
+        padding: 0;
+    }
+
+    &--serviceNav {
+        display: inline-block;
+        border-radius: 5px;
+        width: 100%;
+        border: none;
+        padding: 5px 0;
+        background-color: $white;
+        box-shadow: 0 0 6px rgba(0,0,0,.25);
+
+        .outsourcingBtn__icon {
+            display: none;
+        }
+
+        .outsourcingBtn__text {
+            @include fs(18);
+            line-height: calc(27 / 18);
+            letter-spacing: 1px;
+            font-weight: 400;
+            color: $java900;
+        }
+
+        &.active {
+            background-color: $java50;
+            box-shadow: 0 0 10px #15868C;
+        }
+    }
+
+    &--moreList {
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 23px;
+            height: 23px;
+            margin-left: 10px;
+            background-image: url('#{$path}/icon-morelink.svg');
+            background-size: 23px;
+            background-repeat: no-repeat;
+        }
+
+        .outsourcingBtn__text {
+            text-decoration: underline;
+            color: $java800;
+            @include fs(14);
+            letter-spacing: 0;
+            font-weight: 400;
+        }
+    }
+
+    &--collapseTrigger {
+        display: inline-flex;
+        border: 1px solid $java700;
+        background-color: $white;
+        padding: 7px 35px;
+        border-radius: 65px;
+        align-items: center;
+        justify-content: center;
+
+        &:after {
+            content: '';
+            vertical-align: middle;
+            margin-left: 10px;
+            width: 14px;
+            height: 8px;
+            background-image: url('#{$path}/icon-collapse.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .outsourcingBtn__text {
+            color: $java800;
+            @include fs(18);
+            line-height: calc(27 / 18);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        &.is-active {
+            &:after {
+                @include rotate(-180);
+            }
+        }
+    }
+
+    &--moreLink {
+        display: inline-block;
+        background-color: $java800;
+        text-align: center;
+        padding: 10px 40px;
+        border-radius: 65px;
+
+        .outsourcingBtn__text {
+            color: $white;
+            @include fs(17);
+            font-weight: 500;
+            line-height: calc(26 / 17);
+            letter-spacing: 0.665px;
+        }
+    }
+
+    &--submitReport {
+        display: inline-block;
+        background-color: $java700;
+        padding: 10px 40px;
+        border-radius: 44px;
+
+        .outsourcingBtn__text {
+            color: $white;
+            @include fs(18);
+            font-weight: 500;
+            line-height: calc(27 / 18);
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .outsourcingBtn {
+    
+        &--fontSizeSelect,
+        &--langSwitch {
+            width: 44px;
+            height: 44px;
+
+            &:hover{
+                background-color: $java800;
+            }
+        }
+
+        &--fontSizeSelect {
+            background-size: 18px 15px;
+        }
+
+        &--fontSize {
+            &:hover {
+                &:hover {
+                    background-color: $java50;
+                }
+            }
+        }
+        
+        &--langSwitch {
+            background-size: 26px 26px;
+        }
+
+        &--search {
+    
+            &.is-available {
+                background-color: $java800 !important;
+            }
+        }
+
+        &--serviceNav {
+            display: flex;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 20px 10px;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .outsourcingBtn__icon {
+                display: block;
+                width: 60px;
+                height: 60px;
+                margin-bottom: 10px;
+            }
+
+            .outsourcingBtn__text {
+                @include fs(18);
+            }
+        }
+
+        &--newsNav {
+            width: 100%;
+            @include fs(18);
+            line-height: calc(27 / 18);
+            font-weight: 400;
+            padding: 10px 0;
+            color: $java600;
+            background-color: transparent;
+            border-radius: 47px;
+            @include transition(all,.3s,ease-in);
+
+            &.active,
+            &:hover {
+                color: $white;
+                background-color: $java700;
+            }
+        }
+
+        &--moreLink {
+            background-color: $java700;
+            @include transition(all,.3s,ease-in);
+            
+            &:hover {
+                background-color: $java800;
+            }
+        }
+    }
+}
