@@ -1571,7 +1571,7 @@ body.openPopup, body.openAlert {
 .outsourcing_main .section .section__title .topic {
   font-weight: 300;
   color: #16474B;
-  font-size: 200%;
+  font-size: 2rem;
   letter-spacing: 0.3px;
   line-height: 1.1875;
 }
@@ -2198,7 +2198,7 @@ body.openPopup, body.openAlert {
   margin-bottom: 40px;
 }
 .outsourcing_main .linkSection__title .topic {
-  font-size: 200%;
+  font-size: 2rem;
   color: #165359;
   font-weight: 300;
   letter-spacing: 0.4px;
@@ -2327,7 +2327,7 @@ body.openPopup, body.openAlert {
     padding: 0;
   }
   .outsourcing_main .section .section__title .topic {
-    font-size: 400%;
+    font-size: 4rem;
     line-height: 1.1875;
   }
   .outsourcing_main .section .section__title .topic:after {
@@ -2698,7 +2698,7 @@ body.openPopup, body.openAlert {
     margin-bottom: 40px;
   }
   .outsourcing_main .linkSection__title .topic {
-    font-size: 350%;
+    font-size: 3.5rem;
     letter-spacing: 1px;
     line-height: 1.5;
   }

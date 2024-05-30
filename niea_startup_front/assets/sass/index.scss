@@ -142,7 +142,7 @@ $fm-roboto: "Roboto", sans-serif;
             .topic {
                 font-weight: 300;
                 color: $java900;
-                @include fs(32);
+                font-size: 2rem;
                 letter-spacing: 0.3px;
                 line-height: calc(38 / 32);
 
@@ -839,7 +839,7 @@ $fm-roboto: "Roboto", sans-serif;
             margin-bottom: 40px;
             
             .topic {
-                @include fs(32);
+                font-size: 2rem;
                 color: $java800;
                 font-weight: 300;
                 letter-spacing: 0.4px;
@@ -1005,7 +1005,7 @@ $fm-roboto: "Roboto", sans-serif;
                 padding: 0;
 
                 .topic {
-                    @include fs(64);
+                    font-size: 4rem;
                     line-height: calc(76/64);
 
                     &:after {
@@ -1457,7 +1457,7 @@ $fm-roboto: "Roboto", sans-serif;
                 margin-bottom: 40px;
 
                 .topic {
-                    @include fs(56);
+                    font-size: 3.5rem;
                     letter-spacing: 1px;
                     line-height: calc(84 / 56);
                 }
