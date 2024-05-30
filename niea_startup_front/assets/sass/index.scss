@@ -738,17 +738,21 @@ $fm-roboto: "Roboto", sans-serif;
         color: $java800;
 
         &__digital {
-            @include fs(26);
+            
             font-weight: 500;
             height: 50px;
 
-            & > span {
+            .value {
                 display: inline-block;
                 vertical-align: text-bottom;
                 @include fs(65);
                 line-height: calc(50 / 65);
                 font-weight: 400;
                 letter-spacing: -0.5px;
+            }
+
+            .unit {
+                @include fs(26);
             }
         }
 
@@ -1376,14 +1380,17 @@ $fm-roboto: "Roboto", sans-serif;
             @include transition(all,.3s,ease-in);
     
             &__digital {
-                @include fs(35);
                 height: 58px;
                 
-                & > span {
+                .value {
                     font-family: $fm-roboto;
                     display: inline-block;
                     @include fs(95);
                     line-height: calc(68 / 95);
+                }
+
+                .unit {
+                    @include fs(35);
                 }
             }
     

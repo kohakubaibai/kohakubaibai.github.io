@@ -79,7 +79,7 @@ img {
 .outsourcing_header .header_siteFunction .linkList > li a {
   display: block;
   color: #FFFFFF;
-  font-size: 1rem;
+  font-size: 100%;
   font-weight: 400;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -88,16 +88,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   overflow: hidden;
 }
 .outsourcing_header .searchForm__wrap .searchWrapItem {
@@ -233,7 +223,7 @@ img {
   border-radius: 24px;
   padding: 7px 18px;
   color: #156A70;
-  font-size: 1rem;
+  font-size: 100%;
 }
 .outsourcing_header .header_nav {
   visibility: hidden;
@@ -311,7 +301,7 @@ img {
   height: 100%;
 }
 .outsourcing_header .mmBtn--dropdown {
-  font-size: 1.125rem;
+  font-size: 112.5%;
   font-weight: 400;
 }
 .outsourcing_header .mmBtn--dropdown:after {
@@ -336,7 +326,7 @@ img {
   transform: rotate(0deg);
 }
 .outsourcing_header .mmBtn--link {
-  font-size: 1.125rem;
+  font-size: 112.5%;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
 }
@@ -351,7 +341,7 @@ img {
   padding: 10px 20px;
   color: #FFFFFF;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 100%;
   letter-spacing: 1px;
   line-height: 1.5;
 }
@@ -443,7 +433,7 @@ img {
   padding: 5px 6px;
   color: #FFFFFF;
   line-height: 1.5;
-  font-size: 0.75rem;
+  font-size: 75%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .outsourcing_footer .datas {
@@ -462,7 +452,7 @@ img {
 .outsourcing_footer .datas .datas__label {
   font-weight: 400;
   color: #FFFFFF;
-  font-size: 0.875rem;
+  font-size: 87.5%;
   line-height: 1.5;
   letter-spacing: 0.4px;
 }
@@ -470,14 +460,14 @@ img {
   display: block;
   font-weight: 400;
   color: #FFFFFF;
-  font-size: 0.875rem;
+  font-size: 87.5%;
   line-height: 1.5;
   letter-spacing: 0.4px;
 }
 .outsourcing_footer .annoText {
   font-weight: 400;
   color: #FFFFFF;
-  font-size: 0.875rem;
+  font-size: 87.5%;
   line-height: 1.5;
   letter-spacing: 0.4px;
 }
@@ -520,7 +510,7 @@ img {
 }
 .alertBox__title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 150%;
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: 0.4px;
@@ -528,7 +518,7 @@ img {
 }
 .alertBox__desc {
   margin-top: 5px;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 1.5;
   font-weight: 400;
   color: #5D5D5D;
@@ -560,7 +550,7 @@ img {
   }
   .outsourcing_header .header_siteFunction .linkList > li a {
     color: #222222;
-    font-size: 0.9375rem;
+    font-size: 93.75%;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
@@ -624,7 +614,7 @@ img {
     cursor: pointer;
   }
   .outsourcing_header .mmBtn--dropdown {
-    font-size: 1rem;
+    font-size: 100%;
     font-weight: 500;
   }
   .outsourcing_header .mmBtn--dropdown:after {
@@ -634,7 +624,7 @@ img {
     background-size: 13px;
   }
   .outsourcing_header .mmBtn--link {
-    font-size: 0.875rem;
+    font-size: 87.5%;
   }
   .outsourcing_header .mmContent {
     display: none;
@@ -699,7 +689,7 @@ img {
   }
   .outsourcing_header .mmContent .sideMenu__title .text {
     margin-top: 10px;
-    font-size: 0.875rem;
+    font-size: 87.5%;
     line-height: 1.5;
     font-weight: 500;
     color: #16474B;
@@ -707,7 +697,7 @@ img {
   }
   .outsourcing_header .mmContent .sideMenu__text {
     margin: 0;
-    font-size: 0.875rem;
+    font-size: 87.5%;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
@@ -717,7 +707,7 @@ img {
     padding: 15px 10px;
     color: #16474B;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 100%;
     letter-spacing: 1px;
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E7E7;
@@ -774,10 +764,10 @@ img {
     text-align: right;
   }
   .outsourcing_footer .funcLinks .footerLink {
-    font-size: 0.875rem;
+    font-size: 87.5%;
   }
   .alertBox__title {
-    font-size: 1.875rem;
+    font-size: 187.5%;
   }
 }
 body.openPopup, body.openAlert {
@@ -850,7 +840,7 @@ body.openPopup, body.openAlert {
 }
 .fancyForm--text {
   border: none;
-  font-size: 1rem;
+  font-size: 100%;
   height: 100%;
   padding: 7px 12px;
   line-height: 1.25;
@@ -890,7 +880,7 @@ body.openPopup, body.openAlert {
   border: 1px solid #888888;
   border-radius: 5px;
   padding: 9px 7px;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 1.25;
 }
 .fancyForm--textarea {
@@ -900,7 +890,7 @@ body.openPopup, body.openAlert {
   border: 1px solid #888888;
   border-radius: 5px;
   padding: 9px 11px;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 1.25;
 }
 .fancyForm--radio {
@@ -913,7 +903,7 @@ body.openPopup, body.openAlert {
   margin-bottom: 0;
   color: #222222;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 2.5;
 }
 .fancyForm--optionLabel:before, .fancyForm--optionLabel:after {
@@ -961,13 +951,13 @@ body.openPopup, body.openAlert {
   margin-bottom: 10px;
 }
 .reportForm__head .title {
-  font-size: 1.5rem;
+  font-size: 150%;
   color: #16474B;
 }
 .reportForm__head .desc {
   margin-top: 5px;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 100%;
   color: #5D5D5D;
 }
 .reportForm__body .formRow {
@@ -982,7 +972,7 @@ body.openPopup, body.openAlert {
 }
 .reportForm__foot .annoText {
   text-align: left;
-  font-size: 1rem;
+  font-size: 100%;
   margin-bottom: 10px;
   line-height: 1.5;
 }
@@ -995,7 +985,7 @@ body.openPopup, body.openAlert {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  font-size: 1rem;
+  font-size: 100%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1010,7 +1000,7 @@ body.openPopup, body.openAlert {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 60px;
           flex: 0 0 60px;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 1.5;
   margin-top: 8px;
   color: #222222;
@@ -1021,7 +1011,7 @@ body.openPopup, body.openAlert {
 .reportForm .formRow .formLabel.is-necessary span:after {
   content: "*";
   color: #EC1B1B;
-  font-size: 0.875rem;
+  font-size: 87.5%;
   position: absolute;
   top: -3px;
   right: -5px;
@@ -1039,7 +1029,7 @@ body.openPopup, body.openAlert {
 }
 .reportForm .formRow .formElement .errMsg {
   display: none;
-  font-size: 0.875rem;
+  font-size: 87.5%;
   font-weight: 400;
   line-height: 1.4285714286;
   color: #EC1B1B;
@@ -1079,12 +1069,12 @@ body.openPopup, body.openAlert {
     margin-bottom: 30px;
   }
   .reportForm__head .title {
-    font-size: 1.5rem;
+    font-size: 150%;
     color: #16474B;
   }
   .reportForm__head .desc {
     margin-top: 5px;
-    font-size: 1rem;
+    font-size: 100%;
     color: #5D5D5D;
   }
   .reportForm__body .formRow {
@@ -1102,7 +1092,7 @@ body.openPopup, body.openAlert {
     display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    font-size: 1rem;
+    font-size: 100%;
   }
   .reportForm .formRow .formLabel {
     width: 60px;
@@ -1219,7 +1209,7 @@ body.openPopup, body.openAlert {
   background-size: 14px 12px;
 }
 .outsourcingBtn--fontSize {
-  font-size: 1rem;
+  font-size: 100%;
   color: #16474B;
   font-weight: 500;
 }
@@ -1274,7 +1264,7 @@ body.openPopup, body.openAlert {
   display: none;
 }
 .outsourcingBtn--serviceNav .outsourcingBtn__text {
-  font-size: 1.125rem;
+  font-size: 112.5%;
   line-height: 1.5;
   letter-spacing: 1px;
   font-weight: 400;
@@ -1309,7 +1299,7 @@ body.openPopup, body.openAlert {
 .outsourcingBtn--moreList .outsourcingBtn__text {
   text-decoration: underline;
   color: #165359;
-  font-size: 0.875rem;
+  font-size: 87.5%;
   letter-spacing: 0;
   font-weight: 400;
 }
@@ -1340,7 +1330,7 @@ body.openPopup, body.openAlert {
 }
 .outsourcingBtn--collapseTrigger .outsourcingBtn__text {
   color: #165359;
-  font-size: 1.125rem;
+  font-size: 112.5%;
   line-height: 1.5;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -1358,7 +1348,7 @@ body.openPopup, body.openAlert {
 }
 .outsourcingBtn--moreLink .outsourcingBtn__text {
   color: #FFFFFF;
-  font-size: 1.0625rem;
+  font-size: 106.25%;
   font-weight: 500;
   line-height: 1.5294117647;
   letter-spacing: 0.665px;
@@ -1371,7 +1361,7 @@ body.openPopup, body.openAlert {
 }
 .outsourcingBtn--submitReport .outsourcingBtn__text {
   color: #FFFFFF;
-  font-size: 1.125rem;
+  font-size: 112.5%;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 1.2px;
@@ -1421,11 +1411,11 @@ body.openPopup, body.openAlert {
     margin-bottom: 10px;
   }
   .outsourcingBtn--serviceNav .outsourcingBtn__text {
-    font-size: 1.125rem;
+    font-size: 112.5%;
   }
   .outsourcingBtn--newsNav {
     width: 100%;
-    font-size: 1.125rem;
+    font-size: 112.5%;
     line-height: 1.5;
     font-weight: 400;
     padding: 10px 0;
@@ -1581,7 +1571,7 @@ body.openPopup, body.openAlert {
 .outsourcing_main .section .section__title .topic {
   font-weight: 300;
   color: #16474B;
-  font-size: 2rem;
+  font-size: 200%;
   letter-spacing: 0.3px;
   line-height: 1.1875;
 }
@@ -1598,7 +1588,7 @@ body.openPopup, body.openAlert {
   margin-bottom: 0;
   font-weight: 350;
   color: #4F4F4F;
-  font-size: 1rem;
+  font-size: 100%;
   letter-spacing: 0.8px;
   line-height: 1.5;
 }
@@ -1633,7 +1623,7 @@ body.openPopup, body.openAlert {
 .outsourcing_main .section--kv .swiper-slide .textBox__content p {
   margin: 0;
   color: #222222;
-  font-size: 1.375rem;
+  font-size: 137.5%;
   line-height: 1.3181818182;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1646,7 +1636,7 @@ body.openPopup, body.openAlert {
   width: 100%;
   left: 0;
   bottom: -30px;
-  font-size: 0rem;
+  font-size: 0%;
 }
 .outsourcing_main .section--kv .swiper-pagination-bullet {
   margin: 0 2.5px;
@@ -1756,7 +1746,7 @@ body.openPopup, body.openAlert {
           justify-content: space-between;
 }
 .outsourcing_main .section--news .filter__title {
-  font-size: 1rem;
+  font-size: 100%;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -1820,7 +1810,7 @@ body.openPopup, body.openAlert {
   bottom: -25px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  font-size: 0rem;
+  font-size: 0%;
 }
 .outsourcing_main .section--curation .swiper-pagination.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   width: 5px;
@@ -1929,7 +1919,7 @@ body.openPopup, body.openAlert {
   padding: 10px 40px;
   background-color: #156A70;
   color: #FFFFFF;
-  font-size: 1.125rem;
+  font-size: 112.5%;
   font-weight: 500;
   letter-spacing: 1.2px;
 }
@@ -1946,7 +1936,7 @@ body.openPopup, body.openAlert {
   margin-right: 10px;
 }
 .outsourcing_main .serviceBox__topic .intro__title .text {
-  font-size: 1.625rem;
+  font-size: 162.5%;
   line-height: 1.5;
   font-weight: 500;
   color: #165359;
@@ -1954,7 +1944,7 @@ body.openPopup, body.openAlert {
 .outsourcing_main .serviceBox__topic .intro__paragraph {
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 1.5;
   font-weight: 400;
   color: #3D3D3D;
@@ -1981,7 +1971,7 @@ body.openPopup, body.openAlert {
   margin-bottom: 11px;
 }
 .outsourcing_main .serviceBox__links > li > a {
-  font-size: 1rem;
+  font-size: 100%;
   font-weight: 400;
   color: #156A70;
   text-decoration: underline;
@@ -2032,14 +2022,14 @@ body.openPopup, body.openAlert {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 76px;
           flex: 0 0 76px;
-  font-size: 0.875rem;
+  font-size: 87.5%;
   font-weight: 400;
   line-height: 1.5;
   color: #222222;
 }
 .outsourcing_main .newsLink__topic {
   margin-left: 10px;
-  font-size: 1.125rem;
+  font-size: 112.5%;
   line-height: 1.5;
   font-weight: 350;
   color: #222222;
@@ -2094,7 +2084,7 @@ body.openPopup, body.openAlert {
   left: 20px;
   bottom: 20px;
   line-height: 1.18;
-  font-size: 2.25rem;
+  font-size: 225%;
 }
 .outsourcing_main .resultList {
   margin: 0;
@@ -2127,22 +2117,24 @@ body.openPopup, body.openAlert {
   color: #165359;
 }
 .outsourcing_main .resultItem__digital {
-  font-size: 1.625rem;
   font-weight: 500;
   height: 50px;
 }
-.outsourcing_main .resultItem__digital > span {
+.outsourcing_main .resultItem__digital .value {
   display: inline-block;
   vertical-align: text-bottom;
-  font-size: 4.0625rem;
+  font-size: 406.25%;
   line-height: 0.7692307692;
   font-weight: 400;
   letter-spacing: -0.5px;
 }
+.outsourcing_main .resultItem__digital .unit {
+  font-size: 162.5%;
+}
 .outsourcing_main .resultItem__content {
   text-align: center;
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 100%;
   letter-spacing: 1.2px;
 }
 .outsourcing_main .edmImg {
@@ -2206,7 +2198,7 @@ body.openPopup, body.openAlert {
   margin-bottom: 40px;
 }
 .outsourcing_main .linkSection__title .topic {
-  font-size: 2rem;
+  font-size: 200%;
   color: #165359;
   font-weight: 300;
   letter-spacing: 0.4px;
@@ -2231,7 +2223,7 @@ body.openPopup, body.openAlert {
   margin-bottom: 0;
 }
 .outsourcing_main .linkSection .linkList .linkList__item a {
-  font-size: 1.125rem;
+  font-size: 112.5%;
   font-weight: 350;
   line-height: 1.5;
 }
@@ -2241,7 +2233,7 @@ body.openPopup, body.openAlert {
 .outsourcing_main .linkSection .linkList--quick .linkList__item:before {
   content: "・";
   color: #156A70;
-  font-size: 1.125rem;
+  font-size: 112.5%;
   font-weight: 350;
   line-height: 1.5;
 }
@@ -2323,7 +2315,7 @@ body.openPopup, body.openAlert {
     background-size: 17px 16px;
   }
   .outsourcing_sideFunc .sideFuncs .sideIcon--chat .sideIcon__text {
-    font-size: 1rem;
+    font-size: 100%;
     line-height: 1.5;
     font-weight: 500;
   }
@@ -2335,14 +2327,14 @@ body.openPopup, body.openAlert {
     padding: 0;
   }
   .outsourcing_main .section .section__title .topic {
-    font-size: 4rem;
+    font-size: 400%;
     line-height: 1.1875;
   }
   .outsourcing_main .section .section__title .topic:after {
     margin: 20px 0;
   }
   .outsourcing_main .section .section__title .description {
-    font-size: 1rem;
+    font-size: 100%;
   }
   .outsourcing_main .section--kv {
     padding-bottom: 45px;
@@ -2531,7 +2523,7 @@ body.openPopup, body.openAlert {
   }
   .outsourcing_main .section--edm .section__title .action a {
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 125%;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
@@ -2620,7 +2612,7 @@ body.openPopup, body.openAlert {
     padding-top: 111.8243243243%;
   }
   .outsourcing_main .curationItem__text {
-    font-size: 3.125rem;
+    font-size: 312.5%;
     line-height: 1.5;
   }
   .outsourcing_main .curationItem:hover {
@@ -2647,18 +2639,20 @@ body.openPopup, body.openAlert {
     transition: all 0.3s ease-in;
   }
   .outsourcing_main .resultItem__digital {
-    font-size: 2.1875rem;
     height: 58px;
   }
-  .outsourcing_main .resultItem__digital > span {
+  .outsourcing_main .resultItem__digital .value {
     font-family: "Roboto", sans-serif;
     display: inline-block;
-    font-size: 5.9375rem;
+    font-size: 593.75%;
     line-height: 0.7157894737;
+  }
+  .outsourcing_main .resultItem__digital .unit {
+    font-size: 218.75%;
   }
   .outsourcing_main .resultItem__content {
     margin-top: 20px;
-    font-size: 1.5rem;
+    font-size: 150%;
   }
   .outsourcing_main .resultItem:hover {
     opacity: 0.8;
@@ -2704,7 +2698,7 @@ body.openPopup, body.openAlert {
     margin-bottom: 40px;
   }
   .outsourcing_main .linkSection__title .topic {
-    font-size: 3.5rem;
+    font-size: 350%;
     letter-spacing: 1px;
     line-height: 1.5;
   }
@@ -2732,7 +2726,7 @@ body.openPopup, body.openAlert {
     margin-bottom: auto;
   }
   .outsourcing_main .linkSection .linkList .linkList__item a {
-    font-size: 1.25rem;
+    font-size: 125%;
   }
   .outsourcing_main .linkSection .linkList--quick .linkList__item {
     -webkit-box-flex: 0;
@@ -2744,7 +2738,7 @@ body.openPopup, body.openAlert {
     margin-right: 0;
   }
   .outsourcing_main .linkSection .linkList--quick .linkList__item:before {
-    font-size: 1.25rem;
+    font-size: 125%;
   }
   .outsourcing_main .linkSection .linkList--quick .linkList__item a {
     -webkit-transition: color 0.3s ease-in;

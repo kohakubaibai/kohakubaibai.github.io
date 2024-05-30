@@ -111,9 +111,9 @@
 							<div class="userFunction__item dropdown">
 								<button type="button" class="outsourcingBtn outsourcingBtn--fontSizeSelect dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="切換文字大小">切換文字大小</button>
 								<ul class="fontSizeSelect dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<li><button class="outsourcingBtn outsourcingBtn--fontSize">小</button></li>
-									<li><button class="outsourcingBtn outsourcingBtn--fontSize">中</button></li>
-									<li><button class="outsourcingBtn outsourcingBtn--fontSize">大</button></li>
+									<li><button class="outsourcingBtn outsourcingBtn--fontSize" data-fontsize-item="true" data-font-scale="0.8">小</button></li>
+									<li><button class="outsourcingBtn outsourcingBtn--fontSize" data-fontsize-item="true" data-font-scale="1">中</button></li>
+									<li><button class="outsourcingBtn outsourcingBtn--fontSize" data-fontsize-item="true" data-font-scale="1.2">大</button></li>
 								</ul>
 							</div>
 							<div class="userFunction__item">
@@ -808,25 +808,25 @@
 						<ul class="resultList">
 							<li>
 								<a href="#" class="resultItem">
-									<div class="resultItem__digital"><span data-js-count="true" data-count="80">80</span>筆</div>
+									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="80">80</span><span class="unit">筆</span></div>
 									<div class="resultItem__content">串連資源</div>
 								</a>
 							</li>
 							<li>
 								<a href="https://startup.sme.gov.tw/home/modules/funding/" class="resultItem">
-									<div class="resultItem__digital"><span data-js-count="true" data-count="127">127</span>筆</div>
+									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="127">127</span><span class="unit">筆</span></div>
 									<div class="resultItem__content">創業基金</div>
 								</a>
 							</li>
 							<li>
 								<a href="https://startup.sme.gov.tw/home/modules/rmap/creative_space_list.php" class="resultItem">
-									<div class="resultItem__digital"><span data-js-count="true" data-count="393">393</span>家</div>
+									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="393">393</span><span class="unit">筆</span></div>
 									<div class="resultItem__content">創業機構</div>
 								</a>
 							</li>
 							<li>
 								<a href="https://startup.sme.gov.tw/home/modules/highlight/" class="resultItem">
-									<div class="resultItem__digital"><span data-js-count="true" data-count="459">459</span>件</div>
+									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="459">459</span><span class="unit">筆</span></div>
 									<div class="resultItem__content">輔導亮點</div>
 								</a>
 							</li>
@@ -936,7 +936,7 @@
 			<ul class="sideFuncs">
 				<li><a href="https://www.facebook.com/StartUpTaiwan" class="sideIcon sideIcon--sns" target="_blank" title="創業圓夢 Start-up Hub"><img src="assets/images/icon-sidebar_fb.svg" alt="創業圓夢 Start-up Hub" class="sideIcon__img"></a></li>
 				<li><a href="https://page.line.me/204hsqmc?openQrModal=true" class="sideIcon sideIcon--sns" target="_blank" title="創業圓夢 LINE官方帳號"><img src="assets/images/icon-sidebar_line.svg" alt="創業圓夢 LINE官方帳號" class="sideIcon__img"></a></li>
-				<li><button type="button" class="sideIcon sideIcon--func" data-js-item="scrollTop"><img src="assets/images/icon-sidebar_goTop.svg" class="sideIcon__img"></button></li>
+				<li><button type="button" class="sideIcon sideIcon--func" data-js-item="scrollTop"><img src="assets/images/icon-sidebar_goTop.svg" class="sideIcon__img" alt="返回頂端"></button></li>
 				<li><button type="button" class="sideIcon sideIcon--chat" data-js-item="chat"><span class="sideIcon__text">客服</span></button></li>
 			</ul>
 		</div>

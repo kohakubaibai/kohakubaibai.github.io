@@ -1,9 +1,9 @@
 $(function () {
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    //文字大小選單開關
+    // 文字大小選單開關
 	$('.dropdown-toggle').dropdown();
 
-    //頁面滾動後header加入陰影
+    // 頁面滾動後header加入陰影
     var header_h = $('.outsourcing_header').outerHeight(true);
     $(window).on('scroll', function(){
         var scrollTop = $(this).scrollTop();
@@ -14,6 +14,13 @@ $(function () {
         }
     });
 
+    // 文字大小調整
+    $('[data-fontsize-item="true"]').on('click',function(){
+        var scaleValue = $(this).data('font-scale');
+        $('body').css({
+            'font-size' : (1 * scaleValue)+'rem'
+        });
+    });
 
     // 開關開啟主選單列表
     $('#toggle-menu').on('click', function () {
@@ -45,7 +52,7 @@ $(function () {
         $('[data-service-id="0"]').addClass('default');
     });
 
-    //主選單列表點空白處收起來
+    // 主選單列表點空白處收起來
     $('body').on('click', function (event) {
         if (!$(event.target).is('.mmBtn')) {
             $(".mmBtn").removeClass("is-active");
@@ -53,7 +60,7 @@ $(function () {
         }
     });
 
-    //分眾服務hover顯示&隱藏內容
+    // 分眾服務hover顯示&隱藏內容
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
     if (!isMobile){
         $('[data-side-link="true"]').on('focus mouseover', function (e) {
@@ -71,7 +78,7 @@ $(function () {
         });
     }	
 
-    //搜尋框輸入後按鈕顯示
+    // 搜尋框輸入後按鈕顯示
     $('[data-form-element="input-search"]').on('keyup', function(){
         var formItem = $(this).closest('[data-form-name="search"]');
         var inputValue = $(this).val();
@@ -84,7 +91,7 @@ $(function () {
         }
     });
 
-    //清除搜尋框
+    // 清除搜尋框
     $('[data-form-element="btn-clear"]').on('click', function(e){
         e.preventDefault();
         var formItem = $(this).closest('[data-form-name="search"]');
@@ -93,7 +100,7 @@ $(function () {
         formItem.find('[data-form-element="btn-submit"]').removeClass('is-available');
     });
 
-    //開啟關閉popup
+    // 開啟關閉popup
     $('[data-js-id="openPopup"]').on('click', function(e){
         e.preventDefault();
         $('body').addClass('openPopup');
@@ -108,7 +115,7 @@ $(function () {
         $(this).closest('[data-popup-id="group"]').find('.formRow').removeClass('is-error');
     });
 
-    //送出問題回饋表
+    // 送出問題回饋表
     $('[data-submit-id="report"]').on('click', function(e){
         e.preventDefault();
 

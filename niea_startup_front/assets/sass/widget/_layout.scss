@@ -3,7 +3,7 @@ $path: '../images';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @mixin fs($value) {
-    font-size: calc($value/16)+rem;
+    font-size: calc($value/16)*100%;
 }
 
 $fm-noto: 'Noto Sans TC', '微軟正黑體', sans-serif;
@@ -89,9 +89,6 @@ img {
 
     .searchForm__wrap {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
         overflow: hidden;
         
         .searchWrapItem {
