@@ -1491,7 +1491,7 @@ body.openPopup, body.openAlert {
 
 .outsourcing_sideFunc {
   position: fixed;
-  top: 70%;
+  bottom: 10%;
   right: 10px;
   z-index: 100;
 }
