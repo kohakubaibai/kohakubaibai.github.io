@@ -30,6 +30,12 @@ img {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
+.outsourcing_header .accesskey {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #156A70;
+}
 .outsourcing_header .header_siteFunction {
   background-color: #156A70;
   padding: 10px 15px;
@@ -532,6 +538,9 @@ img {
   .outsourcing_header.is-scroll {
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  .outsourcing_header .accesskey {
+    color: #FFFFFF;
   }
   .outsourcing_header .header_siteFunction {
     padding: 0;
