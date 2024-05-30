@@ -118,7 +118,19 @@
 								</ul>
 							</div>
 							<div class="userFunction__item">
-								<button type="button" class="outsourcingBtn outsourcingBtn--langSwitch">切換語言</button>
+								<div id="google_translate_element" class="outsourcingBtn outsourcingBtn--langSwitch">切換語言</div>
+								<script type="text/javascript">
+									function googleTranslateElementInit() {
+										new google.translate.TranslateElement({
+												pageLanguage: "zh-TW",
+												includedLanguages: 'en,zh-TW',
+												layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+											},
+											"google_translate_element"
+										);
+									}
+								</script>
+								<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 							</div>
 							<div class="userFunction__item userFunction__item--burger">
 								<button id="toggle-menu" type="button" class="outsourcingBtn outsourcingBtn--burger" title="開啟選單與搜尋">開啟選單與搜尋</button>

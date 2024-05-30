@@ -37,8 +37,31 @@ $fm-roboto: "Roboto", sans-serif;
     }
 
     &--langSwitch {
+        position: relative;
         background-image: url('#{$path}/icon-siteLang.svg');
         background-size: 18px 18px;
+
+        .goog-te-gadget {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .goog-te-gadget-icon {
+            display: none;
+        }
+
+        .goog-te-gadget-simple {
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+            display: none;
+        }
     }
 
     &--clearInput {

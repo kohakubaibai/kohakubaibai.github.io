@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tfoot, thead, th, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 微軟正黑體, Microsoft JhengHei;
   letter-spacing: 0;
 }
 
@@ -1223,8 +1223,27 @@ body.openPopup, body.openAlert {
   font-weight: 500;
 }
 .outsourcingBtn--langSwitch {
+  position: relative;
   background-image: url("../images/icon-siteLang.svg");
   background-size: 18px 18px;
+}
+.outsourcingBtn--langSwitch .goog-te-gadget {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.outsourcingBtn--langSwitch .goog-te-gadget-icon {
+  display: none;
+}
+.outsourcingBtn--langSwitch .goog-te-gadget-simple {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.outsourcingBtn--langSwitch .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+  display: none;
 }
 .outsourcingBtn--clearInput {
   width: 12px;
