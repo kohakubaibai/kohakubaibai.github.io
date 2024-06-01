@@ -20,6 +20,11 @@ $fm-roboto: "Roboto", sans-serif;
         margin: 0;
     }
 
+    img {
+        display: block;
+        width: 100%;
+    }
+
     .wrapper {
         max-width: 1200px;
         margin: 0 auto;

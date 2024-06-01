@@ -97,8 +97,8 @@
 										<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" data-form-element="input-search" />
 										<button class="outsourcingBtn outsourcingBtn--clearInput" title="清除搜尋" data-form-element="btn-clear">清除搜尋</button>
 									</div>
-									<button type="button" class="outsourcingBtn outsourcingBtn--search" data-form-element="btn-submit">
-										<img src="assets/images/icon-search_pc.svg" alt="" />
+									<button type="button" class="outsourcingBtn outsourcingBtn--search" title="送出查詢" data-form-element="btn-submit">
+										<img src="assets/images/icon-search_pc.svg" alt="送出查詢" />
 									</button>
 								</div>
 							</div>
@@ -107,18 +107,18 @@
 					<div class="headerWrap">
 						<div class="userFunction">
 							<div class="userFunction__item">
-								<a href="https://startup.sme.gov.tw/home/modules/login" class="loginBtn">登入/註冊</a>
+								<a href="https://startup.sme.gov.tw/home/modules/login" class="loginBtn" title="登入/註冊">登入/註冊</a>
 							</div>
 							<div class="userFunction__item dropdown">
 								<button type="button" class="outsourcingBtn outsourcingBtn--fontSizeSelect dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="切換文字大小">切換文字大小</button>
 								<ul class="fontSizeSelect dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<li><button class="outsourcingBtn outsourcingBtn--fontSize" data-fontsize-item="true" data-font-scale="0.8">小</button></li>
-									<li><button class="outsourcingBtn outsourcingBtn--fontSize" data-fontsize-item="true" data-font-scale="1">中</button></li>
-									<li><button class="outsourcingBtn outsourcingBtn--fontSize" data-fontsize-item="true" data-font-scale="1.2">大</button></li>
+									<li><button class="outsourcingBtn outsourcingBtn--fontSize" title="文字大小-小" data-fontsize-item="true" data-font-scale="0.8">小</button></li>
+									<li><button class="outsourcingBtn outsourcingBtn--fontSize" title="文字大小-中" data-fontsize-item="true" data-font-scale="1">中</button></li>
+									<li><button class="outsourcingBtn outsourcingBtn--fontSize" title="文字大小-大" data-fontsize-item="true" data-font-scale="1.2">大</button></li>
 								</ul>
 							</div>
 							<div class="userFunction__item">
-								<div id="google_translate_element" class="outsourcingBtn outsourcingBtn--langSwitch">切換語言</div>
+								<button type="button" id="google_translate_element" class="outsourcingBtn outsourcingBtn--langSwitch" title="切換語言">切換語言</button>
 								<script type="text/javascript">
 									function googleTranslateElementInit() {
 										new google.translate.TranslateElement({
@@ -140,7 +140,11 @@
 				</div>
 			</div>
 			<nav id="header_nav" class="header_nav">
-				<div class="closeNav"><button id="close-menu" type="button" title="關閉選單" class="outsourcingBtn outsourcingBtn--closeNav"><img src="assets/images/icon-close_nav.svg" alt="關閉選單"></button></div>
+				<div class="closeNav">
+					<button id="close-menu" type="button" title="關閉選單" class="outsourcingBtn outsourcingBtn--closeNav">
+						<img src="assets/images/icon-close_nav.svg" alt="關閉選單">
+					</button>
+				</div>
 				<div class="wrapper">
 					<form class="searchForm" data-form-name="search">
 						<div class="searchForm__wrap">
@@ -155,69 +159,69 @@
 									<input type="text" class="fancyForm fancyForm--text" placeholder="請輸入關鍵字" data-form-element="input-search" />
 									<button class="outsourcingBtn outsourcingBtn--clearInput" title="清除搜尋" data-form-element="btn-clear">清除搜尋</button>
 								</div>
-								<button type="button" class="outsourcingBtn outsourcingBtn--search" data-form-element="btn-submit">
-									<img src="assets/images/icon-search_mb.svg" alt="" />
+								<button type="button" class="outsourcingBtn outsourcingBtn--search" title="送出查詢" data-form-element="btn-submit">
+									<img src="assets/images/icon-search_mb.svg" alt="送出查詢" />
 								</button>
 							</div>
 						</div>
 					</form>
 					<ul class="megamenu">
 						<li class="megamenu__item">
-							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="新創分眾服務指南" data-id="0">新創分眾服務指南</a>
+							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="新創分眾服務" data-id="0">新創分眾服務</a>
 							<ul id="mmContent0" class="mmContent mmContent--service">
 								<li>
-									<a href="#" class="mmContent__link default" data-side-link="true" data-service-id="0">資源總覽</a>
+									<a href="#" class="mmContent__link default" title="資源總覽" data-side-link="true" data-service-id="0">資源總覽</a>
 									<div id="sideMenu0" class="sideMenu default">
 										<p class="sideMenu__text">
-											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢。
+											本專區彙整政府創業資源，按新創成長階段與功能等分類，歡迎查詢
 										</p>
 									</div>
 								</li>
 								<li>
-									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="1">種子期</a>
+									<a href="#" class="mmContent__link" title="種子期" data-side-link="true" data-service-id="1">種子期</a>
 									<div id="sideMenu1" class="sideMenu">
 										<div class="sideMenu__title">
 											<div class="media"><img src="assets/images/img-service-1.svg" alt="種子期"></div>
 											<div class="text">種子期</div>
 										</div>
 										<p class="sideMenu__text">
-											有創業概念、產品及服務未成型的新創團隊。
+											有創業概念、產品及服務未成型的新創團隊
 										</p>
 									</div>
 								</li>
 								<li>
-									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="2">創建期</a>
+									<a href="#" class="mmContent__link" title="創建期" data-side-link="true" data-service-id="2">創建期</a>
 									<div id="sideMenu2" class="sideMenu">
 										<div class="sideMenu__title">
 											<div class="media"><img src="assets/images/img-service-2.svg" alt="創建期"></div>
 											<div class="text">創建期</div>
 										</div>
 										<p class="sideMenu__text">
-											有Prototype、具備初步商業模式的新創企業。
+											有Prototype、具備初步商業模式的新創企業
 										</p>
 									</div>
 								</li>
 								<li>
-									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="3">成長期</a>
+									<a href="#" class="mmContent__link" title="成長期" data-side-link="true" data-service-id="3">成長期</a>
 									<div id="sideMenu3" class="sideMenu">
 										<div class="sideMenu__title">
 											<div class="media"><img src="assets/images/img-service-3.svg" alt="成長期"></div>
 											<div class="text">成長期</div>
 										</div>
 										<p class="sideMenu__text">
-											具有完整成熟商業模式、預計充實資本與營運規模的新創企業。
+											具有完整成熟商業模式、預計充實資本與營運規模的新創企業
 										</p>
 									</div>
 								</li>
 								<li>
-									<a href="#" class="mmContent__link" data-side-link="true" data-service-id="4">擴張期</a>
+									<a href="#" class="mmContent__link" title="擴張期" data-side-link="true" data-service-id="4">擴張期</a>
 									<div id="sideMenu4" class="sideMenu">
 										<div class="sideMenu__title">
 											<div class="media"><img src="assets/images/img-service-4.svg" alt="擴張期"></div>
 											<div class="text">擴張期</div>
 										</div>
 										<p class="sideMenu__text">
-											預計可規模化成長、邁向國際市場的新創企業。
+											預計可規模化成長、邁向國際市場的新創企業
 										</p>
 									</div>
 								</li>
@@ -226,7 +230,7 @@
 						<li class="megamenu__item">
 							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="找資源" data-id="1">找資源</a>
 							<ul id="mmContent1" class="mmContent">
-								<li><a href="https://startup.sme.gov.tw/home/modules/funding/" class="mmContent__link" title="">資金快搜</a></li>
+								<li><a href="https://startup.sme.gov.tw/home/modules/funding/" class="mmContent__link" title="資金快搜">資金快搜</a></li>
 								<li><a href="https://startup.sme.gov.tw/home/modules/rmap/" class="mmContent__link" title="各縣市資源地圖">各縣市資源地圖</a></li>
 								<li><a href="https://startup.sme.gov.tw/home/modules/rmap/creative_space_list.php" class="mmContent__link" title="創育機構">創育機構</a></li>
 								<li><a href="https://startup.sme.gov.tw/home/modules/faq/" class="mmContent__link" title="創業常見問答">創業常見問答</a></li>
@@ -248,10 +252,10 @@
 							<a href="javascript:void(0);" class="mmBtn mmBtn--dropdown" title="服務據點" data-id="3">服務據點</a>
 							<ul id="mmContent3" class="mmContent">
 								<li><a href="https://startup.sme.gov.tw/home/modules/startuphub/about.php" class="mmContent__link" title="新創基地">新創基地</a></li>
-								<li><a href="https://www.startupterrace.tw/" class="mmContent__link" title="林口新創園">林口新創園</a></li>
-								<li><a href="https://www.yawan-startup.tw/" class="mmContent__link" title="亞灣新創園">亞灣新創園</a></li>
-								<li><a href="https://silab.sme.gov.tw/" class="mmContent__link" title="社會創新實驗中心">社會創新實驗中心</a></li>
-								<li><a href="https://www.hbspic.org.tw/" class="mmContent__link" title="新竹生醫產業及育成中心">新竹生醫產業及育成中心</a></li>
+								<li><a href="https://www.startupterrace.tw/" class="mmContent__link" title="另開新頁_林口新創園" target="_blank">林口新創園</a></li>
+								<li><a href="https://www.yawan-startup.tw/" class="mmContent__link" title="另開新頁_亞灣新創園" target="_blank">亞灣新創園</a></li>
+								<li><a href="https://silab.sme.gov.tw/" class="mmContent__link" title="另開新頁_社會創新實驗中心" target="_blank">社會創新實驗中心</a></li>
+								<li><a href="https://www.hbspic.org.tw/" class="mmContent__link" title="另開新頁_新竹生醫產業及育成中心" target="_blank">新竹生醫產業及育成中心</a></li>
 							</ul>
 						</li>
 						<li class="megamenu__item">
@@ -290,123 +294,121 @@
 					<div id="kvSwiper" class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/calendar/detail/?sId=6823">
+								<a href="https://startup.sme.gov.tw/home/modules/calendar/detail/?sId=6823" title="Talent Meet 國際新創生態與新創人才媒合會 歡迎參加">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240426094446snz.jpg" alt="Talent Meet 國際新創生態與新創人才媒合會 歡迎參加" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
 											<p>
-												「潛力新創」選拔，自即日起受理推薦申請至4月30日止
+												Talent Meet 國際新創生態與新創人才媒合會 歡迎參加
 											</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/news/detial.php?sId=1858">
+								<a href="https://startup.sme.gov.tw/home/modules/news/detial.php?sId=1858" title="「2024綠色科技新創競賽」即日起開放報名至5月31日止，1國際城市與30家國際企業共出39道題目，歡迎新創踴躍參與解題！">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240328103858egg.png" alt="「2024綠色科技新創競賽」即日起開放報名至5月31日止，1國際城市與30家國際企業共出39道題目，歡迎新創踴躍參與解題！" class="w-100" />
 									</div>
 									<div class="textBox">
-										<div class="textBox__content"><p>文案</p></div>
+										<div class="textBox__content"><p>「2024綠色科技新創競賽」即日起開放報名至5月31日止，1國際城市與30家國際企業共出39道題目，歡迎新創踴躍參與解題！</p></div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/startupaward/"
-									onclick="trackOutboundLink('https://startup.sme.gov.tw/startupaward/','首頁'); return false;"
-									title="新創事業獎 募集8年內之優秀新創" target="_blank">
+								<a href="https://startup.sme.gov.tw/startupaward/" onclick="trackOutboundLink('https://startup.sme.gov.tw/startupaward/','首頁'); return false;" title="新創事業獎 募集8年內之優秀新創" target="_blank">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240424024113gqf.jpg" alt="新創事業獎 募集8年內之優秀新創" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+											<p>新創事業獎 募集8年內之優秀新創</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/calendar/detail/?sId=6832">
+								<a href="https://startup.sme.gov.tw/home/modules/calendar/detail/?sId=6832" title="【徵件開跑】2024 第八屆G Camp 國際創新創業訓練營">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/upload/gallery/20240430060323gha.jpg" alt="【徵件開跑】2024 第八屆G Camp 國際創新創業訓練營" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+											<p>【徵件開跑】2024 第八屆G Camp 國際創新創業訓練營</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/">
+								<a href="https://startup.sme.gov.tw/home/" title="新創圓夢網">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic01.jpg" alt="新創圓夢網" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案</p>
+											<p>新創圓夢網</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/funding/">
+								<a href="https://startup.sme.gov.tw/home/modules/funding/" title="找資金">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic02.jpg" alt="找資金" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案文案文案文案文案文案文案文案文案</p>
+											<p>找資金</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/calendar/">
+								<a href="https://startup.sme.gov.tw/home/modules/calendar/" title="看活動">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic03.jpg" alt="看活動" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+											<p>看活動</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/rProject/">
+								<a href="https://startup.sme.gov.tw/home/modules/rProject/" title="搜資源">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic04.jpg" alt="搜資源" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案文案</p>
+											<p>搜資源</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/rmap/creative_space_list.php">
+								<a href="https://startup.sme.gov.tw/home/modules/rmap/creative_space_list.php" title="尋空間">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic05.jpg" alt="尋空間" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案文案文案文案文案文案文案文案文案</p>
+											<p>尋空間</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="swiper-slide">
-								<a href="https://startup.sme.gov.tw/home/modules/talk/">
+								<a href="https://startup.sme.gov.tw/home/modules/talk/" title="疑解惑">
 									<div class="image">
 										<img src="https://startup.sme.gov.tw/home/images/calendar/banner/basic06.jpg" alt="疑解惑" class="w-100" />
 									</div>
 									<div class="textBox">
 										<div class="textBox__content">
-											<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+											<p>疑解惑</p>
 										</div>
 									</div>
 								</a>
@@ -425,12 +427,12 @@
 				</div>
 			</section>
 			<!-- 輪播圖 end -->
-			<!-- 新創分眾 服務指南 start -->
+			<!-- 新創分眾 服務 start -->
 			<section class="section section--services">
 				<div class="wrapper">
 					<div class="section__title">
-						<h2 class="topic"><span>新創分眾</span><span>服務指南</span></h2>
-						<p class="description">請按照您的新創成長階段找尋合適的政府創業資源。</p>
+						<h2 class="topic"><span>新創分眾</span><span>服務</span></h2>
+						<p class="description">請按照您的新創成長階段找尋合適的政府創業資源</p>
 					</div>
 					<div class="section__content">
 						<div class="outsourcingTab outsourcingTab--service">
@@ -469,9 +471,9 @@
 													<span class="icon"><img src="assets/images/img-service-1.svg" alt="種子期"></span>
 													<div class="text">種子期</div>
 												</div>
-												<p class="intro__paragraph">有創業概念、產品及服務未成型的新創團隊。</p>
+												<p class="intro__paragraph">有創業概念、產品及服務未成型的新創團隊</p>
 											</div>
-											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a></div>
+											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a></div>
 										</div>
 										<ul class="serviceBox__links">
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=15" title="青年創業及啟動金貸款">青年創業及啟動金貸款</a></li>
@@ -479,16 +481,16 @@
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=19" title="微型創業鳳凰貸款">微型創業鳳凰貸款</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rproject/detail/?sId=11" title="U-start 創新創業計畫">U-start 創新創業計畫</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rproject/detail/?sId=5" title="U-start原漾計畫">U-start原漾計畫</a></li>
-											<li><a href="https://incubator.sme.gov.tw/creative-workshop-project.html" title="在地青年創育坊">在地青年創育坊</a></li>
+											<li><a href="https://incubator.sme.gov.tw/creative-workshop-project.html" title="另開新頁_在地青年創育坊" target="_blank">在地青年創育坊</a></li>
 											<li><a href="https://startup.sme.gov.tw/home//modules/rproject/detail/index.php?sId=3" title="中小企業網路大學校">中小企業網路大學校</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/startuphub/about.php" title="Taiwan Startup Hub新創基地">Taiwan Startup Hub新創基地</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/talk/" title="新創圓夢網-創業諮詢服務">新創圓夢網-創業諮詢服務</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=8" title="促進社會創新合作計畫">促進社會創新合作計畫</a></li>
-											<li><a href="https://woman.sysme.org.tw/" title="女性創業飛雁計畫">女性創業飛雁計畫</a></li>
-											<li><a href="https://incubator.sme.gov.tw/" title="創育加速卓越服務網">創育加速卓越服務網</a></li>
+											<li><a href="https://woman.sysme.org.tw/" title="另開新頁_女性創業飛雁計畫" target="_blank">女性創業飛雁計畫</a></li>
+											<li><a href="https://incubator.sme.gov.tw/" title="另開新頁_創育加速卓越服務網" target="_blank">創育加速卓越服務網</a></li>
 										</ul>
 										<div class="serviceBox__action">
-											<a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+											<a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 										</div>
 									</div>
 								</div>
@@ -500,9 +502,9 @@
 													<span class="icon"><img src="assets/images/img-service-2.svg" alt="創建期"></span>
 													<div class="text">創建期</div>
 												</div>
-												<p class="intro__paragraph">有Prototype、具備初步商業模式的新創企業。</p>
+												<p class="intro__paragraph">有Prototype、具備初步商業模式的新創企業</p>
 											</div>
-											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a></div>
+											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a></div>
 										</div>
 										<ul class="serviceBox__links">
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=10" title="企業小頭家貸款">企業小頭家貸款</a></li>
@@ -510,16 +512,16 @@
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=2" title="經濟部小型企業創新研發計畫(SBIR)">經濟部小型企業創新研發計畫(SBIR)</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=46" title="服務業創新研發計畫(SIIR)">服務業創新研發計畫(SIIR)</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=46" title="農業業界科專計畫">農業業界科專計畫</a></li>
-											<li><a href="https://incubator.sme.gov.tw/creative-workshop-project.html" title="在地青年創育坊">在地青年創育坊</a></li>
+											<li><a href="https://incubator.sme.gov.tw/creative-workshop-project.html" title="另開新頁_在地青年創育坊" target="_blank">在地青年創育坊</a></li>
 											<li><a href="https://startup.sme.gov.tw/home//modules/rproject/detail/index.php?sId=3" title="中小企業網路大學校">中小企業網路大學校</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/startuphub/about.php" title="Taiwan Startup Hub新創基地">Taiwan Startup Hub新創基地</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/talk/" title="新創圓夢網-創業諮詢服務">新創圓夢網-創業諮詢服務</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=8" title="促進社會創新合作計畫">促進社會創新合作計畫</a></li>
-											<li><a href="https://woman.sysme.org.tw/" title="女性創業飛雁計畫">女性創業飛雁計畫</a></li>
-											<li><a href="https://incubator.sme.gov.tw/" title="創育加速卓越服務網">創育加速卓越服務網</a></li>
+											<li><a href="https://woman.sysme.org.tw/" title="另開新頁_女性創業飛雁計畫" target="_blank">女性創業飛雁計畫</a></li>
+											<li><a href="https://incubator.sme.gov.tw/" title="另開新頁_創育加速卓越服務網" target="_blank">創育加速卓越服務網</a></li>
 										</ul>
 										<div class="serviceBox__action">
-											<a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+											<a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 										</div>
 									</div>
 								</div>
@@ -531,9 +533,9 @@
 													<span class="icon"><img src="assets/images/img-service-3.svg" alt="成長期"></span>
 													<div class="text">成長期</div>
 												</div>
-												<p class="intro__paragraph">具有完整成熟商業模式、預計充實資本與營運規模的新創企業。</p>
+												<p class="intro__paragraph">具有完整成熟商業模式、預計充實資本與營運規模的新創企業</p>
 											</div>
-											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a></div>
+											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a></div>
 										</div>
 										<ul class="serviceBox__links">
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=4" title="中小企業創新發展專案貸款">中小企業創新發展專案貸款</a></li>
@@ -543,14 +545,14 @@
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=155" title="A+企業創新研發淬鍊計畫-前瞻技術創業投資計畫">A+企業創新研發淬鍊計畫-前瞻技術創業投資計畫</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=40" title="林口新創園">林口新創園</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=68" title="亞灣新創園">亞灣新創園</a></li>
-											<li><a href="https://greentech.startupterrace.tw/" title="綠色科技新創競賽">綠色科技新創競賽</a></li>
-											<li><a href="https://spp.org.tw/" title="新創採購">新創採購</a></li>
-											<li><a href="https://www.hbspic.org.tw/" title="新竹生醫產業及育成中心">新竹生醫產業及育成中心</a></li>
-											<li><a href="https://incubator.sme.gov.tw/" title="創育加速卓越服務網">創育加速卓越服務網</a></li>
-											<li><a href="https://ntacademy.sme.gov.tw/" title="N世代學苑">N世代學苑</a></li>
+											<li><a href="https://greentech.startupterrace.tw/" title="另開新頁_綠色科技新創競賽" target="_blank">綠色科技新創競賽</a></li>
+											<li><a href="https://spp.org.tw/" title="另開新頁_新創採購" target="_blank">新創採購</a></li>
+											<li><a href="https://www.hbspic.org.tw/" title="另開新頁_新竹生醫產業及育成中心" target="_blank">新竹生醫產業及育成中心</a></li>
+											<li><a href="https://incubator.sme.gov.tw/" title="另開新頁_創育加速卓越服務網" target="_blank">創育加速卓越服務網</a></li>
+											<li><a href="https://ntacademy.sme.gov.tw/" title="另開新頁_N世代學苑" target="_blank">N世代學苑</a></li>
 										</ul>
 										<div class="serviceBox__action">
-											<a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+											<a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 										</div>
 									</div>
 								</div>
@@ -562,9 +564,9 @@
 													<span class="icon"><img src="assets/images/img-service-4.svg" alt="擴張期"></span>
 													<div class="text">擴張期</div>
 												</div>
-												<p class="intro__paragraph">預計可規模化成長、邁向國際市場的新創企業。</p>
+												<p class="intro__paragraph">預計可規模化成長、邁向國際市場的新創企業</p>
 											</div>
-											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a></div>
+											<div class="more"><a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a></div>
 										</div>
 										<ul class="serviceBox__links">
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=129" title="國發基金投資">國發基金投資</a></li>
@@ -572,14 +574,14 @@
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=175" title="臺灣創新板">臺灣創新板</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/funding/detail/index.php?sId=172" title="次世代產業新創淬鍊計畫-新創獎勵">次世代產業新創淬鍊計畫-新創獎勵</a></li>
 											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=83" title="G Camp">G Camp</a></li>
-											<li><a href="https://taccplus.com/" title="TAcc+">TAcc+</a></li>
-											<li><a href="https://startup.sme.gov.tw/startupaward/" title="新創事業獎">新創事業獎</a></li>
-											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=85" title="創新研究獎">創新研究獎</a></li>
-											<li><a href="https://ntacademy.sme.gov.tw/" title="N世代學苑">N世代學苑</a></li>
-											<li><a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=1" title="中小企業經營領袖研習班">中小企業經營領袖研習班</a></li>
+											<li><a href="https://taccplus.com/" title="另開新頁_TAcc+" target="_blank">TAcc+</a></li>
+											<li><a href="https://startup.sme.gov.tw/startupaward/" title="另開新頁_新創事業獎">新創事業獎</a></li>
+											<li><a href="https://startup.sme.gov.tw/home/modules/rProject/detail/index.php?sId=85" title="另開新頁_創新研究獎">創新研究獎</a></li>
+											<li><a href="https://ntacademy.sme.gov.tw/" title="另開新頁_N世代學苑" target="_blank">N世代學苑</a></li>
+											<li><a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=1" title="另開新頁_中小企業經營領袖研習班" target="_blank">中小企業經營領袖研習班</a></li>
 										</ul>
 										<div class="serviceBox__action">
-											<a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+											<a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 										</div>
 									</div>
 								</div>
@@ -588,13 +590,13 @@
 					</div>
 				</div>
 			</section>
-			<!-- 新創分眾 服務指南 end -->
+			<!-- 新創分眾 服務 end -->
 			<!-- 最新動態 start -->
 			<section class="section section--news">
 				<div class="wrapper">
 					<div class="section__title">
 						<h2 class="topic"><span>最新動態</span></h2>
-						<p class="description">瀏覽創業相關訊息報導，包括政府政策、相關新聞、創業新知、活動課程、競賽或徵件等等資訊。</p>
+						<p class="description">瀏覽創業相關訊息報導，包括政府政策、相關新聞、創業新知、活動課程、競賽或徵件等等資訊</p>
 					</div>
 					<div class="section__content">
 						<div class="outsourcingTab outsourcingTab--news">
@@ -614,27 +616,27 @@
 							</div>
 							<ul class="nav" id="newsTabList" role="tablist">
 								<li class="nav-item" role="presentation">
-								  	<button class="outsourcingBtn outsourcingBtn--newsNav active" id="news-tab-01" data-toggle="tab" data-target="#news01" type="button" role="tab" aria-controls="news01" aria-selected="true" title="種子期">
+								  	<button class="outsourcingBtn outsourcingBtn--newsNav active" id="news-tab-01" data-toggle="tab" data-target="#news01" type="button" role="tab" aria-controls="news01" aria-selected="true" title="新聞快訊">
 										<span class="outsourcingBtn__text">新聞快訊</span>
 									</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="outsourcingBtn outsourcingBtn--newsNav" id="profile-tab" data-toggle="tab" data-target="#news02" type="button" role="tab" aria-controls="news02" aria-selected="false" title="創建期">
+									<button class="outsourcingBtn outsourcingBtn--newsNav" id="profile-tab" data-toggle="tab" data-target="#news02" type="button" role="tab" aria-controls="news02" aria-selected="false" title="創業專欄">
 										<span class="outsourcingBtn__text">創業專欄</span>
 									</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="outsourcingBtn outsourcingBtn--newsNav" id="messages-tab" data-toggle="tab" data-target="#news03" type="button" role="tab" aria-controls="news03" aria-selected="false" title="成長期">
+									<button class="outsourcingBtn outsourcingBtn--newsNav" id="messages-tab" data-toggle="tab" data-target="#news03" type="button" role="tab" aria-controls="news03" aria-selected="false" title="活動課程">
 										<span class="outsourcingBtn__text">活動課程</span>
 									</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="outsourcingBtn outsourcingBtn--newsNav" id="settings-tab" data-toggle="tab" data-target="#news04" type="button" role="tab" aria-controls="news04" aria-selected="false" title="擴張期">
+									<button class="outsourcingBtn outsourcingBtn--newsNav" id="settings-tab" data-toggle="tab" data-target="#news04" type="button" role="tab" aria-controls="news04" aria-selected="false" title="競賽/徵件">
 										<span class="outsourcingBtn__text">競賽/徵件</span>
 									</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="outsourcingBtn outsourcingBtn--newsNav" id="settings-tab" data-toggle="tab" data-target="#news05" type="button" role="tab" aria-controls="news05" aria-selected="false" title="擴張期">
+									<button class="outsourcingBtn outsourcingBtn--newsNav" id="settings-tab" data-toggle="tab" data-target="#news05" type="button" role="tab" aria-controls="news05" aria-selected="false" title="公告">
 										<span class="outsourcingBtn__text">公告</span>
 									</button>
 								</li>
@@ -645,38 +647,38 @@
 									<div class="newsBox">
 										<ul class="newsBox__links">
 											<li>
-												<a href="#" class="newsLink newsLink--idx" title="">
+												<a href="#" class="newsLink newsLink--idx" title="創業工作坊-如何透過食品衛生管理提升食品安全的境界">
 													<span class="newsLink__date">2024.03.29</span>
 													<span class="newsLink__topic">創業工作坊-如何透過食品衛生管理提升食品安全的境界</span>
 												</a>
 											</li>
 											<li>
-												<a href="#" class="newsLink newsLink--idx" title="">
+												<a href="#" class="newsLink newsLink--idx" title="2024 EE創意挑戰賽(EE Challenge: AIoT) 開放報名嘍！">
 													<span class="newsLink__date">2024.03.21</span>
 													<span class="newsLink__topic">2024 EE創意挑戰賽(EE Challenge: AIoT) 開放報名嘍！</span>
 												</a>
 											</li>
 											<li>
-												<a href="#" class="newsLink newsLink--idx" title="">
+												<a href="#" class="newsLink newsLink--idx" title="透過花東基金融資保證 協助花蓮受災企業重建">
 													<span class="newsLink__date">2024.03.16</span>
 													<span class="newsLink__topic">透過花東基金融資保證 協助花蓮受災企業重建</span>
 												</a>
 											</li>
 											<li>
-												<a href="#" class="newsLink newsLink--idx" title="">
+												<a href="#" class="newsLink newsLink--idx" title="新北創力坊第 20 期進駐團隊招募開始 專業顧問、便利空間 在創業路上助你一臂之力">
 													<span class="newsLink__date">2024.03.11</span>
 													<span class="newsLink__topic">新北創力坊第 20 期進駐團隊招募開始 專業顧問、便利空間 在創業路上助你一臂之力</span>
 												</a>
 											</li>
 											<li>
-												<a href="#" class="newsLink newsLink--idx" title="">
+												<a href="#" class="newsLink newsLink--idx" title="【新創資源即時包】 113年4月全國創業資源資訊一次瀏覽">
 													<span class="newsLink__date">2024.03.01</span>
 													<span class="newsLink__topic">【新創資源即時包】 113年4月全國創業資源資訊一次瀏覽</span>
 												</a>
 											</li>
 										</ul>
 										<div class="newsBox__action">
-											<a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=1" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+											<a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=1" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 										</div>
 									</div>
 								</div>
@@ -684,56 +686,56 @@
 								<div class="tab-pane fade" id="news02" role="tabpanel" aria-labelledby="news-tab-02">
 									<ul class="newsBox__links">
 										<li>
-											<a href="#" class="newsLink newsLink--idx" title="">
+											<a href="#" class="newsLink newsLink--idx" title="新聞標題">
 												<span class="newsLink__date">2024.03.29</span>
 												<span class="newsLink__topic">新聞標題</span>
 											</a>
 										</li>
 									</ul>
 									<div class="newsBox__action">
-										<a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=2" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+										<a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=2" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 									</div>
 								</div>
 								<!-- 最新動態-活動課程 -->
 								<div class="tab-pane fade" id="news03" role="tabpanel" aria-labelledby="news-tab-03">
 									<ul class="newsBox__links">
 										<li>
-											<a href="#" class="newsLink newsLink--idx" title="">
+											<a href="#" class="newsLink newsLink--idx" title="新聞標題">
 												<span class="newsLink__date">2024.03.29</span>
 												<span class="newsLink__topic">新聞標題</span>
 											</a>
 										</li>
 									</ul>
 									<div class="newsBox__action">
-										<a href="https://startup.sme.gov.tw/home/modules/calendar/" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+										<a href="https://startup.sme.gov.tw/home/modules/calendar/" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 									</div>
 								</div>
 								<!-- 最新動態-競賽/徵件 -->
 								<div class="tab-pane fade" id="news04" role="tabpanel" aria-labelledby="news-tab-04">
 									<ul class="newsBox__links">
 										<li>
-											<a href="#" class="newsLink newsLink--idx" title="">
+											<a href="#" class="newsLink newsLink--idx" title="新聞標題">
 												<span class="newsLink__date">2024.03.29</span>
 												<span class="newsLink__topic">新聞標題</span>
 											</a>
 										</li>
 									</ul>
 									<div class="newsBox__action">
-										<a href="#" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+										<a href="#" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 									</div>
 								</div>
 								<!-- 最新動態-公告 -->
 								<div class="tab-pane fade" id="news05" role="tabpanel" aria-labelledby="news-tab-05">
 									<ul class="newsBox__links">
 										<li>
-											<a href="#" class="newsLink newsLink--idx" title="">
+											<a href="#" class="newsLink newsLink--idx" title="新聞標題">
 												<span class="newsLink__date">2024.03.29</span>
 												<span class="newsLink__topic">新聞標題</span>
 											</a>
 										</li>
 									</ul>
 									<div class="newsBox__action">
-										<a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=3" class="outsourcingBtn outsourcingBtn--moreList"><span class="outsourcingBtn__text">更多資訊</span></a>
+										<a href="https://startup.sme.gov.tw/home/modules/news/index.php?type=3" class="outsourcingBtn outsourcingBtn--moreList" title="更多資訊"><span class="outsourcingBtn__text">更多資訊</span></a>
 									</div>
 								</div>
 							</div>
@@ -748,7 +750,7 @@
 				<div class="wrapper">
 					<div class="section__title">
 						<h2 class="topic"><span>主題策展</span></h2>
-						<p class="description">依據產業趨勢或新創需求所推出的主題專區，可供使用者快速了解相關資訊。</p>
+						<p class="description">依據產業趨勢或新創需求所推出的主題專區，可供使用者快速了解相關資訊</p>
 					</div>
 					<div class="section__content">
 						<div class="swiper-carousel">
@@ -757,7 +759,7 @@
 									<div class="swiper-slide">
 										<a href="https://startup.sme.gov.tw/home/modules/infopack/detail/?sId=108" class="curationItem" title="新手創業">
 											<div class="curationItem__image">
-												<img src="assets/images/img-curation01.jpg">
+												<img src="assets/images/img-curation01.jpg" title="新手創業">
 											</div>
 											<div class="curationItem__text">
 												新手創業
@@ -767,7 +769,7 @@
 									<div class="swiper-slide">
 										<a href="https://startup.sme.gov.tw/home/modules/infopack/detail/?sId=100" class="curationItem" title="新創國際資源">
 											<div class="curationItem__image">
-												<img src="assets/images/img-curation02.jpg">
+												<img src="assets/images/img-curation02.jpg" title="新創國際資源">
 											</div>
 											<div class="curationItem__text">
 												新創國際<br>資源
@@ -777,7 +779,7 @@
 									<div class="swiper-slide">
 										<a href="https://startup.sme.gov.tw/home/event/net_zero/" class="curationItem" title="淨零排放">
 											<div class="curationItem__image">
-												<img src="assets/images/img-curation03.jpg">
+												<img src="assets/images/img-curation03.jpg" title="淨零排放">
 											</div>
 											<div class="curationItem__text">
 												淨零排放
@@ -787,7 +789,7 @@
 									<div class="swiper-slide">
 										<a href="https://startup.sme.gov.tw/home/modules/highlight/" class="curationItem" title="創業亮點">
 											<div class="curationItem__image">
-												<img src="assets/images/img-curation04.jpg">
+												<img src="assets/images/img-curation04.jpg" title="創業亮點">
 											</div>
 											<div class="curationItem__text">
 												創業亮點
@@ -815,30 +817,30 @@
 				<div class="wrapper">
 					<div class="section__title">
 						<h2 class="topic"><span>推動成果數據</span></h2>
-						<p class="description">本站至今的相關整合成果。</p>
+						<p class="description">本站至今的相關整合成果</p>
 					</div>
 					<div class="section__content">
 						<ul class="resultList">
 							<li>
-								<a href="#" class="resultItem">
+								<a href="#" class="resultItem" title="88筆串連資源">
 									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="80">80</span><span class="unit">筆</span></div>
 									<div class="resultItem__content">串連資源</div>
 								</a>
 							</li>
 							<li>
-								<a href="https://startup.sme.gov.tw/home/modules/funding/" class="resultItem">
+								<a href="https://startup.sme.gov.tw/home/modules/funding/" class="resultItem" title="127筆創業基金">
 									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="127">127</span><span class="unit">筆</span></div>
 									<div class="resultItem__content">創業基金</div>
 								</a>
 							</li>
 							<li>
-								<a href="https://startup.sme.gov.tw/home/modules/rmap/creative_space_list.php" class="resultItem">
+								<a href="https://startup.sme.gov.tw/home/modules/rmap/creative_space_list.php" class="resultItem" title="393家創業機構">
 									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="393">393</span><span class="unit">家</span></div>
 									<div class="resultItem__content">創業機構</div>
 								</a>
 							</li>
 							<li>
-								<a href="https://startup.sme.gov.tw/home/modules/highlight/" class="resultItem">
+								<a href="https://startup.sme.gov.tw/home/modules/highlight/" class="resultItem" title="459件輔導亮點">
 									<div class="resultItem__digital"><span class="value" data-js-count="true" data-count="459">459</span><span class="unit">件</span></div>
 									<div class="resultItem__content">輔導亮點</div>
 								</a>
@@ -853,7 +855,7 @@
 				<div class="wrapper">
 					<div class="section__title">
 						<h2 class="topic"><span>訂閱電子報</span></h2>
-						<p class="description">與您分享政府近期新創資訊，歡迎訂閱。每月15日發行精選創業相關政策、徵件補助、活動及花絮、輔導亮點與專欄好文等動態訊息。適合(欲)創業或關心新創政策新聞、活動訊息的您。</p>
+						<p class="description">與您分享政府近期新創資訊，歡迎訂閱。每月15日發行精選創業相關政策、徵件補助、活動及花絮、輔導亮點與專欄好文等動態訊息。適合(欲)創業或關心新創政策新聞、活動訊息的您</p>
 						<div class="action">
 							<a href="https://startup.sme.gov.tw/home/modules/epaper/subscription.php" title="立即訂閱" class="outsourcingBtn outsourcingBtn--moreLink"><span class="outsourcingBtn__text">立即訂閱</span></a>
 						</div>
@@ -874,16 +876,16 @@
 					</div>
 					<div class="linkSection__content">
 						<ul class="linkList linkList--quick" data-collapse-item="target" data-collapse-name="quicklink">
-							<li class="linkList__item"><a href="https://ntacademy.sme.gov.tw/" title="N世代學苑">N世代學苑</a></li>
+							<li class="linkList__item"><a href="https://ntacademy.sme.gov.tw/" title="另開新頁_N世代學苑" target="_blank">N世代學苑</a></li>
 							<li class="linkList__item"><a href="https://startup.sme.gov.tw/en/" title="Startup Portal Taiwan">Startup Portal Taiwan</a></li>
-							<li class="linkList__item"><a href="https://woman.sysme.org.tw/" title="女性創業飛雁計畫">女性創業飛雁計畫</a></li>
-							<li class="linkList__item"><a href="https://leader.sme.gov.tw/" title="中小企業經營領袖研習班">中小企業經營領袖研習班</a></li>
-							<li class="linkList__item"><a href="https://si.taiwan.gov.tw/" title="社會創新平台">社會創新平台</a></li>
-							<li class="linkList__item"><a href="https://incubator.sme.gov.tw/" title="創育加速卓越服務網">創育加速卓越服務網</a></li>
-							<li class="linkList__item"><a href="https://www.hbspic.org.tw/" title="新竹生醫產業及育成中心">新竹生醫產業及育成中心</a></li>
-							<li class="linkList__item"><a href="https://startup.sme.gov.tw/startupaward/" title="新創事業獎">新創事業獎</a></li>
-							<li class="linkList__item"><a href="https://spp.org.tw/" title="新創採購">新創採購</a></li>
-							<li class="linkList__item"><a href="https://taccplus.com/" title="臺灣最新型加速器(TAcc+)">臺灣最新型加速器(TAcc+)</a></li>
+							<li class="linkList__item"><a href="https://woman.sysme.org.tw/" title="另開新頁_女性創業飛雁計畫" target="_blank">女性創業飛雁計畫</a></li>
+							<li class="linkList__item"><a href="https://leader.sme.gov.tw/" title="另開新頁_中小企業經營領袖研習班" target="_blank">中小企業經營領袖研習班</a></li>
+							<li class="linkList__item"><a href="https://si.taiwan.gov.tw/" title="另開新頁_社會創新平台" target="_blank">社會創新平台</a></li>
+							<li class="linkList__item"><a href="https://incubator.sme.gov.tw/" title="另開新頁_創育加速卓越服務網" target="_blank">創育加速卓越服務網</a></li>
+							<li class="linkList__item"><a href="https://www.hbspic.org.tw/" title="另開新頁_新竹生醫產業及育成中心" target="_blank">新竹生醫產業及育成中心</a></li>
+							<li class="linkList__item"><a href="https://startup.sme.gov.tw/startupaward/" title="另開新頁_新創事業獎" target="_blank">新創事業獎</a></li>
+							<li class="linkList__item"><a href="https://spp.org.tw/" title="另開新頁_新創採購" target="_blank">新創採購</a></li>
+							<li class="linkList__item"><a href="https://taccplus.com/" title="另開新頁_臺灣最新型加速器(TAcc+)" target="_blank">臺灣最新型加速器(TAcc+)</a></li>
 						</ul>
 						<div class="action">
 							<button type="button" title="展開" class="outsourcingBtn outsourcingBtn--collapseTrigger" data-collapse-item="trigger" data-collapse-target="quicklink"><span class="outsourcingBtn__text" data-collapse-item="title">展開</span></button>
@@ -900,12 +902,12 @@
 					</div>
 					<div class="linkSection__content">
 						<ul class="linkList linkList--related">
-							<li class="linkList__item"><a href="https://www.moea.gov.tw/" title="經濟部">經濟部</a></li>
-							<li class="linkList__item"><a href="https://www.sbir.org.tw/" title="SBIR">SBIR</a></li>
-							<li class="linkList__item"><a href="https://onestop.nat.gov.tw/oss/identity/Identity/init.do" title="工商登記一站式">工商登記一站式</a></li>
-							<li class="linkList__item"><a href="https://findit.org.tw/" title="Findit">Findit</a></li>
-							<li class="linkList__item"><a href="https://www.startupislandtaiwan.info/" title="Startup Island TAIWAN">Startup Island TAIWAN</a></li>
-							<li class="linkList__item"><a href="https://www.angelinvestment.org.tw/" title="創業天使投資">創業天使投資</a></li>
+							<li class="linkList__item"><a href="https://www.moea.gov.tw/" title="另開新頁_經濟部" target="_blank">經濟部</a></li>
+							<li class="linkList__item"><a href="https://www.sbir.org.tw/" title="另開新頁_SBIR小型企業創新研發計畫" target="_blank">SBIR小型企業創新研發計畫</a></li>
+							<li class="linkList__item"><a href="https://onestop.nat.gov.tw/oss/identity/Identity/init.do" title="另開新頁_商工登記一站式服務" target="_blank">商工登記一站式服務</a></li>
+							<li class="linkList__item"><a href="https://findit.org.tw/" title="另開新頁_Findit早期資金資訊平台" target="_blank">Findit早期資金資訊平台</a></li>
+							<li class="linkList__item"><a href="https://www.startupislandtaiwan.info/" title="另開新頁_Startup Island TAIWAN" target="_blank">Startup Island TAIWAN</a></li>
+							<li class="linkList__item"><a href="https://www.angelinvestment.org.tw/" title="另開新頁_國發基金創業天使投資" target="_blank">創業天使投資</a></li>
 						</ul>
 						<div class="action">
 							<a href="https://startup.sme.gov.tw/home/modules/article/friendlyLink.php" title="更多相關網站" class="outsourcingBtn outsourcingBtn--moreLink"><span class="outsourcingBtn__text">更多相關網站</span></a>
@@ -931,7 +933,7 @@
 					<ul class="datas">
 						<li>
 							<div class="datas__label">主辦單位：</div>
-							<div class="datas__content"><a href="https://www.sme.gov.tw/" title="經濟部中小及新創企業署" class="logo logo--sme"><img src="assets/images/logo-sme.png" alt="經濟部中小及新創企業署"></a></div>
+							<div class="datas__content"><a href="https://www.sme.gov.tw/" class="logo logo--sme" title="另開新頁_主辦單位" target="_blank"><img src="assets/images/logo-sme.png" alt="經濟部中小及新創企業署"></a></div>
 						</li>
 						<li>
 							<div class="datas__label">服務電話：</div>
@@ -947,10 +949,10 @@
 		</footer>
 		<div class="outsourcing_sideFunc">
 			<ul class="sideFuncs">
-				<li><a href="https://www.facebook.com/StartUpTaiwan" class="sideIcon sideIcon--sns" target="_blank" title="創業圓夢 Start-up Hub"><img src="assets/images/icon-sidebar_fb.svg" alt="創業圓夢 Start-up Hub" class="sideIcon__img"></a></li>
-				<li><a href="https://page.line.me/204hsqmc?openQrModal=true" class="sideIcon sideIcon--sns" target="_blank" title="創業圓夢 LINE官方帳號"><img src="assets/images/icon-sidebar_line.svg" alt="創業圓夢 LINE官方帳號" class="sideIcon__img"></a></li>
-				<li><button type="button" class="sideIcon sideIcon--func" data-js-item="scrollTop"><img src="assets/images/icon-sidebar_gotop.svg" class="sideIcon__img" alt="返回頂端"></button></li>
-				<li><button type="button" class="sideIcon sideIcon--chat" data-js-item="chat"><span class="sideIcon__text">客服</span></button></li>
+				<li><a href="https://www.facebook.com/StartUpTaiwan" class="sideIcon sideIcon--sns" title="FB 創業圓夢 Start-up Hub" target="_blank"><img src="assets/images/icon-sidebar_fb.svg" alt="創業圓夢 Start-up Hub" class="sideIcon__img"></a></li>
+				<li><a href="https://page.line.me/204hsqmc?openQrModal=true" class="sideIcon sideIcon--sns" title="創業圓夢 LINE官方帳號" target="_blank"><img src="assets/images/icon-sidebar_line.svg" alt="創業圓夢 LINE官方帳號" class="sideIcon__img"></a></li>
+				<li><button type="button" class="sideIcon sideIcon--func" title="返回頂端" data-js-item="scrollTop"><img src="assets/images/icon-sidebar_gotop.svg" class="sideIcon__img" alt="返回頂端"></button></li>
+				<li><button type="button" class="sideIcon sideIcon--chat" title="線上客服" data-js-item="chat"><span class="sideIcon__text">客服</span></button></li>
 			</ul>
 		</div>
 		<div class="outsourcing_popup" data-popup-id="group" data-popup-name="report">

@@ -1473,6 +1473,10 @@ body.openPopup, body.openAlert {
   font-size: 0;
   margin: 0;
 }
+.outsourcing_body img {
+  display: block;
+  width: 100%;
+}
 .outsourcing_body .wrapper {
   max-width: 1200px;
   margin: 0 auto;
