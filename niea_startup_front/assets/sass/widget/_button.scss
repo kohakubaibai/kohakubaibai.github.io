@@ -271,6 +271,20 @@ $fm-roboto: "Roboto", sans-serif;
                 width: 60px;
                 height: 60px;
                 margin-bottom: 10px;
+                background-size: 60px 60px;
+
+                &--service01 {
+                    background-image: url('#{$path}/img-service-1.svg');
+                }
+                &--service02 {
+                    background-image: url('#{$path}/img-service-2.svg');
+                }
+                &--service03 {
+                    background-image: url('#{$path}/img-service-3.svg');
+                }
+                &--service04 {
+                    background-image: url('#{$path}/img-service-4.svg');
+                }
             }
 
             .outsourcingBtn__text {

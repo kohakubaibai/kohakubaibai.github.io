@@ -10,11 +10,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           box-sizing: border-box;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
 .openNav .outsourcing_header .header_nav {
   right: 0;
   visibility: visible;
@@ -1437,6 +1432,19 @@ body.openPopup, body.openAlert {
     width: 60px;
     height: 60px;
     margin-bottom: 10px;
+    background-size: 60px 60px;
+  }
+  .outsourcingBtn--serviceNav .outsourcingBtn__icon--service01 {
+    background-image: url("../images/img-service-1.svg");
+  }
+  .outsourcingBtn--serviceNav .outsourcingBtn__icon--service02 {
+    background-image: url("../images/img-service-2.svg");
+  }
+  .outsourcingBtn--serviceNav .outsourcingBtn__icon--service03 {
+    background-image: url("../images/img-service-3.svg");
+  }
+  .outsourcingBtn--serviceNav .outsourcingBtn__icon--service04 {
+    background-image: url("../images/img-service-4.svg");
   }
   .outsourcingBtn--serviceNav .outsourcingBtn__text {
     font-size: 112.5%;
