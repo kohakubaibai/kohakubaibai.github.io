@@ -1911,10 +1911,6 @@ body.openPopup, body.openAlert {
 .outsourcing_main .section--feature .wrapper {
   padding-bottom: 55px;
   overflow: hidden;
-  background-image: url("../images/bg-circle_feature.png");
-  background-size: 355px 164px;
-  background-repeat: no-repeat;
-  background-position: center calc(50% - 30px);
 }
 .outsourcing_main .section--feature .section__content {
   margin-top: 40px;
@@ -2060,8 +2056,8 @@ body.openPopup, body.openAlert {
 }
 .outsourcing_main .newsLink__date {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 76px;
-          flex: 0 0 76px;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
   font-size: 87.5%;
   font-weight: 400;
   line-height: 1.5;
@@ -2512,6 +2508,8 @@ body.openPopup, body.openAlert {
   }
   .outsourcing_main .section--feature .wrapper {
     padding-bottom: 140px;
+    background-image: url("../images/bg-circle_feature.png");
+    background-repeat: no-repeat;
     background-size: 766px 354px;
     background-position: right center;
   }

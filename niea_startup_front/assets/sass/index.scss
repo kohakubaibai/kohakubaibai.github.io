@@ -497,10 +497,10 @@ $fm-roboto: "Roboto", sans-serif;
             .wrapper {
                 padding-bottom: 55px;
                 overflow: hidden;
-                background-image: url('#{$path}/bg-circle_feature.png');
-                background-size: 355px 164px;
-                background-repeat: no-repeat;
-                background-position: center calc(50% - 30px);
+                // background-image: url('#{$path}/bg-circle_feature.png');
+                // background-size: 355px 164px;
+                // background-repeat: no-repeat;
+                // background-position: center calc(50% - 30px);
             }
 
             .section__content {
@@ -652,7 +652,7 @@ $fm-roboto: "Roboto", sans-serif;
         justify-content: flex-start;
 
         &__date {
-            flex: 0 0 76px;
+            flex: 0 0 90px;
             @include fs(14);
             font-weight: 400;
             line-height: calc(21 / 14);
@@ -1196,6 +1196,8 @@ $fm-roboto: "Roboto", sans-serif;
                 
                 .wrapper {
                     padding-bottom: 140px;
+                    background-image: url('#{$path}/bg-circle_feature.png');
+                    background-repeat: no-repeat;
                     background-size: 766px 354px;
                     background-position: right center;
 
