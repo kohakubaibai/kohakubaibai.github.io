@@ -18,6 +18,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     box-sizing: border-box;
 }
 
+.outsourcing_body {
+    .accesskey {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: transparent;
+    } 
+}
+
 .openNav {
     .outsourcing_header {
 
@@ -36,13 +45,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 100%;
     z-index: 100;
     box-shadow: 0 0 4px rgba(0,0,0,.25);
-
-    .accesskey {
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: $java700;
-    } 
 
     .header_siteFunction {
         background-color: $java700;
@@ -555,10 +557,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
         &.is-scroll {
             box-shadow: 0 4px 10px rgba(0,0,0,.25);
-        }
-
-        .accesskey {
-            color: $white;
         }
 
         .header_siteFunction {
