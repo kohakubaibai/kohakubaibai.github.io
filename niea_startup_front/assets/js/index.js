@@ -8,11 +8,11 @@ $(function () {
         autoResize: false,
         navigation: {
             nextEl: "#kv-swiper-navigation_next",
-            prevEl: "#kv-swiper-navigation_prev",
+            prevEl: "#kv-swiper-navigation_prev"
         },
         speed: 800,
         autoplay: {
-            delay: 8000,
+            delay: 8000
         },
         mousewheel: true,
         pagination: {
@@ -22,17 +22,18 @@ $(function () {
         },
     });
 
-    //新創分眾服務指南tab設定
+    //新創分眾服務tab設定
     $('#serviceTabList button').on('click', function (event) {
-        event.preventDefault()
-        $(this).tab('show')
+        event.preventDefault();
+        $(this).tab('show');
     });
 
     //最新動態tab設定
     $('#newsTabList button').on('click', function (event) {
-        event.preventDefault()
-        $(this).tab('show')
+        event.preventDefault();
+        $(this).tab('show');
     });
+
     //最新動態在手機模式下以下拉選單切換tab
     $('[data-nav-select="true"]').on('change', function(){
         var selectCate = $(this).find(':selected').val();
@@ -47,23 +48,23 @@ $(function () {
         spaceBetween: 5,
         speed: 800,
         autoplay: {
-            delay: 8000,
+            delay: 8000
         },
         navigation: {
             nextEl: "#curation-swiper-navigation_next",
-            prevEl: "#curation-swiper-navigation_prev",
+            prevEl: "#curation-swiper-navigation_prev"
         },
         pagination: {
             el: "#curation-swiper-pagination",
-            clickable: true,
+            clickable: true
         },
         breakpoints: {
             1199: {
                 loop: true,
                 slidesPerView: 1,
                 pagination: {
-                    dynamicBullets: false,
-                },
+                    dynamicBullets: false
+                }
             }
             ,
             1920: {
@@ -72,8 +73,8 @@ $(function () {
                 watchOverflow: false,
                 pagination: {
                     dynamicBullets: true,
-                    dynamicMainBullets: 1,
-                },
+                    dynamicMainBullets: 1
+                }
             }
         },
     });
@@ -112,11 +113,5 @@ $(function () {
             $(this).addClass('is-active').children('[data-collapse-item="title"]').text('收合');
             $('[data-collapse-name="' + target + '"]').children('li').slice(8,totalLength).fadeIn(200);
         }
-    });
-
-    //浮動選單:捲動至最上方
-    $('[data-js-item="scrollTop"]').on('click', function(){
-        $('html, body').animate({scrollTop:0}, '300');
-        return false;
     });
 });
