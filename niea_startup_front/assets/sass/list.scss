@@ -965,7 +965,22 @@ $fm-roboto: "Roboto", sans-serif;
 
         .planCard {
 
+            &__hashtags {
+    
+                .hashtags {
+                    @include transition(all,.3s,ease-in);
+
+                    &:hover {
+                        background-color: #95DCD8
+                    }
+                }
+            }
+
             &__link {
+
+                .cardTitle {
+                    @include transition(all,.3s,ease-in);
+                }
 
                 .mainInfo {
                     flex: 0 0 calc(100% - 96px);
@@ -974,6 +989,12 @@ $fm-roboto: "Roboto", sans-serif;
 
                 .sponsorLogo {
                     flex: 0 0 96px;
+                }
+
+                &:hover {
+                    .cardTitle {
+                        color: $java600;
+                    }
                 }
             }
 

@@ -1133,6 +1133,7 @@ body.openPopup, body.openAlert {
   position: relative;
 }
 .selectWrapItem:after {
+  cursor: pointer;
   content: "";
   display: block;
   position: absolute;
@@ -1262,6 +1263,9 @@ body.openPopup, body.openAlert {
   }
   .fancyForm--selectSearch {
     padding: 7px 8px;
+  }
+  .fancyForm--selectSearch, .fancyForm--selectCity, .fancyForm--selectSort {
+    cursor: pointer;
   }
   .reportForm__head {
     text-align: center;
@@ -2637,6 +2641,17 @@ body.openPopup, body.openAlert {
         -ms-flex: 0 0 142px;
             flex: 0 0 142px;
   }
+  .outsourcing_main .planCard__hashtags .hashtags {
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  .outsourcing_main .planCard__hashtags .hashtags:hover {
+    background-color: #95DCD8;
+  }
+  .outsourcing_main .planCard__link .cardTitle {
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
   .outsourcing_main .planCard__link .mainInfo {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(100% - 96px);
@@ -2647,6 +2662,9 @@ body.openPopup, body.openAlert {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 96px;
             flex: 0 0 96px;
+  }
+  .outsourcing_main .planCard__link:hover .cardTitle {
+    color: #15868C;
   }
   .outsourcing_main .planCard .mainInfo .mainInfo__title {
     margin-bottom: 10px;

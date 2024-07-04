@@ -1133,6 +1133,7 @@ body.openPopup, body.openAlert {
   position: relative;
 }
 .selectWrapItem:after {
+  cursor: pointer;
   content: "";
   display: block;
   position: absolute;
@@ -1262,6 +1263,9 @@ body.openPopup, body.openAlert {
   }
   .fancyForm--selectSearch {
     padding: 7px 8px;
+  }
+  .fancyForm--selectSearch, .fancyForm--selectCity, .fancyForm--selectSort {
+    cursor: pointer;
   }
   .reportForm__head {
     text-align: center;
