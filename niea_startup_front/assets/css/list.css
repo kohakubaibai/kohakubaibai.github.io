@@ -1745,6 +1745,17 @@ body.openPopup, body.openAlert {
     color: #156A70;
   }
 }
+body {
+  scroll-behavior: auto;
+}
+
+.opencondition {
+  width: 100%;
+  height: 100dvh;
+  min-height: unset !important;
+  overflow: hidden;
+  position: static !important;
+}
 .opencondition .outsourcing_main {
   z-index: 110;
 }
@@ -1788,6 +1799,9 @@ body.openPopup, body.openAlert {
   margin-bottom: 0;
   border-radius: 0;
   overflow: scroll;
+}
+.outsourcing_breadcrumb .breadcrumb::-webkit-scrollbar {
+  display: none;
 }
 .outsourcing_breadcrumb .breadcrumb > li {
   -webkit-box-align: center;
@@ -1850,7 +1864,6 @@ body.openPopup, body.openAlert {
   width: 100%;
   height: 100dvh;
   z-index: 105;
-  padding: 40px 17px 0;
   overflow: auto;
   background-color: #F6F6F6;
   -webkit-overflow-scrolling: touch;
@@ -1938,10 +1951,13 @@ body.openPopup, body.openAlert {
   color: #888888;
   font-size: 112.5%;
   line-height: 1.2;
+  padding: 40px 17px 0;
+}
+.outsourcing_main .filterForm .filterForm__content .filterBlock {
+  padding: 0 17px;
 }
 .outsourcing_main .filterForm--condition .filterBlock {
   margin-bottom: 20px;
-  border-bottom: 1px solid #E7E7E7;
 }
 .outsourcing_main .filterForm--condition .filterBlock:last-of-type {
   border-bottom: none;
@@ -1954,6 +1970,7 @@ body.openPopup, body.openAlert {
 }
 .outsourcing_main .filterForm--condition .filterBlock__content {
   margin-top: 15px;
+  border-bottom: 1px solid #E7E7E7;
 }
 .outsourcing_main .filterForm--condition .filterBlock .filterOption {
   margin: 0;
@@ -2024,7 +2041,6 @@ body.openPopup, body.openAlert {
   width: 100%;
   height: 100dvh;
   z-index: 105;
-  padding: 40px 17px 0;
   overflow: auto;
   background-color: #F6F6F6;
   -webkit-overflow-scrolling: touch;
@@ -2520,8 +2536,13 @@ body.openPopup, body.openAlert {
     top: 150px;
     overflow: scroll;
   }
-  .outsourcing_main .filterForm--condition .filterBlock {
+  .outsourcing_main .filterForm--condition .filterForm__content .filterBlock {
     padding: 15px 15px 5px;
+  }
+  .outsourcing_main .filterForm--condition .filterForm__content .filterBlock__content {
+    border-bottom: none;
+  }
+  .outsourcing_main .filterForm--condition .filterBlock {
     border-bottom: 1px solid #B0B0B0;
     margin-bottom: 0;
   }

@@ -12,7 +12,17 @@ $path: '../images';
 $fm-noto: 'Noto Sans TC', '微軟正黑體', sans-serif;
 $fm-roboto: "Roboto", sans-serif;
 
+body {
+    scroll-behavior: auto;
+}
+
 .opencondition {
+    width: 100%;
+    height: 100dvh;
+    min-height: unset !important;
+    overflow: hidden;
+    position: static !important;
+
     .outsourcing_main {
         z-index: 110;
 
@@ -51,7 +61,6 @@ $fm-roboto: "Roboto", sans-serif;
     top: 48px;
     width: 100%;
 
-
     .wrapper {
         padding: 0 20px;
     }
@@ -63,6 +72,10 @@ $fm-roboto: "Roboto", sans-serif;
         margin-bottom: 0;
         border-radius: 0;
         overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         & > li {
             align-items: center;
@@ -130,7 +143,6 @@ $fm-roboto: "Roboto", sans-serif;
                 width: 100%;
                 height: 100dvh;
                 z-index: 105;
-                padding: 40px 17px 0;
                 overflow: auto;
                 background-color: $black50;
                 -webkit-overflow-scrolling: touch;
@@ -222,12 +234,19 @@ $fm-roboto: "Roboto", sans-serif;
             color: $black400;
             @include fs(18);
             line-height: 1.2;
+            padding: 40px 17px 0;
+        }
+
+        .filterForm__content {
+
+            .filterBlock {
+                padding: 0 17px;
+            }
         }
 
         &--condition {
             .filterBlock {
                 margin-bottom: 20px;
-                border-bottom: 1px solid $black100;
     
                 &:last-of-type {
                     border-bottom: none
@@ -242,6 +261,7 @@ $fm-roboto: "Roboto", sans-serif;
     
                 &__content {
                     margin-top: 15px;
+                    border-bottom: 1px solid $black100;
                 }
     
                 .filterOption {
@@ -302,7 +322,6 @@ $fm-roboto: "Roboto", sans-serif;
             width: 100%;
             height: 100dvh;
             z-index: 105;
-            padding: 40px 17px 0;
             overflow: auto;
             background-color: $black50;
             -webkit-overflow-scrolling: touch;
@@ -840,8 +859,18 @@ $fm-roboto: "Roboto", sans-serif;
                 top: 150px;
                 overflow: scroll;
 
+                .filterForm__content {
+                    
+                    .filterBlock {
+                        padding: 15px 15px 5px;
+                        
+                        &__content {
+                            border-bottom: none;
+                        }
+                    }
+                }
+
                 .filterBlock {
-                    padding: 15px 15px 5px;
                     border-bottom: 1px solid $black300;
                     margin-bottom: 0;
     
