@@ -2052,6 +2052,9 @@ body {
   top: 20px;
   right: 20px;
 }
+.outsourcing_main .filterForm--search .filterForm__content {
+  padding: 0 17px;
+}
 .outsourcing_main .filterForm--search .textInputWrap {
   position: relative;
   border-bottom: 1px solid #888888;
@@ -2587,6 +2590,7 @@ body {
             align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    padding: 0;
   }
   .outsourcing_main .filterForm--search .textInputWrap {
     -webkit-box-flex: 0;

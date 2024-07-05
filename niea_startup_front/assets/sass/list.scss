@@ -332,6 +332,10 @@ body {
                 top: 20px;
                 right: 20px;
             }
+
+            .filterForm__content {
+                padding: 0 17px;
+            }
     
             .textInputWrap {
                 position: relative;
@@ -918,6 +922,7 @@ body {
                     display: flex;
                     align-items: center;
                     flex-wrap: nowrap;
+                    padding: 0;
                 }
 
                 .textInputWrap {
