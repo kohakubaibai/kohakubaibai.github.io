@@ -341,3 +341,31 @@ $mb_s: 375px;
     transform: translate(-50%,-50%);
   }
 }
+
+.plan__item {
+  &--offline {
+    .join__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: end;
+      height: 100%;
+      padding-bottom: 40px;
+      
+      .plan__item__list {
+        align-self: flex-start;
+        margin-top: 4px;
+      }
+
+      @include mb-width_l {
+        display: block;
+        height: auto;
+        padding-bottom: 0;
+
+        .plan__item__list {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

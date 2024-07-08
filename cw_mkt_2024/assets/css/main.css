@@ -1220,7 +1220,7 @@ section .intro {
 }
 
 .master__img {
-    width: 270px;
+    width: 310px;
     margin: 0 auto;
     position: relative;
     text-align: center
@@ -1228,7 +1228,7 @@ section .intro {
 
 @media screen and (max-width:768px) {
     .master__img img {
-        width: 200px;
+        width: 240px;
     }
 }
 
