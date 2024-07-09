@@ -2153,6 +2153,7 @@ line-height: 32px;
 @media screen and (max-width:768px){
     .historical .title p{
         padding: 0px;
+        text-align: left;
     }
 }
 
