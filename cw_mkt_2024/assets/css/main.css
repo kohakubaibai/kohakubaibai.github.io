@@ -1806,6 +1806,7 @@ width: 48%;
     height: 0;
     overflow: hidden;
 }
+.faq .card-block,
 .relate .card-block {
     display: -ms-grid;
     display: grid;
@@ -1815,20 +1816,21 @@ width: 48%;
 }
 
 @media screen and (max-width:768px) {
+    .faq .card-block,
     .relate .card-block {
         -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr)
     }
 }
-
+.faq .card-block a,
 .relate .card-block a {
     color: #fff
 }
-
+.faq .card-block a:hover,
 .relate .card-block a:hover {
     color: gold
 }
-
+.faq .card-block .card,
 .relate .card-block .card {
     color: #fff;
     border-radius: 15px;
@@ -1840,11 +1842,13 @@ width: 48%;
 }
 
 @media screen and (max-width:768px) {
+    .faq .card-block .card,
     .relate .card-block .card {
         min-height: 300px
     }
 }
 
+.faq .card-block .card:after,
 .relate .card-block .card:after {
     content: '';
     position: absolute;
@@ -1858,12 +1862,14 @@ width: 48%;
     transition: .3s all
 }
 
+.faq .card-block .card:hover:after,
 .relate .card-block .card:hover:after {
     -webkit-transition: .3s all;
     transition: .3s all;
     opacity: .8
 }
 
+.faq .card-block .card__img,
 .relate .card-block .card__img {
     position: absolute;
     top: 50%;
@@ -1874,6 +1880,7 @@ width: 48%;
     transform: translate(-50%, -50%)
 }
 
+.faq .card-block .card__img img,
 .relate .card-block .card__img img {
     width: 100%;
     height: 100%;
@@ -1881,11 +1888,13 @@ width: 48%;
     object-fit: cover
 }
 
+.faq .card-block .card__intro,
 .relate .card-block .card__intro {
     position: relative;
     z-index: 1
 }
 
+.faq .card-block .card__intro h3,
 .relate .card-block .card__intro h3 {
     margin-top: .5em;
     color: #fff;
@@ -1893,10 +1902,12 @@ width: 48%;
     line-height: 1.5
 }
 @media screen and (max-width:768px) {
+    .faq .card-block .card__intro h3,
     .relate .card-block .card__intro h3 {
         font-size: 17px;
     }
 }
+.faq .card-block .card__btn,
 .relate .card-block .card__btn {
     background: #fff;
     color: #262626;
@@ -1910,6 +1921,7 @@ width: 48%;
     font-size: 15px;
 }
 
+.faq .card-block .card__btn:hover,
 .relate .card-block .card__btn:hover {
     background: #000000;
     color: #ffffff;
@@ -2001,7 +2013,7 @@ line-height: 32px;
 }
 .join .plan{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
 }
