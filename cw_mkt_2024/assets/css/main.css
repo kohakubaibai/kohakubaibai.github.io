@@ -494,7 +494,7 @@ section .intro {
     position: relative;
     display: block;
     margin: 0 auto;
-    padding: 0 30px
+    padding: 0 30px 0 15px;
 }
 
 .menubar .logos {
@@ -998,6 +998,14 @@ section .intro {
     line-height: 1.3rem;
     letter-spacing: 1px;
 }
+
+.main__header .container .main__intro .txt strong {
+    font-size: 17px;
+    color: #3e3a39;
+    line-height: 1.3rem;
+    letter-spacing: 1px;
+}
+
 .main__header .container .main__intro .txt .date{
     font-family: "Noto Serif TC";
     font-size: 22px;
@@ -1506,13 +1514,43 @@ section .intro {
 .about{
     background-color: #d48f16;
 }
-.about .title p{
+.about .title p {
     font-size: 22px;
     font-weight: 400;
     font-family: "Noto Serif TC", serif;
+    text-align: center;
 }
+
+.about .title p.intro {
+    font-size: 18px;
+}
+
+.about .title p.intro strong {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.about .title p.trailer {
+    font-size: 22px;
+}
+
 @media screen and (max-width:660px) {
     .about .title p{
+        font-size: 20px;
+    }
+
+    .about .title p.intro {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .about .title p.intro strong {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .about .title p.trailer {
+        text-align: center;
         font-size: 20px;
     }
 }
@@ -2597,6 +2635,13 @@ body::-webkit-scrollbar {
     background-color: #eea21c;
     text-align: center;
 }
+
+.bottom_btn span {
+    display: block;
+    text-align: left;
+    padding: 0 10px;
+}
+
 .bottom_btn a{
     width: 100%;
     text-align: center;
