@@ -22,7 +22,7 @@ $(function () {
 		$('html,body').animate({ scrollTop: 0 }, 1200);
     });
 
-    var popupType1 = `<div class="pediaTooltip" data-pedia-popupitem="group">
+    var popupType1 = `<div class="pediaTooltip" data-pedia-popupitem="group" gtm-label=":close_gtm">
                         <div class="pediaTooltip__wrapper">
                             <div class="close" data-pedia-popupitem="close"></div>
                             <div class="title">
@@ -38,7 +38,7 @@ $(function () {
                     </div>`
     var popupType2 = `<div class="pediaTooltip" data-pedia-popupitem="group">
                         <div class="pediaTooltip__wrapper">
-                            <div class="close" data-pedia-popupitem="close"></div>
+                            <div class="close" data-pedia-popupitem="close" gtm-label=":title_Zh"></div>
                             <div class="title">
                                 <span class="title__zh">:title_Zh</span>
                                 <span class="title__en">:title_En</span>
@@ -73,7 +73,7 @@ $(function () {
 
         let popupCloseTimeout = null;
 
-        $('[data-pedia-popup="true"]').on('mouseenter', function (e) {
+        $(document).on('mouseenter', '[data-pedia-popup="true"]', function(){
             var pediaword = $(this).data('title');
 
             clearTimout();
@@ -87,9 +87,26 @@ $(function () {
             setPopup($(this));
             console.log($(this))
             openPopup();
-        }).on('mouseleave', function(){
+        }).on('mouseleave', '[data-pedia-popup="true"]', function(){
             popupCloseTimeout = closePopup();
         });
+        // $('[data-pedia-popup="true"]').on('mouseenter', function (e) {
+        //     var pediaword = $(this).data('title');
+
+        //     clearTimout();
+
+        //     if (enterData.pediaword !== pediaword) {
+        //         resetPopup();
+        //     }
+
+        //     enterData.pediaword = pediaword;
+
+        //     setPopup($(this));
+        //     console.log($(this))
+        //     openPopup();
+        // }).on('mouseleave', function(){
+        //     popupCloseTimeout = closePopup();
+        // });
 
         $(document).on('mouseover','[data-pedia-popupitem="group"]', function(e){
             clearTimout();
@@ -126,7 +143,8 @@ $(function () {
                         .replace(':topic1', result.topic1 ?? '')
                         .replace(':link2', result.link2 ?? '')
                         .replace(':topic2', result.topic2 ?? '')
-                        .replace(':more_link', result.moreLink ?? '');
+                        .replace(':more_link', result.moreLink ?? '')
+                        .replace(':close_gtm', result.titleZh ?? '');
             target.closest('li').append(clonePopup);
         }
 

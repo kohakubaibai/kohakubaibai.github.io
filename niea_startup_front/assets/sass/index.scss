@@ -12,26 +12,6 @@ $path: '../images';
 $fm-noto: 'Noto Sans TC', '微軟正黑體', sans-serif;
 $fm-roboto: "Roboto", sans-serif;
 
-.outsourcing_body {
-    background-color: #F6F6F6;
-
-    h1 {
-        font-size: 0;
-        margin: 0;
-    }
-
-    img {
-        display: block;
-        width: 100%;
-    }
-
-    .wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-    }
-}
-
 .el-wrap {
     position: absolute;
     height: 120%;
@@ -70,62 +50,6 @@ $fm-roboto: "Roboto", sans-serif;
             bottom: -20%;
             right: -5%;
             z-index: 1;
-        }
-    }
-}
-
-.outsourcing_sideFunc {
-    position: fixed;
-    bottom: 10%;
-    right: 10px;
-    z-index: 100;
-
-    .sideFuncs {
-        @include list-reset;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-
-        & > li {
-            margin-bottom: 5px;
-        }
-
-        .sideIcon {
-            border: none;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            
-            &__img {
-                width: 100%;
-            }
-
-            &__text {
-                display: none;
-            }
-
-            &--chat {
-                background-color: $tango400;
-
-                &:before {
-                    content: '';
-                    display: block;
-                    width: 18px;
-                    height: 16px;
-                    background-image: url('#{$path}/icon-sidebar_chat.svg');
-                    background-size: 18px 16px;
-                    background-repeat: no-repeat;
-                }
-                .sideIcon__text {
-                    font-weight: 500;
-                    color: $tango900;
-                }
-            }
         }
     }
 }
@@ -350,13 +274,10 @@ $fm-roboto: "Roboto", sans-serif;
                     padding-left: 20px;
                 }
 
-                .searchWrapItem {
-                    &--select {
-
-                        &:after {
-                            right: 14px;
-                            background-image: url('#{$path}/deco-select_news.svg');
-                        }
+                .selectWrapItem {
+                    &:after {
+                        right: 14px;
+                        background-image: url('#{$path}/deco-select_news.svg');
                     }
                 }
             }
@@ -937,66 +858,6 @@ $fm-roboto: "Roboto", sans-serif;
             &.right {
                 bottom: 0;
                 right: 10%;
-            }
-        }
-    }
-
-    .outsourcing_body {
-        background-color: #FAFAFA;
-    }
-
-    .outsourcing_sideFunc {
-        right: 50px;
-
-        .sideFuncs {
-            align-items: flex-end;
-
-            & > li {
-                margin-bottom: 10px;
-            }
-
-            .sideIcon {
-                width: auto;
-                height: auto;
-                border-radius: auto;
-                @include transition(all,.3s,ease-in);
-
-                &:hover {
-                    opacity: 0.8;
-                }
-                
-                &__img {
-                    width: 100%;
-                }
-    
-                &__text {
-                    display: inline;
-                }
-
-                &--sns,
-                &--func {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                }
-    
-                &--chat {
-                    padding: 5px 20px;
-                    border-radius: 30px;
-    
-                    &:before {
-                        width: 17px;
-                        height: 16px;
-                        margin-right: 4px;
-                        background-size: 17px 16px;
-                    }
-
-                    .sideIcon__text {
-                        @include fs(16);
-                        line-height: calc(24 / 16);
-                        font-weight: 500;
-                    }
-                }
             }
         }
     }

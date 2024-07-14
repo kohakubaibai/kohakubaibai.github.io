@@ -4784,6 +4784,7 @@ textbox {
   line-height: 30.6px;
   font-weight: 400;
   text-align: justify;
+  word-break: break-word;
 }
 .pediaTooltip__wrapper .content.is-maintain {
   text-align: center;

@@ -4,10 +4,9 @@ $(function () {
 	$('.dropdown-toggle').dropdown();
 
     // 頁面滾動後header加入陰影
-    var header_h = $('.outsourcing_header').outerHeight(true);
     $(window).on('scroll', function(){
         var scrollTop = $(this).scrollTop();
-        if (scrollTop > header_h) {
+        if (scrollTop > 0) {
             $('.outsourcing_header').addClass('is-scroll');
         } else {
             $('.outsourcing_header').removeClass('is-scroll');
@@ -129,5 +128,11 @@ $(function () {
                 //送出表單
             }
         });
+    });
+
+    //浮動選單:捲動至最上方
+    $('[data-js-item="scrollTop"]').on('click', function(){
+        $('html, body').animate({scrollTop:0}, '300');
+        return false;
     });
 });

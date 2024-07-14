@@ -3,7 +3,7 @@ var data = [
         "titleZh": "帕金森定律",
         "titleEn": "Parkinson's Law",
         "status": true,
-        "content": "由英國歷史學家西里爾．帕金森（Cyril Parkinson）提出，意即人會不斷拖延、分心、增加任務複雜度，直到時間用盡：同樣一件事，一個大忙人也許只要花3分鐘，但閒來無事的人卻花上整天。帕金森以這個極端案例指出威脅組織生產力的心理狀態。",
+        "content": "12345678987654345678987654322345678909687564534234567879808976564534",
         "relative_status": true,
         "topic1": "你會為了一張完美履歷而工作嗎？鄒開蓮：人永遠都有選擇，但千萬別當「受害者」",
         "link1": "https://www.cheers.com.tw/article/article.action?id=5101457",
