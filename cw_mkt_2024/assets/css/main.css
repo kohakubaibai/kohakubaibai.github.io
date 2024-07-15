@@ -294,6 +294,10 @@ section {
     section {
         padding: 3em 0
     }
+
+    section.form {
+        padding-bottom: 5rem;
+    }
 }
 
 section .title {
@@ -1971,6 +1975,10 @@ width: 48%;
 
 .join{ background-color: #d48f16;}
 
+section.join .title h2{    
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width:820px) {
     section.join .title h2{    
         margin-bottom: 1.5rem;
@@ -1982,6 +1990,22 @@ width: 48%;
     line-height: 34px;
     font-weight: 400;
     text-align: center;
+}
+
+.join .title p.intro {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+@media screen and (max-width:660px) {
+
+    .join .title p.intro {
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+    }
 }
 .join .title .arrow .arrow::after, .join .title .arrow::after {
     border-color: #262626
