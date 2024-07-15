@@ -2017,6 +2017,8 @@ width: 48%;
     font-size: 17px;
 line-height: 32px;  
     color: #E6E6E6;
+    padding-left: 20px;
+    position: relative;
 }
 @media screen and (max-width:440px) {
     .join__list li {
@@ -2031,13 +2033,14 @@ line-height: 32px;
     }
 }
 .join__list li .arrow {
-    display: inline-block;
-    height: 15px;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    display: block;
     width: 15px;
+    height: 15px;
     background: url(../../images/2022/check.png) top center no-repeat;
     background-size: contain;
-    margin: 0px 5px -2px 0px;
 }
 
 
@@ -2051,7 +2054,7 @@ line-height: 32px;
 }
 .join .plan{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
 }
@@ -2181,7 +2184,9 @@ line-height: 32px;
 
 .historical .title p{
     text-align: center;
-    padding: 0 18% 30px;
+    /* padding: 0 18% 30px; */
+    padding: 0 18%;
+    margin-bottom: 0;
 }
 @media screen and (max-width:820px){
     .historical .title p{
