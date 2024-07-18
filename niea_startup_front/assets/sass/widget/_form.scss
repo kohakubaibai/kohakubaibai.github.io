@@ -80,61 +80,12 @@ $path: '../images';
         color: $black950;
     }
 
-    &--radio {
-        display: none;
-
-        &:checked {
-            & + .fancyForm--optionLabel {
-                &:after {
-                    background-color: $java600;
-                }
-            }
-        }
-    }
-
     &--optionLabel {
         margin-bottom: 0;
         color: $black950;
         cursor: pointer;
         @include fs(16);
         line-height: (40/16);
-
-        &:before,
-        &:after {
-            position: absolute;
-            content: '';
-            background-color: transparent;
-            border-radius: 50%;
-            top: 50%;
-            @include translateY(-50%);
-        }
-
-        &:before {
-            width: 19px;
-            height: 19px;
-            left: 0;
-            border: 1px solid $black400;
-        }
-
-        &:after {
-            width: 11px;
-            height: 11px;
-            left: 4px;
-            @include transition(all,.1s,ease-in);
-        }
-    }
-
-    &--filterCheckBox {
-        display: none;
-    
-            &:checked {
-                & + .fancyForm--filterLabel {
-
-                    &:before {
-                        background-image: url('#{$path}/icon-checkbox.svg');
-                    }
-                }
-            }
     }
 
     &--filterLabel {
@@ -143,25 +94,6 @@ $path: '../images';
         cursor: pointer;
         @include fs(18);
         line-height: 1.2;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 16px;
-            height: 16px;
-            background-color: $white;
-            border: 1px solid $black300;
-            @include translateY(-50%);
-            background-size: 10px 8px;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        &:before {
-            
-        }
     }
 }
 
@@ -299,7 +231,6 @@ $path: '../images';
         
         & > li {
             position: relative;
-            padding-left: 21px;
             margin-right: 20px;
 
             &:last-child {

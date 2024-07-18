@@ -1066,46 +1066,12 @@ body.openPopup, body.openAlert {
   background-color: #FFFFFF;
   color: #222222;
 }
-.fancyForm--radio {
-  display: none;
-}
-.fancyForm--radio:checked + .fancyForm--optionLabel:after {
-  background-color: #15868C;
-}
 .fancyForm--optionLabel {
   margin-bottom: 0;
   color: #222222;
   cursor: pointer;
   font-size: 100%;
   line-height: 2.5;
-}
-.fancyForm--optionLabel:before, .fancyForm--optionLabel:after {
-  position: absolute;
-  content: "";
-  background-color: transparent;
-  border-radius: 50%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.fancyForm--optionLabel:before {
-  width: 19px;
-  height: 19px;
-  left: 0;
-  border: 1px solid #888888;
-}
-.fancyForm--optionLabel:after {
-  width: 11px;
-  height: 11px;
-  left: 4px;
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-.fancyForm--filterCheckBox {
-  display: none;
-}
-.fancyForm--filterCheckBox:checked + .fancyForm--filterLabel:before {
-  background-image: url("../images/icon-checkbox.svg");
 }
 .fancyForm--filterLabel {
   margin-bottom: 0;
@@ -1114,21 +1080,7 @@ body.openPopup, body.openAlert {
   font-size: 112.5%;
   line-height: 1.2;
 }
-.fancyForm--filterLabel:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  background-color: #FFFFFF;
-  border: 1px solid #B0B0B0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background-size: 10px 8px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 .selectWrapItem {
   position: relative;
 }
@@ -1250,7 +1202,6 @@ body.openPopup, body.openAlert {
 }
 .reportForm .optionList > li {
   position: relative;
-  padding-left: 21px;
   margin-right: 20px;
 }
 .reportForm .optionList > li:last-child {

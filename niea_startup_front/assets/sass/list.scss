@@ -274,7 +274,6 @@ body {
                         flex: 0 0 auto;
                         margin-right: 16px;
                         margin-bottom: 20px;
-                        padding-left: 20px;
                     }
                 }
     
@@ -415,12 +414,17 @@ body {
                 color: $black900;
             }
 
+            .according {
+                font-weight: 500;
+            }
+
             .amount {
                 margin-top: 5px;
 
                 .amount__value {
                     color: $java700;
                     margin: 0 5px;
+                    font-weight: 600;
                 }
             }
         }
@@ -861,7 +865,7 @@ body {
                 position: -webkit-sticky;
                 position: sticky;
                 top: 150px;
-                overflow: scroll;
+                overflow-y: scroll;
 
                 .filterForm__content {
                     
