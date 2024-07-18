@@ -362,802 +362,450 @@
     </div>
     <div class="container">
       <a name="apply"></a>
-
 <!-- CSS -->
-
 <link rel="stylesheet" href="https://event.cw.com.tw/salesforce/inline/form.css">
-
 <link rel="stylesheet" href="https://event.cw.com.tw/salesforce/inline/cw.css">
-
-<!-- JS  --> 
-
+<!-- JS -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <script type="text/javascript" src="https://event.cw.com.tw/salesforce/assets/js/jquery-1.7.2.min.js"></script>
-
 <!-- 串salesforce和google sheet -->
-
 <script type="text/javascript" src="https://event.cw.com.tw/salesforce/cw_template/getdata_sf_221219.js?v=221219"></script>
-
 <!-- <script type="text/javascript" src="getdata_sf_221219.js"></script> -->
-
 <!-- 表單start -->
-
 <section class="formbox">
-
-  <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"
-
-    target="nm_iframe" class="sf_form">
-
-    <input type=hidden name="oid" value="00D2w000006VPp6">
-
-    <input type=hidden name="retURL" value="http://www.cw.com.tw">
-
-    <!-- 這是選擇性的除錯元素。如果您要在除錯模式下測試，請取消註解這些行。 -->
-
-    <!-- <input type="hidden" name="debug" value="1">                            
-
-    <input type="hidden" name="debugEmail" value="sophiawu@cw.com.tw"> -->
-
-    <!-- 這是選擇性的除錯元素。如果您要在除錯模式下測試，請取消註解這些行。 end -->
-
-    <!-- 欄位們 -->
-
-    <div class="contentbox">
-
-      <p style="color: #FFF;"><span class="rq">⁕</span>為必填欄位</p>
-
- <div data-id="00N2w00000Hh3Ls" class="inputbox freetextbox companybox othersbox hide">
-
-        <label for="00N2w00000Hh3Ls">公司名稱<span class="rq">⁕</span></label>
-
-        <span class="error blank errorCompany">此為必填欄位</span>
-
-        <input id="00N2w00000Hh3Ls" value="" maxlength="40" name="00N2w00000Hh3Ls" size="20" type="text" class="required" required />
-
-      </div>
-
-  <!-- 特殊欄位-單選題-產業別，如需開啟請移除class裡的hide -->
-
-      <div data-id="industry" class="inputbox specialbox freetextbox radiobox industrybox othersbox hide">
-
-        <label for="industry">產業別<span class="rq">⁕</span></label>
-
-        <span class="error blank errorIndustry">此為必填欄位</span>
-
-        <!-- 如果不想呈現一列兩個選項 請把flexbox刪除 -->
-
-        <div class="selects fullbox flexbox">
-
-          <div>
-
-            <label for="industry_1" class="radiolabel">
-
-              <input type="radio" name="industry" class="required" id="industry_1" value="製造業">
-
-              <span class="checkmark"></span>
-
-              <span>製造業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_2" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_2" value="資訊科技業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>資訊科技業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_3" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_3" value="高科技製造業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>高科技製造業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_4" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_4" value="傳統製造產業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>傳統製造產業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_5" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_5" value="製藥與生物科技業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>製藥與生物科技業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_6" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_6" value="金控/銀行業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>金控/銀行業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_7" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_7" value="投信、顧/證券業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>投信、顧/證券業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_8" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_8" value="能源服務" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>能源服務</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_9" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_9" value="資訊服務" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>資訊服務</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_10" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_10" value="零售/通路服務" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>零售/通路服務</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_11" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_11" value="休閒服務業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>休閒服務業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_12" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_12" value="餐飲服務業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>餐飲服務業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_13" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_13" value="醫療保健" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>醫療保健</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_14" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_14" value="傳播出版" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>傳播出版</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_15" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_15" value="公職人員" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>公職人員</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_16" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_16" value="學生" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>學生</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_17" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_17" value="家管" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>家管</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_18" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_18" value="教育服務業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>教育服務業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_19" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_19" value="專業技術與顧問服務" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>專業技術與顧問服務</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_20" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_20" value="自由業" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>自由業</span>
-
-            </label>
-
-          </div>
-
-          <div>
-
-            <label for="industry_21" class="radiolabel">
-
-              <input type="radio" name="industry" id="industry_21" value="其他" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>其他</span>
-
-            </label>
-
-          </div>
-
-        </div>
-
-       
-
-      </div>
-
-      <!-- SF必填欄位不可刪除，如需隱藏請在class="inputbox"加上hide -->
-
-      <div class="inputbox">
-
-        <label for="last_name" style="color: #FFF;">訂購人姓名<span class="rq">⁕</span></label>
-
-        <span class="error blank">此為必填欄位</span>
-
-        <!-- 名字欄位系統會比對，相同的話無法寫入 -->
-
-        <input id="last_name" maxlength="40" name="last_name" size="20" type="text" class="required" required value="" />
-
-      </div>
-
-      <!-- SF必填欄位不可刪除，如需隱藏請在class="inputbox"加上hide -->
-
-      <div class="inputbox mobilebox">
-
-        <label for="mobile" style="color: #FFF;">訂購人手機<span class="rq">⁕</span></label>
-
-        <span class="error blank">此為必填欄位</span>
-
-        <span class="error wrong errorContent">請填入數字</span>
-
-        <span class="error short errorContent">請填入十碼手機號碼</span>
-
-        <input id="mobile" name="mobile" size="20" type="tel" minlength="10" maxlength="10"
-
-          placeholder="填寫範例:0911222333" class="required" required value="" />
-
-      </div>
-
-      <!-- SF必填欄位不可刪除，如需隱藏請在class="inputbox"加上hide -->
-
-      <div class="inputbox emailbox">
-
-        <label for="email" style="color: #FFF;">訂購人電子信箱<span class="rq">⁕</span></label>
-
-        <span class="error blank">此為必填欄位</span>
-
-        <span class="error wrong errorMail">請確認電子信箱是否填寫正確</span>
-
-        <input id="email" maxlength="80" name="email" size="20" type="text" class="required" required value="" />
-
-      </div>
-
- <!-- 特殊欄位(會寫入後台對應欄位)-職稱，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired -->
-
-      <div data-id="title" class="inputbox specialbox freetextbox titlebox othersbox hide">
-
-        <label for="title">職稱<span class="rq">⁕</span></label>
-
-        <span class="error blank errorTitle">此為必填欄位</span>
-
-        <input id="title" value="" maxlength="40" name="title" size="20" type="text" class="required" required />
-
-      </div>
-
- <!-- 特殊欄位(會寫入後台備註欄位)-部門，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired -->
-
-      <div data-id="department" class="inputbox specialbox freetextbox departmentbox othersbox hide ">
-
-        <label for="department">訂購本數：<span class="rq">⁕</span></label>
-
-        <span class="error blank">此為必填欄位</span>
-
-        <input id="department" maxlength="40" name="department" size="40" type="text" class="required" required value=" " />
-
-      </div>
-
-      <!-- SF地址欄位，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired  -->
-
-      <div class="inputbox specialbox freetextbox radiobox eventbox othersbox hide  ">
-
-        <label for="00NA9000000QItf">訂購本數：<span class="rq">⁕</span></label>
-
-        <span class="error blank">此為必填欄位</span>
-
-        <input id="00NA9000000QItf" name="00NA9000000QItf" type="text" class="required" required value=" " /.>
-
-      </div>
-
-      <!-- SF飲食習慣欄位，如需開啟請移除class裡的hide  -->
-
-      <div class="inputbox specialbox radiobox foodbox hide">
-
-        <label for="food">飲食習慣<span class="rq">⁕</span></label>
-
-        <span class="error blank">此為必填欄位</span>
-
-        <!-- 如果不想呈現一列兩個選項 請把flexbox刪除 -->
-
-        <div class="selects foodbox_selects fullbox flexbox">
-
-          <!-- 飲食習慣1 START -->
-
-          <div>
-
-            <label for="food_1" class="radiolabel">
-
-              <input type="radio" name="food" class="required" id="food_1" value="葷食" >
-
-              <span class="checkmark"></span>
-
-              <span>葷食</span>
-
-            </label>
-
-          </div>
-
-          <!-- 飲食習慣1 END -->
-
-          <!-- 飲食習慣2 START -->
-
-          <div>
-
-            <label for="food_2" class="radiolabel">
-
-              <input type="radio" name="food" id="food_2" value="素食" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>素食</span>
-
-            </label>
-
-          </div>
-
-          <!-- 飲食習慣2 END -->
-
-        </div>
-
-      </div>
-
-      <!-- SF必填欄位不可刪除，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired -->
-
-   
-
-      <!-- 特殊欄位-公司統編，如需開啟請移除class裡的hide -->
-
-      <div data-id="taxid" class="inputbox specialbox freetextbox taxidbox othersbox hide">
-
-        <label for="taxid">公司統編<span class="rq">⁕</span></label>
-
-        <span class="error blank">此為必填欄位</span>
-
-        <span class="error wrong errorContent">請填入數字</span>
-
-        <span class="error short errorContent">請填入8碼統編數字</span>
-
-        <input id="taxid" value="" maxlength="8" name="taxid" size="8" type="text" class="required" required />
-
-      </div>
-
-   
-
-      <!-- 特殊欄位-單選題-場次，如需開啟請移除class裡的hide -->
-
-      <div data-id="event" class="inputbox specialbox freetextbox radiobox eventbox othersbox hide">
-
-        <label for="event">報名場次<span class="rq">⁕</span></label>
-
-        <span class="error blank errorTopics">此為必填欄位</span>
-
-        <!-- 如果不想呈現一列兩個選項 請把flexbox刪除 -->
-
-        <div class="selects eventbox_selects fullbox flexbox">
-
-          <!-- 場次1 START -->
-
-          <div>
-
-            <label for="event_1" class="radiolabel">
-
-              <input type="radio" name="event" class="required" id="event_1" value="場次-1">
-
-              <span class="checkmark"></span>
-
-              <span>場次-1</span>
-
-            </label>
-
-          </div>
-
-          <!-- 場次1 END -->
-
-          <!-- 場次2 START -->
-
-          <div>
-
-            <label for="event_2" class="radiolabel">
-
-              <input type="radio" name="event" id="event_2" value="場次-2" class="required">
-
-              <span class="checkmark"></span>
-
-              <span>場次-2</span>
-
-            </label>
-
-          </div>
-
-          <!-- 場次2 END -->
-
-        </div>
-
-      </div>
-
-      <!-- 特殊欄位-複選題，如需開啟請移除class裡的hide -->
-
-      <div data-id="yourneeds" class="inputbox specialbox freetextbox checkbox mutibox othersbox hide">
-
-        複選題題目<span class="rq">⁕</span>
-
-        <span class="error blank errorNeeds">此為必填欄位</span><br>
-
-        <!-- 複選題選項1 START -->
-
-        <div>
-
-          <label>
-
-            <input type="checkbox" name="needs" id="needs_1" value="複選題選項-1">
-
-            <span class="checkmark"></span>
-
-            複選題選項-1
-
-          </label>
-
-        </div>
-
-        <!-- 複選題選項1 END -->
-
-        <!-- 複選題選項2 START -->
-
-        <div>
-
-          <label>
-
-            <input type="checkbox" name="needs" value="複選題選項-2" id="needs_2">
-
-            <span class="checkmark"></span>
-
-            複選題選項-2
-
-          </label>
-
-        </div>
-
-        <!-- 複選題選項2 END -->
-
-      </div>
-
-     
-
-      <p class="policyword" style="color: #FFF;">
-
-    <a>本人已清楚瞭解<a href="https://pdp.cwg.tw/view/A/A-20240308002" target="_blank" style="display: contents; color: #FFF;">個人資料聲明同意書</a>，並同意於所列搜集目的之必要範圍內，蒐集、處理及利用本人之個人資料，且如有包含本人以外之第三人個人資料時，本人已以（或將以）適當方式使該第三人知悉其個人資料會提供予貴公司於本同意書之範圍內，進行蒐集、處理或利用。本人並同意留存（電子或紙本）同意書，供日後取出查驗。</a>
-
-       
-
-      <!-- 以下是隱藏的欄位放的div -->
-
-      <div class="hiddenbox">
-
-        活動名稱:
-
-        <!-- 更換活動名稱(預先填好不開放給user填寫) -->
-
-        <input id="00N2w00000Hh3MH" maxlength="80" name="00N2w00000Hh3MH" size="20" type="text" value="CW行銷_李吉仁新書預購單_202407" />
-
-        <!-- COMPANY -->
-
-        <input id="company" maxlength="40" name="company" size="20" type="text" value="天下"/>
-
-        <!-- note -->
-
-        <input id="note" maxlength="100" name="note" size="20" type="text" value=""/>
-
-       
-
-        同意個資聲明:
-
-        <!-- 依user勾選同意與否帶入對應的值 -->
-
-        <input id="00N2w00000Hh3Kk" maxlength="80" name="00N2w00000Hh3Kk" size="20" type="text" value="無" />
-
-        報名日期:<span class="dateInput dateOnlyInput"><input id="00N2w00000Hh3C1" name="00N2w00000Hh3C1" size="12"
-
-            type="text" /></span>
-
-        活動類型:<textarea id="00N2w00000Hh3MW" name="00N2w00000Hh3MW" rows="3" type="text" wrap="soft"></textarea>
-
-        名單到期日:<span style="font-size: 80%;">(預先填好不開放給user填寫)</span><span class="dateInput dateOnlyInput"><input
-
-            id="00N2w00000Hh3Kz" name="00N2w00000Hh3Kz" size="12" type="text" value="2025/12/31" /></span>
-
-        同意行銷:
-
-        <select id="00N2w00000Hh3NF" name="00N2w00000Hh3NF" title="同意行銷">
-
-          <option value="" selected>--無--</option>
-
-          <option value="同意">同意</option>
-
-          <option value="不同意">不同意</option>
-
-          <option value="待確認">待確認</option>
-
-        </select>
-
-        取得BU:
-
-        <select id="00N2w00000Hh3IA" name="00N2w00000Hh3IA" title="取得BU">
-
-          <option value="">--無--</option>
-
-          <option value="集團">集團</option>
-
-          <option value="天下" selected>天下</option>
-
-          <option value="親子">親子</option>
-
-          <option value="康健">康健</option>
-
-          <option value="Cheers">Cheers</option>
-
-        </select>
-
-        <p>以下為 【付費活動必填欄位】</p>
-
-        會員帳號:<input id="00N2w00000Hka6z" maxlength="80" name="00N2w00000Hka6z" size="20" type="text" />
-
-        訂單資訊:<textarea id="00N2w00000DOPqA" name="00N2w00000DOPqA" rows="3" type="text" wrap="soft"></textarea>
-
-        <p style="border-top: 1px dotted #666; padding-top: 1rem; margin-top: 2rem;">以下為【非必填欄位】</p>
-
-        從事行業:<input id="00N2w00000Hh3BS" maxlength="255" name="00N2w00000Hh3BS" size="20" type="text" />
-
-        活動日期:<span class="dateInput dateOnlyInput"><input id="00N2w00000Hh3MM" name="00N2w00000Hh3MM" size="12"
-
-            type="text" /></span>
-
-        活動區域:<textarea id="00N2w00000Hh3MR" name="00N2w00000Hh3MR" rows="3" type="text" wrap="soft"></textarea>
-
-        飲食習慣 #00NA9000000QItZ:<input id="00NA9000000QItZ" name="00NA9000000QItZ" type="text" /><br>
-
-        備註 #00N2w00000Hh3Mv:<textarea id="00N2w00000Hh3Mv" name="00N2w00000Hh3Mv" rows="3" type="text" wrap="soft"></textarea>
-
-        活動備註1 #00NA9000000QIto:<textarea id="00NA9000000QIto" name="00NA9000000QIto" rows="3" type="text" wrap="soft"></textarea><br>
-
-        活動備註2 #00NA9000000QItf:<textarea id="00NA9000000QItf" name="00NA9000000QItf" rows="3" type="text" wrap="soft"></textarea><br>
-
-        活動備註3 #00NA9000000QItt:<textarea id="00NA9000000QItt" name="00NA9000000QItt" rows="3" type="text" wrap="soft"></textarea><br>
-
-        活動建議 #00NA9000000QItj:<textarea id="00NA9000000QItj" name="00NA9000000QItj" rows="3" type="text" wrap="soft"></textarea><br>
-
-        subBU:<textarea id="00N2w00000Hh3LO" name="00N2w00000Hh3LO" rows="3" type="text" wrap="soft"></textarea>
-
-        廣告客戶名稱:<textarea id="00N2w00000Hh3Ld" name="00N2w00000Hh3Ld" rows="3" type="text" wrap="soft"></textarea>
-
-        名單來源:<textarea id="00N2w00000Hh3M7" name="00N2w00000Hh3M7" rows="3" type="text" wrap="soft" value="CW行銷_李吉仁新書預購單_202407" ></textarea>
-
-        <div class="checkbox">
-
-          <div><label><input type="checkbox" id="00N2w00000HiIrE" name="00N2w00000HiIrE" value="1"><span></span>是否為PR
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- 以下是隱藏的欄位放的div end -->
-
-      <button type="button" class="submitbtn" id="sendBtn">
-
-        送出
-
-      </button>
-
-      <!-- <div class="g-recaptcha" data-sitekey="6LeXJx0gAAAAAFIG1jWyb9-kZkBPHMEd6zWyzE4o" data-size="normal"
-
-        data-theme="light" data-callback="verify" data-expired-callback="verifyFail" data-error-callback="verifyFail">
-
-      </div>
-
-      <button type="button" class="submitbtn btnDisabled" id="">送出</button> -->
-
-      <span class="error errorSubmit">* 請確認上方欄位皆已正確填寫</span>
-
-      <input type="submit" name="submit" class="" id="sfBtn">
-
-    </div>
-
-    <!-- 欄位們 end -->
-
-    <!-- 為了不跳頁，用來放感謝頁的iframe -->
-
-    <div class="hiddenIframe" style="width: 100%;height: 100px; display: none;">
-
-      <p>感謝頁載這兒</p>
-
-      <iframe id="id_iframe" name="nm_iframe" width="0" height="0" frameBorder="0"
-
-        style="width:100%; height: 100%"></iframe>
-
-    </div>
-
-    <!-- 為了不跳頁，用來放感謝頁的iframe end -->
-
-  </form>
-
-  <div class="tks cover">
-
-    <div class="tks_con">
-
-      <div>
-
-       <p><span style="font-size:20px">已為您保留預購優惠資格，邀請您立即<a href="https://maac.io/2G2Iy">加入天下網路書店LINE</a>立即獲得企業專屬優惠連結，開啟《轉型再成長》的團隊共學之旅。</span></p>
-
-      </div>
-
-    </div>
-
-  </div>
-
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"
+target="nm_iframe" class="sf_form">
+<input type=hidden name="oid" value="00D2w000006VPp6">
+<input type=hidden name="retURL" value="http://www.cw.com.tw">
+<!-- 這是選擇性的除錯元素。如果您要在除錯模式下測試，請取消註解這些行。 -->
+<!-- <input type="hidden" name="debug" value="1">
+<input type="hidden" name="debugEmail" value="sophiawu@cw.com.tw"> -->
+<!-- 這是選擇性的除錯元素。如果您要在除錯模式下測試，請取消註解這些行。 end -->
+<!-- 欄位們 -->
+<div class="contentbox">
+<p><span class="rq">⁕</span>為必填欄位</p>
+<div data-id="00N2w00000Hh3Ls" class="inputbox freetextbox companybox othersbox hide “>
+<label for="00N2w00000Hh3Ls">公司名稱<span class="rq">⁕</span></label>
+<span class="error blank errorCompany">此為必填欄位</span>
+<input id="00N2w00000Hh3Ls" value="" maxlength="40" name="00N2w00000Hh3Ls" size="20" type="text" class="required" required />
+</div>
+<!-- 特殊欄位-單選題-產業別，如需開啟請移除class裡的hide -->
+<div data-id="industry" class="inputbox specialbox freetextbox radiobox industrybox 
+othersbox hide">
+<label for="industry">產業別<span class="rq">⁕</span></label>
+<span class="error blank errorIndustry">此為必填欄位</span>
+<!-- 如果不想呈現一列兩個選項 請把flexbox刪除 -->
+<div class="selects fullbox flexbox">
+<div>
+<label for="industry_1" class="radiolabel">
+<input type="radio" name="industry" class="required" id="industry_1" value="製造業">
+<span class="checkmark"></span>
+<span>製造業</span>
+</label>
+</div>
+<div>
+<label for="industry_2" class="radiolabel">
+<input type="radio" name="industry" id="industry_2" value="資訊科技業" class="required">
+<span class="checkmark"></span>
+<span>資訊科技業</span>
+</label>
+</div>
+<div>
+<label for="industry_3" class="radiolabel">
+<input type="radio" name="industry" id="industry_3" value="高科技製造業" class="required">
+<span class="checkmark"></span>
+<span>高科技製造業</span>
+</label>
+</div>
+<div>
+<label for="industry_4" class="radiolabel">
+<input type="radio" name="industry" id="industry_4" value="傳統製造產業" class="required">
+<span class="checkmark"></span>
+<span>傳統製造產業</span>
+</label>
+</div>
+<div>
+<label for="industry_5" class="radiolabel">
+<input type="radio" name="industry" id="industry_5" value="製藥與生物科技業" class="required">
+<span class="checkmark"></span>
+<span>製藥與生物科技業</span>
+</label>
+</div>
+<div>
+<label for="industry_6" class="radiolabel">
+<input type="radio" name="industry" id="industry_6" value="金控/銀行業" class="required">
+<span class="checkmark"></span>
+<span>金控/銀行業</span>
+</label>
+</div>
+<div>
+<label for="industry_7" class="radiolabel">
+<input type="radio" name="industry" id="industry_7" value="投信、顧/證券業" class="required">
+<span class="checkmark"></span>
+<span>投信、顧/證券業</span>
+</label>
+</div>
+<div>
+<label for="industry_8" class="radiolabel">
+<input type="radio" name="industry" id="industry_8" value="能源服務" class="required">
+<span class="checkmark"></span>
+<span>能源服務</span>
+</label>
+</div>
+<div>
+<label for="industry_9" class="radiolabel">
+<input type="radio" name="industry" id="industry_9" value="資訊服務" class="required">
+<span class="checkmark"></span>
+<span>資訊服務</span>
+</label>
+</div>
+<div>
+<label for="industry_10" class="radiolabel">
+<input type="radio" name="industry" id="industry_10" value="零售/通路服務" class="required">
+<span class="checkmark"></span>
+<span>零售/通路服務</span>
+</label>
+</div>
+<div>
+<label for="industry_11" class="radiolabel">
+<input type="radio" name="industry" id="industry_11" value="休閒服務業" class="required">
+<span class="checkmark"></span>
+<span>休閒服務業</span>
+</label>
+</div>
+<div>
+<label for="industry_12" class="radiolabel">
+<input type="radio" name="industry" id="industry_12" value="餐飲服務業" class="required">
+<span class="checkmark"></span>
+<span>餐飲服務業</span>
+</label>
+</div>
+<div>
+<label for="industry_13" class="radiolabel">
+<input type="radio" name="industry" id="industry_13" value="醫療保健" class="required">
+<span class="checkmark"></span>
+<span>醫療保健</span>
+</label>
+</div>
+<div>
+<label for="industry_14" class="radiolabel">
+<input type="radio" name="industry" id="industry_14" value="傳播出版" class="required">
+<span class="checkmark"></span>
+<span>傳播出版</span>
+</label>
+</div>
+<div>
+<label for="industry_15" class="radiolabel">
+<input type="radio" name="industry" id="industry_15" value="公職人員" class="required">
+<span class="checkmark"></span>
+<span>公職人員</span>
+</label>
+</div>
+<div>
+<label for="industry_16" class="radiolabel">
+<input type="radio" name="industry" id="industry_16" value="學生" class="required">
+<span class="checkmark"></span>
+<span>學生</span>
+</label>
+</div>
+<div>
+<label for="industry_17" class="radiolabel">
+<input type="radio" name="industry" id="industry_17" value="家管" class="required">
+<span class="checkmark"></span>
+<span>家管</span>
+</label>
+</div>
+<div>
+<label for="industry_18" class="radiolabel">
+<input type="radio" name="industry" id="industry_18" value="教育服務業" class="required">
+<span class="checkmark"></span>
+<span>教育服務業</span>
+</label>
+</div>
+<div>
+<label for="industry_19" class="radiolabel">
+<input type="radio" name="industry" id="industry_19" value="專業技術與顧問服務" class="required">
+<span class="checkmark"></span>
+<span>專業技術與顧問服務</span>
+</label>
+</div>
+<div>
+<label for="industry_20" class="radiolabel">
+<input type="radio" name="industry" id="industry_20" value="自由業" class="required">
+<span class="checkmark"></span>
+<span>自由業</span>
+</label>
+</div>
+<div>
+<label for="industry_21" class="radiolabel">
+<input type="radio" name="industry" id="industry_21" value="其他" class="required">
+<span class="checkmark"></span>
+<span>其他</span>
+</label>
+</div>
+</div>
+
+</div>
+<!-- SF必填欄位不可刪除，如需隱藏請在class="inputbox"加上hide -->
+<div class="inputbox">
+<label for="last_name" style="color: #FFF;">訂購人姓名<span class="rq">⁕</span></label>
+<span class="error blank">此為必填欄位</span>
+<!-- 名字欄位系統會比對，相同的話無法寫入 -->
+<input id="last_name" maxlength="40" name="last_name" size="20" type="text" class="required" required value="" />
+</div>
+
+<!-- SF必填欄位不可刪除，如需隱藏請在class="inputbox"加上hide -->
+<div class="inputbox mobilebox">
+<label for="mobile" style="color: #FFF;">訂購人手機<span class="rq">⁕</span></label>
+<span class="error blank">此為必填欄位</span>
+<span class="error wrong errorContent">請填入數字</span>
+<span class="error short errorContent">請填入十碼手機號碼</span>
+<input id="mobile" name="mobile" size="20" type="tel" minlength="10" maxlength="10"
+placeholder="填寫範例:0911222333" class="required" required value="" />
+
+</div>
+
+<!-- SF必填欄位不可刪除，如需隱藏請在class="inputbox"加上hide -->
+<div class="inputbox emailbox">
+<label for="email" style="color: #FFF;">訂購人電子信箱<span class="rq">⁕</span></label>
+<span class="error blank">此為必填欄位</span>
+<span class="error wrong errorMail">請確認電子信箱是否填寫正確</span>
+<input id="email" maxlength="80" name="email" size="20" type="text" class="required" required value="" />
+</div>
+
+<!-- 特殊欄位(會寫入後台對應欄位)-職稱，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired -->
+<div data-id="title" class="inputbox specialbox freetextbox titlebox othersbox hide">
+<label for="title">職稱<span class="rq">⁕</span></label>
+<span class="error blank errorTitle">此為必填欄位</span>
+<input id="title" value="" maxlength="40" name="title" size="20" type="text" class="required" required />
+</div>
+<div class="inputbox department">
+  <label for="email" style="color: #FFF;">訂購本數<span class="rq">⁕</span></label>
+  <span class="error blank">此為必填欄位</span>
+  <textarea id="00NA9000000QItt" name="00NA9000000QItt" rows="3" type="text" wrap="soft"></textarea>
+</div>
+
+<!-- 特殊欄位(會寫入後台備註欄位)-部門，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired -->
+<div data-id="department" class="inputbox specialbox freetextbox departmentbox othersbox hide ">
+<label for="department">訂購本數：<span class="rq">⁕</span></label>
+<span class="error blank">此為必填欄位</span>
+<input id="department" maxlength="40" name="department" size="40" type="text" class="required" required value=" " />
+</div>
+
+<!-- SF地址欄位，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired -->
+<div class="inputbox specialbox freetextbox radiobox eventbox othersbox hide ">
+<label for="00NA9000000QItf">訂購本數：<span class="rq">⁕</span></label>
+<span class="error blank">此為必填欄位</span>
+<input id="00NA9000000QItf" name="00NA9000000QItf" type="text" class="required" required value=" " /.>
+</div>
+
+<!-- SF飲食習慣欄位，如需開啟請移除class裡的hide -->
+<div class="inputbox specialbox radiobox foodbox hide">
+<label for="food">飲食習慣<span class="rq">⁕</span></label>
+<span class="error blank">此為必填欄位</span>
+<!-- 如果不想呈現一列兩個選項 請把flexbox刪除 -->
+<div class="selects foodbox_selects fullbox flexbox">
+<!-- 飲食習慣1 START -->
+<div>
+<label for="food_1" class="radiolabel">
+<input type="radio" name="food" class="required" id="food_1" value="葷食" >
+<span class="checkmark"></span>
+<span>葷食</span>
+</label>
+</div>
+<!-- 飲食習慣1 END -->
+<!-- 飲食習慣2 START -->
+<div>
+<label for="food_2" class="radiolabel">
+<input type="radio" name="food" id="food_2" value="素食" class="required">
+<span class="checkmark"></span>
+<span>素食</span>
+</label>
+</div>
+<!-- 飲食習慣2 END -->
+
+</div>
+</div>
+
+<!-- SF必填欄位不可刪除，如需開啟請移除class裡的hide，如需改為非必填class裡請加入notrequired -->
+
+<!-- 特殊欄位-公司統編，如需開啟請移除class裡的hide -->
+<div data-id="taxid" class="inputbox specialbox freetextbox taxidbox othersbox hide">
+<label for="taxid">公司統編<span class="rq">⁕</span></label>
+<span class="error blank">此為必填欄位</span>
+<span class="error wrong errorContent">請填入數字</span>
+<span class="error short errorContent">請填入8碼統編數字</span>
+<input id="taxid" value="" maxlength="8" name="taxid" size="8" type="text" class="required" required />
+</div>
+
+
+
+<!-- 特殊欄位-單選題-場次，如需開啟請移除class裡的hide -->
+<div data-id="event" class="inputbox specialbox freetextbox radiobox eventbox othersbox hide">
+<label for="event">報名場次<span class="rq">⁕</span></label>
+<span class="error blank errorTopics">此為必填欄位</span>
+<!-- 如果不想呈現一列兩個選項 請把flexbox刪除 -->
+<div class="selects eventbox_selects fullbox flexbox">
+<!-- 場次1 START -->
+<div>
+<label for="event_1" class="radiolabel">
+<input type="radio" name="event" class="required" id="event_1" value="場次-1">
+<span class="checkmark"></span>
+<span>場次-1</span>
+</label>
+</div>
+<!-- 場次1 END -->
+<!-- 場次2 START -->
+<div>
+<label for="event_2" class="radiolabel">
+<input type="radio" name="event" id="event_2" value="場次-2" class="required">
+<span class="checkmark"></span>
+<span>場次-2</span>
+</label>
+</div>
+<!-- 場次2 END -->
+
+</div>
+</div>
+
+<!-- 特殊欄位-複選題，如需開啟請移除class裡的hide -->
+<div data-id="yourneeds" class="inputbox specialbox freetextbox checkbox mutibox othersbox hide">
+複選題題目<span class="rq">⁕</span>
+<span class="error blank errorNeeds">此為必填欄位</span><br>
+<!-- 複選題選項1 START -->
+<div>
+<label>
+<input type="checkbox" name="needs" id="needs_1" value="複選題選項-1">
+<span class="checkmark"></span>
+複選題選項-1
+</label>
+</div>
+<!-- 複選題選項1 END -->
+<!-- 複選題選項2 START -->
+<div>
+<label>
+<input type="checkbox" name="needs" value="複選題選項-2" id="needs_2">
+<span class="checkmark"></span>
+複選題選項-2
+</label>
+</div>
+<!-- 複選題選項2 END -->
+
+</div>
+
+<p class="policyword" style="color: #FFF;">
+本人已清楚瞭解<a href="https://pdp.cwg.tw/view/A/A-20240308002" target="_blank" style="display: contents; color: #FFF;">個人資料聲明同意書</a>，並同意於所列搜集目的之必要範圍內，蒐集、處理及利用本人之個人資料，且如有包含本人以外之第三人個人資料時，本人已以（或將以）適當方式使該第三人知悉其個人資料會提供予貴公司於本同意書之範圍內，進行蒐集、處理或利用。本人並同意留存（電子或紙本）同意書，供日後取出查驗。
+
+<!-- 以下是隱藏的欄位放的div -->
+<div class="hiddenbox">
+活動名稱:
+<!-- 更換活動名稱(預先填好不開放給user填寫) -->
+<input id="00N2w00000Hh3MH" maxlength="80" name="00N2w00000Hh3MH" size="20" type="text" value="CW行銷_李吉仁新書預購單_202407" />
+
+<!-- COMPANY -->
+<input id="company" maxlength="40" name="company" size="20" type="text" value="天下"/>
+
+<!-- note -->
+<input id="note" maxlength="100" name="note" size="20" type="text" value=""/>
+
+同意個資聲明:
+<!-- 依user勾選同意與否帶入對應的值 -->
+<input id="00N2w00000Hh3Kk" maxlength="80" name="00N2w00000Hh3Kk" size="20" type="text" value="無" />
+
+報名日期:<span class="dateInput dateOnlyInput"><input id="00N2w00000Hh3C1" name="00N2w00000Hh3C1" size="12"
+type="text" /></span>
+
+活動類型:<textarea id="00N2w00000Hh3MW" name="00N2w00000Hh3MW" rows="3" type="text" wrap="soft"></textarea>
+
+名單到期日:<span style="font-size: 80%;">(預先填好不開放給user填寫)</span><span class="dateInput dateOnlyInput"><input
+id="00N2w00000Hh3Kz" name="00N2w00000Hh3Kz" size="12" type="text" value="2025/12/31" /></span>
+
+同意行銷:
+<select id="00N2w00000Hh3NF" name="00N2w00000Hh3NF" title="同意行銷">
+<option value="" selected>--無--</option>
+<option value="同意">同意</option>
+<option value="不同意">不同意</option>
+<option value="待確認">待確認</option>
+</select>
+
+取得BU:
+<select id="00N2w00000Hh3IA" name="00N2w00000Hh3IA" title="取得BU">
+<option value="">--無--</option>
+<option value="集團">集團</option>
+<option value="天下" selected>天下</option>
+<option value="親子">親子</option>
+<option value="康健">康健</option>
+<option value="Cheers">Cheers</option>
+</select>
+
+<p>以下為 【付費活動必填欄位】</p>
+
+會員帳號:<input id="00N2w00000Hka6z" maxlength="80" name="00N2w00000Hka6z" size="20" type="text" />
+
+訂單資訊:<textarea id="00N2w00000DOPqA" name="00N2w00000DOPqA" rows="3" type="text" wrap="soft"></textarea>
+
+<p style="border-top: 1px dotted #666; padding-top: 1rem; margin-top: 2rem;">以下為【非必填欄位】</p>
+
+從事行業:<input id="00N2w00000Hh3BS" maxlength="255" name="00N2w00000Hh3BS" size="20" type="text" />
+
+活動日期:<span class="dateInput dateOnlyInput"><input id="00N2w00000Hh3MM" name="00N2w00000Hh3MM" size="12"
+type="text" /></span>
+
+活動區域:<textarea id="00N2w00000Hh3MR" name="00N2w00000Hh3MR" rows="3" type="text" wrap="soft"></textarea>
+
+飲食習慣 #00NA9000000QItZ:<input id="00NA9000000QItZ" name="00NA9000000QItZ" type="text" /><br>
+
+備註 #00N2w00000Hh3Mv:<textarea id="00N2w00000Hh3Mv" name="00N2w00000Hh3Mv" rows="3" type="text" wrap="soft"></textarea>
+
+活動備註1 #00NA9000000QIto:<textarea id="00NA9000000QIto" name="00NA9000000QIto" rows="3" type="text" wrap="soft"></textarea><br>
+活動備註2 #00NA9000000QItf:<textarea id="00NA9000000QItf" name="00NA9000000QItf" rows="3" type="text" wrap="soft"></textarea><br>
+活動備註3 #00NA9000000QItt:<textarea id="00NA9000000QItt" name="00NA9000000QItt" rows="3" type="text" wrap="soft"></textarea><br>
+活動建議 #00NA9000000QItj:<textarea id="00NA9000000QItj" name="00NA9000000QItj" rows="3" type="text" wrap="soft"></textarea><br>
+
+subBU:<textarea id="00N2w00000Hh3LO" name="00N2w00000Hh3LO" rows="3" type="text" wrap="soft"></textarea>
+
+廣告客戶名稱:<textarea id="00N2w00000Hh3Ld" name="00N2w00000Hh3Ld" rows="3" type="text" wrap="soft"></textarea>
+
+名單來源:<textarea id="00N2w00000Hh3M7" name="00N2w00000Hh3M7" rows="3" type="text" wrap="soft" value="CW行銷_李吉仁新書預購單_202407" ></textarea>
+
+<div class="checkbox">
+<div><label><input type="checkbox" id="00N2w00000HiIrE" name="00N2w00000HiIrE" value="1"><span></span>是否為PR
+</div>
+</div>
+</div>
+<!-- 以下是隱藏的欄位放的div end -->
+
+<button type="button" class="submitbtn" id="sendBtn">
+送出
+</button>
+
+<!-- <div class="g-recaptcha" data-sitekey="6LeXJx0gAAAAAFIG1jWyb9-kZkBPHMEd6zWyzE4o" data-size="normal"
+data-theme="light" data-callback="verify" data-expired-callback="verifyFail" data-error-callback="verifyFail">
+</div>
+<button type="button" class="submitbtn btnDisabled" id="">送出</button> -->
+
+<span class="error errorSubmit">* 請確認上方欄位皆已正確填寫</span>
+<input type="submit" name="submit" class="" id="sfBtn">
+</div>
+<!-- 欄位們 end -->
+<!-- 為了不跳頁，用來放感謝頁的iframe -->
+<div class="hiddenIframe" style="width: 100%;height: 100px; display: none;">
+<p>感謝頁載這兒</p>
+<iframe id="id_iframe" name="nm_iframe" width="0" height="0" frameBorder="0"
+style="width:100%; height: 100%"></iframe>
+</div>
+<!-- 為了不跳頁，用來放感謝頁的iframe end -->
+</form>
+<div class="tks cover">
+<div class="tks_con">
+<div>
+<p><span style="font-size:20px">已為您保留預購優惠資格，邀請您立即<a href="https://maac.io/2G2Iy">加入天下網路書店LINE</a>立即獲得企業專屬優惠連結，開啟《轉型再成長》的團隊共學之旅。</span></p>
+
+</div>
+</div>
+</div>
 </section>
+
     </div>
   </section>
 
