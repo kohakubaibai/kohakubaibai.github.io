@@ -1,4 +1,6 @@
 $(function(){
+    // 左側篩選欄固定position start
+    // 僅在PC上有此操作，如要移除請將下列 4~84 行程式碼刪除或註解
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     var didScrollID = setTimer();
@@ -80,6 +82,7 @@ $(function(){
         lastScrollTop = st;
         didScrollID = setTimer();
     }
+    // 左側篩選欄固定position end
 
     $('[data-filter-button="true"]').on('click', function(){
         var target = $(this).data('filter-target');

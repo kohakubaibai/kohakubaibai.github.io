@@ -2227,11 +2227,14 @@ body {
   font-size: 112.5%;
   line-height: 1.5;
   font-weight: 400;
-  color: #5D5D5D;
   margin: 0;
+}
+.outsourcing_main .planCard .mainInfo .mainInfo__description {
+  color: #5D5D5D;
 }
 .outsourcing_main .planCard .mainInfo .mainInfo__organizer {
   margin-top: 10px;
+  color: #20B7BC;
 }
 .outsourcing_main .planCard .mainInfo .mainInfo__filter {
   margin: 0;
@@ -2489,6 +2492,7 @@ body {
     display: none;
   }
   .outsourcing_main .filterForm--condition {
+    /* 左側篩選蘭固定，如要移除將下列三行程式碼刪除或註解 */
     position: sticky;
     top: 150px;
     overflow-y: scroll;

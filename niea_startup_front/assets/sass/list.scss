@@ -567,12 +567,16 @@ body {
                 @include fs(18);
                 line-height: (27/18);
                 font-weight: 400;
-                color: $black600;
                 margin: 0;
+            }
+
+            .mainInfo__description {
+                color: $black600;
             }
 
             .mainInfo__organizer {
                 margin-top: 10px;
+                color: $java500;
             }
 
             .mainInfo__filter {
@@ -862,7 +866,7 @@ body {
             }
 
             &--condition {
-                position: -webkit-sticky;
+                /* 左側篩選蘭固定，如要移除將下列三行程式碼刪除或註解 */
                 position: sticky;
                 top: 150px;
                 overflow-y: scroll;
