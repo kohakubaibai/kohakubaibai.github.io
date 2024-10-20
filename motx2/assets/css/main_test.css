@@ -1541,6 +1541,7 @@ section {
   text-align: center;
   font-size: 30px;
   line-height: 43px;
+  font-weight: 700;
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   #event .content .topic__top .title {

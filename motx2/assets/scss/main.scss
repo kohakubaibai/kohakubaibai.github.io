@@ -1498,7 +1498,8 @@ section {
                 .title {
                     text-align: center;
                     font-size: 30px;
-                    line-height: 43px;                   
+                    line-height: 43px;
+                    font-weight: 700;               
 
                     @include desktop() {
                         text-align: left;
