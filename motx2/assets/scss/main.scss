@@ -249,6 +249,7 @@ section {
 
     .title {
         position: relative;
+        margin-bottom: 30px;
 
         h2 {
             display: flex;
@@ -261,7 +262,6 @@ section {
             color: #CD696E;
             text-align: center;
             letter-spacing: 0;
-            margin-bottom: 30px;;
 
             @include desktop() {
                 font-size: 37px;
@@ -479,12 +479,16 @@ section {
                         }
                     }
                 }
+                span {
+                    &:not(.btn) {
+                        color: #000000;
+                    }
+                }
             }
         }
     }
 
     .mb_menu {
-
         position: fixed;
         background-image: url('../../images/bg_master.png');
         top: 0;
@@ -538,6 +542,10 @@ section {
                     animation-delay: .36s
                 }
             }
+        }
+
+        @include desktop() {
+            display: none;
         }
 
         @include large_screen() {
@@ -597,7 +605,8 @@ section {
                         }
                     }
 
-                    a {
+                    a,
+                    span {
                         color: #E8E1D0;
                         font-family: "Noto Sans TC";
                         padding: 10px 0;
@@ -605,12 +614,6 @@ section {
                         text-decoration: none;
                         font-size: 20px;
                         letter-spacing: 5px;
-
-                        &:hover {
-                            opacity: 1;
-                            color: #FFFFFF;
-                            letter-spacing: 15px;
-                        }
                     }
                 }
             }
@@ -660,114 +663,19 @@ section {
     }
 
     @include tablet_landscape {
-        width: 280px;
+        width: 500px;
     }
 
     @include desktop() {
-        width: 361px;
+        width: 673px;
     }
 
     @include large_screen() {
-        width: 361px;
+        width: 673px;
     }
 
     & > img {
         width: 100%;
-
-        &.mobile {
-            display: block;
-
-            @include tablets {
-                display: none;
-            }
-
-            @include desktop() {
-                display: none;
-            }
-
-            @include large_screen() {
-                display: none;
-            }
-        }
-        
-        &.portrait {
-            display: none;
-
-            @include tablets {
-                display: block;
-            }
-
-            @include tablet_portrait() {
-                display: block;
-            }
-
-            @include tablet_landscape {
-                display: none;
-            }
-
-            @include desktop() {
-                display: none;
-            }
-
-            @include large_screen() {
-                display: none;
-            }
-        }
-        &.landscape {
-            display: none;
-
-            @include tablets {
-                display: none;
-            }
-
-            @include tablet_portrait() {
-                display: none;
-            }
-
-            @include tablet_landscape {
-                display: block;
-            }
-
-            @include desktop() {
-                display: none;
-            }
-
-            @include large_screen() {
-                display: none;
-            }
-        }
-
-        &.desktop {
-            display: none;
-
-            @include tablets {
-                display: none;
-            }
-
-            @include desktop() {
-                display: block;
-            }
-
-            @include large_screen() {
-                display: none;
-            }
-        }
-
-        &.large {
-            display: none;
-
-            @include tablets {
-                display: none;
-            }
-
-            @include desktop() {
-                display: none;
-            }
-
-            @include large_screen() {
-                display: block;
-            }
-        }
     }
 }
 
@@ -780,6 +688,7 @@ section {
         width: 100%;
         margin: 0 auto;
         padding: 0 18px;
+        height: 100dvh;
 
         @include tablets {
             padding: 0 20px;
@@ -796,6 +705,7 @@ section {
         .main__intro {
             position: relative;
             max-width: 100%;
+            height: 100dvh;
             z-index: 2;
             display: flex;
             justify-content: center;
@@ -817,11 +727,11 @@ section {
                 font-weight: lighter;
                 line-height: 18px;
                 overflow: hidden;
-                margin-top: 105px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
+                margin-top: 80px;
 
                 h3 {
                     font-family: "Noto Serif TC";
@@ -834,10 +744,12 @@ section {
                     text-align: center;
                     margin-bottom: 11px;
 
-                    @include tablet_landscape() {}
-
                     @include tablet_portrait() {
                         font-size: 20px;
+                    }
+
+                    @include tablet_landscape() {
+                        font-size: 22px;
                     }
 
                     @include desktop() {
@@ -879,6 +791,8 @@ section {
                         font-size: 21px;
                         line-height: 31px;
                         display: none;
+                        margin-bottom: 0;
+                        margin-top: 16px;
 
                         @include tablet_landscape() {
                             display: block;
@@ -892,6 +806,22 @@ section {
                             display: block;
                         }
                     }
+                }
+
+                @include tablet_portrait() {
+                    margin-top: 100px;
+                }
+
+                @include tablet_landscape() {
+                    margin-top: 100px;
+                }
+
+                @include desktop() {
+                    margin-top: 160px;
+                }
+
+                @include large_screen() {
+                    margin-top: 160px;
                 }
             }
 
@@ -948,7 +878,7 @@ section {
                 }
 
                 @include large_screen() {
-                    top: calc(50% - 90px);
+                    top: calc(50% - 140px);
                     right: 40px;
                 }
 
@@ -1079,6 +1009,95 @@ section {
                 @include large_screen() {
                     display: block;
                 }
+            }
+        }
+    }
+
+    .belt {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+        background-color: #6B0C11;
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 4px;
+                    height: 4px;
+                    background-color: #D9D9D9;
+                    border-radius: 50%;
+                }
+
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            a,
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #FFFFFF;
+                letter-spacing: 1px;
+                padding: 16px 21px;
+                font-size: 18px;
+                line-height: 23px;
+                text-align: center;
+                letter-spacing: 0;
+
+                @include tablets() {
+                    font-size: 24px;
+                    line-height: 36px;
+                    padding: 28px 20px;
+                }
+
+                @include desktop() {
+                    font-size: 24px;
+                    line-height: 36px;
+                    padding: 28px 20px;
+
+                    &:hover {
+                        background-color: #992329;
+                    }
+                }
+                @include large_screen() {
+                    font-size: 24px;
+                    line-height: 36px;
+                    padding: 28px 20px;
+
+                    &:hover {
+                        background-color: #992329;
+                    }
+                }
+                
+                
+                br {
+                    @include tablets() {
+                        display: none;
+                    }
+
+                    @include desktop() {
+                        display: none;
+                    }
+                    @include large_screen() {
+                        display: none;
+                    }  
+                }
+                
             }
         }
     }
@@ -1281,15 +1300,110 @@ section {
     }
 
     .content {
-        text-align: center;
+        padding-top: 10px;
+
+        .flexItem {
+
+            @include desktop() {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @include large_screen() {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flexItem__image {
+                width: 174px;
+                margin: 0 auto;
+
+                @include desktop() {
+                    flex: 0 0 174px;
+                    margin-right: 54px;
+                }
+
+                @include large_screen() {
+                    flex: 0 0 174px;
+                    margin-right: 54px;
+                }
+                
+                .coverImg {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        left: 0;
+                        top: -10px;
+                        display: block;
+                        width: 148px;
+                        height: 190px;
+                        background-color: #E8E1D0;
+    
+                        @include desktop() {
+                            width: 142px;
+                            height: 169px;
+                        }
+                        @include large_screen() {
+                            width: 142px;
+                            height: 169px;
+                        }
+                    }
+                }
+
+                .action {
+                    margin-top: 14px;
+
+                    .buyBtn {
+                        display: inline-block;
+                        border: 1px solid #E8E1D0;
+                        padding: 10px 35px;
+                        color: #E8E1D0;
+                        font-size: 20px;
+                        line-height: 30px;
+
+                        &:hover {
+
+                            @include desktop() {
+                                color: #FFFFFF;
+                                border-color: #FFFFFF;
+                            }
+    
+                            @include large_screen() {
+                                color: #FFFFFF;
+                                border-color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .flexItem__text {
+                margin-top: 24px;
+                text-align: center;
+
+                @include desktop() {
+                    margin-top: 0;
+                    text-align: left;
+                    flex: 0 0 572px;
+                }
+                @include large_screen() {
+                    margin-top: 0;
+                    text-align: left;
+                    flex: 0 0 572px;
+                }
+            }
+        }
 
         .topic {
             font-size: 30px;
             line-height: 43px;
             color: #E8E1D0;
             font-weight: 600;
-            font-family: "Noto Serif TC", serif;
-            
+            font-family: "Noto Serif TC", serif;   
             margin-bottom: 32px;
 
             @include desktop() {
@@ -1399,6 +1513,7 @@ section {
         }
 
         .promoItem {
+            text-align: center;
             flex: 1;
             padding: 16px 22px 19px;
             border: 1px solid rgba(232, 225, 208, 0.3);
@@ -1494,12 +1609,27 @@ section {
         .topic {
             font-family: "Noto Serif TC";
 
+            @include desktop() {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex: 0 0 550px;
+            }
+
+            @include large_screen() {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex: 0 0 550px;
+            }
+
             &__top {
                 .title {
                     text-align: center;
                     font-size: 30px;
                     line-height: 43px;
-                    font-weight: 700;               
+                    font-weight: 700;
+                    letter-spacing: 3px;            
 
                     @include desktop() {
                         text-align: left;
@@ -1527,9 +1657,12 @@ section {
                 }
 
                 .intro {
+                    font-family: "Noto Sans TC";
                     font-size: 24px;
                     line-height: 36px;
+                    font-weight: 300;
                     text-align: center;
+                    letter-spacing: 3px;
 
                     @include desktop() {
                         text-align: left;
@@ -1544,14 +1677,8 @@ section {
                     }
 
                     span {
-                        display: block;
-
-                        @include desktop() {
-                            display: inline;
-                        }
-                        @include large_screen() {
-                            display: inline;
-                        }
+                        display: inline;
+                        margin-right: 10px;
                     }
                 }
             }
@@ -1581,37 +1708,78 @@ section {
                             font-size: 24px;
                             line-height: 41px;
                         }
+
+                        div {
+                            font-size: 18px;
+                            line-height: 24px;
+
+                            @include tablets() {
+                                font-size: 20px;
+                                line-height: 34px;
+                            }
+
+                            @include desktop() {
+                                font-size: 20px;
+                                line-height: 34px;
+                            }
+
+                            @include large_screen() {
+                                font-size: 20px;
+                                line-height: 34px;
+                            }
+                        }
                     }
                 }
-            } 
-
-            @include desktop() {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-
-            @include large_screen() {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
+            }            
         }
 
-        .paragraph {
+        .info {
             margin-top: 24px;
-            font-size: 18px;
-            line-height: 34px;
-            text-align: justify;
 
             @include desktop() {
                 margin-top: 0;
-                flex: 0 0 485px;
+                flex: 0 0 397px;
             }
 
             @include large_screen() {
                 margin-top: 0;
-                flex: 0 0 485px;
+                flex: 0 0 397px;
+            }
+
+            .paragraph {
+                font-size: 18px;
+                line-height: 34px;
+                text-align: justify;
+                letter-spacing: 1px;
+            }
+
+            .action {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .buyBtn {
+                    display: inline-block;
+                    padding: 10px 35px;
+                    border: 1px solid #E8E1D0;
+                    color: #E8E1D0;
+                    font-size: 20px;
+                    line-height: 30px;
+
+                    &:hover {
+
+                        @include desktop() {
+                            color: #FFFFFF;
+                            border-color: #FFFFFF;
+                        }
+
+                        @include large_screen() {
+                            color: #FFFFFF;
+                            border-color: #FFFFFF;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1624,6 +1792,14 @@ section {
         background-color: rgba(21, 56, 93, 0.5);
         color: #E8E1D0;
         border-radius: 8px;
+
+        @include desktop() {
+            margin-top: 40px;
+        }
+
+        @include large_screen() {
+            margin-top: 40px;
+        }
 
         &__title {
             font-size: 14px;
@@ -1665,8 +1841,9 @@ section {
     background-color: #FFFFFF;
     
     .title {
+        margin-bottom: 30px;
+
         h2 {
-            margin-bottom: 30px;
 
             &:before {
                 background: rgb(255,255,255);
@@ -1835,6 +2012,11 @@ section {
                 text-decoration: line-through;
             }
 
+            .discount {
+                font-size: 16px;
+                color: #4B4747;
+            }
+
             & + .planItem__action {
                 margin-top: 10px;
             }
@@ -1906,12 +2088,27 @@ section {
 }
 
 footer {
-    padding: 1em 0;
-    background: #000;
-    color: #B3B3B3;
-    font-size: .7em;
+    padding: 24px 0;
+    background: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    line-height: 21px;
     letter-spacing: 1px;
-    text-align: center
+    text-align: center;
+
+    br {
+        @include tablets {
+            display: none;
+        }
+
+        @include desktop() {
+            display: none;
+        }
+
+        @include large_screen() {
+            display: none;
+        }
+    }
 }    
 
 .effect-underline2 {
