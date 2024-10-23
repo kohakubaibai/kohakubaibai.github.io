@@ -410,6 +410,18 @@ section {
   -webkit-transform-origin: bottom left;
   transform-origin: bottom left;
 }
+.menubar .pc_menu ul li a.btn:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url("../../images/icon_cart.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .menubar .pc_menu ul li span:not(.btn) {
   color: #000000;
 }
@@ -541,7 +553,7 @@ section {
   height: auto;
   line-height: inherit;
   background: #000;
-  padding: 6px 34px;
+  padding: 6px 16px;
 }
 
 @-webkit-keyframes fade_h1 {
@@ -1344,71 +1356,31 @@ section {
 }
 #book .content .flexItem .flexItem__image {
   width: 174px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   #book .content .flexItem .flexItem__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 174px;
-            flex: 0 0 174px;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    margin-left: 0;
     margin-right: 54px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @media (min-width: 1201px) {
   #book .content .flexItem .flexItem__image {
+    margin-left: 0;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 174px;
-            flex: 0 0 174px;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
     margin-right: 54px;
-  }
-}
-#book .content .flexItem .flexItem__image .coverImg {
-  position: relative;
-}
-#book .content .flexItem .flexItem__image .coverImg:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: -10px;
-  display: block;
-  width: 148px;
-  height: 190px;
-  background-color: #E8E1D0;
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-  #book .content .flexItem .flexItem__image .coverImg:after {
-    width: 142px;
-    height: 169px;
-  }
-}
-@media (min-width: 1201px) {
-  #book .content .flexItem .flexItem__image .coverImg:after {
-    width: 142px;
-    height: 169px;
-  }
-}
-#book .content .flexItem .flexItem__image .action {
-  margin-top: 14px;
-}
-#book .content .flexItem .flexItem__image .action .buyBtn {
-  display: inline-block;
-  border: 1px solid #E8E1D0;
-  padding: 10px 35px;
-  color: #E8E1D0;
-  font-size: 20px;
-  line-height: 30px;
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-  #book .content .flexItem .flexItem__image .action .buyBtn:hover {
-    color: #FFFFFF;
-    border-color: #FFFFFF;
-  }
-}
-@media (min-width: 1201px) {
-  #book .content .flexItem .flexItem__image .action .buyBtn:hover {
-    color: #FFFFFF;
-    border-color: #FFFFFF;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 #book .content .flexItem .flexItem__text {
@@ -1431,6 +1403,20 @@ section {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 572px;
             flex: 0 0 572px;
+  }
+}
+#book .content .flexItem .flexItem__text .action {
+  text-align: center;
+  margin-top: 20px;
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  #book .content .flexItem .flexItem__text .action {
+    text-align: left;
+  }
+}
+@media (min-width: 1201px) {
+  #book .content .flexItem .flexItem__text .action {
+    text-align: left;
   }
 }
 #book .content .topic {
@@ -1633,6 +1619,29 @@ section {
   line-height: 24px;
   font-weight: 350;
   letter-spacing: 0;
+}
+#book .content .coverImg {
+  position: relative;
+}
+#book .content .action .buyBtn {
+  display: inline-block;
+  border: 1px solid #E8E1D0;
+  padding: 10px 35px;
+  color: #E8E1D0;
+  font-size: 20px;
+  line-height: 30px;
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  #book .content .action .buyBtn:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+}
+@media (min-width: 1201px) {
+  #book .content .action .buyBtn:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
 }
 
 #event {
@@ -1900,6 +1909,7 @@ section {
           justify-content: center;
   background-color: rgba(21, 56, 93, 0.5);
   color: #E8E1D0;
+  letter-spacing: 0;
   border-radius: 8px;
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
