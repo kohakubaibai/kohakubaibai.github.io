@@ -495,8 +495,19 @@ section {
                     }
                 }
                 span {
+                    text-align: center;
+                    padding: 0 1rem;
                     &:not(.btn) {
-                        color: #000000;
+                        color: #BABABA;
+                    }
+
+                    i {
+                        color: #BABABA;
+                        display: block;
+                        width: 100%;
+                        font-size: 12px;
+                        left: 50%;
+                        text-align: center;
                     }
                 }
             }
@@ -629,6 +640,20 @@ section {
                         text-decoration: none;
                         font-size: 20px;
                         letter-spacing: 5px;
+
+                        i {
+                            color: #BABABA;
+                            display: block;
+                            width: 100%;
+                            font-size: 12px;
+                            line-height: 16px;
+                            text-align: center;
+                            letter-spacing: 2px;
+                        }
+                    }
+
+                    span {
+                        padding-top: 0;
                     }
                 }
             }
@@ -1064,15 +1089,38 @@ section {
             a,
             span {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 color: #FFFFFF;
                 letter-spacing: 1px;
-                padding: 16px 21px;
+                padding: 16px 12px;
                 font-size: 18px;
                 line-height: 23px;
                 text-align: center;
                 letter-spacing: 0;
+                flex-wrap: wrap;
+                position: relative;
+                flex: 1;
+
+                i {
+                    color: #BABABA;
+                    display: block;
+                    width: 100%;
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-align: center;
+
+                    @include tablets() {
+                        bottom: 10px;
+                    }
+                    @include desktop() {
+                        bottom: 10px;
+                    }
+                    @include large_screen() {
+                        bottom: 10px;
+                    }
+                }
 
                 @include tablets() {
                     font-size: 24px;
@@ -1113,6 +1161,20 @@ section {
                     }  
                 }
                 
+            }
+
+            span {
+                color: #BABABA;
+
+                @include tablets() {
+                    padding: 20px;
+                }
+                @include desktop() {
+                    padding: 20px;
+                }
+                @include large_screen() {
+                    padding: 20px;
+                }
             }
         }
     }
@@ -1657,14 +1719,6 @@ section {
 
                     span {
                         display: block;
-
-                        @include desktop() {
-                            display: inline;
-                        }
-
-                        @include large_screen() {
-                            display: inline;
-                        }
                     }
                 }
 
@@ -1852,6 +1906,16 @@ section {
 
 #join{
     background-color: #FFFFFF;
+
+    .container {
+        
+        @include desktop() {
+            padding: 0;
+        }
+        @include large_screen() {
+            padding: 0;
+        }
+    }
     
     .title {
         margin-bottom: 30px;
@@ -1917,25 +1981,25 @@ section {
                 margin-bottom: 16px;
 
                 @include desktop() {
-                    flex: 0 0 302px;
+                    flex: 0 0 calc((100% - 90px) / 4);
                     display: flex;
                     justify-content: center;
                     margin-bottom: 0;
                     margin-right: 30px;
 
-                    &:nth-child(3n) {
+                    &:nth-child(4n) {
                         margin-right: 0;
                     }
                 }
 
                 @include large_screen() {
-                    flex: 0 0 302px;
+                    flex: 0 0 calc((100% - 90px) / 4);
                     display: flex;
                     justify-content: center;
                     margin-right: 30px;
                     margin-bottom: 0;
 
-                    &:nth-child(3n) {
+                    &:nth-child(4n) {
                         margin-right: 0;
                     }
                 }

@@ -422,8 +422,20 @@ section {
   background-repeat: no-repeat;
   background-position: center;
 }
+.menubar .pc_menu ul li span {
+  text-align: center;
+  padding: 0 1rem;
+}
 .menubar .pc_menu ul li span:not(.btn) {
-  color: #000000;
+  color: #BABABA;
+}
+.menubar .pc_menu ul li span i {
+  color: #BABABA;
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  left: 50%;
+  text-align: center;
 }
 .menubar .mb_menu {
   position: fixed;
@@ -542,6 +554,19 @@ section {
   text-decoration: none;
   font-size: 20px;
   letter-spacing: 5px;
+}
+.menubar .mb_menu nav ul li a i,
+.menubar .mb_menu nav ul li span i {
+  color: #BABABA;
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.menubar .mb_menu nav ul li span {
+  padding-top: 0;
 }
 
 .hamburger--collapse.is-active .hamburger-inner:after {
@@ -1033,6 +1058,10 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1041,11 +1070,44 @@ section {
           justify-content: center;
   color: #FFFFFF;
   letter-spacing: 1px;
-  padding: 16px 21px;
+  padding: 16px 12px;
   font-size: 18px;
   line-height: 23px;
   text-align: center;
   letter-spacing: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.main__header .belt__link a i,
+.main__header .belt__link span i {
+  color: #BABABA;
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main__header .belt__link a i,
+  .main__header .belt__link span i {
+    bottom: 10px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .main__header .belt__link a i,
+  .main__header .belt__link span i {
+    bottom: 10px;
+  }
+}
+@media (min-width: 1201px) {
+  .main__header .belt__link a i,
+  .main__header .belt__link span i {
+    bottom: 10px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .main__header .belt__link a,
@@ -1095,6 +1157,24 @@ section {
   .main__header .belt__link a br,
   .main__header .belt__link span br {
     display: none;
+  }
+}
+.main__header .belt__link span {
+  color: #BABABA;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main__header .belt__link span {
+    padding: 20px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .main__header .belt__link span {
+    padding: 20px;
+  }
+}
+@media (min-width: 1201px) {
+  .main__header .belt__link span {
+    padding: 20px;
   }
 }
 
@@ -1752,16 +1832,6 @@ section {
 #event .content .topic__top .title span {
   display: block;
 }
-@media (min-width: 1025px) and (max-width: 1200px) {
-  #event .content .topic__top .title span {
-    display: inline;
-  }
-}
-@media (min-width: 1201px) {
-  #event .content .topic__top .title span {
-    display: inline;
-  }
-}
 #event .content .topic__top .intro {
   font-family: "Noto Sans TC";
   font-size: 24px;
@@ -1960,6 +2030,16 @@ section {
 #join {
   background-color: #FFFFFF;
 }
+@media (min-width: 1025px) and (max-width: 1200px) {
+  #join .container {
+    padding: 0;
+  }
+}
+@media (min-width: 1201px) {
+  #join .container {
+    padding: 0;
+  }
+}
 #join .title {
   margin-bottom: 30px;
 }
@@ -2040,8 +2120,8 @@ section {
 @media (min-width: 1025px) and (max-width: 1200px) {
   #join .content .planList__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 302px;
-            flex: 0 0 302px;
+        -ms-flex: 0 0 calc((100% - 90px) / 4);
+            flex: 0 0 calc((100% - 90px) / 4);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2051,15 +2131,15 @@ section {
     margin-bottom: 0;
     margin-right: 30px;
   }
-  #join .content .planList__item:nth-child(3n) {
+  #join .content .planList__item:nth-child(4n) {
     margin-right: 0;
   }
 }
 @media (min-width: 1201px) {
   #join .content .planList__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 302px;
-            flex: 0 0 302px;
+        -ms-flex: 0 0 calc((100% - 90px) / 4);
+            flex: 0 0 calc((100% - 90px) / 4);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2069,7 +2149,7 @@ section {
     margin-right: 30px;
     margin-bottom: 0;
   }
-  #join .content .planList__item:nth-child(3n) {
+  #join .content .planList__item:nth-child(4n) {
     margin-right: 0;
   }
 }
