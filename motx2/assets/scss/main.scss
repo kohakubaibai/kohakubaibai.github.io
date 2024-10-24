@@ -690,9 +690,15 @@ section {
     }
 }
 
+.h1_txt {
+    
+}
+
 .ani_kv_h1{
     animation: fade_h1 4s 1 1s both;
     width: 100%;
+    font-size: 0;
+    line-height: 0;
 
     @include tablets {
         width: 100%;
