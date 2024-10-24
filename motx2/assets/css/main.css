@@ -711,7 +711,7 @@ section {
           justify-content: flex-start;
   margin-top: 80px;
 }
-.main__header .container .main__intro .txt h3 {
+.main__header .container .main__intro .txt .ani_kv_h3 {
   font-family: "Noto Serif TC";
   font-style: normal;
   font-weight: 700;
@@ -723,23 +723,23 @@ section {
   margin-bottom: 11px;
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .main__header .container .main__intro .txt h3 {
+  .main__header .container .main__intro .txt .ani_kv_h3 {
     font-size: 20px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .main__header .container .main__intro .txt h3 {
+  .main__header .container .main__intro .txt .ani_kv_h3 {
     font-size: 22px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
-  .main__header .container .main__intro .txt h3 {
+  .main__header .container .main__intro .txt .ani_kv_h3 {
     margin-bottom: 16px;
     font-size: 25px;
   }
 }
 @media (min-width: 1201px) {
-  .main__header .container .main__intro .txt h3 {
+  .main__header .container .main__intro .txt .ani_kv_h3 {
     margin-bottom: 16px;
     font-size: 25px;
   }
