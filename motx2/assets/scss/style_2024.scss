@@ -74,9 +74,9 @@ $mb_s: 375px;
 // animation
 .ani_kv_h3{
   position: relative;
-  overflow: hidden;
   letter-spacing: 0.3em;
   text-indent: 0.7em;
+  line-height: 1;
 
   @include mb-width_l(){
     width: 100%;

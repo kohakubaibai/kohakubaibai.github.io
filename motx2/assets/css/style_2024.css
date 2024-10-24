@@ -37,9 +37,9 @@
 
 .ani_kv_h3 {
   position: relative;
-  overflow: hidden;
   letter-spacing: 0.3em;
   text-indent: 0.7em;
+  line-height: 1;
 }
 @media all and (max-width: 660px) {
   .ani_kv_h3 {
