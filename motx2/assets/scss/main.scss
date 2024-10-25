@@ -1987,7 +1987,7 @@ section {
                 margin-bottom: 16px;
 
                 @include desktop() {
-                    flex: 0 0 calc((100% - 90px) / 4);
+                    flex: 0 0 calc((100% - 60px) / 3);
                     display: flex;
                     justify-content: center;
                     margin-bottom: 0;

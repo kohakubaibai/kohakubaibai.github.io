@@ -2122,8 +2122,8 @@ section {
 @media (min-width: 1025px) and (max-width: 1200px) {
   #join .content .planList__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc((100% - 90px) / 4);
-            flex: 0 0 calc((100% - 90px) / 4);
+        -ms-flex: 0 0 calc((100% - 60px) / 3);
+            flex: 0 0 calc((100% - 60px) / 3);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
