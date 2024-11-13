@@ -263,6 +263,16 @@ body {
                 color: $java700;
                 @include fs(16);
             }
+
+            .loggedIn {
+                display: block;
+                max-width: 131px;
+                color: $java700;
+                padding: 10px;
+                text-decoration: underline;
+                @include fs(16);
+                @include ellipsis;
+            }
         }
     }
 
@@ -698,6 +708,15 @@ body {
                     &:hover {
                         background-color: $java700;
                         color: $white;
+                    }
+                }
+
+                .loggedIn {
+                    @include transition(all,.2s,ease-in);
+
+                    &:hover {
+                        color: $java900;
+                        text-decoration: underline !important;
                     }
                 }
             }

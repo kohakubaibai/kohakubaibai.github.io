@@ -249,6 +249,17 @@ body {
   color: #156A70;
   font-size: 100%;
 }
+.outsourcing_header .header_mainContent .userFunction .loggedIn {
+  display: block;
+  max-width: 131px;
+  color: #156A70;
+  padding: 10px;
+  text-decoration: underline;
+  font-size: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .outsourcing_header .header_nav {
   visibility: hidden;
   position: fixed;
@@ -679,6 +690,14 @@ body {
   .outsourcing_header .header_mainContent .userFunction .loginBtn:hover {
     background-color: #156A70;
     color: #FFFFFF;
+  }
+  .outsourcing_header .header_mainContent .userFunction .loggedIn {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  .outsourcing_header .header_mainContent .userFunction .loggedIn:hover {
+    color: #16474B;
+    text-decoration: underline !important;
   }
   .outsourcing_header .header_nav {
     display: block;
