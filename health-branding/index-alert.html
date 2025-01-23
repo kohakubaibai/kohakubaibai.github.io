@@ -9,9 +9,9 @@
 	<title>2024信賴品牌館 | 信賴，是品牌永續關鍵</title>
 
 	<meta property="og:title" content="2024信賴品牌館 | 信賴，是品牌永續關鍵" />
-	<meta property="og:description" content="康健信賴品牌大調查一直相信唯有來自重要消費者的真實聲音，才能共同為台灣選擇出值得信賴的好品牌！健康意識高漲之下的2024年也不例外，品牌信任感不但是企業健康形象以及品牌內涵的投射，更是讓消費者可以放心地與親友分享、安心的使用與採購。">
+	<meta property="og:description" content="康健信賴品牌大調查一直相信唯有來自重要消費者的真實聲音，才能共同為台灣選擇出值得信賴的好品牌！健康意識高漲之下的2023年也不例外，品牌信任感不但是企業健康形象以及品牌內涵的投射，更是讓消費者可以放心地與親友分享、安心的使用與採購。">
 	<meta property="og:site_name" content="2024信賴品牌館 | 信賴，是品牌永續關鍵">
-	<meta property="og:image" content="https://www.commonhealth.com.tw/event/health-branding/images/share2024.jpg" />
+	<meta property="og:image" content="https://www.commonhealth.com.tw/event/health-branding/images/share2023.jpg" />
 	<meta property="og:url" content="https://www.commonhealth.com.tw/event/health-branding/" />
 	<meta property="og:type" content="website" />
 	<link rel="canonical" href="https://www.commonhealth.com.tw/event/health-branding/">
@@ -92,16 +92,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     googletag.enableServices();
   });
 </script>
+
+<!--彈出視窗-->
+   <style>
+#window-container{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2147483647;
+}
+
+#window-pop{
+    width:50%;
+    z-index:1;
+    margin: 15% auto;
+    overflow: auto;
+   /* border-radius: 20px; */
+}
+
+.window-content {
+    width: auto;
+    height: 50%;
+    line-height: 50%;
+    overflow: auto;
+    text-align: center;
+}
+
+.window-content img {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+@media (max-width: 1400px) {
+    .window-content img {
+        width: 40%;
+        height: 40%;
+    }
+    #window-pop{
+        width:auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .window-content img {
+        width: 50%;
+        height: 50%;
+    }
+}
+    </style>
 </head>
-<body>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
-	js = d.createElement(s); js.id = id;
-	js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=150286561711250&autoLogAppEvents=1';
-	fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+<body onload="customizeWindowEvent()">
+	<div id="window-container">
+		<div id="window-pop">
+			<div class="window-content">
+				<a href="https://www.surveycake.com/s/r2eyv?from=health-branding&utm_source=cwmg_event" target="_blank"><img src="images/2024HBQ.jpg" alt=""></a>
+				<!--https://www.commonhealth.com.tw/event/health-branding/-->
+			</div>
+		</div>
+	</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=150286561711250&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 	<div class="page page--index" id="top">
 		<header class="hd">
@@ -129,7 +192,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<div class="img-trust wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">
 							<img src="images/img_trust2025.png" alt="康健雜誌2025讀者票選信賴品牌">
 						</div>
-						<div class="subTitle">
+						<div class="subTitle" >
 							<h3 class="line1 wow fadeIn" data-wow-duration="1s" data-wow-delay="2.5s">
 								<img src="images/kv-slogan2.png" alt="品牌的永續關鍵">
 							</h3>
@@ -145,10 +208,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							</div>
 							<div class="line2 wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">品牌的永續關鍵</div>
 						</div>
-						<div class="img-trust wow fadeIn" data-wow-duration="1s" data-wow-delay="2.5s">
+						<div class="img-trust wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">
 							<img src="images/img_trust2025.png" alt="康健雜誌2025讀者票選信賴品牌">
 						</div>
-						<div class="subTitle">
+						<div class="subTitle" >
+							<h3 class="line1 wow fadeIn" data-wow-duration="1s" data-wow-delay="2.5s">
+								品牌的永續關鍵
+							</h3>
 							<div class="desc wow fadeIn" data-wow-duration="1s" data-wow-delay="3.5s">2024康健雜誌讀者票選<br>信賴品牌大調查</div>
 						</div>
 					</div>
@@ -466,14 +532,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	</div>
 	<a href="#top" class="gotop">TOP</a>
 
-<script src="js/jquery-latest.min.js"></script>
-<script src="js/jquery.mobile.custom.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/Chart.js"></script>
-<script src="js/wow.js"></script>
-<script src="owl/owl.carousel.min.js"></script>
-<script src="js/common.js"></script>
+	<script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery.mobile.custom.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/Chart.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="owl/owl.carousel.min.js"></script>
+	<script src="js/common.js"></script>
 
 
 <script type='text/javascript'>
@@ -500,4 +566,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     })();
 </script>
 </body>
+<script>
+        function customizeWindowEvent() {
+            var popup_window = document.getElementById("window-container");
+
+            popup_window.style.display = "block";
+
+            window.onclick = function close(e) {
+                if (e.target == popup_window) {
+                    popup_window.style.display = "none";
+                }
+            }
+        }
+    </script>
 </html>

@@ -1,0 +1,234 @@
+
+.btn {
+	border-radius: 0;
+	border: none;
+    @include transition(all, .15s, ease-in-out);
+
+    .btn__text {
+        @include transition(all, .15s, ease-in-out);
+    }
+
+	&--default {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 9px 24px;
+		background-color: $primary1;
+		border-radius: 21px;
+
+		.btn__text {
+			font-size: 16px;
+			line-height: 23px;
+			color: #FFFFFF;
+		}
+	}
+
+	&--arrow {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 9px 16px 9px 24px;
+		background-color: $primary1;
+		border-radius: 21px;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			background-image: url('../images/arrow-link_left.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			margin-left: 8px;
+            @include transition(all, .15s, ease-in-out);
+
+		}
+
+		.btn__text {
+			font-size: 16px;
+			line-height: 23px;
+			color: #FFFFFF;
+		}
+	}
+
+    &--history {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 14px 24px 14px 32px;
+		background-color: $primary1;
+		border-radius: 28px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .08);
+
+		&:after {
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			background-image: url('../images/arrow-link_left.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			margin-left: 8px;
+            @include transition(all, .15s, ease-in-out);
+
+		}
+
+		.btn__text {
+			font-size: 18px;
+			line-height: 26px;
+			color: #FFFFFF;
+		}
+	}
+
+	&--category {
+		position: relative;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 19px 24px;
+		border-radius: 28px;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			right: 24px;
+			top: 50%;
+			@include translateY(-50%);
+			background-image: url('../images/arrow-link_left.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			@include transition(all, .15s, ease-in-out);
+		}
+
+		.btn__text {
+			font-size: 18px;
+			line-height: 1;
+		}
+
+		&.is-food {
+			background-color: $cate_food;
+			.btn__text {
+				color: #FFFFFF;
+			}
+		}
+
+		&.is-medical {
+			background-color: $cate_medical;
+			.btn__text {
+				color: #FFFFFF;
+			}
+		}
+
+		&.is-health {
+			background-color: $cate_health;
+			.btn__text {
+				color: $neutralTxt1;
+			}
+		}
+
+		&.is-furnishing {
+			background-color: $cate_furnishing;
+			.btn__text {
+				color: $neutralTxt1;
+			}
+		}
+
+		&.is-appliances {
+			background-color: $cate_appliances;
+			.btn__text {
+				color: $neutralTxt1;
+			}
+		}
+
+		&.is-finance {
+			background-color: $cate_finance;
+			.btn__text {
+				color: #FFFFFF;
+			}
+		}
+
+		&.is-entertainment {
+			background-color: $cate_entertainment;
+			.btn__text {
+				color: #FFFFFF;
+			}
+		}
+
+		&.is-makeup {
+			background-color: $cate_makeup;
+			.btn__text {
+				color: #FFFFFF;
+			}
+		}
+	}
+
+	&--passPage {
+		padding: 6px 10px;
+		border-bottom: 1px solid $neutralTxt1;
+
+		.btn__text {
+			display: block;
+			font-family: "Roboto", serif;
+			font-size: 16px;
+			color: $neutralTxt1;
+			letter-spacing: 4.754px;
+			text-indent: 4.754px;
+			text-align: center;
+		}
+	}
+
+	&:focus {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 992px) {
+    .btn {
+        &--default,
+        &--arrow,
+        &--history {
+
+            &:hover {
+                background-color: $primary2;
+            }
+        }
+
+        &--arrow,
+        &--history {
+            &:hover {
+                &:after {
+                    background-position: right -2px center;
+                }
+            }
+        }
+
+        &--passPage {
+            &:hover {
+                .btn__text {
+                    color: $primary1;
+                }
+            }
+        }
+
+		&--category {
+			&:hover {
+				opacity: 0.9;
+
+				&:after {
+					background-position: right -2px center;
+				}
+			}
+		}
+    }
+}
