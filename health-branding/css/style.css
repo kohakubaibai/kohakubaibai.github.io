@@ -870,6 +870,20 @@ h6 {
 .section--tab .tab-content.active {
   display: block;
 }
+.section--ad img {
+  display: block;
+  width: 100%;
+}
+.section--ad .pc {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+}
+.section--ad .mb {
+  width: 300px;
+  margin: 0 auto;
+  display: none;
+}
 
 .comingSoon {
   text-align: center;
@@ -1732,6 +1746,12 @@ h6 {
   .section--tab .tab-options .tab-option.active {
     color: #009944;
   }
+  .section--ad .pc {
+    display: none;
+  }
+  .section--ad .mb {
+    display: block;
+  }
   .comingSoon__title {
     font-size: 40px;
     line-height: 1.45;
@@ -2403,6 +2423,12 @@ h6 {
     color: #FFFFFF;
     background-color: #3B90E5;
     border: 1px solid #3B90E5;
+  }
+  .section--ad .pc {
+    display: block;
+  }
+  .section--ad .mb {
+    display: none;
   }
   .comingSoon__title {
     font-size: 62px;

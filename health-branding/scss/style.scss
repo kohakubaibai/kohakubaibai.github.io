@@ -158,6 +158,23 @@ h6 {
 			}
         }
 	}
+
+	&--ad {
+		img {
+			display: block;
+			width: 100%;
+		}
+		.pc {
+			width: 100%;
+			max-width: 970px;
+			margin: 0 auto;
+		}
+		.mb {
+			width: 300px;
+			margin: 0 auto;
+			display: none;
+		}
+	}
 }
 
 //coming soon
@@ -1094,6 +1111,8 @@ $chartCate_color:
 //Small devices (portrait phone)
 @media only screen and (min-width: 320px) {
 
+
+
 	.section {
 		&--record {
 			padding-top: 80px;
@@ -1176,6 +1195,15 @@ $chartCate_color:
 						color: $primary1;
 					}
 				}
+			}
+		}
+
+		&--ad {
+			.pc {
+				display: none;
+			}
+			.mb {
+				display: block;
 			}
 		}
 	}
@@ -1991,6 +2019,15 @@ $chartCate_color:
 						}
 					}
 				}
+			}
+		}
+
+		&--ad {
+			.pc {
+				display: block;
+			}
+			.mb {
+				display: none;
 			}
 		}
 	}
