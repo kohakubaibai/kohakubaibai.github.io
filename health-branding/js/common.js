@@ -1,18 +1,11 @@
 $(document).ready(function() {
 
 
-	$('.menu').hover(function(){
-		var _this = $(this),
-			_submenuOpen = _this.find('.submenu');
-		_submenuOpen.stop(true, true).slideToggle(200);
-	});
-
-
 	$('body').addClass('js');
 	var $menu = $('#menu'),
 	$menulink = $('.menu-link');
 
-	$menulink.click(function() {
+	$menulink.on('click', function() {
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
 		return false;
@@ -20,33 +13,37 @@ $(document).ready(function() {
 
 	new WOW().init();
 
+	$('.column-list').owlCarousel({
+	    loop: true,
+	    margin: 15,
+	    nav: false,
+	    items: 1,
+		dotsContainer: '#column-dots',
+	    autoHeight: false,
+		animateIn: 'fadeIn',
+		smartSpeed: 200,
+		mouseDrag: false
+	});
 
 	$('.brand-list').owlCarousel({
-	    loop:false,
-	    autoplay:true,
-	    margin:0,
-	    nav:true,
-	    center:false,
-	    responsive:{
-	        0:{
-	            items:1
+	    loop: false,
+	    autoplay: false,
+	    margin: 0,
+	    nav: false,
+	    center: false,
+	    responsive: {
+	        0: {
+	            items: 1,
 	        },
-	        600:{
-	            items:2
+	        600: {
+	            items: 2
 	        },
-	        1000:{
-	            items:3
+	        1000: {
+	            items: 3,
+				margin: 22
 	        }
 	    }
 	});
-	$('.column-list').owlCarousel({
-	    loop:false,
-	    margin: 15,
-	    nav:true,
-	    items:1,
-	    autoHeight:true
-	});
-
 
 	$("a[href^='#']").on('click', function(event) {
 
@@ -70,14 +67,13 @@ $(document).ready(function() {
 		} // End if
 	});
 
-var prev = 0;
-var $window = $(window);
-var nav = $('.hd');
+	var prev = 0;
+	var $window = $(window);
+	var nav = $('.hd');
 
-$window.on('scroll', function(){
-  var scrollTop = $window.scrollTop();
-  nav.toggleClass('hideUp', scrollTop > prev);
-  prev = scrollTop;
-});
-
+	$window.on('scroll', function(){
+		var scrollTop = $window.scrollTop();
+		nav.toggleClass('hideUp', scrollTop > prev);
+		prev = scrollTop;
+	});
 });

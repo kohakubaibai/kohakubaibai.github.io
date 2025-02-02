@@ -44,10 +44,26 @@
     appearance: $value;
 }
 
+@mixin box-shadow($x, $y, $blur, $rgba) {
+    -webkit-box-shadow: $x $y $blur $rgba;
+    box-shadow: $x $y $blur $rgba;
+}
+
 @mixin flex-obj($align, $justify) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
+}
+
+@mixin fit-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 @mixin border-radius($value) {
@@ -63,6 +79,13 @@
     transition: $property $duration $curve;
 }
 
+@mixin cancel-transition {
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+}
+
 //transform
 @mixin transform($transforms) {
     -webkit-transform: $transforms;
@@ -76,15 +99,15 @@
     transform-style: $style;
 }
 
-@mixin rotate($deg) { 
+@mixin rotate($deg) {
     @include transform(rotate(#{$deg}deg));
 }
 
-@mixin rotateX($deg) { 
+@mixin rotateX($deg) {
     @include transform(rotateX(#{$deg}deg));
 }
 
-@mixin rotateY($deg) { 
+@mixin rotateY($deg) {
     @include transform(rotateY(#{$deg}deg));
 }
 
