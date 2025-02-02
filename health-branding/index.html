@@ -156,6 +156,7 @@
 					</div>
 				</div>
 			</div>
+			<div id="topAnchor"></div>
 			<section class="section section--flow">
 				<div class="container">
 					<div class="bulletin">
@@ -330,14 +331,14 @@
 				<div class="section__title">
 					<div class="container">
 						<div class="titleWrap">
-							<h2 class="title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.2s">
+							<h2 class="title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
 								<div class="title__subTitle">2025信賴品牌</div>
 								<div class="title__topic">共同宣誓</div>
 							</h2>
 						</div>
 					</div>
 				</div>
-				<div class="section__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.7s">
+				<div class="section__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">
 					<div class="container">
 						<div class="brand-list owl-carousel">
 							<div class="bx">
@@ -518,6 +519,20 @@
 		window.onload = (typeof window.onload != 'function') ?
 			loadChartbeat : function() { oldonload(); loadChartbeat(); };
 		})();
+	</script>
+	<script>
+		$(function(){
+			$('.gotop').hide();
+			$(window).on('scroll', function(){
+				var scroll_d = $(this).scrollTop(),
+					dectPoint = $('#topAnchor').offset().top;
+				if(scroll_d > dectPoint) {
+					$('.gotop').fadeIn();
+				} else {
+					$('.gotop').fadeOut();
+				}
+			});
+		});
 	</script>
 </body>
 </html>

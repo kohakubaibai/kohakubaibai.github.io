@@ -218,6 +218,7 @@
 					</div>
 				</div>
 			</div>
+			<div id="topAnchor"></div>
 			<section class="section section--flow">
 				<div class="container">
 					<div class="bulletin">
@@ -596,5 +597,19 @@
             }
         }
     </script>
+	<script>
+		$(function(){
+			$('.gotop').hide();
+			$(window).on('scroll', function(){
+				var scroll_d = $(this).scrollTop(),
+					dectPoint = $('#topAnchor').offset().top;
+				if(scroll_d > dectPoint) {
+					$('.gotop').fadeIn();
+				} else {
+					$('.gotop').fadeOut();
+				}
+			});
+		});
+	</script>
 </body>
 </html>
