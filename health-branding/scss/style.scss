@@ -2045,6 +2045,10 @@ $chartCate_color:
 							}
 						}
 					}
+
+					&:after {
+						display: none;
+					}
 				}
 			}
 		}

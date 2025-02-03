@@ -2452,6 +2452,9 @@ h6 {
     color: #FFFFFF;
     background-color: #3B90E5;
   }
+  .section--tab .tab-options .tab-option:after {
+    display: none;
+  }
   .section--ad .pc {
     display: block;
   }
