@@ -1,23 +1,27 @@
 $(function(){
-	// Prevent initial scroll on page load if there's a hash
-	setTimeout(function() {
-		window.scrollTo(0, 0);
-	}, 1);
 
 	// Function to activate tab without scrolling
 	function activateTab(tabId) {
-		tabId = tabId || 'sex';
+		tabId = tabId || '';
 		const cleanTabId = tabId.replace('#', '');
 		const tabText = $(`.tab-option[data-tab="${cleanTabId}"]`).text();
 
-		$(`.tab-option[data-tab="${cleanTabId}"]`).addClass('active');
-
-		// Update header text
-		$('.selected-tab').text(tabText);
+		if(tabId == '') {
+			$('.tab-option').eq(0).addClass('active');
+		} else {
+			$(`.tab-option[data-tab="${cleanTabId}"]`).addClass('active');
+			// Update header text
+			$('.selected-tab').text(tabText);
+		}
 
 		// Show selected content
-		$('.tab-content').removeClass('active');
-		$(`#${cleanTabId}`).addClass('active');
+		$('.tab-content').fadeOut(200);
+
+		if(tabId == '') {
+			$('.tab-content').eq(0).fadeIn(200);
+		} else {
+			$(`#${cleanTabId}`).fadeIn(200);
+		}
 
 		$('.tab-view').removeClass(function(index, className) {
 			// Remove any class that starts with 'is-'
@@ -25,7 +29,12 @@ $(function(){
 		});
 
 		// Add the new class to tab-view
-		$('.tab-view').addClass('is-' + cleanTabId);
+
+		if(tabId == '') {
+			$('.tab-view').addClass('is-sex');
+		} else {
+			$('.tab-view').addClass('is-' + cleanTabId);
+		}
 
 		// Update URL without scrolling
 		history.replaceState(null, null, `#${cleanTabId}`);
@@ -38,7 +47,7 @@ $(function(){
 		sessionStorage.removeItem('targetTab');
 	} else {
 		// Initialize first tab without scrolling
-		const initialHash = location.hash.replace('#', '') || 'sex';
+		const initialHash = location.hash.replace('#', '') || '';
 		activateTab(initialHash);
 	}
 

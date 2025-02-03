@@ -135,6 +135,7 @@ body {
   color: #17181A;
   font-family: "Noto Sans TC", "Open Sans", Arial, Helvetica, sans-serif, "微軟正黑體", "Microsoft JhengHei", "STHeiti Light", "儷黑 Pro", "LiHei Pro", "Microsoft Yahei", "Microsoft JhengHei", "新細明體", serif; /* 1 */
   line-height: 1.44;
+  font-weight: 300;
   -ms-text-size-adjust: 100%; /* 2 */
   -moz-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -230,16 +231,16 @@ a:hover {
 }
 #menu[role=navigation] ul li a span {
   color: #17181A;
+  letter-spacing: 1.333px;
 }
 #menu[role=navigation] ul li.current a span {
+  color: #009944;
   font-weight: bold;
 }
 
 .gotop {
   position: fixed;
   display: block;
-  right: 0;
-  bottom: 30%;
   width: 50px;
   height: 50px;
   text-indent: -9999px;
@@ -404,6 +405,10 @@ a:hover {
   .ft-mail {
     margin-top: 20px;
   }
+  .gotop {
+    right: 0;
+    bottom: 30%;
+  }
 }
 @media only screen and (min-width: 992px) {
   .container {
@@ -450,9 +455,12 @@ a:hover {
     margin-left: 0;
   }
   #menu[role=navigation] ul li a:hover {
-    opacity: 0.7;
+    opacity: 1;
     -webkit-transition: opacity 0.3s ease-in;
     transition: opacity 0.3s ease-in;
+  }
+  #menu[role=navigation] ul li a:hover span {
+    color: #009944;
   }
   .ft {
     padding: 33px 0;
@@ -499,6 +507,10 @@ a:hover {
   }
   .ft-mail a:hover {
     color: #009944;
+  }
+  .gotop {
+    right: 50px;
+    bottom: 50px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -618,6 +630,8 @@ a:hover {
           justify-content: flex-start;
   padding: 19px 24px;
   border-radius: 28px;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .btn--category:after {
   content: "";
@@ -720,7 +734,7 @@ a:hover {
     color: #009944;
   }
   .btn--category:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
   .btn--category:hover:after {
     background-position: right -2px center;
@@ -1171,6 +1185,8 @@ h6 {
 }
 .page--index .brand-list .bx h4 {
   color: #000;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
 }
 .page--index .brand-list .bx p {
   margin-top: 16px;
@@ -1582,6 +1598,7 @@ h6 {
   margin-bottom: 0;
 }
 .page--survey .tab-view {
+  background-color: #FFFFFF;
   position: relative;
 }
 .page--survey .tab-view.is-sex .chartNotice dl dt {
@@ -1731,6 +1748,7 @@ h6 {
     top: 100%;
     left: 0;
     right: 0;
+    background-color: #FFFFFF;
     border: 1px solid #E1E2E6;
     border-radius: 4px;
     margin-top: 4px;
@@ -1739,12 +1757,28 @@ h6 {
     z-index: 1000;
   }
   .section--tab .tab-options .tab-option {
-    padding: 10px 15px;
+    padding: 12px 40px 12px 16px;
     font-size: 16px;
     line-height: 1;
+    position: relative;
   }
   .section--tab .tab-options .tab-option.active {
     color: #009944;
+  }
+  .section--tab .tab-options .tab-option.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-image: url("../images/deco-check.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .section--ad .pc {
     display: none;
@@ -2000,12 +2034,15 @@ h6 {
   }
   .page--award .tab-content .tb .td dd span {
     line-height: 30px;
+    font-weight: 300;
+    color: #333333;
   }
   .page--award .tab-content .tb .td dd:before {
-    color: #17181A;
+    color: #000000;
     display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
+    font-weight: 500;
   }
   .page--award .tab-content .tb .td dd:nth-child(2):before {
     content: "NO.1";
@@ -2336,6 +2373,7 @@ h6 {
     -webkit-box-shadow: none;
             box-shadow: none;
     z-index: 0;
+    background-color: transparent;
   }
   .section--tab .tab-options .tab-option {
     margin: 0 8px 20px;
@@ -2353,6 +2391,9 @@ h6 {
   .section--tab .tab-options .tab-option:hover {
     opacity: 0.7;
   }
+  .section--tab .tab-options .tab-option.active:hover {
+    opacity: 1;
+  }
   .section--tab .tab-options .tab-option:first-child {
     margin-left: 0;
   }
@@ -2362,67 +2403,54 @@ h6 {
   .section--tab .tab-options .tab-option.is-food.active {
     color: #FFFFFF;
     background-color: #009944;
-    border: 1px solid #009944;
   }
   .section--tab .tab-options .tab-option.is-medical.active {
     color: #FFFFFF;
     background-color: #3DB943;
-    border: 1px solid #3DB943;
   }
   .section--tab .tab-options .tab-option.is-health.active {
     color: #17181A;
     background-color: #E3E880;
-    border: 1px solid #E3E880;
   }
   .section--tab .tab-options .tab-option.is-furnishing.active {
     color: #17181A;
     background-color: #FFF000;
-    border: 1px solid #FFF000;
   }
   .section--tab .tab-options .tab-option.is-appliances.active {
     color: #17181A;
     background-color: #FFC121;
-    border: 1px solid #FFC121;
   }
   .section--tab .tab-options .tab-option.is-finance.active {
     color: #FFFFFF;
     background-color: #FF8228;
-    border: 1px solid #FF8228;
   }
   .section--tab .tab-options .tab-option.is-entertainment.active {
     color: #FFFFFF;
     background-color: #D2966A;
-    border: 1px solid #D2966A;
   }
   .section--tab .tab-options .tab-option.is-makeup.active {
     color: #FFFFFF;
     background-color: #D0BCAE;
-    border: 1px solid #D0BCAE;
   }
   .section--tab .tab-options .tab-option.is-sex.active {
     color: #FFFFFF;
     background-color: #108593;
-    border: 1px solid #108593;
   }
   .section--tab .tab-options .tab-option.is-marriage.active {
     color: #FFFFFF;
     background-color: #FF9B53;
-    border: 1px solid #FF9B53;
   }
   .section--tab .tab-options .tab-option.is-age.active {
     color: #FFFFFF;
     background-color: #D2966A;
-    border: 1px solid #D2966A;
   }
   .section--tab .tab-options .tab-option.is-child.active {
     color: #FFFFFF;
     background-color: #B5A092;
-    border: 1px solid #B5A092;
   }
   .section--tab .tab-options .tab-option.is-income.active {
     color: #FFFFFF;
     background-color: #3B90E5;
-    border: 1px solid #3B90E5;
   }
   .section--ad .pc {
     display: block;
@@ -2680,6 +2708,9 @@ h6 {
   }
   .page--index .awardLinks > li {
     margin-bottom: 16px;
+  }
+  .page--index .brand-list .bx .inner:hover h4 {
+    color: #009944;
   }
   .page--index .brand-list .bx h4 {
     margin-top: 32px;

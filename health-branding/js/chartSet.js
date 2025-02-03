@@ -170,7 +170,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [76.8, 46.9, 34.1, 33.7, 20.5, 18.7, 15.2, 13.1, 0.6],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -249,7 +249,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [27.9, 5.9, 26.3, 35.7, 3.0, 1.2],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -273,7 +273,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [26.8, 55.2, 6.8, 11.2],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -299,7 +299,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [39.3, 46.6, 69.3, 7.0, 9.1, 0.5],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -353,7 +353,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [ 59.1, 25.1, 18.5, 38.2, 49.0, 43.3, 0.7],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -380,7 +380,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [19.3, 29.7, 10.7, 11.9, 13.9, 12.6, 1.7],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -464,7 +464,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [60.3, 49.6, 17.8, 34.6, 21.5, 57.5, 44.7, 27.7, 2.3],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -498,7 +498,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [43.1, 33.6, 29.6, 9.5, 10.3, 14.1, 11.9, 31.9, 43.3, 48.3, 39.0, 57.3, 21.7, 4.0],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]
@@ -557,7 +557,7 @@
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [52.3, 29.2, 2.3, 55.4, 28.2, 8.1,5.8 ],
-	            backgroundColor: '#77CE7B',
+	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
 	            borderColor: '#77CE7B',
 	            borderWidth: 1
 	        }]

@@ -1,23 +1,27 @@
 $(function(){
-    // Prevent initial scroll on page load if there's a hash
-	setTimeout(function() {
-		window.scrollTo(0, 0);
-	}, 1);
 
 	// Function to activate tab without scrolling
 	function activateTab(tabId) {
-		tabId = tabId || 'ctg1';
+		tabId = tabId || '';
 		const cleanTabId = tabId.replace('#', '');
 		const tabText = $(`.tab-option[data-tab="${cleanTabId}"]`).text();
 
-		$(`.tab-option[data-tab="${cleanTabId}"]`).addClass('active');
-
-		// Update header text
-		$('.selected-tab').text(tabText);
+		if(tabId == '') {
+			$('.tab-option').eq(0).addClass('active');
+		} else {
+			$(`.tab-option[data-tab="${cleanTabId}"]`).addClass('active');
+			// Update header text
+			$('.selected-tab').text(tabText);
+		}
 
 		// Show selected content
 		$('.tab-content').removeClass('active');
-		$(`#${cleanTabId}`).addClass('active');
+
+		if(tabId == '') {
+			$('.tab-content').eq(0).addClass('active');
+		} else {
+			$(`#${cleanTabId}`).addClass('active');
+		}
 
 		// Update URL without scrolling
 		history.replaceState(null, null, `#${cleanTabId}`);
@@ -26,7 +30,7 @@ $(function(){
 	// Handle clicks on links that point to tabs
 	$('.btn--category').on('click', function(e) {
 		const href = $(this).attr('href');
-		const isTabLink = href.includes('#tab');
+		const isTabLink = href.includes('#ctg');
 
 		// If it's a tab link
 		if(isTabLink) {
@@ -53,7 +57,7 @@ $(function(){
 		sessionStorage.removeItem('targetTab');
 	} else {
 		// Initialize first tab without scrolling
-		const initialHash = location.hash.replace('#', '') || 'ctg1';
+		const initialHash = location.hash.replace('#', '') || '';
 		activateTab(initialHash);
 	}
 

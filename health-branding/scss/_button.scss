@@ -90,6 +90,7 @@
 		justify-content: flex-start;
 		padding: 19px 24px;
 		border-radius: 28px;
+		@include transition(all, .15s, ease-in-out);
 
 		&:after {
 			content: '';
@@ -223,7 +224,7 @@
 
 		&--category {
 			&:hover {
-				opacity: 0.9;
+				opacity: 0.8;
 
 				&:after {
 					background-position: right -2px center;

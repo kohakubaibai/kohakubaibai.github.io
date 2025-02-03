@@ -54,6 +54,7 @@ $path: '../images';
 
                 span {
                     color: $neutralTxt1;
+                    letter-spacing: 1.333px;
                 }
 			}
 
@@ -61,6 +62,7 @@ $path: '../images';
 
                 a {
                     span {
+                        color: $primary1;
                         font-weight: bold;
                     }
 				}
@@ -72,8 +74,6 @@ $path: '../images';
 .gotop {
     position: fixed;
     display: block;
-    right: 0;
-    bottom: 30%;
     width: 50px;
     height: 50px;
     text-indent: -9999px;
@@ -256,6 +256,12 @@ $path: '../images';
             margin-top: 20px;
         }
     }
+
+    .gotop {
+
+        right: 0;
+        bottom: 30%;
+    }
 }
 @media only screen and (min-width: 992px) {
 
@@ -312,8 +318,12 @@ $path: '../images';
 
 				a {
 					&:hover {
-						opacity: 0.7;
+						opacity: 1;
 						@include transition(opacity, .3s, ease-in);
+
+                        span {
+                            color: $primary1;
+                        }
 					}
 				}
 			}
@@ -376,6 +386,11 @@ $path: '../images';
                 }
             }
         }
+    }
+
+    .gotop {
+        right: 50px;
+        bottom: 50px;
     }
 }
 
