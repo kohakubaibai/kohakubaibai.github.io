@@ -2018,6 +2018,10 @@ $chartCate_color:
 						&:hover {
 							opacity: 1;
 						}
+
+						&:after {
+							display: none;
+						}
 					}
 
 					&:first-child {
@@ -2044,10 +2048,6 @@ $chartCate_color:
 								background-color: $chartColor;
 							}
 						}
-					}
-
-					&:after {
-						display: none;
 					}
 				}
 			}

@@ -2394,6 +2394,9 @@ h6 {
   .section--tab .tab-options .tab-option.active:hover {
     opacity: 1;
   }
+  .section--tab .tab-options .tab-option.active:after {
+    display: none;
+  }
   .section--tab .tab-options .tab-option:first-child {
     margin-left: 0;
   }
@@ -2451,9 +2454,6 @@ h6 {
   .section--tab .tab-options .tab-option.is-income.active {
     color: #FFFFFF;
     background-color: #3B90E5;
-  }
-  .section--tab .tab-options .tab-option:after {
-    display: none;
   }
   .section--ad .pc {
     display: block;
