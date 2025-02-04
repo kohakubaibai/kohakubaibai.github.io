@@ -15,12 +15,12 @@ $(function(){
 		}
 
 		// Show selected content
-		$('.tab-content').removeClass('active');
+		$('.tab-content').removeClass('fade').fadeOut(200);
 
 		if(tabId == '') {
-			$('.tab-content').eq(0).addClass('active');
+			$('.tab-content').eq(0).addClass('fade').delay(200).fadeIn(200);
 		} else {
-			$(`#${cleanTabId}`).addClass('active');
+			$(`#${cleanTabId}`).addClass('fade').delay(200).fadeIn(200);
 		}
 
 		// Update URL without scrolling

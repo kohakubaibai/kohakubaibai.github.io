@@ -8,6 +8,8 @@ $(function(){
 
 		if(tabId == '') {
 			$('.tab-option').eq(0).addClass('active');
+		} else if (tabId == 'ctgtag') {
+			$('.tab-option').eq(0).addClass('active');
 		} else {
 			$(`.tab-option[data-tab="${cleanTabId}"]`).addClass('active');
 			// Update header text
@@ -15,12 +17,14 @@ $(function(){
 		}
 
 		// Show selected content
-		$('.tab-content').fadeOut(200);
+		$('.tab-content').removeClass('fade').fadeOut(200);
 
 		if(tabId == '') {
-			$('.tab-content').eq(0).fadeIn(200);
+			$('.tab-content').eq(0).addClass('fade').delay(200).fadeIn(200);
+		} else if (tabId == 'ctgtag') {
+			$('.tab-content').eq(0).addClass('fade').delay(200).fadeIn(200);
 		} else {
-			$(`#${cleanTabId}`).fadeIn(200);
+			$(`#${cleanTabId}`).addClass('fade').delay(200).fadeIn(200);
 		}
 
 		$('.tab-view').removeClass(function(index, className) {
@@ -29,8 +33,9 @@ $(function(){
 		});
 
 		// Add the new class to tab-view
-
 		if(tabId == '') {
+			$('.tab-view').addClass('is-sex');
+		} else if (tabId == 'ctgtag') {
 			$('.tab-view').addClass('is-sex');
 		} else {
 			$('.tab-view').addClass('is-' + cleanTabId);

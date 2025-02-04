@@ -8,6 +8,7 @@ $(document).ready(function() {
 	$menulink.on('click', function() {
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
+		$('body').toggleClass('openMenu');
 		return false;
 	});
 

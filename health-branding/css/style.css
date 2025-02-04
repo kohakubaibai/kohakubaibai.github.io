@@ -781,6 +781,12 @@ h6 {
   overflow: hidden;
 }
 
+.openMenu {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .kv {
   position: relative;
 }
@@ -879,10 +885,14 @@ h6 {
   margin-top: 25px;
 }
 .section--tab .tab-content {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
-.section--tab .tab-content.active {
-  display: block;
+.section--tab .tab-content.fade {
+  opacity: 1;
+  visibility: visible;
 }
 .section--ad img {
   display: block;
@@ -1403,7 +1413,7 @@ h6 {
 .page--lottery .prizeItem__image {
   width: 150px;
   height: 150px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .page--lottery .prizeItem__image img {
   width: 100%;
@@ -1415,6 +1425,7 @@ h6 {
   line-height: 1.7;
   font-weight: 500;
   letter-spacing: 1.1px;
+  margin-bottom: 10px;
 }
 .page--lottery .prizeItem__model {
   color: #000000;
@@ -1454,7 +1465,7 @@ h6 {
   color: #000000;
   font-size: 18px;
   line-height: 1.75;
-  font-size: 300;
+  font-weight: 300;
   margin-bottom: 16px;
 }
 .page--lottery .prizeItem__laureate .nameList > li:last-child {
@@ -2023,9 +2034,10 @@ h6 {
     text-align: center;
     margin-bottom: 10px;
     border-radius: 20px;
+    padding: 7px 10px 9px;
   }
   .page--award .tab-content .tb .td dt span {
-    line-height: 40px;
+    line-height: 24px;
   }
   .page--award .tab-content .tb .td dd {
     max-width: 100%;
@@ -3001,6 +3013,12 @@ h6 {
     -ms-flex-preferred-size: calc((100% - 340px) / 2);
         flex-basis: calc((100% - 340px) / 2);
   }
+  .page--lottery .prize__list .prizeList .prizeList__item--topL {
+    padding-right: 40px;
+  }
+  .page--lottery .prize__list .prizeList .prizeList__item--topR {
+    padding-left: 40px;
+  }
   .page--lottery .prize__list .prizeList .prizeList__item--topC {
     -ms-flex-preferred-size: 340px;
         flex-basis: 340px;
@@ -3017,9 +3035,6 @@ h6 {
   }
   .page--lottery .prizeItem__laureate .nameList > li {
     margin-right: 40px;
-  }
-  .page--lottery .prizeItem__laureate .nameList > li:nth-child(12n) {
-    margin-right: 0;
   }
   .page--survey {
     padding-top: 82px;
