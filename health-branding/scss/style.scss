@@ -2738,6 +2738,16 @@ $chartCate_color:
 							margin-top: 32px;
 							padding-top: 30px;
 							border-top: 1px solid #009944;
+
+							.prizeItem__laureate {
+								.nameList {
+									& > li {
+										flex: 0 0 12.5%;
+										margin-right: 0;
+										width: 12.5%;
+									}
+								}
+							}
 						}
 					}
 				}
@@ -2753,12 +2763,6 @@ $chartCate_color:
 
 				.nameList {
 					justify-content: center;
-
-					& > li {
-						flex: 0 0 12.5%;
-						margin-right: 0;
-						width: 12.5%;
-					}
 				}
 			}
 		}

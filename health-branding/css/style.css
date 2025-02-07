@@ -3162,6 +3162,13 @@ h6 {
     padding-top: 30px;
     border-top: 1px solid #009944;
   }
+  .page--lottery .prize__list .prizeList .prizeList__item--normal .prizeItem__laureate .nameList > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 12.5%;
+            flex: 0 0 12.5%;
+    margin-right: 0;
+    width: 12.5%;
+  }
   .page--lottery .prizeItem__laureate .label {
     font-size: 18px;
   }
@@ -3169,13 +3176,6 @@ h6 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .page--lottery .prizeItem__laureate .nameList > li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 12.5%;
-            flex: 0 0 12.5%;
-    margin-right: 0;
-    width: 12.5%;
   }
   .page--survey {
     padding-top: 82px;
