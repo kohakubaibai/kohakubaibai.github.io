@@ -8,7 +8,7 @@ $(function(){
 
 		if(tabId == '') {
 			$('.tab-option').eq(0).addClass('active');
-		} else if (tabId == 'ctgtag') {
+		} else if (tabId == 'ctgtag' || tabId == 'cause') {
 			$('.tab-option').eq(0).addClass('active');
 		} else {
 			$(`.tab-option[data-tab="${cleanTabId}"]`).addClass('active');
@@ -21,7 +21,7 @@ $(function(){
 
 		if(tabId == '') {
 			$('.tab-content').eq(0).addClass('fade').delay(200).fadeIn(200);
-		} else if (tabId == 'ctgtag') {
+		} else if (tabId == 'ctgtag' || tabId == 'cause') {
 			$('.tab-content').eq(0).addClass('fade').delay(200).fadeIn(200);
 		} else {
 			$(`#${cleanTabId}`).addClass('fade').delay(200).fadeIn(200);

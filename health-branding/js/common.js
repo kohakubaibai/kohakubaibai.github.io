@@ -17,13 +17,17 @@ $(document).ready(function() {
 	$('.column-list').owlCarousel({
 	    loop: true,
 	    margin: 15,
-	    nav: false,
+		nav: false,
+		navContainer: '#column-navs',
+		navText: ['', ''],
 	    items: 1,
 		dotsContainer: '#column-dots',
 	    autoHeight: false,
-		animateIn: 'fadeIn',
 		smartSpeed: 200,
-		mouseDrag: false
+		mouseDrag: false,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		autoplayHoverPause: false
 	});
 
 	$('.brand-list').owlCarousel({

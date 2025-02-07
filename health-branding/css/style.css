@@ -811,8 +811,13 @@ h6 {
   display: flex;
 }
 
+.owl-carousel,
+.custom-control {
+  min-height: auto;
+  padding-left: 0;
+}
 .owl-carousel .owl-dots,
-.custom-dot .owl-dots {
+.custom-control .owl-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,9 +830,12 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .owl-carousel .owl-dots .owl-dot,
-.custom-dot .owl-dots .owl-dot {
+.custom-control .owl-dots .owl-dot {
   margin-right: 10px;
   width: 10px;
   height: 10px;
@@ -838,16 +846,53 @@ h6 {
   cursor: pointer;
 }
 .owl-carousel .owl-dots .owl-dot.active,
-.custom-dot .owl-dots .owl-dot.active {
+.custom-control .owl-dots .owl-dot.active {
   background-color: #000000;
 }
 .owl-carousel .owl-dots .owl-dot:last-child,
-.custom-dot .owl-dots .owl-dot:last-child {
+.custom-control .owl-dots .owl-dot:last-child {
   margin-right: 0;
 }
 .owl-carousel .owl-dots .owl-dot:focus,
-.custom-dot .owl-dots .owl-dot:focus {
+.custom-control .owl-dots .owl-dot:focus {
   outline: none;
+}
+.owl-carousel .custom-navs,
+.custom-control .custom-navs {
+  position: relative;
+}
+.owl-carousel .custom-navs .owl-prev,
+.owl-carousel .custom-navs .owl-next,
+.custom-control .custom-navs .owl-prev,
+.custom-control .custom-navs .owl-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 99;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  margin-top: -5px;
+  cursor: pointer;
+}
+.owl-carousel .custom-navs .owl-prev:hover,
+.owl-carousel .custom-navs .owl-next:hover,
+.custom-control .custom-navs .owl-prev:hover,
+.custom-control .custom-navs .owl-next:hover {
+  outline: none;
+}
+.owl-carousel .custom-navs .owl-prev,
+.custom-control .custom-navs .owl-prev {
+  left: 0;
+  background-image: url("../images/arrow-left.svg");
+}
+.owl-carousel .custom-navs .owl-next,
+.custom-control .custom-navs .owl-next {
+  right: 0;
+  background-image: url("../images/arrow-right.svg");
 }
 
 .section--record .container {
@@ -978,6 +1023,24 @@ h6 {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.page--index .section ul.action > li {
+  margin-right: 16px;
 }
 .page--index .section--flow .news {
   margin-top: 100px;
@@ -985,7 +1048,7 @@ h6 {
 .page--index .section--column .section__content {
   position: relative;
 }
-.page--index .section--column .custom-dot .container {
+.page--index .section--column .custom-control .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1013,6 +1076,13 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.page--index .section--brand.is-comingsoon {
+  padding-bottom: 0;
+}
+.page--index .section--brand.is-comingsoon .section__content:after {
+  bottom: 0 !important;
+  top: auto !important;
 }
 .page--index .bulletin {
   display: -webkit-box;
@@ -1142,8 +1212,7 @@ h6 {
   display: flex;
 }
 .page--index .column-list .bx .clbmain .tag__text {
-  -webkit-box-shadow: 0 1px 0 rgb(0, 153, 68);
-  box-shadow: 0 1px 0 rgb(0, 153, 68);
+  border-bottom: 1px solid #009944;
   color: #009944;
   font-size: 22px;
   line-height: 36px;
@@ -1709,6 +1778,18 @@ h6 {
   }
   .section--record .recordList {
     margin-bottom: 80px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section--record .recordList li {
+    margin-bottom: 16px;
+  }
+  .section--record .recordList li:last-child {
+    margin-bottom: 0;
   }
   .section--record .passList {
     -ms-flex-wrap: wrap;
@@ -1877,16 +1958,19 @@ h6 {
   .page--index .section--column {
     padding-bottom: 80px;
   }
-  .page--index .section--column .custom-dot {
+  .page--index .section--column .custom-control {
     margin-top: 64px;
     position: relative;
     width: 100%;
     z-index: 5;
   }
-  .page--index .section--column .custom-dot .container {
+  .page--index .section--column .custom-control .container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .page--index .section--column .custom-nav {
+    width: 100%;
   }
   .page--index .section--award .container {
     -webkit-box-orient: vertical;
@@ -1906,6 +1990,9 @@ h6 {
   }
   .page--index .section--brand .owl-carousel .owl-dots {
     margin-top: 55px;
+  }
+  .page--index .section--brand.is-comingsoon .section__content {
+    padding: 60px 0;
   }
   .page--index .bulletin {
     -webkit-box-orient: vertical;
@@ -1981,6 +2068,14 @@ h6 {
   }
   .page--index .column-list .bx .clbmain .action {
     margin-top: 31px;
+  }
+  .page--index .custom-control .inner {
+    width: 100%;
+  }
+  .page--index .custom-control .custom-navs .owl-prev,
+  .page--index .custom-control .custom-navs .owl-next {
+    width: 40px;
+    height: 40px;
   }
   .page--index .awardLinks > li {
     margin-bottom: 12px;
@@ -2340,6 +2435,19 @@ h6 {
   }
   .section--record .recordList {
     margin-bottom: 120px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .section--record .recordList li {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+  .section--record .recordList li:last-child {
+    margin-right: 0;
   }
   .section--record .passList li {
     margin: 0 20px 0;
@@ -2559,13 +2667,13 @@ h6 {
   .page--index .section--column {
     padding-bottom: 64px;
   }
-  .page--index .section--column .custom-dot {
+  .page--index .section--column .custom-control {
     position: absolute;
     width: 100%;
     bottom: 0;
     z-index: 5;
   }
-  .page--index .section--column .custom-dot .container {
+  .page--index .section--column .custom-control .container {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -2721,6 +2829,24 @@ h6 {
   .page--index .column-list .bx .clbmain .container .action {
     margin-top: 47px;
   }
+  .page--index .custom-control .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page--index .custom-control .inner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 415px;
+            flex: 0 0 415px;
+  }
+  .page--index .custom-control .custom-navs .owl-prev,
+  .page--index .custom-control .custom-navs .owl-next {
+    width: 40px;
+    height: 40px;
+  }
   .page--index .awardLinks > li {
     margin-bottom: 16px;
   }
@@ -2786,6 +2912,12 @@ h6 {
     margin-bottom: 0;
     line-height: 1;
     padding: 18px 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .page--award .tab-content .tb .td dd span {
     line-height: 1.5;
@@ -3033,8 +3165,17 @@ h6 {
   .page--lottery .prizeItem__laureate .label {
     font-size: 18px;
   }
+  .page--lottery .prizeItem__laureate .nameList {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .page--lottery .prizeItem__laureate .nameList > li {
-    margin-right: 40px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 12.5%;
+            flex: 0 0 12.5%;
+    margin-right: 0;
+    width: 12.5%;
   }
   .page--survey {
     padding-top: 82px;
@@ -3226,7 +3367,7 @@ h6 {
   .page--index .section--flow .container {
     padding: 0 32px;
   }
-  .page--index .section--column .custom-dot .container {
+  .page--index .section--column .custom-control .container {
     padding-right: 130px;
   }
   .page--index .section--award .container {

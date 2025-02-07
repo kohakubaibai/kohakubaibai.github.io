@@ -234,23 +234,53 @@
 	});
 
 
+	// var ctxQ5 = $("#chart-q5");
+	// var myChart = new Chart(ctxQ5, {
+	//     type: 'radar',
+	//     data: {
+	//         labels: [
+	//         	"1",
+	//         	"2",
+	//         	"3",
+	//         	"4",
+	//         	"5",
+	//         	"6",
+	//         ],
+	//         datasets: [{
+	//         	label: '分布比率',
+	//             data: [27.9, 5.9, 26.3, 35.7, 3.0, 1.2],
+	//             backgroundColor: 'rgba(119, 206, 123, 0.8)',
+	//             borderColor: '#77CE7B',
+	//             borderWidth: 1
+	//         }]
+	//     },
+	//     options: {
+	//     	responsive: true,
+	//     }
+	// });
 	var ctxQ5 = $("#chart-q5");
 	var myChart = new Chart(ctxQ5, {
-	    type: 'radar',
+	    type: 'doughnut',
 	    data: {
 	        labels: [
-	        	"1",
-	        	"2",
-	        	"3",
-	        	"4",
-	        	"5",
-	        	"6",
+	        	"吃速食或外賣",
+	        	"隨便吃點零食解決",
+	        	"挑選簡單又健康的輕食",
+	        	"儘量自己煮簡單的家常菜",
+				"有時會忘記吃飯",
+				"其他"
 	        ],
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [27.9, 5.9, 26.3, 35.7, 3.0, 1.2],
-	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
-	            borderColor: '#77CE7B',
+	            backgroundColor: [
+	                '#3DB943',
+	                '#77CE7B',
+	                '#9EDCA1',
+	                '#BBE7BD',
+	                '#E2F5E3',
+					'#EDFDEE'
+	            ],
 	            borderWidth: 1
 	        }]
 	    },
@@ -262,19 +292,23 @@
 
 	var ctxQ6 = $("#chart-q6");
 	var myChart = new Chart(ctxQ6, {
-	    type: 'radar',
+	    type: 'doughnut',
 	    data: {
 	        labels: [
-	        	"1",
-	        	"2",
-	        	"3",
-	        	"4",
+	        	"是，經常感覺不均衡",
+	        	"偶爾感覺有點不均衡",
+	        	"不太確定",
+	        	"否，我的飲食習慣很均衡",
 	        ],
 	        datasets: [{
 	        	label: '分布比率',
 	            data: [26.8, 55.2, 6.8, 11.2],
-	            backgroundColor: 'rgba(119, 206, 123, 0.8)',
-	            borderColor: '#77CE7B',
+	            backgroundColor: [
+	                '#3DB943',
+	                '#77CE7B',
+	                '#9EDCA1',
+	                '#BBE7BD',
+	            ],
 	            borderWidth: 1
 	        }]
 	    },
@@ -366,7 +400,7 @@
 
 	var ctxQ10 = $("#chart-q10");
 	var myChart = new Chart(ctxQ10, {
-	    type: 'radar',
+	    type: 'bar',
 	    data: {
 	        labels: [
 	        	"1",

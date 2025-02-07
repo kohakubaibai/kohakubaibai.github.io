@@ -84,12 +84,16 @@ h6 {
 }
 
 .owl-carousel,
-.custom-dot {
+.custom-control {
+	min-height: auto;
+	padding-left: 0;
+
 	.owl-dots {
 		display: flex;
 		align-items: center;
 		flex-wrap: nowrap;
 		flex-direction: row;
+		justify-content: center;
 
 		.owl-dot {
 			margin-right: 10px;
@@ -115,7 +119,43 @@ h6 {
 			}
 		}
 	}
+
+	.custom-navs {
+		position: relative;
+
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			@include translateY(-50%);
+			z-index: 99;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			border: none;
+			background-color: transparent;
+			margin-top: -5px;
+			cursor: pointer;
+
+			&:hover {
+				outline: none;
+			}
+		}
+
+		.owl-prev {
+			left: 0;
+			background-image: url('#{$path}/arrow-left.svg');
+		}
+
+		.owl-next {
+			right: 0;
+			background-image: url('#{$path}/arrow-right.svg');
+		}
+	}
 }
+
+
+
 
 .section {
 	&--record {
@@ -272,6 +312,15 @@ h6 {
 
 		ul.action {
 			@include list-reset;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-direction: row;
+			flex-wrap: nowrap;
+
+			& > li {
+				margin-right: 16px;
+			}
 		}
 
 		&--flow {
@@ -285,7 +334,7 @@ h6 {
 				position: relative;
 			}
 
-			.custom-dot {
+			.custom-control {
 				.container {
 					display: flex;
 				}
@@ -317,6 +366,18 @@ h6 {
 			.owl-carousel {
 				.owl-dots {
 					justify-content: center;
+				}
+			}
+
+			&.is-comingsoon {
+				padding-bottom: 0;
+
+				.section__content {
+
+					&:after {
+						bottom: 0 !important;
+						top: auto !important;
+					}
 				}
 			}
 		}
@@ -446,7 +507,7 @@ h6 {
 				.tag {
 
 					&__text {
-						@include box-shadow(0, 1px, 0, rgba(0, 153, 68, 1));
+						border-bottom: 1px solid $primary1;
 						color: $primary1;
 						font-size: 22px;
 						line-height: 36px;
@@ -1141,6 +1202,16 @@ $chartCate_color:
 
 			.recordList {
 				margin-bottom: 80px;
+				flex-direction: column;
+				flex-wrap: wrap;
+
+				li {
+					margin-bottom: 16px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
 			}
 
 			.passList {
@@ -1336,7 +1407,7 @@ $chartCate_color:
 			&--column {
 				padding-bottom: 80px;
 
-				.custom-dot {
+				.custom-control {
 					margin-top: 64px;
 					position: relative;
 					width: 100%;
@@ -1345,6 +1416,10 @@ $chartCate_color:
 					.container {
 						justify-content: center;
 					}
+				}
+
+				.custom-nav {
+					width: 100%;
 				}
 			}
 
@@ -1373,6 +1448,12 @@ $chartCate_color:
 						margin-top: 55px;
 					}
 				}
+
+				&.is-comingsoon {
+					.section__content {
+						padding: 60px 0;
+					}
+				}
 			}
 		}
 
@@ -1383,8 +1464,6 @@ $chartCate_color:
 			&__text {
 				flex-grow: 1;
 				margin-left: 0;
-
-
 
 				ul.action {
 					margin-top: 32px;
@@ -1453,6 +1532,20 @@ $chartCate_color:
 					.action {
 						margin-top: 31px;
 					}
+				}
+			}
+		}
+
+		.custom-control {
+			.inner {
+				width: 100%;
+			}
+
+			.custom-navs {
+				.owl-prev,
+				.owl-next {
+					width: 40px;
+					height: 40px;
 				}
 			}
 		}
@@ -1964,6 +2057,17 @@ $chartCate_color:
 
 			.recordList {
 				margin-bottom: 120px;
+				flex-direction: row;
+				flex-wrap: nowrap;
+
+				li {
+					margin-bottom: 0;
+					margin-right: 16px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
 			}
 
 			.passList {
@@ -2177,7 +2281,7 @@ $chartCate_color:
 			&--column {
 				padding-bottom: 64px;
 
-				.custom-dot {
+				.custom-control {
 					position: absolute;
 					width: 100%;
 					bottom: 0;
@@ -2349,6 +2453,24 @@ $chartCate_color:
 			}
 		}
 
+		.custom-control {
+			.container {
+				display: flex;
+				justify-content: center;
+			}
+			.inner {
+				flex: 0 0 415px;
+			}
+
+			.custom-navs {
+				.owl-prev,
+				.owl-next {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+
 		.awardLinks {
 			& > li {
 				margin-bottom: 16px;
@@ -2441,6 +2563,8 @@ $chartCate_color:
 						margin-bottom: 0;
 						line-height: 1;
 						padding: 18px 8px;
+						display: flex;
+						align-items: center;
 
 						span {
 							line-height: 1.5;
@@ -2628,9 +2752,12 @@ $chartCate_color:
 				}
 
 				.nameList {
+					justify-content: center;
 
 					& > li {
-						margin-right: 40px;
+						flex: 0 0 12.5%;
+						margin-right: 0;
+						width: 12.5%;
 					}
 				}
 			}
@@ -2855,7 +2982,7 @@ $chartCate_color:
 			}
 
 			&--column {
-				.custom-dot {
+				.custom-control {
 					.container {
 						padding-right: 130px;
 					}

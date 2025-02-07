@@ -93,79 +93,17 @@
 			googletag.enableServices();
 		});
 	</script>
-
-<!--彈出視窗-->
-<style>
-	#window-container{
-		display: none;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0,0,0,0.5);
-		z-index: 2147483647;
-	}
-
-	#window-pop{
-		width:50%;
-		z-index:1;
-		margin: 15% auto;
-		overflow: auto;
-	/* border-radius: 20px; */
-	}
-
-	.window-content {
-		width: auto;
-		height: 50%;
-		line-height: 50%;
-		overflow: auto;
-		text-align: center;
-	}
-
-	.window-content img {
-		width: 50%;
-		height: 50%;
-		display: inline-block;
-		vertical-align: middle;
-		line-height: normal;
-	}
-
-	@media (max-width: 1400px) {
-		.window-content img {
-			width: 40%;
-			height: 40%;
-		}
-		#window-pop{
-			width:auto;
-		}
-	}
-
-	@media (max-width: 600px) {
-		.window-content img {
-			width: 50%;
-			height: 50%;
-		}
-	}
-</style>
 </head>
-<body onload="customizeWindowEvent()">
-	<div id="window-container">
-		<div id="window-pop">
-			<div class="window-content">
-				<a href="https://www.surveycake.com/s/r2eyv?from=health-branding&utm_source=cwmg_event" target="_blank"><img src="images/2024HBQ.jpg" alt=""></a>
-				<!--https://www.commonhealth.com.tw/event/health-branding/-->
-			</div>
-		</div>
-	</div>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=150286561711250&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=150286561711250&autoLogAppEvents=1';
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
 	<div class="page page--index" id="top">
 		<header class="hd">
@@ -228,7 +166,8 @@
 								<div class="title__subTitle">看見信賴的力量</div>
 							</h2>
 							<div class="intro wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.7s">
-								我們對於信賴的親朋好友，可以放心地互動分享；對於信賴的好品牌，也總是能夠安心的使用與採購。2018年，適逢康健20週年，重啟讀者票選品牌調查，更將過去的<span class="highlight">健康品牌大調查</span>昇華成<span class="highlight">信賴品牌大調查</span>發掘康健讀者心目中「使用上最安心」、「最信賴」的品牌產品，讓讀者選出心中最值得信賴的品牌。
+								我們對於信賴的親朋好友，可以放心地互動與分享；對於信賴的好品牌，也總是能夠安心的使用與採購。<br><br>
+								此項問卷調查共公佈八大項，近七十種品類，發掘讀者心目中最值得信賴的品牌。
 							</div>
 							<ul class="action wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1.2s">
 								<li>
@@ -368,7 +307,7 @@
 						</h2>
 						<div class="intro wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.7s">
 							我們對於信賴的親朋好友，可以放心地互動與分享；對於信賴的好品牌，也總是能夠安心的使用與採購。<br><br>
-							此項問卷調查共公佈八大項，近七十種品類，發掘讀者心目中最值得信賴的品牌。
+							此項問卷調查共公佈七大項，近八十種品類，發掘讀者心目中最值得信賴的品牌。
 						</div>
 					</div>
 					<div class="section__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1.2s">
@@ -391,14 +330,14 @@
 				<div class="section__title">
 					<div class="container">
 						<div class="titleWrap">
-							<h2 class="title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.2s">
+							<h2 class="title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
 								<div class="title__subTitle">2025信賴品牌</div>
 								<div class="title__topic">共同宣誓</div>
 							</h2>
 						</div>
 					</div>
 				</div>
-				<div class="section__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.7s">
+				<div class="section__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">
 					<div class="container">
 						<div class="brand-list owl-carousel">
 							<div class="bx">
@@ -548,7 +487,7 @@
 		</footer>
 	</div>
 	<a href="#top" class="gotop">TOP</a>
-
+	<script data-cfasync="false" src="https://www.commonhealth.com.tw/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="js/jquery-latest.min.js"></script>
 	<script src="js/jquery.mobile.custom.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -557,8 +496,6 @@
 	<script src="js/wow.js"></script>
 	<script src="owl/owl.carousel.min.js"></script>
 	<script src="js/common.js"></script>
-
-
 	<script type='text/javascript'>
 		var _sf_async_config={};
 		/** CONFIGURATION START **/
@@ -582,19 +519,6 @@
 			loadChartbeat : function() { oldonload(); loadChartbeat(); };
 		})();
 	</script>
-	<script>
-        function customizeWindowEvent() {
-            var popup_window = document.getElementById("window-container");
-
-            popup_window.style.display = "block";
-
-            window.onclick = function close(e) {
-                if (e.target == popup_window) {
-                    popup_window.style.display = "none";
-                }
-            }
-        }
-    </script>
 	<script>
 		$(function(){
 			$('.gotop').hide();
