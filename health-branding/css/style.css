@@ -598,7 +598,27 @@ a:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
-.btn--history:after {
+.btn--history .btn__text {
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+.btn--history.is-prev:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/arrow-link_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 8px;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.btn--history.is-next:after {
   content: "";
   display: block;
   width: 24px;
@@ -610,11 +630,6 @@ a:hover {
   margin-left: 8px;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
-}
-.btn--history .btn__text {
-  font-size: 18px;
-  line-height: 26px;
-  color: #FFFFFF;
 }
 .btn--category {
   position: relative;
@@ -727,7 +742,13 @@ a:hover {
   .btn--default:hover, .btn--arrow:hover, .btn--history:hover {
     background-color: #3DB943;
   }
-  .btn--arrow:hover:after, .btn--history:hover:after {
+  .btn--arrow:hover:after {
+    background-position: right -2px center;
+  }
+  .btn--history.is-prev:hover:before {
+    background-position: left 2px center;
+  }
+  .btn--history.is-next:hover:after {
     background-position: right -2px center;
   }
   .btn--passPage:hover .btn__text {
