@@ -891,12 +891,12 @@ h6 {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 99;
+  margin-top: -5px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
-  margin-top: -5px;
   cursor: pointer;
 }
 .owl-carousel .custom-navs .owl-prev:hover,
@@ -1294,6 +1294,30 @@ h6 {
   line-height: normal;
   letter-spacing: 1.5px;
   color: #000;
+}
+.page--index .brand-list .owl-nav {
+  width: 100%;
+}
+.page--index .brand-list .owl-nav .owl-prev,
+.page--index .brand-list .owl-nav .owl-next {
+  font-size: 0;
+  position: absolute;
+  top: 30%;
+  -webkit-transform: translateY(-30%);
+  transform: translateY(-30%);
+  background-size: contain;
+}
+.page--index .brand-list .owl-nav .owl-prev:hover,
+.page--index .brand-list .owl-nav .owl-next:hover {
+  outline: none;
+}
+.page--index .brand-list .owl-nav .owl-prev {
+  left: 0;
+  background-image: url("../images/arrow-left.svg");
+}
+.page--index .brand-list .owl-nav .owl-next {
+  right: 0;
+  background-image: url("../images/arrow-right.svg");
 }
 
 .page--award .kv:before {
@@ -2106,6 +2130,17 @@ h6 {
     font-size: 26px;
     line-height: normal;
   }
+  .page--index .brand-list .owl-nav .owl-prev,
+  .page--index .brand-list .owl-nav .owl-next {
+    width: 40px;
+    height: 40px;
+  }
+  .page--index .brand-list .owl-nav .owl-prev {
+    left: -20px;
+  }
+  .page--index .brand-list .owl-nav .owl-next {
+    right: -20px;
+  }
   .page--award {
     padding-top: 70px;
   }
@@ -2878,6 +2913,17 @@ h6 {
     margin-top: 32px;
     font-size: 32px;
     line-height: 1.41;
+  }
+  .page--index .brand-list .owl-nav .owl-prev,
+  .page--index .brand-list .owl-nav .owl-next {
+    width: 80px;
+    height: 80px;
+  }
+  .page--index .brand-list .owl-nav .owl-prev {
+    left: -40px;
+  }
+  .page--index .brand-list .owl-nav .owl-next {
+    right: -40px;
   }
   .page--award {
     padding-top: 82px;

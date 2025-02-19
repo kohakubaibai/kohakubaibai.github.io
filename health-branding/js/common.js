@@ -34,7 +34,7 @@ $(document).ready(function() {
 	    loop: false,
 	    autoplay: false,
 	    margin: 0,
-	    nav: false,
+	    nav: true,
 	    center: false,
 	    responsive: {
 	        0: {
