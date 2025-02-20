@@ -26,16 +26,21 @@ $(document).ready(function() {
 		smartSpeed: 200,
 		mouseDrag: false,
 		autoplay: true,
-		autoplayTimeout: 3000,
+		autoplayTimeout: 4000,
 		autoplayHoverPause: false
 	});
 
 	$('.brand-list').owlCarousel({
-	    loop: false,
-	    autoplay: false,
+	    loop: true,
 	    margin: 0,
 	    nav: true,
+		navText: ['', ''],
 	    center: false,
+		smartSpeed: 200,
+		mouseDrag: false,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: false,
 	    responsive: {
 	        0: {
 	            items: 1,

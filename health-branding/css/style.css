@@ -1300,7 +1300,6 @@ h6 {
 }
 .page--index .brand-list .owl-nav .owl-prev,
 .page--index .brand-list .owl-nav .owl-next {
-  font-size: 0;
   position: absolute;
   top: 30%;
   -webkit-transform: translateY(-30%);
