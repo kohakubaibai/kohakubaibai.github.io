@@ -2873,9 +2873,9 @@ a {
   color: #000000;
 }
 .p-quote .quoteItem {
-  padding: 0 3rem;
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
+  padding: 0 3rem;
   color: #000000;
   font-weight: 300;
 }
@@ -2887,6 +2887,9 @@ a {
 .p-quote .quoteItem span {
   display: block;
   text-align: left;
+}
+.p-quote .swiper {
+  padding: 1.875rem 0;
 }
 .p-quote .swiper-button-prev,
 .p-quote .swiper-button-next {

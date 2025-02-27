@@ -1592,8 +1592,8 @@ a {
 		color: $dark;
 
 		.quoteItem {
-			padding: 0 3rem;
 			transform: rotate(-5deg);
+			padding: 0 3rem;
 			color: $dark;
 			font-weight: 300;
 
@@ -1607,6 +1607,10 @@ a {
 				display: block;
 				text-align: left;
 			}
+		}
+
+		.swiper {
+			padding: rem(30) 0;
 		}
 
 		.swiper-button-prev,
