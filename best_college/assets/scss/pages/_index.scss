@@ -1589,7 +1589,7 @@ a {
 	//校長quote
 	&-quote {
 		background-color: $primary;
-		color: $white;
+		color: $dark;
 
 		.quoteItem {
 			padding: 0 3rem;
@@ -1607,6 +1607,11 @@ a {
 				display: block;
 				text-align: left;
 			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			color: $white
 		}
 
 		@include rwd-min(1200px) {

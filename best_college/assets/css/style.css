@@ -2870,7 +2870,7 @@ a {
 }
 .p-quote {
   background-color: #FF9904;
-  color: #fff;
+  color: #000000;
 }
 .p-quote .quoteItem {
   padding: 0 3rem;
@@ -2887,6 +2887,10 @@ a {
 .p-quote .quoteItem span {
   display: block;
   text-align: left;
+}
+.p-quote .swiper-button-prev,
+.p-quote .swiper-button-next {
+  color: #fff;
 }
 @media (min-width: 1200px) {
   .p-quote .quoteItem p {
