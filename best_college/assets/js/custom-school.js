@@ -367,6 +367,6 @@ function generateContentItems(category) {
 }
 
 // 廣編學校_調用函數生成對應內容
-generateContentItems("cate1");
-generateContentItems("cate2");
-generateContentItems("cate3");
+// generateContentItems("cate1");
+// generateContentItems("cate2");
+// generateContentItems("cate3");
