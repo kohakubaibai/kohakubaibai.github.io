@@ -1,0 +1,99 @@
+/* card */
+.m {
+    &-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 30rem;
+        border-radius: .25rem;
+        height: 100%;
+        background-color: $white;
+
+        &__body {
+            flex: 1 1 auto;
+            padding: 2rem;
+
+            img {
+                max-width: 8rem;
+            }
+        }
+
+        &__title {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        &__text {
+            text-align: justify;
+            color: $gray-700;
+            line-height: 1.8rem;
+            font-size: .95rem;
+        }
+
+        &__img {
+            position: relative;
+            height: 315px;
+            max-width: 100%;
+            @include bg-cover;
+
+            &__tag {
+                position: absolute;
+                top: 0;
+                left: 1rem;
+                color: $primary-lighten;
+                background-color: $primary-darken;
+                padding: 10px;
+                writing-mode: vertical-lr;
+                letter-spacing: 0.2rem;
+
+            }
+
+            &__like {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                color: $primary-darken;
+                cursor: pointer;
+            }
+        }
+
+        &__info {
+            color: $primary-darken;
+            font-size: 20px;
+
+            &__title {
+                padding: 1rem;
+                font-weight: lighter;
+                border-right: 1px solid $primary-lighten;
+            }
+
+            &__price {
+                padding: 1rem;
+            }
+        }
+
+        &__submit {
+            padding: 16px 0;
+            background-color: $primary-lighten;
+            color: $primary-darken;
+            font-size: 24px;
+            font-weight: bolder;
+
+            @include transition;
+
+            @include hover-focus {
+                color: $primary-lighten;
+                text-decoration: none;
+                background-color: $primary-darken;
+
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,42 @@
+.p {
+    &-event {
+        color: $white;
+
+        @include hover-focus-active {
+            text-decoration: none;
+            color: $white;
+
+            .p-event-button {
+                background-color: rgba($white, 0.2);
+            }
+        }
+
+        &-card {
+            max-width: 55rem;
+            @include transition;
+
+            @include hover {
+                transform: translateY(-0.5rem);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+                text-decoration: none;
+            }
+
+        }
+
+        &-button {
+            margin-top: 5rem;
+            border: 1px solid $white;
+            background-color: transparent;
+            color: $white;
+
+            @include hover-focus-active {
+                color: $white;
+            }
+
+            i {
+                top: 3px;
+                font-size: 1.2rem !important;
+            }
+        }
+    }
+}

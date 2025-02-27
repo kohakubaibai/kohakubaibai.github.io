@@ -1,0 +1,65 @@
+.e {
+  &-title {
+    flex-direction: column;
+    z-index: 2;
+    text-align: center;
+
+    &--lr {
+      color: $secondary;
+      position: relative;
+      z-index: 2;
+      writing-mode: vertical-lr;
+    }
+
+    &--tag {
+      font-size: 1.3rem;
+      font-family: "Anton", sans-serif;
+      padding: 0.05rem 0.5rem;
+      background-color: $dark;
+      color: $white;
+      letter-spacing: 0.1rem;
+    }
+
+    &--eng {
+      display: block;
+      font-family: "Anton", sans-serif;
+      font-size: 3.125rem;
+      letter-spacing: 0.2rem;
+
+      @include rwd($md) {
+        font-size: 2.6rem;
+      }
+    }
+
+    h5 {
+      font-weight: 700;
+    }
+
+    @include rwd-min(1280px) {
+      align-items: center;
+      flex-direction: inherit;
+
+      &--eng {
+        font-size: 3.75rem;
+        margin-right: 0.5rem;
+      }
+
+      &--tag {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+
+      h5 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.e {
+  &-line {
+    &--dashed {
+      border: 1px $dark dashed;
+    }
+  }
+}

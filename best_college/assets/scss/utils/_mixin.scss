@@ -1,0 +1,207 @@
+// rwd
+@mixin rwd($px) {
+  @media (max-width: $px) {
+    @content;
+  }
+}
+
+@mixin rwd-ipadpro-pl {
+
+  /* Portrait and Landscape */
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+@mixin rwd-ipadpro-p {
+
+  /* Portrait */
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+@mixin rwd-ipadpro-l {
+
+  /* Landscape */
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+@mixin rwd-tablet-l {
+
+  /* Landscape */
+  @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+// transition
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+@mixin transition2($property, $duration, $curve) {
+  -moz-transition: $property $duration $curve;
+  -o-transition: $property $duration $curve;
+  -webkit-transition: $property $duration $curve;
+  transition: $property $duration $curve;
+}
+
+//background cover
+@mixin bg-cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// flex-center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//circle
+@mixin circle($r, $bg-color, $text-color) {
+  height: $r;
+  width: $r;
+  border-radius: 50%;
+  background-color: $bg-color;
+  border: 1.5px solid $text-color;
+  color: $text-color;
+}
+
+// Hover
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin plain-hover-focus {
+
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+//media query
+@mixin rwd-max($px) {
+  @media (max-width: $px) {
+    @content;
+  }
+}
+
+@mixin rwd-min($px) {
+  @media (min-width: $px) {
+    @content;
+  }
+}
+
+@mixin rwd-maxh($px) {
+  @media (max-height: $px) {
+    @content;
+  }
+}
+
+@mixin rwd-minh($px) {
+  @media (min-height: $px) {
+    @content;
+  }
+}
+
+
+
+
+@mixin rwd-tablet-portrait {
+
+  /* Portrait 10.5inch*/
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+@mixin rwd-tablet-landscape {
+
+  /* Landscape */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+
+@mixin rwd-tablet-pro-landscape {
+
+  @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+
+@mixin rwd-tablet-pro-portrait {
+
+  @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+
+@function rem($fontsize) {
+  @return calc($fontsize / 16)+rem;
+}
+
+
+//dashed line 
+
+@mixin dashed-horizon($color, $dash, $gap) {
+  width: 100% !important;
+  height: 1px;
+  padding: 0 !important;
+  background: linear-gradient(to left,
+      transparent 0%,
+      transparent 50%,
+      $color 50%,
+      $color 100%,
+    );
+  background-size: $dash $gap;
+  background-repeat: repeat-x;
+}
+
+@mixin dashed-portrait($color, $gap, $dash) {
+  width: 2px !important;
+  height: auto;
+  padding: 0 !important;
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      transparent 50%,
+      $color 50%,
+      $color 100%,
+    );
+  background-size: $gap $dash;
+  background-repeat: repeat-y;
+}

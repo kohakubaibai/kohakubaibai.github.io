@@ -1,0 +1,9 @@
+.e {
+    &-roundedNumber {
+        display: inline-block;
+        @include circle(1.3rem, $gray-900, $white);
+        line-height: 1.3rem;
+        text-align: center;
+        margin-right: .5rem;
+    }
+}

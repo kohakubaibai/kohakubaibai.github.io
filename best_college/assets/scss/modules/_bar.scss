@@ -1,0 +1,73 @@
+.m {
+    &-bar {
+        padding: 20px 0 20px 0;
+        background-color: rgba($color: $gray-800, $alpha: 0.9);
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        vertical-align: middle;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 90;
+        transition: all 0.5s;
+        transform: translateY(120px);
+
+        .e-button {
+            margin: 1rem 0 0 0;
+
+            @include rwd-min(1280px) {
+                margin: 0 0 0 1rem;
+            }
+        }
+
+        &__highlight {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        &__button {
+            width: 12rem !important;
+            padding: 0.6rem 1rem !important;
+        }
+
+    }
+
+}
+
+.scrollUp {
+    transform: translateY(0px);
+}
+
+.m {
+    &-floatButton {
+        position: fixed;
+        display: inline-block;
+        background-color: $primary;
+        color: #fff;
+        width: 5.5rem;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: .25rem;
+        text-align: center;
+        bottom: 10%;
+        right: 0;
+        @include transition;
+
+        @include hover-focus {
+            background-color: $black;
+            bottom: 11.5%;
+            color: $primary;
+            text-decoration: none;
+        }
+
+
+        img {
+            border: none;
+        }
+
+    }
+}

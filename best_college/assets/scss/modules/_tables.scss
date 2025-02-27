@@ -1,0 +1,19 @@
+//
+// Basic Bootstrap table
+//
+.m {
+  &-table {
+    width: 100%;
+    background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+    th,
+    td {
+      padding: 0.25rem;
+      vertical-align: top;
+    }
+
+    thead th {
+      vertical-align: bottom;
+    }
+  }
+}

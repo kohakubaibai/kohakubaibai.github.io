@@ -1,0 +1,29 @@
+// base
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@import "normalize";
+// utils
+@import "utils/variable";
+@import "utils/mixin";
+@import "utils/typography";
+
+// layout
+@import "layout/navbar";
+@import "layout/register";
+@import "layout/footer";
+@import "layout/form";
+
+// modules
+@import "modules/card";
+@import "modules/form";
+@import "modules/bar";
+
+// elements
+@import "elements/button";
+@import "elements/checkbox";
+@import "elements/title";
+@import "elements/tooltip";
+
+// pages
+@import "pages/index";

@@ -1,0 +1,135 @@
+.p {
+  &-cart {
+    color: $primary-darken;
+    margin-bottom: 2.5rem;
+
+    .l-register__form__submit {
+      font-size: $font-md;
+      font-weight: 700;
+      height: 4rem;
+    }
+
+    @include rwd($md) {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      background-color: $primary-lighten;
+      font-size: $font-md;
+      font-weight: 700;
+
+      @include rwd($md) {
+        margin: 0 -15px;
+      }
+    }
+
+    &__item {
+      border-bottom: $border-width solid $primary-lighten;
+      padding: 1.25rem 0;
+
+      @include rwd($md) {
+        border: none;
+      }
+
+      &__img {
+        width: 6.8rem;
+        height: 6.8rem;
+
+        @include bg-cover;
+
+        @include rwd($md) {
+          width: 40%;
+        }
+      }
+
+      &__name {
+        font-size: $font-sm;
+
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      &__page {
+        .m-page__item {
+          width: 3rem;
+          height: 3rem;
+          line-height: 3rem;
+        }
+      }
+
+      &__price {
+        font-size: $font-sm;
+        font-weight: 700;
+
+        @include rwd($md) {
+          display: block;
+          width: 100%;
+          padding: 0.5rem;
+          margin-top: 0.5rem;
+          border-top: $border-width solid $primary-lighten;
+          border-bottom: $border-width solid $primary-lighten;
+          text-align: right;
+        }
+      }
+
+      &__delete {
+        color: $primary;
+        position: relative;
+        top: 3px;
+
+        @include hover-focus {
+          color: $primary-darken;
+        }
+      }
+    }
+
+    &__checkout {
+      background-color: $primary-darken;
+
+      @include rwd($md) {
+        background-color: $white;
+      }
+
+      .p-cart__title {
+        color: $white;
+        border-bottom: $border-width solid $primary-lighten;
+        background-color: transparent;
+
+        @include rwd($md) {
+          background-color: $primary-lighten;
+          color: $primary-darken;
+        }
+      }
+
+      &__table {
+        color: $primary;
+        font-weight: 300;
+
+        @include rwd($md) {
+          color: $primary-darken;
+        }
+      }
+
+      &__result {
+        color: $primary-lighten;
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        @include rwd($md) {
+          color: $primary-darken;
+        }
+
+        td {
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.no-hover {
+  @include hover-focus-active {
+    background-color: inherit;
+  }
+}

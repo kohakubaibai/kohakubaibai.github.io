@@ -1,0 +1,59 @@
+.e {
+  &-process {
+    color: $primary-darken;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 0.8px;
+      width: 90%;
+      top: 50%;
+      background-color: $primary;
+      left: 10px;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background-color: $primary-darken;
+      border-radius: 1rem;
+      z-index: 2;
+
+      i {
+        font-size: 1rem;
+        color: $primary-lighten;
+      }
+
+      &--uncheck {
+        background-color: $primary-darken;
+        border: $border-width solid $primary;
+      }
+
+      &--check {
+        background-color: $primary-darken;
+        border: $border-width solid $primary-lighten;
+
+        .material-icons {
+          color: $primary-darken;
+          background-color: $primary-lighten;
+          border-radius: 1rem;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+        }
+
+        .circle {
+          width: 14px;
+          height: 14px;
+          background: $white;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}

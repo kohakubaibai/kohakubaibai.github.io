@@ -1,0 +1,52 @@
+// Color system
+$primary: #FF9904;
+$primary-lighten: #FFE4A2;
+$primary-darken: #E3B702;
+
+$secondary: #617866;
+$secondary-lighten: #93A7D6;
+$secondary-darken: #24597B;
+
+$warning: #FF8730;
+
+$dark: #000000;
+$light: #f4f4f4;
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+//font size
+$font-xs: 0.8rem;
+$font-sm: 1.25rem;
+$font-md: 1.5rem;
+$font-lg: 2rem;
+
+// Break point
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$border-width: 0.8px !default;
+$border-color: $gray-300 !default;
+$text-muted: $gray-600 !default;
+// Tables
+
+$table-color: $white !default;
+$table-bg: null !default;
+
+$table-border-width: $border-width !default;
+$table-border-color: $border-color !default;
+
+// animated
+$cubic: cubic-bezier(0.64, 0.09, 0.08, 1);

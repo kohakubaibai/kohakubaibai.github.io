@@ -1,0 +1,19 @@
+.l {
+
+    &-footer {
+        padding: rem(40) 0;
+        color: $dark;
+        background-color: $primary;
+        font-size: $font-xs;
+        line-height: 1.9rem;
+
+        a {
+            color: $dark;
+            text-decoration: underline !important;
+
+            @include hover-focus-active {
+                color: $secondary;
+            }
+        }
+    }
+}

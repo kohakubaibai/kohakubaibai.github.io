@@ -1,0 +1,71 @@
+.p {
+  &-title {
+    padding-top: 1.5rem;
+    font-size: $font-lg;
+    color: $primary-lighten;
+  }
+
+  &-subtitle {
+    padding-top: 1.5rem;
+    font-size: $font-md;
+    color: $primary;
+    font-weight: 300;
+  }
+
+  &-login {
+    position: relative;
+    width: 24rem;
+    background-color: $primary-darken;
+
+    @include rwd($md) {
+      width: 100%;
+    }
+
+    &__group {
+      padding: 0 1.5rem;
+    }
+
+    &__title {
+      padding-top: 1.5rem;
+      font-size: $font-lg;
+      color: $primary-lighten;
+    }
+
+    &__submit {
+      width: 100%;
+      font-size: $font-md;
+      height: auto;
+      padding: 1rem;
+    }
+  }
+
+  &-social {
+    position: relative;
+    width: 24rem;
+    margin: 1rem 0;
+    background-color: $primary-lighten;
+
+    @include rwd($md) {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__list {
+      padding: 0 1.5rem;
+    }
+
+    &__item {
+      background-color: $white;
+      height: 3.5rem;
+      padding: 1rem;
+
+      @include rwd($md) {
+        border: $border-width solid $primary-lighten;
+      }
+
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+}

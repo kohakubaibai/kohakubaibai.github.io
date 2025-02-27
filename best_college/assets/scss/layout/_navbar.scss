@@ -1,0 +1,178 @@
+.l {
+  &-navbar {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 99;
+    background-color: transparent;
+    @include transition;
+
+    > .conatainer-fluid {
+      padding: 1rem rem(20);
+    }
+
+    &--scrolled {
+      background-color: rgba($color: $light, $alpha: 0.9);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+    }
+
+    &--overlay {
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: $gray-800;
+      overflow: auto;
+      z-index: -1;
+
+      @include transition;
+
+      &.open {
+        opacity: 1 !important;
+        z-index: 98 !important;
+      }
+
+      .l-navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 7rem 3rem 3rem;
+      }
+
+      .l-navbar__menu__items {
+        margin: 0 auto;
+        font-size: 1.3rem;
+        color: $gray-200;
+        padding: 0.5rem 0;
+      }
+    }
+
+    &__toggler {
+      z-index: 150;
+
+      @include rwd-min(769px) {
+        display: none !important;
+      }
+      @include transition;
+
+      span {
+        width: 24px;
+        height: 2px;
+        background-color: $primary;
+        display: block;
+        margin: 7px auto;
+        @include transition;
+      }
+
+      &--activate {
+        width: 30px;
+        height: 30px;
+        z-index: 150;
+
+        span {
+          width: 24px;
+          height: 2px;
+          background-color: $primary;
+          display: block;
+          margin: 8px auto;
+          @include transition;
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(1) {
+          transform: translateY(3px) rotate(45deg);
+        }
+
+        span:nth-child(3) {
+          transform: translateY(-17px) rotate(-45deg);
+        }
+      }
+    }
+
+    &__brand {
+      z-index: 20;
+
+      img {
+        height: 40px;
+        width: auto !important;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+
+      &__items {
+        padding: 0 0.5rem;
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 0 1rem;
+
+        a {
+          color: $primary;
+          @include transition;
+
+          @include hover-focus-active {
+            color: $primary;
+            text-decoration: none;
+          }
+        }
+        .e-button {
+          color: $white;
+          max-width: 100%;
+        }
+
+        &--active {
+          a {
+            color: $primary;
+          }
+        }
+      }
+
+      //////手機版未做完
+      @include rwd-max(769px) {
+        // display: none;
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+
+        &.open {
+          // display: block;
+          visibility: visible;
+          flex-direction: column;
+          padding-top: 6rem;
+          text-align: center;
+          position: fixed;
+          background-color: #343a40;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          transition: all 0.3s;
+        }
+
+        &__items {
+          color: $white;
+          font-size: 1.3rem;
+          padding: 0.5rem;
+        }
+      }
+    }
+
+    &__cart {
+      color: $primary;
+      padding: 0 30px;
+      @include transition;
+
+      @include hover-focus-active {
+        color: $primary;
+      }
+    }
+  }
+}
