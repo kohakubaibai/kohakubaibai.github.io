@@ -353,11 +353,13 @@ function generateContentItems(category) {
     newItem.classList.add("p-adlist__item", "col-md-3", "col-11");
     newItem.innerHTML = `
       <a href="${item.href}" target="_blank" rel="noreferrer noopener">
-          <div class="imgWrap mb-1">
+          <div class="imgWrap">
               <img src="${item.imgSrc}" alt="${item.title}">
           </div>
-          <h4 class="p-adlist__label">${item.label}</h4>
-          <h3 class="p-adlist__title">${item.title}</h3>
+          <div class="txtWrap">
+            <h4 class="p-adlist__label">${item.label}</h4>
+            <h3 class="p-adlist__title">${item.title}</h3>
+          </div>
       </a>
     `;
     container.appendChild(newItem);
@@ -365,6 +367,6 @@ function generateContentItems(category) {
 }
 
 // 廣編學校_調用函數生成對應內容
-// generateContentItems("cate1");
-// generateContentItems("cate2");
-// generateContentItems("cate3");
+generateContentItems("cate1");
+generateContentItems("cate2");
+generateContentItems("cate3");

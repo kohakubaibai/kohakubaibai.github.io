@@ -148,37 +148,37 @@ const mbtiData = {
   ]
 };
 
-function generateContentMbtis(mbtiCate) {
+function generateContentItems(mbti) {
   const container = document.querySelector(`.mbtiSwiper .swiper-wrapper`);
-  mbtiData[mbtiCate].forEach((mbti) => {
-    const newMbti = document.createElement("div");
-    newMbti.classList.add("swiper-slide");
-    newMbti.innerHTML = `
+  mbtiData[mbti].forEach((item) => {
+    const newItem = document.createElement("div");
+    newItem.classList.add("swiper-slide");
+    newItem.innerHTML = `
       <div class="mbtiCard">
         <div class="mbtiCard__image">
           <div class="imgWrap">
             <div class="imgWrapper">
-              <img src="${mbti.imgSrc}" alt="${mbti.en}">
+              <img src="${item.imgSrc}" alt="${item.en}">
             </div>
           </div>
-          <div class="mbtiName ${mbti.class}">
-              <div class="chinese">${mbti.chinese}</div>
-              <div class="en">${mbti.en}</div>
+          <div class="mbtiName ${item.class}">
+              <div class="chinese">${item.chinese}</div>
+              <div class="en">${item.en}</div>
           </div>
         </div>
         <div class="mbtiCard__point">
           <div class="title">選志願時，你可以思考：</div>
           <ul class="list">
-            <li>${mbti.point1}</li>
-            <li>${mbti.point2}</li>
-            <li>${mbti.point3}</li>
+            <li>${item.point1}</li>
+            <li>${item.point2}</li>
+            <li>${item.point3}</li>
           </ul>
         </div>
       </div>
     `;
-    container.appendChild(newMbti);
+    container.appendChild(newItem);
   });
 }
 
 // 廣編學校_調用函數生成對應內容
-generateContentMbtis("mbti");
+generateContentItems("mbti");
