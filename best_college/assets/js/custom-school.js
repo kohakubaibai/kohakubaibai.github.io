@@ -255,12 +255,6 @@ const contentData = {
       imgSrc:
         "https://storage.googleapis.com/www-cheers-com-tw/article/202502/article-67b408bb3b82f.jpg",
       title: "高雄醫學大學運動醫學系",
-    },
-    {
-      href: "https://www.cw.com.tw/article/5133877",
-      imgSrc:
-        "https://cdn-www.cw.com.tw/article/202501/article-6791ed9fbec969.21701853.jpg",
-      title: "日本台灣交流協會",
     }
   ],
   // 培育新視角
