@@ -1,0 +1,256 @@
+/*---------- color ----------*/
+
+// text color
+.color {
+    &--white {
+        color: $white !important;
+    }
+
+    &--black {
+        color: $black !important;
+    }
+
+    // theme
+
+    &--main {
+        color: $primary !important;
+    }
+
+
+    &--info {
+        color: $info !important;
+    }
+
+    &--secondary {
+        color: $secondary !important;
+    }
+
+    &--warning {
+        color: $warning !important;
+    }
+
+    &--danger {
+        color: $danger !important;
+
+    }
+
+}
+
+// bg color
+.bg {
+    &--light {
+        background-color: $gray-lighter !important;
+    }
+
+    &--dark {
+        background-color: $black !important;
+    }
+
+    &--gray {
+        background-color: $gray-normal !important;
+    }
+
+    &--white {
+        background-color: $white !important;
+    }
+
+    // theme
+    &--primary {
+        background-color: $primary !important;
+    }
+
+    &--secondary {
+        background-color: $secondary !important;
+    }
+
+    &--info {
+        background-color: $info !important;
+    }
+
+    &--warning {
+        background-color: $warning !important;
+    }
+
+    &--danger {
+        background-color: $danger !important;
+    }
+
+    //topic
+
+    @each $name,
+    $color in $topicclr {
+        &--#{$name} {
+            background-color: $color !important;
+        }
+    }
+}
+
+
+
+
+/*---------- spacing ----------*/
+
+.py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pb-80 {
+    padding-bottom: 80px;
+}
+
+.pb-120 {
+    padding-bottom: 120px;
+}
+
+
+
+/*---------- text-align ----------*/
+.text-align-justify {
+    text-align: justify !important;
+}
+
+
+.line {
+    &-md--right {
+        border-right: none;
+
+        @include rwd-min(1200px) {
+            border-right: 1px solid $white;
+        }
+
+        @include rwd-tablet-pro-portrait  {
+            border-right: 1px solid $white;
+        }
+
+        @include rwd-tablet-portrait {
+            border-right: 1px solid $white;
+        }
+
+        @include rwd-tablet-landscape {
+            border-right: 1px solid $white;
+        }
+
+        @include rwd-tablet-pro-landscape {
+            border-right: 1px solid $white;
+        }
+    }
+
+    &--right {
+        border-right: 1px solid $white;
+    }
+
+    &-mob--right {
+        border-right: 1px solid $white;
+
+        @include rwd-min(1200px) {
+            border-right: none;
+        }
+    }
+
+    &-md--bottom {
+        border-bottom: none;
+
+        @include rwd-min(1200px) {
+            border-bottom: 1px solid $white;
+        }
+    }
+
+    &--bottom {
+        border-bottom: 1px solid $white;
+    }
+
+    &-mob--bottom {
+        border-bottom: 1px solid $white;
+
+        @include rwd-min(1200px) {
+            border-bottom: none;
+        }
+
+        @include rwd-tablet-landscape {
+            border-bottom: none;
+        }
+        @include rwd-tablet-portrait {
+            border-bottom: none;
+        }
+
+    }
+
+
+}
+
+// font-weight
+
+.fw {
+
+    &-400 {
+        font-weight: 400;
+    }
+
+    &-500 {
+        font-weight: 500;
+    }
+
+    &-700 {
+        font-weight: 700;
+    }
+}
+
+// font-color
+
+.fc {
+    &-white {
+        color: $white;
+    }
+
+    &-primary {
+        color: $primary;
+    }
+
+    &-primary-alt {
+        color: $primary-alt;
+    }
+
+
+}
+
+/*------- media query -------*/
+
+//平板 col-xl
+@media only screen and (max-width: 991px) {}
+
+//平板以上
+@media only screen and (min-width: 768px) {}
+
+//平板以下
+@media only screen and (max-width: 767px) {
+    .py-80 {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .pt-80 {
+        padding-top: 16px;
+    }
+
+    .pb-80 {
+        padding-bottom: 16px;
+    }
+
+    .pb-120 {
+        padding-bottom: 40px;
+    }
+}
+
+//iphone 8 plus
+@media only screen and (max-width: 414px) {}
+
+//iphone 8
+@media only screen and (max-width: 375px) {}
+
+//iphone SE
+@media only screen and (max-width: 320px) {}

@@ -1,0 +1,279 @@
+/*---------- buttons ----------*/
+.chBtn {
+    padding: 5px 60px;
+    border-radius: 0;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+
+    span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include transition(width, .3s, ease);
+    }
+
+    &--main {
+        border: none;
+        background-color: $primary;
+
+        span,
+        .material-icons {
+            color: $white;
+        }
+
+        &:before {
+            background-color: $dark;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+
+            span {
+                color: #fff;
+            }
+
+            .material-icons {
+                color: #fff;
+            }
+        }
+    }
+
+    &--outline {
+        border: 1px solid $dark;
+        background-color: $dark;
+        @include box-sizing(border-box);
+
+        span {
+            color: $dark;
+        }
+
+        &:before {
+            background-color: $dark;
+            opacity: .3;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+
+            span {
+                color: $dark;
+            }
+
+            .material-icons {
+                color: $dark;
+            }
+        }
+    }
+
+
+    // @include rwd-maxw(991px) {
+    //     &:hover {
+    //         &:before {
+    //             width: 0%;
+    //         }
+
+    //     }
+    // }
+}
+
+.link {
+    &--underline {
+        // border-bottom: 3px solid #fff;
+        font-size: 16px;
+        padding-bottom: 10px;
+        color: $underline-color;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 100%;
+            bottom: 0px;
+            width: 100%;
+            height: 3px;
+            background-color: $underline-color;
+            @include translateX(-100%);
+            @include transition(width, .3s, ease);
+        }
+
+        &:hover {
+            color: $underline-color;
+
+            &:after {
+                width: 0;
+            }
+        }
+
+        &--gray {
+            $underline-color: $dark;
+            color: $underline-color;
+            padding-bottom: 7px;
+
+            &:after {
+                background-color: $underline-color;
+            }
+
+            &:hover {
+                color: $underline-color;
+            }
+        }
+
+        // @include rwd-maxw(767px) {
+        //     display: block;
+        //     max-width: 92px;
+        // }
+    }
+}
+
+
+/*---------- loading icon ----------*/
+/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+.la-ball-scale,
+.la-ball-scale>div {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.la-ball-scale {
+    display: block;
+    font-size: 0;
+    color: #fff;
+}
+
+.la-ball-scale.la-dark {
+    color: #333;
+}
+
+.la-ball-scale>div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor;
+}
+
+.la-ball-scale {
+    width: 32px;
+    height: 32px;
+}
+
+.la-ball-scale>div {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: ball-scale 1s 0s ease-in-out infinite;
+    -moz-animation: ball-scale 1s 0s ease-in-out infinite;
+    -o-animation: ball-scale 1s 0s ease-in-out infinite;
+    animation: ball-scale 1s 0s ease-in-out infinite;
+}
+
+.la-ball-scale.la-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.la-ball-scale.la-sm>div {
+    width: 16px;
+    height: 16px;
+}
+
+.la-ball-scale.la-2x {
+    width: 64px;
+    height: 64px;
+}
+
+.la-ball-scale.la-2x>div {
+    width: 64px;
+    height: 64px;
+}
+
+.la-ball-scale.la-3x {
+    width: 96px;
+    height: 96px;
+}
+
+.la-ball-scale.la-3x>div {
+    width: 96px;
+    height: 96px;
+}
+
+/** Animation*/
+@-webkit-keyframes ball-scale {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes ball-scale {
+    0% {
+        opacity: 1;
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes ball-scale {
+    0% {
+        opacity: 1;
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes ball-scale {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}

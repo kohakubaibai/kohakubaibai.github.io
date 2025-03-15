@@ -1,0 +1,95 @@
+.videoSlider {
+    &__main {
+        margin-bottom: 3rem;
+    }
+
+    &__photo {
+        &:before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            // border-style: solid;
+            // border-width: 25px 0 25px 43.3px;
+            // border-color: transparent transparent transparent $info;   
+            background-image: url(../images/play_circle.svg);
+            z-index: 1;
+            @include bg-cover;
+            @include absolute-center; 
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include transition(all,.3s,ease);
+        }
+    }
+
+    &__text {
+        h5 {
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: 80px;
+        cursor: pointer;
+
+        &:hover {
+            .videoSlider__photo {
+                &:after {
+                    background-color: rgba(#fff, .5);
+                    border-bottom: 12px solid $info;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        &.active {
+            .videoSlider__photo {
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(#fff, .5);
+                    border-bottom: 12px solid $info;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .videoSlider {
+        &__main {
+            margin-bottom: 18px;
+        }
+
+        &__item {
+            margin-bottom: 18px;
+            @include clearfix;
+        }
+
+        &__text, &__photo {
+            padding: 0;
+            float: left;
+        }
+
+        &__text {
+            padding-left: 15px;
+
+            h5 {
+                margin-top: 0;
+            }
+        }
+    }
+}
