@@ -1,0 +1,202 @@
+.swiper-button-next-unique,
+.swiper-button-prev-unique {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.swiper-button-next-unique.swiper-button-disabled,
+.swiper-button-prev-unique.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.swiper-button-next-unique.swiper-button-hidden,
+.swiper-button-prev-unique.swiper-button-hidden {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.swiper-navigation-disabled .swiper-button-next-unique,
+.swiper-navigation-disabled .swiper-button-prev-unique {
+    display: none !important;
+}
+
+.swiper-button-next-unique:after,
+.swiper-button-prev-unique:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+.swiper-button-prev-unique,
+.swiper-rtl .swiper-button-next {
+    left: -1rem;
+    right: auto;
+
+    @include rwd-min(1200px) {
+        left: -2rem;
+    }
+}
+
+.swiper-button-prev-unique:after,
+.swiper-rtl .swiper-button-next:after {
+    content: "prev";
+}
+
+.swiper-button-next-unique,
+.swiper-rtl .swiper-button-prev {
+    right: -1rem;
+    left: auto;
+
+    @include rwd-min(1200px) {
+        right: -2rem;
+    }
+}
+
+.swiper-button-next-unique:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: "next";
+}
+
+
+.e {
+    &-button {
+        display: inline-block;
+        max-width: 95%;
+        padding: 1rem;
+        border: none;
+        border-radius: 10rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        border: 1px solid $white;
+        @include transition-general;
+
+        @include rwd-max($md) {
+            width: 100%;
+            font-weight: 700;
+        }
+
+        @include hover-focus {
+            background-color: $black;
+            color: $white !important;
+            text-decoration: none;
+            border: 1px solid $white;
+        }
+
+        &__text {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 700;
+            height: auto;
+        }
+
+        &--regis {
+            width: 900px;
+            padding: 1.5rem 0;
+
+            .e-button__text {
+                font-size: 1.3rem;
+            }
+
+            @include rwd-min(1280px) {
+                padding: 2.6rem 0;
+
+                .e-button__text {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        &--secondary {
+            background-color: $secondary;
+            color: $dark;
+        }
+
+        &--white {
+            background-color: $white;
+            color: $dark;
+        }
+
+        &--underline {
+            background-color: transparent;
+            border: 1px solid $dark;
+            color: $dark;
+        }
+    }
+
+    &-sliderIcon {
+        &:first-child {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 50;
+            font-size: 2rem;
+            background-color: $secondary-alt;
+            border-radius: 3rem;
+            color: $white;
+
+            @include rwd-min(1280px) {
+                left: -3%;
+                font-size: 3rem;
+                background-color: transparent;
+                color: $dark;
+            }
+        }
+    }
+
+    &-sliderIcon2 {
+        &:first-child {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            // right: 10%;
+            right: 0;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 50;
+            font-size: 2rem;
+            background-color: $secondary-alt;
+            border-radius: 3rem;
+            color: $white;
+
+            @include rwd-min(1280px) {
+                right: -6%;
+                font-size: 3rem;
+                background-color: transparent;
+                color: $dark;
+            }
+        }
+    }
+
+    &-tag {
+        padding: 0.2rem 0.5rem;
+        max-width: 5rem;
+        border: 1px solid $secondary;
+        color: $secondary;
+        border-radius: 0.25rem;
+        margin-right: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    &-hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba($secondary, 0.5);
+    }
+}

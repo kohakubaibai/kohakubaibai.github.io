@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
+@import '_variables';
+@import '_normalize';
+@import '_mixin';
+@import '_layout';
+@import '_page';
+// @import '_element';
+// @import '_button';
+// @import '_videoSlider';
+@import '_slick';
+@import '_slick-theme';
+@import '_utilities';
+@import '_form';
+
+
+/*---------- index ----------*/
+body {
+    background-color: $white;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+// h1 {
+//     color: transparent;
+//     position: absolute;
+//     top: 0;
+//     z-index: -1;
+// }
+.icon {
+    display: inline-block;
+
+    &__social {
+        width: 25px;
+        height: 25px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0px;
+        margin: 0 10px;
+        @include transition(0pxall, .3s, ease);
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    &__fb {
+        background-image: url('assets/images/nav-fb.png');
+    }
+
+    &__line {
+        background-image: url('assets/images/nav-line.png');
+    }
+}
+
+.scrollUp {
+    transform: translateY(0px);
+}
+
+.scrollDown {
+    width: 90px;
+    height: 62px;
+    background-image: url(../images/scroll-down.png);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    margin-bottom: rem(80);
+
+}
+
+.title {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    .imagewrap {
+        width: 80px;
+    }
+
+    @include rwd-max(565px) {
+        margin-bottom: 3rem;
+    }
+}
+
+.gap {
+    padding: 8rem 0;
+
+    @include rwd-max(565px) {
+        padding: 3.6rem 0;
+    }
+}
+
+img {
+    height: intrinsic;
+}
+
+
+// ------------------------------------------------------
+
+
+
+
+// To top buttom
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'1,
+        'wght'700,
+        'GRAD'0,
+        'opsz'48
+}
+
+
+
+
+.toTop {
+    position: fixed;
+    right: 30px;
+    bottom: 120px;
+    background: transparent;
+    width: 150px;
+    height: 150px;
+    z-index: 100;
+
+    &--control {
+        width: 100px;
+        height: 100%;
+    }
+}
+
+
+.video-block {
+    height: auto;
+    overflow: auto;
+}
+
+.br_pc {
+    display: block;
+}
+
+.br_mo {
+    display: none !important;
+}
+
+
+/*------- media query -------*/
+
+//平板 col-xl
+@media only screen and (max-width: 991px) {
+    .section {
+        &__video {
+            background-color: $white;
+        }
+    }
+
+    .timeline {
+        .imageWrap {
+            max-width: 430px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .chBtn:hover:before {
+        width: 0%;
+    }
+}
+
+//平板以上
+@media only screen and (min-width: 768px) {}
+
+//平板以下
+@media only screen and (max-width: 767px) {
+    .l-articleList__content a img {
+        margin-bottom: 1rem;
+    }
+
+    .link--underline {
+        display: block;
+        max-width: 92px;
+    }
+
+    .br_pc {
+        display: none;
+    }
+
+    .br_mo {
+        display: block;
+    }
+
+    td {
+        font-size: 1.2em;
+    }
+
+    .owl__nav {
+        top: 40%;
+
+        &--prev,
+        &--next {
+            width: 30px;
+            height: 30px;
+        }
+
+        &--prev {
+            left: -42px;
+        }
+
+        &--next {
+            right: -42px;
+        }
+    }
+
+    .soundBtn {
+        right: 24px;
+        bottom: 24px;
+        width: 60px;
+        height: 60px;
+
+        &--control {
+            font-size: 36px;
+            top: 12px;
+        }
+
+        .freq {
+            width: 180px;
+            height: 180px;
+        }
+    }
+
+    .video-block {
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+//iphone 8 plus
+@media only screen and (max-width: 414px) {
+    .freq {
+        width: 230px !important;
+        height: 230px !important;
+    }
+}
+
+//iphone 8
+@media only screen and (max-width: 375px) {}
+
+//iphone SE
+@media only screen and (max-width: 320px) {}
+
+
+//scroll line
+@keyframes scrollAttentionLine {
+    0% {
+        background-position-y: 0
+    }
+
+    50% {
+        background-position-y: calc(50rem * 2)
+    }
+
+    100% {
+        background-position-y: calc(50rem * 4)
+    }
+}
+
+
+@keyframes hovering {
+
+    0% {
+        /* 定義元素在該影格所套用的樣式 */
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}

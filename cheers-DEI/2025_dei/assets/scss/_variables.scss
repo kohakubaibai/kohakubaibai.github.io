@@ -1,0 +1,79 @@
+$topicclr: (topic1:#97DC02,
+    topic2:#7492FF) !default;
+
+$topicclr-info: (topic1:#7E10A5,
+    topic2:#FF9F4C,
+    topic3:#ECE77B) !default;
+
+$topicimg: (topic1: "../images/topic1_img",
+    topic2: "../images/topic2_img",
+    topic3: "../images/topic3_img");
+
+$topicimg-title: (topic1: "../images/topic1_peotit",
+    topic2: "../images/topic2_peotit",
+    topic3: "../images/topic3_peotit");
+
+// Color system
+$primary:#09A592;
+$primary-alt: #0DF29B;
+$primary-darken: #276362;
+$primary-darken1: #204D52;
+
+$secondary:#EAF8CC;
+$secondary-lighter: #CFED8F;
+$secondary-alt: #FF460C;
+$secondary-alt2: #f8cabb;
+
+$warning:#FF460C;
+$danger:#FF460C;
+$info: #f07aaa;
+
+$dark: #2d2d2d;
+$light: #f4f4f4;
+
+$ad-primary: #2b4793;
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+//font size
+$font-xs: 0.8rem;
+$font-sm: 1.25rem;
+$font-md: 1.5rem;
+$font-lg: 2rem;
+
+// Break point
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$border-width: 0.8px !default;
+$border-color: $gray-300 !default;
+$text-muted: $gray-600 !default;
+// Tables
+
+$table-color: $white !default;
+$table-bg: null !default;
+
+$table-border-width: $border-width !default;
+$table-border-color: $border-color !default;
+
+// animated
+$cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
+
+
+//
+$underline-color: $primary;
+$gray-lighter: $gray-600;
+$gray-normal: $gray-800;
