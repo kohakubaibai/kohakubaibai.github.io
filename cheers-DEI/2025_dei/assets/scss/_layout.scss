@@ -110,6 +110,10 @@ img {
 .l-navbar--scrolled {
     background-color: rgba($color: $dark, $alpha: 0.9);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+
+    .l-navbar__menu__items a {
+        color: $white;
+    }
 }
 
 .l-navbar--overlay {
@@ -157,7 +161,7 @@ img {
 .l-navbar__toggler span {
     width: 30px;
     height: 4px;
-    background-color: $white;
+    background-color: $black;
     display: block;
     margin: 7px auto;
     transition: all 0.3s ease;
@@ -230,6 +234,10 @@ img {
     span {
         font-size: rem(14);
         font-weight: 500;
+    }
+
+    @include rwd-tablet-portrait {
+        color: $dark;
     }
 }
 

@@ -463,7 +463,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #09A592;
+  color: #F2FF35;
 }
 
 .a__disable {
@@ -526,6 +526,9 @@ img {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
 }
+.l-navbar--scrolled .l-navbar__menu__items a {
+  color: #fff;
+}
 
 .l-navbar--overlay {
   opacity: 0;
@@ -578,7 +581,7 @@ img {
 .l-navbar__toggler span {
   width: 30px;
   height: 4px;
-  background-color: #fff;
+  background-color: #000;
   display: block;
   margin: 7px auto;
   -webkit-transition: all 0.3s ease;
@@ -657,14 +660,22 @@ img {
   transition: all 0.3s ease;
   width: 100%;
   display: block;
+  /* Portrait 10.5inch*/
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 }
 .l-navbar__menu__items a span {
   font-size: 0.875rem;
   font-weight: 500;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .l-navbar__menu__items a {
+    color: #2d2d2d;
+  }
+}
 
 .l-navbar__menu__items a:hover {
-  color: #09A592;
+  color: #F2FF35;
   text-decoration: none;
 }
 
@@ -674,7 +685,7 @@ img {
 }
 
 .l-navbar__menu__items--active a {
-  color: #09A592;
+  color: #F2FF35;
 }
 
 @media (max-width: 769px) {
@@ -708,7 +719,7 @@ img {
   }
 }
 .l-navbar__cart {
-  color: #09A592;
+  color: #F2FF35;
   padding: 0 30px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -717,7 +728,7 @@ img {
 .l-navbar__cart:hover,
 .l-navbar__cart:focus,
 .l-navbar__cart:active {
-  color: #09A592;
+  color: #F2FF35;
 }
 
 /*---------- display ----------*/
@@ -756,7 +767,7 @@ img {
   font-family: Arial, "Noto Sans TC", "Roboto", "Microsoft JhengHei", sans-serif;
 }
 .text--main {
-  color: #09A592;
+  color: #F2FF35;
 }
 
 .list--decimal {
@@ -912,179 +923,105 @@ img {
   margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
-  .p-br--md {
-    display: none;
+body {
+  background-color: #F2FF35;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 .p-imgBkg {
-  background-color: #EAF8CC;
-  background-image: url(../images/sec_bg.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #F2FF35;
 }
-.p-beacon {
-  position: absolute;
-  background-color: transparent;
-  height: 56px;
-  width: 100% !important;
-  top: -56px;
-  display: block;
-}
-.p__h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-}
-@media (min-width: 1200px) {
-  .p__h2 {
-    font-size: 2.5rem;
-  }
-}
-.p__h3 {
-  font-size: 1.25rem;
-}
-.p__h4 {
-  font-size: 1.25rem;
-}
-.p__h5 {
-  font-size: 1rem;
-}
-.p__number {
-  font-family: "Oswald", sans-serif;
-  line-height: 1;
-}
-.p__link {
-  text-align: right;
-}
-.p__link a {
-  display: inline-block;
-  color: #09A592;
-  font-size: 1rem;
-  font-weight: 500;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-}
-.p__link a span {
-  display: inline-block;
+.p-imgBkg:before, .p-imgBkg:after {
+  content: "";
   position: relative;
-  top: 7px;
-  width: 24px;
-}
-.p__link a:hover {
-  color: #09A592;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-.p__dashedline {
-  width: 100% !important;
-  height: 1px;
-  padding: 0 !important;
-  background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #000), to(#000));
-  background: linear-gradient(to left, transparent 0%, transparent 50%, #000 50%, #000 100%);
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
-}
-@media (min-width: 1200px) {
-  .p__dashedline {
-    width: 1px !important;
-    height: auto;
-    padding: 0 !important;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #000), to(#000));
-    background: linear-gradient(to bottom, transparent 0%, transparent 50%, #000 50%, #000 100%);
-    background-size: 1px 10px;
-    background-repeat: repeat-y;
-  }
-}
-.p__button {
-  color: #fff;
-  border-radius: 5rem;
-  text-decoration: none;
-  background-color: #204D52;
-  padding: 1rem 2rem;
-  width: 90%;
   display: block;
-  margin: 0 auto;
-  text-align: center;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  font-size: 1rem;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-top: 16.3978494624%;
+  background-color: #313131;
 }
-.p__button span {
-  font-weight: 500;
+.p-imgBkg:before {
+  top: 1px;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
-.p__button:hover {
-  color: #fff;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-.p__link {
-  color: #276362;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  width: 90%;
-  display: block;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  text-align: center;
-  margin: 0 auto;
-}
-.p__link span {
-  font-weight: 500;
-}
-.p__link:hover {
-  color: #204D52;
+.p-imgBkg:after {
+  bottom: 1px;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
 @media (min-width: 1200px) {
   .p__h3 {
     font-size: 1.5rem;
   }
 }
+.p-section {
+  position: relative;
+}
+.p-section .marquee {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .p-section .marquee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .p-section .marquee .marquee__content {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-animation: marquee 100s linear infinite;
+            animation: marquee 100s linear infinite;
+  }
+  .p-section .marquee .marquee__content img {
+    width: auto;
+    margin-right: 3.75rem;
+  }
+}
+.p-section .container {
+  position: relative;
+  z-index: 5;
+}
 .p-summary {
-  background-color: #276362;
+  background-color: #F2FF35;
   padding: 3.125rem 1rem;
-  color: #fff;
 }
 @media (min-width: 1200px) {
   .p-summary {
     padding: 5rem 0;
   }
 }
-.p-summary .p__h2 {
-  margin-bottom: 1rem;
-}
-@media (min-width: 1200px) {
-  .p-summary .p__h2 {
-    margin-bottom: 2.5rem;
-  }
-}
-.p-summary .p__h2 span {
-  color: #0DF29B;
-  font-weight: 700;
-  display: block;
-}
-@media (min-width: 1200px) {
-  .p-summary .p__h2 span {
-    display: inline-block;
-  }
-}
 .p-summary__text {
-  color: #fff;
+  text-align: center;
+  color: #000;
   font-weight: 500;
   font-size: 1.125rem;
-  text-align: justify;
 }
 @media (min-width: 1200px) {
   .p-summary__text {
@@ -1100,340 +1037,109 @@ img {
   color: #EAF8CC;
   text-decoration: underline !important;
 }
-.p-summary__number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.p-summary__dialog {
+  width: 88%;
+  margin: 82px auto 70px;
+  height: 348px;
 }
-.p-summary__number__wrapper {
-  margin: 0 2rem;
-}
-@media (min-width: 1200px) {
-  .p-summary__number__wrapper {
-    margin: 0;
-  }
-}
-.p-summary__number--tag {
-  font-size: 1.125rem;
-  padding: 0.375rem 0.5rem;
-  color: #EAF8CC;
-  border: 1.2px solid #EAF8CC;
-  font-weight: 500;
-  display: inline-block;
-}
-.p-summary__number--tag.primary {
-  background-color: #FF460C;
-  border: 1.2px solid #FF460C;
-}
-.p-summary__number--arrow {
-  background-image: url(../images/icon_arrow.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right center;
-  width: 4.375rem;
-  height: 1.25rem;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  margin: 1rem;
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media (min-width: 1200px) {
-  .p-summary__number--arrow {
-    width: 9.375rem;
-    height: 1.25rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-summary__number--arrow {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-summary__number--arrow {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-summary__number--arrow {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-.p-summary__number--score {
-  font-size: 5rem;
-  font-family: "Goblin One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.2;
-  color: #276362;
-  text-shadow: -1px -1px 0 #EAF8CC, 1px -1px 0 #EAF8CC, -1px 1px 0 #EAF8CC, 1px 1px 0 #EAF8CC;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-.p-summary__number--score.primary {
-  color: #FF460C;
-  text-shadow: -1px -1px 0 transparent, 1px -1px 0 transparent, -1px 1px 0 transparent, 1px 1px 0 transparent;
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-summary__number--score {
-    font-size: 4.0625rem;
-  }
-}
-.p-topic {
-  position: relative;
-  color: #fff;
-  background-color: #276362;
-  padding-top: 0;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-topic {
-    padding-bottom: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-topic {
-    padding-bottom: 0;
-  }
-}
-.p-topic__item {
-  text-align: center;
-  position: relative;
-}
-.p-topic__item:nth-child(2) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-@media (min-width: 1200px) {
-  .p-topic__item:nth-child(2) {
-    top: 5rem;
-  }
-}
-.p-topic__item:nth-child(2) .p-topic__item--dialog {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-.p-topic__item:nth-child(3) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.p-topic__item:nth-child(3) .p-topic__item--dialog {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.p-topic__item--dialog {
-  position: relative;
-  background-color: #FF460C;
-  padding: 1rem 1.5rem;
-  border-radius: 3.125rem;
-  display: inline-block;
-  margin-bottom: 1rem;
-  -webkit-animation-name: hovering;
-          animation-name: hovering;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.p-topic__item--dialog span {
-  font-weight: 400;
-}
-.p-topic__item--dialog::after {
-  content: "";
+.p-summary__dialog .floatDialog {
   position: absolute;
-  width: 2.0625rem;
-  height: 1.5rem;
-  background-image: url(../images/icon_bubble.svg);
-  right: 30px;
-  bottom: -16px;
+  width: 596px;
 }
-.p-topic__item--img {
-  width: 10rem;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+.p-summary__dialog .floatDialog--layer1 {
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
-@media (min-width: 1200px) {
-  .p-topic__item--img {
-    width: 13.75rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-topic__item--img {
-    width: 8.125rem;
-  }
-}
-.p-topic__item--text {
-  color: #0DF29B;
-}
-.p-topic__item--text h5 {
-  font-size: 1.5rem;
-}
-.p-topic__item--text .number {
-  font-size: 4.5rem;
-  font-family: "Goblin One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.2;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-.p-topic__item--text .number span {
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-@media (min-width: 1200px) {
-  .p-topic__item--text .number {
-    font-size: 5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-topic__item--text .number {
-    font-size: 3.125rem;
-  }
-}
-.p-topic__item p {
-  padding: 0 1rem;
-  font-weight: 400;
+.p-summary__dialog .floatDialog--layer2 {
+  right: 0;
+  top: 147px;
+  z-index: 2;
 }
 .p-graph {
+  background-color: #313131;
   position: relative;
 }
-.p-graph::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 28.75rem;
-  background: url(../images/bkg_wave.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  top: 0;
+.p-graph .animateChart--pc {
+  display: none;
+}
+.p-graph .animateChart--mb {
+  display: block;
+}
+@media (min-width: 992px) {
+  .p-graph .animateChart--pc {
+    display: block;
+    margin: 0 auto;
+  }
+  .p-graph .animateChart--pc.graph1 {
+    max-width: 652px;
+  }
+  .p-graph .animateChart--pc.graph2 {
+    max-width: 349px;
+  }
+  .p-graph .animateChart--pc.graph3 {
+    max-width: 642px;
+  }
+  .p-graph .animateChart--pc.graph4 {
+    max-width: 470px;
+  }
+  .p-graph .animateChart--pc.graph5 {
+    max-width: 783px;
+  }
+  .p-graph .animateChart--pc.graph6 {
+    max-width: 802px;
+  }
+  .p-graph .animateChart--mb {
+    display: none;
+  }
+}
+.p-graph .animateChart .animateChart__item {
   left: 0;
+  top: 0;
+  width: 100%;
 }
-.p-graph__title h2 span,
-.p-graph__title h5 span {
-  display: inline-block;
-  padding: 1rem;
+.p-graph .animateChart .animateChart__item:nth-child(1) {
+  position: relative;
+  z-index: 1;
+}
+.p-graph .animateChart .animateChart__item:nth-child(2) {
+  position: absolute;
+  z-index: 2;
+}
+.p-graph .animateChart .animateChart__item:nth-child(3) {
+  position: absolute;
+  z-index: 3;
+}
+.p-graph .animateChart .animateChart__item:nth-child(4) {
+  position: absolute;
+  z-index: 4;
+}
+.p-graph__title h2 {
+  color: #fff;
+}
+.p-graph__title h2 span {
   font-weight: 500;
-  background: #204D52;
-  color: #EAF8CC;
+  color: #F2FF35;
 }
-.p-graph__title h5 span {
-  padding: 0.5rem;
+.p-graph__title .saying__content {
+  color: #40A3FF;
+}
+.p-graph__title .saying__person {
+  color: #fff;
+}
+.p-graph__content .paragraph {
+  color: #fff;
+}
+.p-graph__content .paragraph p {
   font-size: 1rem;
 }
 @media (min-width: 1200px) {
-  .p-graph__title h5 span {
-    font-size: 1.125rem;
+  .p-graph__content .paragraph p {
+    font-size: 1.25rem;
   }
-}
-.p-graph__wrapper {
-  background-color: #09A592;
-  padding: 1.125rem;
-  border-radius: 2.5rem;
-  margin: 1rem !important;
-}
-@media (min-width: 1200px) {
-  .p-graph__wrapper {
-    padding: 2.5rem;
-  }
-}
-.p-graph__item {
-  text-align: center;
-  margin: 1.125rem 0;
-}
-.p-graph__item--cate {
-  margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  color: #fff;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.p-graph__item--cate .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0.75rem;
-}
-.p-graph__item--cate .item span {
-  font-weight: 500;
-}
-.p-graph__item--cate .item .imgWrap {
-  width: 1.25rem;
-}
-.p-graph__item--cate .circle {
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 1.25rem;
-}
-.p-graph__item--cate .circle.primary {
-  background-color: #204D52;
-}
-.p-graph__item--cate .circle.secondary {
-  background-color: #EAF8CC;
-}
-.p-graph__item .imgWrap {
-  width: 90%;
-  margin: 0 auto;
-}
-@media (min-width: 1200px) {
-  .p-graph__item .imgWrap {
-    width: 70%;
-  }
-}
-.p-graph__item h5 {
-  font-size: 1.125rem;
-  color: #fff;
-}
-.p-graph__item p {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-}
-.p-graph__item p span {
-  color: #EAF8CC;
 }
 .p-download {
+  background-color: #F2FF35;
   padding-bottom: 5rem;
 }
 @media (min-width: 1200px) {
@@ -1441,14 +1147,63 @@ img {
     padding-bottom: 12.5rem;
   }
 }
+.p-download .container {
+  max-width: 800px;
+}
+@media (min-width: 768px) {
+  .p-download .container {
+    padding: 0;
+  }
+}
 .p-download__title {
   color: #2d2d2d;
   text-align: center;
 }
-.p-download__cardgroup {
-  max-width: 1100px;
+.p-download__title .p__h2 {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .p-download__title .p__h2 {
+    font-size: 2.625rem;
+  }
+}
+.p-download__content {
   margin: 0 auto !important;
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .p-download__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .p-download__content .p-download__cover {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 280px;
+            flex: 0 0 280px;
+  }
+  .p-download__content .p-download__text {
+    margin-top: 1.25rem;
+    max-width: 492px;
+  }
 }
 .p-download__fixedbutton {
   position: fixed;
@@ -1469,297 +1224,95 @@ img {
     width: 6rem;
   }
 }
-.p-download__card {
-  height: 100%;
-  padding: 1rem;
+.p-download__text .downloadCard {
+  margin-bottom: 2rem;
 }
-.p-download__card__wrapper {
-  padding: 0 2rem;
-  margin-top: 1rem !important;
+.p-download__text .downloadCard:last-child {
+  margin-bottom: 0;
 }
-.p-download__card h5 {
-  font-size: 1.625rem;
+@media (min-width: 768px) {
+  .p-download__text .downloadCard {
+    margin-bottom: 3.25rem;
+  }
+}
+.p-download__text h4 {
+  display: inline-block;
+  font-size: 1.125rem;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
+  padding: 0.625rem;
+  color: #fff;
+  background-color: #373737;
+  margin-bottom: 0;
 }
-.p-download__card p {
+.p-download__text h5 {
+  display: inline-block;
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  padding: 0.625rem;
+  color: #fff;
+  background-color: #373737;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .p-download__text h5 {
+    padding: 0.625rem 1.75rem;
+  }
+  .p-download__text h5 br {
+    display: none;
+  }
+}
+.p-download__text p {
   font-size: 1rem;
   font-weight: 500;
   text-align: justify;
-}
-.p-download__card .p__number {
-  font-size: 5rem;
-  line-height: 1;
-}
-.p-download__card .slider {
-  padding: 1rem 0;
-}
-@media (min-width: 1200px) {
-  .p-download__card .slider {
-    padding: 0;
-  }
-}
-.p-download__card .slider__box {
-  position: relative;
-  margin: 1rem 0;
-  text-align: center;
-  padding: 0 1.875rem;
-}
-.p-download__card .slider__box p {
+  color: #000;
+  margin-top: 0.5rem;
   margin-bottom: 0;
-  font-weight: 500;
 }
-.p-download__cover {
-  margin: -4rem auto 0;
-  width: 90%;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+@media (min-width: 768px) {
+  .p-download__text p {
+    margin-top: 0.75rem;
+  }
 }
-.p-download__form__wrapper {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-align: left;
-  font-weight: 350;
-  color: #2d2d2d;
-  padding: 0 1.5rem;
-}
-.p-download__form__wrapper .p__button {
-  padding: 0.5rem 3rem !important;
-}
-.p-download__form__check label {
-  font-size: 0.875rem;
-}
-.p-download__form__info {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #2d2d2d;
-}
-.p-download__form__info span {
-  font-size: 90%;
-}
-.p-download__form__info--txt {
-  caret-color: #2d2d2d;
-  color: #2d2d2d;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  display: inline-block;
-}
-.p-download__form__info--txt a {
-  color: #FF460C;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  display: inline-block;
-}
-.p-download__form__tks {
-  position: relative !important;
-}
-.p-download__form__tks p {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #2d2d2d;
-}
-.p-download__form__tks--mainarea .item {
-  padding: 1rem;
-  background-color: #e9ecef;
-  margin: 0.5rem;
-  width: 50%;
-  border-radius: 1rem;
-}
-.p-download__form__tks--mainarea .item .imgWrap {
-  margin: 0 auto;
-  width: 7.5rem;
-  padding-bottom: 1rem;
-  max-width: 100%;
-}
-.p-download__form__tks--mainarea .item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.p-download__form__tks--mainarea .item a span {
-  display: inline-block;
+.p-download__link {
   color: #276362;
-  font-weight: 500;
-}
-.p-download__form__tks--mainarea .item h5 {
-  font-weight: 700;
-  font-size: 1rem;
-}
-.p-score {
-  position: relative;
-  padding: 1.25rem 0;
-  margin-top: 0;
-  margin-bottom: 2.5rem;
-  background-color: #276362;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media (min-width: 1200px) {
-  .p-score {
-    margin-top: 0;
-    margin-bottom: 12.5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score {
-    margin-top: 0;
-    margin-bottom: 6.25rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score {
-    margin-top: 0;
-    margin-bottom: 6.25rem;
-  }
-}
-.p-score::after, .p-score::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2.5rem;
-  background-image: url(../images/bkg_wave.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media (min-width: 1200px) {
-  .p-score::after, .p-score::before {
-    height: 12.5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score::after, .p-score::before {
-    height: 6.25rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score::after, .p-score::before {
-    height: 6.25rem;
-  }
-}
-.p-score::before {
-  left: 0;
-  top: -2.5rem;
-  background-color: transparent;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media (min-width: 1200px) {
-  .p-score::before {
-    top: -12.5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score::before {
-    top: -6.25rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score::before {
-    top: -6.25rem;
-  }
-}
-.p-score::after {
-  left: 0;
-  bottom: -2.5rem;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media (min-width: 1200px) {
-  .p-score::after {
-    bottom: -12.5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score::after {
-    bottom: -6.25rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .p-score::after {
-    bottom: -6.25rem;
-  }
-}
-.p-score .p__h3 {
-  font-weight: 700;
-  padding-bottom: 1.875rem;
-}
-.p-score .p__button {
-  margin: 1.875rem auto 0;
-  background-color: #0DF29B;
-  font-size: 1.375rem;
-  width: 40%;
-}
-@media (min-width: 1200px) {
-  .p-score .p__button {
-    margin: 1.875rem 0 0 0;
-  }
-}
-.p-score .p__button span {
-  color: #2d2d2d;
-}
-.p-score__input {
-  padding: 1rem;
-  width: 100%;
-  font-size: 2rem;
-}
-.p-score__wrapper {
-  padding: 0 2rem !important;
-  -webkit-box-flex: 1 !important;
-      -ms-flex-positive: 1 !important;
-          flex-grow: 1 !important;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  width: 90%;
+  display: block;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
   text-align: center;
-  margin: 1.5rem 0 !important;
+  margin: 0 auto;
+  text-align: right;
 }
-@media (min-width: 1200px) {
-  .p-score__wrapper {
-    text-align: left;
-  }
-}
-.p-score .p__number {
-  font-size: 6.25rem;
-  font-family: "Goblin One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.2;
-  color: #0DF29B;
-}
-@media (min-width: 1200px) {
-  .p-score .p__number {
-    font-size: 10rem;
-  }
-}
-.p-score p {
+.p-download__link .p__link {
+  display: block;
+  color: #F2FF35;
+  font-size: 1rem;
   font-weight: 500;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.p-download__link .p__link span {
+  display: block;
+  position: relative;
+  font-weight: 500;
+}
+.p-download__link .p__link:hover {
+  color: #F2FF35;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.p-download__link .p__link:hover {
+  color: #204D52;
 }
 .p-articleList {
-  background-image: none;
+  background-color: #FAFAFA;
   padding-bottom: 3.6rem;
   background-position: center center;
   background-size: cover;
@@ -1779,30 +1332,17 @@ img {
   text-align: center;
   font-size: 2.25rem;
 }
-.p-articleList__title .p__h2 .p__h3 {
-  font-weight: 500;
-  display: inline-block;
-}
 @media (min-width: 1200px) {
   .p-articleList__title .p__h2 {
     font-size: 3rem;
   }
 }
+.p-articleList__title .p__h3 {
+  font-weight: 500;
+  display: inline-block;
+}
 .p-articleList__title p {
   font-weight: 500;
-}
-.p-articleList__title::before {
-  content: "";
-  position: absolute;
-  background: url(../images/icon_blurcircle.svg);
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 12.5rem;
-  height: 12.5rem;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .p-articleList .stories {
   padding-top: 5rem;
@@ -1813,7 +1353,7 @@ img {
   margin-bottom: 2.5rem;
 }
 .p-articleList .stories__link:hover .stories__cover {
-  background-color: rgba(9, 165, 146, 0.5);
+  background-color: rgba(242, 255, 53, 0.5);
 }
 .p-articleList .stories__link:hover .stories__cover.ad {
   background-color: rgba(151, 220, 2, 0.5);
@@ -1848,7 +1388,7 @@ img {
           transition-duration: 0.8s;
 }
 .p-articleList .stories__txt {
-  text-align: center;
+  text-align: left;
   margin-top: -1.5rem;
 }
 .p-articleList .stories__txt h4 {
@@ -1859,11 +1399,20 @@ img {
   color: #fff;
   font-weight: 500;
   padding: 4px 8px;
-  background-color: #09A592;
+  background-color: #F2FF35;
   display: inline-block;
 }
 .p-articleList .stories__txt span.ad {
   background-color: #276362;
+}
+.p-articleList .stories__txt span.tag-typeA {
+  background-color: #0BD588;
+}
+.p-articleList .stories__txt span.tag-typeB {
+  background-color: #1071CB;
+}
+.p-articleList .stories__txt span.tag-typeC {
+  background-color: #BC5C69;
 }
 
 /*----- KV -----*/
@@ -1871,270 +1420,109 @@ img {
   padding: 0;
   position: relative;
   background-color: #F2FF35;
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.l-hero .kv {
-  position: relative;
-  width: 100dvw;
-  height: 100dvh;
+.l-hero:before {
+  content: "";
+  display: block;
+  min-height: 100dvh;
+  padding-top: 216.7938931298%;
+  /* Portrait 10.5inch*/
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 }
-.l-hero .kv__layer {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .l-hero:before {
+    padding-top: 161.8705035971%;
+  }
+}
+@media (min-width: 1200px) {
+  .l-hero:before {
+    padding-top: 56.25%;
+  }
+}
+.l-hero .opening {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: contain;
+}
+.l-hero .opening__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  /* Portrait 10.5inch*/
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 }
-.l-hero .kv__layer img {
-  width: 100%;
-  height: auto;
-}
-.l-hero .kv__layer--1 {
+.l-hero .opening__layer--1 {
   z-index: 2;
-  background-image: url("../images/kv_pc/layer_1.svg");
-  background-position: right center;
+  background-image: url("../images/opening/mb/layer_1.svg");
 }
-.l-hero .kv__layer--2 {
-  z-index: 1;
-  background-image: url("../images/kv_pc/layer_2.svg");
-}
-.l-hero .kv__layer--3 {
+.l-hero .opening__layer--2 {
   z-index: 3;
-  background-image: url("../images/kv_pc/layer_3.svg");
+  background-image: url("../images/opening/mb/layer_2.svg");
 }
-.l-hero .kv__layer--4 {
+.l-hero .opening__layer--3 {
   z-index: 4;
-  background-image: url("../images/kv_pc/layer_4.svg");
+  background-image: url("../images/opening/mb/layer_3.svg");
 }
-.l-hero .kv__layer--5 {
+.l-hero .opening__layer--4 {
+  z-index: 1;
+  background-image: url("../images/opening/mb/layer_4.svg");
+}
+.l-hero .opening__layer--5 {
   z-index: 5;
-  background-image: url("../images/kv_pc/layer_5.svg");
+  background-image: url("../images/opening/mb/layer_5.svg");
 }
-.l-hero .kv__layer--6 {
+.l-hero .opening__layer--6 {
   z-index: 6;
-  background-image: url("../images/kv_pc/layer_6.svg");
-}
-.l-hero__bkg--mb {
-  background-image: url(../images/cover/hero-mob-bkg.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.l-hero__title {
-  bottom: 5rem;
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-.l-hero__title .imgWrap {
-  width: 16.875rem;
-  margin: 0 auto;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  background-image: url("../images/opening/mb/layer_6.svg");
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__title .imgWrap {
-    width: 70%;
+  .l-hero .opening__layer--1 {
+    background-image: url("../images/opening/tablet/layer_1.svg");
   }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__title .imgWrap {
-    width: 70%;
+  .l-hero .opening__layer--2 {
+    background-image: url("../images/opening/tablet/layer_2.svg");
   }
-}
-@media (min-width: 1200px) {
-  .l-hero__title {
-    bottom: 6.25rem;
+  .l-hero .opening__layer--3 {
+    background-image: url("../images/opening/tablet/layer_3.svg");
   }
-  .l-hero__title .imgWrap {
-    width: 40.625rem;
+  .l-hero .opening__layer--4 {
+    background-image: url("../images/opening/tablet/layer_4.svg");
   }
-}
-.l-hero__titlepic {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 3;
-  background-image: url(../images/kv-mob-title-text.svg);
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-.l-hero__titlepic--circle {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.l-hero__titlepic--circleplayer {
-  display: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: -1rem;
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media (min-width: 1200px) {
-  .l-hero__titlepic--circleplayer {
-    display: block;
+  .l-hero .opening__layer--5 {
+    background-image: url("../images/opening/tablet/layer_5.svg");
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__titlepic--circleplayer {
-    display: block;
-  }
-}
-.l-hero__titlepic--circleplayerMob {
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  /* Portrait 10.5inch*/
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-}
-@media (min-width: 1200px) {
-  .l-hero__titlepic--circleplayerMob {
-    display: none;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__titlepic--circleplayerMob {
-    display: block;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__titlepic--circleplayerMob {
-    display: none;
+  .l-hero .opening__layer--6 {
+    background-image: url("../images/opening/tablet/layer_6.svg");
   }
 }
 @media (min-width: 1200px) {
-  .l-hero__titlepic {
-    width: 68%;
-    height: 100%;
-    background-image: url(../images/kv-pc-title-text-1.svg);
-    background-size: contain;
+  .l-hero .opening__layer--1 {
+    background-image: url("../images/opening/pc/layer_1.svg");
   }
-}
-@media (max-height: 700px) {
-  .l-hero__titlepic {
-    width: 90%;
-    height: 90%;
+  .l-hero .opening__layer--2 {
+    background-image: url("../images/opening/pc/layer_2.svg");
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__titlepic {
-    background-image: url(../images/kv-pc-title-text-1.svg);
-    background-size: contain;
+  .l-hero .opening__layer--3 {
+    background-image: url("../images/opening/pc/layer_3.svg");
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__titlepic {
-    width: 80%;
-    left: 50%;
-    top: 2.5rem;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background-size: contain;
+  .l-hero .opening__layer--4 {
+    background-image: url("../images/opening/pc/layer_4.svg");
   }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .l-hero__titlepic {
-    background-size: contain;
+  .l-hero .opening__layer--5 {
+    background-image: url("../images/opening/pc/layer_5.svg");
   }
-}
-.l-hero__scroll {
-  color: #09A592;
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 5;
-}
-.l-hero__scroll::after {
-  content: "";
-  position: absolute;
-  width: 1.5px;
-  height: 3rem;
-  opacity: 0.8;
-  left: 50%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #09A592), to(#09A592));
-  background-image: linear-gradient(to bottom, transparent, transparent 50%, #09A592 50%, #09A592 100%);
-  background-size: 1px 392rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: -3rem;
-  -webkit-animation-name: scrollAttentionLine;
-          animation-name: scrollAttentionLine;
-  -webkit-animation-duration: 3.5s;
-          animation-duration: 3.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-#preloader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0%;
-  top: 0%;
-  background-color: #09A592;
-  z-index: 9999;
-}
-
-#status {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-#status img {
-  width: 230px;
-}
-#status p {
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-  color: #fff;
-  margin-top: 1.5rem;
+  .l-hero .opening__layer--6 {
+    background-image: url("../images/opening/pc/layer_6.svg");
+  }
 }
 
 /* Slider */
@@ -2460,7 +1848,7 @@ img {
   color: #000 !important;
 }
 .color--main {
-  color: #09A592 !important;
+  color: #F2FF35 !important;
 }
 .color--info {
   color: #f07aaa !important;
@@ -2488,7 +1876,7 @@ img {
   background-color: #fff !important;
 }
 .bg--primary {
-  background-color: #09A592 !important;
+  background-color: #F2FF35 !important;
 }
 .bg--secondary {
   background-color: #EAF8CC !important;
@@ -2627,7 +2015,7 @@ img {
   color: #fff;
 }
 .fc-primary {
-  color: #09A592;
+  color: #F2FF35;
 }
 .fc-primary-alt {
   color: #0DF29B;
@@ -3040,7 +2428,7 @@ body {
 }
 
 img {
-  height: intrinsic;
+  height: inherit;
 }
 
 .material-symbols-outlined {
