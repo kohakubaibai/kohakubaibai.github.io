@@ -114,6 +114,10 @@ img {
     .l-navbar__menu__items a {
         color: $white;
     }
+
+    .l-navbar__toggler span {
+        background-color: $white;
+    }
 }
 
 .l-navbar--overlay {
@@ -421,12 +425,12 @@ img {
         font-size: rem(12);
         font-weight: 300;
         display: inline-block;
-        color: $secondary-lighter;
+        color: $white;
         @include transition-general
     }
 
     a:hover {
-        color: $secondary;
+        color: $primary;
     }
 
     p {

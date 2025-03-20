@@ -21,13 +21,9 @@
 	<link rel="shortcut icon" href="https://www.cheers.com.tw/favicon_2019.ico" type="image/x-icon">
 
 	<!-- include page css link -->
-	<!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css"> -->
+	<link rel="stylesheet" href="./assets/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
 	<script src="assets/js/wow.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
@@ -36,7 +32,6 @@
         <link
             rel="stylesheet"
             href="https://event.cw.com.tw/salesforce/inline/cw.css">
-	<!-- <script src="assets/js/id3-minimized.js"></script> -->
 
 
 	<!-- Google Tag Manager start -->
@@ -102,17 +97,17 @@
 			<ul class="l-navbar__menu d-md-flex align-items-center">
 				<li class="l-navbar__menu__items">
 					<a href="#download" gtm-name="專輯-2024-DEI" gtm-action="點擊錨點" gtm-label="錨點-下載報告書">
-						<span>下載報告書</span>
+						<span>下載報告</span>
 					</a>
 				</li>
 				<li class="l-navbar__menu__items">
 					<a href="#topic1" gtm-name="專輯-2024-DEI" gtm-action="點擊錨點" gtm-label="錨點-企業">
-						<span>企業DEI解方</span>
+						<span>歷年報告</span>
 					</a>
 				</li>
 				<li class="l-navbar__menu__items">
 					<a href="#topic2" gtm-name="專輯-2024-DEI" gtm-action="點擊錨點" gtm-label="錨點-個人">
-						<span>個人DEI指南</span>
+						<span>企業行動</span>
 					</a>
 				</li>
 				<li class="l-navbar__menu__items">
@@ -129,11 +124,11 @@
 
 	<!-- fixed button start -->
 	<div class="p-download__fixedbutton">
-		<button data-bs-toggle="modal" data-bs-target="#exampleModal" gtm-name="專輯-2024-DEI" gtm-action="點擊錨點" gtm-label="浮動-下載報告書" style="background: transparent;">
+		<a href="#" gtm-name="專輯-2024-DEI" gtm-action="點擊錨點" gtm-label="浮動-下載報告書" style="background: transparent;">
 			<div class="imgWrap">
 				<img src="assets/images/download-btn.svg" alt="立即下載DEI報告書">
 			</div>
-		</button>
+		</a>
 
 	</div>
 	<!-- fixed button end -->
@@ -180,11 +175,21 @@
 						許多國際巨頭開始調整相關預算或部門。
 					</p>
 					<div class="p-summary__dialog">
-						<div class="floatDialog floatDialog--layer1">
-							<img src="assets/images/img-dialog_1.png" alt="">
+						<div class="dialogs dialogs--pc">
+							<div class="floatDialog floatDialog--layer1">
+								<img src="assets/images/dialog/pc/img-dialog_1.png" alt="">
+							</div>
+							<div class="floatDialog floatDialog--layer2">
+								<img src="assets/images/dialog/pc/img-dialog_1.png" alt="">
+							</div>
 						</div>
-						<div class="floatDialog floatDialog--layer2">
-							<img src="assets/images/img-dialog_1.png" alt="">
+						<div class="dialogs dialogs--mb">
+							<div class="floatDialog floatDialog--layer1">
+								<img src="assets/images/dialog/mb/img-dialog_1.png" alt="">
+							</div>
+							<div class="floatDialog floatDialog--layer2">
+								<img src="assets/images/dialog/mb/img-dialog_1.png" alt="">
+							</div>
 						</div>
 					</div>
 					<p class="p-summary__text">
@@ -198,7 +203,7 @@
 	<!-- summary end -->
 
 	<!-- bkg area start -->
-	<div class="p-section p-imgBkg">
+	<div id="topic1" class="p-section p-imgBkg">
 		<section class="p-graph">
 			<div class="container">
 				<div class="row p-graph__title">
@@ -207,8 +212,10 @@
 							<div>近半台人<span>不認同川普</span>「反DEI」</div>
 						</h2>
 						<h5 class="saying mt-2 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-							<div class="saying__content">說到底，沒有人會反對一個公平、尊重、包容的職場環境。</div>
-							<div class="saying__person"><span class="name">Alpha plus 共同創辦人暨執行長 邱亮士</span></div>
+							<div class="sayingWrap">
+								<div class="saying__content">說到底，沒有人會反對一個公平、<br>尊重、包容的職場環境。</div>
+								<div class="saying__person"><span class="name">Alpha plus 共同創辦人暨執行長 邱亮士</span></div>
+							</div>
 						</h5>
 					</div>
 					<div class="p-graph__content">
@@ -232,27 +239,37 @@
 						</div>
 						<div class="paragraph">
 							<p>
-								2024年，全台職場霸凌及身心殞落事件頻傳；根據研究統計，台灣員工倦怠（Burnout）比例更是世界第一，每5人中就有一人曾因工作求助身心科，如今，員工遇到騷擾與歧視時，選擇向上反應的比例是3年來最高。
+								天下學習蒐集了4,688名員工心聲，發現近半（48%）人不認同川普的反DEI措施，30%表示無意見。
 							</p>
-						</div>
-						<div class="chart">
-							<div class="animateChart animateChart--mb graph2">
-								<div class="animateChart__item wow fadeIn" data-wow-duration="0.5s">
-									<img src="assets/images/graph/mb/graph_2/layer_1.svg" alt="">
-								</div>
-							</div>
-							<div class="animateChart animateChart--pc graph2">
-								<div class="animateChart__item wow fadeIn" data-wow-duration="0.5s">
-									<img src="assets/images/graph/pc/graph_2/layer_1.svg" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="paragraph">
 							<p>
-								天下學習今年再度與韋來韜悅WTW合作，對比國際超過一萬名員工的實際職場感受，卻發現：儘管企業的DEI作為獲得台灣員工3年來的最高評價（66.9分），職場感受指標卻是全數下滑、且遠遠低於全球領先指標。<br>
-								這表示，台灣「DEI」的近況來到了前所未有的交叉點，WTW周秉奇以「失去準頭的來福槍」比喻，當員工意識高漲、也看見企業有所作為，但實際情形卻是，企業怎麼樣都沒能準確命中員工內心需求。<br>
-								至於應該如何消弭其間落差？韋萊韜悅（WTW）員工體驗諮詢業務國際區域（亞太、中東／歐及拉美）負責人Keiko Osaka表示，共融（Inclusion）的文化有賴於高階領導者的認知。領導者能接受差異的存在、並且認同差異的價值，相當重要，這也是一種領導者必須具備的「能力」（Capability）。
+								資誠（PwC）企業管理顧問公司執行董事桂竹安指出用人唯才與多元包容不該是衝突的，企業必須回到DEI本質，讓多元人才的價值真正體現在業務中，而非僅僅是滿足指標，「川普的某些言論，其實也提醒了企業，如果只是表態，而沒有真正落實DEI，反而會變成一場數字遊戲，最終引發反彈。」
 							</p>
+						</div>
+						<div class="flexRevert">
+							<div class="chart">
+								<div class="animateChart animateChart--mb graph2">
+									<div class="animateChart__item wow fadeIn" data-wow-duration="0.5s">
+										<img src="assets/images/graph/mb/graph_2/layer_1.svg" alt="">
+									</div>
+								</div>
+								<div class="animateChart animateChart--pc graph2">
+									<div class="animateChart__item wow fadeIn" data-wow-duration="0.5s">
+										<img src="assets/images/graph/pc/graph_2/layer_1.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="paragraph">
+								<p>何謂DEI的本質？</p>
+								<p>
+									世界經濟論壇（WEF）指出，一份「好工作」應包括：公平薪酬、科技平權、彈性工作與支持、身心健康與福祉、賦能與學習文化、多元平等共融；而最終的目的，是為了創造一個「所有人都能被好好對待與善用」的職場環境。<br>
+								</p>
+								<p>
+									DEI不僅是「好工作」的價值之一，更是改善職場環境的重要支點。<br>
+								</p>
+								<p>
+									回看台灣社會，其實尚未邁開足夠的一步，要談反向歧視可能還言之過早，「合規」依然是重要的行動之一。政大企管系特聘教授胡昌亞以「安全帽」比喻，台灣一開始就是靠強制規定「騎車就要戴安全帽」，才有辦法內化成普遍的交通安全意識。
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -267,8 +284,10 @@
 							<div>員工體感<span class="highlight">全面下滑</span>，台灣職場怎麼了？</div>
 						</h2>
 						<h5 class="saying mt-2 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-							<div class="saying__content">辱罵式管理本就不是正確做法，與世代抗壓性、心理素質都無關。</div>
-							<div class="saying__person"><span class="name">律師陳業鑫</span></div>
+							<div class="sayingWrap">
+								<div class="saying__content">辱罵式管理本就不是正確做法，與世代抗壓性、心理素質都無關。</div>
+								<div class="saying__person"><span class="name">律師陳業鑫</span></div>
+							</div>
 						</h5>
 					</div>
 					<div class="p-graph__content">
@@ -324,11 +343,13 @@
 				<div class="row p-graph__title">
 					<div class="col-12 text-center p-graph__title">
 						<h2 class="mb-0 wow fadeIn" data-wow-duration="0.5s">
-							<div>企業該追求的不只合規，而是<span>雙贏</span></div>
+							<div>企業該追求的不只合規，<br>而是<span>雙贏</span></div>
 						</h2>
 						<h5 class="saying mt-2 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-							<div class="saying__content">我們相信企業根植於尊重與包容的承諾，是適當且必要的。</div>
-							<div class="saying__person"><span class="name">Costco回應美國保守派智庫（NCPPR）反DEI論述</span></div>
+							<div class="sayingWrap">
+								<div class="saying__content">我們相信企業根植於尊重與包容的承諾，是適當且必要的。</div>
+								<div class="saying__person"><span class="name">Costco回應美國保守派智庫（NCPPR）反DEI論述</span></div>
+							</div>
 						</h5>
 					</div>
 					<div class="p-graph__content">
@@ -405,7 +426,7 @@
 	<!-- img bkg end -->
 
 	<!-- downlaod start -->
-	<section class="p-section p-download">
+	<section id="download" class="p-section p-download">
 		<div class="marquee">
 			<span class="marquee__content">
 				<img src="assets/images/marquee/section2.svg" alt="">
@@ -456,15 +477,14 @@
 	<!-- downlaod end -->
 
 	<!-- article start -->
-	<section class="p-articleList">
+	<section id="topic2" class="p-articleList">
 		<div class="container">
 			<div class="p-articleList__title text-center">
 				<h4 class="p__h2">企業行動</h4>
 				<h5 class="p__h3">微光也是燈塔</h5>
 				<p>DEI是企業永續不可或缺的DNA，如何有效回應員工的呼聲？</p>
 			</div>
-
-			<div class="row justify-content-start">
+			<div class="row stories justify-content-start">
 				<a href="https://www.cheers.com.tw/talent/article.action?id=5103012&utm_source=cj_subject&utm_medium=hyperlink&utm_campaign=dei2024_5103012"
 					class="stories__link col-md-4" target="_blank" rel="noopener noreferrer" gtm-name="專輯-2024-DEI"
 					gtm-action="文章導流" gtm-label="單篇-新思科技">
@@ -473,7 +493,7 @@
 						<div class="stories__cover"></div>
 					</div>
 					<div class="stories__txt">
-						<span class="mb-2 tag-typeA">世代共融</span>
+						<span class="tag-typeA">世代共融</span>
 						<h4>請傾聽你的團隊！跨３０國企業多元長怎麼說？</h4>
 					</div>
 				</a>
@@ -485,7 +505,7 @@
 						<div class="stories__cover"></div>
 					</div>
 					<div class="stories__txt">
-						<span class="mb-2 tag-typeA">世代共融</span>
+						<span class="tag-typeA">世代共融</span>
 						<h4>壯世代成最強助力！退休後員工回聘率６３％</h4>
 					</div>
 				</a>
@@ -497,7 +517,7 @@
 						<div class="stories__cover"></div>
 					</div>
 					<div class="stories__txt">
-						<span class="mb-2 tag-typeB">機會平等</span>
+						<span class="tag-typeB">機會平等</span>
 						<h4>主管女比男多！軟體業不再只有「陽剛味」</h4>
 					</div>
 				</a>
@@ -509,7 +529,7 @@
 						<div class="stories__cover"></div>
 					</div>
 					<div class="stories__txt">
-						<span class="mb-2 tag-typeC">身心健康</span>
+						<span class="tag-typeC">身心健康</span>
 						<h4>護國新地基！百位越南移工回鄉「好康鬥相報」</h4>
 					</div>
 				</a>
@@ -521,7 +541,7 @@
 						<div class="stories__cover"></div>
 					</div>
 					<div class="stories__txt">
-						<span class="mb-2 tag-typeC">身心健康</span>
+						<span class="tag-typeC">身心健康</span>
 						<h4>一人抵３人！他們為何進用３００多位自閉症人才？</h4>
 					</div>
 				</a>
@@ -580,14 +600,14 @@
 		crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
 	<script src="assets/js/custom.js"></script>
 	<script data-cfasync="false" src="https://www.cw.com.tw/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-
-	<script src="assets/js/form.js"></script>
 
 	<script type="text/javascript">
 		/** 捲動事件 */
@@ -616,11 +636,6 @@
 			}
 			document.addEventListener('scroll', onScroll);
 		}
-	</script>
-
-	<script type="text/javascript">
-		//wow
-		new WOW().init();
 	</script>
 </body>
 
