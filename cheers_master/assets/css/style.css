@@ -1,0 +1,358 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-style: inherit;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+del,
+ins {
+  text-decoration: none;
+}
+
+li {
+  font-style: inherit;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: baseline;
+}
+
+sub {
+  vertical-align: baseline;
+}
+
+legend {
+  color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+html {
+  height: 100%;
+  max-height: 50000em;
+}
+
+body {
+  height: 100%;
+  font-size: 100%;
+  color: #17181A;
+  font-family: "Noto Sans TC", "Open Sans", Arial, Helvetica, sans-serif, "微軟正黑體", "Microsoft JhengHei", "STHeiti Light", "儷黑 Pro", "LiHei Pro", "Microsoft Yahei", "Microsoft JhengHei", "新細明體", serif; /* 1 */
+  line-height: 1.44;
+  font-weight: 300;
+  -ms-text-size-adjust: 100%; /* 2 */
+  -moz-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  text-size-adjust: 100%; /* 2 */
+  background: #FFFFFF;
+}
+
+div,
+ul,
+li,
+header,
+footer,
+section,
+p,
+dl,
+dt,
+dd {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #FFFFFF;
+  -webkit-transition: top 0.3s ease-out;
+  transition: top 0.3s ease-out;
+  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+.l-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.l-header h1 {
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+}
+.l-header h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  border-bottom: 0;
+}
+
+#menu[role=navigation] {
+  background-color: #FFFFFF;
+}
+#menu[role=navigation] ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#menu[role=navigation] ul li {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+#menu[role=navigation] ul li a {
+  display: block;
+  opacity: 1;
+}
+#menu[role=navigation] ul li a span {
+  color: #17181A;
+  letter-spacing: 1.333px;
+}
+#menu[role=navigation] ul li.current a span {
+  color: #009944;
+  font-weight: bold;
+}
+
+.gotop {
+  position: fixed;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
+  background-image: url("../images/icon-gotop.svg");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1000;
+}
+
+.l-footer {
+  background: #E1E2E6;
+}
+
+.btn {
+  border-radius: 0;
+  border: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.btn .btn__text {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.btn--default {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9px 24px;
+  background-color: #009944;
+  border-radius: 21px;
+}
+.btn--default .btn__text {
+  font-size: 16px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.h1 {
+  font-size: 62px;
+  line-height: 1.5;
+}
+
+.h2 {
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.h3 {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.h5 {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.page {
+  scroll-behavior: smooth;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.openMenu {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.kv {
+  position: relative;
+}
+.kv:before {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.kv .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  z-index: 5;
+}
+.kv__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
