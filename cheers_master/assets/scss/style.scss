@@ -59,6 +59,7 @@ h6 {
 }
 
 .kv {
+	background-color: $primary;
 	position: relative;
 
 	&:before {
@@ -84,5 +85,65 @@ h6 {
 }
 
 .section {
+	min-height: 100vh;
 
+	&--intro {
+		.section__title {
+			text-align: center;	
+			
+			img {
+				width: 100%;
+			}
+		}
+
+		.section__content {
+
+			.paragraph {
+			}
+			
+		}
+
+		.handWrite {
+			position: relative;
+			display: inline-block;
+			padding: rem(16) rem(10) rem(0) rem(10);
+
+			&:before,
+			&:after {
+				content: '';
+				display: block;
+				position:absolute;
+				width: rem(43);
+				height: rem(41);
+				border: rem(3) solid rgba($color: $primary, $alpha: 0.5);
+			}
+
+			&:before {
+				border-right: none;
+				border-bottom: none;
+				top: 0;
+				left: 0;
+			}
+
+			&:after {
+				border-left: none;
+				border-top: none;
+				bottom: 0;
+				right: 0;
+			}
+		}	
+
+		.paragraph {
+			text-align: center;
+			line-height: 1.9;
+
+			@include rwd-max(768) {
+				text-align: left;
+			}
+		}
+
+		.record {
+			@include list-reset;
+		}
+	}
 }

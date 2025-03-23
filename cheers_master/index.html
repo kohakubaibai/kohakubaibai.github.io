@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar-collapse">
 	<!-- <div id="fb-root"></div>
 	<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
@@ -40,36 +40,125 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script> -->
 
-	<div class="page" id="top">
-		<header class="l-header">
+	<!-- header 區塊 -->
+	<nav class="l-header">
+		<div class="container-fluid">
+			<div class="l-header__logo d-flex">
+				<a class="logoItem" href="https://www.cwlearning.com.tw/" target="_blank" rel="noopener noreferrer">
+					<img src="assets/images/logo/logo-cw.png" alt="天下學習">
+				</a>
+				<!-- <a class="logoItem" href="https://www.cheers.com.tw/" target="_blank" rel="noopener noreferrer">
+					<img src="assets/images/logo/logo-cheers.png" alt="Cheers快樂工作人">
+				</a>
+				<a class="logoItem" href="https://www.cheers.com.tw/talent" target="_blank" rel="noopener noreferrer">
+					<img src="https://www.cheers.com.tw/assets/images/logo-talent.png" alt="人才永續頻道">
+				</a> -->
+			</div>
+			<div class="l-header__toggler js-menuToggler">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="l-header__nav js-navbar">
+				<div class="f-fakeSelect">
+					<div class="fakeSelect__toggler js-selectToggler">
+						<span class="option">客座學習長</span>
+					</div>
+					<div class="fakeSelect__option js-selectOption">
+						<a href="#" class="option">盛治仁</a>
+						<a href="#" class="option">盛治仁2</a>
+						<a href="#" class="option">盛治仁3</a>
+						<a href="#" class="option">盛治仁4</a>
+					</div>
+				</div>
+				<ul class="l-navbar d-md-flex align-items-center">
+					<li class="navbarItem"><a href="#point" class="js-anchor"><span>自學心法</span></a></li>
+					<li class="navbarItem"><a href="#article" class="js-anchor"><span>一窺筆記</span></a></li>
+					<li class="navbarItem"><a href="#movie" class="js-anchor"><span>獨家專訪</span></a></li>
+					<li class="navbarItem"><a href="#promo" class="js-anchor"><span>學習密技</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- navbar 區塊 end -->
+	<main class="main">
+		<div class="kv" style="height: 1000px; background-color: pink;">123</div>
+		<section id="intro" class="section section--intro">
 			<div class="container">
-				<h1><a href="./">客座學習長</a></h1>
-				<a class="menu-link"></a>
-				<nav id="menu" role="navigation">
-					<ul>
-						<li class="menu"><a href="#topic1"><span>自學心法</span></a></li>
-						<li class="menu"><a href="#topic2"><span>最新得獎品牌</span></a></li>
-						<li class="menu"><a href="#topic3"><span>讀者抽獎公佈</span></a></li>
-						<li class="menu"><a href="#topic4"><span>讀者抽獎公佈</span></a></li>
+				<h2 class="section__title">
+					<div class="handWrite">
+						<img src="assets/images/handwrite-intro.png" alt="">
+					</div>
+				</h2>
+				<div class="section__content">
+					<div class="paragraph">
+						<p>若把職涯比作爬山，多數人終其一生只夠攻克一座山頭，但盛治仁至今已經見到三座巔峰。</p>
+						<p>從他人口中的「盛教授」、「盛主委」到「盛總經理」，不論哪一個身分，他都是領域頂尖。</p>
+					</div>
+					<ul class="record">
+						<li><span>花7年就從助理教授升為正教授，創下東吳大學最快升等紀錄。</span></li>
+						<li><span>總統府3個月內邀約11次，躍居當時內閣最年輕的部會首長。</span></li>
+						<li><span>帶領雲朗觀光集團跨足義大利、率全台旅宿業之先實施週休三日。</span></li>
 					</ul>
-				</nav>
+					<div class="action">
+						<a href="#movie" class="btn btn--primary js-anchor"></a>
+					</div>
+				</div>
 			</div>
-		</header>
-		<main class="main">
-			<div class="kv">
-
-			</div>
-			<div id="topAnchor"></div>
-
-		</main>
-		<footer class="l-footer">
+		</section>
+		<section id="point" class="section section--point">
 			<div class="container">
-
+				<h2 class="section__title">POINT TITLE</h2>
 			</div>
-		</footer>
-	</div>
+		</section>
+		<section id="article" class="section section--article">
+			<div class="container">
+				<h2 class="section__title">ARTICLE TITLE</h2>
+			</div>
+		</section>
+		<section id="movie" class="section section--movie">
+			<div class="container">
+				<div class="movieSlide">
+					<div class="slides">
+						<iframe width="315" height="560"
+							src="https://www.youtube.com/embed/xFbnS73wodY"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="promo" class="section section--promo">
+			topic4
+		</section>
+		<section id="subscribe" class="section section--subscribe">
+			訂閱
+		</section>
+		<div id="topAnchor"></div>
+	</main>
+	<footer class="l-footer">
+		<div class="container">
+			<div class="row justify-content-center color--white">
+				<p class="col-10">
+					內容策劃｜張紹敏、吳彥君</br>
+					採訪撰文｜張紹敏</br>
+					網頁企劃｜吳彥君</br>
+				</p>
+				<p class="col-10">
+					<a href="mailto:bill@cw.com.tw" target="_blank">讀者服務信箱</a>
+					&nbsp;|&nbsp;
+					<a href="tel:0226620332">讀者服務專線：02-2662-0332</a>
+				</p>
+				<p class="col-10">
+					2025 天下雜誌 版權所有，禁止擅自轉貼節錄
+				</p>
+			</div>
+		</div>
+	</footer>
 	<a href="#top" class="gotop">TOP</a>
-	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/jquery-latest.min.js"></script>
 	<script src="assets/js/jquery.mobile.custom.js"></script>
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
