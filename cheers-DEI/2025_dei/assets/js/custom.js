@@ -36,38 +36,8 @@ $(document).ready(function () {
       .toggleClass("l-navbar__toggler--activate");
   });
 });
-$(".overlay").on("click", function () {
-  $(".overlay").toggle(200);
-  $(".l-navbar__toggler")
-    .toggleClass("l-navbar__toggler")
-    .toggleClass("l-navbar__toggler--activate");
-  open = false;
-});
 //overlay menu clicked close
 $(".l-navbar__menu__items a").click(function () {
   $(".l-navbar__menu ").removeClass("open");
   $(".l-navbar__toggler--activate").attr("class", "l-navbar__toggler");
-});
-
-//buttom bar showup
-jQuery(document).ready(function () {
-  "use strict";
-
-  var c,
-    currentScrollTop = 0,
-    navbar = $(".m-bar");
-
-  $(window).scroll(function () {
-    var a = $(window).scrollTop();
-    var b = navbar.height();
-
-    currentScrollTop = a;
-
-    if (c < currentScrollTop && a > b + b) {
-      navbar.addClass("scrollUp");
-    } else if (c > currentScrollTop && !(a <= b)) {
-      navbar.removeClass("scrollUp");
-    }
-    c = currentScrollTop;
-  });
 });

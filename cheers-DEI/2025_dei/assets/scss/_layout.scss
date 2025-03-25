@@ -102,7 +102,7 @@ img {
     transition: all 0.3s ease;
 }
 
-.l-navbar>.conatainer-fluid {
+.l-navbar>.container-fluid {
     padding: .5rem 2rem;
     background-color: transparent;
 }
@@ -118,37 +118,6 @@ img {
     .l-navbar__toggler span {
         background-color: $white;
     }
-}
-
-.l-navbar--overlay {
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: #343a40;
-    overflow: auto;
-    z-index: -1;
-    transition: all 0.3s ease;
-}
-
-.l-navbar--overlay.open {
-    opacity: 1 !important;
-    z-index: 98 !important;
-}
-
-.l-navbar--overlay .l-navbar__menu {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin: 7rem 3rem 3rem;
-}
-
-.l-navbar--overlay .l-navbar__menu__items {
-    margin: 0 auto;
-    font-size: 1.3rem;
-    color: #e9ecef;
-    padding: 0.5rem 0;
 }
 
 .l-navbar__toggler {
@@ -250,11 +219,6 @@ img {
     text-decoration: none;
 }
 
-.l-navbar__menu__items .e-button {
-    color: $white;
-    max-width: 100%;
-}
-
 .l-navbar__menu__items--active a {
     color: $primary;
 }
@@ -287,22 +251,6 @@ img {
         padding: 0.5rem;
     }
 }
-
-.l-navbar__cart {
-    color: $primary;
-    padding: 0 30px;
-    transition: all 0.3s ease;
-}
-
-.l-navbar__cart:hover,
-.l-navbar__cart:focus,
-.l-navbar__cart:active {
-    color: $primary;
-}
-
-
-
-
 
 /*---------- display ----------*/
 .hide {
