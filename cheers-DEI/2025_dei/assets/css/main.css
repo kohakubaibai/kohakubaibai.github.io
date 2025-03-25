@@ -1207,6 +1207,7 @@ body {
   color: #fff;
 }
 .p-graph__content .paragraph p {
+  text-align: left;
   font-size: 1rem;
   margin-bottom: 0.625rem;
 }
