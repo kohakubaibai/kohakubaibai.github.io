@@ -8,7 +8,7 @@ $(function () {
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function () {
-  $(".l-navbar__menu__items a").bind("click", function (event) {
+  $(".js-anchor a").on("click", function (event) {
     var $anchor = $(this);
     $("html, body")
       .stop()
@@ -20,7 +20,17 @@ $(function () {
         "easeInOutExpo"
       );
     event.preventDefault();
+
+    $(".l-navbar__menu ").removeClass("open");
+    $(".l-navbar__toggler--activate").attr("class", "l-navbar__toggler");
   });
+
+  // Toggle dropdown
+	$('.js-selectToggler').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$('.js-selectOption').slideToggle(200);
+	});
 });
 
 //wow init
@@ -35,9 +45,4 @@ $(document).ready(function () {
       .toggleClass("l-navbar__toggler")
       .toggleClass("l-navbar__toggler--activate");
   });
-});
-//overlay menu clicked close
-$(".l-navbar__menu__items a").click(function () {
-  $(".l-navbar__menu ").removeClass("open");
-  $(".l-navbar__toggler--activate").attr("class", "l-navbar__toggler");
 });

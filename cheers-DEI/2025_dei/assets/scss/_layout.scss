@@ -42,7 +42,7 @@ p {
 
 a {
     text-decoration: none;
-    @include font(18px, 1.85, 300);
+    font-weight: 300;
     cursor: pointer;
 
     &:hover {
@@ -96,7 +96,6 @@ img {
 .l-navbar {
     position: fixed;
     width: 100%;
-    overflow: hidden;
     z-index: 99;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -247,8 +246,113 @@ img {
 
     .l-navbar__menu__items {
         color: $white;
-        font-size: 1.3rem;
         padding: 0.5rem;
+    }
+
+    .l-navbar__menu__items a {
+    
+        span {
+            font-size: rem(16);
+        }
+    }
+}
+
+.fakeSelect {
+    position: relative;
+	
+
+	.fakeSelect__toggler {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        cursor: pointer;
+
+        .option {
+            font-size: rem(14);
+            font-weight: 500;
+            color: $white;
+        }
+
+		&:after {
+			content: '';
+			display: block;
+			width: rem(8);
+            height: rem(6);
+            background-image: url('../images/arrow-select.svg');
+            background-size: rem(8) rem(6);
+            margin-left: rem(8);
+            @include transition(all, .3s, ease-in);
+		}
+
+		&.active {
+
+			&:after {
+                @include rotate(-180);
+			}
+		}
+	}
+
+	.fakeSelect__option {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: rem(-10);
+		right: 0;
+		background-color: $white;
+        padding: rem(8) 0;
+		border-radius: rem(4);
+		box-shadow: 0 rem(4) rem(9) rgba(0, 0, 0, .25);
+		z-index: 1000;
+        width: rem(120);
+
+		.option {
+            display: block;
+            width: 100%;
+			position: relative;
+            padding: rem(4) 0;
+            color: $black;
+            @include transition(all,.3s, ease-in);
+
+            &:hover {
+                background-color: $primary;;
+            }
+		}
+	}
+
+    @include rwd-max(769px) {
+        width: auto;
+
+        .fakeSelect__toggler {
+            
+            .option {
+                font-size: rem(16);
+            }
+    
+        }
+
+        .fakeSelect__option {
+            position: static;
+            background-color: transparent;
+            border: none;
+            width: auto;
+            box-shadow: none;
+            padding: rem(8) 0 0;
+
+            .option {
+                color: $primary;
+                padding: 0;
+                font-size: rem(14);
+                padding: rem(4) 0;
+
+                &:last-child {
+                    margin-bottom: 0
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
     }
 }
 
