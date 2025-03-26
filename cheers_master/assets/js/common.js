@@ -7,6 +7,7 @@ $(document).ready(function () {
 	$(".js-menuToggler").on('click', function () {
 		$(".js-navbar").toggleClass("is-open");
 		$(this).toggleClass("is-active");
+		$('body').toggleClass('openNav');
 	});
 
 	new WOW().init();
@@ -29,9 +30,10 @@ $(document).ready(function () {
 				// Add hash (#) to URL when done scrolling (default click behavior)
 				window.location.hash = hash;
 			});
-			
+
 			$(".js-navbar").removeClass("is-open");
 			$(".js-menuToggler").removeClass('is-active');
+			$('body').toggleClass('openNav');
 		} // End if
 	});
 
@@ -40,6 +42,7 @@ $(document).ready(function () {
 		e.preventDefault();
 		$(this).toggleClass('active')
 		$('.js-selectOption').slideToggle(200);
+		$('body').toggleClass('openNav')
 	});
 
 });

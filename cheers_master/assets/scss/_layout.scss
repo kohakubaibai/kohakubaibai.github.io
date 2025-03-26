@@ -2,6 +2,12 @@ $path: '../images';
 
 body {
 	background-color: $white;
+
+    &.openNav {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 }
 
 /*--------- navbar -----------*/
@@ -9,9 +15,14 @@ body {
 .l-header {
     position: fixed;
     width: 100%;
+    padding: rem(16) 0;
     z-index: 99;
     background-color: transparent;
     transition: all 0.3s ease;
+
+    @include rwd-max(768px) {
+        padding: rem(8) 0;
+    }
 
 	& > .container-fluid {
 		background-color: transparent;
@@ -19,17 +30,35 @@ body {
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+        padding: 0 rem(40);
+
+        @include rwd-max(768px) {
+            padding: 0 rem(16);
+        }
 	}
 
 	&.is-scrolled {
-		background-color: rgba(0,0,0,.15);
-		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+		background-color: $white;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+
+        .l-header__toggler {
+            span {
+                background-color: #222222;
+            }
+
+            &.is-active {
+                span {
+                    background-color: $white;
+                }
+            }
+        }
 	}
 
 	&__toggler {
 		z-index: 150;
 		width: 30px;
-		height: 40px;
+		height: 30px;
+        padding: 6px 0;
 		transition: all 0.3s ease;
 
 		@include rwd-min(769px) {
@@ -37,24 +66,21 @@ body {
 		}
 
 		span {
-			width: 30px;
-			height: 4px;
+			width: 16px;
+			height: 2px;
 			background-color: $white;
 			display: block;
-			margin: 7px auto;
+			margin: 3px auto;
 			transition: all 0.3s ease;
 		}
 
 		&.is-active {
-			
-			z-index: 150;
 
 			span {
-				width: 30px;
-				height: 4px;
-				background-color: $white;
+				width: 16px;
+				height: 2px;
 				display: block;
-				margin: 8px auto;
+				margin: 6px auto;
 				transition: all 0.3s ease;
 
 				&:nth-child(2) {
@@ -62,11 +88,11 @@ body {
 				}
 
 				&:nth-child(1) {
-					transform: translateY(7px) rotate(45deg);
+					transform: translateY(3px) rotate(45deg);
 				}
 
 				&:nth-child(3) {
-					transform: translateY(-17px) rotate(-45deg);
+					transform: translateY(-13px) rotate(-45deg);
 				}
 			}
 		}
@@ -79,7 +105,7 @@ body {
 			img {
 				height: rem(30);
 				width: auto !important;
-			
+
 				@include rwd-min(1200px) {
 					height: rem(40);
 				}
@@ -90,6 +116,11 @@ body {
 	&__nav {
 		display: flex;
 		flex-direction: row;
+        align-items: center;
+
+        .f-fakeSelect {
+            margin-right: rem(32);
+        }
 
 		@include rwd-max(769px) {
 			position: fixed;
@@ -100,16 +131,20 @@ body {
 			height: 100%;
 			right: -100%;
 			flex-direction: column;
-			padding-top: 6rem;
-			text-align: center;
+            align-items: flex-start;
 			background-color: #343a40;
+            padding: rem(64) rem(38) 0;
 			transition: all 0.3s ease-in-out;
-	
+
 			&.is-open {
 				visibility: visible;
 				right: 0;
 			}
-	
+
+            .f-fakeSelect {
+                margin-bottom: rem(16);
+                margin-right: 0;
+            }
 		}
 	}
 }
@@ -119,24 +154,34 @@ body {
 	width: rem(120);
 
 	.fakeSelect__toggler {
-		padding: 11px 14px;
-		border-radius: 4px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 1.5;
+        color: #040000;
 
 		&:after {
 			content: '';
 			display: block;
-			background-color: $primary;
-			width: rem(12);
-			height: rem(12);
+			width: 0;
+            height: 0;
+            border-left: rem(5.5) solid transparent;
+            border-right: rem(5.5) solid transparent;
+            border-top: rem(6) solid #040000;
+            border-bottom: none;
+            margin-left: rem(8);
 		}
 
 		&.active {
 
 			&:after {
-				background-color: $dark;
+                border-left: rem(5.5) solid transparent;
+                border-right: rem(5.5) solid transparent;
+                border-bottom: rem(6) solid #040000;
+                border-top: none;
 			}
 		}
 	}
@@ -147,39 +192,66 @@ body {
 		top: 100%;
 		left: 0;
 		right: 0;
-		background-color: #FFFFFF;
-		border: 1px solid #E1E2E6;
-		border-radius: 4px;
-		margin-top: 4px;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, .08);
+		background-color: $white;
+		border: rem(1) solid #dee2e6;
+		border-radius: rem(4);
+		margin-top: rem(4);
+		box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, .08);
 		z-index: 1000;
 
 		.option {
-			padding: 12px 40px 12px 16px;
-			font-size: 16px;
-			line-height: 1;
+            display: block;
 			position: relative;
+            padding: rem(6) rem(4);
+            color: $dark;
+            @include transition(all,.3s, ease-in);
 
-			&.active {
-				color: $primary;
-
-				&:after {
-					content: '';
-					display: block;
-					position: absolute;
-					width: 24px;
-					height: 24px;
-					right: 16px;
-					top: 50%;
-					@include translateY(-50%);
-					background-size: 24px;
-					background-repeat: no-repeat;
-					background-position: center;
-					background-color: red
-				}
-			}
+            &:hover {
+                background-color: #f8f9fa;;
+            }
 		}
 	}
+
+    @include rwd-max(769px) {
+        width: auto;
+
+        .fakeSelect__toggler {
+            font-size: rem(18);
+            color: $white;
+
+            &:after {
+                border-top-color: $white;
+            }
+
+            &.active {
+                &:after {
+                    border-bottom-color: $white;
+                }
+            }
+        }
+
+        .fakeSelect__option {
+            position: static;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            margin-top: rem(8);
+
+            .option {
+                color: $white;
+                padding: 0;
+                margin-bottom: rem(8);
+
+                &:last-child {
+                    margin-bottom: 0
+                }
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
 }
 
 .l-navbar {
@@ -188,19 +260,21 @@ body {
 	flex-direction: row;
 
 	.navbarItem {
-		padding: 0 0.5rem;
-		color: inherit;
-		font-size: 0.85rem;
-		color: $white;
-		font-weight: 700;
-		text-align: center;
-		padding: 0 1rem;
+        margin-right: rem(32);
+
+        &:last-child {
+            margin-right: 0;
+        }
 
 		a {
-			color: inherit;
+            font-size: rem(20);
+            font-weight: 500;
+            color: #040000;
+            line-height: 1.5;
 			transition: all 0.3s ease;
 			width: 100%;
 			display: block;
+            text-align: left;
 
 			&:hover {
 				color: $primary;
@@ -216,15 +290,22 @@ body {
 	}
 
 	@include rwd-max(769px) {
+        width: 100%;
 		flex-direction: column;
+        justify-content: flex-start;
 
 		.navbarItem {
-			color: $white;
-			font-size: 1.3rem;
-			padding: 0.5rem;
+            width: 100%;
+            margin-bottom: rem(16);
+            margin-right: 0;
+
+            a {
+                font-size: rem(18);
+                color: $white;
+            }
 		}
 	}
-	
+
 }
 
 .gotop {
