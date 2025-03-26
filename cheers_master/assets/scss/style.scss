@@ -718,9 +718,9 @@ h6 {
 
 	&--movie {
 		background-color: #A8A098;
-		background-image: url('#{$path}/dot-movie.png');
 		background-repeat: no-repeat;
 		background-position: center;
+		background-image: url('#{$path}/dot-movie_mb.png');
 
 		&:before {
 			content: 'Video';
@@ -736,6 +736,8 @@ h6 {
 		}
 
 		@include rwd-min(1200px) {
+			background-image: url('#{$path}/dot-movie.png');
+
 			.container {
 				max-width: 1200px;
 				padding: 0;
