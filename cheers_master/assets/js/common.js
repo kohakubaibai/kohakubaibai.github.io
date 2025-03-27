@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 			$(".js-navbar").removeClass("is-open");
 			$(".js-menuToggler").removeClass('is-active');
-			$('body').toggleClass('openNav');
+			$('body').removeClass('openNav');
 		} // End if
 	});
 
@@ -42,7 +42,13 @@ $(document).ready(function () {
 		e.preventDefault();
 		$(this).toggleClass('active')
 		$('.js-selectOption').slideToggle(200);
-		$('body').toggleClass('openNav')
+	});
+
+	$(document).on('click', function(e){
+		if (!$(e.target).closest('.js-selectToggler').length) {
+			$('.js-selectToggler').removeClass('active');
+			$('.js-selectOption').slideUp(200);
+		}
 	});
 
 	const swiper = new Swiper('.swiper', {

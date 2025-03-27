@@ -151,7 +151,6 @@ body {
 
 .f-fakeSelect {
 	position: relative;
-	width: rem(120);
 
 	.fakeSelect__toggler {
 		display: flex;
@@ -176,38 +175,51 @@ body {
 		}
 
 		&.active {
+			color: $secondary;
 
 			&:after {
                 border-left: rem(5.5) solid transparent;
                 border-right: rem(5.5) solid transparent;
-                border-bottom: rem(6) solid #040000;
+                border-bottom: rem(6) solid $secondary;
                 border-top: none;
 			}
 		}
+
+		&:hover {
+			color: $secondary;
+		}
+
+		@include rwd-max(768px) {
+			&:hover {
+				color: $white;
+			}
+		}
+		
 	}
 
 	.fakeSelect__option {
 		display: none;
 		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background-color: $white;
-		border: rem(1) solid #dee2e6;
-		border-radius: rem(4);
-		margin-top: rem(4);
-		box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, .08);
+		top: calc(100% + rem(21));
+		left: 50%;
+		background-color: $secondary;
 		z-index: 1000;
+		width: rem(137);
+		@include translateX(-50%);
 
 		.option {
             display: block;
 			position: relative;
-            padding: rem(6) rem(4);
-            color: $dark;
+            padding: rem(16);
+            color: $white;
+			font-weight: 700;
+			font-size: rem(24);
+			line-height: 1.1;
+			text-align: center;
             @include transition(all,.3s, ease-in);
 
             &:hover {
-                background-color: #f8f9fa;;
+                background-color: $secondary-dark;
             }
 		}
 	}
@@ -224,6 +236,8 @@ body {
             }
 
             &.active {
+				color: $white;
+
                 &:after {
                     border-bottom-color: $white;
                 }
@@ -232,14 +246,17 @@ body {
 
         .fakeSelect__option {
             position: static;
+			width: auto;
             background-color: transparent;
-            border: none;
-            box-shadow: none;
             margin-top: rem(8);
+			@include translateX(0);
 
             .option {
                 color: $white;
+				text-align: left;
                 padding: 0;
+				font-size: rem(16);
+				font-weight: 400;
                 margin-bottom: rem(8);
 
                 &:last-child {
@@ -277,7 +294,7 @@ body {
             text-align: left;
 
 			&:hover {
-				color: $primary;
+				color: $secondary;
 				text-decoration: none;
 			}
 		}
