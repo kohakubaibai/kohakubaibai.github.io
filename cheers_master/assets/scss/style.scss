@@ -657,6 +657,18 @@ h6 {
 			}
 		}
 
+		.section__content {
+			.subTitle {
+				margin-bottom: rem(24);
+			}
+		}
+
+		.subTitle {
+			color: $dark;
+			font-size: rem(26);
+			font-weight: 600;
+		}
+
 		.articleList {
 			@include list-reset;
 
@@ -688,7 +700,6 @@ h6 {
 
 			&__media {
 				flex: 0 0 rem(323);
-				margin-top: rem(12);
 
 				.cover {
 					position: relative;
@@ -707,7 +718,6 @@ h6 {
 				}
 
 				@include rwd-max(768px) {
-					margin-top: 0;
 					flex: 0 0 100%;
 				}
 
@@ -727,10 +737,11 @@ h6 {
 				padding-left: rem(32);
 
 				.title {
-					color: $dark;
-					font-size: rem(24);
+					display: block;
+					color: $primary;
+					font-size: rem(26);
 					font-weight: 700;
-					line-height: 1.7;
+					line-height: rem(36);
 					@include transition(all,.3s,ease-in);
 
 					@include rwd-max(768px) {
@@ -779,7 +790,7 @@ h6 {
 	&--movie {
 		background-color: #A8A098;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: center top;
 		background-image: url('#{$path}/dot-movie_mb.png');
 
 		&:before {
