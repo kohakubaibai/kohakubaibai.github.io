@@ -28,7 +28,6 @@ $(function () {
 			$(".l-navbar__menu ").removeClass("open");
 			$(".l-navbar__toggler--activate").attr("class", "l-navbar__toggler");
 		} // End if
-
 	});
 
 	// Toggle dropdown
@@ -36,6 +35,13 @@ $(function () {
 		e.preventDefault();
 		$(this).toggleClass('active');
 		$('.js-selectOption').slideToggle(200);
+	});
+
+	$(document).on('click', function(e){
+		if (!$(e.target).closest('.js-selectToggler').length) {
+			$('.js-selectToggler').removeClass('active');
+			$('.js-selectOption').slideUp(200);
+		}
 	});
 });
 
