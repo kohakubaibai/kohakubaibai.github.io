@@ -342,6 +342,8 @@ body.openNav {
   font-size: 1.25rem;
   line-height: 1.5;
   color: #040000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .f-fakeSelect .fakeSelect__toggler:after {
   content: "";
@@ -353,6 +355,8 @@ body.openNav {
   border-top: 0.375rem solid #040000;
   border-bottom: none;
   margin-left: 0.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .f-fakeSelect .fakeSelect__toggler.active {
   color: #0094FF;
@@ -366,9 +370,15 @@ body.openNav {
 .f-fakeSelect .fakeSelect__toggler:hover {
   color: #0094FF;
 }
+.f-fakeSelect .fakeSelect__toggler:hover:after {
+  border-top-color: #0094FF;
+}
 @media (max-width: 768px) {
   .f-fakeSelect .fakeSelect__toggler:hover {
     color: #fff;
+  }
+  .f-fakeSelect .fakeSelect__toggler:hover:after {
+    border-top-color: #fff;
   }
 }
 .f-fakeSelect .fakeSelect__option {
