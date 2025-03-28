@@ -1563,6 +1563,12 @@ h6 {
 .section--movie .movieList--shorts .swiper {
   width: calc(100% - 6.5rem);
   margin: 0 auto;
+  z-index: 0;
+}
+@media (max-width: 767px) {
+  .section--movie .movieList--shorts .swiper {
+    width: 100%;
+  }
 }
 .section--movie .movieList--shorts .swiper-button-prev,
 .section--movie .movieList--shorts .swiper-button-next {
@@ -1571,6 +1577,7 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: 10;
 }
 .section--movie .movieList--shorts .swiper-button-prev:after,
 .section--movie .movieList--shorts .swiper-button-next:after {
@@ -1839,4 +1846,8 @@ h6 {
   font-size: 1.0625rem;
   line-height: 1.7;
   color: #222222;
+}
+
+.html5-video-player .video-click-tracking, .html5-video-player .video-stream {
+  z-index: 0 !important;
 }

@@ -895,6 +895,11 @@ h6 {
 				.swiper {
 					width: calc(100% - rem(104));
 					margin: 0 auto;
+					z-index: 0;
+
+					@include rwd-max(767px) {
+						width: 100%;
+					}
 				}
 
 				.swiper-button-prev,
@@ -904,6 +909,7 @@ h6 {
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: center;
+					z-index: 10;
 
 					&:after {
 						display: none;
@@ -919,6 +925,7 @@ h6 {
 					right: 0;
 					background-image: url('#{$path}/arrow-slide_next.svg');
 				}
+
 			}
 		}
 
@@ -1211,4 +1218,8 @@ h6 {
 			}
 		}
 	}
+}
+
+.html5-video-player .video-click-tracking, .html5-video-player .video-stream {
+	z-index: 0 !important;
 }
