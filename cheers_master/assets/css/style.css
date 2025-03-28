@@ -568,7 +568,7 @@ body.openNav {
 .btn--primary .btn__text {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #FF8A00;
+  color: #0094FF;
 }
 @media (min-width: 1200px) {
   .btn--primary:hover {
@@ -647,7 +647,7 @@ body.openNav {
   color: #FFFFFF;
   font-size: 1.125rem;
   font-weight: 700;
-  line-height: 1.44444;
+  line-height: 1.5;
 }
 @media (min-width: 1200px) {
   .btn--video:hover .btn__text {
@@ -680,6 +680,7 @@ body.openNav {
 .btn--subscribe .btn__text {
   font-size: 1.25rem;
   line-height: 1.5;
+  font-weight: 700;
   color: #fff;
 }
 @media (min-width: 1200px) {
@@ -988,6 +989,7 @@ h6 {
 }
 .section--intro .paragraph {
   text-align: center;
+  font-size: 1.25rem;
   line-height: 1.9;
   font-weight: bold;
   color: #fff;
@@ -1030,7 +1032,7 @@ h6 {
   background-color: #2c2c2c;
 }
 .section--intro .record > li > div {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #fff;
   font-weight: 400;
@@ -1432,7 +1434,7 @@ h6 {
   margin-top: 1rem;
 }
 .section--article .articleItem__text .intro p {
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: 400;
   line-height: 1.7;
   margin-bottom: 0.625rem;
@@ -1753,7 +1755,7 @@ h6 {
 }
 .section--promo .promoItem__text .title {
   color: #222222;
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;

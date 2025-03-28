@@ -24,7 +24,7 @@
 		.btn__text {
 			font-size: rem(20);
 			line-height: 1.5;
-			color: $primary;
+			color: $secondary;
 		}
 
 		@include rwd-min(1200px) {
@@ -104,7 +104,7 @@
 			color: #FFFFFF;
 			font-size: rem(18);
 			font-weight: 700;
-			line-height: 1.44444;
+			line-height: 1.5;
 		}
 
 		@include rwd-min(1200px) {
@@ -135,6 +135,7 @@
 		.btn__text {
 			font-size: rem(20);
 			line-height: 1.5;
+			font-weight: 700;
 			color: $white;
 		}
 
