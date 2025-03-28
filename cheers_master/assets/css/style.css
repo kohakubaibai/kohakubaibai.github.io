@@ -241,7 +241,7 @@ body.openNav {
 .l-header__toggler span {
   width: 16px;
   height: 2px;
-  background-color: #fff;
+  background-color: #222222;
   display: block;
   margin: 3px auto;
   -webkit-transition: all 0.3s ease;
@@ -254,6 +254,7 @@ body.openNav {
   margin: 6px auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: #fff;
 }
 .l-header__toggler.is-active span:nth-child(2) {
   opacity: 0;
@@ -309,7 +310,7 @@ body.openNav {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    background-color: #343a40;
+    background-color: #0094FF;
     padding: 4rem 2.375rem 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
