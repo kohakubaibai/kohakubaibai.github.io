@@ -1760,6 +1760,8 @@ h6 {
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .section--promo .promoItem__text .publish {
   margin-top: 0.25rem;
