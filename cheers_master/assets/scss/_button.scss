@@ -29,7 +29,7 @@
 
 		@include rwd-min(1200px) {
 			&:hover {
-				background-color: $primary;
+				background-color: $secondary;
 
 				.btn__text {
 					color: $white;
@@ -69,11 +69,11 @@
 			&:hover {
 
 				.btn__text {
-					color: $primary;
+					color: $secondary;
 				}
 
 				&:after {
-					background-color: $primary;
+					background-color: $secondary;
 				}
 			}
 		}
@@ -83,6 +83,7 @@
 		display: inline-flex;
 		align-items: center;
 		padding: 0;
+		background-color: #A8A098;
 
 		&:after {
 			content: '';
@@ -110,11 +111,11 @@
 			&:hover {
 
 				.btn__text {
-					color: $primary;
+					color: #FFC267;
 				}
 
 				&:after {
-					background-color: $primary;
+					background-color: #FFC267;
 				}
 			}
 		}
@@ -139,7 +140,7 @@
 
 		@include rwd-min(1200px) {
 			&:hover {
-				background-color: $primary;
+				background-color: $secondary;
 
 				.action__text {
 					color: $white;

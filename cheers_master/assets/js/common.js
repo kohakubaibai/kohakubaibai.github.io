@@ -54,11 +54,7 @@ $(document).ready(function () {
 	const swiper = new Swiper('.swiper', {
 		// Optional parameters
 		loop: true,
-
-		// If we need pagination
-		pagination: {
-		  el: '.swiper-pagination',
-		},
+		slidesPerView: 4,
 
 		// Navigation arrows
 		navigation: {
@@ -66,9 +62,52 @@ $(document).ready(function () {
 		  prevEl: '.swiper-button-prev',
 		},
 
-		// And if we need scrollbar
-		scrollbar: {
-		  el: '.swiper-scrollbar',
-		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 16
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 32
+			},
+		  },
+	});
+
+	var $slides = $('.swiper-slide');
+	var $iframes = $slides.find('iframe');
+	var currentIndex = 0;
+
+
+	// Function to stop all videos
+	function stopAllVideos() {
+		$iframes.each(function() {
+			// Add stop parameter to video URL
+			var stopUrl = $(this).attr('src').split('?')[0] + '?enablejsapi=1&autoplay=0';
+			$(this).attr('src', stopUrl);
+		});
+	}
+
+	// Click event to play/stop videos
+	$slides.on('click', function() {
+		var $clickedSlide = $(this);
+		var $clickedIframe = $clickedSlide.find('iframe');
+
+		// Stop all videos first
+		stopAllVideos();
+
+		// Add autoplay to clicked video
+		var playUrl = $clickedIframe.attr('src').split('?')[0] + '?enablejsapi=1&autoplay=1';
+		$clickedIframe.attr('src', playUrl);
+
+		// Update current index
+		currentIndex = $slides.index($clickedSlide);
+
+		// Update active slide
+		$slides.removeClass('active');
+		$clickedSlide.addClass('active');
 	});
 });
