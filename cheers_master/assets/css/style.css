@@ -389,7 +389,7 @@ body.openNav {
   left: 50%;
   background-color: #0094FF;
   z-index: 1000;
-  width: 8.5625rem;
+  width: 17.5rem;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -407,6 +407,11 @@ body.openNav {
 }
 .f-fakeSelect .fakeSelect__option .option:hover {
   background-color: #186C98;
+}
+.f-fakeSelect .fakeSelect__option .option.is-disabled {
+  pointer-events: none;
+  background-color: #C3C3C3;
+  color: #A9A9A9;
 }
 @media (max-width: 769px) {
   .f-fakeSelect {

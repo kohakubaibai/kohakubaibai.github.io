@@ -216,7 +216,7 @@ body {
 		left: 50%;
 		background-color: $secondary;
 		z-index: 1000;
-		width: rem(137);
+		width: rem(280);
 		@include translateX(-50%);
 
 		.option {
@@ -232,6 +232,12 @@ body {
 
             &:hover {
                 background-color: $secondary-dark;
+            }
+
+            &.is-disabled {
+                pointer-events: none;
+                background-color: #C3C3C3;
+                color: #A9A9A9;
             }
 		}
 	}
