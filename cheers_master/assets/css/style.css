@@ -179,6 +179,22 @@ body.openNav {
   overflow: hidden;
 }
 
+.panorama {
+  position: relative;
+}
+.panorama:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.panorama .shop360-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /*--------- navbar -----------*/
 .l-header {
   position: fixed;
