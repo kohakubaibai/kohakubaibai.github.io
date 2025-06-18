@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap');
+@import 'variables';
+@import 'mixin';
+@import 'normalize';
+@import 'layout';
+@import 'button';
+
+$path: '../images';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+.h1 {
+	font-size: 62px;
+	line-height: 1.5;
+}
+
+.h2 {
+	font-size: 30px;
+	line-height: 1.5;
+}
+
+.h3 {
+	font-size: 22px;
+	line-height: 1.6;
+}
+
+.h4 {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.h5 {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.page {
+	scroll-behavior: smooth;
+	max-width: 1920px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.openMenu {
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main {
+	@include rwd-min(769px) {
+		padding-top: 88px;
+	}
+}
+
+body {
+	&.lang--en {
+		.display--en {
+			display: block;
+		}
+
+		.display--zh {
+			display: none;
+		}
+	}
+	&.lang--zh {
+		.display--en {
+			display: none;
+		}
+
+		.display--zh {
+			display: block;
+		}
+	}
+}
+
+.opening {
+	padding: 0;
+	position:relative;
+	background-color: #003A94;
+	background-repeat: no-repeat;
+	background-image: url('../images/opening/layer_1-mb.png');
+	background-size: cover;
+
+	@include rwd-min(769px) {
+		background-image: url('../images/opening/layer_1-pc.svg');
+
+	}
+
+    .hero {
+		display: flex;
+		flex-direction: column-reverse;
+		padding-top: rem(40);
+
+		@include rwd-min(769px) {
+			padding-top: 60px;
+		}
+
+		&__wrap {
+			&--layer2 {
+				padding: 0 rem(20);
+
+				@include rwd-min(769px) {
+					padding: 0 50px;
+				}
+			}
+		}
+
+        &__layer {
+
+            &--1 {
+				justify-self: center;
+				margin-top: 80px;
+				margin-left: auto;
+				margin-right: auto;
+
+				img {
+					width: 100%;
+				}
+
+				@include rwd-min(769px) {
+					width: 514px;
+				}
+            }
+
+            &--2 {
+				width: rem(254);
+
+				img {
+					width: 100%;
+				}
+
+				@include rwd-min(769px) {
+					width: 558px;
+				}
+            }
+        }
+    }
+
+	.intro {
+		padding-bottom: 216px;
+
+		@include rwd-min(769px) {
+			margin-top: 150px;
+		}
+
+		.intro__text {
+			color: $white;
+			font-size: rem(18);
+			letter-spacing: 1.25px;
+			margin-bottom: 20px;
+			text-align: justify;
+			margin-left: auto;
+			margin-right: auto;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include rwd-min(769px) {
+				max-width: 769px;
+			}
+		}
+
+
+	}
+}
