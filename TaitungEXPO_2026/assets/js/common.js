@@ -16,11 +16,12 @@ class LanguageSwitcher {
 			await this.loadLanguage(this.currentLang);
 			this.updateNavigation();
 			this.updateIntro();
+			this.updateAbout();
 			this.updateButtonText();
 
 			document.body.classList.add('lang--zh');
 		} catch (error) {
-			this.showError('初始化失敗: ' + error.message);
+			console.log('初始化失敗: ' + error.message);
 		}
 	}
 
@@ -69,8 +70,9 @@ class LanguageSwitcher {
 				this.updateButtonText();
 				this.updateNavigation();
 				this.updateIntro();
+				this.updateAbout();
+
 				this.updateHtmlLang();
-				this.hideError();
 
 				// 移除載入效果
 				document.querySelector('.l-nav').classList.remove('loading');
@@ -78,7 +80,7 @@ class LanguageSwitcher {
 				this.isLoading = false;
 			}, 150);
 		} catch (error) {
-			this.showError(error.message);
+			console.loe(error.message);
 			document.querySelector('.l-nav').classList.remove('loading');
 			this.setButtonDisabled(false);
 			this.isLoading = false;
@@ -129,7 +131,7 @@ class LanguageSwitcher {
 
 	updateIntro() {
 		const currentData = this.languageData[this.currentLang];
-		if (!currentData) return;
+		if (!currentData || !currentData.intro) return;
 
 		const introData = currentData.intro;
 
@@ -141,6 +143,43 @@ class LanguageSwitcher {
 				p.textContent = introData[jsonKey];
 			}
 		});
+	}
+
+	updateAbout() {
+		const currentData = this.languageData[this.currentLang];
+		if (!currentData || !currentData.about) return;
+
+		const aboutData = currentData.about;
+
+		// 更新第一個about區塊
+		if (aboutData.aboutGroup1) {
+			const group1 = aboutData.aboutGroup1;
+
+			// 更新標題
+			const title1 = document.querySelector('#aboutGroup1 .sectionGroup__title');
+			if (title1) title1.textContent = group1.title;
+
+			// 更新段落
+			group1.texts.forEach((text, index) => {
+				const paragraph = document.querySelector(`#aboutGroup1 .text-${index + 1}`);
+				if (paragraph) paragraph.textContent = text;
+			});
+		}
+
+		// 更新第二個about區塊
+		if (aboutData.aboutGroup2) {
+			const group2 = aboutData.aboutGroup2;
+
+			// 更新標題
+			const title2 = document.querySelector('#aboutGroup2 .sectionGroup__title');
+			if (title2) title2.innerHTML = group2.title;
+
+			// 更新段落
+			group2.texts.forEach((text, index) => {
+				const paragraph = document.querySelector(`#aboutGroup2 .text-${index + 1}`);
+				if (paragraph) paragraph.textContent = text;
+			});
+		}
 	}
 
 	updateHtmlLang() {
@@ -283,10 +322,10 @@ class EnhancedScrollHeader {
             }
         });
 
-        // 當螢幕尺寸改變（如RWD切換）時更新高度門檻
+        // 當螢幕尺寸改變（如RWD切換）時更新高度
         window.addEventListener('resize', () => this.updateThresholds());
 
-        this.handleScroll(); // 初次檢查
+        this.handleScroll(); // 初始化檢查
 	}
 
 	handleScroll() {
@@ -330,10 +369,15 @@ $(document).ready(function () {
 		$nav.toggleClass("header-sticky", $(this).scrollTop() > (($nav.height())*2));
 	});
 
-	$(".js-menuToggler").on('click', function () {
-		$(".js-navbar").toggleClass("is-open");
-		$(this).toggleClass("is-active");
-		$('body').toggleClass('openNav');
+	$(".js-navOpen").on('click', function () {
+		console.log(123)
+		$(".js-navigation").addClass("is-open");
+		$('body').addClass('openNav');
+	});
+
+	$(".js-navClose").on('click', function () {
+		$(".js-navigation").removeClass("is-open");
+		$('body').removeClass('openNav');
 	});
 
 	new WOW().init();

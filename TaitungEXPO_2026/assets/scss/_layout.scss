@@ -11,8 +11,10 @@ body {
 }
 
 .container {
+	padding: 0 rem(30);
+
 	@include rwd-min(769px) {
-		padding: 0 50px;
+		padding: 0 rem(50);
 	}
 }
 
@@ -28,6 +30,54 @@ body {
         transform: translateZ(0) scaleY(1);
         opacity: 1
     }
+}
+
+.menuSwitcher {
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-radius: 50%;
+	border-width: rem(2);
+	border-style: solid;
+	width: rem(50);
+	height: rem(50);
+	padding: rem(16);
+
+	span {
+		display: block;
+		width: rem(18);
+		height: rem(2);
+	}
+
+	&.is-closed {
+		border-color: $dark;
+
+		span {
+			margin-bottom: rem(4);
+			background-color: $dark;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&.is-opened {
+		border-color: $white;
+
+		span {
+			background-color: $white;
+
+			&:nth-child(1) {
+				transform: translateY(6px) rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				transform: translateY(-1px) rotate(-45deg);
+			}
+		}
+	}
 }
 
 .l-header {
@@ -59,45 +109,21 @@ body {
 		justify-content: space-between;
 	}
 
-    @include rwd-max(768px) {
-        padding: rem(8) 0;
-    }
-
-	& > .container-fluid {
+	.container-fluid {
 		background-color: transparent;
 		display: flex;
-		flex-direction: row;
+		flex-direction: row-reverse;
 		justify-content: space-between;
 		width: 100%;
-        padding: 0 rem(40);
+		padding: 0 rem(16);
 
-        @include rwd-max(768px) {
-            padding: 0 rem(16);
+        @include rwd-min(769px) {
+			padding: 0 rem(40);
+			flex-direction: row;
         }
 	}
 
 	&__toggler {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		width: 50px;
-		height: 50px;
-        padding: 18px 16px;
-		border-radius: 50%;
-		border: 2px solid #222;
-
-		span {
-			display: block;
-			width: 18px;
-			height: 2px;
-			background-color: #222222;
-			display: block;
-			margin-bottom: 4px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
 	}
 
 	&__logo {
@@ -109,7 +135,7 @@ body {
 			}
 
 			@include rwd-min(769px) {
-				width: 181px;
+				width: rem(180);
 			}
 		}
 	}
@@ -117,59 +143,110 @@ body {
 	&__lang {
 		.lang-btn {
 			cursor: pointer;
-			border: 2px solid #717071;
+			border: rem(2) solid #717071;
 			color: #717071;
-			font-size: 16px;
-			padding: 8px 29px;
-			border-radius: 30px;
+			font-size: rem(14);
+			text-align: center;
 			background-color: transparent;
-			line-height: 1;
-			letter-spacing: 2px;
-			@include f-poppins;
+			border-radius: rem(30);
+			width: rem(50);
+			height: rem(30);
+
+			@include rwd-min(769px) {
+				font-size: rem(16);
+				width: rem(84);
+				height: rem(36);
+			}
 		}
 	}
 }
 
 .l-nav {
-	display: none;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	@include transition(all, .3s, ease-in-out);
+
+	.overlay {
+		cursor: pointer;
+		background-color: rgba(10, 12, 0, .6);
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		@include transition(all, .3s, ease-in-out);
+	}
+
+	.navWrap {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		text-align: right;
+		position: absolute;
+		padding: rem(20);
+		background-color: #0A0C00;
+		top: 0;
+		left: -100%;
+		width: 77%;
+		height: 100%;
+		@include transition(all, .3s, ease-in-out);
+
+		@include rwd-min(769px) {
+			width: 310px;
+			padding: rem(20) rem(20) rem(20) rem(34);
+		}
+	}
+
+	.navbar {
+		align-self: flex-start;
+		margin-top: rem(20);
+	}
+
+	&.is-open {
+		visibility: visible;
+
+		.overlay {
+			opacity: 1;
+		}
+
+		.navWrap {
+			left: 0;
+		}
+	}
 }
 
-.l-navbar {
-	position: fixed;
-	top: 88px;
-	z-index: 1000;
+.navbar {
 	@include list-reset;
 	display: flex;
-	flex-direction: row;
-	background-color: black;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
 
 	.navbarItem {
-        margin-right: rem(32);
+		padding: rem(20) 0;
 
         &:last-child {
-            margin-right: 0;
+            margin-bottom: 0;
         }
 
-		a {
-            font-size: rem(20);
-			height: rem(35);
-            font-weight: 500;
-            color: #ffffff;
-            line-height: 1.5;
-			transition: all 0.3s ease;
-			width: 100%;
+		.navbarText {
 			display: block;
-            text-align: left;
+            font-size: rem(16);
+			width: 100%;
 			overflow: hidden;
 
 			span {
+				color: #ffffff;
 				display: block;
-				height: 100%;
 				position: relative;
 				top: 0;
 				transition: .3s;
-
-
+				font-weight: 500;
 			}
 
 			&:hover {
@@ -177,11 +254,13 @@ body {
 					top: -100%;
 				}
 			}
-		}
 
-		&.is-active {
-			a {
-				color: $primary;
+			@include rwd-not-hover {
+				&:hover {
+					span {
+						top: 0;
+					}
+				}
 			}
 		}
 	}

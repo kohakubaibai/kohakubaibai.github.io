@@ -1,3 +1,7 @@
+html {
+	font-size: 16px;
+}
+
 body,
 div,
 dl,
@@ -121,14 +125,12 @@ select {
 
 html {
 	height: 100%;
-	max-height: 50000em;
 }
 
 body {
 	height: 100%;
 	font-size: 100%;
 	color: #17181A;
-    font-family: "Noto Sans TC", serif; /* 1 */
 	line-height: 1.44;
 	font-weight: 300;
 	-ms-text-size-adjust: 100%; /* 2 */

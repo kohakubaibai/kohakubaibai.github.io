@@ -6,6 +6,10 @@
 	font-family: "Poppins", sans-serif;
 }
 
+@mixin f-noto {
+    font-family: "Noto Sans TC", serif;
+}
+
 @mixin box-sizing($type) {
     -moz-box-sizing: $type;
     -webkit-box-sizing: $type;
@@ -232,6 +236,12 @@
 @mixin rwd-tablet-pro-portrait {
 
     @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+    }
+}
+
+@mixin rwd-not-hover {
+    @media not screen and (hover: hover) {
         @content;
     }
 }

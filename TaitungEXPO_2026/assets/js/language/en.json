@@ -14,5 +14,20 @@
         "introText1": "In Taitung, \"slow\" is not just a pace, but a choice—a choice to coexist with nature and embrace a life philosophy in tune with the land.",
         "introText2": "2026 Taitung Expo takes \"slow economy\" as its curatorial core and \"Taitung blue\" as its visual language, blending Austronesian cultural spirit with a vision for sustainable development to chart future mountain paths and sea routes from Taitung to the world.",
         "introText3": "We invite everyone who steps into Taitung to slow down, savor the tranquility and abundance of this land, and reconnect with a simpler rhythm of life."
+    },
+    "about": {
+        "aboutGroup1": {
+            "title": "Taitung: A Field for the Practice of Ideal Life",
+            "texts": [
+                "Where mountains meet the sea, Taitung is home to abundant natural resources and a diverse cultural landscape. Its pristine terrain and profound heritage converge to nurture distinct local values.",
+                "The 2026 Taitung Expo will bring together the strength of government, local industry, and society to collaboratively shape inclusive and sustainable local development plans. Through year-round curatorial actions, we will present Taitung's cultural foundations and potential in rich detail, inviting visitors to personally experience the sincerity, kindness, and beauty of this land. In doing so, we aim to create a globally recognizable Taitung brand—one that conveys the spirit and values of Taitung, allowing  them to be visible, understood, and cherished worldwide."
+            ]
+        },
+        "aboutGroup2": {
+            "title": "Taitung Expo:  Change in Motion",
+            "texts": [
+                "The Taitung Expo is more than an ongoing action and practice, it symbolizes a continuously growing, gradually transforming process—each dialogue, each performance, each project witnesses and catalyzes Taitung's evolving future. We invite every partner passionate about Taitung to join as co-creators in this journey of becoming. With the spirit of the “present progressive”—dynamic, ongoing change bringing us forward on our journey, we lay the foundations for a work-in-progress, plant deep-rooted sustainable development ideals, and push Taitung’s energy out into the world."
+            ]
+        }
     }
 }
