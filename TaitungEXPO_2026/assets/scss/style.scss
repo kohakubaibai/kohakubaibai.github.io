@@ -108,8 +108,10 @@ body {
 		}
 
 		.f-section-title {
+			@include f-unbounded;
 			font-size: rem(28);
 			line-height: 1.4;
+			font-weight: 700;
 		}
 
 		.f-section-h4 {
@@ -125,6 +127,7 @@ body {
 		.f-section-p {
 			font-size: rem(16);
 			line-height: 1.5;
+			font-weight: 300;
 		}
 
 		.f-section-h5 {
@@ -181,6 +184,7 @@ body {
 		.f-section-title {
 			font-size: rem(25);
 			line-height: 1.5;
+			font-weight: 700;
 
 			@include rwd-min(769px) {
 				font-size: rem(30);
@@ -199,6 +203,7 @@ body {
 		.f-section-p {
 			font-size: rem(17);
 			line-height: 1.75;
+			font-weight: 300;
 
 			@include rwd-min(769px) {
 				font-size: rem(18);
@@ -331,23 +336,74 @@ body {
 	position: relative;
 	z-index: 5;
 	background-color: #F4E342;
+	padding-bottom: rem(100);
+	padding-top: rem(54);
 
-	&:before {
-		content: '';
+	@include rwd-min(769px) {
+		padding-top: rem(66);
+	}
+
+	.deco-curve {
 		position: absolute;
-		top: rem(-46);
-		display: block;
 		width: 100%;
-		height: rem(46);
-		background-image: url('../images/deco_top-mb.svg');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
+		top: rem(-46);
+		height: rem(129);
+		overflow: hidden;
+		z-index: 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			display: block;
+			width: 108vw;
+			height: rem(129);
+			border-radius: 50%;
+			background-color: #F4E342;
+			@include translateX(-50%);
+		}
 
 		@include rwd-min(769px) {
 			top: rem(-94);
-			height: rem(94);
-			background-image: url('../images/deco_top-pc.svg');
+			height: rem(267);
+
+			&:before {
+				width: 110vw;
+				height: rem(267);
+			}
+		}
+	}
+
+	.container {
+		position: relative;
+		z-index: 5;
+	}
+
+	.sectionGroup {
+		color: #4D4D4D;
+		margin-bottom: rem(100);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__title {
+			text-align: center;
+			margin-bottom: rem(40);
+		}
+
+		&__content {
+			max-width: rem(780);
+			margin: 0 auto;
+
+			p {
+				margin-bottom: rem(30);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }
