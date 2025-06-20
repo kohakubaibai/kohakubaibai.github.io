@@ -185,7 +185,6 @@ body {
 		flex-direction: column;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		text-align: right;
 		position: absolute;
 		padding: rem(20);
 		background-color: #0A0C00;
@@ -300,17 +299,55 @@ body {
 //footer
 .l-footer {
 	position: relative;
-	background: $dark;
+	background: #001D4D;
+	padding: rem(80) 0 rem(30);
 	color: $white;
-	padding: rem(32) 0;
+	font-size: rem(14);
+	font-weight: 300;
+	text-align: center;
 
-	p {
-		text-align: center;
-		font-size: rem(12);
-		line-height: 1.8;
+	.logo {
+		a {
+			margin-right: rem(30);
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.department {
+		@include f-noto;
+		font-size: rem(16);
+		line-height: 1.5;
+		font-weight: 500;
+		margin-top: rem(30);
+		margin-bottom: rem(12);
+	}
+
+	.info {
+		@include list-reset;
+		margin-bottom: rem(20);
 
 		a {
 			color: $white;
 		}
+	}
+
+	.sectors {
+		@include list-reset;
+		margin-bottom: rem(30);
+
+		a {
+			color: $white;
+		}
+	}
+
+	.copyright {
+		@include f-noto;
+		font-size: rem(14);
+		line-height: 1.5;
+		font-weight: 300;
+		margin-top: rem(30);
 	}
 }

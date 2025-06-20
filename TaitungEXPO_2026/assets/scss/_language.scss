@@ -1,0 +1,156 @@
+body {
+	&.lang--en {
+		@include f-poppins;
+
+		.display--en {
+			display: block;
+		}
+
+		.display--zh {
+			display: none;
+		}
+
+		.l-header {
+			&__lang {
+				.lang-btn {
+					@include f-noto;
+				}
+			}
+		}
+
+		.navbar {
+			.navbarItem {
+				.navbarText {
+					height: rem(24);
+
+					span {
+						line-height: rem(24);
+					}
+				}
+			}
+		}
+
+        .l-footer {
+	        line-height: 1.35;
+        }
+
+		.f-section-title {
+			@include f-unbounded;
+			font-size: rem(28);
+			line-height: 1.4;
+			font-weight: 700;
+		}
+
+		.f-section-h4 {
+			font-size: rem(16);
+			line-height: 1.35;
+
+			@include rwd-min(769px) {
+				font-size: rem(20);
+				line-height: 1.3;
+			}
+		}
+
+		.f-section-p {
+			font-size: rem(16);
+			line-height: 1.5;
+			font-weight: 300;
+            letter-spacing: 1.4px;
+
+            @include rwd-min(769px) {
+                letter-spacing: rem(1.25);
+            }
+		}
+
+		.f-section-h5 {
+			font-size: rem(14);
+			line-height: 1.35;
+            font-weight: 300;
+		}
+	}
+
+	&.lang--zh {
+		@include f-noto;
+
+		.display--en {
+			display: none;
+		}
+
+		.display--zh {
+			display: block;
+		}
+
+		.l-header {
+			&__lang {
+				.lang-btn {
+					@include f-poppins;
+				}
+			}
+		}
+
+		.navbar {
+			.navbarItem {
+				.navbarText {
+					height: rem(19);
+
+					span {
+						line-height: rem(19);
+						letter-spacing: rem(3.427);
+					}
+				}
+			}
+		}
+
+        .l-footer {
+	        line-height: 1.5;
+        }
+
+		.opening {
+			.intro {
+				.intro__text {
+					text-align: justify;
+				}
+			}
+		}
+
+		.f-section-title {
+			font-size: rem(25);
+			line-height: 1.5;
+			font-weight: 700;
+
+			@include rwd-min(769px) {
+				font-size: rem(30);
+                letter-spacing: 2.25px;
+                text-indent: 2.25px;
+			}
+		}
+
+		.f-section-h4 {
+			font-size: rem(18);
+			line-height: 1.75;
+
+			@include rwd-min(769px) {
+				font-size: rem(20);
+			}
+		}
+
+		.f-section-p {
+			font-size: rem(17);
+			line-height: 1.75;
+			font-weight: 300;
+            letter-spacing: 1.4px;
+
+
+			@include rwd-min(769px) {
+				font-size: rem(18);
+                letter-spacing: 1.75px;
+			}
+		}
+
+		.f-section-h5 {
+			font-size: rem(16);
+			line-height: 1.7;
+            font-weight: 300;
+		}
+	}
+}

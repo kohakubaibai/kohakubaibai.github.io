@@ -8,22 +8,15 @@ class LanguageSwitcher {
 	}
 
 	async init() {
-		try {
-			// 綁定按鈕事件 - 單一按鈕切換
-			document.getElementById('langToggleBtn').addEventListener('click', () => this.toggleLanguage());
-
-			// 載入默認語言
-			await this.loadLanguage(this.currentLang);
-			this.updateNavigation();
-			this.updateIntro();
-			this.updateAbout();
-			this.updateButtonText();
-
-			document.body.classList.add('lang--zh');
-		} catch (error) {
-			console.log('初始化失敗: ' + error.message);
-		}
-	}
+        try {
+            document.getElementById('langToggleBtn').addEventListener('click', () => this.toggleLanguage());
+            await this.loadLanguage(this.currentLang);
+            document.body.classList.add('lang--zh');
+            console.log('語言切換系統初始化完成');
+        } catch (error) {
+            console.error('初始化失敗:', error.message);
+        }
+    }
 
 	async loadLanguage(lang) {
 		// 如果已經載入過該語言，直接返回
@@ -32,11 +25,8 @@ class LanguageSwitcher {
 		}
 
 		try {
-			// 實際載入JSON文件
 			const response = await fetch(`./assets/js/language/${lang}.json`);
-			if (!response.ok) {
-				throw new Error(`HTTP error! status: ${response.status}`);
-			}
+
 			const data = await response.json();
 
 			this.languageData[lang] = data;
@@ -46,195 +36,205 @@ class LanguageSwitcher {
 		}
 	}
 
-	// 切換語言（單一按鈕模式）
+	// 切換語言
 	async toggleLanguage() {
-		const nextLang = this.currentLang === 'zh' ? 'en' : 'zh';
-		await this.switchLanguage(nextLang);
-	}
+        const nextLang = this.currentLang === 'zh' ? 'en' : 'zh';
+        await this.switchLanguage(nextLang);
+    }
 
 	async switchLanguage(lang) {
-		if (this.currentLang === lang || this.isLoading) return;
+        if (this.currentLang === lang || this.isLoading) return;
 
-		this.isLoading = true;
-		this.setButtonDisabled(true);
+        this.isLoading = true;
+        this.setButtonDisabled(true);
 
-		// 添加載入效果
-		document.querySelector('.l-nav').classList.add('loading');
+        try {
+            await this.loadLanguage(lang);
 
-		try {
-			// 載入語言文件
-			await this.loadLanguage(lang);
+            setTimeout(() => {
+                this.currentLang = lang;
+                this.updateButtonText();
+                this.updateNavigation();
+                this.updateOpeningSection();
+                this.updateAboutSection();
+                this.updateContactSection();
+                this.updateHtmlLang();
 
-			setTimeout(() => {
-				this.currentLang = lang;
-				this.updateButtonText();
-				this.updateNavigation();
-				this.updateIntro();
-				this.updateAbout();
-
-				this.updateHtmlLang();
-
-				// 移除載入效果
-				document.querySelector('.l-nav').classList.remove('loading');
-				this.setButtonDisabled(false);
-				this.isLoading = false;
-			}, 150);
-		} catch (error) {
-			console.loe(error.message);
-			document.querySelector('.l-nav').classList.remove('loading');
-			this.setButtonDisabled(false);
-			this.isLoading = false;
-		}
-	}
+                this.setButtonDisabled(false);
+                this.isLoading = false;
+            }, 150);
+        } catch (error) {
+            console.error(error.message);
+            this.setButtonDisabled(false);
+            this.isLoading = false;
+        }
+    }
 
 	setButtonDisabled(disabled) {
-		document.getElementById('langToggleBtn').disabled = disabled;
-	}
+        document.getElementById('langToggleBtn').disabled = disabled;
+    }
 
 	updateButtonText() {
-		const btn = document.getElementById('langToggleBtn');
+        const btn = document.getElementById('langToggleBtn');
+
 		// 網站內容是中文時，按鈕顯示 "EN"（點擊後切換到英文）
 		// 網站內容是英文時，按鈕顯示 "中文"（點擊後切換到中文）
-		btn.textContent = this.currentLang === 'zh' ? 'EN' : '中文';
+        btn.textContent = this.currentLang === 'zh' ? 'EN' : '中文';
+    }
 
-		// 動畫效果
-		btn.classList.add('active');
-		setTimeout(() => {
-			btn.classList.remove('active');
-		}, 200);
-	}
-
+	// 更新 nav 文字
 	updateNavigation() {
-		const currentData = this.languageData[this.currentLang];
-		if (!currentData || !currentData.nav) return;
+        const currentData = this.languageData[this.currentLang];
+        if (!currentData || !currentData.nav) return;
 
-		const navData = currentData.nav;
+        const navData = currentData.nav;
 
-		// 更新所有連結文字
-		document.querySelectorAll('.navbarText').forEach(anchor => {
-			const jsonKey = anchor.getAttribute('data-json-key');
-			if (navData[jsonKey]) {
-				// 更新 span 內的文字
-				const spans = anchor.querySelectorAll('span');
-				if (spans) {
-					spans.forEach(span => {
-						span.textContent = navData[jsonKey];
-					});
-				}
-				// 如果沒有 span，直接設置 anchor 的文字
-				else {
-					anchor.textContent = navData[jsonKey];
-				}
-			}
-		});
-	}
+        document.querySelectorAll('.navbarText').forEach(anchor => {
+            const jsonKey = anchor.getAttribute('data-json-key');
+            if (navData[jsonKey]) {
+                const spans = anchor.querySelectorAll('span');
+                if (spans.length > 0) {
+                    spans.forEach(span => {
+                        span.textContent = navData[jsonKey];
+                    });
+                } else {
+                    anchor.textContent = navData[jsonKey];
+                }
+            }
+        });
+    }
 
-	updateIntro() {
-		const currentData = this.languageData[this.currentLang];
-		if (!currentData || !currentData.intro) return;
+	// 更新 intro 文字
+	updateOpeningSection() {
+        const currentData = this.languageData[this.currentLang];
+        if (!currentData || !currentData.opening) return;
 
-		const introData = currentData.intro;
+        const introTexts = currentData.opening.introTexts;
+        if (!introTexts) return;
 
-		document.querySelectorAll('.introText').forEach(intro => {
-			const jsonKey = intro.getAttribute('data-json-key');
-			if (introData[jsonKey]) {
-				// 更新 p 內的文字
-				const p = intro;
-				p.textContent = introData[jsonKey];
-			}
-		});
-	}
+        const introElements = document.querySelectorAll('.intro__text');
+        introElements.forEach((element, index) => {
+            if (introTexts[index]) {
+                element.innerHTML = introTexts[index];
+            }
+        });
+    }
 
-	updateAbout() {
-		const currentData = this.languageData[this.currentLang];
-		if (!currentData || !currentData.about) return;
+	// 更新 about 文字
+	updateAboutSection() {
+        const currentData = this.languageData[this.currentLang];
+        if (!currentData || !currentData.about) return;
 
-		const aboutData = currentData.about;
+        // 更新 aboutGroup1
+        this.updateAboutGroup('aboutGroup1', currentData.about.aboutGroup1);
+        // 更新 aboutGroup2
+        this.updateAboutGroup('aboutGroup2', currentData.about.aboutGroup2);
+    }
 
-		// 更新第一個about區塊
-		if (aboutData.aboutGroup1) {
-			const group1 = aboutData.aboutGroup1;
+    updateAboutGroup(groupId, groupData) {
+        if (!groupData) return;
 
-			// 更新標題
-			const title1 = document.querySelector('#aboutGroup1 .sectionGroup__title');
-			if (title1) title1.textContent = group1.title;
+        const groupElement = document.getElementById(groupId);
+        if (!groupElement) return;
 
-			// 更新段落
-			group1.texts.forEach((text, index) => {
-				const paragraph = document.querySelector(`#aboutGroup1 .text-${index + 1}`);
-				if (paragraph) paragraph.textContent = text;
-			});
-		}
+        // 更新標題
+        const titleElement = groupElement.querySelector('.sectionGroup__title');
+        if (titleElement && groupData.title) {
+            titleElement.innerHTML = groupData.title;
+        }
 
-		// 更新第二個about區塊
-		if (aboutData.aboutGroup2) {
-			const group2 = aboutData.aboutGroup2;
+        // 更新文字段落 - 使用陣列結構
+        const textElements = groupElement.querySelectorAll('.f-section-p');
+        if (groupData.texts && Array.isArray(groupData.texts)) {
+            textElements.forEach((element, index) => {
+                if (groupData.texts[index]) {
+                    element.innerHTML = groupData.texts[index];
+                }
+            });
+        }
+    }
 
-			// 更新標題
-			const title2 = document.querySelector('#aboutGroup2 .sectionGroup__title');
-			if (title2) title2.innerHTML = group2.title;
+	// 更新 contact 文字
+	updateContactSection() {
+        const currentData = this.languageData[this.currentLang];
+        if (!currentData || !currentData.contact) return;
 
-			// 更新段落
-			group2.texts.forEach((text, index) => {
-				const paragraph = document.querySelector(`#aboutGroup2 .text-${index + 1}`);
-				if (paragraph) paragraph.textContent = text;
-			});
-		}
-	}
+        const contactData = currentData.contact;
 
+        // 更新部門名稱
+        const departmentElement = document.querySelector('.department');
+        if (departmentElement && contactData.department) {
+            departmentElement.innerHTML = contactData.department;
+        }
+
+        // 更新聯絡資訊
+        if (contactData.info && Array.isArray(contactData.info)) {
+            const infoList = document.querySelector('.info');
+            if (infoList) {
+                // 清空現有內容
+                infoList.innerHTML = '';
+
+                // 添加新的聯絡資訊
+                contactData.info.forEach(infoText => {
+                    const li = document.createElement('li');
+                    li.innerHTML = infoText;
+                    infoList.appendChild(li);
+                });
+            }
+        }
+
+        // 更新單位資訊
+        if (contactData.sectors && Array.isArray(contactData.sectors)) {
+            const sectorsList = document.querySelector('.sectors');
+            if (sectorsList) {
+                // 清空現有內容
+                sectorsList.innerHTML = '';
+
+                // 添加新的單位資訊
+                contactData.sectors.forEach(sectorText => {
+                    const li = document.createElement('li');
+                    li.innerHTML = sectorText;
+                    sectorsList.appendChild(li);
+                });
+            }
+        }
+    }
+
+	// 更新 HTML lang 屬性
 	updateHtmlLang() {
-		// 更新 HTML lang 屬性
-		document.documentElement.lang = this.currentLang === 'zh' ? 'zh-TW' : 'en';
-		this.updateBodyClass();
-	}
+        document.documentElement.lang = this.currentLang === 'zh' ? 'zh-TW' : 'en';
 
-	updateBodyClass() {
-		const body = document.body;
-
-		// 移除舊的語言 class
-		body.classList.remove('lang--zh', 'lang--en');
-
-		// 增加新的語言 class
-		body.classList.remove('lang--zh', 'lang--en');
-		body.classList.add(`lang--${this.currentLang}`);
-	}
-
-	showError(message) {
-		const errorEl = document.getElementById('errorMessage');
-		errorEl.textContent = message;
-		errorEl.style.display = 'block';
-	}
-
-	hideError() {
-		const errorEl = document.getElementById('errorMessage');
-		errorEl.style.display = 'none';
-	}
+        const body = document.body;
+        body.classList.remove('lang--zh', 'lang--en');
+        body.classList.add(`lang--${this.currentLang}`);
+    }
 
 	// 取得目前語言
 	getCurrentLanguage() {
-		return this.currentLang;
-	}
+        return this.currentLang;
+    }
 
 	// 取得指定key的翻譯
-	getText(key, section = 'nav') {
-		const currentData = this.languageData[this.currentLang];
-		return currentData?.[section]?.[key] || key;
-	}
+	getText(section, key) {
+        const currentData = this.languageData[this.currentLang];
+        return currentData?.[section]?.[key] || '';
+    }
 
 	// 預先載入語言
 	async preloadLanguage(lang) {
-		try {
-			await this.loadLanguage(lang);
-		} catch (error) {
-			console.warn(`預載入語言 ${lang} 失敗:`, error);
-		}
-	}
+        try {
+            await this.loadLanguage(lang);
+            console.log(`語言 ${lang} 預載入完成`);
+        } catch (error) {
+            console.warn(`預載入語言 ${lang} 失敗:`, error);
+        }
+    }
 }
 
 // 初始化語言切換
 const langSwitcher = new LanguageSwitcher();
 
-// 預載入另一種語言（可選）
+// 預載入另一種語言
 setTimeout(() => {
 	langSwitcher.preloadLanguage('en');
 }, 1000);

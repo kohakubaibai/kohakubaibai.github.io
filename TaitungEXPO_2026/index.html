@@ -34,24 +34,18 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	<!-- Google Tag Manager start -->
-	<script>(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-ID');</script>
-	<!-- Google Tag Manager End -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G4YR7BNNTX"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-G4YR7BNNTX');
+	</script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar-collapse">
-	<div id="jsonTest"></div>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ID" height="0" width="0"
-			style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- Google Tag Manager (noscript) End -->
+<body class="lang--zh" data-spy="scroll" data-target=".navbar-collapse">
 
 	<!-- header start -->
 	<header id="header" class="l-header">
@@ -66,7 +60,7 @@
 				</div>
 				<div class="l-header__logo d-flex">
 					<a class="logoItem" href="#" target="_blank" rel="noopener noreferrer">
-						<img src="assets/images/logo.svg" alt="2026 Taitung EXPO 台東博覽會">
+						<img src="assets/images/logo-expo.svg" alt="2026 Taitung EXPO 台東博覽會">
 					</a>
 				</div>
 				<!-- 語言切換按鈕 -->
@@ -79,6 +73,7 @@
 		</div>
 	</header>
 	<!-- header end -->
+
 	<!-- nav start -->
 	<nav class="l-nav js-navigation">
 		<div class="overlay js-navClose"></div>
@@ -93,7 +88,7 @@
 				<li class="navbarItem"><a href="#news" class="navbarText js-anchor"
 						data-json-key="anchor2"><span>最新消息</span><span>最新消息</span></a></li>
 				<li class="navbarItem"><a href="#event" class="navbarText js-anchor"
-						data-json-key="anchor3"><span>東博活動表</span>東博活動表<span></span></a></li>
+						data-json-key="anchor3"><span>東博活動表</span><span>東博活動表</span></a></li>
 				<li class="navbarItem"><a href="#preview" class="navbarText js-anchor"
 						data-json-key="anchor4"><span>活動預告</span><span>活動預告</span></a></li>
 				<li class="navbarItem"><a href="#vi" class="navbarText js-anchor"
@@ -110,10 +105,9 @@
 		</div>
 	</nav>
 	<!-- navbar end -->
-	<main class="main">
 
+	<main class="main">
 		<!-- opening start -->
-		<!-- opening end -->
 		<div class="opening">
 			<div class="hero">
 				<div class="container">
@@ -135,42 +129,89 @@
 			</div>
 			<div class="intro">
 				<div class="container">
-					<p class="intro__text introText animateTitle__item f-section-p wow fadeIn" data-wow-duration="0.5s"
+					<p class="intro__text introText f-section-p wow fadeIn" data-json-key="text" data-wow-duration="0.5s"
 						data-json-key="introText1">在台東，「慢」不只是速度，更是一種選擇——選擇與自然共生，與土地共鳴的生活哲學。</p>
-					<p class="intro__text introText animateTitle__item f-section-p wow fadeIn" data-wow-duration="0.5s"
+					<p class="intro__text introText f-section-p wow fadeIn" data-json-key="text" data-wow-duration="0.5s"
 						data-wow-delay="0.5s" data-json-key="introText2">2026 台東博覽會，以「慢經濟」為策展核心，以「台東藍」為視覺語言，融合南島文化精神與永續發展願景，鋪展山之路、海之路，到通往世界之路的未來藍圖。</p>
-					<p class="intro__text introText animateTitle__item f-section-p wow fadeIn" data-wow-duration="0.5s"
+					<p class="intro__text introText f-section-p wow fadeIn" data-json-key="text" data-wow-duration="0.5s"
 						data-wow-delay="1s" data-json-key="introText3">誠摯邀請每一位踏上台東的人，放慢腳步，品味這片土地的靜謐與豐盛，找回生活最純粹的節奏。</p>
 				</div>
 			</div>
 		</div>
+		<!-- opening end -->
+
 		<!-- about start -->
-		<!-- about end -->
 		<section id="about" class="section section--about">
 			<div class="deco-curve"></div>
 			<div class="container">
 				<div id="aboutGroup1" class="sectionGroup">
-					<div class="sectionGroup__title f-section-title">台東：理想生活的實踐場域</div>
+					<div class="sectionGroup__title f-section-title" data-json-key="title">台東：理想生活的實踐場域</div>
 					<div class="sectionGroup__content">
-						<p class="text-1 f-section-p">坐落於山海交匯之處的台東，蘊藏豐饒的自然資源與多元共融的文化風貌，凝聚純粹壯麗的地景與深厚人文底蘊，孕育出獨具一格的地方價值。</p>
-						<p class="text-2 f-section-p">2026 TAITUNG EXPO台東博覽會，將凝聚政府、在地產業與社會各界的力量，共同擘劃兼具包容性與永續性的地方發展藍圖。透過整年度的策展行動，深度呈現台東的文化底色與未來潛力，邀請來訪台東的人親身體驗這片土地的真、善、美，打造具有全球辨識度的「台東品牌」，讓台東的精神價值被世界看見、理解並珍惜。</p>
+						<p class="f-section-p" data-json-key="text">坐落於山海交匯之處的台東，蘊藏豐饒的自然資源與多元共融的文化風貌，凝聚純粹壯麗的地景與深厚人文底蘊，孕育出獨具一格的地方價值。</p>
+						<p class="f-section-p" data-json-key="text">2026 TAITUNG EXPO台東博覽會，將凝聚政府、在地產業與社會各界的力量，共同擘劃兼具包容性與永續性的地方發展藍圖。透過整年度的策展行動，深度呈現台東的文化底色與未來潛力，邀請來訪台東的人親身體驗這片土地的真、善、美，打造具有全球辨識度的「台東品牌」，讓台東的精神價值被世界看見、理解並珍惜。</p>
 					</div>
 				</div>
 				<div id="aboutGroup2" class="sectionGroup">
-					<div class="sectionGroup__title f-section-title">台東博覽會，現在進行式——<br>改變，從此刻開始</div>
+					<div class="sectionGroup__title f-section-title" data-json-key="title">台東博覽會，現在進行式——<br>改變，從此刻開始</div>
 					<div class="sectionGroup__content">
-						<p class="text-1 f-section-p">台東博覽會不僅是一場正在進行的行動實踐，更象徵著一個持續成長、逐步轉變的過程——每一次對話、每一場展演、每一項計畫，都是台東變革的見證與起點。我們誠邀每一位關心台東的夥伴，攜手成為這場改變的共同創造者。透過「現在進行式」的概念，讓改變從此刻開始，將永續發展的理想深植於台東，並將這股能量推向世界。</p>
+						<p class="f-section-p" data-json-key="text">台東博覽會不僅是一場正在進行的行動實踐，更象徵著一個持續成長、逐步轉變的過程——每一次對話、每一場展演、每一項計畫，都是台東變革的見證與起點。我們誠邀每一位關心台東的夥伴，攜手成為這場改變的共同創造者。透過「現在進行式」的概念，讓改變從此刻開始，將永續發展的理想深植於台東，並將這股能量推向世界。</p>
 					</div>
 				</div>
 			</div>
 		</section>
+		<!-- about end -->
+
+		<h3 class="marquee">
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+		</h3>
+
 		<!-- news start -->
+
+		<div id="news" class="section section--news" style="min-height: 500px;">
+			<div class="container">
+				<div class="section__title f-section-title">最新消息</div>
+				<div class="section__content">
+					content
+				</div>
+			</div>
+		</div>
+
 		<!-- news end -->
+
 		<!-- preview start -->
+		<div id="preview" class="section section--preview">
+			<div class="container">
+				<div class="section__title f-section-title">台東博覽會活動表</div>
+				<div class="section__content" style="min-height: 500px;">
+					content
+				</div>
+			</div>
+		</div>
 		<!-- preview end -->
 		<!-- vi start -->
+		<div id="vi" class="section section--vi" style="min-height: 500px;">
+			<div class="container">
+				<div class="section__title f-section-title">vi</div>
+				<div class="section__content">
+					<div style="height: 500px">section1</div>
+					<div style="height: 500px">section2</div>
+				</div>
+			</div>
+		</div>
 		<!-- vi end -->
 		<!-- participation start -->
+		<div id="participation" class="section section--participation">
+			<div class="container">
+				<div class="section__title f-section-title">participation</div>
+				<div class="section__content" style="min-height: 500px;">
+					participation
+				</div>
+			</div>
+		</div>
 		<!-- participation end -->
 		<!-- authorization start -->
 		<!-- authorization end -->
@@ -179,10 +220,35 @@
 		<!-- contact start -->
 		<!-- contact end -->
 
-
+		<h3 class="marquee">
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
+		</h3>
 	</main>
-	<footer class="l-footer">
+
+	<footer id="contact" class="l-footer">
 		<div class="container">
+			<div class="logo logo--government">
+				<a href="https://www.taitung.gov.tw" target="_blank"><img src="assets/images/logo-taitungGov.svg" alt="臺東縣政府"></a>
+			</div>
+			<div class="department">2026台東博覽會-專案管理辦公室</div>
+			<ul class="info">
+				<li class="f-section-h5">電子郵件：<a href="mailto:info@taitungexpo2026.com.tw">info@taitungexpo2026.com.tw</a></li>
+				<li class="f-section-h5">服務時間：週一至週五，9:00-18:00</li>
+			</ul>
+			<ul class="sectors">
+				<li class="f-section-h5">指導單位｜國家發展委員會、文化部</li>
+				<li class="f-section-h5">主辦單位｜臺東縣政府</li>
+				<li class="f-section-h5">執行單位｜玩美文創設計工作室</li>
+			</ul>
+			<div class="logo">
+				<a href="https://lihi1.com/qe3iE" target="_blank"><img src="assets/images/logo-ttPush.svg" alt="TTPush踢一下"></a>
+				<a href="https://culture.taitung.gov.tw" target="_blank"><img src="assets/images/logo-taitungCulture.svg" alt="台東藝文平台"></a>
+			</div>
+			<div class="copyright">Copyright &copy; 2025 臺東縣政府. All rights reserved</div>
 		</div>
 	</footer>
 
