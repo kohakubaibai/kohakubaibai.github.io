@@ -239,129 +239,104 @@ setTimeout(() => {
 	langSwitcher.preloadLanguage('en');
 }, 1000);
 
-// header滾動效果
-class ScrollHeader {
-	constructor() {
-		this.header = document.getElementById('header');
-		this.headerHeight = this.header.offsetHeight;
-		this.hideThreshold = this.headerHeight;
-		this.showThreshold = this.headerHeight * 2;
-		this.isHeaderHidden = false;
-		this.ticking = false;
 
-		this.init();
-	}
+// 視覺識別系統圖片
+const sectionNames = {
+    '1': '空氣',
+    '2': '水', 
+    '3': '自然力量',
+    '4': '聲音',
+    '5': '香氣',
+    '6': '生活',
+    '7': '慢經濟',
+    '8': '台東品牌',
+    'center': '種子',
+    '9': '永續台東'
+};
 
-	init() {
-		window.addEventListener('scroll', () => {
-			if (!this.ticking) {
-				requestAnimationFrame(() => {
-					this.handleScroll();
-					this.ticking = false;
-				});
-				this.ticking = true;
-			}
-		});
-
-		this.handleScroll();
-	}
-
-	handleScroll() {
-		const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-		if (currentScrollTop > this.showThreshold) {
-			this.showHeader();
-		} else if (currentScrollTop > this.hideThreshold) {
-			this.hideHeader();
-		} else {
-			this.showHeader();
-		}
-	}
-
-	showHeader() {
-		if (this.isHeaderHidden) {
-			this.header.classList.remove('hide');
-			this.isHeaderHidden = false;
-		}
-	}
-
-	hideHeader() {
-		if (!this.isHeaderHidden) {
-			this.header.classList.add('hide');
-			this.isHeaderHidden = true;
-		}
-	}
-}
-
-// 增強版滾動效果 - 根據滾動方向控制
-class EnhancedScrollHeader {
-	constructor() {
-        this.header = document.getElementById('header');
-        this.headerHeight = this.header.offsetHeight;
-        this.isHeaderHidden = false;
-        this.ticking = false;
-
-        this.updateThresholds();
-        this.init();
-    }
-
-	updateThresholds() {
-        this.headerHeight = this.header.offsetHeight;
-        this.hideThreshold = this.headerHeight;
-        this.showThreshold = this.headerHeight * 2;
-    }
-
-	init() {
-		window.addEventListener('scroll', () => {
-            if (!this.ticking) {
-                requestAnimationFrame(() => {
-                    this.handleScroll();
-                    this.ticking = false;
-                });
-                this.ticking = true;
-            }
-        });
-
-        // 當螢幕尺寸改變（如RWD切換）時更新高度
-        window.addEventListener('resize', () => this.updateThresholds());
-
-        this.handleScroll(); // 初始化檢查
-	}
-
-	handleScroll() {
-		const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (currentScrollTop > this.showThreshold) {
-            this.showHeader();
-        } else if (currentScrollTop > this.hideThreshold) {
-            this.hideHeader();
+// 添加點擊事件處理
+document.querySelectorAll('.wheel-section, .center-circle, .bottom-circle').forEach(element => {
+    element.addEventListener('click', function() {
+        const sectionNum = this.getAttribute('data-section');
+        const sectionName = sectionNames[sectionNum] || this.getAttribute('data-name');
+        
+        // 點擊動畫效果
+        this.classList.add('clicked');
+        setTimeout(() => {
+            this.classList.remove('clicked');
+        }, 300);
+        
+        // 點擊popup
+        if (sectionNum === 'center') {
+            console.log(`點擊了中心區域: ${sectionName}`);
+            alert(`你點擊了中心區域: ${sectionName}`);
         } else {
-            this.showHeader();
+            console.log(`點擊了區域 ${sectionNum}: ${sectionName}`);
+            alert(`你點擊了區域 ${sectionNum}: ${sectionName}`);
         }
-	}
-
-	showHeader() {
-		if (this.isHeaderHidden) {
-            this.header.classList.remove('hide');
-            this.isHeaderHidden = false;
+        
+        // 各區域對應的popup
+        switch(sectionNum) {
+            case '1':
+                // window.location.href = '/air';
+                break;
+            case '2':
+                // window.location.href = '/water';
+                break;
+            case '3':
+                // window.location.href = '/nature';
+                break;
+            case '4':
+                // window.location.href = '/sound';
+                break;
+            case '5':
+                // window.location.href = '/aroma';
+                break;
+            case '6':
+                // window.location.href = '/lifestyle';
+                break;
+            case '7':
+                // window.location.href = '/slow-economy';
+                break;
+            case '8':
+                // window.location.href = '/taitung-brand';
+                break;
+            case 'center':
+                // window.location.href = '/seed';
+                break;
+            case '9':
+                // window.location.href = '/sustainable-taitung';
+                break;
         }
-	}
+    });
 
-	hideHeader() {
-		if (!this.isHeaderHidden) {
-			this.header.classList.add('hide');
-			this.isHeaderHidden = true;
-		}
-	}
+    // 手機觸控動畫
+    element.addEventListener('touchstart', function() {
+        this.style.fill = 'rgba(255, 255, 255, 0.05)';
+    });
+
+    element.addEventListener('touchend', function() {
+        setTimeout(() => {
+            this.style.fill = 'transparent';
+        }, 100);
+    });
+});
+
+// RWD
+function adjustLayout() {
+    const container = document.querySelector('.wheel-container');
+    const containerWidth = container.offsetWidth;
+    
+    // 根據螢幕大小調整 hover 效果的敏感度
+    if (containerWidth < 300) {
+        document.documentElement.style.setProperty('--hover-opacity', '0.15');
+    } else {
+        document.documentElement.style.setProperty('--hover-opacity', '0.1');
+    }
 }
 
-// 初始化滾動效果
-// 使用基本版本
-// new ScrollHeader();
-
-// 如果要使用增強版本，請註釋掉上面一行，並取消註釋下面一行
-// new EnhancedScrollHeader();
-
+window.addEventListener('resize', adjustLayout);
+adjustLayout();
 
 $(document).ready(function () {
 	$(document).scroll(function () {
@@ -382,22 +357,17 @@ $(document).ready(function () {
 
 	new WOW().init();
 
+    var headerH = $('.l-header').outerHeight(true);
 	$(".js-anchor").on('click', function (event) {
 
-		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
-			// Prevent default anchor click behavior
 			event.preventDefault();
 
-			// Store hash
 			var hash = this.hash;
 
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 			$('html, body').animate({
-				scrollTop: $(hash).offset().top
+				scrollTop: ($(hash).offset().top) - (headerH + 50)
 			}, 800, function () {
-				// Add hash (#) to URL when done scrolling (default click behavior)
 				window.location.hash = hash;
 			});
 

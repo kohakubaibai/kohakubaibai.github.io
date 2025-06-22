@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, min-scale=1, max-scale=1, shrink-to-fit=no">
 	<title>台東博覽會 | TAITUNG EXPO</title>
 	<meta name="description" content="DescriptionContent" />
 	<meta name="keywords" content="keywords" />
@@ -60,7 +60,7 @@
 				</div>
 				<div class="l-header__logo d-flex">
 					<a class="logoItem" href="#" target="_blank" rel="noopener noreferrer">
-						<img src="assets/images/logo-expo.svg" alt="2026 Taitung EXPO 台東博覽會">
+						<img src="assets/images/logo_expo.svg" alt="2026 Taitung EXPO 台東博覽會">
 					</a>
 				</div>
 				<!-- 語言切換按鈕 -->
@@ -78,9 +78,11 @@
 	<nav class="l-nav js-navigation">
 		<div class="overlay js-navClose"></div>
 		<div class="navWrap">
-			<div class="menuSwitcher is-opened js-navClose">
-				<span></span>
-				<span></span>
+			<div class="navToggler">
+				<div class="menuSwitcher is-opened js-navClose">
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 			<ul class="navbar">
 				<li class="navbarItem"><a href="#about" class="navbarText js-anchor"
@@ -144,14 +146,14 @@
 		<section id="about" class="section section--about">
 			<div class="deco-curve"></div>
 			<div class="container">
-				<div id="aboutGroup1" class="sectionGroup">
+				<div id="aboutGroup1" class="sectionGroup wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
 					<div class="sectionGroup__title f-section-title" data-json-key="title">台東：理想生活的實踐場域</div>
 					<div class="sectionGroup__content">
 						<p class="f-section-p" data-json-key="text">坐落於山海交匯之處的台東，蘊藏豐饒的自然資源與多元共融的文化風貌，凝聚純粹壯麗的地景與深厚人文底蘊，孕育出獨具一格的地方價值。</p>
 						<p class="f-section-p" data-json-key="text">2026 TAITUNG EXPO台東博覽會，將凝聚政府、在地產業與社會各界的力量，共同擘劃兼具包容性與永續性的地方發展藍圖。透過整年度的策展行動，深度呈現台東的文化底色與未來潛力，邀請來訪台東的人親身體驗這片土地的真、善、美，打造具有全球辨識度的「台東品牌」，讓台東的精神價值被世界看見、理解並珍惜。</p>
 					</div>
 				</div>
-				<div id="aboutGroup2" class="sectionGroup">
+				<div id="aboutGroup2" class="sectionGroup wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.8s">
 					<div class="sectionGroup__title f-section-title" data-json-key="title">台東博覽會，現在進行式——<br>改變，從此刻開始</div>
 					<div class="sectionGroup__content">
 						<p class="f-section-p" data-json-key="text">台東博覽會不僅是一場正在進行的行動實踐，更象徵著一個持續成長、逐步轉變的過程——每一次對話、每一場展演、每一項計畫，都是台東變革的見證與起點。我們誠邀每一位關心台東的夥伴，攜手成為這場改變的共同創造者。透過「現在進行式」的概念，讓改變從此刻開始，將永續發展的理想深植於台東，並將這股能量推向世界。</p>
@@ -170,55 +172,342 @@
 		</h3>
 
 		<!-- news start -->
-
 		<div id="news" class="section section--news" style="min-height: 500px;">
 			<div class="container">
-				<div class="section__title f-section-title">最新消息</div>
+				<div class="section__title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><span class="f-section-title">最新消息</span></div>
 				<div class="section__content">
 					content
 				</div>
 			</div>
 		</div>
-
 		<!-- news end -->
+
+		<!-- event start -->
+		<div id="event" class="section section--event" style="min-height: 500px;">
+			<div class="container">
+				<div class="section__title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><span class="f-section-title">台東博覽會活動表</span></div>
+				<div class="section__content" style="height: 1000px;">
+					content
+				</div>
+			</div>
+		</div>
+		<!-- event end -->
 
 		<!-- preview start -->
 		<div id="preview" class="section section--preview">
-			<div class="container">
-				<div class="section__title f-section-title">台東博覽會活動表</div>
-				<div class="section__content" style="min-height: 500px;">
-					content
+			<div class="section__content">
+				<div class="previewGroup previewGroup--curating">
+					<div class="hero">
+						<div class="container">
+							<div class="previewGroup__title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+								<span class="f-section-title">
+									10大策展議題 X 超過13場大型展覽與活動<br>
+									X 台東12知名活動品牌聯動
+								</span>
+								<span class="f-section-title">
+									2026年，邀您一起體驗台東的多元精彩！
+								</span>
+							</div>
+							<div class="previewGroup__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+								<div class="intro">
+									<p class="f-section-p">由一顆落下台東土地的慢經濟種子開始，向下扎根，向上展望，逐漸萌芽、延展出「空氣」、「水」、「自然力量」、「聲音」、「漂流」、「生活」、「慢經濟體」、「台東品牌」與「永續台東」等策展議題，一層層勾勒出台東獨有的慢經濟想像藍圖。</p>
+								</div>
+								<div class="hint">
+									<span class="hint__text">點擊策展議題查看詳情</span>
+									<a href="#curatingMap" class="hint__icon js-anchor"><span class="arrow"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="curatingMap" class="curatingMap wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+						<div class="wheel-container">
+							<div class="click-overlay">
+								<svg class="wheel-svg" viewBox="0 0 500 639">
+									<!-- 扇形區域 1: 空氣 -->
+									<path class="wheel-section" 
+										  data-section="1" 
+										  data-name="空氣"
+										  d="M 250 250 L 250 2 A 248 248 0 0 1 425.3 74.7 Z"/>
+					
+									<!-- 扇形區域 2: 水 -->
+									<path class="wheel-section" 
+										  data-section="2" 
+										  data-name="水"
+										  d="M 250 250 L 425.3 74.7 A 248 248 0 0 1 498 250 Z"/>
+					
+									<!-- 扇形區域 3: 自然力量 -->
+									<path class="wheel-section" 
+										  data-section="3" 
+										  data-name="自然力量"
+										  d="M 250 250 L 498 250 A 248 248 0 0 1 425.3 425.3 Z"/>
+					
+									<!-- 扇形區域 4: 聲音 -->
+									<path class="wheel-section" 
+										  data-section="4" 
+										  data-name="聲音"
+										  d="M 250 250 L 425.3 425.3 A 248 248 0 0 1 250 498 Z"/>
+					
+									<!-- 扇形區域 5: 香氣 -->
+									<path class="wheel-section" 
+										  data-section="5" 
+										  data-name="香氣"
+										  d="M 250 250 L 250 498 A 248 248 0 0 1 74.7 425.3 Z"/>
+					
+									<!-- 扇形區域 6: 生活 -->
+									<path class="wheel-section" 
+										  data-section="6" 
+										  data-name="生活"
+										  d="M 250 250 L 74.7 425.3 A 248 248 0 0 1 2 250 Z"/>
+					
+									<!-- 扇形區域 7: 慢經濟 -->
+									<path class="wheel-section" 
+										  data-section="7" 
+										  data-name="慢經濟"
+										  d="M 250 250 L 2 250 A 248 248 0 0 1 74.7 74.7 Z"/>
+					
+									<!-- 扇形區域 8: 台東品牌 -->
+									<path class="wheel-section" 
+										  data-section="8" 
+										  data-name="台東品牌"
+										  d="M 250 250 L 74.7 74.7 A 248 248 0 0 1 250 2 Z"/>
+					
+									<!-- 中心圓圈: 種子 -->
+									<circle class="center-circle" 
+											cx="250" cy="250" r="80" 
+											data-section="center" 
+											data-name="種子"/>
+					
+									<!-- 底部圓圈 9: 永續台東-->
+									<circle class="bottom-circle" 
+											cx="250" cy="543" r="96" 
+											data-section="9" 
+											data-name="永續台東"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="previewGroup previewGroup--features">
+					<div class="container">
+						<div class="previewGroup__title">
+							<span class="f-section-title">
+								串連台東山海與特色活動品牌<br>
+								打造整年度的精彩！
+							</span>
+						</div>
+						<div class="previewGroup__content">
+							<ul class="featuresList">
+								<li>
+									<img src="assets/images/features/img_feature-1.png" alt="台灣炮炸寒單爺" class="featureImage">
+									<a href="https://ttca.taitung.gov.tw" class="featureText featureText--front" target="_blank">台灣炮炸<br>寒單爺</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-2.png" alt="自然醒慢活祭" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">自然醒<br>慢活祭</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-3.png" alt="臺東慢食節" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">臺東慢食節</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-4.png" alt="PASIWALI原住民族國際音樂節" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">PASIWALI<br>原住民族<br>國際音樂節</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-5.png" alt="台東最美星空" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">台東<br>最美星空</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-6.png" alt="臺灣國際熱氣球嘉年華" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">臺灣國際<br>熱氣球嘉年華</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-7.png" alt="臺灣國際衝浪公開賽" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">臺灣國際<br>衝浪公開賽</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-8.png" alt="月光・海音樂會" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">月光・海<br>音樂會</a>
+								</li>
+								<li class="multiple">
+									<img src="assets/images/features/img_feature-9.png" alt="大地藝術季" class="featureImage">
+									<div class="featureText featureText--front">
+										大地藝術季
+									</div>
+									<div class="featureText featureText--back">
+										<a href="" target="_blank">南迴藝術季</a>
+										<a href="" target="_blank">東海岸大地藝術節</a>
+										<a href="" target="_blank">縱谷大地藝術季</a>
+									</div>
+								</li>
+								<li class="multiple">
+									<img src="assets/images/features/img_feature-10.png" alt="臺東藝術節 臺東藝穗節" class="featureImage">
+									<div class="featureText featureText--front">
+										臺東藝術節<br>臺東藝穗節
+									</div>
+									<div class="featureText featureText--back">
+										<a href="" target="_blank">臺東藝術節</a>
+										<a href="" target="_blank">臺東藝穗節</a>
+									</div>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-11.png" alt="池上秋收稻穗藝術節" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">池上秋收<br>稻穗藝術節</a>
+								</li>
+								<li>
+									<img src="assets/images/features/img_feature-12.png" alt="台東光祭" class="featureImage">
+									<a href="" class="featureText featureText--front" target="_blank">台東光祭</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- preview end -->
 		<!-- vi start -->
 		<div id="vi" class="section section--vi" style="min-height: 500px;">
-			<div class="container">
-				<div class="section__title f-section-title">vi</div>
-				<div class="section__content">
-					<div style="height: 500px">section1</div>
-					<div style="height: 500px">section2</div>
+			<div class="section__content">
+				<div class="viGroup viGroup--intro">
+					<div class="container">
+						<div class="viGroup__content">
+							<div class="coverImg"></div>
+							<div class="introText">
+								<div class="introText__title">
+									<span class="topic f-section-title">視覺識別系統</span>
+									<span class="sub">Amazing Taitung</span>
+								</div>
+								<div class="introText__paragraph">
+									<p class="f-section-p">臺灣國際熱氣球嘉年華已成為台東一年一度的重要盛事，熱氣球更象徵這片土地的獨特魅力。從充氣、燃燒器點燃，到氣囊漸漸成形並緩緩升空，這個過程宛如台東的成長軌跡——醞釀、蓄勢，最終自信綻放，翱翔天際，邁向無限可能。</p>
+									<p class="f-section-p">台東博覽會標誌設計以此意象為核心，運用具代表性的「台東藍」作為主色調，並結合熱氣球升起的動態美感，巧妙構築出一個視覺化的驚嘆號。不僅展現台東的活力與蓬勃發展，更象徵這片土地所蘊藏的無限驚喜——壯麗的自然景觀、深厚的人文底蘊、獨特的文化風貌，等待人們探索、感受與共鳴。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="viGroup__image">
+					</div>
+				</div>
+				<div class="viGroup viGroup--imagery">
+					<div class="container">
+						<div class="viGroup__title"><span class="f-section-title">標誌圖形意象</span></div>
+						<div class="viGroup__content">
+							<div class="imageryGroup">
+								<div class="imageryGroup__title"><span class="f-section-h4">自然的孕育</span></div>
+								<div class="imageryGroup__image"></div>
+							</div>
+							<div class="imageryGroup">
+								<div class="imageryGroup__title"><span class="f-section-h4">文化的積累</span></div>
+								<div class="imageryGroup__image"></div>
+							</div>
+							<div class="imageryGroup">
+								<div class="imageryGroup__title"><span class="f-section-h4">Amazing Taitung 綻放精彩</span></div>
+								<div class="imageryGroup__image"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="viGroup viGroup--video">
+					<div class="container">
+						<div class="viGroup__content">
+							<div class="videoFrame">
+	
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- vi end -->
+
 		<!-- participation start -->
 		<div id="participation" class="section section--participation">
 			<div class="container">
-				<div class="section__title f-section-title">participation</div>
-				<div class="section__content" style="min-height: 500px;">
-					participation
+				<div class="section__title f-section-title">
+					<span class="f-section-title">民間參與計畫</span>
+				</div>
+				<div class="section__content imgTextFlex">
+					<div class="imgTextFlex__text">
+						<div class="intro">
+							<p>臺東縣政府推出「2026台東博覽會民間參與分區策展計畫」，邀請當地民間團體共同創造台東未來願景，透過創意實現對「台東博覽會」的獨特想像。本計畫將依循博覽會整體執行架構，並呼應聯合國17項永續發展目標（SDGs），公開徵選具前瞻性與多元觀點的策展提案。預計遴選至少12件，展期自115年7月1日至8月31日，透過民間的策展能量，共同勾勒台東多元而永續的未來藍圖，讓世界看見台東的創意與行動力！</p>
+						</div>
+						<div class="rule">
+							<div class="rule__title">亮點預告</div>
+							<ul class="rule__list">
+								<li class="f-section-h4">申請時間：</li>
+								<li class="f-section-h4">線上報名表單</li>
+								<li class="f-section-h4">紙本及電子資料寄送地址：</li>
+							</ul>
+						</div>
+						<div class="rule">
+							<div class="rule__title">說明會資訊</div>
+							<ul class="rule__list">
+								<li class="f-section-h4">時間：</li>
+								<li class="f-section-h4">地點：</li>
+								<li class="f-section-h4">報名表單：</li>
+							</ul>
+						</div>
+						<ul class="action">
+							<li><a href="#" class="btn btn--blank"><span class="btn__text">簡章下載</span></a></li>
+							<li><a href="#" class="btn btn--blank"><span class="btn__text">候補</span></a></li>
+							<li><a href="#" class="btn btn--blank"><span class="btn__text">候補</span></a></li>
+						</ul>
+					</div>
+					<div class="imgTextFlex__image">
+
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- participation end -->
+
 		<!-- authorization start -->
+		<div id="authorization" class="section section--authorization">
+			<div class="container">
+				<div class="section__title f-section-title">
+					<span class="f-section-title">品牌授權專區</span>
+				</div>
+				<div class="section__content imgTextFlex">
+					<div class="imgTextFlex__text">
+						<div class="intro">
+							<p>為推廣「2026台東博覽會」品牌識別的應用與價值延伸，臺東縣政府訂定《品牌商標授權作業辦法》，建立授權合作機制，誠摯邀請品牌、廠商、通路及企業參與。透過授權使用博覽會標誌、標準字、輔助圖形及專用色等核心識別元素，擴大博覽會的社會影響力，並促進產業共創與地方品牌發展，展現台東的文化能量與創新精神。</p>
+							<p>授權機制明訂申請條件、使用規範與審查流程，確保識別系統的正確一致性，提升辨識度並支持永續發展。詳細規範請參見《2026台東博覽會品牌商標授權作業辦法》與《2026台東博覽會品牌手冊》。</p>
+						</div>
+						<div class="rule">
+							<div class="rule__title">申請資訊</div>
+							<ul class="rule__list">
+								<li class="f-section-h4">申請時間：即日起至114年9月30日（二）止</li>
+								<li class="f-section-h4"><a href="#" target="_blank">線上報名表單</a></li>
+								<li class="f-section-h4">紙本及電子資料寄送地址：台東博覽會專案管理辦公室（950臺東縣臺東市博愛路478號）</li>
+							</ul>
+						</div>
+						<ul class="action">
+							<li><a href="#" class="btn btn--blank"><span class="btn__text">作業辦法</span></a></li>
+							<li><a href="#" class="btn btn--blank"><span class="btn__text">品牌手冊及授權素材</span></a></li>
+							<li><a href="#" class="btn btn--blank"><span class="btn__text">說明會簡報</span></a></li>
+						</ul>
+					</div>
+					<div class="imgTextFlex__image">
+
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- authorization end -->
+
 		<!-- style start -->
+		<div id="participation" class="section section--participation">
+			<div class="container">
+				<div class="section__title f-section-title">
+					<span class="f-section-title">東博Style</span>
+				</div>
+				<div class="section__content">
+					<div class="videoFrame">
+
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- style end -->
-		<!-- contact start -->
-		<!-- contact end -->
 
 		<h3 class="marquee">
 			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
@@ -232,7 +521,7 @@
 	<footer id="contact" class="l-footer">
 		<div class="container">
 			<div class="logo logo--government">
-				<a href="https://www.taitung.gov.tw" target="_blank"><img src="assets/images/logo-taitungGov.svg" alt="臺東縣政府"></a>
+				<a href="https://www.taitung.gov.tw" target="_blank"><img src="assets/images/logo_taitungGov.svg" alt="臺東縣政府"></a>
 			</div>
 			<div class="department">2026台東博覽會-專案管理辦公室</div>
 			<ul class="info">
@@ -245,8 +534,8 @@
 				<li class="f-section-h5">執行單位｜玩美文創設計工作室</li>
 			</ul>
 			<div class="logo">
-				<a href="https://lihi1.com/qe3iE" target="_blank"><img src="assets/images/logo-ttPush.svg" alt="TTPush踢一下"></a>
-				<a href="https://culture.taitung.gov.tw" target="_blank"><img src="assets/images/logo-taitungCulture.svg" alt="台東藝文平台"></a>
+				<a href="https://lihi1.com/qe3iE" target="_blank"><img src="assets/images/logo_ttPush.svg" alt="TTPush踢一下"></a>
+				<a href="https://culture.taitung.gov.tw" target="_blank"><img src="assets/images/logo_taitungCulture.svg" alt="台東藝文平台"></a>
 			</div>
 			<div class="copyright">Copyright &copy; 2025 臺東縣政府. All rights reserved</div>
 		</div>
