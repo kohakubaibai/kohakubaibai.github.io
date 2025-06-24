@@ -28,27 +28,162 @@
         "aboutGroup2": {
             "title": "Taitung Expo:  Change in Motion",
             "texts": [
-                "The Taitung Expo is more than an ongoing action and practice, it symbolizes a continuously growing, gradually transforming process—each dialogue, each performance, each project witnesses and catalyzes Taitung's evolving future. We invite every partner passionate about Taitung to join as co-creators in this journey of becoming. With the spirit of the “present progressive”—dynamic, ongoing change bringing us forward on our journey, we lay the foundations for a work-in-progress, plant deep-rooted sustainable development ideals, and push Taitung’s energy out into the world."
+                "The Taitung Expo is more than an ongoing action and practice, it symbolizes a continuously growing, gradually transforming process—each dialogue, each performance, each project witnesses and catalyzes Taitung's evolving future. We invite every partner passionate about Taitung to join as co-creators in this journey of becoming. With the spirit of the \"present progressive\"—dynamic, ongoing change bringing us forward on our journey, we lay the foundations for a work-in-progress, plant deep-rooted sustainable development ideals, and push Taitung’s energy out into the world."
             ]
         }
     },
     "news": {
-        "title": "Latest News"
+        "title": "Latest News",
+        "newsData": [
+            {
+                "imgSrc": "assets/images/img_fake-1.jpg",
+                "imgAlt": "台東博覽會最新消息1",
+                "date": "2024.12.15",
+                "title": "2026台東博覽會正式啟動",
+                "desc": "台東縣政府宣布...",
+                "location": "台東縣政府",
+                "url": "#"
+            },
+            {
+                "imgSrc": "assets/images/img_fake-2.jpg",
+                "imgAlt": "台東博覽會最新消息1",
+                "date": "2024.12.15",
+                "title": "2026台東博覽會正式啟動",
+                "desc": "台東縣政府宣布...",
+                "location": "台東縣政府",
+                "url": "#"
+            }
+        ]
     },
     "event": {
-        "title": "Expo Event Table"
+        "title": "Expo Event Table",
+        "eventData": [
+            {
+                "imgSrc": "assets/images/img_fake-1.jpg",
+                "imgAlt": "Taiwan International Balloon Festival",
+                "date": "2025.7.5-8.21",
+                "title": "Taiwan International Balloon Festival",
+                "desc": "",
+                "location": "Luye Highland",
+                "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
+            }
+        ]
     },
     "preview": {
-        "title": "Highlights Preview"
+        "curatingTitle1": "10 curatorial themes ✕ 13 exhibitions<br>✕ 12 iconic Taitung event brands",
+        "curatingTitle2": "——Join us on a journey into Taitung's imagination and identity in 2026",
+        "curatingIntro": "The slow seed planted in the soil of Taitung, takes root downward and looks upward, gradually sprouting and extending into themes such as \"air,\" \"water,\" \"natural power,\" \"sound,\" \"drift,\" \"life,\" \"Taitung brand\", \"slow economy\" and \"sustainable Taitung,\" layer by layer outlining a uniquely Taitung \"slowness\"  imagination and blueprint.",
+        "curatingHint": "Select a curatorial theme to learn more.",
+        "featuresTitle": "Weaving together Taitung’s mountains, sea,<br>and iconic event brands for a year full of wonder!",
+        "features": {
+            "feature1": {
+                "text": "Bombing of Master<br>Handan Festival",
+                "alt": "Bombing of Master Handan Festival"
+            },
+            "feature2": {
+                "text": "<span>Taitung Spirit</span> <span>Festival</span>",
+                "alt": "Taitung Spirit Festival"
+            },
+            "feature3": {
+                "text": "<span>Slow Food</span><span>Taitung</span>",
+                "alt": "Slow Food Taitung"
+            },
+            "feature4": {
+                "text": "<span>Taiwan</span> <span>PASIWALI</span> <span>Festival<span>",
+                "alt": "Taiwan PASIWALI Festival"
+            },
+            "feature5": {
+                "text": "<span>STARRY</span> <span>TAITUNG</span>",
+                "alt": "STARRY TAITUNG"
+            },
+            "feature6": {
+                "text": "Taiwan International<br>Balloon Festival",
+                "alt": "Taiwan International Balloon Festival"
+            },
+            "feature7": {
+                "text": "Taiwan Open Of Surfing",
+                "alt": "Taiwan Open Of Surfing"
+            },
+            "feature8": {
+                "text": "<span>Moonlit Sea</span> <span>Concert</span>",
+                "alt": "Moonlit Sea Concert"
+            },
+            "feature9": {
+                "text": "Land Art Season",
+                "alt": "Land Art Season"
+            },
+            "feature9back1": "South Link Arts Festival.",
+            "feature9back2": "TECLandArts Festival",
+            "feature9back3": "East Rift Valley Land Art Festival",
+            "feature10": {
+                "text": "Taitung Arts Festival,<br>Taitung Fringe Festival",
+                "alt": "Taitung Arts Festival, Taitung Fringe Festival"
+            },
+            "feature10back1": "Taitung Arts Festival",
+            "feature10back2": "Taitung Fringe Festival",
+            "feature11": {
+                "text": "Chishang Autumn Rice<br>Harvest Arts Festival",
+                "alt": "Chishang Autumn Rice Harvest Arts Festival"
+            },
+            "feature12": {
+                "text": "<span>Taitung Light</span> <span>Festival</span>",
+                "alt": "Taitung Light Festival"
+            }
+        }
     },
     "vi": {
-        "title": "Visual Identity System"
+        "title": "Visual Identity System",
+        "subtitle": "Amazing Taitung",
+        "logoAlt": "2026 TAITUNG EXPO",
+        "introTexts": [
+            "The Taiwan International Hot Air Balloon Festival has become an important annual event in Taitung, with hot air balloons symbolizing the unique charm of this land. From the initial cold inflation and firing of the burner, to the balloon slowly taking shape and rising, this process resembles Taitung's growth trajectory—fermenting, gathering momentum, and finally confidently blooming, soaring in the sky toward infinite possibilities.",
+            "The Taitung Expo logo design centers on this imagery, using the representative \"Taitung Blue\" as the main color, combined with the dynamic beauty of an ascending hot air balloon to cleverly form a visual exclamation mark. This not only showcases Taitung’s vitality and thriving development but also symbolizes the infinite surprises this land holds — magnificent natural landscapes, profound heritage, and unique cultural characteristics, all waiting to be explored, felt, and resonated with."
+        ],
+        "imageryTitle": "LOGO GRAPHIC SYMBOL",
+        "imageryItems": [
+            "Nature’s Nurture",
+            "Culture’s Weave",
+            "<span>Amazing Taitung, </span><span>Radiating Wonder</span>"
+        ]
     },
     "participation": {
-        "title": "Community Participation Plan"
+        "title": "Community Participation Plan",
+        "intro": "The Taitung County Government is launching the \"2026 Taitung Expo Community Participation Zonal Curation Program,\" inviting community and private organizations to co-create a future vision for Taitung through their imagination and interpretations at the Expo.<br>This initiative will follow the Expo's overall implementation framework and echo the United Nations' 17 Sustainable Development Goals (SDGs), seeking forward-thinking and diverse curatorial concepts, through a public call for proposals. At least 12 projects will be selected, with exhibitions scheduled from July 1 to August 31, 2026. Harnessing the curatorial energy of the local community, the program aims to collectively shape a sustainable and vibrant future for Taitung — and to share its creative spirit with the world.",
+        "highlightTitle": "EN亮點預告",
+        "highlightItems": [
+            "EN申請時間：",
+            "EN線上報名表單",
+            "EN紙本及電子資料寄送地址："
+        ],
+        "infoTitle": "EN說明會資訊",
+        "infoItems": [
+            "EN時間：",
+            "EN地點：",
+            "EN報名表單："
+        ],
+        "actionItems": [
+            "Guidelines",
+            "-",
+            "-"
+        ]
     },
     "authorization": {
-        "title": "Brand Authorization"
+        "title": "Brand Authorization",
+        "introTexts": [
+            "To promote the application and value extension of \"2026 Taitung Expo\" brand identity, Taitung County Government has established the \"Brand Trademark Licensing Procedures,\" to create a licensing cooperation mechanism, whereby brands, manufacturers, channels, and enterprises are invited to participate. Through the authorized use of expo logos, standard characters and fonts, auxiliary graphics, and designated colors—the core identity elements—we aim to expand the Expo's social influence, promote industry co-creation and local brand development, and demonstrate Taitung's cultural energy and innovative spirit.",
+            "The licensing mechanism clearly defines application requirements, usage guidelines, and review procedures to ensure the brand identity system’s accuracy and consistency, enhance recognition, and support sustainable development. For detailed regulations, please refer to the \"2026 Taitung Expo Brand Trademark Licensing Procedures\" and the \"2026 Taitung Expo Brand Manual.\""
+        ],
+        "applicationTitle": "Application Information",
+        "applicationItems": [
+            "Application period: From now until September 30, 2025 (Tuesday)",
+            "Online registration form",
+            "Mailing address for hard copy and electronic data: Taitung Expo Project Management Office (No. 478, Bo'ai Road, Taitung City, Taitung County 950)"
+        ],
+        "actionItems": [
+            "Download Licensing Procedures",
+            "Download Brand Manual",
+            "Download Briefing Presentation"
+        ]
     },
     "style": {
         "title": "TAITUNG EXPO Style"
@@ -64,5 +199,113 @@
             "Organizer｜Taitung County Government",
             "Executor｜Wonferful Design Studio"
         ]
+    },
+    "popup": {
+        "0": {
+            "title": "Prologue｜Everything begins when a seed falls to the ground",
+            "desc": "\"Seed\" is called vusam in the Paiwan language, representing the origin and continuation of life and culture, symbolizing inclusiveness, diversity, and hope. Seeds of memory quietly sprout in this fertile soil and continue growing slowly.",
+            "tagsTitle": "Themes",
+            "tags": "Cultural preservation / life preservation",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "【Taitung Time Corridor】——A themed exhibition of Taitung memories and stories, through story collection and old photo solicitation, letting each story continue to speak, keeping Taitung's time flowing.",
+                "【Taitung Endemic Species】——Witnessing the culture and terroir behind Taitung products, becoming highlights in the exhibition venue and surprises on the dining table."
+            ]
+        },
+        "1": {
+            "title": "Chapter 1｜Air, the opportunity for all things to sprout",
+            "desc": "Referencing the Bunun language mihu misang, conveying greetings through air, symbolizing Taitung's purity, freedom, and intangible love.",
+            "tagsTitle": "Themes",
+            "tags": "Air is omnipresent / forest city",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "【Corner Renovation Village Subsidy Program】——Promoting \"Corner Forests\" community greening and beautification, letting cities and nature coexist, building together sustainable and livable settings!"
+            ]
+        },
+        "2": {
+            "title": "Chapter 2｜Water awakens sleeping seeds",
+            "desc": "\"Sea\" in the Amis language is called riyal, symbolizing interaction with the ocean, the life connection of going to the seaside to fish and forage. The Pacific Ocean nourishes Taitung, allowing land, life, culture, and memories to coexist with the tides. Water not only connects mountains and seas, people to people, but also carries ancestral wisdom and deep emotions.",
+            "tagsTitle": "Themes",
+            "tags": "Pacific Kuroshio / Islands are vessels, the sea is a road",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "Covering 【Pan-Pacific International Residency Exchange Exhibition】, 【Taitung’s Maritime Momentum[聶克1] 】and 【Austronesian Living Room】projects, showcasing Taitung's profound Austronesian foundation and oceanic cultural imagination."
+            ]
+        },
+        "3": {
+            "title": "Chapter 3｜Natural power gives courage to break through the earth",
+            "desc": "The mountains and seas of Taitung are shaped by nature’s immense power—and in turn, this land has shaped the resilience of its people. Reverence for nature, living in harmony with it, and drawing sustenance from it form the deepest beliefs rooted here.",
+            "tagsTitle": "Themes",
+            "tags": "Worship, revere and draw from nature",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "From the indigenous wisdom of living in symbiosis with the natural world to immersive cultural experiences, this chapter invites visitors to reconnect body and mind with the earth—listening to its pulse and learning the courage and humility it takes to walk alongside nature."
+            ]
+        },
+        "4": {
+            "title": "Chapter 4｜Sound, the melody resonating with the land",
+            "desc": "From the whispering wind to tribal chants, from children’s laughter to the murmuring of streams—sound is Taitung’s most moving language. It is the rhythm of culture, the symphony of daily life.",
+            "tagsTitle": "Themes",
+            "tags": "The sounds of Taitung / Taitung’s grand record store",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "【Taitung Sound Art Festival】【Music and Art】—— Collecting the diverse sounds of Taitung and presenting them through multiple forms of performance and exhibition, inviting the public to discover Taitung from a fresh perspective and explore the endless possibilities of sound art."
+            ]
+        },
+        "5": {
+            "title": "Chapter 5｜Drift, in search of a place to belong",
+            "desc": "Kulumaha, means \"going home\" in the Bunun language. With open arms, Taitung welcomes every drifting soul. Here, dreams can take root, and both body and spirit find their way home.",
+            "tagsTitle": "Themes",
+            "tags": "Moving forward / returning home, eastward drift",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "【The Emotional Puzzles of Eastward Drifters and Outward Drifters】——Using the life stories of eastward and outward drifters to evoke collective memories of Taitung and explore deep emotional connections between people and land."
+            ]
+        },
+        "6": {
+            "title": "Chapter 6｜Life, blooming freely and fully",
+            "desc": "From every meal to every performance, this chapter covers key aspects of daily life in the region—each moment a reflection of the city’s vision of living well and happiness.",
+            "tagsTitle": "Themes",
+            "tags": "Food & time Taitung / innovative education / safe livable city / arts and performance / social welfare / public infrastructure",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "【Taitung Education Expo】——Feel Taitung's five-sense educational experience resonating with nature.",
+                "【Taitung Baseball Exhibition】——Return to the Taiwan homeland of baseball, see the stories of sweat and dreams behind each ball.",
+                "【Taitung Design Power】——From concept to practice, from ordinary to extraordinary, design is closer to us than we think!",
+                "【Taitung Architecture Exhibition】——From classic modernism to unique local style buildings, embark on an exciting Taitung architectural tour!",
+                "【Taitung’s Old City Area Strolling Plan】——Walk into Taitung's old city streets and alleys, relive classic historical memories, explore the city's sustainable transformation."
+            ]
+        },
+        "7": {
+            "title": "Chapter 7｜Slow economy, Taitung's path to global sustainability",
+            "desc": "Taitung’s one city, two towns, and thirteen townships each serve as independent, self-sufficient laboratories of the slow economy. Using \"slowness\" as a bridge, Taitung connects with the world, while generating unique local value.",
+            "tagsTitle": "Themes",
+            "tags": "One city, two towns, thirteen townships / Taitung International Team / Slow Economy Academy",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "【Slow Economy Township Brand Project】——Creating slow economy experimental fields, from brand creation to sustainable practice, making local values visible."
+            ]
+        },
+        "8": {
+            "title": "Chapter 8｜The Taitung Brand",
+            "desc": "Under the Slow Economy strategy, Taitung has cultivated a brand identity rooted in coexistence with nature and culture—authentic and confident. The Taitung Expo will bring together 12 of the county’s most iconic event brands, showcasing a full and vibrant yearlong calendar for 2026.",
+            "tagsTitle": "Themes",
+            "tags": "Taitung slow economy event brands",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "Connecting the renowned event brands【Bombing of Master Handan】, 【Taitung Spirit Festival】, 【Slow Food Taitung】, 【Taiwan PASIWALI Festival】, 【STARRY TAITUNG】, 【Taiwan International Balloon Festival】, 【Taiwan Open of Surfing】, 【Moonlit Sea Concerts】, 【Land Arts Season】, 【Taitung Arts Festival】, 【Taitung Fringe Festival】, 【Chishang Autumn Rice Harvest Arts Festival】, 【Taitung Light Festival】, giving visitors the chance to experience the immersive charm of the Taitung brand!"
+            ]
+        },
+        "9": {
+            "title": "Chapter 9｜Sustainable Stewardship – Letting Taitung’s Brilliance Shine On",
+            "desc": "Sustainable development is not just a choice, but a responsibility. Taitung responds to the SDGs with concrete actions, crafting an inclusive model for urban-rural development that spans environment, economy and society, making Taitung a place where the spirit of sustainability is truly manifested.",
+            "tagsTitle": "Themes",
+            "tags": "urban-rural development / extreme climate / energy city / active aging and long-term care services / low-carbon tourism",
+            "previewTitle": "Highlights",
+            "previewContent": [
+                "【Taitung Expo Main Exhibition】——Comprehensively presenting the core themes and sustainability vision of the Taitung Expo, showcasing the governance achievements across county departments and local township features to outline a future blueprint for Taitung’s urban and rural growth.",
+                "【Old Railway Station Special Zone Project】——The Taitung County Government is revitalizing the Golden Triangle where Xinsheng Road, Guilin North Road, and Zhonghua Road meet, reshaping this area through spatial reorganization and zoning strategies, blending tourism, leisure, innovation, and commerce. The project extends nighttime activities and promotes the slow economy city brand, creating a vibrant and diverse \"Old Railway Station Special Zone.\""
+            ]
+        }
     }
 }
