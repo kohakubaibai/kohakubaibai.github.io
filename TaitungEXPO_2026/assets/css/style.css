@@ -333,6 +333,20 @@ body.openNav, body.openPopup {
             flex-direction: row;
   }
 }
+.l-header__toggler .menuSwitcher {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.l-header__toggler .menuSwitcher:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+@media not screen and (hover: hover) {
+  .l-header__toggler .menuSwitcher:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .l-header__logo .logoItem {
   width: 8.125rem;
 }
@@ -354,12 +368,24 @@ body.openNav, body.openPopup {
   border-radius: 1.875rem;
   width: 3.125rem;
   height: 1.875rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 @media (min-width: 769px) {
   .l-header__lang .lang-btn {
     font-size: 1rem;
     width: 5.25rem;
     height: 2.25rem;
+  }
+}
+.l-header__lang .lang-btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+@media not screen and (hover: hover) {
+  .l-header__lang .lang-btn:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -423,6 +449,20 @@ body.openNav, body.openPopup {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+.l-nav .navWrap .navToggler .menuSwitcher {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.l-nav .navWrap .navToggler .menuSwitcher:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+@media not screen and (hover: hover) {
+  .l-nav .navWrap .navToggler .menuSwitcher:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 .l-nav .navbar {
   -ms-flex-item-align: start;
@@ -2233,6 +2273,7 @@ h6 {
 
 .popupBox {
   width: calc(100% - 1.875rem);
+  max-width: 48.8125rem;
   position: absolute;
   top: 50%;
   left: 50%;

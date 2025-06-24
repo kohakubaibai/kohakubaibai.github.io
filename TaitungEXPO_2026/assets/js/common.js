@@ -952,8 +952,7 @@ $(document).ready(function () {
 				scrollTop: ($(hash).offset().top) - (headerH + 50)
 			}, 800);
 
-			$(".js-navbar").removeClass("is-open");
-			$(".js-menuToggler").removeClass('is-active');
+			$(".js-navigation").removeClass("is-open");
 			$('body').removeClass('openNav');
 		} // End if
 	});

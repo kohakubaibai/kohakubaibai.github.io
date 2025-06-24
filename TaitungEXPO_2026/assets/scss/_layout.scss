@@ -145,6 +145,19 @@ body {
 	}
 
 	&__toggler {
+		.menuSwitcher {
+			@include transition(all, .3s, ease-in);
+
+			&:hover {
+				@include scale(1.05);
+			}
+
+			@include rwd-not-hover {
+				&:hover {
+					@include scale(1);
+				}
+			}
+		}
 	}
 
 	&__logo {
@@ -172,11 +185,22 @@ body {
 			border-radius: rem(30);
 			width: rem(50);
 			height: rem(30);
+			@include transition(all, .3s, ease-in);
 
 			@include rwd-min(769px) {
 				font-size: rem(16);
 				width: rem(84);
 				height: rem(36);
+			}
+
+			&:hover {
+				@include scale(1.05);
+			}
+
+			@include rwd-not-hover {
+				&:hover {
+					@include scale(1);
+				}
 			}
 		}
 	}
@@ -225,6 +249,20 @@ body {
 			display: flex;
 			justify-items: flex-end;
 			flex-direction: row-reverse;
+
+			.menuSwitcher {
+				@include transition(all, .3s, ease-in);
+
+				&:hover {
+					@include scale(1.05);
+				}
+
+				@include rwd-not-hover {
+					&:hover {
+						@include scale(1);
+					}
+				}
+			}
 		}
 	}
 
