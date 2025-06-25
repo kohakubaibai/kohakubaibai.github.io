@@ -1,6 +1,6 @@
 {
     "nav": {
-        "anchor1": "about Taitung Expo",
+        "anchor1": "About Taitung Expo",
         "anchor2": "Latest News",
         "anchor3": "Expo Event Table",
         "anchor4": "Highlights Preview",
@@ -40,17 +40,31 @@
                 "imgAlt": "台東博覽會最新消息1",
                 "date": "2024.12.15",
                 "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
-                "location": "台東縣政府",
+                "desc": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
                 "url": "#"
             },
             {
                 "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "台東博覽會最新消息1",
+                "imgAlt": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
                 "date": "2024.12.15",
                 "title": "2026台東博覽會正式啟動",
                 "desc": "台東縣政府宣布...",
-                "location": "台東縣政府",
+                "url": "#"
+            },
+            {
+                "imgSrc": "assets/images/img_fake-2.jpg",
+                "imgAlt": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
+                "date": "2024.12.15",
+                "title": "2026台東博覽會正式啟動",
+                "desc": "台東縣政府宣布...",
+                "url": "#"
+            },
+            {
+                "imgSrc": "assets/images/img_fake-2.jpg",
+                "imgAlt": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
+                "date": "2024.12.15",
+                "title": "2026台東博覽會正式啟動",
+                "desc": "台東縣政府宣布...",
                 "url": "#"
             }
         ]
@@ -59,10 +73,37 @@
         "title": "Expo Event Table",
         "eventData": [
             {
-                "imgSrc": "assets/images/img_fake-1.jpg",
+                "imgSrc": "assets/images/event/img_event-1.png",
                 "imgAlt": "Taiwan International Balloon Festival",
                 "date": "2025.7.5-8.21",
                 "title": "Taiwan International Balloon Festival",
+                "desc": "",
+                "location": "Luye Highland",
+                "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "sample: Taiwan International Balloon Festival",
+                "date": "2025.7.5-8.21",
+                "title": "sample: Taiwan International Balloon Festival",
+                "desc": "",
+                "location": "Luye Highland",
+                "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "sample: Taiwan International Balloon Festival",
+                "date": "2025.7.5-8.21",
+                "title": "sample: Taiwan International Balloon Festival",
+                "desc": "",
+                "location": "Luye Highland",
+                "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "sample: Taiwan International Balloon Festival",
+                "date": "2025.7.5-8.21",
+                "title": "sample: Taiwan International Balloon Festival",
                 "desc": "",
                 "location": "Luye Highland",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
@@ -101,8 +142,8 @@
                 "alt": "Taiwan International Balloon Festival"
             },
             "feature7": {
-                "text": "Taiwan Open Of Surfing",
-                "alt": "Taiwan Open Of Surfing"
+                "text": "Taiwan Open of Surfing",
+                "alt": "Taiwan Open of Surfing"
             },
             "feature8": {
                 "text": "<span>Moonlit Sea</span> <span>Concert</span>",
@@ -139,7 +180,7 @@
             "The Taiwan International Hot Air Balloon Festival has become an important annual event in Taitung, with hot air balloons symbolizing the unique charm of this land. From the initial cold inflation and firing of the burner, to the balloon slowly taking shape and rising, this process resembles Taitung's growth trajectory—fermenting, gathering momentum, and finally confidently blooming, soaring in the sky toward infinite possibilities.",
             "The Taitung Expo logo design centers on this imagery, using the representative \"Taitung Blue\" as the main color, combined with the dynamic beauty of an ascending hot air balloon to cleverly form a visual exclamation mark. This not only showcases Taitung’s vitality and thriving development but also symbolizes the infinite surprises this land holds — magnificent natural landscapes, profound heritage, and unique cultural characteristics, all waiting to be explored, felt, and resonated with."
         ],
-        "imageryTitle": "LOGO GRAPHIC SYMBOL",
+        "imageryTitle": "LOGO GRAPHIC SYMBOLS",
         "imageryItems": [
             "Nature’s Nurture",
             "Culture’s Weave",
@@ -148,7 +189,7 @@
     },
     "participation": {
         "title": "Community Participation Plan",
-        "intro": "The Taitung County Government is launching the \"2026 Taitung Expo Community Participation Zonal Curation Program,\" inviting community and private organizations to co-create a future vision for Taitung through their imagination and interpretations at the Expo.<br>This initiative will follow the Expo's overall implementation framework and echo the United Nations' 17 Sustainable Development Goals (SDGs), seeking forward-thinking and diverse curatorial concepts, through a public call for proposals. At least 12 projects will be selected, with exhibitions scheduled from July 1 to August 31, 2026. Harnessing the curatorial energy of the local community, the program aims to collectively shape a sustainable and vibrant future for Taitung — and to share its creative spirit with the world.",
+        "intro": "The Taitung County Government is launching the \"2026 Taitung Expo Community Participation Plan,\" inviting community and private organizations to co-create a future vision for Taitung through their imagination and interpretations at the Expo.<br>This initiative will follow the Expo's overall implementation framework and echo the United Nations' 17 Sustainable Development Goals (SDGs), seeking forward-thinking and diverse curatorial concepts, through a public call for proposals. At least 12 projects will be selected, with exhibitions scheduled from July 1 to August 31, 2026. Harnessing the curatorial energy of the local community, the program aims to collectively shape a sustainable and vibrant future for Taitung — and to share its creative spirit with the world.",
         "highlightTitle": "EN亮點預告",
         "highlightItems": [
             "EN申請時間：",
@@ -176,8 +217,8 @@
         "applicationTitle": "Application Information",
         "applicationItems": [
             "Application period: From now until September 30, 2025 (Tuesday)",
-            "Online registration form",
-            "Mailing address for hard copy and electronic data: Taitung Expo Project Management Office (No. 478, Bo'ai Road, Taitung City, Taitung County 950)"
+            "<a href=\"https://forms.gle/ddYC65vRZMA3ZrDc8\" target=\"_blank\">Online registration form</a>",
+            "Mailing address for hard copy and electronic data: No. 478, Bo'ai Road, Taitung City, Taitung County 950 / <a href=\"mailto:info@taitungexpo2026.com.tw\">info@taitungexpo2026.com.tw</a>"
         ],
         "actionItems": [
             "Download Licensing Procedures",
@@ -192,12 +233,13 @@
         "department": "2026 Taitung Expo Office",
         "info": [
             "Email: <a href=\"mailto:info@taitungexpo2026.com.tw\">info@taitungexpo2026.com.tw</a>",
+            "Official Line:<a href=\"https://lin.ee/xC0cxGi\">@ttexpo</a>",
             "Service hours: Monday to Friday, 9:00-18:00"
         ],
         "sectors": [
-            "Guiding unit｜National Development Council, Ministry of Culture Taiwan (R.O.C.) ",
-            "Organizer｜Taitung County Government",
-            "Executor｜Wonferful Design Studio"
+            "Supervised by the National Development Council and Ministry of Culture Taiwan (R.O.C.) ",
+            "Organized by Taitung County Government",
+            "Executed by Wonderful Design Studio"
         ]
     },
     "popup": {
@@ -229,7 +271,7 @@
             "tags": "Pacific Kuroshio / Islands are vessels, the sea is a road",
             "previewTitle": "Highlights",
             "previewContent": [
-                "Covering 【Pan-Pacific International Residency Exchange Exhibition】, 【Taitung’s Maritime Momentum[聶克1] 】and 【Austronesian Living Room】projects, showcasing Taitung's profound Austronesian foundation and oceanic cultural imagination."
+                "Covering 【Pan-Pacific International Residency Exchange Exhibition】, 【Taitung’s Maritime Momentum 】and 【Austronesian Living Room】projects, showcasing Taitung's profound Austronesian foundation and oceanic cultural imagination."
             ]
         },
         "3": {

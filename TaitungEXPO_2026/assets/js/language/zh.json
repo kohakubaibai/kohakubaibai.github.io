@@ -4,7 +4,7 @@
         "anchor2": "最新消息",
         "anchor3": "東博活動表",
         "anchor4": "活動預告",
-        "anchor5": "視覺識別系統",
+        "anchor5": "品牌視覺系統",
         "anchor6": "民間參與計畫",
         "anchor7": "品牌授權專區",
         "anchor8": "東博Style",
@@ -13,7 +13,7 @@
     "opening": {
         "introTexts": [
             "在台東，「慢」不只是速度，更是一種選擇——選擇與自然共生，與土地共鳴的生活哲學。",
-            "2026 台東博覽會，以「慢經濟」為策展核心，以「台東藍」為視覺語言，融合南島文化精神與永續發展願景，鋪展山之路、海之路，到通往世界之路的未來藍圖。",
+            "2026 台東博覽會，以「慢經濟」為策展核心，綻放「台東藍」為願景，融合南島文化精神與永續發展願景，鋪展山之路、海之路，到通往世界之路的未來藍圖。",
             "誠摯邀請每一位踏上台東的人，放慢腳步，品味這片土地的靜謐與豐盛，找回生活最純粹的節奏。"
         ]
     },
@@ -50,6 +50,22 @@
                 "title": "2026台東博覽會正式啟動",
                 "desc": "台東縣政府宣布...",
                 "url": "#"
+            },
+            {
+                "imgSrc": "assets/images/img_fake-2.jpg",
+                "imgAlt": "台東博覽會最新消息1",
+                "date": "2024.12.15",
+                "title": "2026台東博覽會正式啟動",
+                "desc": "台東縣政府宣布...",
+                "url": "#"
+            },
+            {
+                "imgSrc": "assets/images/img_fake-2.jpg",
+                "imgAlt": "台東博覽會最新消息1",
+                "date": "2024.12.15",
+                "title": "2026台東博覽會正式啟動",
+                "desc": "台東縣政府宣布...",
+                "url": "#"
             }
         ]
     },
@@ -57,7 +73,7 @@
         "title": "台東博覽會活動表",
         "eventData": [
             {
-                "imgSrc": "assets/images/img_fake-1.jpg",
+                "imgSrc": "assets/images/event/img_event-1.png",
                 "imgAlt": "臺灣國際熱氣球嘉年華",
                 "date": "2025.7.5-8.21",
                 "title": "臺灣國際熱氣球嘉年華",
@@ -66,28 +82,28 @@
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
             },
             {
-                "imgSrc": "assets/images/img_fake-1.jpg",
-                "imgAlt": "臺灣國際熱氣球嘉年華",
+                "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "示意：臺灣國際熱氣球嘉年華",
                 "date": "2025.7.5-8.21",
-                "title": "臺灣國際熱氣球嘉年華",
+                "title": "示意：臺灣國際熱氣球嘉年華",
                 "desc": "",
                 "location": "台東鹿野高台",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
             },
             {
-                "imgSrc": "assets/images/img_fake-1.jpg",
-                "imgAlt": "臺灣國際熱氣球嘉年華",
+                "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "示意：臺灣國際熱氣球嘉年華",
                 "date": "2025.7.5-8.21",
-                "title": "臺灣國際熱氣球嘉年華",
+                "title": "示意：臺灣國際熱氣球嘉年華",
                 "desc": "",
                 "location": "台東鹿野高台",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
             },
             {
-                "imgSrc": "assets/images/img_fake-1.jpg",
-                "imgAlt": "臺灣國際熱氣球嘉年華",
+                "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "示意：臺灣國際熱氣球嘉年華",
                 "date": "2025.7.5-8.21",
-                "title": "臺灣國際熱氣球嘉年華",
+                "title": "示意：臺灣國際熱氣球嘉年華",
                 "desc": "",
                 "location": "台東鹿野高台",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
@@ -95,8 +111,8 @@
         ]
     },
     "preview": {
-        "curatingTitle1": "10大策展議題 X 超過13場大型展覽與活動<br>X 台東12知名活動品牌聯動",
-        "curatingTitle2": "2026年，邀您一起體驗台東的多元精彩！",
+        "curatingTitle1": "<span>10大策展議題 X </span><span>超過13場大型展覽與活動 <i class=\"break-mb\">X</i> </span><br class=\"display--pc\"><i class=\"break-pc\">X</i> 台東12知名活動品牌聯動",
+        "curatingTitle2": "<span><i class=\"break-mb\">——</i>2026年，邀您一起體驗</span><span>台東的多元精彩！</span>",
         "curatingIntro": "由一顆落下台東土地的慢經濟種子開始，向下扎根，向上展望，逐漸萌芽、延展出「空氣」、「水」、「自然力量」、「聲音」、「漂流」、「生活」、「慢經濟體」、「台東品牌」與「永續台東」等策展議題，一層層勾勒出台東獨有的慢經濟想像藍圖。",
         "curatingHint": "點擊策展議題查看詳情",
         "featuresTitle": "串連台東山海與特色活動品牌<br>打造整年度的精彩！",
@@ -157,7 +173,7 @@
         }
     },
     "vi": {
-        "title": "視覺識別系統",
+        "title": "品牌視覺系統",
         "subtitle": "Amazing Taitung",
         "logoAlt": "台東博覽會 2026 TAITUNG EXPO",
         "introTexts": [
@@ -173,8 +189,8 @@
     },
     "participation": {
         "title": "民間參與計畫",
-        "intro": "臺東縣政府推出「2026台東博覽會民間參與分區策展計畫」，邀請當地民間團體共同創造台東未來願景，透過創意實現對「台東博覽會」的獨特想像。本計畫將依循博覽會整體執行架構，並呼應聯合國17項永續發展目標（SDGs），公開徵選具前瞻性與多元觀點的策展提案。預計遴選至少12件，展期自115年7月1日至8月31日，透過民間的策展能量，共同勾勒台東多元而永續的未來藍圖，讓世界看見台東的創意與行動力！",
-        "highlightTitle": "亮點預告",
+        "intro": "臺東縣政府推出「2026台東博覽會民間參與計畫」，邀請當地民間團體共同創造台東未來願景，透過創意實現對「台東博覽會」的獨特想像。本計畫將依循博覽會整體執行架構，並呼應聯合國17項永續發展目標（SDGs），公開徵選具前瞻性與多元觀點的策展提案。預計遴選至少12件，展期自115年7月1日至8月31日，透過民間的策展能量，共同勾勒台東多元而永續的未來藍圖，讓世界看見台東的創意與行動力！",
+        "highlightTitle": "申請資訊",
         "highlightItems": [
             "申請時間：",
             "線上報名表單",
@@ -201,8 +217,8 @@
         "applicationTitle": "申請資訊",
         "applicationItems": [
             "申請時間：即日起至114年9月30日（二）止",
-            "線上報名表單",
-            "紙本及電子資料寄送地址：台東博覽會專案管理辦公室（950臺東縣臺東市博愛路478號）"
+            "<a href=\"https://forms.gle/ddYC65vRZMA3ZrDc8\" target=\"_blank\">線上報名表單</a>",
+            "紙本及電子資料寄送地址：950臺東縣臺東市博愛路478號 / <a href=\"mailto:info@taitungexpo2026.com.tw\">info@taitungexpo2026.com.tw</a>"
         ],
         "actionItems": [
             "作業辦法",
@@ -217,6 +233,7 @@
         "department": "2026台東博覽會-專案管理辦公室",
         "info": [
             "電子郵件：<a href=\"mailto:info@taitungexpo2026.com.tw\">info@taitungexpo2026.com.tw</a>",
+            "官方LINE:<a href=\"https://lin.ee/xC0cxGi\">@ttexpo</a>",
             "服務時間：週一至週五，9:00-18:00"
         ],
         "sectors": [
