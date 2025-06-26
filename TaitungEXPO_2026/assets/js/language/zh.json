@@ -37,34 +37,34 @@
         "newsData": [
             {
                 "imgSrc": "assets/images/img_fake-1.jpg",
-                "imgAlt": "台東博覽會最新消息1",
+                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
                 "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
+                "title": "台東博覽會最新消息1假字假字假字假字假字",
+                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
                 "url": "#"
             },
             {
                 "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "台東博覽會最新消息1",
+                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
                 "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
+                "title": "台東博覽會最新消息1假字假字假字假字假字",
+                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
                 "url": "#"
             },
             {
                 "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "台東博覽會最新消息1",
+                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
                 "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
+                "title": "台東博覽會最新消息1假字假字假字假字假字",
+                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
                 "url": "#"
             },
             {
                 "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "台東博覽會最新消息1",
+                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
                 "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
+                "title": "台東博覽會最新消息1假字假字假字假字假字",
+                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
                 "url": "#"
             }
         ]
@@ -83,27 +83,27 @@
             },
             {
                 "imgSrc": "assets/images/event/img_event-1.png",
-                "imgAlt": "示意：臺灣國際熱氣球嘉年華",
+                "imgAlt": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
                 "date": "2025.7.5-8.21",
-                "title": "示意：臺灣國際熱氣球嘉年華",
-                "desc": "",
+                "title": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
+                "desc": "敘述文字",
                 "location": "台東鹿野高台",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
             },
             {
                 "imgSrc": "assets/images/event/img_event-1.png",
-                "imgAlt": "示意：臺灣國際熱氣球嘉年華",
+                "imgAlt": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
                 "date": "2025.7.5-8.21",
-                "title": "示意：臺灣國際熱氣球嘉年華",
-                "desc": "",
+                "title": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
+                "desc": "敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字敘述文字",
                 "location": "台東鹿野高台",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
             },
             {
                 "imgSrc": "assets/images/event/img_event-1.png",
-                "imgAlt": "示意：臺灣國際熱氣球嘉年華",
+                "imgAlt": "一二三四五六七八九十一二三四五",
                 "date": "2025.7.5-8.21",
-                "title": "示意：臺灣國際熱氣球嘉年華",
+                "title": "一二三四五六七八九十",
                 "desc": "",
                 "location": "台東鹿野高台",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
@@ -217,7 +217,7 @@
         "applicationTitle": "申請資訊",
         "applicationItems": [
             "申請時間：即日起至114年9月30日（二）止",
-            "<a href=\"https://forms.gle/ddYC65vRZMA3ZrDc8\" target=\"_blank\">線上報名表單</a>",
+            "<a href=\"https://forms.gle/ddYC65vRZMA3ZrDc8\" class=\"f-underline\" target=\"_blank\">線上報名表單</a>",
             "紙本及電子資料寄送地址：950臺東縣臺東市博愛路478號 / <a href=\"mailto:info@taitungexpo2026.com.tw\">info@taitungexpo2026.com.tw</a>"
         ],
         "actionItems": [
