@@ -45,7 +45,7 @@ class LanguageSwitcher {
         this.updateParticipationSection();
         this.updateAuthorizationSection();
         this.updateStyleSection();
-        this.updateNewsSection();
+        // this.updateNewsSection();
         this.updateEventSection();
         this.updateContactSection();
         this.updatePopupSection();
@@ -90,7 +90,7 @@ class LanguageSwitcher {
                 this.updateOpeningSection();
                 this.updateAboutSection();
                 this.updateEventSection();
-                this.updateNewsSection();
+                // this.updateNewsSection();
 				this.updatePreviewSection();
                 this.updateViSection();
                 this.updateParticipationSection();
