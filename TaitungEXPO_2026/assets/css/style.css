@@ -1049,12 +1049,15 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 2.5rem;
+  padding: 2.5rem 1.875rem 0;
 }
 @media (min-width: 769px) {
   .opening .hero__wrap--layer2 {
-    padding-top: 3.75rem;
+    padding: 3.75rem 0 0;
   }
+}
+.opening .hero__wrap--layer2 .container {
+  position: relative;
 }
 .opening .hero__layer--1 {
   position: absolute;
@@ -1073,8 +1076,25 @@ h6 {
     background-image: url("../images/opening/layer_2-pc.svg");
   }
 }
-.opening .hero__layer--2 img {
+.opening .hero__layer--2 {
+  position: absolute;
   width: 100%;
+  left: 0;
+}
+.opening .hero__layer--2:before {
+  content: "";
+  display: block;
+  padding-top: 55.5357142857%;
+}
+.opening .hero__layer--2 img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 769px) {
   .opening .hero__layer--2 {
