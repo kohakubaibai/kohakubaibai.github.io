@@ -2095,6 +2095,12 @@ h6 {
         -ms-flex: 0 0 62%;
             flex: 0 0 62%;
     max-width: 575px;
+    padding-right: 1.25rem;
+  }
+}
+@media (min-width: 1025px) {
+  .section--participation .imgTextFlex .imgTextFlex__text {
+    padding-right: 0;
   }
 }
 .section--participation .rule__title {
@@ -2238,6 +2244,12 @@ h6 {
         -ms-flex: 0 0 62%;
             flex: 0 0 62%;
     max-width: 575px;
+    padding-right: 1.25rem;
+  }
+}
+@media (min-width: 1025px) {
+  .section--authorization .imgTextFlex .imgTextFlex__text {
+    padding-right: 0;
   }
 }
 .section--authorization .rule__title {

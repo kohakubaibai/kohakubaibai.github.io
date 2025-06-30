@@ -1389,6 +1389,13 @@ h6 {
 			.imgTextFlex__text {
 				flex: 0 0 62%;
 				max-width: 575px;
+				padding-right: rem(20);
+			}
+		}
+
+		@include rwd-min(1025px) {
+			.imgTextFlex__text {
+				padding-right: 0;
 			}
 		}
 	}
@@ -1535,6 +1542,13 @@ h6 {
 			.imgTextFlex__text {
 				flex: 0 0 62%;
 				max-width: 575px;
+				padding-right: rem(20);
+			}
+		}
+
+		@include rwd-min(1025px) {
+			.imgTextFlex__text {
+				padding-right: 0;
 			}
 		}
 	}
