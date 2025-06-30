@@ -1,0 +1,151 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import 'variables';
+@import 'mixin';
+@import 'normalize';
+@import 'layout';
+@import 'button';
+
+$path: '../images';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+.f-underline {
+	text-decoration: underline;
+}
+
+.page {
+	scroll-behavior: smooth;
+	max-width: 1920px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.main {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+.question {
+	font-size: 18px;
+	font-weight: 600;
+	color: #2c3e50;
+	margin-bottom: 15px;
+}
+
+.answer {
+	ul {
+		@include list-reset;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	li {
+		flex: 1;
+		min-width: 120px;
+	}
+
+	input[type="radio"] {
+		display: none;
+
+		&:checked {
+			& + label {
+				background: #e3f2fd;
+				border-color: #2196f3;
+			}
+		}
+	}
+
+	label {
+		display: block;
+		padding: 12px 15px;
+		background: #f8f9fa;
+		border: 2px solid #e9ecef;
+		border-radius: 8px;
+		text-align: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		font-weight: 500;
+
+		&:hover {
+			background: #e3f2fd;
+			border-color: #2196f3;
+		}
+	}
+}
+
+.submit-section {
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 2px solid #e9ecef;
+}
+
+.submit-btn {
+	color: $dark;
+	background-color: transparent;
+	border: 2px solid $dark;
+	padding: 15px 40px;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		@include scale(1.02);
+	}
+}
+
+.result {
+	display: none;
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding: 25px;
+	border-radius: 10px;
+	text-align: center;
+
+	.resultDescription {
+		text-align: left;
+	}
+
+	&.low {
+		background: linear-gradient(180deg, #a8edea 0%, #fed6e3 100%);
+		color: $dark;
+	}
+	&.medium {
+		background: linear-gradient(180deg, #ffd099 0%, #fed6e3 100%);
+		color: $dark;
+	}
+	&.high {
+		background: linear-gradient(180deg, #ffecd2 0%, #fcb69f 100%);
+		color: $dark;
+	}
+	&.over {
+		background: linear-gradient(180deg, #ff9a9e 0%, #fecfef 100%);
+		color: $dark;
+	}
+}
