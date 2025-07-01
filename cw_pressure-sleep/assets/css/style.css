@@ -718,7 +718,7 @@ h2 {
 }
 
 .navigation {
-  width: 680px;
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
