@@ -379,16 +379,19 @@ class LanguageSwitcher {
             featuresTitle.innerHTML = previewData.featuresTitle;
         }
 
-		if (previewData.features) {
+        if (previewData.features) {
             document.querySelectorAll('.featuresList [data-json-key]').forEach(element => {
                 const jsonKey = element.getAttribute('data-json-key');
                 const featureData = previewData.features[jsonKey];
 
                 if (!featureData) return;
 
+                // 处理 alt 属性
                 if (typeof featureData === 'object' && featureData.alt) {
-					element.alt = featureData.alt;
-				}
+                    element.alt = featureData.alt;
+                }
+
+                // 处理文本内容
                 if (element.classList.contains('featureText') || element.tagName === 'A' || element.tagName === 'DIV') {
                     if (typeof featureData === 'object' && featureData.text) {
                         element.innerHTML = featureData.text;
@@ -396,6 +399,30 @@ class LanguageSwitcher {
                     if (typeof featureData === 'string') {
                         element.innerHTML = featureData;
                     }
+                }
+
+                // 处理链接 href 属性
+                if (element.tagName === 'A') {
+                    if (typeof featureData === 'object' && featureData.href) {
+                        element.href = featureData.href;
+                    }
+                }
+
+                // 新增：处理多链接情况
+                if (element.hasAttribute('data-links-container') && typeof featureData === 'object' && featureData.links && Array.isArray(featureData.links)) {
+                    // 清空现有内容
+                    element.innerHTML = '';
+
+                    // 动态创建新的链接
+                    featureData.links.forEach((link, index) => {
+                        const linkElement = document.createElement('a');
+                        linkElement.href = link.href;
+                        linkElement.target = '_blank';
+                        linkElement.rel = 'noopener noreferrer';
+                        linkElement.textContent = link.text;
+                        linkElement.setAttribute('data-link-index', index);
+                        element.appendChild(linkElement);
+                    });
                 }
             });
         }

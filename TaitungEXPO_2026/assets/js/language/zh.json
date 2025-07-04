@@ -13,7 +13,7 @@
     "opening": {
         "introTexts": [
             "在台東，「慢」不只是速度，更是一種選擇——選擇與自然共生，與土地共鳴的生活哲學。",
-            "2026 台東博覽會，以「慢經濟」為策展核心，綻放「台東藍」為願景，融合南島文化精神與永續發展願景，鋪展山之路、海之路，到通往世界之路的未來藍圖。",
+            "2026 台東博覽會，以「慢經濟」為策展核心，綻放「台東藍」為願景，融合南島文化精神與永續發展理念，鋪展山之路、海之路，到通往世界之路的未來藍圖。",
             "誠摯邀請每一位踏上台東的人，放慢腳步，品味這片土地的靜謐與豐盛，找回生活最純粹的節奏。"
         ]
     },
@@ -92,56 +92,81 @@
         "features": {
             "feature1": {
                 "text": "台灣炮炸<br>寒單爺",
-                "alt": "台灣炮炸寒單爺"
+                "alt": "台灣炮炸寒單爺",
+                "href": "https://ttca.taitung.gov.tw"
             },
             "feature2": {
                 "text": "自然醒<br>慢活祭",
-                "alt": "自然醒慢活祭"
+                "alt": "自然醒慢活祭",
+                "href": "https://www.taitungspiritfestival.tw"
             },
             "feature3": {
                 "text": "臺東慢食節",
-                "alt": "臺東慢食節"
+                "alt": "臺東慢食節",
+                "href": "https://slowfoodtaitung.tw/festival"
             },
             "feature4": {
                 "text": "PASIWALI<br>原住民族<br>國際音樂節",
-                "alt": "PASIWALI原住民族國際音樂節"
+                "alt": "PASIWALI原住民族國際音樂節",
+                "href": "https://taiwanpasiwalifestival.com"
             },
             "feature5": {
                 "text": "台東<br>最美星空",
-                "alt": "台東最美星空"
+                "alt": "台東最美星空",
+                "href": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
             },
             "feature6": {
                 "text": "臺灣國際<br>熱氣球嘉年華",
-                "alt": "臺灣國際熱氣球嘉年華"
+                "alt": "臺灣國際熱氣球嘉年華",
+                "href": "https://balloontaiwan.taitung.gov.tw/zh-tw "
             },
             "feature7": {
                 "text": "臺灣國際<br>衝浪公開賽",
-                "alt": "臺灣國際衝浪公開賽"
+                "alt": "臺灣國際衝浪公開賽",
+                "href": "https://www.facebook.com/taiwanopenofsurfing/"
             },
             "feature8": {
-                "text": "月光・海<br>音樂會",
-                "alt": "月光・海音樂會"
+                "text": "東海岸<br>大地藝術節",
+                "alt": "東海岸大地藝術節",
+                "href": "https://www.eastcoast-nsa.gov.tw/teclandart/"
             },
             "feature9": {
-                "text": "大地藝術季",
-                "alt": "大地藝術季"
+                "text": "南迴藝術季<br>縱谷大地藝術季",
+                "alt": "南迴藝術季 縱谷大地藝術季",
+                "links": [
+                    {
+                        "text": "南迴藝術季",
+                        "href": "https://www.facebook.com/NanhuiArtProject/?locale=zh_TW"
+                    },
+                    {
+                        "text": "縱谷大地藝術季",
+                        "href": "https://www.pioneeringeastriftvalleygranaryfestivities.com.tw"
+                    }
+                ]
             },
-            "feature9back1": "南迴藝術季",
-            "feature9back2": "東海岸大地藝術節",
-            "feature9back3": "縱谷大地藝術季",
             "feature10": {
                 "text": "臺東藝術節<br>臺東藝穗節",
-                "alt": "臺東藝術節 臺東藝穗節"
+                "alt": "臺東藝術節 臺東藝穗節",
+                "links": [
+                    {
+                        "text": "臺東藝術節",
+                        "href": "https://www.facebook.com/Taitungartsfestival/?locale=zh_TW"
+                    },
+                    {
+                        "text": "臺東藝穗節",
+                        "href": "https://www.taitungfringefestival.com"
+                    }
+                ]
             },
-            "feature10back1": "臺東藝術節",
-            "feature10back2": "臺東藝穗節",
             "feature11": {
                 "text": "池上秋收<br>稻穗藝術節",
-                "alt": "池上秋收稻穗藝術節"
+                "alt": "池上秋收稻穗藝術節",
+                "href": "https://www.facebook.com/Chishangarts.org"
             },
             "feature12": {
                 "text": "台東光祭",
-                "alt": "台東光祭"
+                "alt": "台東光祭",
+                "href": "https://www.facebook.com/TaitungLightFestival/?locale=zh_TW"
             }
         }
     },

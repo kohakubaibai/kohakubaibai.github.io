@@ -92,56 +92,81 @@
         "features": {
             "feature1": {
                 "text": "Bombing of Master<br>Handan Festival",
-                "alt": "Bombing of Master Handan Festival"
+                "alt": "Bombing of Master Handan Festival",
+                "href": "https://ttca.taitung.gov.tw"
             },
             "feature2": {
                 "text": "<span>Taitung Spirit</span> <span>Festival</span>",
-                "alt": "Taitung Spirit Festival"
+                "alt": "Taitung Spirit Festival",
+                "href": "https://www.taitungspiritfestival.tw"
             },
             "feature3": {
                 "text": "<span>Slow Food</span><span>Taitung</span>",
-                "alt": "Slow Food Taitung"
+                "alt": "Slow Food Taitung",
+                "href": "https://slowfoodtaitung.tw/en/festival"
             },
             "feature4": {
                 "text": "<span>Taiwan</span> <span>PASIWALI</span> <span>Festival<span>",
-                "alt": "Taiwan PASIWALI Festival"
+                "alt": "Taiwan PASIWALI Festival",
+                "href": "https://taiwanpasiwalifestival.com/en/home/"
             },
             "feature5": {
                 "text": "<span>STARRY</span> <span>TAITUNG</span>",
-                "alt": "STARRY TAITUNG"
+                "alt": "STARRY TAITUNG",
+                "href": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
             },
             "feature6": {
                 "text": "Taiwan International<br>Balloon Festival",
-                "alt": "Taiwan International Balloon Festival"
+                "alt": "Taiwan International Balloon Festival",
+                "href": "https://balloontaiwan.taitung.gov.tw/zh-tw "
             },
             "feature7": {
                 "text": "Taiwan Open of Surfing",
-                "alt": "Taiwan Open of Surfing"
+                "alt": "Taiwan Open of Surfing",
+                "href": "https://www.facebook.com/taiwanopenofsurfing/"
             },
             "feature8": {
-                "text": "<span>Moonlit Sea</span> <span>Concert</span>",
-                "alt": "Moonlit Sea Concert"
+                "text": "<span>TECLandArts</span> <span>Festival</span>",
+                "alt": "TECLandArts Festival",
+                "href": "https://www.eastcoast-nsa.gov.tw/teclandart/en/"
             },
             "feature9": {
-                "text": "Land Art Season",
-                "alt": "Land Art Season"
+                "text": "South Link Arts Festival,<br>East Rift Valley Land Art Festival",
+                "alt": "South Link Arts Festival, East Rift Valley Land Art Festival",
+                "links": [
+                    {
+                        "text": "<span>South Link Arts Festival</span>",
+                        "href": "https://www.facebook.com/NanhuiArtProject/?locale=zh_TW"
+                    },
+                    {
+                        "text": "East Rift Valley Land Art Festival",
+                        "href": "https://www.pioneeringeastriftvalleygranaryfestivities.com.tw"
+                    }
+                ]
             },
-            "feature9back1": "South Link Arts Festival.",
-            "feature9back2": "TECLandArts Festival",
-            "feature9back3": "East Rift Valley Land Art Festival",
             "feature10": {
                 "text": "Taitung Arts Festival,<br>Taitung Fringe Festival",
-                "alt": "Taitung Arts Festival, Taitung Fringe Festival"
+                "alt": "Taitung Arts Festival, Taitung Fringe Festival",
+                "links": [
+                    {
+                        "text": "Taitung Arts Festival",
+                        "href": "https://www.facebook.com/Taitungartsfestival/?locale=zh_TW"
+                    },
+                    {
+                        "text": "Taitung Fringe Festival",
+                        "href": "https://www.taitungfringefestival.com"
+                    }
+                ]
             },
-            "feature10back1": "Taitung Arts Festival",
-            "feature10back2": "Taitung Fringe Festival",
             "feature11": {
                 "text": "Chishang Autumn Rice<br>Harvest Arts Festival",
-                "alt": "Chishang Autumn Rice Harvest Arts Festival"
+                "alt": "Chishang Autumn Rice Harvest Arts Festival",
+                "href": "https://www.facebook.com/Chishangarts.org"
             },
             "feature12": {
                 "text": "<span>Taitung Light</span> <span>Festival</span>",
-                "alt": "Taitung Light Festival"
+                "alt": "Taitung Light Festival",
+                "href": "https://www.facebook.com/TaitungLightFestival/?locale=zh_TW"
             }
         }
     },

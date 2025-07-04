@@ -1452,7 +1452,7 @@ h6 {
 }
 @media (min-width: 769px) {
   .section--preview .previewGroup--curating {
-    padding: 0;
+    padding: 11.25rem 0;
   }
   .section--preview .previewGroup--curating:before {
     background-image: url("../images/bg_curating-pc.png");
@@ -1494,19 +1494,8 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media (min-width: 769px) {
-  .section--preview .previewGroup--curating .hero .container {
-    min-height: 100dvh;
-  }
-}
 .section--preview .previewGroup--curating .curatingMap {
   margin-top: 3.125rem;
-}
-@media (min-width: 769px) {
-  .section--preview .previewGroup--curating .curatingMap {
-    margin-top: 0;
-    min-height: 100dvh;
-  }
 }
 .section--preview .previewGroup--features {
   position: relative;
@@ -1542,11 +1531,6 @@ h6 {
 .section--preview .hero .hint {
   margin-top: 3.125rem;
   text-align: center;
-}
-@media (min-width: 769px) {
-  .section--preview .hero .hint {
-    margin-top: 8.75rem;
-  }
 }
 .section--preview .hero .hint__text {
   font-size: 1rem;
