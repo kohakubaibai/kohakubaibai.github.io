@@ -693,7 +693,7 @@ h6 {
 			}
 
 			@include rwd-min(769px) {
-				padding: rem(180) 0;
+				padding: rem(180) 0 rem(288);
 
 				&:before {
 					background-image: url('#{$path}/bg_curating-pc.png');
@@ -703,7 +703,8 @@ h6 {
 
 				&:after {
 					background-image: url('#{$path}/deco_curating-pc.svg');
-					height: rem(54);
+					height: rem(288);
+					background-position-x: right;
 				}
 			}
 
@@ -753,7 +754,7 @@ h6 {
 			background-color: $white;
 			padding-top: rem(72);
 			padding-bottom: rem(137);
-			background-image: url('#{$path}/deco_feature-mb.svg');
+			background-image: url('#{$path}/deco_feature.svg');
 			background-position: center bottom;
 			background-repeat: repeat-x;
 			background-size: auto rem(212);
@@ -761,7 +762,6 @@ h6 {
 			@include rwd-min(769px) {
 				padding-top: rem(100);
 				padding-bottom: rem(130);
-				background-image: url('#{$path}/deco_feature-pc.svg');
 				background-size: auto rem(296);
 			}
 
@@ -790,7 +790,8 @@ h6 {
 			text-align: center;
 
 			&__text {
-				font-size: rem(16);
+				font-size: rem(24);
+				font-weight: 700;
 				line-height: 1.5;
 				color: $white;
 			}

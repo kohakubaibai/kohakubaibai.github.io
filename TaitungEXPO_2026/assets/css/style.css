@@ -1452,7 +1452,7 @@ h6 {
 }
 @media (min-width: 769px) {
   .section--preview .previewGroup--curating {
-    padding: 11.25rem 0;
+    padding: 11.25rem 0 18rem;
   }
   .section--preview .previewGroup--curating:before {
     background-image: url("../images/bg_curating-pc.png");
@@ -1461,7 +1461,8 @@ h6 {
   }
   .section--preview .previewGroup--curating:after {
     background-image: url("../images/deco_curating-pc.svg");
-    height: 3.375rem;
+    height: 18rem;
+    background-position-x: right;
   }
 }
 .section--preview .previewGroup--curating .container {
@@ -1503,7 +1504,7 @@ h6 {
   background-color: #fff;
   padding-top: 4.5rem;
   padding-bottom: 8.5625rem;
-  background-image: url("../images/deco_feature-mb.svg");
+  background-image: url("../images/deco_feature.svg");
   background-position: center bottom;
   background-repeat: repeat-x;
   background-size: auto 13.25rem;
@@ -1512,7 +1513,6 @@ h6 {
   .section--preview .previewGroup--features {
     padding-top: 6.25rem;
     padding-bottom: 8.125rem;
-    background-image: url("../images/deco_feature-pc.svg");
     background-size: auto 18.5rem;
   }
 }
@@ -1533,7 +1533,8 @@ h6 {
   text-align: center;
 }
 .section--preview .hero .hint__text {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1.5;
   color: #fff;
 }
