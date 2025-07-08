@@ -320,8 +320,9 @@ class LanguageSwitcher {
         if (selector.includes('--news')) {
             swiperConfig.loop = options.loop !== undefined ? options.loop : true;
             swiperConfig.autoplay = {
-                delay: 3000,
+                delay: 5000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true
             };
 			swiperConfig.navigation= {
                 nextEl: '.section--news .swiper-button-next',
