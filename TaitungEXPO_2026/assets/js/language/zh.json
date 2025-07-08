@@ -36,36 +36,36 @@
         "title": "最新消息",
         "newsData": [
             {
-                "imgSrc": "assets/images/img_fake-1.jpg",
-                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
-                "date": "2024.12.15",
-                "title": "台東博覽會最新消息1假字假字假字假字假字",
-                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250629.png",
+                "imgAlt": "以尊重為本！臺東縣府與卡大地布部落攜手 推動部落傳統領域土地多元活化",
+                "date": "2024.6.29",
+                "title": "以尊重為本！臺東縣府與卡大地布部落攜手 推動部落傳統領域土地多元活化",
+                "desc": "臺東縣政府與卡大地布部落正式簽署雙方「活化利用縣有土地計畫合作備忘錄」，象徵縣府與在地原住民族部落締結夥伴關係，尊重卡大地布部落傳統領域和成員權益，邁向共榮共好新里程碑。",
+                "url": "https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=14031"
             },
             {
-                "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
-                "date": "2024.12.15",
-                "title": "台東博覽會最新消息1假字假字假字假字假字",
-                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250621.png",
+                "imgAlt": "哆啦A夢現身台東市區！熱氣球嘉年華打造城市拍照熱點 彩繪公車即將啟程",
+                "date": "2024.6.21",
+                "title": "哆啦A夢現身台東市區！熱氣球嘉年華打造城市拍照熱點 彩繪公車即將啟程",
+                "desc": "2025臺灣國際熱氣球嘉年華將於7/5登場，哆啦A夢熱氣球首度亮相，搭配市區打卡點、彩繪專車及粉絲見面會，歡迎全國大小朋友來台東，與哆啦A夢共度歡樂暑假！",
+                "url": "https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=140167"
             },
             {
-                "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
-                "date": "2024.12.15",
-                "title": "台東博覽會最新消息1假字假字假字假字假字",
-                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250619.png",
+                "imgAlt": "2026台東博覽會品牌授權計畫開放申請中！",
+                "date": "2024.6.19",
+                "title": "2026台東博覽會品牌授權計畫開放申請中！",
+                "desc": "2026台東博覽會品牌授權計畫已於6月18日及19日舉辦說明會，正式啟動品牌商標授權申請程序。誠摯邀請各界品牌與廠商踴躍參與，共同拓展展會商機！",
+                "url": "https://culture.taitung.gov.tw/activity/2026%E5%8F%B0%E6%9D%B1%E5%8D%9A%E8%A6%BD%E6%9C%83%E3%83%BB%E5%93%81%E7%89%8C%E6%8E%88%E6%AC%8A%E5%BE%B5%E4%BB%B6%E7%94%B3%E8%AB%8B"
             },
             {
-                "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "台東博覽會最新消息1假字假字假字假字假字",
-                "date": "2024.12.15",
-                "title": "台東博覽會最新消息1假字假字假字假字假字",
-                "desc": "台東縣政府宣布今年暑假7月1日起至9月底，試辦在活水湖劃設戲水區，每日上午8時至下午5時免費開放民眾下水游",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250213.png",
+                "imgAlt": "2026台東博覽會規劃啟動！臺東縣府跨部門凝聚共識 共創台東未來",
+                "date": "2024.2.13",
+                "title": "2026台東博覽會規劃啟動！臺東縣府跨部門凝聚共識 共創台東未來",
+                "desc": "臺東縣政府於114年第一次擴大主管會議中進行「2026台東博覽會」整體規畫說明，期強化橫向協作，凝聚共識推動台東走向國際。",
+                "url": "https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=137259"
             }
         ]
     },
@@ -74,12 +74,147 @@
         "eventData": [
             {
                 "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "臺東藝術節",
+                "date": "2025.05.22 - 11.01",
+                "title": "臺東藝術節",
+                "location": "就藝會、台東藝文中心、明門藝文中心",
+                "url": "https://www.facebook.com/Taitungartsfestival/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-2.png",
+                "imgAlt": "【東海岸大地藝術節】月光・海-電影祭",
+                "date": "2025.06.02 - 08.10",
+                "title": "【東海岸大地藝術節】月光・海-電影祭",
+                "location": "台東美術館、都歷遊客中心",
+                "url": "https://www.facebook.com/TECLandArtsFestival"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-3.png",
+                "imgAlt": "台東光祭",
+                "date": "2025.06.13 - 07.27",
+                "title": "台東光祭",
+                "location": "卑南鄉溫泉村・知本溫泉區",
+                "url": "https://www.facebook.com/TaitungLightFestival/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-4.png",
+                "imgAlt": "【台東最美星空】音樂會",
+                "date": "2025.06.14 - 08.30",
+                "title": "【台東最美星空】音樂會",
+                "location": "台東縣（詳見官網）",
+                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-5.png",
+                "imgAlt": "【台東最美星空】體驗活動",
+                "date": "2025.06.17 - 08.05",
+                "title": "【台東最美星空】體驗活動",
+                "location": "台東縣（詳見官網）",
+                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-6.png",
+                "imgAlt": "【台東最美星空】導覽音樂場",
+                "date": "2025.06.21 - 08.09",
+                "title": "【台東最美星空】導覽音樂場",
+                "location": "台東縣長濱鄉（詳見官網）",
+                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-7.png",
+                "imgAlt": "【東海岸大地藝術節】月光．海-音樂會",
+                "date": "2025.06.21 - 09.09",
+                "title": "【東海岸大地藝術節】月光．海-音樂會",
+                "location": "都歷遊客中心",
+                "url": "https://www.facebook.com/TECLandArtsFestival"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-8.png",
+                "imgAlt": "【自然醒慢活祭】東海岸長濱 liáo 天室",
+                "date": "2025.06.28 - 11.02",
+                "title": "【自然醒慢活祭】東海岸長濱 liáo 天室",
+                "location": "長濱鄉（詳見官網）",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-9.png",
+                "imgAlt": "【東海岸大地藝術節】東海岸藝術生活平台串聯",
+                "date": "2025.07.01 - 09.30",
+                "title": "【東海岸大地藝術節】東海岸藝術生活平台串聯",
+                "location": "東海岸沿線多處場域（詳見官網）",
+                "url": "https://www.facebook.com/TECLandArtsFestival"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-10.jpg",
+                "imgAlt": "縱谷大地藝術季・漂鳥197",
+                "date": "2025.07.01 -",
+                "title": "縱谷大地藝術季・漂鳥197",
+                "location": "花東縱谷多處場域（詳見官網）",
+                "url": "https://www.facebook.com/EastRiftValleyGranaryFestivities/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-11.png",
                 "imgAlt": "臺灣國際熱氣球嘉年華",
-                "date": "2025.7.5-8.21",
+                "date": "2025.07.05 - 08.21",
                 "title": "臺灣國際熱氣球嘉年華",
-                "desc": "",
                 "location": "台東鹿野高台",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-12.png",
+                "imgAlt": "【自然醒慢活祭】名人療癒沙龍",
+                "date": "2025.07.25 - 07.27",
+                "title": "【自然醒慢活祭】名人療癒沙龍",
+                "location": "國立臺灣史前文化博物館",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-13.png",
+                "imgAlt": "【自然醒慢活祭】助人者療癒沙龍",
+                "date": "2025.08.29 - 08.31",
+                "title": "【自然醒慢活祭】助人者療癒沙龍",
+                "location": "台東聖母健康農莊",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-14.png",
+                "imgAlt": "【自然醒慢活祭】療癒工作坊",
+                "date": "2025.10.25",
+                "title": "【自然醒慢活祭】療癒工作坊",
+                "location": "台東南八里民宿",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-15.png",
+                "imgAlt": "池上秋收稻穗藝術節",
+                "date": "2025.10.25 - 10.26",
+                "title": "池上秋收稻穗藝術節",
+                "location": "台東縣池上鄉萬安社區天堂路稻田區（萬新道路）",
+                "url": "https://www.facebook.com/Chishangarts.org"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-16.jpg",
+                "imgAlt": "臺東聲音藝術節",
+                "date": "2025.11.01 - 12.07",
+                "title": "臺東聲音藝術節",
+                "location": "台東美術館",
+                "url": "https://www.facebook.com/SoundartTaitung/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-17.png",
+                "imgAlt": "臺灣國際衝浪公開賽",
+                "date": "2025.11.04 - 11.11",
+                "title": "臺灣國際衝浪公開賽",
+                "location": "台東金樽漁港",
+                "url": "https://www.facebook.com/taiwanopenofsurfing/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-18.png",
+                "imgAlt": "【自然醒慢活祭】淨心慢旅行",
+                "date": "2025.11.15 - 11.16",
+                "title": "【自然醒慢活祭】淨心慢旅行",
+                "location": "鸞山森林文化博物館",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
             }
         ]
     },
@@ -91,9 +226,9 @@
         "featuresTitle": "串連台東山海與特色活動品牌<br>打造整年度的精彩！",
         "features": {
             "feature1": {
-                "text": "台灣炮炸<br>寒單爺",
-                "alt": "台灣炮炸寒單爺",
-                "href": "https://ttca.taitung.gov.tw"
+                "text": "台東炮炸<br>寒單爺",
+                "alt": "台東炮炸寒單爺",
+                "href": "https://www.zztaitung.com/20114/taitung-bombhandan-2"
             },
             "feature2": {
                 "text": "自然醒<br>慢活祭",

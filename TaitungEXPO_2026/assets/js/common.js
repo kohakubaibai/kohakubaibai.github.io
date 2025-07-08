@@ -45,7 +45,7 @@ class LanguageSwitcher {
         this.updateParticipationSection();
         this.updateAuthorizationSection();
         this.updateStyleSection();
-        // this.updateNewsSection();
+        this.updateNewsSection();
         this.updateEventSection();
         this.updateContactSection();
         this.updatePopupSection();
@@ -90,7 +90,7 @@ class LanguageSwitcher {
                 this.updateOpeningSection();
                 this.updateAboutSection();
                 this.updateEventSection();
-                // this.updateNewsSection();
+                this.updateNewsSection();
 				this.updatePreviewSection();
                 this.updateViSection();
                 this.updateParticipationSection();
@@ -269,7 +269,6 @@ class LanguageSwitcher {
                     </div>
                     <div class="cardItem__text">
                         <div class="title f-section-h4">${item.title}</div>
-                        <div class="desc f-section-h5">${item.desc}</div>
                         <div class="location"><span>${item.location}</span></div>
                         <div class="more">
                             <a href="${item.url}" class="btn btn--more" target="_blank"><span class="btn__text">MORE</span></a>

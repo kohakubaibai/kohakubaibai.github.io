@@ -217,21 +217,25 @@ h6 {
 		.location {
 			display: flex;
 			flex-wrap: nowrap;
-			align-items: center;
-			margin-top: rem(10);
+			align-items: flex-start;
+			min-height: rem(14*3*1.44);
+			max-height: rem(14*3*1.44);
 
 			&:before {
 				content: '';
 				display: block;
 				width: rem(10);
 				height: rem(13);
+				margin-top: rem(10);
 				background-image: url('#{$path}/deco_location.svg');
 				background-size: rem(10) rem(13);
 				background-repeat: no-repeat;
 				margin-right: rem(10);
+				margin-top: rem(4);
 			}
 
 			span {
+				width: calc(100% - rem(10));
 				font-weight: 300;
 				font-size: rem(14);
 				color: #4D4D4D;

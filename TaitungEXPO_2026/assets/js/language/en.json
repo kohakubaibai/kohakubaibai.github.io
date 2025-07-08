@@ -36,36 +36,36 @@
         "title": "Latest News",
         "newsData": [
             {
-                "imgSrc": "assets/images/img_fake-1.jpg",
-                "imgAlt": "台東博覽會最新消息1",
-                "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250629.png",
+                "imgAlt": "Built on Respect: Taitung County Government and Katratripulr Tribal Village Collaborate on Land Revitalization",
+                "date": "2024.6.29",
+                "title": "Built on Respect: Taitung County Government and Katratripulr Tribal Village Collaborate on Land Revitalization",
+                "desc": "The Taitung County Government and the Katratripulr Tribal Village in Zhiben have signed an MOU on the revitalization of county-owned land This partnership affirms respect for the tribe’s traditional territories and rights, marking a new step toward mutual prosperity and cooperation.",
+                "url": "https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=14031"
             },
             {
-                "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
-                "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250621.png",
+                "imgAlt": "Doraemon Lands in Downtown Taitung! Photo Spots Unveiled and Themed Buses Ready to Roll for Balloon Festival",
+                "date": "2024.6.21",
+                "title": "Doraemon Lands in Downtown Taitung! Photo Spots Unveiled and Themed Buses Ready to Roll for Balloon Festival",
+                "desc": "The 2025 Taiwan International Balloon Festival will kick off on July 5, featuring the debut appearance of the Doraemon hot air balloon. With themed photo spots across Taitung City, a Doraemon-bus, and special fan meetups, families from all over the country are invited to enjoy a wholesome summer in Taitung with Doraemon!",
+                "url": "https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=140167"
             },
             {
-                "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
-                "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250619.png",
+                "imgAlt": "2026 Taitung Expo Brand Licensing Program Now Open for Applications",
+                "date": "2024.6.19",
+                "title": "2026 Taitung Expo Brand Licensing Program Now Open for Applications",
+                "desc": "The 2026 Taitung Expo officially launched its brand licensing application process following briefings held on June 18 and 19. We warmly invite brands and businesses from all sectors to participate and jointly explore new opportunities through brand collaboration at the Expo!",
+                "url": "https://culture.taitung.gov.tw/activity/2026%E5%8F%B0%E6%9D%B1%E5%8D%9A%E8%A6%BD%E6%9C%83%E3%83%BB%E5%93%81%E7%89%8C%E6%8E%88%E6%AC%8A%E5%BE%B5%E4%BB%B6%E7%94%B3%E8%AB%8B"
             },
             {
-                "imgSrc": "assets/images/img_fake-2.jpg",
-                "imgAlt": "一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零一二三四五六七八九零",
-                "date": "2024.12.15",
-                "title": "2026台東博覽會正式啟動",
-                "desc": "台東縣政府宣布...",
-                "url": "#"
+                "imgSrc": "assets/images/news/img-250213.png",
+                "imgAlt": "2026 Taitung Expo Planning Underway! Taitung County Government Unites Departments to Shape a Shared Vision for the Future",
+                "date": "2024.2.13",
+                "title": "2026 Taitung Expo Planning Underway! Taitung County Government Unites Departments to Shape a Shared Vision for the Future",
+                "desc": "During the first expanded executive meeting of 2025, the Taitung County Government presented the overall plan for the 2026 Taitung Expo, aiming to strengthen cross-departmental collaboration, build consensus, and propel Taitung onto the international stage.",
+                "url": "https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=137259"
             }
         ]
     },
@@ -74,12 +74,147 @@
         "eventData": [
             {
                 "imgSrc": "assets/images/event/img_event-1.png",
+                "imgAlt": "Taitung Arts Festival",
+                "date": "2025.05.22 - 11.01",
+                "title": "Taitung Arts Festival",
+                "location": "Just Arts House / Taitung Art and Culture Center /  Wonderland Performing Arts Center",
+                "url": "https://www.facebook.com/Taitungartsfestival/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-2.png",
+                "imgAlt": "[TECLandArts Festival] Moonlit Sea Film Festival",
+                "date": "2025.06.02 - 08.10",
+                "title": "[TECLandArts Festival] Moonlit Sea Film Festival",
+                "location": "Taitung Art Museum / Torik Visitor Center",
+                "url": "https://www.facebook.com/TECLandArtsFestival"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-3.png",
+                "imgAlt": "Taitung Light Festival",
+                "date": "2025.06.13 - 07.27",
+                "title": "Taitung Light Festival",
+                "location": "Zhiben Hot Spring, Beinan Township",
+                "url": "https://www.facebook.com/TaitungLightFestival/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-4.png",
+                "imgAlt": "[STARRY TAITUNG] Night Concert Series",
+                "date": "2025.06.14 - 08.30",
+                "title": "[STARRY TAITUNG] Night Concert Series",
+                "location": "Taitung County (See website for details)",
+                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-5.png",
+                "imgAlt": "[STARRY TAITUNG] Experience Series",
+                "date": "2025.06.17 - 08.05",
+                "title": "[STARRY TAITUNG] Experience Series",
+                "location": "Taitung County (See website for details)",
+                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-6.png",
+                "imgAlt": "[STARRY TAITUNG] Guided Stargazing and Live Music Series",
+                "date": "2025.06.21 - 08.09",
+                "title": "[STARRY TAITUNG] Guided Stargazing and Live Music Series",
+                "location": "Changbin Township (See website for details)",
+                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-7.png",
+                "imgAlt": "[TECLandArts Festival] Moonlit Sea Concert",
+                "date": "2025.06.21 - 09.09",
+                "title": "[TECLandArts Festival] Moonlit Sea Concert",
+                "location": "Torik Visitor Center",
+                "url": "https://www.facebook.com/TECLandArtsFestival"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-8.png",
+                "imgAlt": "[Taitung Spirit Festival] liáo Room at Changbin",
+                "date": "2025.06.28 - 11.02",
+                "title": "[Taitung Spirit Festival] liáo Room at Changbin",
+                "location": "Changbin Township (See website for details)",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-9.png",
+                "imgAlt": "[TECLandArts Festival] East Coast Art & Living Network",
+                "date": "2025.07.01 - 09.30",
+                "title": "[TECLandArts Festival] East Coast Art & Living Network",
+                "location": "Multiple locations along the East Coast (See website for details)",
+                "url": "https://www.facebook.com/TECLandArtsFestival"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-10.jpg",
+                "imgAlt": "East Rift Valley Land Art Festival",
+                "date": "2025.07.01 -",
+                "title": "East Rift Valley Land Art Festival",
+                "location": "Multiple Locations along the East Rift Valley (See website for details)",
+                "url": "https://www.facebook.com/EastRiftValleyGranaryFestivities/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-11.png",
                 "imgAlt": "Taiwan International Balloon Festival",
-                "date": "2025.7.5-8.21",
+                "date": "2025.07.05 - 08.21",
                 "title": "Taiwan International Balloon Festival",
-                "desc": "",
-                "location": "Luye Highland",
+                "location": "Taitung Luye Highland",
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-12.png",
+                "imgAlt": "[Taitung Spirit Festival] Celebrity Healing Salon",
+                "date": "2025.07.25 - 07.27",
+                "title": "[Taitung Spirit Festival] Celebrity Healing Salon",
+                "location": "National Museum of Prehistory",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-13.png",
+                "imgAlt": "[Taitung Spirit Festival] Healing Salon for Caregivers and Helpers",
+                "date": "2025.08.29 - 08.31",
+                "title": "[Taitung Spirit Festival] Healing Salon for Caregivers and Helpers",
+                "location": "Taitung St. Mary’s Health Farm",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-14.png",
+                "imgAlt": "[Taitung Spirit Festival] Healing Workshop",
+                "date": "2025.10.25",
+                "title": "[Taitung Spirit Festival] Healing Workshop",
+                "location": "Nanbali Homestay, Taitung",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-15.png",
+                "imgAlt": "Chishang Autumn Rice Harvest Arts Festival",
+                "date": "2025.10.25 - 10.26",
+                "title": "Chishang Autumn Rice Harvest Arts Festival",
+                "location": "Paradise Road Rice Fields, Wanan Community, Chishang Township, Taitung",
+                "url": "https://www.facebook.com/Chishangarts.org"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-16.jpg",
+                "imgAlt": "Taitung Sound Art Festival",
+                "date": "2025.11.01 - 12.07",
+                "title": "Taitung Sound Art Festival",
+                "location": "Taitung Art Museum",
+                "url": "https://www.facebook.com/SoundartTaitung/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-17.png",
+                "imgAlt": "Taiwan Open of Surfing",
+                "date": "2025.11.04 - 11.11",
+                "title": "Taiwan Open of Surfing",
+                "location": "Jinzun Fishing Port, Taitung",
+                "url": "https://www.facebook.com/taiwanopenofsurfing/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-18.png",
+                "imgAlt": "[Taitung Spirit Festival] Mindful Slow Journey",
+                "date": "2025.11.15 - 11.16",
+                "title": "[Taitung Spirit Festival] Mindful Slow Journey",
+                "location": "Luanshan Forest Culture Museum, Taitung",
+                "url": "https://www.facebook.com/TaitungSpiritFestival/"
             }
         ]
     },
@@ -93,7 +228,7 @@
             "feature1": {
                 "text": "Bombing of Master<br>Handan Festival",
                 "alt": "Bombing of Master Handan Festival",
-                "href": "https://ttca.taitung.gov.tw"
+                "href": "https://www.zztaitung.com/20114/taitung-bombhandan-2"
             },
             "feature2": {
                 "text": "<span>Taitung Spirit</span> <span>Festival</span>",
