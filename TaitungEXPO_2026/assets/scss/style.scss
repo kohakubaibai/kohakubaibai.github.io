@@ -533,7 +533,7 @@ h6 {
 }
 
 .section--event {
-	padding: rem(80) 0 rem(110);
+	padding: rem(80) 0 rem(0);
 	position: relative;
 	background-color: #5D97C4;
 
@@ -541,12 +541,12 @@ h6 {
 		content: '';
 		position: absolute;
 		width: 100%;
-		height: rem(550);
+		height: rem(301);
 		bottom: rem(-110);
-		background-image: url('#{$path}/deco_preview.svg');
-		background-size: rem(280) auto;
+		background-image: url('#{$path}/deco_preview-mb.svg');
+		background-size: rem(390) auto;
 		background-repeat: repeat-x;
-		background-position: rem(-16) bottom;
+		background-position: center bottom;
 		z-index: 0;
 	}
 
@@ -555,7 +555,9 @@ h6 {
 
 		&:after {
 			bottom: rem(-42);
-			background-size: rem(512) auto;
+			height: rem(548);
+			background-image: url('#{$path}/deco_preview-pc.svg');
+			background-size: rem(511) auto;
 			background-position: 0 bottom;;
 		}
 	}
@@ -665,7 +667,7 @@ h6 {
 
 		&--curating {
 			position: relative;
-			padding: rem(210) 0 rem(100);
+			padding: rem(216) 0 rem(212);
 
 			&:before {
 				content: '';
@@ -683,32 +685,13 @@ h6 {
 				background-repeat: no-repeat;
 			}
 
-			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				left: 0;
-				bottom: rem(-1);
-				width: 100%;
-				height: rem(42);
-				background-image: url('#{$path}/deco_curating-mb.svg');
-				background-position: center bottom;
-				background-repeat: repeat-x;
-			}
-
 			@include rwd-min(769px) {
-				padding: rem(180) 0 rem(288);
+				padding: rem(180) 0 rem(200);
 
 				&:before {
 					background-image: url('#{$path}/bg_curating-pc.png');
 					background-position: center;
 					background-size: cover;
-				}
-
-				&:after {
-					background-image: url('#{$path}/deco_curating-pc.svg');
-					height: rem(288);
-					background-position-x: right;
 				}
 			}
 
@@ -756,17 +739,45 @@ h6 {
 			position: relative;
 			z-index: 10;
 			background-color: $white;
-			padding-top: rem(72);
+			padding-top: rem(30);
 			padding-bottom: rem(137);
-			background-image: url('#{$path}/deco_feature.svg');
+			background-image: url('#{$path}/deco_feature-mb.svg');
 			background-position: center bottom;
 			background-repeat: repeat-x;
 			background-size: auto rem(212);
 
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: rem(-122);
+				width: 100%;
+				height: rem(224);
+				z-index: 0;
+				background-image: url('#{$path}/deco_features-mb.svg');
+				background-position: center top;
+				background-repeat: repeat-x;
+				background-size: auto rem(224);
+			}
+
 			@include rwd-min(769px) {
-				padding-top: rem(100);
+				padding-top: rem(0);
 				padding-bottom: rem(130);
-				background-size: auto rem(296);
+				background-size: auto rem(288);
+
+				&:before {
+					background-image: url('#{$path}/deco_curating-pc.svg');
+					height: rem(288);
+					top: rem(-122);
+					background-position-x: right;
+					background-size: auto;
+				}
+			}
+
+			.container {
+				position: relative;
+				z-index: 5;
 			}
 
 			.previewGroup__title {

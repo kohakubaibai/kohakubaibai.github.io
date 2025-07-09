@@ -1249,7 +1249,7 @@ h6 {
 }
 
 .section--event {
-  padding: 5rem 0 6.875rem;
+  padding: 5rem 0 0rem;
   position: relative;
   background-color: #5D97C4;
 }
@@ -1257,12 +1257,12 @@ h6 {
   content: "";
   position: absolute;
   width: 100%;
-  height: 34.375rem;
+  height: 18.8125rem;
   bottom: -6.875rem;
-  background-image: url("../images/deco_preview.svg");
-  background-size: 17.5rem auto;
+  background-image: url("../images/deco_preview-mb.svg");
+  background-size: 24.375rem auto;
   background-repeat: repeat-x;
-  background-position: -1rem bottom;
+  background-position: center bottom;
   z-index: 0;
 }
 @media (min-width: 769px) {
@@ -1271,7 +1271,9 @@ h6 {
   }
   .section--event:after {
     bottom: -2.625rem;
-    background-size: 32rem auto;
+    height: 34.25rem;
+    background-image: url("../images/deco_preview-pc.svg");
+    background-size: 31.9375rem auto;
     background-position: 0 bottom;
   }
 }
@@ -1425,7 +1427,7 @@ h6 {
 }
 .section--preview .previewGroup--curating {
   position: relative;
-  padding: 13.125rem 0 6.25rem;
+  padding: 13.5rem 0 13.25rem;
 }
 .section--preview .previewGroup--curating:before {
   content: "";
@@ -1442,31 +1444,14 @@ h6 {
   background-position: center 4.75rem;
   background-repeat: no-repeat;
 }
-.section--preview .previewGroup--curating:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -0.0625rem;
-  width: 100%;
-  height: 2.625rem;
-  background-image: url("../images/deco_curating-mb.svg");
-  background-position: center bottom;
-  background-repeat: repeat-x;
-}
 @media (min-width: 769px) {
   .section--preview .previewGroup--curating {
-    padding: 11.25rem 0 18rem;
+    padding: 11.25rem 0 12.5rem;
   }
   .section--preview .previewGroup--curating:before {
     background-image: url("../images/bg_curating-pc.png");
     background-position: center;
     background-size: cover;
-  }
-  .section--preview .previewGroup--curating:after {
-    background-image: url("../images/deco_curating-pc.svg");
-    height: 18rem;
-    background-position-x: right;
   }
 }
 .section--preview .previewGroup--curating .container {
@@ -1506,19 +1491,44 @@ h6 {
   position: relative;
   z-index: 10;
   background-color: #fff;
-  padding-top: 4.5rem;
+  padding-top: 1.875rem;
   padding-bottom: 8.5625rem;
-  background-image: url("../images/deco_feature.svg");
+  background-image: url("../images/deco_feature-mb.svg");
   background-position: center bottom;
   background-repeat: repeat-x;
   background-size: auto 13.25rem;
 }
+.section--preview .previewGroup--features:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -7.625rem;
+  width: 100%;
+  height: 14rem;
+  z-index: 0;
+  background-image: url("../images/deco_features-mb.svg");
+  background-position: center top;
+  background-repeat: repeat-x;
+  background-size: auto 14rem;
+}
 @media (min-width: 769px) {
   .section--preview .previewGroup--features {
-    padding-top: 6.25rem;
+    padding-top: 0rem;
     padding-bottom: 8.125rem;
-    background-size: auto 18.5rem;
+    background-size: auto 18rem;
   }
+  .section--preview .previewGroup--features:before {
+    background-image: url("../images/deco_curating-pc.svg");
+    height: 18rem;
+    top: -7.625rem;
+    background-position-x: right;
+    background-size: auto;
+  }
+}
+.section--preview .previewGroup--features .container {
+  position: relative;
+  z-index: 5;
 }
 .section--preview .previewGroup--features .previewGroup__title {
   color: #4D4D4D;
