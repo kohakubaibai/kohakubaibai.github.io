@@ -1,0 +1,1784 @@
+/*20250401*/
+
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap'); /*繁中-黑體*/
+
+/* 取消新版chrome搞出來的黑框bug */
+*, *:focus {
+	outline: none;
+}
+button:active, button.active, button:focus, button.focus {
+	outline: none;
+	border: none;
+	box-shadow: none !important;
+}
+
+
+/* ==================================================
+   BS內建
+================================================== */
+html{
+	overflow-x:hidden;
+}
+*,
+*:before,
+*:after{
+	box-sizing:border-box;
+}
+
+body {
+	font-family: -apple-system, Segoe UI, Roboto, "微軟正黑體", "Helvetica Neue", Arial, sans-serif;  /*無襯線字體sans-serif*/
+	font-weight: bold;
+	padding-top:65px; /*搭配Header區固定置頂，記得不能用margin,容易和其它相衝*/
+	/*max-width: 1920px;*/
+	margin: 0 auto;
+	background-color: var(--bgcolor);
+
+	--white: #fff;
+	--bgcolor:#EEECE8;
+	--green:#326F75;
+	--green-deep:#265e59; /* #255954 */
+	--gray:#626363;
+	--red:#EA7A60;
+	--border-radius:1em;
+}
+body,p {
+	font-size: 1.1rem;  /* 1em等同於15px ~ 1rem等同於16px;*/
+	color:var(--gray);
+	/*font-weight: 600;*/
+	line-height:1.35;
+	text-align: justify;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans TC', sans-serif; /*繁中-黑體*/
+	margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+h3 {
+	font-size: 1.7rem;
+}
+h3.ct {
+	line-height: 1.6;
+
+}
+h4 {
+	font-size: 1.35rem;
+	line-height:1.5;
+	color: var(--green-deep);
+}
+.fullKV h4,
+.picKV h4 {
+	font-weight: 500;
+}
+h5 {
+	font-size: 1.2rem;/*頁籤裡的標題*/
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+p{
+	margin:0;
+}
+*+p{
+	margin-top:0.5em;
+}
+
+b {
+    font-size: 105%;
+	/*font-weight: 600;*/
+}
+.tc {
+	font-size:0.9rem;
+	color: #222;
+	/*font-weight: bold;*/
+	font-weight: normal;
+	line-height: 1.35;
+}
+.tc a{
+	color:currentColor;
+}
+.tc a:hover{
+	text-decoration: none;
+}
+
+.white {
+	color: var(--white);
+}
+.green {
+	color: var(--green);
+}
+.green-deep {
+	color: var(--green-deep);
+}
+.gray {
+	color: var(--gray);
+}
+
+.mtb-space {
+	margin-top:3em; 
+	margin-bottom:3em; 
+}
+.mt-space {
+	margin-top:6em; 
+}
+.mb-space {
+	margin-bottom:6em; 
+}
+
+
+/* ==================================================
+   header
+================================================== */
+.navbar {
+	/*background-color: #fdfbfc;
+	box-shadow: 0 1px 8px rgba(0,0,0,.25); */
+	background-image: linear-gradient(to bottom, #EEECE8 45%, rgba(255, 255, 255, 0) 100%);
+	padding-right: 0;
+    padding-left: 0;
+	/*padding-top: .5rem;
+    padding-bottom: .5rem;*/
+	padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+.navbar .nav-link {
+    font-size: 1.15rem;
+	display: block;
+    color: var(--green-deep) !important;
+    text-decoration: none;
+    transition: all .25s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link.red {
+    color: var(--red) !important;
+}
+
+/*active*/
+.navbar .nav-link.active, 
+.navbar .show>.nav-link {
+    color: var(--orange) !important;
+    background-color: transparent;
+	opacity: 1; 
+}
+
+/*logo*/
+.navbar-brand {
+	padding: 0;
+}
+.navbar-brand img {
+	width: auto;
+	height:50px; 
+}
+
+
+/*ipad 橫式 lg以下*/
+@media (max-width: 1199.98px) { 
+	.navbar {
+		padding-right: 1.1rem;
+		padding-left: 1.1rem;
+	}
+	.navbar-brand img {
+		height:40px; 
+	}
+}
+
+/*ipad 橫式 lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	.navbar .nav-link {
+		font-size: 1.05rem;
+		padding: 0 1rem !important;
+	}
+}
+
+/*ipad 直式 md以下*/
+@media (max-width: 991.98px) { 
+	/*.navbar-collapse {
+		height: 100vh;
+	}*/
+	.navbar-nav {
+		margin: 1.3rem 0; 
+		padding-bottom:20em;
+	}
+	.navbar .nav-link {
+		font-size: 1.5rem;
+		padding: 0.75rem 0;
+		padding-left: 5px !important;
+	}
+}
+
+
+/*手機版~*/
+@media (max-width: 767.98px) { 
+	.navbar {
+		padding-right: 0.75rem;
+		padding-left: 0.5rem;
+	}
+	.navbar-brand img {
+		height:35px; 
+	}
+	.navbar .nav-link {
+		font-size: 1.3rem;
+		padding: 0.5rem 0;
+		padding-left: 5px !important;
+	}
+}
+
+
+/* ==================================================
+   漢堡按鈕-旋轉X
+================================================== */
+.navbar-toggler:focus {
+	box-shadow:none; 
+}
+
+.navbar-toggler {
+	padding: 0;
+	border-radius: 0;
+	background-color: none;
+	border: none;
+}
+
+/*Hamburger Menu to X css*/
+.navbarX {
+	width: 25px;
+	height: 18px;
+	background-color: transparent !important;
+	position: relative;
+	float: right;
+	margin-right: 0;
+	/*margin-top:14px;*/
+	cursor: pointer;
+}
+
+@media (min-width:992) { 
+	.navbarX {
+		display:none;
+	}
+}
+
+.navbarX i {
+	background: var(--green-deep); 
+	border-radius: 2px;
+	width: 100%;
+	height: 3px;
+	content: "";
+	display: block;
+}
+
+.navbarX i:nth-child(1) {
+	animation: outT 0.8s backwards;  /*若要取消進場動畫*/
+	animation-direction: reverse;
+}
+
+.navbarX i:nth-child(2) {
+	margin: 5px 0;
+	animation: outM 0.8s backwards;  /*若要取消進場動畫*/
+	animation-direction: reverse;
+}
+
+.navbarX i:nth-child(3) {
+	animation: outBtm 0.8s backwards; /*若要取消進場動畫*/
+	animation-direction: reverse;
+}
+
+.navbarX.active i:nth-child(1) {
+	animation: inT 0.8s forwards;
+}
+
+.navbarX.active i:nth-child(2) {
+	animation: inM 0.8s forwards;
+}
+.navbarX.active i:nth-child(3) {
+	animation: inBtm 0.8s forwards;
+}
+
+@keyframes inM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes outM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+
+@keyframes inT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(7px) rotate(135deg);/*微上調2px*/
+	}
+}
+
+@keyframes outT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(7px) rotate(135deg);
+	}
+}
+
+@keyframes inBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@keyframes outBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+
+/* ==================================================
+   自定
+================================================== */
+.btn-more {
+	position: fixed;
+	bottom:2em;
+	right:15px;
+	z-index:9;
+	animation:loop 2.5s ease-out infinite; /*會一直重來loop播放*/
+}
+.btn-more img {
+	height: auto;
+	transition: all 0.5s;
+	width: 120px;
+}
+
+.mainKVBox {
+	position: relative;
+	overflow: hidden;
+}
+
+/************************* mainKV start **********************************/
+.mainKV{
+	position: relative;
+	margin:0 auto;
+	width:90%;
+	max-width:950px;
+	aspect-ratio:1.27;
+	background: url(../imgs/kvBall.png) no-repeat center/100%;
+}
+
+.mainKV .family{
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	margin:26.41% auto 0;
+	width:46.41%;
+	aspect-ratio:1.54;
+	background: url(../imgs/kvFamily.png) no-repeat center/100%;
+	animation:family 2s ease-in-out alternate infinite;
+}
+@keyframes family{
+	to{
+		transform: translateY(-4%);
+	}
+}
+
+.mainKV .hand{
+	position: absolute;
+	top:0;
+	margin-top:33.58%;
+	width:36.21%;
+	aspect-ratio:1.27;
+}
+.mainKV .hand._L{
+	left:0;
+}
+.mainKV .hand._R{
+	right:0;
+	transform: scaleX(-1);
+}
+.mainKV .hand:before{
+	content:"";
+	display: block;
+	height:100%;
+	background: url(../imgs/kvHand.png) no-repeat center/100%;
+	transform-origin: right bottom;
+	animation:hand 2s ease-in-out alternate infinite;
+}
+@keyframes hand{
+	to{
+		transform: translateY(-12%) rotate(-5deg);
+	}
+}
+
+.mainKV .btm{
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	margin:50.2% auto 0;
+	width:73.25%;
+	aspect-ratio:4.19;
+	background: url(../imgs/kvBtm.png) no-repeat center/100%;
+}
+
+.mainKV .title{
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	margin:3.04% auto 0;
+	width:89.21%;
+	aspect-ratio:3.95;
+	background: url(../imgs/kvTitle.png) no-repeat center/100%;
+	animation:kvTitle 3s ease-out infinite alternate;
+}
+@keyframes kvTitle{
+	75%{
+		opacity: 0.5;
+		transform: scale(0.995);
+	}
+	100%{
+		opacity: 0.85;
+		transform: scale(1);
+	}
+}
+/*
+@keyframes kvTitle{
+	from{
+		opacity: 0.8;
+		transform: scale(0.96);
+	}
+}
+*/
+
+
+.mainKV .obj {
+	position: absolute;
+	left:0;
+	top:0;
+	aspect-ratio:1;
+	background: url(../imgs/obj_virus.png) no-repeat center/100%;
+}
+.mainKV .o1{
+	width: 5%;
+	margin: 12% 0 0 -12%;
+}
+.mainKV .o2{
+	width: 13%;
+	margin: 45% 0 0 -22%;
+}
+.mainKV .o3{
+	width:10%;
+	margin: 20% 0 0 108%;
+}
+
+/************************* mainKV end **********************************/
+
+.btn-arrowD {
+	position: absolute;
+	left:50%;  /*強制居中*/
+	bottom:0; 
+	transform: translateX(-50%); /*強制居中*/
+	z-index:2; 
+	text-decoration: none;
+	font-size:4.5rem;
+	line-height:1; 
+	color: var(--gray);
+	/*margin-bottom:1.25rem;*/
+	margin-bottom:1rem;
+	animation:arrowD 2.5s ease-out infinite;
+}
+.btn-arrowD:hover {
+	color: var(--green);
+}
+.btn-arrowD i {
+	text-shadow: 2px 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+#question {
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+#trend,
+#immunocyte,
+#solution{
+	padding-top: 85px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+.bgObj{
+	position: relative;
+}
+.bgObj .obj{
+	position: absolute;
+	top:0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+.bgObj .o1{ left:0;}
+.bgObj .o2{	right:0;}
+#question .o1{
+	margin-top: 2%;
+	width: 41.72%;
+	aspect-ratio:1;
+	background-image: url(../imgs/obj_cell1.jpg);
+}
+#question .o2{
+	margin-top: 0%;
+	width: 25.85%;
+	aspect-ratio:1;
+	background-image: url(../imgs/obj_cell2.jpg);
+}
+#trend .o1{
+	margin-top: 8%;
+	width: 28.91%;
+	aspect-ratio:1.09;
+	background-image: url(../imgs/obj_cell3.jpg);
+}
+#trend .o2{
+	margin-top: 35%;
+	width: 37.97%;
+	aspect-ratio:0.87;
+	background-image: url(../imgs/obj_cell4.jpg);
+}
+.bgObj > .container{
+	position: relative;
+}
+
+img.titleGame {
+	width:55%;
+	height:auto;
+	margin-top:1em; 
+	margin-bottom:0.5em; 
+	margin-right: 18%;
+}
+img.title {
+	width:60%;
+	height:auto;
+	margin-bottom:2.5em; 
+}
+
+
+ul.item1 li {
+	float: left;
+	width: calc(50% - 40px);
+	margin:0 20px 20px;
+}
+ul.item1 li img {
+	margin-bottom:15px;
+	width: 150px;
+	height: auto;
+}
+ul.item1 li:nth-child(2n+1) { 
+	clear:both;
+}
+/*延遲-取消,改全部一起出現
+ul.item1 li:nth-child(1) {
+	transition-delay: 0.25s;
+}
+ul.item1 li:nth-child(2) {
+	transition-delay: 0.75s;
+}
+ul.item1 li:nth-child(3) {
+	transition-delay: 1s;
+}
+ul.item1 li:nth-child(4) {
+	transition-delay: 1.25s;
+}
+*/
+
+/*延遲-取消,改全部一起出現
+.diagnostic .col-6:nth-child(2),
+.diagnostic .col:nth-child(2) {
+	transition-delay: 0.5s;
+}
+.diagnostic .col-6:nth-child(3),
+.diagnostic .col:nth-child(3)  {
+	transition-delay:1s;
+}
+.diagnostic .col-6:nth-child(4),
+.diagnostic .col:nth-child(4)  {
+	transition-delay:1.5s;
+}
+.diagnostic .col-6:nth-child(5),
+.diagnostic .col:nth-child(5)  {
+	transition-delay:2s;
+}
+*/
+
+
+/*ipad 直式 md*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+	#trend,
+	#immunocyte,
+	#solution{
+		padding-top: 55px;
+		padding-bottom: 20px;
+	}
+}
+
+
+/*手機版~*/
+@media (max-width: 767.98px) { 
+
+	/************************* mainKV start **********************************/
+	.mainKV{
+		aspect-ratio:0.76;
+		background-position-y: 55%;
+	}
+
+	.mainKV .family{
+		margin-top:60.5%;
+		width:67.75%;
+	}
+
+	.mainKV .hand{
+		margin-top:84%;
+		width:35.75%;
+	}
+
+	.mainKV .btm{
+		margin-top:99.25%;
+		width:92.25%;
+	}
+
+	.mainKV .title{
+		margin-top:4.75%;
+		width:72%;
+		aspect-ratio:1.57;
+		background-image: url(../imgs/kvTitle_m.png);
+	}
+
+	/************************* mainKV end **********************************/
+	
+	.btn-arrowD {
+		display: none;
+	}
+	#question {
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
+	#trend,
+	#immunocyte,
+	#solution{
+		padding-top: 55px;
+		padding-bottom: 20px;
+	}
+	img.titleGame {
+		width:75%;
+		margin-right: 25%;
+	}
+	img.title {
+		width:105%;
+		margin-bottom:1.75em; 
+	}	
+}
+
+
+
+/*捲軸觸發區塊效果-inout*/
+.inout {
+	opacity:0;
+	transition:all 1s;
+	/*transition: all .5s cubic-bezier(0, .71, .4, 1);*/
+	transform:translateY(50px);
+}
+.inout.highlight {
+	opacity:1;
+	transform:translateY(0);
+}
+
+.podcast {
+	background-image: url(../imgs/podcastDr.jpg);
+	background-position: 50% 50%; /*左右 上下*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	aspect-ratio:2.95; /*寬除高*/
+	margin: 4em 0;
+}
+.podcast .podcastW {
+	position:absolute;
+	top:5.5%;
+	left:20%;
+	z-index:1;
+	width:30%;
+}
+
+.fullKV {
+	background-image: url(../imgs/pic07.jpg);
+	background-position: 50% 50%; /*左右 上下*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	padding: 5.5em 0 4em;
+}
+.picKV {
+	background-image: url(../imgs/pic08.jpg);
+	background-position: 50% 50%; /*左右 上下*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	padding-top: 1.5em;
+	aspect-ratio:1.97; /*寬除高*/
+	margin-bottom: 3em;
+}
+.picKV hgroup {
+	position: absolute;
+	left:0;
+	bottom:0;
+	padding: 1.5em 2.15em;
+	padding-top: 0;
+}
+
+img.chart {
+	width: 800px;
+}
+
+/*對話框*/
+img.dialogBox {
+	width: 600px;
+	margin: 3em auto 2em;
+}
+.future img {
+	width: 100px;
+	margin-bottom: 0.5em;
+}
+
+
+/*漸層*/
+.titlebar1,
+.titlebar2,
+.titlebar3 {
+	padding: 0.3em 6.5em 0.25em 0.75em;
+	color:var(--white);
+	font-weight: 500;
+	display: inline-block;
+	margin-bottom: 1.5em;
+}
+.titlebar1 {
+	background-image: linear-gradient(to right, #5db1bd 40%, rgba(255, 255, 255, 0) 100%);
+}
+.titlebar2 {
+	background-image: linear-gradient(to right, #fb7c50 20%, rgba(255, 255, 255, 0) 90%);
+}
+.titlebar3 {
+	background-image: linear-gradient(to right, #287282 0%, rgba(255, 255, 255, 0) 90%);
+}
+
+
+/*ipad 橫式 lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	.podcast {
+		aspect-ratio:2.3; /*寬除高*/
+	}
+	.podcast .podcastW {
+		top:6.25%;
+		left:13%;
+		width:38%;
+	}
+}
+
+
+/*ipad 直式 md*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.titlebar1,
+	.titlebar2,
+	.titlebar3 {
+		padding: 0.3em 4em 0.3em 0.75em;
+	}
+	.podcast {
+		aspect-ratio:1.75;
+	}
+	.podcast .podcastW {
+		top:7%;
+		left:8%;
+		width:45%;
+	}
+	.fullKV {
+		padding: 4em 0 3em;
+	}
+	/*對話框*/
+	img.dialogBox {
+		width: 480px;
+	}
+}
+
+
+/*手機版xs*/
+@media (max-width: 767.98px) { 
+	.picKV {
+		background-position: 50% 50%;
+		padding-top: 1.5em;
+		aspect-ratio: 1;
+		margin-bottom: 2em;
+	}
+	.picKV hgroup {
+		padding: 1em 1.15em;
+	}
+	/*容器超出時有拉吧*/
+	/*
+	.scrollbarBox {
+		overflow: auto;
+		padding-bottom: 1.5em;
+	}
+	.future {
+		min-width: 680px;
+	}
+	*/
+	.future h4 {
+		white-space: nowrap;
+		margin-bottom: 0.5em;
+	}
+	.future img {
+		width:70px;
+	}
+	.fullKV {
+		padding: 4em 0 3em;
+	}
+	.titlebar1,
+	.titlebar2,
+	.titlebar3 {
+		padding: 0.3em 2.5em 0.35em 0.5em;
+		margin-bottom: 1.25em;
+	}
+	img.dialogBox {
+		width: 220px;
+		margin: 2em auto 1.5em;
+	}
+	.podcast {
+		background-position: 70% 0%;
+		aspect-ratio:1.1;
+		margin: 0 0 90%;
+	}
+	.podcast .podcastW {
+		top:auto;
+		bottom:-75%;
+		left:14%;
+		width:75%;
+	}
+}
+
+
+
+/* ==================================================
+   note 智識庫
+================================================== */
+.note { 
+	position: relative;
+	margin: 100px 0 2em;
+	padding-left:3%; 
+}
+.note img.note-icon1 { 
+	position: absolute;
+	top: 28%;
+    left: -6%;
+    width: 20%;
+}
+.note img.note-icon2 { 
+	position: absolute;
+	top:28%;
+    left:2%;
+    width:13%;
+}
+.note h3 { 
+	margin-left: 1em;
+}
+.noteBox { 
+	border: 2px solid #30a5b8;
+	border-radius: 1rem;
+	padding:1.85em 1.5em 1.85em 5.75em;
+	background-color:var(--white);
+	
+}
+.noteBox strong {
+	color:var(--red);
+}
+
+/*ipad 橫式 lg~xs*/
+@media (max-width: 1199.98px) { 
+	.note {
+		width: 97%;
+		margin-left: 3%;
+	}
+}
+
+
+/*ipad 直式 md*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.note { 
+		margin: 50px 0 2em;
+	}
+	.note img.note-icon1 { 
+		top: 30%;
+		width: 23%;
+	}
+	.note img.note-icon2 { 
+		width:17%;
+	}
+}
+
+
+/*手機版xs*/
+@media (max-width: 767.98px) { 
+	.note {
+		margin: 2.5em 0 0;
+		padding-left:0;
+	}
+	.note h3 { 
+		margin-left: 1em;
+		margin-right: 3em;
+		font-size: 1.12rem;
+	}
+	.noteBox { 
+		padding:1.25em;
+		
+	}
+	.note img.note-icon1 { 
+		top: -10px;
+		left:auto;
+		right:0;
+		width: 70px;
+	}
+	.note img.note-icon2 { 
+		top: -33px;
+        left: auto;
+        right: 0%;
+        width: 50px;
+	}
+}
+
+@media (min-width: 527px) and (max-width: 767.98px) { 
+	.note img.note-icon1 { 
+		top: -22px;
+	}
+}
+
+
+
+/* ==================================================
+   tab頁籤-nav-tabs #myTab 凍存服務差異
+================================================== */
+#myTab.nav-tabs .nav-item .nav-link {
+    color: var(--gray);
+	background-color: var(--white);
+    border: none;
+	border-radius: 1.5em;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-top: 3px;
+}
+#myTabContent .tab-pane {
+	border: 2em solid var(--gray);
+	border-radius: 3em;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	background-color: var(--white);
+	padding: 1.5em;
+}
+#myTabContent .tab-pane h3 small {
+	font-size: 0.925em;
+}
+#myTabContent .tab-pane .line {
+	border-right: 1px solid var(--gray);
+	padding-right: 1.5em;
+}
+#myTabContent .tab-pane .badge {
+	color: var(--white);
+	font-size: inherit;
+	border-radius: 1.5em;
+}
+#myTabContent .tab-pane .badge.letterSpace {
+	letter-spacing: 0.35rem;
+	padding-left:1.1rem;
+}
+#myTabContent .tab-pane img {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	height:200px;
+}
+#myTabContent .tab-pane .space2 {
+	padding-left:1.1rem;
+}
+#myTabContent .tab-pane .space1 {
+	padding-left:1.75rem;
+}
+#myTab2 .mt-4 {
+	margin-top: 6rem !important;
+}
+
+
+
+/*手機版xs*/
+@media (max-width: 767.98px) { 
+	#myTabContent .tab-pane {
+		border: 1.5em solid var(--gray);
+		border-radius: 1.75em;
+		padding: 1em;
+	}
+	#myTabContent .tab-pane .badge.letterSpace {
+		letter-spacing: 0;
+		padding-left:0.75rem;
+	}
+	/*
+	#myTabContent .tab-pane .line {
+		border-right:none;
+		border-bottom: 1px solid var(--gray);
+		padding-right:0;
+		padding-bottom:0;
+	}
+	*/
+	#myTabContent .tab-pane .line {
+		border:none;
+		padding-right:0;
+		padding-bottom:0;
+	}
+	#myTabContent .tab-pane img {
+		margin-top: 0.25em;
+		margin-bottom: 1em;
+		height:100px;
+	}
+	#myTabContent .tab-pane .space1 {
+		padding-left:0;
+		padding-top:0;
+	}
+	#myTabContent .tab-pane .mb-5 {
+		margin-bottom:1em !important;
+    }
+	#myTab2 .mt-4 {
+		margin-top: 0.75rem !important;
+	}
+	#myTabContent .tab-pane .badge {
+		display: block;
+	}
+}
+
+
+
+
+/*免疫細胞*/
+#myTab.nav-tabs .nav-item.show .nav-link#tab1, 
+#myTab.nav-tabs .nav-link#tab1.active,
+#myTabContent .tab-pane#myTab1 .badge {
+	color: var(--white);
+	background-color:#3A7FBC;
+}
+#myTabContent .tab-pane#myTab1 h3 {
+    color:#3A7FBC;
+}
+#myTabContent .tab-pane#myTab1 h3 {
+	color:#3A7FBC;
+}
+#myTabContent .tab-pane#myTab1 {
+	border-color: #97B9D3;
+}
+
+
+/*卵子*/
+#myTab.nav-tabs .nav-item.show .nav-link#tab2, 
+#myTab.nav-tabs .nav-link#tab2.active,
+#myTabContent .tab-pane#myTab2 .badge {
+    color: var(--white);
+	background-color:#DDA4A8;
+}
+#myTabContent .tab-pane#myTab2 h3 {
+	color:#DDA4A8;
+}
+#myTabContent .tab-pane#myTab2 {
+	border-color: #EFD8D9;
+}
+
+
+/*臍帶血幹細胞*/
+#myTab.nav-tabs .nav-item.show .nav-link#tab3, 
+#myTab.nav-tabs .nav-link#tab3.active,
+#myTabContent .tab-pane#myTab3 .badge {
+    color: var(--white);
+	background-color:#E7BE7B;
+}
+#myTabContent .tab-pane#myTab3 h3 {
+	color:#E7BE7B;
+}
+#myTabContent .tab-pane#myTab3 {
+	border-color: #F4D6AE;
+}
+
+
+/*成人周邊血幹細胞*/
+#myTab.nav-tabs .nav-item.show .nav-link#tab4, 
+#myTab.nav-tabs .nav-link#tab4.active,
+#myTabContent .tab-pane#myTab4 .badge {
+    color: var(--white);
+	background-color:#CA664D;
+}
+#myTabContent .tab-pane#myTab4 h3 {
+	color:#CA664D;
+}
+#myTabContent .tab-pane#myTab4 {
+	border-color: #F4A99D;
+}
+
+
+/*誘導性多功能幹細胞*/
+#myTab.nav-tabs .nav-item.show .nav-link#tab5, 
+#myTab.nav-tabs .nav-link#tab5.active,
+#myTabContent .tab-pane#myTab5 .badge {
+    color: var(--white);
+	background-color:#738C80;
+}
+#myTab.nav-tabs .nav-item.show .nav-link#tab5 .tc, 
+#myTab.nav-tabs .nav-link#tab5.active .tc {
+    color: var(--white);
+}
+#myTabContent .tab-pane#myTab5 h3 {
+	color:#738C80;
+}
+#myTabContent .tab-pane#myTab5 {
+	border-color: #D7E2E1;
+}
+
+
+/* ==================================================
+   tab頁籤-nav-pills #cellTab 細胞
+================================================== */
+#cellTab.nav-pills .nav-link,
+#cellTab.nav-pills .nav-link.active,
+#cellTab.nav-pills .show>.nav-link {
+    background-color:transparent;
+	padding:0;
+}
+
+#cellTabContent .tab-pane {
+	border-radius:1.25em;
+	border:2px solid var(--gray);
+	background: var(--white);
+	padding: 1.5em 2em;
+	margin-top: 1.25em;
+}
+#cellTabContent .tab-pane .row {
+	align-items: center;
+}
+#cellTabContent .tab-pane h4 small {
+	font-weight: normal;
+}
+#cellTabContent .tab-pane .tc {
+	color:var(--red);
+	margin-top: 1em;
+}
+
+
+/*自然殺手細胞*/
+#cellTab1.tab-pane {
+	border-color:#94BDD0;
+}
+#cellTab1.tab-pane h4 {
+	color:#94BDD0;
+}
+
+/*毒殺性T細胞*/
+#cellTab2.tab-pane {
+	border-color:#DC7267;
+}
+#cellTab2.tab-pane h4 {
+	color:#DC7267;
+}
+
+/*細胞激素誘導殺手細胞*/
+#cellTab3.tab-pane {
+	border-color:#C6B6D8;
+}
+#cellTab3.tab-pane h4 {
+	color:#C6B6D8;
+}
+
+/*γδ T細胞*/
+#cellTab4.tab-pane {
+	border-color:#E2A67D;
+}
+#cellTab4.tab-pane h4 {
+	color:#E2A67D;
+}
+
+/*樹突細胞*/
+#cellTab5.tab-pane {
+	border-color:#F4B861;
+}
+#cellTab5.tab-pane h4 {
+	color:#F4B861;
+}
+
+/*DC-CIK*/
+#cellTab6.tab-pane {
+	border-color:#9DAF5D;
+}
+#cellTab6.tab-pane h4 {
+	color:#9DAF5D;
+}
+
+
+
+/*手機版xs*/
+@media (max-width: 767.98px) { 
+	#cellTabContent .tab-pane {
+		padding: 0.35em 1.25em 1.25em;
+	}
+	#cellTabContent .tab-pane img {
+		width: 115px;
+	}
+	#cellTabContent .tab-pane h4 {
+		text-align: center;
+	}
+}
+
+
+/* ==================================================
+   延伸閱讀
+================================================== */
+.slickArticle {
+	margin: 0 auto 4em;
+	width: 95%;
+}
+.slickArticle a {
+	display: block;
+	border-radius:1.6em;
+	overflow: hidden;
+	margin:0 0.65em;
+	color: var(--gray);
+	background: var(--white);
+	text-decoration: none;
+}
+.slickArticle a img {
+	display: block;
+	width:100%;
+	transform: scale(1.01);
+	transition: all 0.5s;
+}
+.slickArticle a .txt {
+	padding: 0.6em 1em 0.7em;
+}
+.slickArticle a .txt p.tc {
+	height: 2.85em;
+	margin: 0; 
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+	overflow: hidden;
+}
+.slickArticle a .txt .more {
+	font-size: 0.85em;
+	line-height: 1em;
+	text-align: right;
+	margin-top:0.5em;
+}
+.slickArticle a:hover .txt .more {
+	color:var(--green);
+}
+
+
+/*桌上型 xl*/
+@media (min-width: 1200px) { 
+	.slickArticle a:hover img {
+		transform: scale(1.05);
+	}
+}
+
+
+/*ipad 直式 md*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.slickArticle a .txt p.tc {
+		height: 4em;
+		-webkit-line-clamp:3;
+	}
+}
+
+
+/*手機版~*/
+@media (max-width: 767.98px) { 
+	.slickArticle {
+		width: 75%;
+	}
+	.slickArticle a{
+		margin:0;
+	}
+	.slickArticle a .txt p.tc {
+		font-size: 1rem;
+		height: 2.5em;
+	}
+	.slickArticle a .txt .more {
+		font-size: 0.9em;
+	}
+}
+
+
+
+/******************* slick start ******************/
+.slick {
+	margin-bottom: 0; /* 覆寫 slick-theme.css 的 .slick-slider 的 margin-bottom: 30px; */
+}
+
+.btn-arrowL,
+.btn-arrowR {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+	font-size:3.75rem;
+	line-height:1; 
+	color: #7ABBA9;
+	background-color: #fff;  
+	border-radius: 50%;
+	cursor: pointer;
+	/*--x:calc(100% + 0.25em);*/
+	--x:calc(100% + 0.05em);
+}
+.btn-arrowL {
+	right: var(--x);
+	padding-right:9px; 
+}
+.btn-arrowR {
+	left: var(--x);
+	padding-left:9px; 
+}
+
+.btn-arrowL:hover,
+.btn-arrowR:hover {
+	color: #5DAF96;
+}
+
+.slick-dots {
+	bottom: -1.5em;
+}
+.slick-dots li {
+	width: 13px;
+	height: 13px;
+	margin: 0 5px;
+}
+.slick-dots li button {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: none;
+	background: #CCC;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus,
+.slick-dots li.slick-active button {
+	background: var(--gray);
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before,
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+	display: none;
+}
+/******************* slick end ********************/
+
+
+/*ipad 直式 md以下*/
+@media (max-width: 991.98px) { 
+	.slick-dots li {
+		width: 10px;
+		height: 10px;
+		margin: 0 3px;
+	}
+}
+
+
+
+/* ==================================================
+   動畫 animation
+================================================== */
+.zoomLoop {
+	animation:zoomLoop 1.5s ease-in infinite alternate; /*infinite會一直loop播放*/ /*alternate會反轉*/
+}
+@keyframes zoomLoop {
+	to {
+		transform:scale(1.05);
+	}
+  }
+
+
+@keyframes arrowD {
+  25% {
+    transform:translateY(-6px) translateX(-50%);
+  }
+  75% {
+    transform:translateY(6px) translateX(-50%);
+  }
+}
+
+@keyframes loop {
+  25% {
+    transform:translateY(-6px);
+  }
+  75% {
+    transform:translateY(6px);
+  }
+}
+
+
+@media (min-width: 1200px){
+	/*位移效果-X軸往右移動*/
+	.effect-moveR {
+		transition: transform 0.35s ease-out;
+	}
+	.effect-moveR:focus,
+	.effect-moveR:hover {
+		transform: translateX(6px) translateY(-50%);
+	}
+	
+	/*位移效果-X軸往右移動*/
+	.effect-moveL {
+		transition: transform 0.35s ease-out;
+	}
+	.effect-moveL:focus,
+	.effect-moveL:hover {
+		transform: translateX(-6px) translateY(-50%);
+	}
+	
+	/*互動式外擴散光*/
+	@keyframes btnGlow {
+		 to {
+			box-shadow:0 0 0 0.85rem rgba(150, 180, 240, 0);
+		}
+	}
+}
+
+
+
+
+
+/* ==================================================
+   RWD
+================================================== */
+/*桌上型 xl*/
+@media (min-width: 1200px){ 
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1000px;
+    }
+	.navbar {
+		padding-right: 0.75rem;
+		padding-left: 2.1rem;
+	}
+	a.btn-more:hover img {
+		transform: scale(1.1);
+	}
+}
+
+
+/*ipad 橫式 lg以下*/
+@media (max-width: 1199.98px) { 
+	.container {
+		max-width: 860px;
+	}
+	body, h6, p {
+		font-size: 1rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.2rem;
+	}
+	h5 {
+		font-size: 1rem;
+	}
+	.btn-more {
+		right:10px; 
+	}
+	.btn-more img {
+		width:100px;
+	}
+	.g-4 {
+		--bs-gutter-y: 1.25rem;
+		--bs-gutter-x: 1.25rem;
+	}
+	.g-5 {
+		--bs-gutter-y: 3rem;
+		--bs-gutter-x: 3rem;
+	}
+	.mtb-space {
+		margin-top:3em; 
+		margin-bottom:3em; 
+	}
+	.mt-space {
+		margin-top:3em; 
+	}
+	.mb-space {
+		margin-bottom: 3em;
+	}
+	.btn-arrowL,
+	.btn-arrowR {
+		width: 4.25rem;
+		height: 4.25rem;
+		font-size: 3.25rem;
+	}
+	ul.item1 li img {
+		max-width:250px; 
+	}
+}
+
+
+/*ipad 直式 md*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.container {
+		max-width: 660px;
+	}
+	body, h6, p {
+		font-size: 0.95rem;
+	}
+	h3 {
+		font-size: 1.25rem;
+	}
+	h4 {
+		font-size: 1.1rem;
+	}
+	h5 {
+		font-size: 1rem;
+	}
+	.tc {
+		font-size: 0.9rem;
+	}
+	.mtb-space {
+		margin-top:3em; 
+		margin-bottom:3em; 
+	}
+	.mt-space {
+		margin-top:3em; 
+	}
+	.mb-space {
+		margin-bottom:3em; 
+	}
+	.g-5 {
+		--bs-gutter-y: 2rem;
+		--bs-gutter-x: 2rem;
+	}
+	.navbar {
+		padding-right: 1.1rem;
+		padding-left: 1.1rem;
+	}
+	img.title {
+		width:70%;
+	}
+	.pic01 {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	.btn-arrowL,
+	.btn-arrowR {
+		width: 2.5rem;
+		height: 2.5rem;
+		font-size: 2.25rem;
+	}
+}
+
+
+
+/*手機版~*/
+@media (max-width: 767.98px) { 
+	body {
+		padding-top:85px;
+	}
+	.container {
+		width: 95%;
+	}
+	body,p {
+		font-size: 0.9rem;
+		line-height: 1.45;
+	}
+	h3 {
+		font-size: 1.15rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+	h5 {
+		font-size: 0.95rem;
+	}
+	.tc {
+		font-size: 0.8rem;
+	}
+	.mtb-space {
+		margin-top:2em; 
+		margin-bottom:2em; 
+	}
+	.mt-space {
+		margin-top:2em; 
+	}
+	.mb-space {
+		margin-bottom:2em; 
+	}
+	.mt-5 {
+		margin-top: 2em !important;
+	}
+	.mb-5 {
+		margin-bottom: 2em !important;
+	}
+	.btn-more {
+		bottom:1em;
+	}
+	.btn-more img {
+		width: 75px;
+	}
+	.btn-arrowL,
+	.btn-arrowR {
+		width: 2rem;
+		height: 2rem;
+		font-size: 1.75rem;
+	}
+	.btn-arrowL {
+		padding-right:4px; 
+	}
+	.btn-arrowR {
+		padding-left:4px; 
+	}
+	.article .btn-arrowL,
+	.article .btn-arrowR {
+		--x: calc(100% + 0.25em);
+	}
+	.g-5 {
+		--bs-gutter-y: 1.5rem;
+		--bs-gutter-x: 1.5rem;
+	}
+	ul.item1 {
+		margin:0;
+	}
+	ul.item1 li {
+		float: none;
+		width: 100%;
+		margin:0;
+	}
+	ul.item1 li:nth-child(1),
+	ul.item1 li:nth-child(2),
+	ul.item1 li:nth-child(3) {
+		margin-bottom:2.5rem;
+	}
+	ul.item1 li img {
+		max-width:160px;
+		height: auto;
+	}
+	.podpastWrapper iframe {
+		border:none;
+		border-radius: 1rem;
+		/*height: 360px;*/
+		height: 240px;
+	}	
+	.pic01 {
+		max-width:200px;
+	}
+}
+
+
+
+/* ==================================================
+   footer 康健規範-白底黑字款
+================================================== */
+
+footer {
+    width: 100%;
+    /*padding: 30px 0;*/
+	padding: 30px 0 15px;
+    background:var(--green-deep);
+}
+footer a {
+    transition: .3s;
+	color:var(--white);
+    text-decoration: none;
+}
+
+footer ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    font-size: 15px;
+    line-height: 15px;
+	border-right: 1px solid var(--white);
+    padding: 0 10px 0 0;
+    margin: 0 10px 10px 0;
+}
+
+footer ul li:last-child {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li a {
+    color:var(--white);
+    line-height: 15px;
+}
+footer ul li a:hover {
+	color:var(--white);
+	opacity: 0.65;
+}
+
+footer ul:last-child {
+    margin: 0;
+}
+
+footer p {
+    color:var(--white);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    footer ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    footer ul li {
+    padding: 0 5px 0 0;
+    margin: 0 5px 10px 0;
+    }
+}
+                   
