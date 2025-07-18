@@ -2,6 +2,18 @@ html {
 	font-size: 16px;
 }
 
+body {
+	font-size: 100%;
+	color: #17181A;
+	line-height: 1.44;
+	font-weight: 300;
+	-ms-text-size-adjust: 100%; /* 2 */
+	-moz-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	text-size-adjust: 100%; /* 2 */
+	background: #FFFFFF;
+}
+
 body,
 div,
 dl,
@@ -123,23 +135,6 @@ select {
 	*font-size: 100%;
 }
 
-html {
-	height: 100%;
-}
-
-body {
-	height: 100%;
-	font-size: 100%;
-	color: #17181A;
-	line-height: 1.44;
-	font-weight: 300;
-	-ms-text-size-adjust: 100%; /* 2 */
-	-moz-text-size-adjust: 100%; /* 2 */
-	-webkit-text-size-adjust: 100%; /* 2 */
-	text-size-adjust: 100%; /* 2 */
-	background: #FFFFFF;
-}
-
 div,
 ul,
 li,
@@ -165,4 +160,14 @@ a {
 		outline: none;
 		box-shadow: none !important;
 	}
+}
+
+/* 取消新版chrome搞出來的黑框bug */
+*, *:focus {
+	outline: none;
+}
+button:active, button.active, button:focus, button.focus {
+	outline: none;
+	border: none;
+	box-shadow: none !important;
 }
