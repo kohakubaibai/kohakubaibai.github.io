@@ -42,7 +42,7 @@
 	<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MCMN77"
 		style="display:none;visibility:hidden" width="0"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
+	<nav id="mainNavbar" class="navbar navbar-expand-lg">
 		<div class="container-fluid">
 			<div class="navbar-brand">
 				<a href="https://www.commonhealth.com.tw/" target="_blank">
@@ -70,185 +70,218 @@
 			</div>
 		</div>
 	</nav>
-
 	<main>
 
 		<!--主視覺-->
-		<section id="hero" class="section section--hero scrollArea">
-			<div class="mainKVBox" style="min-height: 100dvh;">
+		<section id="hero" class="hero ">
+			<div class="mainKvBox scrollArea">
+				<div class="mainKvBox__text">
+					<div class="slogan wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+						<img src="assets/images/kv_main.png" alt="對抗壓力型失眠 天然草本菇萃麥角硫因">
+					</div>
+					<div class="intro wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">天然草本菇萃麥角硫因<br>解鎖原生熟睡力</div>
+					<ul class="list">
+						<li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.2s">
+							<img src="assets/images/kv_el-1.png" alt="text1">
+							<span>text1</span>
+						</li>
+						<li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.4s">
+							<img src="assets/images/kv_el-2.png" alt="text2">
+							<span>text2</span>
+						</li>
+						<li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.6s">
+							<img src="assets/images/kv_el-3.png" alt="text3">
+							<span>text3</span>
+						</li>
+						<li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.8s">
+							<img src="assets/images/kv_el-4.png" alt="text4">
+							<span>text4</span>
+						</li>
+						<li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="2s">
+							<img src="assets/images/kv_el-5.png" alt="text5">
+							<span>text5</span>
+						</li>
+					</ul>
+				</div>
 				<h1 class="d-none">對抗壓力型失眠 天然草本菇萃麥角硫因 解鎖原生熟睡力</h1>
 			</div>
+			<div class="cover">
+				<div class="wrapper">
+					<img src="assets/images/kv_cover.png" alt="對抗壓力型失眠 天然草本菇萃麥角硫因">
+				</div>
+			</div>
+			<!--測驗-->
+			<section id="quiz" class="section section--quiz scrollArea">
+				<div class="container">
+					<h2 class="section__title">
+						<div class="topic">你，壓力過大嗎？</div>
+						<div class="sub">30秒內檢測壓力指數</div>
+						<div class="desc">
+							現代人生活節奏快速，你是否也開始覺得難以負荷？<br>
+							以下小測驗，幫你秒測是否壓力過大！
+						</div>
+					</h2>
+					<div class="section__cotnent">
+						<form id="stressForm" class="stressForm">
+							<div class="stressForm__questions">
+								<!-- Q1 -->
+								<div class="quizBox active" data-question="1">
+									<div class="quizBox__question"><span>Ｑ1</span><div>一些無法預期的事情發生而感到心煩意亂</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q1" id="q1_0" data-score="0"><label for="q1_0">從不</label></li>
+											<li><input type="radio" name="q1" id="q1_1" data-score="1"><label for="q1_1">偶爾</label></li>
+											<li><input type="radio" name="q1" id="q1_2" data-score="2"><label for="q1_2">有時</label></li>
+											<li><input type="radio" name="q1" id="q1_3" data-score="3"><label for="q1_3">常常</label></li>
+											<li><input type="radio" name="q1" id="q1_4" data-score="4"><label for="q1_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q2 -->
+								<div class="quizBox" data-question="2">
+									<div class="quizBox__question"><span>Ｑ2</span><div>感覺無法控制自己生活中重要的事情</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q2" id="q2_0" data-score="0"><label for="q2_0">從不</label></li>
+											<li><input type="radio" name="q2" id="q2_1" data-score="1"><label for="q2_1">偶爾</label></li>
+											<li><input type="radio" name="q2" id="q2_2" data-score="2"><label for="q2_2">有時</label></li>
+											<li><input type="radio" name="q2" id="q2_3" data-score="3"><label for="q2_3">常常</label></li>
+											<li><input type="radio" name="q2" id="q2_4" data-score="4"><label for="q2_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q3 -->
+								<div class="quizBox" data-question="3">
+									<div class="quizBox__question"><span>Ｑ3</span><div>感到緊張不安和壓力</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q3" id="q3_0" data-score="0"><label for="q3_0">從不</label></li>
+											<li><input type="radio" name="q3" id="q3_1" data-score="1"><label for="q3_1">偶爾</label></li>
+											<li><input type="radio" name="q3" id="q3_2" data-score="2"><label for="q3_2">有時</label></li>
+											<li><input type="radio" name="q3" id="q3_3" data-score="3"><label for="q3_3">常常</label></li>
+											<li><input type="radio" name="q3" id="q3_4" data-score="4"><label for="q3_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q4 -->
+								<div class="quizBox" data-question="4">
+									<div class="quizBox__question"><span>Ｑ4</span><div>對於有能力處理自己私人的問題感到有信心</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q4" id="q4_0" data-score="4"><label for="q4_0">從不</label></li>
+											<li><input type="radio" name="q4" id="q4_1" data-score="3"><label for="q4_1">偶爾</label></li>
+											<li><input type="radio" name="q4" id="q4_2" data-score="2"><label for="q4_2">有時</label></li>
+											<li><input type="radio" name="q4" id="q4_3" data-score="1"><label for="q4_3">常常</label></li>
+											<li><input type="radio" name="q4" id="q4_4" data-score="0"><label for="q4_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q5 -->
+								<div class="quizBox" data-question="5">
+									<div class="quizBox__question"><span>Ｑ5</span><div>感到事情順心如意</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q5" id="q5_0" data-score="4"><label for="q5_0">從不</label></li>
+											<li><input type="radio" name="q5" id="q5_1" data-score="3"><label for="q5_1">偶爾</label></li>
+											<li><input type="radio" name="q5" id="q5_2" data-score="2"><label for="q5_2">有時</label></li>
+											<li><input type="radio" name="q5" id="q5_3" data-score="1"><label for="q5_3">常常</label></li>
+											<li><input type="radio" name="q5" id="q5_4" data-score="0"><label for="q5_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q6 -->
+								<div class="quizBox" data-question="6">
+									<div class="quizBox__question"><span>Ｑ6</span><div>發現自己無法處理所有自己必須做的事情</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q6" id="q6_0" data-score="0"><label for="q6_0">從不</label></li>
+											<li><input type="radio" name="q6" id="q6_1" data-score="1"><label for="q6_1">偶爾</label></li>
+											<li><input type="radio" name="q6" id="q6_2" data-score="2"><label for="q6_2">有時</label></li>
+											<li><input type="radio" name="q6" id="q6_3" data-score="3"><label for="q6_3">常常</label></li>
+											<li><input type="radio" name="q6" id="q6_4" data-score="4"><label for="q6_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q7 -->
+								<div class="quizBox" data-question="7">
+									<div class="quizBox__question"><span>Ｑ7</span><div>有辦法控制生活中惱人的事情</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q7" id="q7_0" data-score="4"><label for="q7_0">從不</label></li>
+											<li><input type="radio" name="q7" id="q7_1" data-score="3"><label for="q7_1">偶爾</label></li>
+											<li><input type="radio" name="q7" id="q7_2" data-score="2"><label for="q7_2">有時</label></li>
+											<li><input type="radio" name="q7" id="q7_3" data-score="1"><label for="q7_3">常常</label></li>
+											<li><input type="radio" name="q7" id="q7_4" data-score="0"><label for="q7_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q8 -->
+								<div class="quizBox" data-question="8">
+									<div class="quizBox__question"><span>Ｑ8</span><div>常覺得自己是駕馭事情的主人</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q8" id="q8_0" data-score="4"><label for="q8_0">從不</label></li>
+											<li><input type="radio" name="q8" id="q8_1" data-score="3"><label for="q8_1">偶爾</label></li>
+											<li><input type="radio" name="q8" id="q8_2" data-score="2"><label for="q8_2">有時</label></li>
+											<li><input type="radio" name="q8" id="q8_3" data-score="1"><label for="q8_3">常常</label></li>
+											<li><input type="radio" name="q8" id="q8_4" data-score="0"><label for="q8_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q9 -->
+								<div class="quizBox" data-question="9">
+									<div class="quizBox__question"><span>Ｑ9</span><div>常生氣，因為許多事情的發生是超出自己所能控制的</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q9" id="q9_0" data-score="0"><label for="q9_0">從不</label></li>
+											<li><input type="radio" name="q9" id="q9_1" data-score="1"><label for="q9_1">偶爾</label></li>
+											<li><input type="radio" name="q9" id="q9_2" data-score="2"><label for="q9_2">有時</label></li>
+											<li><input type="radio" name="q9" id="q9_3" data-score="3"><label for="q9_3">常常</label></li>
+											<li><input type="radio" name="q9" id="q9_4" data-score="4"><label for="q9_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Q10 -->
+								<div class="quizBox" data-question="10">
+									<div class="quizBox__question"><span>Ｑ10</span><div>常感到困難的事情堆積如山，而自己無法克服他們</div></div>
+									<div class="quizBox__option">
+										<ul>
+											<li><input type="radio" name="q10" id="q10_0" data-score="0"><label for="q10_0">從不</label></li>
+											<li><input type="radio" name="q10" id="q10_1" data-score="1"><label for="q10_1">偶爾</label></li>
+											<li><input type="radio" name="q10" id="q10_2" data-score="2"><label for="q10_2">有時</label></li>
+											<li><input type="radio" name="q10" id="q10_3" data-score="3"><label for="q10_3">常常</label></li>
+											<li><input type="radio" name="q10" id="q10_4" data-score="4"><label for="q10_4">總是</label></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="stressForm__result">
+								<div id="resultBox" class="resultBox">
+									<div class="resultBox__title">
+										<span id="resultTitle" class="resultTitle"></span>
+										<span id="scoreRange" class="scoreRange"></span>
+									</div>
+									<div class="resultBox__content">
+										<div id="resultDescription" ></div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div><!--/.container-->
+			</section>
+			<!--/測驗-->
 		</section>
-		<!--測驗-->
-		<section id="quiz" class="section section--quiz scrollArea">
-			<div class="container">
-				<h2 class="section__title">
-					<div class="topic">你，壓力過大嗎？</div>
-					<div class="sub">30秒內檢測壓力指數</div>
-					<div class="desc">
-						現代人生活節奏快速，你是否也開始覺得難以負荷？<br>
-						以下小測驗，幫你秒測是否壓力過大！
-					</div>
-				</h2>
-				<form id="stressForm">
-					<div class="stressForm__questions">
-
-						<!-- Q1 -->
-						<div class="quizBox active" data-question="1">
-							<div class="quizBox__question">1. 一些無法預期的事情發生而感到心煩意亂</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q1" id="q1_0" data-score="0"><label for="q1_0">從不</label></li>
-									<li><input type="radio" name="q1" id="q1_1" data-score="1"><label for="q1_1">偶爾</label></li>
-									<li><input type="radio" name="q1" id="q1_2" data-score="2"><label for="q1_2">有時</label></li>
-									<li><input type="radio" name="q1" id="q1_3" data-score="3"><label for="q1_3">常常</label></li>
-									<li><input type="radio" name="q1" id="q1_4" data-score="4"><label for="q1_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q2 -->
-						<div class="quizBox" data-question="2">
-							<div class="quizBox__question">2. 感覺無法控制自己生活中重要的事情</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q2" id="q2_0" data-score="0"><label for="q2_0">從不</label></li>
-									<li><input type="radio" name="q2" id="q2_1" data-score="1"><label for="q2_1">偶爾</label></li>
-									<li><input type="radio" name="q2" id="q2_2" data-score="2"><label for="q2_2">有時</label></li>
-									<li><input type="radio" name="q2" id="q2_3" data-score="3"><label for="q2_3">常常</label></li>
-									<li><input type="radio" name="q2" id="q2_4" data-score="4"><label for="q2_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q3 -->
-						<div class="quizBox" data-question="3">
-							<div class="quizBox__question">3. 感到緊張不安和壓力</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q3" id="q3_0" data-score="0"><label for="q3_0">從不</label></li>
-									<li><input type="radio" name="q3" id="q3_1" data-score="1"><label for="q3_1">偶爾</label></li>
-									<li><input type="radio" name="q3" id="q3_2" data-score="2"><label for="q3_2">有時</label></li>
-									<li><input type="radio" name="q3" id="q3_3" data-score="3"><label for="q3_3">常常</label></li>
-									<li><input type="radio" name="q3" id="q3_4" data-score="4"><label for="q3_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q4 -->
-						<div class="quizBox" data-question="4">
-							<div class="quizBox__question">4. 對於有能力處理自己私人的問題感到有信心</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q4" id="q4_0" data-score="4"><label for="q4_0">從不</label></li>
-									<li><input type="radio" name="q4" id="q4_1" data-score="3"><label for="q4_1">偶爾</label></li>
-									<li><input type="radio" name="q4" id="q4_2" data-score="2"><label for="q4_2">有時</label></li>
-									<li><input type="radio" name="q4" id="q4_3" data-score="1"><label for="q4_3">常常</label></li>
-									<li><input type="radio" name="q4" id="q4_4" data-score="0"><label for="q4_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q5 -->
-						<div class="quizBox" data-question="5">
-							<div class="quizBox__question">5. 感到事情順心如意</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q5" id="q5_0" data-score="4"><label for="q5_0">從不</label></li>
-									<li><input type="radio" name="q5" id="q5_1" data-score="3"><label for="q5_1">偶爾</label></li>
-									<li><input type="radio" name="q5" id="q5_2" data-score="2"><label for="q5_2">有時</label></li>
-									<li><input type="radio" name="q5" id="q5_3" data-score="1"><label for="q5_3">常常</label></li>
-									<li><input type="radio" name="q5" id="q5_4" data-score="0"><label for="q5_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q6 -->
-						<div class="quizBox" data-question="6">
-							<div class="quizBox__question">6. 發現自己無法處理所有自己必須做的事情</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q6" id="q6_0" data-score="0"><label for="q6_0">從不</label></li>
-									<li><input type="radio" name="q6" id="q6_1" data-score="1"><label for="q6_1">偶爾</label></li>
-									<li><input type="radio" name="q6" id="q6_2" data-score="2"><label for="q6_2">有時</label></li>
-									<li><input type="radio" name="q6" id="q6_3" data-score="3"><label for="q6_3">常常</label></li>
-									<li><input type="radio" name="q6" id="q6_4" data-score="4"><label for="q6_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q7 -->
-						<div class="quizBox" data-question="7">
-							<div class="quizBox__question">7. 有辦法控制生活中惱人的事情</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q7" id="q7_0" data-score="4"><label for="q7_0">從不</label></li>
-									<li><input type="radio" name="q7" id="q7_1" data-score="3"><label for="q7_1">偶爾</label></li>
-									<li><input type="radio" name="q7" id="q7_2" data-score="2"><label for="q7_2">有時</label></li>
-									<li><input type="radio" name="q7" id="q7_3" data-score="1"><label for="q7_3">常常</label></li>
-									<li><input type="radio" name="q7" id="q7_4" data-score="0"><label for="q7_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q8 -->
-						<div class="quizBox" data-question="8">
-							<div class="quizBox__question">8. 常覺得自己是駕馭事情的主人</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q8" id="q8_0" data-score="4"><label for="q8_0">從不</label></li>
-									<li><input type="radio" name="q8" id="q8_1" data-score="3"><label for="q8_1">偶爾</label></li>
-									<li><input type="radio" name="q8" id="q8_2" data-score="2"><label for="q8_2">有時</label></li>
-									<li><input type="radio" name="q8" id="q8_3" data-score="1"><label for="q8_3">常常</label></li>
-									<li><input type="radio" name="q8" id="q8_4" data-score="0"><label for="q8_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q9 -->
-						<div class="quizBox" data-question="9">
-							<div class="quizBox__question">9. 常生氣，因為許多事情的發生是超出自己所能控制的</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q9" id="q9_0" data-score="0"><label for="q9_0">從不</label></li>
-									<li><input type="radio" name="q9" id="q9_1" data-score="1"><label for="q9_1">偶爾</label></li>
-									<li><input type="radio" name="q9" id="q9_2" data-score="2"><label for="q9_2">有時</label></li>
-									<li><input type="radio" name="q9" id="q9_3" data-score="3"><label for="q9_3">常常</label></li>
-									<li><input type="radio" name="q9" id="q9_4" data-score="4"><label for="q9_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Q10 -->
-						<div class="quizBox" data-question="10">
-							<div class="quizBox__question">10. 常感到困難的事情堆積如山，而自己無法克服他們</div>
-							<div class="quizBox__option">
-								<ul>
-									<li><input type="radio" name="q10" id="q10_0" data-score="0"><label for="q10_0">從不</label></li>
-									<li><input type="radio" name="q10" id="q10_1" data-score="1"><label for="q10_1">偶爾</label></li>
-									<li><input type="radio" name="q10" id="q10_2" data-score="2"><label for="q10_2">有時</label></li>
-									<li><input type="radio" name="q10" id="q10_3" data-score="3"><label for="q10_3">常常</label></li>
-									<li><input type="radio" name="q10" id="q10_4" data-score="4"><label for="q10_4">總是</label></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="stressForm__result">
-						<div id="resultBox" class="resultBox">
-							<div class="resultBox__title">
-								<span id="resultTitle" class="resultTitle"></span>
-								<span id="scoreRange" class="scoreRange"></span>
-							</div>
-							<div class="resultBox__content">
-								<div id="resultDescription" ></div>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div><!--/.container-->
-		</section>
-		<!--/測驗-->
+		
 
 		<!--認識壓力型失眠-->
 		<section id="about" class="section section--about scrollArea">
@@ -526,7 +559,7 @@
 		</section>
 		<!--/延伸閱讀-->
 	</main>
-	<a class="btn-more" href="#"><img alt="關於樂蕈" src="assets/images/btn-more.png" /></a>
+	<!-- <a class="btn-more" href="#"><img alt="關於樂蕈" src="assets/images/btn-more.png" /></a> -->
 	<footer>
 		<ul>
 			<li><a href="https://www.commonhealth.com.tw/" target="_blank">康健官網</a></li>
@@ -549,14 +582,15 @@
 
 	<!-- 自製特效仍需要jquery -->
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
-	<script src="assets/js/navbarX.js"></script><!-- Hamburger Menu to X -->
 
 	<!-- 左右輪播切換套件 -->
 	<script src="assets/js/slick.min.js"></script>
 
 	<!-- 滾動套件 -->
 	<script src="assets/js/ScrollMagic.min.js"></script>
+	
 	<script src="assets/js/scrollTrigger.js"></script>
+	<script src="assets/js/wow.js"></script>
 	<script src="assets/js/index.js"></script>
 </body>
 

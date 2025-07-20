@@ -159,6 +159,42 @@
 }
 
 // ========== Media Queries ==========
+@mixin f-h2 {
+	font-size: rem(42);
+    line-height: (63/42);
+    font-weight: 700;
+}
+
+@mixin f-h3 {
+	font-size: rem(24);
+    line-height: (36/24);
+    font-weight: 700;
+}
+
+@mixin f-h4 {
+	font-size: rem(20);
+    line-height: (30/20);
+    font-weight: 400;
+}
+
+@mixin f-h4-bold {
+	font-size: rem(20);
+    line-height: (30/20);
+    font-weight: 700;
+}
+
+@mixin f-h5 {
+	font-size: rem(16);
+    line-height: (24/16);
+    font-weight: 500;
+}
+
+@mixin f-p {
+	font-size: rem(18);
+    line-height: (30.6/18);
+    font-weight: 400;
+}
+
 
 //media query
 @mixin rwd-max($px) {

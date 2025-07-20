@@ -32,6 +32,22 @@ $path: '../images';
 	animation: zoomLoop 1.5s ease-in infinite alternate; /*infinite會一直loop播放*/ /*alternate會反轉*/
 }
 
+@keyframes breath {
+	from {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	
+	to {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+}
+
 /*捲軸觸發區塊效果-inout*/
 .inout {
 	opacity: 0;
@@ -59,23 +75,229 @@ $path: '../images';
     }
 }
 
+.hero {
+	overflow: hidden;
+	position: relative;
+	background: radial-gradient(circle at 72.9% 21.1%, rgba(255, 146, 68, 1) 11%,rgba(255, 231, 201, 1) 50%);
+
+	.cover {
+
+			@include rwd-min(320px) {
+				position: relative;
+				z-index: 5;
+				top: rem(-20);
+				left: rem(-112);
+				width: rem(750);
+				height: rem(750);
+			}
+
+			@include rwd-min(768px) {
+				position: absolute;
+				top: rem(-71);
+				left: auto;
+				right: rem(-101);
+				width: rem(652);
+				height: rem(652);
+			}
+			
+			@include rwd-min(1024px) {
+				top: rem(-47);
+				right: rem(-136);
+				width: rem(810);
+				height: rem(810);
+			}
+
+			@include rwd-min(1440px) {
+				top: rem(-95);
+				right: rem(-85);
+				width: rem(940);
+				height: rem(940);
+			}
+
+			.wrapper {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: block;
+					width: 100%;
+					padding-top: 100%;
+					background-image: url('../images/kv_wave.png');
+					background-size: contain;
+					animation: breath 3s ease-in-out infinite alternate;
+				}
+				
+				img {
+					height: 50%;
+					width: 50%;
+					z-index: 5;
+					animation: breath 1.5s ease-in infinite alternate;
+				}
+			}			
+		}
+	
+	.mainKvBox {
+		overflow: hidden;
+
+		@include rwd-min(768px) {
+			min-height: 100dvh;
+		}
+
+		&__text {
+			position: relative;
+			z-index: 10;
+
+			@include rwd-min(320px) {
+				padding-left: rem(25);
+				padding-right: rem(25);
+
+				.intro {
+					margin: rem(30) 0 rem(40);
+				}
+			}
+			
+			@include rwd-min(768px) {
+				padding-top: rem(120);
+				padding-left: rem(40);
+
+				.slogan {
+					width: 250px;
+				}
+
+				.intro {
+					margin: rem(20) 0 rem(100);
+				}
+			}
+
+			@include rwd-min(1024px) {
+				padding-top: rem(130);
+				padding-left: rem(40);
+
+				.slogan {
+					width: 350px;
+				}
+
+				.intro {
+					margin: rem(28) 0 rem(72);
+				}
+			}
+
+			@include rwd-min(1440px) {
+				padding-top: rem(135);
+				padding-left: rem(130);
+
+				.slogan {
+					width: rem(500);
+				}
+
+				.intro {
+					margin: rem(22) 0 rem(31);
+				}
+			}
+
+			.slogan {
+				
+				img {
+					width: 100%;
+				}
+			}
+
+			.intro {
+				font-size: rem(32);
+				line-height: calc(40 / 32);
+				color: $dark;
+			}
+
+			.list {
+				@include list-reset;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				& > li {
+					margin-right: rem(20);
+					position: relative;
+					width: rem(130);
+					cursor: pointer;
+					border-radius: 50%;
+					box-shadow: 0 0 rem(18) rgba(255, 255, 255, 0.95);
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&:after {
+						content: '';
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						border-radius: 50%;
+						background-color: rgba(0, 0, 0, .6);
+						opacity: 0;
+						@include transition(all, .3s, ease-in);
+					}
+
+					img {
+						width: 100%;
+					}
+
+					span {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						z-index: 10;
+						color: $white;
+						opacity: 0;
+						@include translate(-50%, -50%);
+						@include transition(all, .3s, ease-in);
+					}
+
+					&:hover {
+						&:after {
+							opacity: 1;
+						}
+
+						span {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .section {
 	.section__title {
 		padding: rem(30.5) 0;
 		text-align: center;
-		color: #FFFFFF;
 		font-weight: bold;
 		position: relative;
 
 		.topic {
-			font-size: rem(42);
-			line-height: (63/42);
+			@include f-h2;
+			color: $white;
 		}
 
 		.sub {
 			margin-top: rem(12);
-			font-size: rem(24);
-			line-height: (44/24);
+			@include f-h3;
+			color: $white;
+		}
+
+		.desc {
+			@include f-h4;
 		}
 
 		&:before {
@@ -96,13 +318,45 @@ $path: '../images';
 		padding-top: rem(50);
 	}
 
+	&--quiz {
+		padding-top: rem(100);
+		padding-bottom: rem(100);
+
+		.section__title {
+			padding: 0;
+			margin-bottom: rem(30);
+
+			.topic {
+				color: $primary-dark;
+			}
+
+			.sub {
+				margin-top: rem(25);
+				color: $primary-dark;
+			}
+
+			.desc {
+				margin-top: rem(55);
+				color: $dark;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.section__content {
+
+		}
+	}
+
 	&--about {
 
 		.section__title {
-			background-color: #2E6232;
+			background-color: $primary-dark;
 
 			&:before {
-				background-image: url('../images/deco_title.svg');
+				background-image: url('../images/deco_title-light.svg');
 				opacity: 0.3;
 			}
 		}
@@ -110,28 +364,33 @@ $path: '../images';
 		.section__content {
 			.chapter {
 				&:last-child {
-					background: #D8E5D6;
-					background: linear-gradient(180deg, rgba(216, 229, 214, 1) 0%, rgba(96, 148, 100, 1) 100%);
+					background: linear-gradient(180deg, $primary-light 0%, #B3C9B5 100%);
 				}
 			}
 		}
 	}
 
 	&--information {
+		background-color: $secondary-light;
+
 		.section__title {
-			background-color: #AA8B36;
+			background-color: $secondary-dark;
+
 			&:before {
-				background-image: url('../images/deco_title.svg');
+				background-image: url('../images/deco_title-dark.svg');
 				opacity: 0.5;
 			}
 
 		}
 	}
 	&--process {
+		background-color: $secondary-light;
+
 		.section__title {
-			background-color: #2E6232;
+			background-color: $secondary-dark;
+
 			&:before {
-				background-image: url('../images/deco_title.svg');
+				background-image: url('../images/deco_title-dark.svg');
 				opacity: 0.3;
 			}
 
@@ -143,8 +402,7 @@ $path: '../images';
 	================================================== */
 	&--article {
 		padding-bottom: rem(100);
-		background: #D8E5D6;
-		background: linear-gradient(180deg, rgba(216, 229, 214, 1) 60%, rgba(255, 255, 255, 1) 100%);
+		background: linear-gradient(180deg, $secondary-light 60%, $white 100%);
 
 		.chapter {
 
@@ -160,12 +418,94 @@ $path: '../images';
 	}
 }
 
+.stressForm {
+	max-width: rem(660);
+	margin: 0 auto;
+
+	&__questions {
+		padding: rem(50) rem(38);
+		border: 2px solid $dark;
+		border-radius: rem(28);
+		background-color: $white;
+		overflow: hidden;
+		box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+	}
+
+	.quizBox {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+
+		&__question {
+			@include f-h3;
+			color: $dark;
+			text-align: center;
+
+			& > span {
+				display: block;
+				margin-bottom: rem(8);
+			}
+		}
+
+		&__option {
+			margin-top: rem(45);
+
+			ul {
+				@include list-reset;
+				display: flex;
+				align-items: center;
+				flex-wrap: nowrap;
+				& > li {
+					flex: 1 1 0;
+					margin-right: rem(20);
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+
+			input[type="radio"] {
+				display: none;
+
+				&:checked {
+					& + label {
+						background-color: $dark;
+					}
+				}
+			}
+
+			label {
+				display: block;
+				padding: rem(14) 0;
+				background-color: $primary-dark;
+				border-radius: rem(26);
+				text-align: center;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				@include f-h5;
+				color: $white;
+
+				&:hover {
+					background-color: $dark;
+				}
+			}
+		}
+
+		&__result {
+
+		}
+	}
+}
+
 .articleItem {
 	display: block;
 	border-radius: 0 0 rem(20) rem(20);
 	overflow: hidden;
-	color: var(--gray);
-	background: var(--white);
+	color: $dark;
+	background-color: $white;
 	text-decoration: none;
 
 	.articleItem__img {
@@ -237,7 +577,7 @@ $path: '../images';
 		width: rem(80);
 		height: rem(80);
 		line-height:1;
-		background-color: #fff;
+		background-color: $white;
 		border-radius: 50%;
 		cursor: pointer;
 		@include translateY(-50%);

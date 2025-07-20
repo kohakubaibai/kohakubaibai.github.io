@@ -1,4 +1,13 @@
 $(function () {
+	var navbarX=$(".navbarX");
+	navbarX.click(function(){
+      navbarX.toggleClass('active');
+    });
+
+	$(".navbar .nav-link").click(function(){
+		navbarX.is(".active") && navbarX.trigger("click");
+	});
+	
 	/************************** ScrollMagic start ******************************/
 	var hash = location.hash;
 	var navLink = $(".navbar .nav-link");
@@ -123,6 +132,7 @@ $(function () {
 		const $lastQuestionBox = $(`[data-question="${totalQuestions}"]`);
 		$lastQuestionBox.fadeOut(300, function () {
 			$(this).removeClass("active");
+			$('.stressForm__questions').hide();
 			showResult(totalScore);
 		});
 	}
@@ -203,10 +213,7 @@ $(function () {
 		responsive: [
 			{
 				breakpoint: 767,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
+				settings: "unslick"
 			},
 		],
 	};
@@ -215,4 +222,6 @@ $(function () {
 	slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
 
 	/************************** slick end ******************************/
+
+	new WOW().init();
 });

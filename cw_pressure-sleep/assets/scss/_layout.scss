@@ -7,6 +7,7 @@ $path: '../images';
 html{
 	overflow-x: hidden;
 }
+
 *,
 *:before,
 *:after{
@@ -16,76 +17,71 @@ html{
 body {
 	font-family: "Noto Sans TC",-apple-system, Segoe UI, Roboto, "微軟正黑體", "Helvetica Neue", Arial, sans-serif; /*無襯線字體sans-serif*/
 	font-weight: bold;
-	padding-top: 65px; /*搭配Header區固定置頂，記得不能用margin,容易和其它相衝*/
-	/*max-width: 1920px;*/
 	margin: 0 auto;
-	background-color: var(--bgcolor);
-	--white: #fff;
-	--bgcolor:#D8E5D6;
-	--green:#326F75;
-	--green-deep:#2E6232; /* #255954 */
-	--gray:#222222;
-	--red:#EA7A60;
-	--border-radius:1em;
-}
-
-body,p {
-	font-size: 1rem;
-	color: var(--gray);
-	/*font-weight: 600;*/
-	line-height:1.35;
-	text-align: justify;
+	background-color: $primary-light;
+	color: $dark;
 }
 
 /* ==================================================
    header
 ================================================== */
 .navbar {
-	/*background-color: #fdfbfc;
-	box-shadow: 0 1px 8px rgba(0,0,0,.25); */
-	background-image: linear-gradient(to bottom, #EEECE8 45%, rgba(255, 255, 255, 0) 100%);
-	padding-right: 0;
-    padding-left: 0;
-	/*padding-top: .5rem;
-    padding-bottom: .5rem;*/
-	padding-top: 1rem;
-    padding-bottom: 3rem;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: $white;
+	padding: rem(16) rem(30);
 
 	.nav-link {
-		font-size: 1.15rem;
+		font-size: rem(18);
 		display: block;
-		color: var(--green-deep) !important;
+		color: $dark;
 		text-decoration: none;
-		transition: all .25s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+		&.active {
+			color: $primary-dark;
+		}
+	}
+
+	.navbar-brand {
+		padding: 0;
+
+		img {
+			width: auto;
+
+			@include rwd-min(320px) {
+				height: rem(30);
+			}
+
+			@include rwd-min(390px) {
+				height: rem(40);
+			}
+
+			@include rwd-min(768px) {
+				height: rem(50);
+			}
+		}
 	}
 
 	&-expand-lg {
 		.navbar-nav {
+
+			.nav-item {
+				margin-left: rem(30);
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+
 			.nav-link {
-				padding-right: 1.5rem;
-				padding-left: 1.5rem;
+				padding: 0;
 			}
 		}
 	}
 }
-
-/*active*/
-.navbar .nav-link.active,
-.navbar .show>.nav-link {
-    color: var(--orange) !important;
-    background-color: transparent;
-	opacity: 1;
-}
-
-/*logo*/
-.navbar-brand {
-	padding: 0;
-}
-.navbar-brand img {
-	width: auto;
-	height:50px;
-}
-
 
 /*ipad 橫式 lg以下*/
 @media (max-width: 1199.98px) {
@@ -143,69 +139,71 @@ body,p {
 /* ==================================================
    漢堡按鈕-旋轉X
 ================================================== */
-.navbar-toggler:focus {
-	box-shadow:none;
-}
-
 .navbar-toggler {
 	padding: 0;
 	border-radius: 0;
 	background-color: none;
 	border: none;
+
+	&:focus {
+		box-shadow: none;
+	}
 }
+
 
 /*Hamburger Menu to X css*/
 .navbarX {
-	width: 25px;
-	height: 18px;
+	width: rem(40);
+	height: rem(40);
 	background-color: transparent !important;
 	position: relative;
 	float: right;
 	margin-right: 0;
-	/*margin-top:14px;*/
 	cursor: pointer;
-}
 
-@media (min-width:992) {
-	.navbarX {
-		display:none;
+	@include rwd-min(992px) {
+		display: none;
 	}
-}
 
-.navbarX i {
-	background: var(--green-deep);
-	border-radius: 2px;
-	width: 100%;
-	height: 3px;
-	content: "";
-	display: block;
-}
+	i {
+		display: block;
+		background: #222222;
+		border-radius: rem(3);
+		width: 100%;
+		height: rem(3);
 
-.navbarX i:nth-child(1) {
-	animation: outT 0.8s backwards;  /*若要取消進場動畫*/
-	animation-direction: reverse;
-}
+		&:nth-child(1) {
+			animation: outT 0.8s backwards;  /*若要取消進場動畫*/
+			animation-direction: reverse;
+		}
 
-.navbarX i:nth-child(2) {
-	margin: 5px 0;
-	animation: outM 0.8s backwards;  /*若要取消進場動畫*/
-	animation-direction: reverse;
-}
+		&:nth-child(2) {
+			margin: rem(5) 0;
+			animation: outM 0.8s backwards;  /*若要取消進場動畫*/
+			animation-direction: reverse;
+		}
 
-.navbarX i:nth-child(3) {
-	animation: outBtm 0.8s backwards; /*若要取消進場動畫*/
-	animation-direction: reverse;
-}
+		&:nth-child(3) {
+			animation: outBtm 0.8s backwards; /*若要取消進場動畫*/
+			animation-direction: reverse;
+		}
+	}
 
-.navbarX.active i:nth-child(1) {
-	animation: inT 0.8s forwards;
-}
+	&.active {
+		i {
+			&:nth-child(1) {
+				animation: inT 0.8s forwards;
+			}
 
-.navbarX.active i:nth-child(2) {
-	animation: inM 0.8s forwards;
-}
-.navbarX.active i:nth-child(3) {
-	animation: inBtm 0.8s forwards;
+			&:nth-child(2) {
+				animation: inM 0.8s forwards;
+			}
+
+			&:nth-child(3) {
+				animation: inBtm 0.8s forwards;
+			}
+		}
+	}
 }
 
 @keyframes inM {
@@ -275,9 +273,6 @@ body,p {
 	}
 }
 
-
-
-
 /* ==================================================
    footer 康健規範-白底黑字款
 ================================================== */
@@ -285,73 +280,75 @@ body,p {
 footer {
 	background-color: $white;
     width: 100%;
-    /*padding: 30px 0;*/
 	padding: 30px 0 15px;
-}
-footer a {
-    transition: .3s;
-	color:var(--green-deep);
-    text-decoration: none;
-}
 
-footer ul {
-    list-style-type: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
+	a {
+		transition: .3s;
+		color: $secondary-dark;
+		text-decoration: none;
+	}
 
-footer ul li {
-    font-size: 15px;
-    line-height: 15px;
-	border-right: 1px solid var(--green-deep);
-    padding: 0 10px 0 0;
-    margin: 0 10px 10px 0;
-}
+	ul {
+		list-style-type: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
 
-footer ul li:last-child {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
+		li {
+			font-size: 15px;
+			line-height: 15px;
+			border-right: 1px solid var(--green-deep);
+			padding: 0 10px 0 0;
+			margin: 0 10px 10px 0;
 
-footer ul li a {
-    color:var(--green-deep);
-    line-height: 15px;
-}
-footer ul li a:hover {
-	color:var(--white);
-	opacity: 0.65;
-}
+			&:last-child {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
 
-footer ul:last-child {
-    margin: 0;
-}
+			a {
+				color: $secondary-dark;
+				line-height: 15px;
 
-footer p {
-    color:var(--green-deep);
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
+				&:hover {
+					opacity: 0.65;
+				}
+			}
+		}
 
-@media (max-width: 768px) {
-    footer ul {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-    footer ul li {
-    padding: 0 5px 0 0;
-    margin: 0 5px 10px 0;
-    }
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	 p {
+		color: $secondary-dark;
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 300;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	@include rwd-max(768px) {
+		ul {
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+
+			li {
+				padding: 0 5px 0 0;
+				margin: 0 5px 10px 0;
+			}
+		}
+
+	}
 }
 
 .btn-more {
@@ -360,9 +357,10 @@ footer p {
 	right:15px;
 	z-index:9;
 	animation:loop 2.5s ease-out infinite; /*會一直重來loop播放*/
-}
-.btn-more img {
-	height: auto;
-	transition: all 0.5s;
-	width: 120px;
+
+	img {
+		height: auto;
+		transition: all 0.5s;
+		width: 120px;
+	}
 }
