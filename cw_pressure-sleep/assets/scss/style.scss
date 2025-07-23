@@ -1518,7 +1518,10 @@ main {
 	&--ingredient {
 		& > li {
 			padding: rem(10) 0;
-			border-bottom: rem(1) solid $primary-dark;
+
+			&:last-child {
+				border-bottom: none !important;
+			}
 
 			.title {
 				color: $primary-dark;
@@ -1534,7 +1537,7 @@ main {
 				border-bottom: rem(1) solid $white;
 
 				.title {
-					color: $white;
+					color: $secondary-light;
 				}
 
 				.content {
@@ -1551,6 +1554,16 @@ main {
 	}
 }
 
+.scrollWrap {
+	@include rwd-min(320px) {
+		overflow-x: scroll;
+	}
+
+	@include rwd-min(1024px) {
+		overflow-x: visible;
+	}
+}
+
 .cardGrid {
 	@include list-reset;
 	display: flex;
@@ -1559,7 +1572,6 @@ main {
 
 	@include rwd-min(320px) {
 		flex-direction: column;
-
 	}
 
 	@include rwd-min(768px) {
@@ -1688,6 +1700,18 @@ main {
 		}
 	}
 
+	&--ingredient {
+		@include rwd-min(320px) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+
+		& > li {
+			flex: 0 0 rem(235);
+			margin-right: rem(20);
+		}
+	}
+
 	.features {
 		color: $white;
 		position: relative;
@@ -1779,6 +1803,53 @@ main {
 				text-align: left;
 				@include f-h5;
 				color: $dark;
+			}
+		}
+	}
+
+	.ingredients {
+		padding: rem(20);
+		border-radius: rem(30);
+		box-shadow: 0 rem(4) rem(4) rgba(0,0,0,.25);
+
+		.ingredients__top {
+			.media {
+				width: rem(85);
+				height: rem(85);
+				margin: 0 auto;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.title {
+				@include f-h3;
+				margin-top: rem(10);
+			}
+		}
+
+		.ingredients__body {
+			margin-top: rem(27);
+		}
+
+		&--main {
+			background-color: $secondary;
+
+			.ingredients__top {
+				.title {
+					color: $secondary-light;
+				}
+			}
+		}
+
+		&--sub {
+			background-color: $white;
+
+			.ingredients__top {
+				.title {
+					color: $primary-dark;
+				}
 			}
 		}
 	}

@@ -2152,7 +2152,9 @@ main {
 }
 .versusList--ingredient > li {
   padding: 0.625rem 0;
-  border-bottom: 0.0625rem solid #EB6E02;
+}
+.versusList--ingredient > li:last-child {
+  border-bottom: none !important;
 }
 .versusList--ingredient > li .title {
   color: #EB6E02;
@@ -2164,13 +2166,24 @@ main {
   border-bottom: 0.0625rem solid #fff;
 }
 .versusList--ingredient.is-main > li .title {
-  color: #fff;
+  color: #D8E5D6;
 }
 .versusList--ingredient.is-main > li .content {
   color: #fff;
 }
 .versusList--ingredient.is-sub > li {
   border-bottom: 0.0625rem solid #EB6E02;
+}
+
+@media (min-width: 320px) {
+  .scrollWrap {
+    overflow-x: scroll;
+  }
+}
+@media (min-width: 1024px) {
+  .scrollWrap {
+    overflow-x: visible;
+  }
 }
 
 .cardGrid {
@@ -2298,6 +2311,22 @@ main {
 .cardGrid--effect > li:nth-child(even) .effects__text {
   background-color: #fff;
 }
+@media (min-width: 320px) {
+  .cardGrid--ingredient {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+.cardGrid--ingredient > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14.6875rem;
+          flex: 0 0 14.6875rem;
+  margin-right: 1.25rem;
+}
 .cardGrid .features {
   color: #fff;
   position: relative;
@@ -2395,6 +2424,41 @@ main {
   line-height: 1.5;
   font-weight: 500;
   color: #333333;
+}
+.cardGrid .ingredients {
+  padding: 1.25rem;
+  border-radius: 1.875rem;
+  -webkit-box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+.cardGrid .ingredients .ingredients__top .media {
+  width: 5.3125rem;
+  height: 5.3125rem;
+  margin: 0 auto;
+}
+.cardGrid .ingredients .ingredients__top .media img {
+  width: 100%;
+}
+.cardGrid .ingredients .ingredients__top .title {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-top: 0.625rem;
+}
+.cardGrid .ingredients .ingredients__body {
+  margin-top: 1.6875rem;
+}
+.cardGrid .ingredients--main {
+  background-color: #609464;
+}
+.cardGrid .ingredients--main .ingredients__top .title {
+  color: #D8E5D6;
+}
+.cardGrid .ingredients--sub {
+  background-color: #fff;
+}
+.cardGrid .ingredients--sub .ingredients__top .title {
+  color: #EB6E02;
 }
 
 .stressForm__questions {
