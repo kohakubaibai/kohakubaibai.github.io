@@ -73,13 +73,14 @@
 	<main>
 
 		<!--主視覺-->
-		<section id="hero" class="hero ">
+		<section id="hero" class="hero">
 			<div class="mainKvBox scrollArea">
+				<div class="anchorOffset"></div>
 				<div class="mainKvBox__text">
 					<div class="slogan wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
 						<img src="assets/images/kv_main.png" alt="對抗壓力型失眠 天然草本菇萃麥角硫因">
 					</div>
-					<div class="intro wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">天然草本菇萃麥角硫因<br>解鎖原生熟睡力</div>
+					<div class="intro wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.9s">天然草本菇萃麥角硫因<br>解鎖原生熟睡力</div>
 					<ul class="list">
 						<li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.2s">
 							<img src="assets/images/kv_el-1.png" alt="text1">
@@ -111,13 +112,14 @@
 				</div>
 			</div>
 			<!--測驗-->
-			<section id="quiz" class="section section--quiz scrollArea">
+			<section class="section section--quiz scrollArea">
+				<div id="quiz" class="anchorOffset"></div>
 				<div class="container">
 					<h2 class="section__title">
 						<div class="topic">你，壓力過大嗎？</div>
 						<div class="sub">30秒內檢測壓力指數</div>
 						<div class="desc">
-							現代人生活節奏快速，你是否也開始覺得難以負荷？<br>
+							現代人生活節奏快速，<br class="d-block d-md-none">你是否也開始覺得難以負荷？<br>
 							以下小測驗，幫你秒測是否壓力過大！
 						</div>
 					</h2>
@@ -267,11 +269,10 @@
 							<div class="stressForm__result">
 								<div id="resultBox" class="resultBox">
 									<div class="resultBox__title">
-										<span id="resultTitle" class="resultTitle"></span>
-										<span id="scoreRange" class="scoreRange"></span>
+										<span id="resultTitle" class="title"></span>
+										<span id="scoreRange" class="range"></span>
 									</div>
-									<div class="resultBox__content">
-										<div id="resultDescription" ></div>
+									<div id="resultDescription" class="resultBox__content">
 									</div>
 								</div>
 							</div>
@@ -281,122 +282,269 @@
 			</section>
 			<!--/測驗-->
 		</section>
-		
 
 		<!--認識壓力型失眠-->
-		<section id="about" class="section section--about scrollArea">
+		<section class="section section--about scrollArea">
+			<div id="about" class="anchorOffset"></div>
 			<h2 class="section__title">
 				<div class="topic">壓力型失眠大補帖</div>
 				<div class="sub">睡得好，能抗老！關鍵就在</div>
 			</h2>
 			<div class="section__content">
-				<div class="sectionIntro">一場好的睡眠，能夠幫身體快速充電，迅速幫助人體恢復。但當人體壓力過大，身體就會像壞掉的電池，無論怎麼補眠、為自己充電，都會像白費力氣，一下子就感覺到累。</div>
 				<div class="chapter">
 					<div class="container">
-						<div class="chapter__title inout">何謂壓力？臨床醫學這樣定義！</div>
-						<div class="chapter__content inout">
-							<p>壓力指得是人在面對外在環境需求時，所產生的生理與心理反應</p>
-							<div class="bubble">
-								生理壓力定義
-								心理壓力定義
-							</div>
-							<p>美國心理學會(APA) 也證實，身心壓力「會影響身體的每個系統，進而改變人類的感受與行為」。也就是說，雖然每個人能承受的壓力值不同，但只要一超標，人體可能面臨心理與生理雙重打擊。</p>
+						<div class="chapter__content">
+							<h4 class="desc">一場好的睡眠，能夠幫身體快速充電，迅速幫助人體恢復。但當人體壓力過大，身體就會像壞掉的電池，無論怎麼補眠、為自己充電，都會像白費力氣，一下子就感覺到累。</h4>
 						</div>
 					</div>
 				</div>
 				<div class="chapter">
 					<div class="container">
-						<div class="chapter__title">什麼是壓力型失眠？六大特徵一次看</div>
-						<div class="chapter__content">
-							<ul class="cardGrid">
+						<div class="chapter__title floatLoop"><div class="text">何謂壓力？<br class="d-block d-md-none">臨床醫學這樣定義！</div></div>
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+							<h4 class="desc">壓力指得是人在面對外在環境需求時，所產生的生理與心理反應</h4>
+							<div class="bubble">
+								<div class="bubbleItem">
+									<div class="bubbleItem__wrap">
+										<div class="title">生理壓力定義</div>
+										<p class="intro">加拿大內分泌學家 Hans Selye 指出，無論是壓力帶來正面助力還是負面影響，身體都會啟動一連串的連鎖反應，讓人體適應當前狀況。</p>
+									</div>
+								</div>
+								<div class="bubbleItem">
+									<div class="bubbleItem__wrap">
+										<div class="title">心理壓力定義</div>
+										<p class="intro">美國心理學家Richard Lazarus指出，若人感覺到外在環境對自己的需求，已經超過自己可以應付的能力範圍就會產生較為強烈的心理壓力。</p>
+									</div>
+								</div>
+							</div>
+							<h4 class="desc">美國心理學會(APA) 也證實，身心壓力「會影響身體的每個系統，進而改變人類的感受與行為」。也就是說，雖然每個人能承受的壓力值不同，但只要一超標，人體可能面臨心理與生理雙重打擊。</h4>
+						</div>
+					</div>
+				</div>
+				<div class="chapter">
+					<div class="container">
+						<div class="chapter__title floatLoop"><div class="text">什麼是壓力型失眠？<br class="d-block d-md-none">六大特徵一次看</div></div>
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+							<ul class="cardGrid cardGrid--feature">
 								<li>
-									<div class="cards">
-										<div class="cards__front">
-											<i>icon</i>
-											<div>入睡時間延遲</div>
+									<div class="features">
+										<div class="features__front">
+											<i class="icon"><img src="assets/images/img_feature-1.svg" alt="入睡時間延遲"></i>
+											<div class="title">入睡時間延遲</div>
 										</div>
-										<div class="cards__back">
+										<div class="features__back">
+											<p>已經非常疲憊，躺在床上卻翻來覆去睡不著，有種身體想休息，但大腦停不下來的感受。</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="features">
+										<div class="features__front">
+											<i class="icon"><img src="assets/images/img_feature-2.svg" alt="無法進入深層睡眠"></i>
+											<div class="title">無法進入深層睡眠</div>
+										</div>
+										<div class="features__back">
 											<p>睡著後，常常停留在淺眠階段，無法讓身體進入深度睡眠，導致粒線體無法有效修復、自由基無法被清除，讓身體越睡越累，累積更多睡眠債，影響隔天精力。</p>
 										</div>
 									</div>
 								</li>
 								<li>
-									<div class="cards">
-										<div class="cards__front">
-											<i>icon</i>
-											<div>無法進入深層睡眠</div>
+									<div class="features">
+										<div class="features__front">
+											<i class="icon"><img src="assets/images/img_feature-3.svg" alt="淺眠或夜醒次數增加"></i>
+											<div class="title">淺眠或夜醒次數增加</div>
 										</div>
-										<div class="cards__back">
-											<p>背面的字</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="cards">
-										<div class="cards__front">
-											<i>icon</i>
-											<div>淺眠或夜醒次數增加</div>
-										</div>
-										<div class="cards__back">
-											<p>背面的字</p>
+										<div class="features__back">
+											<p>這樣的淺眠，會讓人體對周遭環境更加敏感。一有動靜就會醒來，而且醒來後難以入睡，睡眠變得碎片化、品質低。</p>
 										</div>
 									</div>
 								</li>
 								<li>
-									<div class="cards">
-										<div class="cards__front">
-											<i>icon</i>
-											<div>醒來沒多久就覺得睏、想打呵欠</div>
+									<div class="features">
+										<div class="features__front">
+											<i class="icon"><img src="assets/images/img_feature-4.svg" alt="醒來沒多久就覺得睏、想打呵欠"></i>
+											<div class="title">醒來沒多久就覺得睏、<br>想打呵欠</div>
 										</div>
-										<div class="cards__back">
-											<p>背面的字</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="cards">
-										<div class="cards__front">
-											<i>icon</i>
-											<div>補償性嗜睡</div>
-										</div>
-										<div class="cards__back">
-											<p>背面的字</p>
+										<div class="features__back">
+											<p>好幾晚沒睡好，讓人體一醒來就覺得無精打采，甚至早上頻頻打哈欠，一整天精神不好，反應也變慢了。</p>
 										</div>
 									</div>
 								</li>
 								<li>
-									<div class="cards">
-										<div class="cards__front">
-											<i>icon</i>
-											<div>心率或是身體發炎<br>指數上升</div>
+									<div class="features">
+										<div class="features__front">
+											<i class="icon"><img src="assets/images/img_feature-5.svg" alt="補償性嗜睡"></i>
+											<div class="title">補償性嗜睡</div>
 										</div>
-										<div class="cards__back">
-											<p>背面的字</p>
+										<div class="features__back">
+											<p>人體在長時間感受到疲憊的狀態下，一有時間就想補眠，身體會出現補償性的睡眠機制，因此出現嗜睡的症狀。</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="features">
+										<div class="features__front">
+											<i class="icon"><img src="assets/images/img_feature-6.svg" alt="心率或是身體發炎指數上升"></i>
+											<div class="title">心率或是身體發炎<br>指數上升</div>
+										</div>
+										<div class="features__back">
+											<p>壓力型失眠會讓心跳維持在較高的頻率，體溫也會較高，甚至可能誘發身體慢性發炎。這些生理變化會讓入睡更加困難，造成惡性循環。</p>
 										</div>
 									</div>
 								</li>
 							</ul>
-							<p>失眠依據病因, 大致可分為心理因素、生活模式、環境因素與生理因素; 其中, 生理因素引起的失眠，可能牽涉疾病或疾病治療的副作用，建議應尋求專業醫事人員協助。相較於生活模式與環境因素的一般型失眠來說，心理壓力導致的壓力型失眠，無論是對睡眠品質的影響，甚或是成因，都要更為複雜度。</p>
+							<p class="paragraph">失眠依據病因，大致可分為心理因素、生活模式、環境因素與生理因素；其中，生理因素引起的失眠，可能牽涉疾病或疾病治療的副作用，建議應尋求專業醫事人員協助。相較於生活模式與環境因素的一般型失眠來說，心理壓力導致的壓力型失眠，無論是對睡眠品質的影響，甚或是成因，都要更為複雜度。</p>
 						</div>
 					</div>
 				</div>
 				<div class="chapter">
 					<div class="container">
-						<div class="chapter__title">壓力型失眠 VS 一般型失眠</div>
-						<div class="chapter__content">
-							<p>「壓力型失眠」跟單純睡不好的「一般型失眠」有何不同呢？<br>下面這張表格教你檢視。</p>
-							<div class="collapse">
-								壓力型失眠 vs 一般型失眠
+						<div class="chapter__title floatLoop"><div class="text">壓力型失眠 VS<br class="d-block d-md-none"> 一般型失眠</div></div>
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+							<h4 class="desc">「壓力型失眠」跟單純睡不好的「一般型失眠」有何不同呢？<br>下面這張表格教你檢視。</h4>
+							<div class="collapseTable">
+								<div class="collapseGroup collapseGroup--main">
+									<div class="collapseWrap">
+										<div class="collapseGroup__content">
+											<div class="versusTable">
+												<div class="versusTable__title">
+													<span class="text">壓力型失眠</span>
+												</div>
+												<div class="versusTable__content">
+													<ul class="versusList versusList--insomnia">
+														<li data-category="cause">
+															<div class="title">成因</div>
+															<div class="content"><p>常由心理壓力引發（如人際關係、工作壓力、生活負擔等）與人體壓力反應系統過度活化有關。</p></div>
+														</li>
+														<li data-category="sleep-onset">
+															<div class="title">入睡狀況</div>
+															<div class="content"><p>常有入睡困難，難找出具體壓力根源。</p></div>
+														</li>
+														<li data-category="sleep-state">
+															<div class="title">睡眠狀態</div>
+															<div class="content">
+																<ul class="list">
+																	<li><span>多半位於淺眠階段，較難進入深層睡眠</span></li>
+																	<li><span>睡眠片段化</span></li>
+																	<li><span>多夢</span></li>
+																</ul>
+															</div>
+														</li>
+														<li data-category="early-wake">
+															<div class="title">早醒現象</div>
+															<div class="content"><p>早醒後難以再度入睡</p></div>
+														</li>
+														<li data-category="drowsiness">
+															<div class="title">嗜睡狀況</div>
+															<div class="content"><p>常有補償性睡眠。例如好幾個週末整天補眠，但因睡眠障礙持續存在，仍難恢復精神</p></div>
+														</li>
+														<li data-category="physical">
+															<div class="title">生理變化</div>
+															<div class="content">
+																<ul class="list">
+																	<li><span>心率上升</span></li>
+																	<li><span>體溫升高</span></li>
+																	<li><span>身體發炎指數上升</span></li>
+																	<li><span>粒線體功能下降</span></li>
+																	<li><span>因疲倦頻繁打哈欠、精神渙散、注意力下降</span></li>
+																	<li><span>脾氣變得暴躁</span></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="collapseGroup__switcher"></div>
+									</div>
+								</div>
+								<div class="collapseGroup collapseGroup--sub">
+									<div class="collapseWrap">
+										<div class="collapseGroup__content">
+											<div class="versusTable">
+												<div class="versusTable__title">
+													<span class="text">一般型失眠</span>
+												</div>
+												<div class="versusTable__content">
+													<ul class="versusList versusList--insomnia">
+														<li data-category="cause">
+															<div class="title">成因</div>
+															<div class="content"><p>因飲食或生活習慣不良、作息不正常、環境干擾等因素，導致身、心理狀態受到影響。</p></div>
+														</li>
+														<li data-category="sleep-onset">
+															<div class="title">入睡狀況</div>
+															<div class="content"><p>有時入睡較慢，但通常能歸納出明確導致失眠的原因。</p></div>
+														</li>
+														<li data-category="sleep-state">
+															<div class="title">睡眠狀態</div>
+															<div class="content">
+																<ul class="list">
+																	<li><span>睡眠結構較完整，排除失眠成因後即可恢復正常睡眠</span></li>
+																</ul>
+															</div>
+														</li>
+														<li data-category="early-wake">
+															<div class="title">早醒現象</div>
+															<div class="content"><p>早醒後有大概率可再入睡</p></div>
+														</li>
+														<li data-category="drowsiness">
+															<div class="title">嗜睡狀況</div>
+															<div class="content"><p>在失眠後短期內嗜睡，只要作息或環境因素改善，很快能透過睡眠補充精神</p></div>
+														</li>
+														<li data-category="physical">
+															<div class="title">生理變化</div>
+															<div class="content">
+																<ul class="list">
+																	<li><span>輕度疲倦感</span></li>
+																	<li><span>反應變慢、脾氣變差</span></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="collapseGroup__switcher"></div>
+									</div>
+								</div>
 							</div>
-							<p>美國心理學會(APA) 也證實，身心壓力「會影響身體的每個系統，進而改變人類的感受與行為」。也就是說，雖然每個人能承受的壓力值不同，但只要一超標，人體可能面臨心理與生理雙重打擊。</p>
 						</div>
 					</div>
 				</div>
 				<div class="chapter">
 					<div class="container">
-						<div class="chapter__title">壓力型失眠，加速老化的惡性循環？</div>
-						<div class="chapter__content">
-							三個特徵
+						<div class="chapter__title floatLoop"><div class="text">壓力型失眠，<br class="d-block d-md-none">加速老化的惡性循環？</div></div>
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+							<h4 class="desc">壓力型失眠之所以棘手，原因在於它不僅是單純的沒睡好，而是一連串「壓力→生理→睡眠惡化」的病理性連鎖反應。會讓大腦以為你持續身在危險中，導致HPA 軸（下視丘–腦下垂體–腎上腺）持續活躍，使體內壓力荷爾蒙（如皮質醇）升高，讓身體陷入加速老化的惡性循環中。</h4>
+							<ul class="cardGrid cardGrid--effect">
+								<li>
+									<div class="effects">
+										<div class="effects__image"><img src="assets/images/img_effect-1.png" alt="自由基大量累積"></div>
+										<div class="effects__text">
+											<div class="title">自由基大量累積</div>
+											<p class="intro">慢性壓力會讓自由基累增，自由基是老化、疾病形成關鍵，它會攻擊細胞膜、蛋白質與DNA，會干擾細胞功能與人體修復力。</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="effects">
+										<div class="effects__image"><img src="assets/images/img_effect-2.png" alt="神經發炎啟動"></div>
+										<div class="effects__text">
+											<div class="title">神經發炎啟動</div>
+											<p class="intro">長期處於壓力狀態，會讓大腦啟動慢性神經發炎反應，引起腦內發炎，使多種發炎因子在中樞神經系統中累積，逐漸干擾神經細胞的穩定性，導致睡眠持續紊亂。另外，神經發炎也會使人情緒低落、更加焦慮與煩躁。</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="effects">
+										<div class="effects__image"><img src="assets/images/img_effect-3.png" alt="粒線體受損"></div>
+										<div class="effects__text">
+											<div class="title">粒線體受損</div>
+											<p class="intro">粒線體是細胞的能量工廠，是清除自由基的重要系統。當自由基大量增加且神經發炎狀態持續，粒線體功能也會受損，導致修復力下降，形成失眠惡化、體內有害物質如滾雪球般不斷累積。</p>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -405,17 +553,213 @@
 		<!--/認識壓力型失眠-->
 
 		<!--讓壓力型失眠停下來-->
-		<section id="information" class="section section--information scrollArea">
+		<section class="section section--information scrollArea">
+			<div id="information" class="anchorOffset"></div>
 			<h2 class="section__title">
 				<div class="topic">讓壓力型失眠停下來</div>
-				<div class="sub">「草本菇萃麥角硫因」開啟天然修癒力</div>
+				<div class="sub">「草本菇萃麥角硫因」<br class="d-block d-md-none">開啟天然修癒力</div>
 			</h2>
 			<div class="section__content">
 				<div class="chapter">
 					<div class="container">
-						<div class="chapter__title">什麼是麥角硫因</div>
-						<div class="chapter__content">
-							三個特徵
+						<div class="chapter__title floatLoop"><div class="text">什麼是麥角硫因</div></div>
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+							<h4 class="desc">麥角硫因有著「長壽維生素」的美譽，是一種天然存在的含硫氨基酸，最初於1909年由Charles Tanret在研究麥角菌時發現並命名。因人體無法自行合成麥角硫因，必須從飲食中如特定種類的蕈菇獲取，或是從某些細菌與酵母菌中擷取。</h4>
+						</div>
+					</div>
+				</div>
+				<div class="chapter">
+					<div class="container">
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+							<div class="tabBlock">
+								<ul class="nav nav--compare" id="cellTab" role="tablist">
+									<li class="nav-item">
+										<button type="button" class="tabBtn tabBtn--natural active" data-bs-target="#compareTab1" data-bs-toggle="tab">
+											<i class="tabBtn__icon"></i>
+											<span class="tabBtn__text">純天然</span>
+										</button>
+									</li>
+									<li class="nav-item">
+										<button type="button" class="tabBtn tabBtn--skill" data-bs-target="#compareTab2" data-bs-toggle="tab">
+											<i class="tabBtn__icon"></i>
+											<span class="tabBtn__text">萃取技術</span>
+										</button>
+									</li>
+								</ul>
+								<div class="tab-content tabContent tabContent--compare">
+									<!--市面上助眠成分比一比-->
+									<div class="tab-pane fade show active" id="compareTab1">
+										<ul class="cardGrid cardGrid--ingredient">
+											<li>
+												<div class="ingredients ingredients--main">
+													<div class="ingredients__top">
+														<div class="media">麥角硫因</div>
+														<div class="title">麥角硫因</div>
+													</div>
+													<div class="ingredients__body">
+														<ul class="versusList versusList--ingredient is-main">
+															<li>
+																<div class="title">人體合成</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">主要功效</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">作用機制</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">副作用</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">半衰期</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">補充時機</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">飲食來源</div>
+																<div class="content"><p></p></div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="ingredients ingredients--sub">
+													<div class="ingredients__top">
+														<div class="media">GABA</div>
+														<div class="title">GABA</div>
+													</div>
+													<div class="ingredients__body">
+														<ul class="versusList versusList--ingredient is-sub">
+															<li>
+																<div class="title">人體合成</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">主要功效</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">作用機制</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">副作用</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">半衰期</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">補充時機</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">飲食來源</div>
+																<div class="content"><p></p></div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="ingredients ingredients--sub">
+													<div class="ingredients__top">
+														<div class="media">色胺酸</div>
+														<div class="title">色胺酸</div>
+													</div>
+													<div class="ingredients__body">
+														<ul class="versusList versusList--ingredient is-sub">
+															<li>
+																<div class="title">人體合成</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">主要功效</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">作用機制</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">副作用</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">半衰期</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">補充時機</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">飲食來源</div>
+																<div class="content"><p></p></div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="ingredients ingredients--sub">
+													<div class="ingredients__top">
+														<div class="media">芝麻素</div>
+														<div class="title">芝麻素</div>
+													</div>
+													<div class="ingredients__body">
+														<ul class="versusList versusList--ingredient is-sub">
+															<li>
+																<div class="title">人體合成</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">主要功效</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">作用機制</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">副作用</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">半衰期</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">補充時機</div>
+																<div class="content"><p></p></div>
+															</li>
+															<li>
+																<div class="title">飲食來源</div>
+																<div class="content"><p></p></div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!--/市面上助眠成分比一比-->
+									<!--熱門抗氧化物大比拼！-->
+									<div class="tab-pane fade" id="compareTab2">
+
+									</div>
+									<!--/熱門抗氧化物大比拼！-->
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -423,81 +767,117 @@
 		</section>
 		<!--/讓壓力型失眠停下來-->
 
-		<!--來源製程-->
-		<section id="process" class="section section--process scrollArea">
+		<section class="section section--process scrollArea">
+			<div id="process" class="anchorOffset"></div>
 			<h2 class="section__title">
 				<div class="topic">高品質天然麥角硫因哪裡找？</div>
 				<div class="sub">答案藏在有機食用菇中！</div>
 			</h2>
 			<div class="section__content">
+				<!--來源製程-->
 				<div class="chapter">
 					<div class="container">
-						<ul class="nav nav-pills nav-fill row" id="cellTab" role="tablist">
-							<li class="nav-item col-3">
-								<button type="button" class="nav-link active" data-bs-target="#cellTab1" data-bs-toggle="tab">
-									純天然
-								</button>
-							</li>
-							<li class="nav-item col-3">
-								<button type="button" class="nav-link" data-bs-target="#cellTab2" data-bs-toggle="tab">
-									萃取技術
-								</button>
-							</li>
-							<li class="nav-item col-3">
-								<button type="button" class="nav-link" data-bs-target="#cellTab3" data-bs-toggle="tab">
-									認證標章
-								</button>
-							</li>
-							<li class="nav-item col-3">
-								<button type="button" class="nav-link" data-bs-target="#cellTab4" data-bs-toggle="tab">
-									科學製程
-								</button>
-							</li>
-						</ul>
-						<!--/Tab分頁籤-->
-						<div class="tab-content">
-							<!--純天然-->
-							<div class="tab-pane fade show active" id="cellTab1">
-								純天然
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+							<div class="tabBlock">
+								<ul class="nav nav--process" id="cellTab" role="tablist">
+									<li class="nav-item">
+										<button type="button" class="tabBtn tabBtn--natural active" data-bs-target="#processTab1" data-bs-toggle="tab">
+											<i class="tabBtn__icon"></i>
+											<span class="tabBtn__text">純天然</span>
+										</button>
+									</li>
+									<li class="nav-item">
+										<button type="button" class="tabBtn tabBtn--skill" data-bs-target="#processTab2" data-bs-toggle="tab">
+											<i class="tabBtn__icon"></i>
+											<span class="tabBtn__text">萃取技術</span>
+										</button>
+									</li>
+									<li class="nav-item">
+										<button type="button" class="tabBtn tabBtn--mark" data-bs-target="#processTab3" data-bs-toggle="tab">
+											<i class="tabBtn__icon"></i>
+											<span class="tabBtn__text">認證標章</span>
+										</button>
+									</li>
+									<li class="nav-item">
+										<button type="button" class="tabBtn tabBtn--process" data-bs-target="#processTab4" data-bs-toggle="tab">
+											<i class="tabBtn__icon"></i>
+											<span class="tabBtn__text">科學製程</span>
+										</button>
+									</li>
+								</ul>
+								<div class="tab-content tabContent tabContent--process">
+									<!--純天然-->
+									<div class="tab-pane fade show active" id="processTab1">
+										<div class="processBox processBox--natural">
+											<div class="processBox__wrap">
+												<div class="title">純天然蕈菇x科學萃取，卓越高濃度！</div>
+												<div class="content">
+													<p class="paragraph">相較於合成的麥角硫因，樂蕈生技更相信大自然原生、溫和的力量，更能協助現代人達到身心平衡。</p>
+													<p class="paragraph">不僅用天然來源，獨家草本培育有機蕈菇，更以超過市場卓越的高濃度含量，讓消費者更能感受到草本的舒緩功效。</p>
+													<p class="paragraph">另外，因源自天然植物，無額外添加鎂、鋅等礦物質，不易引起腸胃不適，是全齡皆能食用的天然產品。</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/純天然-->
+									<!--萃取技術-->
+									<div class="tab-pane fade" id="processTab2">
+										<div class="processBox processBox--skill">
+											<div class="processBox__wrap">
+												<div class="title">獨家栽培x科學萃取技術，安心又可靠</div>
+												<div class="content">
+													<p class="paragraph">樂蕈生技全程以環境控制，栽植有機的草本菇蕈子實體，並以獨家萃取、減壓濃縮、專利全食物造粒，再經過各項檢測分析符合安全性後才可包裝出產。</p>
+													<p class="paragraph">從蕈菇培育開始，就以高科技製程控制，安全可靠，並確保穩定生產出高含量草本麥角硫因，並搭配益生質載體，透過多國專利的全食物造粒製程(自帶多孔結構), 無需額外添加賦形劑，增加麥角硫因、多醣體、多酚含量。</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/萃取技術-->
+									<!--認證標章-->
+									<div class="tab-pane fade" id="processTab3">
+										<div class="processBox processBox--mark">
+											<div class="processBox__wrap">
+												<div class="title">多國發明專利x安心認證標章  品質有保證！</div>
+												<div class="content">
+													<p class="paragraph">目前樂蕈生技以超過市面麥角硫萃取造粒流程及工藝，不僅取得台灣、日本發明專利，更通過HACCP、GMP等國際及食品安全認證標章，更與虎尾科大、輔英科大、食品工業研究所生資中心合作，進行細胞試驗與人體臨床實驗等，只為提供消費者安全、科學、健康、之高價值產品。</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/認證標章-->
+									<!--科學製程-->
+									<div class="tab-pane fade" id="processTab4">
+										<div class="processBox processBox--process">
+											<div class="processBox__wrap">
+												<div class="title">為什麼科學製程更可靠？</div>
+												<div class="content">
+													<p class="paragraph">比起合成的麥角硫因，樂蕈生技以天然草本x全食物製程的麥角硫因，則是具有高穩定活性、高體內利用率等諸多效果，在協同抗氧化、神經保護、對抗壓力型睡眠具備相當優勢。</p>
+													<p class="paragraph">加上可以作為食品原物料運用，又具備安全、永續、有效等多重優勢，如果你已感受到壓力型失眠造成的影響，不妨利用麥角硫因來找回熟睡力！</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/科學製程-->
+								</div>
 							</div>
-							<!--/純天然-->
-							<!--萃取技術-->
-							<div class="tab-pane fade" id="cellTab2">
-								萃取技術
-							</div>
-							<!--/萃取技術-->
-							<!--認證標章-->
-							<div class="tab-pane fade" id="cellTab3">
-								認證標章
-							</div>
-							<!--/認證標章-->
-							<!--科學製程-->
-							<div class="tab-pane fade" id="cellTab4">
-								科學製程
-							</div>
-							<!--/科學製程-->
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!--/來源製程-->
-
-		<!--延伸閱讀-->
-		<section id="article" class="section section--article scrollArea">
-			<div class="section__content">
+				<!--/來源製程-->
+				<!--延伸閱讀-->
 				<div class="chapter">
+					<div id="article" class="anchorOffset"></div>
 					<div class="container">
-						<div class="chapter__title">延伸閱讀</div>
-						<div class="chapter__content">
+						<div class="chapter__title floatLoop"><div class="text">延伸閱讀</div></div>
+						<div class="chapter__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
 							<div class="slickList slickList--article js-articleSlick">
 								<div class="slickList__item">
 									<a class="articleItem" href="https://www.commonhealth.com.tw/article/86764" target="_blank">
 										<div class="articleItem__img"><img src="assets/images/kbpic01.jpg" class="articleItem__img img-fluid" alt="article_title"></div>
 										<div class="articleItem__txt">
 											<h3 class="title">article_title1</h3>
-											<p class="intro">article_intro1</p>
-											<div class="more">more</div>
+											<p class="intro">廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章廣編文章</p>
+											<div class="more">READ</div>
 										</div>
 									</a>
 								</div>
@@ -507,7 +887,7 @@
 										<div class="articleItem__txt">
 											<h3 class="title">article_title2</h3>
 											<p class="intro">article_intro2</p>
-											<div class="more">more</div>
+											<div class="more">READ</div>
 										</div>
 									</a>
 								</div>
@@ -517,7 +897,7 @@
 										<div class="articleItem__txt">
 											<h3 class="title">article_title3</h3>
 											<p class="intro">article_intro3</p>
-											<div class="more">more</div>
+											<div class="more">READ</div>
 										</div>
 									</a>
 								</div>
@@ -527,7 +907,7 @@
 										<div class="articleItem__txt">
 											<h3 class="title">article_title4</h3>
 											<p class="intro">article_intro4</p>
-											<div class="more">more</div>
+											<div class="more">READ</div>
 										</div>
 									</a>
 								</div>
@@ -537,7 +917,7 @@
 										<div class="articleItem__txt">
 											<h3 class="title">article_title5</h3>
 											<p class="intro">article_intro5</p>
-											<div class="more">more</div>
+											<div class="more">READ</div>
 										</div>
 									</a>
 								</div>
@@ -547,7 +927,7 @@
 										<div class="articleItem__txt">
 											<h3 class="title">article_title6</h3>
 											<p class="intro">article_intro6</p>
-											<div class="more">more</div>
+											<div class="more">READ</div>
 										</div>
 									</a>
 								</div>
@@ -555,9 +935,10 @@
 						</div>
 					</div>
 				</div>
+				<!--/延伸閱讀-->
 			</div>
 		</section>
-		<!--/延伸閱讀-->
+
 	</main>
 	<!-- <a class="btn-more" href="#"><img alt="關於樂蕈" src="assets/images/btn-more.png" /></a> -->
 	<footer>
@@ -586,9 +967,6 @@
 	<!-- 左右輪播切換套件 -->
 	<script src="assets/js/slick.min.js"></script>
 
-	<!-- 滾動套件 -->
-	<script src="assets/js/ScrollMagic.min.js"></script>
-	
 	<script src="assets/js/scrollTrigger.js"></script>
 	<script src="assets/js/wow.js"></script>
 	<script src="assets/js/index.js"></script>

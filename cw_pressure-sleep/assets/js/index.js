@@ -1,56 +1,14 @@
 $(function () {
 	var navbarX=$(".navbarX");
 	navbarX.click(function(){
-      navbarX.toggleClass('active');
+		console.log('click')
+		navbarX.toggleClass('active');
+		$('body').toggleClass('openNav');
     });
 
 	$(".navbar .nav-link").click(function(){
 		navbarX.is(".active") && navbarX.trigger("click");
 	});
-	
-	/************************** ScrollMagic start ******************************/
-	var hash = location.hash;
-	var navLink = $(".navbar .nav-link");
-	var controller = new ScrollMagic.Controller();
-	var scrollArea = $(".scrollArea");
-	var scrollAreaIdArr = [];
-	var scrollAreaActive;
-	function updateNav(href, andPush) {
-		if (andPush) {
-			history.pushState({ href: href }, "", href);
-		} else {
-			history.replaceState({ href: href }, "", href);
-		}
-		scrollAreaActive = href.slice(1);
-	}
-	scrollArea.each(function (i) {
-		var area = $(this);
-		var id = area.attr("id");
-		scrollAreaIdArr.push(id);
-		var scene = new ScrollMagic.Scene({
-			triggerElement: area.get(0),
-		})
-			.on("enter", function (e) {
-				updateNav("#" + id, false);
-			})
-			.on("leave", function (e) {
-				if (i > 0 && e.scrollDirection == "REVERSE") {
-					updateNav(
-						"#" +
-						scrollAreaIdArr[
-						scrollAreaIdArr.findIndex((el) => el == scrollAreaActive) - 1
-						],
-						false
-					);
-				}
-			})
-			.addTo(controller);
-	});
-
-	setTimeout(function () {
-		hash && navLink.filter("[href$='" + hash + "']").trigger("click");
-	}, 100);
-	/************************** ScrollMagic end ******************************/
 
 	/************************** game start ******************************/
 	let currentQuestion = 1;
@@ -195,6 +153,87 @@ $(function () {
 	initializeTest();
 	/************************** game end ******************************/
 
+	/************************** collapse start ******************************/
+	const collapseGroups = document.querySelectorAll('.collapseGroup');
+
+	function syncVisibleHeights() {
+		if (window.innerWidth < 768) return;
+		const visibleCategories = ['cause', 'sleep-onset', 'sleep-state'];
+
+		visibleCategories.forEach(category => {
+			const items = document.querySelectorAll(`[data-category="${category}"]`);
+			if (items.length === 2) {
+				items.forEach(item => item.style.minHeight = 'auto');
+
+				let maxHeight = 0;
+				items.forEach(item => {
+					maxHeight = Math.max(maxHeight, item.offsetHeight);
+				});
+
+				items.forEach(item => {
+					item.style.minHeight = maxHeight + 'px';
+				});
+			}
+		});
+	}
+
+	function clearHeightSync() {
+		const allItems = document.querySelectorAll('[data-category]');
+		allItems.forEach(item => {
+			item.style.minHeight = 'auto';
+		});
+	}
+
+	function expandHiddenItems(group) {
+		const switcher = group.querySelector('.collapseGroup__switcher');
+		const hiddenItems = group.querySelectorAll('[data-category="early-wake"], [data-category="drowsiness"], [data-category="physical"]');
+
+		if (switcher.classList.contains('expanded')) return;
+
+		hiddenItems.forEach((item, index) => {
+			setTimeout(() => {
+				item.style.height = 'auto';
+				const height = item.scrollHeight;
+				item.style.height = '0px';
+
+				item.offsetHeight;
+
+				item.style.height = height + 'px';
+				item.classList.add('expanded');
+
+				setTimeout(() => {
+					item.style.height = 'auto';
+				}, 500);
+			}, index * 200);
+		});
+
+		switcher.style.display = 'none';
+		group.classList.add('active');
+	}
+
+	collapseGroups.forEach(group => {
+		const switcher = group.querySelector('.collapseGroup__switcher');
+
+		switcher.addEventListener('click', function() {
+			expandHiddenItems(group);
+		});
+	});
+
+	setTimeout(syncVisibleHeights, 100);
+
+	window.addEventListener('resize', function() {
+		setTimeout(() => {
+			if (window.innerWidth < 768) {
+				// 小螢幕：清除高度同步，讓內容自然撐開
+				clearHeightSync();
+			} else {
+				// 大螢幕：重新同步高度
+				syncVisibleHeights();
+			}
+		}, 100);
+	});
+	/************************** collapse end ******************************/
+
 	/************************** slick start ******************************/
 	var slickBasicSetting = {
 		dots: false,
@@ -218,8 +257,25 @@ $(function () {
 		],
 	};
 
-	var slickArticle = $(".js-articleSlick");
-	slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
+	function initSlick() {
+		var slickArticle = $(".js-articleSlick");
+
+		if ($(window).width() >= 768) {
+			if (!slickArticle.hasClass('slick-initialized')) {
+				slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
+			}
+		} else {
+			if (slickArticle.hasClass('slick-initialized')) {
+				slickArticle.slick('unslick');
+			}
+		}
+	}
+
+	initSlick();
+
+	$(window).resize(function() {
+		initSlick();
+	});
 
 	/************************** slick end ******************************/
 

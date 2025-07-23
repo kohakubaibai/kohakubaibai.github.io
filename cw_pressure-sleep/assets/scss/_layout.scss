@@ -4,9 +4,6 @@ $path: '../images';
 /* ==================================================
    BS內建
 ================================================== */
-html{
-	overflow-x: hidden;
-}
 
 *,
 *:before,
@@ -20,19 +17,61 @@ body {
 	margin: 0 auto;
 	background-color: $primary-light;
 	color: $dark;
+	padding-top: rem(82);
+
+	@include rwd-min(320px) {
+		padding-top: rem(64);
+	}
+
+	@include rwd-min(768px) {
+		padding-top: rem(82);
+	}
+
+	&.openNav {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.scrollArea {
+		position: relative;
+
+		.anchorOffset {
+			position: absolute;
+
+			@include rwd-min(320px) {
+				top: rem(-64);
+			}
+
+			@include rwd-min(768px) {
+				top: rem(-82);
+			}
+		}
+	}
 }
 
 /* ==================================================
    header
 ================================================== */
 .navbar {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 999;
 	background-color: $white;
-	padding: rem(16) rem(30);
+
+	@include rwd-min(320px) {
+		padding: rem(12) rem(20);
+	}
+
+	@include rwd-min(768px) {
+		padding: rem(16) rem(30);
+	}
+
+	.container-fluid {
+		padding: 0;
+	}
 
 	.nav-link {
 		font-size: rem(18);
@@ -69,10 +108,19 @@ body {
 		.navbar-nav {
 
 			.nav-item {
-				margin-left: rem(30);
+				margin-top: rem(20);
 
 				&:first-child {
-					margin-left: 0;
+					margin-top: 0;
+				}
+
+				@include rwd-min(992px) {
+					margin-top: 0;
+					margin-left: rem(30);
+
+					&:first-child {
+						margin-left: 0;
+					}
 				}
 			}
 
@@ -81,60 +129,15 @@ body {
 			}
 		}
 	}
-}
 
-/*ipad 橫式 lg以下*/
-@media (max-width: 1199.98px) {
-	.navbar {
-		padding-right: 1.1rem;
-		padding-left: 1.1rem;
-	}
-	.navbar-brand img {
-		height:40px;
+	.navbar-collapse {
+		margin-top: rem(20);
+
+		@include rwd-min(992px) {
+			margin-top: 0;
+		}
 	}
 }
-
-/*ipad 橫式 lg*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	.navbar .nav-link {
-		font-size: 1.05rem;
-		padding: 0 1rem !important;
-	}
-}
-
-/*ipad 直式 md以下*/
-@media (max-width: 991.98px) {
-	/*.navbar-collapse {
-		height: 100vh;
-	}*/
-	.navbar-nav {
-		margin: 1.3rem 0;
-		padding-bottom:20em;
-	}
-	.navbar .nav-link {
-		font-size: 1.5rem;
-		padding: 0.75rem 0;
-		padding-left: 5px !important;
-	}
-}
-
-
-/*手機版~*/
-@media (max-width: 767.98px) {
-	.navbar {
-		padding-right: 0.75rem;
-		padding-left: 0.5rem;
-	}
-	.navbar-brand img {
-		height:35px;
-	}
-	.navbar .nav-link {
-		font-size: 1.3rem;
-		padding: 0.5rem 0;
-		padding-left: 5px !important;
-	}
-}
-
 
 /* ==================================================
    漢堡按鈕-旋轉X
@@ -150,7 +153,6 @@ body {
 	}
 }
 
-
 /*Hamburger Menu to X css*/
 .navbarX {
 	width: rem(40);
@@ -161,7 +163,7 @@ body {
 	margin-right: 0;
 	cursor: pointer;
 
-	@include rwd-min(992px) {
+	@include rwd-min(1025px) {
 		display: none;
 	}
 
@@ -169,7 +171,7 @@ body {
 		display: block;
 		background: #222222;
 		border-radius: rem(3);
-		width: 100%;
+		width: rem(37);
 		height: rem(3);
 
 		&:nth-child(1) {
