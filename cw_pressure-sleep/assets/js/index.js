@@ -24,6 +24,55 @@ $(function () {
 		}
 	});
 
+	/************************** ScrollMagic start ******************************/
+	var hash = location.hash;
+	var navLink = $(".navbar .nav-link");
+	var controller = new ScrollMagic.Controller();
+	var scrollArea = $(".scrollArea");
+	var scrollAreaIdArr = [];
+	var scrollAreaActive;
+
+	function updateNav(href, andPush) {
+		if (andPush) {
+			history.pushState({ href: href }, "", href);
+		} else {
+			history.replaceState({ href: href }, "", href);
+		}
+		scrollAreaActive = href.slice(1);
+
+		navLink.removeClass("is-active");
+		navLink.filter("[href='" + href + "']").addClass("is-active");
+	}
+
+	scrollArea.each(function (i) {
+		var area = $(this);
+		var id = area.attr("id");
+		scrollAreaIdArr.push(id);
+		var scene = new ScrollMagic.Scene({
+			triggerElement: area.get(0),
+		})
+			.on("enter", function (e) {
+				updateNav("#" + id, false);
+			})
+			.on("leave", function (e) {
+				if (i > 0 && e.scrollDirection == "REVERSE") {
+					updateNav(
+						"#" +
+						scrollAreaIdArr[
+						scrollAreaIdArr.findIndex((el) => el == scrollAreaActive) - 1
+						],
+						false
+					);
+				}
+			})
+			.addTo(controller);
+	});
+
+	setTimeout(function () {
+		hash && navLink.filter("[href$='" + hash + "']").trigger("click");
+	}, 100);
+	/************************** ScrollMagic end ******************************/
+
 	/************************** game start ******************************/
 	let currentQuestion = 1;
 	const totalQuestions = 10;
@@ -166,7 +215,33 @@ $(function () {
 		}
 	}
 
+	function restartTest() {
+        currentQuestion = 1;
+        
+        $('input[type="radio"]').prop('checked', false);
+        $('.quizBox').hide().removeClass('active');
+        $('.stressForm__result').fadeOut(300, function() {
+            $('[data-question="1"]').addClass('active').fadeIn(300);
+			$("#quizIntro").show();
+			$('.stressForm__questions').show();
+        });
+    }
+
 	initializeTest();
+
+	window.restartTest = function(e) {
+        if (e && e.preventDefault) {
+            e.preventDefault();
+        }
+        restartTest();
+        return false;
+    };
+
+	$(document).on('click', '#restartBtn', function(e) {
+        e.preventDefault();
+        restartTest();
+        return false;
+    });
 	/************************** game end ******************************/
 
 	/************************** collapse start ******************************/
@@ -370,3 +445,40 @@ $(function () {
 
 	new WOW().init();
 });
+
+/************************** share start ******************************/
+	
+
+	function shareToFacebook(url, title) {
+		const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`;
+		window.open(shareUrl, 'facebook-share', 'width=580,height=296');
+	}
+	
+	function shareToLine(url, title) {
+		const text = `${title} ${url}`;
+		const shareUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+		window.open(shareUrl, 'line-share', 'width=500,height=500');
+	}
+
+	document.addEventListener('DOMContentLoaded', function() {
+		// Facebook share
+		document.querySelectorAll('.fb-share').forEach(link => {
+			link.addEventListener('click', function(e) {
+				e.preventDefault();			
+				const url = window.location.href;
+				const title = document.title;	
+				shareToFacebook(url, title);
+			});
+		});
+		
+		// LINE share
+		document.querySelectorAll('.line-share').forEach(link => {
+			link.addEventListener('click', function(e) {
+				e.preventDefault();
+				const url = window.location.href;
+				const title = document.title;
+				shareToLine(url, title);
+			});
+		});
+	});
+	/************************** share end ******************************/

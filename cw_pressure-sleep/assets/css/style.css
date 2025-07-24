@@ -251,11 +251,13 @@ body .scrollArea .anchorOffset {
 }
 .navbar .nav-link {
   font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 400;
   display: block;
   color: #333333;
   text-decoration: none;
 }
-.navbar .nav-link.active {
+.navbar .nav-link.is-active {
   color: #EB6E02;
 }
 .navbar .navbar-brand {
@@ -550,9 +552,9 @@ footer ul {
   margin: 0;
 }
 footer ul li {
-  border-right: 1px solid #2E6232;
-  padding: 0 10px 0 0;
-  margin: 0 10px 10px 0;
+  border-right: 0.0625rem solid #2E6232;
+  padding-right: 0.625rem;
+  margin: 0 0.625rem 0.625rem 0;
 }
 footer ul li:last-child {
   border: none;
@@ -567,6 +569,21 @@ footer ul li a {
 }
 footer ul li a:hover {
   opacity: 0.65;
+}
+@media (min-width: 320px) {
+  footer ul.socialList {
+    margin-bottom: 3.125rem;
+  }
+}
+@media (min-width: 768px) {
+  footer ul.socialList {
+    margin-bottom: 2.5rem;
+  }
+}
+footer ul.socialList li {
+  border-right: none;
+  padding-right: 1.875rem;
+  margin: 0;
 }
 footer ul:last-child {
   margin: 0;
@@ -596,8 +613,6 @@ footer p {
   bottom: 2em;
   right: 15px;
   z-index: 9;
-  width: 9.375rem;
-  height: 9.375rem;
   opacity: 1;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.15);
@@ -607,6 +622,18 @@ footer p {
           animation: loop 2.5s ease-out infinite;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
+}
+@media (min-width: 320px) {
+  .btn-more {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .btn-more {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
 }
 .btn-more img {
   height: auto;
@@ -2318,7 +2345,7 @@ main {
 .stressForm .resultBox {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 @media (min-width: 320px) {
   .stressForm .resultBox {
@@ -2342,7 +2369,7 @@ main {
 @media (min-width: 992px) {
   .stressForm .resultBox {
     max-width: 52.875rem;
-    padding: 10.3125rem 14.9375rem 10.3125rem 12.875rem;
+    padding: 11.25rem 14.9375rem 11.25rem 12.875rem;
   }
 }
 .stressForm .resultBox__title {
@@ -2368,7 +2395,7 @@ main {
   font-weight: 400;
 }
 .stressForm .resultBox__content {
-  margin-top: 1.25rem;
+  margin-top: 0.625rem;
 }
 .stressForm .resultBox__content p {
   margin: 0;
@@ -2380,6 +2407,39 @@ main {
 }
 .stressForm .resultBox__content p:last-child {
   margin-bottom: 0;
+}
+.stressForm .resultBox__action {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.stressForm .resultBox__action .restartBtn {
+  display: inline-block;
+  border: none;
+  padding: 0.875rem 1.25rem;
+  background-color: #EB6E02;
+  border-radius: 1.625rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #fff;
+}
+.stressForm .resultBox__action .restartBtn:hover {
+  background-color: #333333;
 }
 
 .bubbleItem {
@@ -3103,18 +3163,8 @@ main {
   }
 }
 .compareTable .vsTable .nutrientTag {
-  display: inline-block;
   width: 100%;
-  border-radius: 2.5rem;
-  color: #fff;
-}
-.compareTable .vsTable .nutrientTag--main {
-  background-color: #EB6E02;
-  border: 0.0625rem solid #EB6E02;
-}
-.compareTable .vsTable .nutrientTag--sub {
-  background-color: rgba(0, 0, 0, 0.3);
-  border: 0.0625rem solid rgba(0, 0, 0, 0.3);
+  color: #333333;
 }
 @media (min-width: 320px) {
   .compareTable .vsTable .nutrientTag {

@@ -74,12 +74,12 @@ body {
 	}
 
 	.nav-link {
-		font-size: rem(18);
+		@include f-p;
 		display: block;
 		color: $dark;
 		text-decoration: none;
 
-		&.active {
+		&.is-active {
 			color: $primary-dark;
 		}
 	}
@@ -302,9 +302,9 @@ footer {
 		margin: 0;
 
 		li {
-			border-right: 1px solid $secondary-dark;
-			padding: 0 10px 0 0;
-			margin: 0 10px 10px 0;
+			border-right: rem(1) solid $secondary-dark;
+			padding-right: rem(10);
+			margin: 0 rem(10) rem(10) 0;
 
 			&:last-child {
 				border: none;
@@ -320,6 +320,25 @@ footer {
 				&:hover {
 					opacity: 0.65;
 				}
+			}
+
+			
+		}
+
+		&.socialList {
+			
+			@include rwd-min(320px) {
+				margin-bottom: rem(50);
+			}
+
+			@include rwd-min(768px) {
+				margin-bottom: rem(40);
+			}
+
+			li {
+				border-right: none;
+				padding-right: rem(30);
+				margin: 0;
 			}
 		}
 
@@ -355,14 +374,22 @@ footer {
 	bottom: 2em;
 	right: 15px;
 	z-index: 9;
-	width: rem(150);
-	height: rem(150);
 	opacity: 1;
 	border-radius: 50%;
 	box-shadow: 0 0 rem(20) rgba(0,0,0,.15);
 	opacity: 0;
 	animation: loop 2.5s ease-out infinite;
 	@include transition(opacity, .3s, ease-in);
+
+	@include rwd-min(320px) {
+		width: rem(120);
+		height: rem(120)
+	}
+
+	@include rwd-min(768px) {
+		width: rem(150);
+		height: rem(150);
+	}
 
 	img {
 		height: auto;

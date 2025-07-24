@@ -1692,7 +1692,7 @@ main {
 	.resultBox {
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: cover;
+		background-size: 100% auto;
 
 		@include rwd-min(320px) {
 			padding: rem(160) rem(30);
@@ -1714,7 +1714,7 @@ main {
 
 		@include rwd-min(992px) {
 			max-width: rem(846);
-			padding: rem(165) rem(239) rem(165) rem(206);
+			padding: rem(180) rem(239) rem(180) rem(206);
 		}
 
 		&__title {
@@ -1733,7 +1733,7 @@ main {
 		}
 
 		&__content {
-			margin-top: rem(20);
+			margin-top: rem(10);
 
 			p {
 				margin: 0;
@@ -1743,6 +1743,31 @@ main {
 
 				&:last-child {
 					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__action {
+			@include list-reset;
+			margin-top: rem(20);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.restartBtn {
+				display: inline-block;
+				border: none;
+				padding: rem(14) rem(20);
+				background-color: $primary-dark;
+				border-radius: rem(26);
+				text-align: center;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				@include f-h5;
+				color: $white;
+
+				&:hover {
+					background-color: $dark;
 				}
 			}
 		}
@@ -2489,20 +2514,8 @@ main {
 		}
 
 		.nutrientTag {
-            display: inline-block;
 			width: 100%;
-            border-radius: rem(40);
-            color: $white;
-
-			&--main {
-				background-color: $primary-dark;
-				border: rem(1) solid $primary-dark;
-			}
-
-			&--sub {
-				background-color: rgba(0, 0, 0, 0.3);
-				border: rem(1) solid rgba(0, 0, 0, 0.3);
-			}
+            color: $dark;
 
 			@include rwd-min(320px) {
 				@include f-h5-medium;
