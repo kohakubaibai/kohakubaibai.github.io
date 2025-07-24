@@ -282,7 +282,7 @@ body {
 footer {
 	background-color: $white;
     width: 100%;
-	padding: 30px 0 15px;
+	padding: rem(30) rem(20) rem(15);
 
 	a {
 		transition: .3s;
@@ -302,9 +302,7 @@ footer {
 		margin: 0;
 
 		li {
-			font-size: 15px;
-			line-height: 15px;
-			border-right: 1px solid var(--green-deep);
+			border-right: 1px solid $secondary-dark;
 			padding: 0 10px 0 0;
 			margin: 0 10px 10px 0;
 
@@ -315,8 +313,9 @@ footer {
 			}
 
 			a {
+				@include f-h5;
 				color: $secondary-dark;
-				line-height: 15px;
+
 
 				&:hover {
 					opacity: 0.65;
@@ -329,11 +328,9 @@ footer {
 		}
 	}
 
-	 p {
+	p {
+		@include f-h5;
 		color: $secondary-dark;
-		font-size: 14px;
-		line-height: 24px;
-		font-weight: 300;
 		text-align: center;
 		margin-top: 0;
 		margin-bottom: 10px;
@@ -355,14 +352,25 @@ footer {
 
 .btn-more {
 	position: fixed;
-	bottom:2em;
-	right:15px;
-	z-index:9;
-	animation:loop 2.5s ease-out infinite; /*會一直重來loop播放*/
+	bottom: 2em;
+	right: 15px;
+	z-index: 9;
+	width: rem(150);
+	height: rem(150);
+	opacity: 1;
+	border-radius: 50%;
+	box-shadow: 0 0 rem(20) rgba(0,0,0,.15);
+	opacity: 0;
+	animation: loop 2.5s ease-out infinite;
+	@include transition(opacity, .3s, ease-in);
 
 	img {
 		height: auto;
+		width: 100%;
 		transition: all 0.5s;
-		width: 120px;
+	}
+
+	&.is-active {
+		opacity: 1;
 	}
 }

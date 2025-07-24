@@ -444,10 +444,6 @@ main {
 		互動測驗
 	================================================== */
 	&--quiz {
-		background-image: url('../images/bg_hero.svg');
-		background-position: left bottom;
-		background-repeat: no-repeat;
-		animation: waveBG_hero 3s ease-in-out infinite alternate;
 
 		@include rwd-min(320px) {
 			padding-top: rem(80);
@@ -457,6 +453,14 @@ main {
 		@include rwd-min(768px) {
 			padding-top: rem(100);
 			padding-bottom: rem(100);
+			background-image: url('../images/bg_hero.svg');
+			background-position: left bottom;
+			background-repeat: no-repeat;
+			animation: waveBG_hero 3s ease-in-out infinite alternate;
+		}
+
+		.container {
+			padding: 0;
 		}
 
 		.section__title {
@@ -479,6 +483,18 @@ main {
 
 			&:before {
 				display: none;
+			}
+		}
+
+		.section__content {
+			padding-top: 0;
+
+			.stressForm {
+				.questions {
+					@include rwd-min(320px) {
+						padding: 0 rem(20);
+					}
+				}
 			}
 		}
 	}
@@ -898,14 +914,26 @@ main {
 
 		.section__content {
 			.chapter {
+				@include rwd-min(320px) {
+					margin-bottom: rem(120);
+				}
+
+				@include rwd-min(768px) {
+					margin-bottom: rem(150);
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
 				.chapter__title {
+					margin-bottom: rem(45);
 
 					.text {
 						color: $secondary-dark;
 					}
 
 					@include rwd-min(320px) {
-						margin-bottom: rem(45);
 
 						&:before {
 							position: absolute;
@@ -925,7 +953,6 @@ main {
 					}
 
 					@include rwd-min(768px) {
-						margin-bottom: rem(95);
 
 						&:before {
 							left: rem(-20);
@@ -953,6 +980,93 @@ main {
 					}
 				}
 
+				&:nth-child(1) {
+
+					.container {
+
+						@include rwd-min(1200px) {
+							max-width: 1010px;
+						}
+					}
+
+					.chapter__content {
+						.desc {
+							margin-bottom: rem(80);
+						}
+					}
+
+					.tabBlock {
+
+						.nav {
+							position: relative;
+							z-index: 1;
+
+							@include rwd-min(320px) {
+								margin-bottom: rem(10);
+							}
+
+							@include rwd-min(1024px) {
+								margin-bottom: 0;
+							}
+						}
+
+						.tabContent {
+							position: relative;
+							z-index: 5;
+							background-color: $white;
+
+							@include rwd-min(320px) {
+								border-radius: rem(30);
+								border: rem(20) solid $secondary;
+							}
+
+							@include rwd-min(1024px) {
+								border-radius: 0 rem(30) rem(30) rem(30);
+								border: rem(30) solid $secondary;
+							}
+						}
+					}
+
+					.slickList--merits {
+						height: 0;
+						visibility: hidden;
+						opacity: 0;
+						@include transition(all, .3s, ease-in);
+
+						&.slick-initialized {
+							height: auto;
+							visibility: visible;
+							opacity: 1;
+						}
+
+						.slick-dots {
+							bottom: rem(-65);
+
+							li {
+								width: rem(15);
+								height: rem(15);
+
+								button {
+									width: rem(15);
+									height: rem(15);
+									border-radius: 50%;
+									background-color: $secondary-light;
+
+									&:before {
+										font-size: 0;
+									}
+								}
+
+								&.slick-active {
+									button {
+										background-color: $secondary-dark;
+									}
+								}
+							}
+						}
+					}
+				}
+
 				&:nth-child(2) {
 					.container {
 						@include rwd-min(320px) {
@@ -961,7 +1075,7 @@ main {
 					}
 
 					.scrollWrap {
-						
+
 						@include rwd-min(320px) {
 							padding-left: rem(20);
 
@@ -970,7 +1084,7 @@ main {
 								display: inline-block;
 								width: rem(20);
 								height: rem(1);
-							}						
+							}
 						}
 
 						@include rwd-min(1024px) {
@@ -979,6 +1093,12 @@ main {
 							&:after {
 								display: none;
 							}
+						}
+					}
+
+					.tabBlock {
+						.nav {
+							margin-bottom: rem(50);
 						}
 					}
 				}
@@ -1188,11 +1308,9 @@ main {
 .nav {
 	&--process {
 		justify-content: center;
+
 		@include rwd-min(320px) {
 			padding: 0
-		}
-		@include rwd-min(768px) {
-
 		}
 
 		.nav-item {
@@ -1315,6 +1433,155 @@ main {
 			}
 		}
 	}
+
+	&--compare {
+		justify-content: center;
+
+		@include rwd-min(320px) {
+			padding: 0
+		}
+
+		.nav-item {
+
+			@include rwd-min(320px) {
+				flex-wrap: wrap;
+				margin-bottom: rem(20);
+			}
+
+			@include rwd-min(768px) {
+				margin-left: rem(15);
+				margin-right: rem(15);
+				margin-bottom: 0;
+			}
+		}
+
+		.tabBtn {
+			border-radius: rem(35);
+			border: rem(1) solid $secondary-dark;
+			text-align: center;
+			background-color: $white;
+			box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, .25) !important;
+			@include transition(all, .3s, ease-in);
+
+			@include rwd-min(320px) {
+				width: rem(300);
+				padding: rem(20) 0;
+			}
+
+			@include rwd-min(768px) {
+				width: auto;
+				padding: rem(20) rem(50);
+			}
+
+			.tabBtn__text {
+				color: $secondary-dark;
+				@include transition(all, .3s, ease-in);
+				@include f-h4-bold;
+			}
+
+			&.active {
+				background-color: $secondary-dark;
+
+				.tabBtn__text {
+					color: $white;
+				}
+			}
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			@include rwd-not-hover {
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&--merit {
+		@include rwd-min(320px) {
+			justify-content: center;
+		}
+
+		@include rwd-min(1024px) {
+			justify-content: flex-start;
+		}
+
+		.nav-item {
+			@include rwd-min(320px) {
+				margin: 0 rem(10) rem(10);
+			}
+
+			@include rwd-min(1024px) {
+				margin: 0;
+			}
+		}
+
+		.tabBtn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			background-color: $white;
+			box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, .25) !important;
+			@include transition(all, .3s, ease-in);
+
+			@include rwd-min(320px) {
+				width: rem(140);
+				padding: rem(7) 0;
+				border-radius: rem(20);
+			}
+
+			@include rwd-min(768px) {
+				width: auto;
+				padding: rem(12) rem(30);
+				height: rem(55);
+				border-radius: rem(20) rem(20) 0 0;
+			}
+
+			.tabBtn__text {
+				color: $secondary-dark;
+				@include transition(all, .3s, ease-in);
+
+				@include rwd-min(320px) {
+					font-size: rem(14);
+					font-weight: 400;
+					line-height: (24/14);
+				}
+
+				@include rwd-min(1024px) {
+					@include f-p;
+				}
+			}
+
+			&.active {
+				background-color: $secondary-dark;
+
+				.tabBtn__text {
+					color: $white;
+
+					@include rwd-min(320px) {
+						@include f-h5;
+					}
+
+					@include rwd-min(1024px) {
+						@include f-h4-bold;
+					}
+				}
+			}
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			@include rwd-not-hover {
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }
 
 .stressForm {
@@ -1326,7 +1593,7 @@ main {
 		border-radius: rem(28);
 		background-color: $white;
 		overflow: hidden;
-		box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+		box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.15);
 
 		@include rwd-min(320px) {
 			padding: rem(50) rem(28);
@@ -1424,13 +1691,18 @@ main {
 
 	.resultBox {
 		background-repeat: no-repeat;
-		background-size: cover;
 		background-position: center;
+		background-size: cover;
+
+		@include rwd-min(320px) {
+			padding: rem(160) rem(30);
+			background-image: url('../images/bg_quiz-ressult-mb.png');
+		}
 
 		@include rwd-min(768px) {
 			padding: rem(100) 0;
 			margin: 0 auto;
-			background-image: url('../images/bg_quiz-ressult.png');
+			background-image: url('../images/bg_quiz-ressult-pc.png');
 
 			.resultBox__title,
 			.resultBox__content {
@@ -1892,7 +2164,7 @@ main {
 
 	&--ingredient {
 		width: 100%;
-		
+
 		@include rwd-min(320px) {
 			flex-direction: row;
 			flex-wrap: nowrap;
@@ -1902,9 +2174,19 @@ main {
 			flex: 0 0 rem(235);
 			margin-right: rem(20);
 
-			@include rwd-min(1024px) {
+			&.fake {
+				@include rwd-min(320px) {
+					flex: 0 0 rem(1);
+					height: rem(1);
+				}
 
-				&:last-child {
+				@include rwd-min(1024px) {
+					display: none;
+				}
+			}
+
+			&:nth-child(4) {
+				@include rwd-min(1024px) {
 					margin-right: 0;
 				}
 			}
@@ -2085,7 +2367,7 @@ main {
 	.vsTable {
 		border-collapse: collapse;
 		table-layout: fixed;
-		
+
 		@include rwd-min(320px) {
 			width: rem(780);
 		}
@@ -2145,9 +2427,16 @@ main {
 		th {
 			text-align: center;
 			padding-bottom: rem(16);
-			background-color: $secondary-light;
+
+			@include rwd-min(320px) {
+				background-color: $secondary-light;
+			}
+
+			@include rwd-min(1024px) {
+				background-color: transparent;
+			}
 		}
-		
+
 		td {
 			padding: rem(16);
 
@@ -2223,7 +2512,7 @@ main {
 
 			@include rwd-min(1024px) {
 				@include f-h4-bold;
-            	padding: rem(15) 0;			
+            	padding: rem(15) 0;
 			}
         }
 
@@ -2234,13 +2523,13 @@ main {
 
 		.row-header {
 			border-right: rem(1) solid $secondary-dark;
-			
+
 			@include rwd-min(320px) {
 				background-color: $secondary-light;
 				z-index: 2;
 				text-align: left;
 			}
-			
+
 			@include rwd-min(1024px) {
 				background-color: transparent;
 				text-align: center;
@@ -2250,9 +2539,11 @@ main {
 }
 
 .processBox {
-	background-color: $white;
 	border-radius: rem(30);
 	box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, .25);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 
 	@include rwd-min(320px) {
 		padding: rem(40) 0;
@@ -2260,6 +2551,23 @@ main {
 
 	@include rwd-min(768px) {
 		padding: rem(70) 0;
+		height: rem(416);
+	}
+
+	&--natural {
+		background-image: url('../images/bg_process-natural.png');
+	}
+
+	&--skill {
+		background-image: url('../images/bg_process-skill.png');
+	}
+
+	&--mark {
+		background-image: url('../images/bg_process-mark.png');
+	}
+
+	&--process {
+		background-image: url('../images/bg_process-process.png');
 	}
 
 	.processBox__wrap {
@@ -2304,6 +2612,115 @@ main {
 	}
 	&--process {
 	}
+}
+
+.merits {
+	display: flex;
+
+	@include rwd-min(320px) {
+		flex-wrap: wrap;
+	}
+
+	@include rwd-min(1024px) {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.merits__text {
+		text-align: left;
+
+		@include rwd-min(320px) {
+			padding: rem(20) rem(10) rem(10);
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		@include rwd-min(1024px) {
+			padding: rem(40);
+			flex: 1;
+			max-width: calc(100% - rem(460));
+		}
+
+		.title {
+			@include f-h3;
+			color: $secondary-dark;
+		}
+
+		.content {
+			margin-top: rem(20);
+
+			&.page2 {
+				margin-top: 0;
+
+				dl {
+					margin-bottom: rem(20);
+
+					&:last-child {
+						margin-bottom: 0
+					}
+				}
+			}
+
+			p {
+				@include f-h4;
+				color: $dark;
+
+				& + dl {
+					margin-top: rem(20);
+				}
+			}
+
+			dl {
+				margin-bottom: rem(20);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				dt {
+					margin-bottom: rem(6);
+
+					span {
+						display: inline-block;
+						padding: rem(12) rem(28);
+						border-radius: rem(30);
+						@include f-h5-medium;
+						color: $white;
+						background-color: $secondary-dark;
+					}
+				}
+				dd {
+					@include f-p;
+					color: $secondary-dark;
+				}
+			}
+		}
+	}
+
+	.merits__media {
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			padding-top: calc((935/1000) * 100%);
+		}
+
+		img {
+			@include fit-cover;
+		}
+
+		@include rwd-min(320px) {
+			flex: 0 0 100%;
+		}
+
+		@include rwd-min(1024px) {
+			flex: 0 0 rem(460);
+		}
+	}
+
 }
 
 .articleItem {

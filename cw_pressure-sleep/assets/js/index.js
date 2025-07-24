@@ -10,6 +10,20 @@ $(function () {
 		navbarX.is(".active") && navbarX.trigger("click");
 	});
 
+	var $mainKvBox = $('.mainKvBox');
+    var mainKvBoxTop = $mainKvBox.offset().top;
+    var mainKvBoxHeight = $mainKvBox.outerHeight();
+    var mainKvBoxBottom = mainKvBoxTop + mainKvBoxHeight;
+
+	$(window).on('scroll', function() {
+		var scrollTop = $(window).scrollTop();
+		if (scrollTop > (mainKvBoxBottom / 2)) {
+			$('.btn-more').addClass('is-active');
+		} else {
+			$('.btn-more').removeClass('is-active');
+		}
+	});
+
 	/************************** game start ******************************/
 	let currentQuestion = 1;
 	const totalQuestions = 10;
@@ -97,6 +111,7 @@ $(function () {
 
 	function showResult(totalScore) {
 		const $resultSection = $(".stressForm__result");
+		const $quizIntro = $("#quizIntro");
 		const $resultDiv = $("#resultBox");
 		const $resultTitle = $("#resultTitle");
 		const $scoreRange = $("#scoreRange");
@@ -112,6 +127,7 @@ $(function () {
 		$resultDescription.html(resultData.description);
 
 		$resultSection.fadeIn(500);
+		$quizIntro.fadeOut()
 	}
 
 	function getResultData(totalScore) {
@@ -234,7 +250,80 @@ $(function () {
 	});
 	/************************** collapse end ******************************/
 
-	/************************** slick start ******************************/
+	/************************** merit slick start ******************************/
+	let slickInitialized = false;
+
+	// 初始化 Slick（延遲執行以確保 DOM 完全載入）
+	function initMeritSlick() {
+		if (!slickInitialized) {
+			$('.js-meritsSlick').slick({
+				fade: true,
+				dots: true,
+				arrows: false,
+				infinite: false,
+				speed: 500,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: false,
+				pauseOnHover: true,
+				variableWidth: false,
+				centerMode: false,
+				adaptiveHeight: false,
+				draggable: false,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							fade: true,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							arrows: false,
+							dots: true,
+							adaptiveHeight: false,
+							variableWidth: false,
+							centerMode: false,
+						}
+					}
+				]
+			});
+			slickInitialized = true;
+		}
+	}
+	$('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+		const targetTab = $(e.target).attr('data-bs-target');
+
+		if (targetTab === '#meritTab5') {
+			setTimeout(function() {
+				initMeritSlick();
+			}, 100);
+		}
+	});
+
+	setTimeout(function() {
+		if (!slickInitialized && !$('#meritTab5').hasClass('active')) {
+			const $tab5 = $('#meritTab5');
+			const wasActive = $tab5.hasClass('show active');
+
+			if (!wasActive) {
+				$tab5.addClass('show active').css('opacity', '0');
+				setTimeout(function() {
+					initSlick();
+					$tab5.removeClass('show active').css('opacity', '');
+				}, 50);
+			}
+		}
+	}, 2000);
+
+	$(window).on('resize', function() {
+		if (slickInitialized) {
+			setTimeout(function() {
+				$('.js-meritsSlick').slick('setPosition');
+			}, 100);
+		}
+	});
+	/************************** merit slick end ******************************/
+
+	/************************** article slick start ******************************/
 	var slickBasicSetting = {
 		dots: false,
 		//autoplay: true,
