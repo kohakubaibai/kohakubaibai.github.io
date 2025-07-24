@@ -337,8 +337,13 @@ footer {
 
 			li {
 				border-right: none;
-				padding-right: rem(30);
-				margin: 0;
+				padding: 0;
+				margin-right: rem(30);
+				margin-bottom: 0;
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 
