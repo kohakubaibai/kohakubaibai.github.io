@@ -3264,16 +3264,16 @@ main {
   }
 }
 .processBox--natural {
-  background-image: url("../images/bg_process-natural.png");
+  background-image: url("../images/bg_process-natural.jpg");
 }
 .processBox--skill {
-  background-image: url("../images/bg_process-skill.png");
+  background-image: url("../images/bg_process-skill.jpg");
 }
 .processBox--mark {
-  background-image: url("../images/bg_process-mark.png");
+  background-image: url("../images/bg_process-mark.jpg");
 }
 .processBox--process {
-  background-image: url("../images/bg_process-process.png");
+  background-image: url("../images/bg_process-process.jpg");
 }
 .processBox .processBox__wrap {
   max-width: 41.25rem;
