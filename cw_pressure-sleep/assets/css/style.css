@@ -208,19 +208,16 @@ body.openNav {
   height: 100%;
   overflow: hidden;
 }
-body .scrollArea {
-  position: relative;
-}
-body .scrollArea .anchorOffset {
+body .scrollArea.anchorOffset {
   position: absolute;
 }
 @media (min-width: 320px) {
-  body .scrollArea .anchorOffset {
+  body .scrollArea.anchorOffset {
     top: -4rem;
   }
 }
 @media (min-width: 768px) {
-  body .scrollArea .anchorOffset {
+  body .scrollArea.anchorOffset {
     top: -5.125rem;
   }
 }
@@ -302,9 +299,17 @@ body .scrollArea .anchorOffset {
 .navbar .navbar-collapse {
   margin-top: 1.25rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 320px) {
+  .navbar .navbar-collapse.show {
+    height: calc(100vh - 4rem);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+}
+@media (min-width: 991.98px) {
   .navbar .navbar-collapse {
     margin-top: 0;
+    height: auto;
   }
 }
 
@@ -1110,12 +1115,36 @@ main {
   top: 50%;
   left: 50%;
   z-index: 10;
+  display: block;
+  width: 100%;
   color: #fff;
+  text-align: center;
   opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+@media (min-width: 320px) {
+  .hero .mainKvBox__text .list > li span {
+    font-size: 0.6875rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+}
+@media (min-width: 375px) {
+  .hero .mainKvBox__text .list > li span {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+}
+@media (min-width: 768px) {
+  .hero .mainKvBox__text .list > li span {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
 }
 .hero .mainKvBox__text .list > li:hover:after {
   opacity: 1;
@@ -1125,6 +1154,7 @@ main {
 }
 
 .section {
+  position: relative;
   /* ==================================================
   	互動測驗
   ================================================== */
@@ -2615,6 +2645,11 @@ main {
 }
 .versusTable__content {
   margin-top: 1.25rem;
+}
+@media (min-width: 320px) {
+  .versusTable__content {
+    padding: 0 0.8125rem;
+  }
 }
 @media (min-width: 768px) {
   .versusTable__content {

@@ -34,9 +34,8 @@ body {
 	}
 
 	.scrollArea {
-		position: relative;
 
-		.anchorOffset {
+		&.anchorOffset {
 			position: absolute;
 
 			@include rwd-min(320px) {
@@ -133,8 +132,17 @@ body {
 	.navbar-collapse {
 		margin-top: rem(20);
 
-		@include rwd-min(992px) {
+		@include rwd-min(320px) {
+
+			&.show {
+				height: calc(100vh - rem(64));
+				@include transition(all, 0.25s, ease);
+			}
+		}
+
+		@include rwd-min(991.98px) {
 			margin-top: 0;
+			height: auto;
 		}
 	}
 }
@@ -322,11 +330,11 @@ footer {
 				}
 			}
 
-			
+
 		}
 
 		&.socialList {
-			
+
 			@include rwd-min(320px) {
 				margin-bottom: rem(50);
 			}

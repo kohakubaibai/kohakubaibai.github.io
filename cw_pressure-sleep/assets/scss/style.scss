@@ -355,10 +355,29 @@ main {
 						top: 50%;
 						left: 50%;
 						z-index: 10;
+						display: block;
+						width: 100%;
 						color: $white;
+						text-align: center;
 						opacity: 0;
 						@include translate(-50%, -50%);
 						@include transition(all, .3s, ease-in);
+
+						@include rwd-min(320px) {
+							font-size: rem(11);
+							line-height: (18.7 / 11);
+							font-weight: 400;
+						}
+
+						@include rwd-min(375px) {
+							font-size: rem(14);
+							line-height: (23.8 / 14);
+							font-weight: 400;
+						}
+
+						@include rwd-min(768px) {
+							@include f-p;
+						}
 					}
 
 					&:hover {
@@ -377,6 +396,8 @@ main {
 }
 
 .section {
+	position: relative;
+
 	.section__title {
 		padding: rem(30.5) 0;
 		text-align: center;
@@ -1923,6 +1944,10 @@ main {
 
 	&__content {
 		margin-top: rem(20);
+
+		@include rwd-min(320px) {
+			padding: 0 rem(13);
+		}
 
 		@include rwd-min(768px) {
 			padding: 0 rem(33);
