@@ -217,7 +217,7 @@ $(function () {
 
 	function restartTest() {
         currentQuestion = 1;
-        
+
         $('input[type="radio"]').prop('checked', false);
         $('.quizBox').hide().removeClass('active');
         $('.stressForm__result').fadeOut(300, function() {
@@ -447,13 +447,13 @@ $(function () {
 });
 
 /************************** share start ******************************/
-	
+
 
 	function shareToFacebook(url, title) {
 		const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`;
-		window.open(shareUrl, 'facebook-share', 'width=580,height=296');
+		window.open(shareUrl, '_blank');
 	}
-	
+
 	function shareToLine(url, title) {
 		const text = `${title} ${url}`;
 		const shareUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
@@ -464,13 +464,13 @@ $(function () {
 		// Facebook share
 		document.querySelectorAll('.fb-share').forEach(link => {
 			link.addEventListener('click', function(e) {
-				e.preventDefault();			
+				e.preventDefault();
 				const url = window.location.href;
-				const title = document.title;	
+				const title = document.title;
 				shareToFacebook(url, title);
 			});
 		});
-		
+
 		// LINE share
 		document.querySelectorAll('.line-share').forEach(link => {
 			link.addEventListener('click', function(e) {
