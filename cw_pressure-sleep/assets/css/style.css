@@ -1762,7 +1762,18 @@ main {
   opacity: 1;
 }
 .section--information .section__content .chapter:nth-child(1) .slickList--merits .slick-dots {
-  bottom: -4.0625rem;
+  position: relative;
+  bottom: auto;
+}
+@media (min-width: 320px) {
+  .section--information .section__content .chapter:nth-child(1) .slickList--merits .slick-dots {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .section--information .section__content .chapter:nth-child(1) .slickList--merits .slick-dots {
+    margin-top: 45px;
+  }
 }
 .section--information .section__content .chapter:nth-child(1) .slickList--merits .slick-dots li {
   width: 0.9375rem;
@@ -3394,9 +3405,9 @@ main {
   display: inline-block;
   padding: 0.75rem 1.75rem;
   border-radius: 1.875rem;
-  font-size: 0.875rem;
-  line-height: 1.7142857143;
-  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 400;
   color: #fff;
   background-color: #2E6232;
 }

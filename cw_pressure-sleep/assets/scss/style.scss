@@ -1061,7 +1061,16 @@ main {
 						}
 
 						.slick-dots {
-							bottom: rem(-65);
+							position: relative;
+							bottom: auto;
+
+							@include rwd-min(320px) {
+								margin-top: 20px;
+							}
+
+							@include rwd-min(1024px) {
+								margin-top: 45px;
+							}
 
 							li {
 								width: rem(15);
@@ -2724,7 +2733,7 @@ main {
 						display: inline-block;
 						padding: rem(12) rem(28);
 						border-radius: rem(30);
-						@include f-h5-medium;
+						@include f-h4;
 						color: $white;
 						background-color: $secondary-dark;
 					}
