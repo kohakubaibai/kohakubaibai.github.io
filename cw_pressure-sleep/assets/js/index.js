@@ -315,10 +315,8 @@ $(function () {
 	window.addEventListener('resize', function() {
 		setTimeout(() => {
 			if (window.innerWidth < 768) {
-				// 小螢幕：清除高度同步，讓內容自然撐開
 				clearHeightSync();
 			} else {
-				// 大螢幕：重新同步高度
 				syncVisibleHeights();
 			}
 		}, 100);
@@ -328,7 +326,6 @@ $(function () {
 	/************************** merit slick start ******************************/
 	let slickInitialized = false;
 
-	// 初始化 Slick（延遲執行以確保 DOM 完全載入）
 	function initMeritSlick() {
 		if (!slickInitialized) {
 			$('.js-meritsSlick').slick({
@@ -401,7 +398,6 @@ $(function () {
 	/************************** article slick start ******************************/
 	var slickBasicSetting = {
 		dots: false,
-		//autoplay: true,
 		autoplaySpeed: 5000,
 		infinite: true,
 		prevArrow:
@@ -413,32 +409,40 @@ $(function () {
 	var slickArticleSetting = {
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		draggable: false,
 		responsive: [
 			{
-				breakpoint: 767,
-				settings: "unslick"
+				breakpoint: 768,
+				settings: {
+					fade: true,
+					slidesToShow: 1
+				}
 			},
 		],
 	};
 
 	function initSlick() {
 		var slickArticle = $(".js-articleSlick");
-
-		if ($(window).width() >= 768) {
-			if (!slickArticle.hasClass('slick-initialized')) {
-				slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
-			}
-		} else {
-			if (slickArticle.hasClass('slick-initialized')) {
-				slickArticle.slick('unslick');
-			}
+		
+		if (slickArticle.length === 0) {
+			return;
 		}
+		
+		if (slickArticle.hasClass('slick-initialized')) {
+			slickArticle.slick('unslick');
+		}
+		
+		slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
 	}
 
 	initSlick();
 
-	$(window).resize(function() {
-		initSlick();
+	var resizeTimer;
+	$(window).on('resize', function() {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function() {
+			initSlick();
+		}, 250);
 	});
 
 	/************************** slick end ******************************/

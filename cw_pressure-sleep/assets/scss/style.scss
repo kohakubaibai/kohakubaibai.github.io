@@ -1023,7 +1023,7 @@ main {
 							z-index: 1;
 
 							@include rwd-min(320px) {
-								margin-bottom: rem(10);
+								margin-bottom: rem(4);
 							}
 
 							@include rwd-min(1024px) {
@@ -1532,15 +1532,17 @@ main {
 	&--merit {
 		@include rwd-min(320px) {
 			justify-content: center;
+			margin: 0 rem(-10);
 		}
 
 		@include rwd-min(1024px) {
+			margin: 0;
 			justify-content: flex-start;
 		}
 
 		.nav-item {
 			@include rwd-min(320px) {
-				margin: 0 rem(10) rem(10);
+				margin: 0 rem(10) rem(16);
 			}
 
 			@include rwd-min(1024px) {
@@ -1558,12 +1560,12 @@ main {
 			@include transition(all, .3s, ease-in);
 
 			@include rwd-min(320px) {
-				width: rem(140);
+				width: rem(164);
 				padding: rem(7) 0;
 				border-radius: rem(20);
 			}
 
-			@include rwd-min(768px) {
+			@include rwd-min(1024px) {
 				width: auto;
 				padding: rem(12) rem(30);
 				height: rem(55);
@@ -1573,16 +1575,7 @@ main {
 			.tabBtn__text {
 				color: $secondary-dark;
 				@include transition(all, .3s, ease-in);
-
-				@include rwd-min(320px) {
-					font-size: rem(14);
-					font-weight: 400;
-					line-height: (24/14);
-				}
-
-				@include rwd-min(1024px) {
-					@include f-p;
-				}
+				@include f-p;
 			}
 
 			&.active {
@@ -1590,10 +1583,6 @@ main {
 
 				.tabBtn__text {
 					color: $white;
-
-					@include rwd-min(320px) {
-						@include f-h5;
-					}
 
 					@include rwd-min(1024px) {
 						@include f-h4-bold;
@@ -2867,8 +2856,6 @@ main {
 		cursor: pointer;
 		position: absolute;
 		top: 50%;
-		width: rem(80);
-		height: rem(80);
 		background-color: $white;
 		line-height:1;
 		opacity: 1;
@@ -2879,23 +2866,60 @@ main {
 		background-size: rem(18);
 		@include translateY(-50%);
 		@include transition(all, .3s, ease-in);
+
+		@include rwd-min(320px) {
+			box-shadow: 0 0 rem(10) rgba(0,0,0,.3);
+			width: rem(40);
+			height: rem(40);
+		}
+
+		@include rwd-min(768px) {
+			width: rem(80);
+			height: rem(80);
+		}
 	}
 
 	.btn-arrowL {
-		right: calc(100% + rem(20));
 		background-image: url('../images/arrow-prev.svg');
 
 		&:hover {
 			background-position-x: calc(50% - rem(5));
 		}
+
+		@include rwd-min(320px) {
+			right: calc(100% - rem(25));
+		}
+
+		@include rwd-min(768px) {
+			right: calc(100% + rem(20));
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				background-position-x: center;
+			}
+		}
 	}
 
 	.btn-arrowR {
-		left: calc(100% + rem(20));
 		background-image: url('../images/arrow-next.svg');
 
 		&:hover {
 			background-position-x: calc(50% + rem(5));
+		}
+
+		@include rwd-min(320px) {
+			left: calc(100% - rem(25));
+		}
+
+		@include rwd-min(768px) {
+			left: calc(100% + rem(20));
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				background-position-x: center;
+			}
 		}
 	}
 }
