@@ -873,12 +873,20 @@ h6 {
     content: "";
   }
   .cards .swiper-button-prev {
-    left: -3.5rem;
+    left: -2.875rem;
     background-image: url("../images/arrow_slide-prev.svg");
   }
   .cards .swiper-button-next {
-    right: -3.5rem;
+    right: -2.875rem;
     background-image: url("../images/arrow_slide-next.svg");
+  }
+}
+@media (min-width: 993px) {
+  .cards .swiper-button-prev {
+    left: -3.5rem;
+  }
+  .cards .swiper-button-next {
+    right: -3.5rem;
   }
 }
 
@@ -1286,6 +1294,16 @@ h6 {
   padding: 0;
 }
 @media (min-width: 561px) {
+  .section--event .section__content .container {
+    padding: 0 1.875rem;
+  }
+}
+@media (min-width: 993px) {
+  .section--event .section__content .container {
+    padding: 0 3.75rem;
+  }
+}
+@media (min-width: 1200px) {
   .section--event .section__content .container {
     padding: 0 5.625rem;
   }

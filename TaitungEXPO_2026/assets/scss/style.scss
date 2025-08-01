@@ -160,13 +160,23 @@ h6 {
 		}
 
 		.swiper-button-prev {
-			left: rem(-56);
+			left: rem(-46);
 			background-image: url('#{$path}/arrow_slide-prev.svg');
 		}
 
 		.swiper-button-next {
-			right: rem(-56);
+			right: rem(-46);
 			background-image: url('#{$path}/arrow_slide-next.svg');
+		}
+	}
+
+	@include rwd-min(993px) {
+		.swiper-button-prev {
+			left: rem(-56);
+		}
+
+		.swiper-button-next {
+			right: rem(-56);
 		}
 	}
 }
@@ -573,6 +583,14 @@ h6 {
 			padding: 0;
 
 			@include rwd-min(561px) {
+				padding: 0 rem(30);
+			}
+
+			@include rwd-min(993px) {
+				padding: 0 rem(60);
+			}
+
+			@include rwd-min(1200px) {
 				padding: 0 rem(90);
 			}
 		}
