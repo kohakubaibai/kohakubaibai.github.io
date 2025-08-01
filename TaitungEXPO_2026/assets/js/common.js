@@ -553,42 +553,42 @@ class LanguageSwitcher {
             intro.innerHTML = participationData.intro;
         }
 
-        // const highlightTitle = document.querySelectorAll('#participation .rule__title')[0];
-        // if (highlightTitle && participationData.highlightTitle) {
-        //     highlightTitle.innerHTML = participationData.highlightTitle;
-        // }
+        const highlightTitle = document.querySelectorAll('#participation .rule__title')[0];
+        if (highlightTitle && participationData.highlightTitle) {
+            highlightTitle.innerHTML = participationData.highlightTitle;
+        }
 
-        // const highlightItems = document.querySelectorAll('#participation .rule')[0]?.querySelectorAll('.f-section-h5');
-        // if (highlightItems && participationData.highlightItems) {
-        //     highlightItems.forEach((element, index) => {
-        //         if (participationData.highlightItems[index]) {
-        //             element.innerHTML = participationData.highlightItems[index];
-        //         }
-        //     });
-        // }
+        const highlightItems = document.querySelectorAll('#participation .rule')[0]?.querySelectorAll('.f-section-h5');
+        if (highlightItems && participationData.highlightItems) {
+            highlightItems.forEach((element, index) => {
+                if (participationData.highlightItems[index]) {
+                    element.innerHTML = participationData.highlightItems[index];
+                }
+            });
+        }
 
-        // const infoTitle = document.querySelectorAll('#participation .rule__title')[1];
-        // if (infoTitle && participationData.infoTitle) {
-        //     infoTitle.innerHTML = participationData.infoTitle;
-        // }
+        const infoTitle = document.querySelectorAll('#participation .rule__title')[1];
+        if (infoTitle && participationData.infoTitle) {
+            infoTitle.innerHTML = participationData.infoTitle;
+        }
 
-        // const infoItems = document.querySelectorAll('#participation .rule')[1]?.querySelectorAll('.f-section-h5');
-        // if (infoItems && participationData.infoItems) {
-        //     infoItems.forEach((element, index) => {
-        //         if (participationData.infoItems[index]) {
-        //             element.innerHTML = participationData.infoItems[index];
-        //         }
-        //     });
-        // }
+        const infoItems = document.querySelectorAll('#participation .rule')[1]?.querySelectorAll('.f-section-h5');
+        if (infoItems && participationData.infoItems) {
+            infoItems.forEach((element, index) => {
+                if (participationData.infoItems[index]) {
+                    element.innerHTML = participationData.infoItems[index];
+                }
+            });
+        }
 
-        // const actionItems = document.querySelectorAll('#participation .action .btn__text');
-        // if (actionItems && participationData.actionItems) {
-        //     actionItems.forEach((element, index) => {
-        //         if (participationData.actionItems[index]) {
-        //             element.innerHTML = participationData.actionItems[index];
-        //         }
-        //     });
-        // }
+        const actionItems = document.querySelectorAll('#participation .action .btn__text');
+        if (actionItems && participationData.actionItems) {
+            actionItems.forEach((element, index) => {
+                if (participationData.actionItems[index]) {
+                    element.innerHTML = participationData.actionItems[index];
+                }
+            });
+        }
     }
 
 	// 更新 authorization 文字

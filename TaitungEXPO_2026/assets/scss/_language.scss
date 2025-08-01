@@ -95,6 +95,16 @@ body {
                 &__title {
                     font-weight: 600;
                 }
+
+                &__list {
+                    &--li {
+                        & > li {
+                            &:before {
+                                top: rem(8);
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -249,6 +259,16 @@ body {
             .rule {
                 &__title {
                     font-weight: 500;
+                }
+
+                &__list {
+                    &--li {
+                        & > li {
+                            &:before {
+                                top: rem(8);
+                            }
+                        }
+                    }
                 }
             }
         }

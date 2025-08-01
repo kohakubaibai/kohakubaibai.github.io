@@ -1421,20 +1421,26 @@ h6 {
 		&__list {
 			@include list-reset;
 
-			& > li {
-				position: relative;
-				padding-left: rem(23);
+			&--p {
+				& > li {
+					position: relative;
+				}
+			}
+			&--li {
+				& > li {
+					position: relative;
+					padding-left: rem(23);
 
-				&:before {
-					content: '';
-					display: block;
-					width: rem(3);
-					height: rem(3);
-					background-color: $white;
-					border-radius: 50%;
-					position: absolute;
-					left: rem(10);
-					top: rem(12);
+					&:before {
+						content: '';
+						display: block;
+						width: rem(3);
+						height: rem(3);
+						background-color: $white;
+						border-radius: 50%;
+						position: absolute;
+						left: rem(10);
+					}
 				}
 			}
 
@@ -1574,20 +1580,26 @@ h6 {
 		&__list {
 			@include list-reset;
 
-			& > li {
-				position: relative;
-				padding-left: rem(23);
+			&--p {
+				& > li {
+					position: relative;
+				}
+			}
+			&--li {
+				& > li {
+					position: relative;
+					padding-left: rem(23);
 
-				&:before {
-					content: '';
-					display: block;
-					width: rem(3);
-					height: rem(3);
-					background-color: $white;
-					border-radius: 50%;
-					position: absolute;
-					left: rem(10);
-					top: rem(12);
+					&:before {
+						content: '';
+						display: block;
+						width: rem(3);
+						height: rem(3);
+						background-color: $white;
+						border-radius: 50%;
+						position: absolute;
+						left: rem(10);
+					}
 				}
 			}
 
@@ -1595,6 +1607,7 @@ h6 {
 				color: $white;
 			}
 		}
+
 	}
 
 	.action {

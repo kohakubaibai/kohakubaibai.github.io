@@ -2112,11 +2112,14 @@ h6 {
   padding: 0;
   list-style: none;
 }
-.section--participation .rule__list > li {
+.section--participation .rule__list--p > li {
+  position: relative;
+}
+.section--participation .rule__list--li > li {
   position: relative;
   padding-left: 1.4375rem;
 }
-.section--participation .rule__list > li:before {
+.section--participation .rule__list--li > li:before {
   content: "";
   display: block;
   width: 0.1875rem;
@@ -2125,7 +2128,6 @@ h6 {
   border-radius: 50%;
   position: absolute;
   left: 0.625rem;
-  top: 0.75rem;
 }
 .section--participation .rule__list a {
   color: #fff;
@@ -2261,11 +2263,14 @@ h6 {
   padding: 0;
   list-style: none;
 }
-.section--authorization .rule__list > li {
+.section--authorization .rule__list--p > li {
+  position: relative;
+}
+.section--authorization .rule__list--li > li {
   position: relative;
   padding-left: 1.4375rem;
 }
-.section--authorization .rule__list > li:before {
+.section--authorization .rule__list--li > li:before {
   content: "";
   display: block;
   width: 0.1875rem;
@@ -2274,7 +2279,6 @@ h6 {
   border-radius: 50%;
   position: absolute;
   left: 0.625rem;
-  top: 0.75rem;
 }
 .section--authorization .rule__list a {
   color: #fff;
@@ -2486,6 +2490,10 @@ body.lang--en .section--participation .rule__title,
 body.lang--en .section--authorization .rule__title {
   font-weight: 600;
 }
+body.lang--en .section--participation .rule__list--li > li:before,
+body.lang--en .section--authorization .rule__list--li > li:before {
+  top: 0.5rem;
+}
 body.lang--en .f-section-title {
   font-family: "Unbounded", sans-serif;
   font-size: 1.75rem;
@@ -2590,6 +2598,10 @@ body.lang--zh .section--preview .featuresList > li .featureText--back a {
 body.lang--zh .section--participation .rule__title,
 body.lang--zh .section--authorization .rule__title {
   font-weight: 500;
+}
+body.lang--zh .section--participation .rule__list--li > li:before,
+body.lang--zh .section--authorization .rule__list--li > li:before {
+  top: 0.5rem;
 }
 body.lang--zh .f-section-title {
   font-size: 1.5625rem;

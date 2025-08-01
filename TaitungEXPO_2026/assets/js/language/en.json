@@ -36,6 +36,22 @@
         "title": "Latest News",
         "newsData": [
             {
+                "imgSrc": "assets/images/news/N6.jpg",
+                "imgAlt": "2026 Taitung Expo “Community Participation Plan” Open Space Technology (OST) Meetings Now Open for Registration —Envision the Future of Taitung Together! ",
+                "date": "2025.7.22",
+                "title": "2026 Taitung Expo “Community Participation Plan” Open Space Technology (OST) Meetings Now Open for Registration —Envision the Future of Taitung Together! ",
+                "desc": "The 2026 Taitung Expo “Community Participation Plan” Open Space Technology (OST) Meetings will be held on August 16, 17, 25, and 26. The public is invited to take part in this unconventional dialogue format to co-create an action blueprint and envision the future of Taitung together!",
+                "url": "https://culture.taitung.gov.tw/activity/2026%E8%87%BA%E6%9D%B1%E5%8D%9A%E8%A6%BD%E6%9C%83-%E6%B0%91%E9%96%93%E5%8F%83%E8%88%87%E8%A8%88%E7%95%AB%E9%96%8B%E6%94%BE%E7%A9%BA%E9%96%93%E6%9C%83%E8%AD%B0-ost"
+            },
+            {
+                "imgSrc": "assets/images/news/N5.png",
+                "imgAlt": "“Taitung Expo 2026” Illuminates the Summer Night During Dazzling Balloon and Drone Glow Show!",
+                "date": "2025.7.17",
+                "title": "“Taitung Expo 2026” Illuminates the Summer Night During Dazzling Balloon and Drone Glow Show!",
+                "desc": "In the special opening Night Glow Concert for the 2025 Taiwan International Balloon Festival, the words “TAITUNG EXPO 2026” lit up the night sky at Luye Highland, joined by 13 hot air balloons, drones and fireworks for a stunning summer spectacle.",
+                "url": "https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=140770"
+            },
+            {
                 "imgSrc": "assets/images/news/img-250629.png",
                 "imgAlt": "Built on Respect: Taitung County Government and Katratripulr Tribal Village Collaborate on Land Revitalization",
                 "date": "2025.6.29",
@@ -81,43 +97,11 @@
                 "url": "https://www.facebook.com/Taitungartsfestival/?locale=zh_TW"
             },
             {
-                "imgSrc": "assets/images/event/img_event-2.png",
-                "imgAlt": "[TECLandArts Festival] Moonlit Sea Film Festival",
-                "date": "2025.06.02 - 08.10",
-                "title": "[TECLandArts Festival] Moonlit Sea Film Festival",
-                "location": "Taitung Art Museum / Torik Visitor Center",
-                "url": "https://www.facebook.com/TECLandArtsFestival"
-            },
-            {
-                "imgSrc": "assets/images/event/img_event-3.png",
-                "imgAlt": "Taitung Light Festival",
-                "date": "2025.06.13 - 07.27",
-                "title": "Taitung Light Festival",
-                "location": "Zhiben Hot Spring, Beinan Township",
-                "url": "https://www.facebook.com/TaitungLightFestival/?locale=zh_TW"
-            },
-            {
                 "imgSrc": "assets/images/event/img_event-4.png",
                 "imgAlt": "[STARRY TAITUNG] Night Concert Series",
                 "date": "2025.06.14 - 08.30",
                 "title": "[STARRY TAITUNG] Night Concert Series",
                 "location": "Taitung County (See website for details)",
-                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
-            },
-            {
-                "imgSrc": "assets/images/event/img_event-5.png",
-                "imgAlt": "[STARRY TAITUNG] Experience Series",
-                "date": "2025.06.17 - 08.05",
-                "title": "[STARRY TAITUNG] Experience Series",
-                "location": "Taitung County (See website for details)",
-                "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
-            },
-            {
-                "imgSrc": "assets/images/event/img_event-6.png",
-                "imgAlt": "[STARRY TAITUNG] Guided Stargazing and Live Music Series",
-                "date": "2025.06.21 - 08.09",
-                "title": "[STARRY TAITUNG] Guided Stargazing and Live Music Series",
-                "location": "Changbin Township (See website for details)",
                 "url": "https://www.facebook.com/StarryTaitung/?locale=zh_TW"
             },
             {
@@ -153,6 +137,14 @@
                 "url": "https://www.facebook.com/EastRiftValleyGranaryFestivities/"
             },
             {
+                "imgSrc": "assets/images/event/img_event-19.jpg",
+                "imgAlt": "South Link Arts Festival",
+                "date": "2025.07.01 -",
+                "title": "South Link Arts Festival",
+                "location": "South Link Highway (See website for details)",
+                "url": "https://www.facebook.com/NanhuiArtProject/?locale=zh_TW"
+            },
+            {
                 "imgSrc": "assets/images/event/img_event-11.png",
                 "imgAlt": "Taiwan International Balloon Festival",
                 "date": "2025.07.05 - 08.21",
@@ -161,12 +153,12 @@
                 "url": "https://balloontaiwan.taitung.gov.tw/zh-tw"
             },
             {
-                "imgSrc": "assets/images/event/img_event-12.png",
-                "imgAlt": "[Taitung Spirit Festival] Celebrity Healing Salon",
-                "date": "2025.07.25 - 07.27",
-                "title": "[Taitung Spirit Festival] Celebrity Healing Salon",
-                "location": "National Museum of Prehistory",
-                "url": "https://www.facebook.com/TaitungSpiritFestival/"
+                "imgSrc": "assets/images/event/img_event-20.jpg",
+                "imgAlt": "[2026 Taitung Expo Community Participation Plan]  Open Space Technology Meetings",
+                "date": "2025.08.16 - 08.26",
+                "title": "[2026 Taitung Expo Community Participation Plan]  Open Space Technology Meetings",
+                "location": "Baosang Junior High School Activity Center/ Guanshan Township Farmers' Association (Rice County School)...",
+                "url": "https://forms.gle/MsARv9eAtz9awRG3A"
             },
             {
                 "imgSrc": "assets/images/event/img_event-13.png",
@@ -175,6 +167,14 @@
                 "title": "[Taitung Spirit Festival] Healing Salon for Caregivers and Helpers",
                 "location": "Taitung St. Mary’s Health Farm",
                 "url": "https://www.facebook.com/TaitungSpiritFestival/"
+            },
+            {
+                "imgSrc": "assets/images/event/img_event-21.jpg",
+                "imgAlt": "[Slow Food Taitung] Forage to Table: Feast in the Forest",
+                "date": "2025.10.04 - 10.05",
+                "title": "[Slow Food Taitung] Forage to Table: Feast in the Forest",
+                "location": "Zhiben Forest Recreation Area",
+                "url": "https://slowfoodtaitung.tw/"
             },
             {
                 "imgSrc": "assets/images/event/img_event-14.png",
@@ -323,22 +323,19 @@
     "participation": {
         "title": "Community Participation Plan",
         "intro": "The Taitung County Government is launching the \"2026 Taitung Expo Community Participation Plan,\" inviting community and private organizations to co-create a future vision for Taitung through their imagination and interpretations at the Expo.<br>This initiative will follow the Expo's overall implementation framework and echo the United Nations' 17 Sustainable Development Goals (SDGs), seeking forward-thinking and diverse curatorial concepts, through a public call for proposals. At least 12 projects will be selected. Harnessing the curatorial energy of the local community, the program aims to collectively shape a sustainable and vibrant future for Taitung — and to share its creative spirit with the world.",
-        "highlightTitle": "EN亮點預告",
+        "highlightTitle": "2026 Taitung Expo Community Participation Plan—OST (Open Space Technology",
         "highlightItems": [
-            "EN申請時間：",
-            "EN線上報名表單",
-            "EN紙本及電子資料寄送地址："
+            "Before 2026 Taitung Expo Community Participation Plan, we will hold an OST (Open Space Technology) to discuss in a different way than before, Invite the public to participate and jointly create action blueprint and future imagination of Taitung!"
         ],
-        "infoTitle": "EN說明會資訊",
+        "infoTitle": "Activity time",
         "infoItems": [
-            "EN時間：",
-            "EN地點：",
-            "EN報名表單："
+            "Session 1｜August 16, 2025 (Saturday) 9:00–18:30",
+            "Session 2｜August 17, 2025 (Sunday) 9:00–17:30",
+            "Session 3｜August 25, 2025 (Monday) 9:00–17:30",
+            "Session 4｜August 26, 2025 (Tuesday) 9:00–17:30"
         ],
         "actionItems": [
-            "Guidelines",
-            "-",
-            "-"
+            "Register for the OST"
         ]
     },
     "authorization": {
