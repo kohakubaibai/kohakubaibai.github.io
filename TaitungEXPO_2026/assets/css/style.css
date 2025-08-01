@@ -2601,7 +2601,7 @@ body.lang--zh .section--authorization .rule__title {
 }
 body.lang--zh .section--participation .rule__list--li > li:before,
 body.lang--zh .section--authorization .rule__list--li > li:before {
-  top: 0.5rem;
+  top: 0.75rem;
 }
 body.lang--zh .f-section-title {
   font-size: 1.5625rem;
