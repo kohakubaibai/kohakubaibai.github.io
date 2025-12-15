@@ -1,0 +1,11 @@
+
+.btn {
+    padding: 0;
+	border-radius: 0;
+	border: none;
+    @include transition(all, .3s, ease-in);
+
+    .btn__text {
+        @include transition(all, .3s, ease-in);
+    }
+}

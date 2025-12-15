@@ -1,0 +1,415 @@
+$path: '../images';
+
+
+/* ==================================================
+   BS內建
+================================================== */
+
+*,
+*:before,
+*:after{
+	box-sizing:border-box;
+}
+
+body {
+	font-family: "Noto Sans TC",-apple-system, Segoe UI, Roboto, "微軟正黑體", "Helvetica Neue", Arial, sans-serif; /*無襯線字體sans-serif*/
+	font-weight: bold;
+	margin: 0 auto;
+	background-color: $primary-light;
+	color: $dark;
+	padding-top: rem(82);
+
+	@include rwd-min(320px) {
+		padding-top: rem(64);
+	}
+
+	@include rwd-min(768px) {
+		padding-top: rem(82);
+	}
+
+	&.openNav {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.scrollArea {
+
+		&.anchorOffset {
+			position: absolute;
+
+			@include rwd-min(320px) {
+				top: rem(-64);
+			}
+
+			@include rwd-min(768px) {
+				top: rem(-82);
+			}
+		}
+	}
+}
+
+/* ==================================================
+   header
+================================================== */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: $white;
+
+	@include rwd-min(320px) {
+		padding: rem(12) rem(20);
+	}
+
+	@include rwd-min(768px) {
+		padding: rem(16) rem(30);
+	}
+
+	.container-fluid {
+		padding: 0;
+	}
+
+	.nav-link {
+		@include f-p;
+		display: block;
+		color: $dark;
+		text-decoration: none;
+
+		&.is-active {
+			color: $primary-dark;
+		}
+	}
+
+	.navbar-brand {
+		padding: 0;
+
+		img {
+			width: auto;
+
+			@include rwd-min(320px) {
+				height: rem(30);
+			}
+
+			@include rwd-min(390px) {
+				height: rem(40);
+			}
+
+			@include rwd-min(768px) {
+				height: rem(50);
+			}
+		}
+	}
+
+	&-expand-lg {
+		.navbar-nav {
+
+			.nav-item {
+				margin-top: rem(20);
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				@include rwd-min(992px) {
+					margin-top: 0;
+					margin-left: rem(30);
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+
+			.nav-link {
+				padding: 0;
+			}
+		}
+	}
+
+	.navbar-collapse {
+		margin-top: rem(20);
+
+		@include rwd-min(320px) {
+
+			&.show {
+				@include transition(opacity, 0.25s, ease);
+			}
+		}
+
+		@include rwd-min(991.98px) {
+			margin-top: 0;
+			height: auto;
+		}
+	}
+}
+
+/* ==================================================
+   漢堡按鈕-旋轉X
+================================================== */
+.navbar-toggler {
+	padding: 0;
+	border-radius: 0;
+	background-color: none;
+	border: none;
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+/*Hamburger Menu to X css*/
+.navbarX {
+	width: rem(40);
+	height: rem(40);
+	background-color: transparent !important;
+	position: relative;
+	float: right;
+	margin-right: 0;
+	cursor: pointer;
+
+	@include rwd-min(1025px) {
+		display: none;
+	}
+
+	i {
+		display: block;
+		background: #222222;
+		border-radius: rem(3);
+		width: rem(37);
+		height: rem(3);
+
+		&:nth-child(1) {
+			animation: outT 0.8s backwards;  /*若要取消進場動畫*/
+			animation-direction: reverse;
+		}
+
+		&:nth-child(2) {
+			margin: rem(5) 0;
+			animation: outM 0.8s backwards;  /*若要取消進場動畫*/
+			animation-direction: reverse;
+		}
+
+		&:nth-child(3) {
+			animation: outBtm 0.8s backwards; /*若要取消進場動畫*/
+			animation-direction: reverse;
+		}
+	}
+
+	&.active {
+		i {
+			&:nth-child(1) {
+				animation: inT 0.8s forwards;
+			}
+
+			&:nth-child(2) {
+				animation: inM 0.8s forwards;
+			}
+
+			&:nth-child(3) {
+				animation: inBtm 0.8s forwards;
+			}
+		}
+	}
+}
+
+@keyframes inM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes outM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+
+@keyframes inT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(7px) rotate(135deg);/*微上調2px*/
+	}
+}
+
+@keyframes outT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(7px) rotate(135deg);
+	}
+}
+
+@keyframes inBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@keyframes outBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+/* ==================================================
+   footer 康健規範-白底黑字款
+================================================== */
+
+footer {
+	background-color: $white;
+    width: 100%;
+	padding: rem(30) rem(20) rem(15);
+
+	a {
+		transition: .3s;
+		color: $secondary-dark;
+		text-decoration: none;
+	}
+
+	ul {
+		list-style-type: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+
+		li {
+			border-right: rem(1) solid $secondary-dark;
+			padding-right: rem(10);
+			margin: 0 rem(10) rem(10) 0;
+
+			&:last-child {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			a {
+				@include f-h5;
+				color: $secondary-dark;
+
+
+				&:hover {
+					opacity: 0.65;
+				}
+			}
+
+
+		}
+
+		&.socialList {
+
+			@include rwd-min(320px) {
+				margin-bottom: rem(50);
+			}
+
+			@include rwd-min(768px) {
+				margin-bottom: rem(40);
+			}
+
+			li {
+				border-right: none;
+				padding: 0;
+				margin-right: rem(30);
+				margin-bottom: 0;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	p {
+		@include f-h5;
+		color: $secondary-dark;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	@include rwd-max(768px) {
+		ul {
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+
+			li {
+				padding: 0 5px 0 0;
+				margin: 0 5px 10px 0;
+			}
+		}
+
+	}
+}
+
+.btn-more {
+	position: fixed;
+	bottom: 2em;
+	right: 15px;
+	z-index: 9;
+	opacity: 1;
+	border-radius: 50%;
+	box-shadow: 0 0 rem(20) rgba(0,0,0,.15);
+	opacity: 0;
+	animation: loop 2.5s ease-out infinite;
+	@include transition(opacity, .3s, ease-in);
+
+	@include rwd-min(320px) {
+		width: rem(120);
+		height: rem(120)
+	}
+
+	@include rwd-min(768px) {
+		width: rem(150);
+		height: rem(150);
+	}
+
+	img {
+		height: auto;
+		width: 100%;
+		transition: all 0.5s;
+	}
+
+	&.is-active {
+		opacity: 1;
+	}
+}
