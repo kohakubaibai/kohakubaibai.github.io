@@ -1665,7 +1665,6 @@ body {
 /******************* timeline start ******************/
 .timeline-container {
   position: relative;
-  min-height: 500vh;
   padding: 0;
 }
 
@@ -1765,57 +1764,56 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.progress-bar-container {
-  position: absolute;
-  left: 0;
-  top: 10%;
-  width: 6px;
-  height: 80%;
-  background: rgba(216, 74, 107, 0.2);
-  border-radius: 10px;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2rem 2rem 2rem 3rem;
   overflow: hidden;
+  gap: 3rem;
 }
 
-.progress-bar {
+.cards-container {
+  position: relative;
   width: 100%;
-  height: 0%;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--secondary-color)), to(var(--primary-color)));
-  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
-  border-radius: 10px;
-  -webkit-transition: height 0.1s ease-out;
-  transition: height 0.1s ease-out;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+  will-change: transform;
 }
 
 .info-card {
-  position: absolute;
-  left: 3rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  position: relative;
+  left: 0;
+  top: auto;
+  -webkit-transform: none;
+          transform: none;
   background: white;
   border-radius: 25px;
   padding: 3rem;
   -webkit-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
           box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 4rem);
-  opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 100%;
+  opacity: 1;
+  margin-bottom: 2rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.info-card:last-child {
+  margin-bottom: 0;
 }
 
 .info-card.active {
   opacity: 1;
-  -webkit-transform: translateY(-50%) translateX(0);
-          transform: translateY(-50%) translateX(0);
+  -webkit-box-shadow: 0 25px 70px rgba(216, 74, 107, 0.25);
+          box-shadow: 0 25px 70px rgba(216, 74, 107, 0.25);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .day-badge {
@@ -1939,6 +1937,109 @@ body {
   line-height: 1.7;
 }
 
+.progress-sidebar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-width: 120px;
+  padding-top: 2rem;
+}
+
+.progress-track {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: rgba(216, 74, 107, 0.2);
+  border-radius: 10px;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--secondary-color)), to(var(--primary-color)));
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  border-radius: 10px;
+  -webkit-transition: height 0.1s linear;
+  transition: height 0.1s linear;
+}
+
+.progress-markers {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.progress-marker {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.8rem;
+  height: 0;
+}
+
+.marker-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.marker-label.active {
+  color: var(--primary-color);
+  font-weight: 700;
+  opacity: 1;
+  font-size: 1.1rem;
+}
+
+.marker-dot {
+  width: 12px;
+  height: 2px;
+  background: rgba(216, 74, 107, 0.3);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.marker-dot.active {
+  background: rgb(216, 74, 107);
+}
+
 @media (max-width: 968px) {
   .timeline-visual {
     -ms-grid-columns: 1fr;
@@ -1970,20 +2071,17 @@ body {
     width: 100%;
     -ms-grid-row: 2;
     grid-row: 2;
+    padding: 1rem 1.5rem;
   }
   .info-card {
-    left: 2rem;
-    width: calc(100% - 5rem);
     padding: 2rem;
+    margin-bottom: 1.5rem;
   }
   .info-card h3 {
     font-size: 1.5rem;
   }
   .info-card p {
     font-size: 0.95rem;
-  }
-  .progress-bar-container {
-    left: 0.5rem;
   }
   .summary-grid {
     -ms-grid-columns: 1fr;
@@ -1995,10 +2093,12 @@ body {
     -ms-grid-rows: 45% 55%;
     grid-template-rows: 45% 55%;
   }
+  .text-section {
+    padding: 0.5rem 1rem;
+  }
   .info-card {
-    left: 1rem;
-    width: calc(100% - 3rem);
     padding: 1.5rem;
+    margin-bottom: 1rem;
   }
   .info-card h3 {
     font-size: 1.3rem;
