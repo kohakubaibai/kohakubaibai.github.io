@@ -1,4 +1,10 @@
 $(function () {
+	new WOW().init();
+
+	$(document).scroll(function () {
+		var $nav = $("#mainNavbar");
+		$nav.toggleClass("is-scrolled", $(this).scrollTop() > $nav.height());
+	});
 	var navbarX=$(".navbarX");
 	navbarX.click(function(){
 		console.log('click')
@@ -41,14 +47,20 @@ $(function () {
 				updateNav("#" + id, false);
 			})
 			.on("leave", function (e) {
-				if (i > 0 && e.scrollDirection == "REVERSE") {
-					updateNav(
-						"#" +
-						scrollAreaIdArr[
-						scrollAreaIdArr.findIndex((el) => el == scrollAreaActive) - 1
-						],
-						false
-					);
+				if (e.scrollDirection == "REVERSE") {
+					if (i > 0) {
+						updateNav(
+							"#" +
+							scrollAreaIdArr[
+							scrollAreaIdArr.findIndex((el) => el == scrollAreaActive) - 1
+							],
+							false
+						);
+					} else {
+						navLink.removeClass("is-active");
+						history.replaceState({ href: "" }, "", window.location.pathname);
+						scrollAreaActive = "";
+					}
 				}
 			})
 			.addTo(controller);
@@ -111,5 +123,4 @@ $(function () {
 
 	/************************** slick end ******************************/
 
-	new WOW().init();
 });
