@@ -7,7 +7,6 @@ $(function () {
 	});
 	var navbarX=$(".navbarX");
 	navbarX.click(function(){
-		console.log('click')
 		navbarX.toggleClass('active');
 		$('body').toggleClass('openNav');
     });
@@ -15,6 +14,14 @@ $(function () {
 	$(".navbar .nav-link").click(function(){
 		navbarX.is(".active") && navbarX.trigger("click");
 	});
+
+	/************************** collapse start ******************************/
+	$('[data-collapse="switch"]').on('click', function(){
+		var $group = $(this).closest('[data-collapse="group"]');
+		$group.toggleClass('is-active');
+		$group.find('[data-collapse="content"]').fadeToggle();
+	});
+	/************************** collapse end ******************************/
 
 	/************************** ScrollMagic start ******************************/
 	var hash = location.hash;

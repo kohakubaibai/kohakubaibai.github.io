@@ -64,7 +64,7 @@ body {
 		padding: rem(12) rem(20);
 	}
 
-	@include rwd-min(768px) {
+	@include rwd-min(991.98px) {
 		padding: rem(18) rem(0);
 	}
 
