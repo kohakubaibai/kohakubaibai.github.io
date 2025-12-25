@@ -9,10 +9,10 @@ const progressMarkers = document.querySelectorAll('.progress-marker');
 function calculateTotalHeight() {
     let totalHeight = 0;
     infoCards.forEach(card => {
-        totalHeight += card.offsetHeight + 32; // 32 = 2rem margin-bottom
+        totalHeight += card.offsetHeight;
     });
     // 添加額外的空間讓最後一個卡片也能滾動到視口中央
-    totalHeight += window.innerHeight;
+    // totalHeight += window.innerHeight;
     return totalHeight;
 }
 
@@ -32,10 +32,10 @@ function updateTimeline() {
     // 計算cards-container應該向上移動的距離
     let totalCardHeight = 0;
     infoCards.forEach(card => {
-        totalCardHeight += card.offsetHeight + 32;
+        totalCardHeight += card.offsetHeight;
     });
 
-    const maxScroll = totalCardHeight - windowHeight / 2;
+    const maxScroll = totalCardHeight;
     const translateY = -scrollProgress * maxScroll;
 
     // 移動cards-container

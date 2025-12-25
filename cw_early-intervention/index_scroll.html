@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="assets/css/slick.css" />
 	<link rel="stylesheet" href="assets/css/slick-theme.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/timeline-card.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/timeline-scroll.css">
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -90,7 +90,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="mainContent" class="mainContent">
+		<section class="mainContent">
 			<!--前言-->
 			<section class="section section--about">
 				<div id="about" class="anchorOffset scrollArea"></div>
@@ -151,7 +151,7 @@
 										</div>
 										<div class="keyBox__content" data-collapse="content">
 											<p>幼兒最好的學習場域是家庭，3 歲以前是孩童語言快速發展的黃金期，即「詞彙爆發期」，孩子開始懂得大量詞彙，並能說單詞表達，進步到能夠語句對答，而家庭是最自然，且能經常練習說話的地方。</p>
-											<div class="customShake3"><img src="assets/images/deco-misperception-2.png" class="image" alt="家庭是孩子最重要的療育場所"></div>
+											<div class="customShake2"><img src="assets/images/deco-misperception-2.png" class="image" alt="家庭是孩子最重要的療育場所"></div>
 										</div>
 									</div>
 								</div>
@@ -268,7 +268,7 @@
 
 									<!-- 右側文字區域 -->
 									<div class="text-section">
-										<div class="cards-wrapper">
+										<div class="cards-container">
 											<!-- 4個月  -->
 											<div class="info-card" data-process="1">
 												<h3>4個月</h3>
@@ -589,7 +589,33 @@
 	<script src="assets/js/scrollTrigger.js"></script>
 	<script src="assets/js/wow.js"></script>
 	<script src="assets/js/index.js"></script>
-	<script src="assets/js/timeline.js"></script>
+	<script src="assets/js/timeline_scroll.js"></script>
+	<script type="text/javascript">
+		function curation_scroll() {
+			var progressToSend = [25, 50, 75, 100];
+			var onScroll = function () {
+				var pageHeight = document.body.clientHeight - window.innerHeight;
+				var scrollProgress = (window.scrollY / pageHeight) * 100;
+				progressToSend.map(function (progress) {
+					if (scrollProgress >= progress) {
+						var eventData = {
+							'curation_title': '陪0-3歲孩子一起成長，家庭療育入門寶典',
+							'project_name': '2026earlyintervention',
+							'curation_url': 'https://event.commonhealth.com.tw/2026earlyintervention/index.html',
+							'scroll_percentage': progressToSend.shift() + '%',
+						};
+						console.log('eventData', eventData);
+						dataLayer.push(eventData);
+						return;
+					}
+				});
+				if (!progressToSend.length) {
+					document.removeEventListener('scroll', onScroll);
+				}
+			}
+			document.addEventListener('scroll', onScroll);
+		}
+	</script>
 </body>
 
 </html>
