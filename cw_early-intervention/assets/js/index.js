@@ -1,29 +1,58 @@
 $(function () {
+	// ==================== WOW ====================
 	new WOW().init();
 
+	// ==================== Navbar Scroll Effect ====================
 	$(document).scroll(function () {
 		var $nav = $("#mainNavbar");
 		$nav.toggleClass("is-scrolled", $(this).scrollTop() > $nav.height());
 	});
-	var navbarX=$(".navbarX");
-	navbarX.click(function(){
+
+	// ==================== Mobile Navbar Toggle ====================
+	var navbarX = $(".navbarX");
+	navbarX.click(function () {
 		navbarX.toggleClass('active');
 		$('body').toggleClass('openNav');
-    });
+	});
 
-	$(".navbar .nav-link").click(function(){
+	$(".navbar .nav-link").click(function () {
 		navbarX.is(".active") && navbarX.trigger("click");
 	});
 
-	/************************** collapse start ******************************/
-	$('[data-collapse="switch"]').on('click', function(){
-		var $group = $(this).closest('[data-collapse="group"]');
-		$group.toggleClass('is-active');
-		$group.find('[data-collapse="content"]').fadeToggle();
-	});
-	/************************** collapse end ******************************/
+	// ==================== Collapse Accordion (RWD) ====================
+	var COLLAPSE_BREAKPOINT = 991.98;
 
-	/************************** ScrollMagic start ******************************/
+	function isCollapseEnabled() {
+		return $(window).width() < COLLAPSE_BREAKPOINT;
+	}
+
+	function initCollapse() {
+		var $collapseGroups = $('[data-collapse="group"]');
+
+		if (isCollapseEnabled()) {
+			$('[data-collapse="switch"]').off('click.collapse').on('click.collapse', function () {
+				var $group = $(this).closest('[data-collapse="group"]');
+				$group.toggleClass('is-active');
+				$group.find('[data-collapse="content"]').fadeToggle();
+			});
+		} else {
+			$('[data-collapse="switch"]').off('click.collapse');
+			$collapseGroups.removeClass('is-active');
+			$collapseGroups.find('[data-collapse="content"]').show();
+		}
+	}
+
+	initCollapse();
+
+	var collapseResizeTimer;
+	$(window).on('resize', function () {
+		clearTimeout(collapseResizeTimer);
+		collapseResizeTimer = setTimeout(function () {
+			initCollapse();
+		}, 250);
+	});
+
+	// ==================== ScrollMagic Navigation ====================
 	var hash = location.hash;
 	var navLink = $(".navbar .nav-link");
 	var controller = new ScrollMagic.Controller();
@@ -47,6 +76,7 @@ $(function () {
 		var area = $(this);
 		var id = area.attr("id");
 		scrollAreaIdArr.push(id);
+
 		var scene = new ScrollMagic.Scene({
 			triggerElement: area.get(0),
 		})
@@ -57,10 +87,7 @@ $(function () {
 				if (e.scrollDirection == "REVERSE") {
 					if (i > 0) {
 						updateNav(
-							"#" +
-							scrollAreaIdArr[
-							scrollAreaIdArr.findIndex((el) => el == scrollAreaActive) - 1
-							],
+							"#" + scrollAreaIdArr[scrollAreaIdArr.findIndex((el) => el == scrollAreaActive) - 1],
 							false
 						);
 					} else {
@@ -76,17 +103,14 @@ $(function () {
 	setTimeout(function () {
 		hash && navLink.filter("[href$='" + hash + "']").trigger("click");
 	}, 100);
-	/************************** ScrollMagic end ******************************/
 
-	/************************** article slick start ******************************/
+	// ==================== Article Slick Carousel ====================
 	var slickBasicSetting = {
 		dots: false,
 		autoplaySpeed: 5000,
 		infinite: true,
-		prevArrow:
-			'<div class="btn-arrowL effect-moveL"></div>',
-		nextArrow:
-			'<div class="btn-arrowR effect-moveR"></div>',
+		prevArrow: '<div class="btn-arrowL effect-moveL"></div>',
+		nextArrow: '<div class="btn-arrowR effect-moveR"></div>',
 	};
 
 	var slickArticleSetting = {
@@ -100,8 +124,6 @@ $(function () {
 		infinite: true,
 		speed: 800,
 		cssEase: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-		prevArrow: '<button type="button" class="slick-prev"></button>',
-		nextArrow: '<button type="button" class="slick-next"></button>',
 		pauseOnHover: true,
 		responsive: [
 			{
@@ -115,17 +137,17 @@ $(function () {
 	};
 
 	var initialDownState = [];
-	
+
 	function saveInitialState() {
 		if (initialDownState.length === 0) {
-			$('.js-articleSlick .slickList__item').each(function(index) {
+			$('.js-articleSlick .slickList__item').each(function (index) {
 				initialDownState.push($(this).hasClass('is-down'));
 			});
 		}
 	}
-	
+
 	function restoreInitialState() {
-		$('.js-articleSlick .slickList__item').each(function(index) {
+		$('.js-articleSlick .slickList__item').each(function (index) {
 			if (initialDownState[index]) {
 				$(this).addClass('is-down');
 			} else {
@@ -142,7 +164,7 @@ $(function () {
 		}
 
 		saveInitialState();
-		
+
 		if (slickArticle.hasClass('slick-initialized')) {
 			restoreInitialState();
 			slickArticle.slick('unslick');
@@ -150,22 +172,21 @@ $(function () {
 
 		slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
 
-		slickArticle.off('beforeChange.customToggle').on('beforeChange.customToggle', function(event, slick, currentSlide, nextSlide) {
-			$('.js-articleSlick .slickList__item').each(function() {
+		slickArticle.off('beforeChange.customToggle').on('beforeChange.customToggle', function (event, slick, currentSlide, nextSlide) {
+			$('.js-articleSlick .slickList__item').each(function () {
 				$(this).toggleClass('is-down');
 			});
 		});
 	}
-	
+
 	initSlick();
-	
-	var resizeTimer;
-	$(window).on('resize', function() {
-		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function() {
+
+	var slickResizeTimer;
+	$(window).on('resize', function () {
+		clearTimeout(slickResizeTimer);
+		slickResizeTimer = setTimeout(function () {
 			initSlick();
 		}, 250);
 	});
-	/************************** slick end ******************************/
 
 });

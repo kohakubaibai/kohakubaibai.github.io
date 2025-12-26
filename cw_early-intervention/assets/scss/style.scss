@@ -773,6 +773,8 @@ main {
 		}
 
 		.further {
+			display: block;
+
 			&__title {
 				display: inline-block;
 				background-color: #6D3526;
@@ -1017,10 +1019,16 @@ main {
 
 	&--article {
 		background-color: #FFFFFF;
+		padding-top: rem(100);
 		padding-bottom: rem(20);
 
 		.section__title {
+			text-align: center;
 			.topic {}
+		}
+
+		.section__content {
+			margin-top: rem(40);
 		}
 	}
 
@@ -1061,7 +1069,7 @@ main {
 	}
 
 	.articleItem__txt {
-		padding: rem(20) rem(40) rem(30);
+		margin-top: rem(14);
 		text-align: left;
 
 		.title {
@@ -1075,7 +1083,6 @@ main {
 			margin-top: rem(10);
 			@include f-h5;
 			@include line-clamp(4);
-			height: rem(96);
 			@include transition(all, .3s, ease-in);
 		}
 
@@ -1126,7 +1133,7 @@ main {
 
 	&--article {
 		--swiper-wrapper-transition-timing-function: cubic-bezier(.645, .045, .355, 1);
-		
+
 		.slick-list {
 			padding-bottom: rem(100) !important;
 		}
@@ -1136,7 +1143,7 @@ main {
 			transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
 			box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 			translate: 0 0;
-			
+
 			@include rwd-min(320px) {
 				margin: 0 rem(8);
 			}
@@ -1153,7 +1160,7 @@ main {
 			}
 		}
 	}
-	
+
 }
 .slick-slider {
 	margin-bottom: 0;

@@ -1666,6 +1666,9 @@ footer p {
     display: block;
   }
 }
+.section--about .further {
+  display: block;
+}
 .section--about .further__title {
   display: inline-block;
   background-color: #6D3526;
@@ -1894,8 +1897,16 @@ footer p {
 }
 .section--article {
   background-color: #FFFFFF;
+  padding-top: 6.25rem;
   padding-bottom: 1.25rem;
 }
+.section--article .section__title {
+  text-align: center;
+}
+.section--article .section__content {
+  margin-top: 2.5rem;
+}
+
 .articleItem {
   display: block;
   overflow: hidden;
@@ -1929,7 +1940,7 @@ footer p {
   transition: all 0.5s ease-in;
 }
 .articleItem .articleItem__txt {
-  padding: 1.25rem 2.5rem 1.875rem;
+  margin-top: 0.875rem;
   text-align: left;
 }
 .articleItem .articleItem__txt .title {
@@ -1953,7 +1964,6 @@ footer p {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 6rem;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
