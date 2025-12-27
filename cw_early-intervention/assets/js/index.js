@@ -3,10 +3,15 @@ $(function () {
 	new WOW().init();
 
 	// ==================== Navbar Scroll Effect ====================
-	$(document).scroll(function () {
-		var $nav = $("#mainNavbar");
-		$nav.toggleClass("is-scrolled", $(this).scrollTop() > $nav.height());
-	});
+	const $nav = $("#mainNavbar");
+
+	function checkScroll() {
+		$nav.toggleClass("is-scrolled", $(window).scrollTop() > $nav.height());
+	}
+
+	checkScroll();
+
+	$(window).on("scroll", checkScroll);
 
 	// ==================== Mobile Navbar Toggle ====================
 	var navbarX = $(".navbarX");
@@ -105,12 +110,11 @@ $(function () {
 	}, 100);
 
 	// ==================== Article Slick Carousel ====================
+
 	var slickBasicSetting = {
 		dots: false,
-		autoplaySpeed: 5000,
+		arrows: false,
 		infinite: true,
-		prevArrow: '<div class="btn-arrowL effect-moveL"></div>',
-		nextArrow: '<div class="btn-arrowR effect-moveR"></div>',
 	};
 
 	var slickArticleSetting = {
@@ -121,7 +125,6 @@ $(function () {
 		draggable: false,
 		autoplay: true,
 		autoplaySpeed: 3000,
-		infinite: true,
 		speed: 800,
 		cssEase: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
 		pauseOnHover: true,
@@ -136,23 +139,18 @@ $(function () {
 		],
 	};
 
-	var initialDownState = [];
+	var currentSlideIndex = 0;
+	var isTransitioning = false;
 
-	function saveInitialState() {
-		if (initialDownState.length === 0) {
-			$('.js-articleSlick .slickList__item').each(function (index) {
-				initialDownState.push($(this).hasClass('is-down'));
-			});
-		}
-	}
-
-	function restoreInitialState() {
-		$('.js-articleSlick .slickList__item').each(function (index) {
-			if (initialDownState[index]) {
-				$(this).addClass('is-down');
-			} else {
-				$(this).removeClass('is-down');
-			}
+	function applyDownState(slideIndex) {
+		$('.js-articleSlick .slickList__item').each(function () {
+			var slickIndex = parseInt($(this).attr('data-slick-index'));
+			
+			if (isNaN(slickIndex)) return;
+			
+			var shouldHaveDown = (slideIndex % 2 === 0) ? (slickIndex % 2 === 0) : (slickIndex % 2 !== 0);
+			
+			$(this).toggleClass('is-down', shouldHaveDown);
 		});
 	}
 
@@ -163,19 +161,42 @@ $(function () {
 			return;
 		}
 
-		saveInitialState();
-
 		if (slickArticle.hasClass('slick-initialized')) {
-			restoreInitialState();
 			slickArticle.slick('unslick');
 		}
 
+		$('.js-articleSlick .slickList__item').removeClass('is-down');
+
+		currentSlideIndex = 0;
+
 		slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
 
+		applyDownState(0);
+
 		slickArticle.off('beforeChange.customToggle').on('beforeChange.customToggle', function (event, slick, currentSlide, nextSlide) {
-			$('.js-articleSlick .slickList__item').each(function () {
-				$(this).toggleClass('is-down');
-			});
+			isTransitioning = true;
+			currentSlideIndex = nextSlide;
+			
+			applyDownState(nextSlide);
+			
+			var checkInterval = setInterval(function() {
+				if (isTransitioning) {
+					applyDownState(currentSlideIndex);
+				} else {
+					clearInterval(checkInterval);
+				}
+			}, 10);
+		});
+
+		slickArticle.off('afterChange.customToggle').on('afterChange.customToggle', function (event, slick, currentSlide) {
+			isTransitioning = false;
+			currentSlideIndex = currentSlide;
+			
+			applyDownState(currentSlide);
+		});
+		
+		slickArticle.off('setPosition.customToggle').on('setPosition.customToggle', function(event, slick) {
+			applyDownState(currentSlideIndex);
 		});
 	}
 
@@ -188,5 +209,4 @@ $(function () {
 			initSlick();
 		}, 250);
 	});
-
 });

@@ -11,8 +11,8 @@
 }
 @media (min-width: 320px) {
   .sticky-wrapper {
-    top: 4rem;
-    height: calc(100vh - 4rem);
+    top: 3.125rem;
+    height: calc(100vh - 3.125rem);
   }
 }
 @media (min-width: 991.98px) {
@@ -37,7 +37,7 @@
 }
 @media (min-width: 320px) {
   .timeline-content {
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 3.125rem);
   }
 }
 @media (min-width: 991.98px) {
@@ -62,7 +62,7 @@
 }
 @media (min-width: 320px) {
   .timeline-visual {
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 3.125rem);
   }
 }
 @media (min-width: 991.98px) {

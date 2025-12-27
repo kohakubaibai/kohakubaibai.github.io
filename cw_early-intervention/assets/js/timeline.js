@@ -52,14 +52,14 @@ function updateTimeline() {
     // 更新進度標記
     progressMarkers.forEach((marker, index) => {
         const label = marker.querySelector('.marker-label');
-        const dot = marker.querySelector('.marker-dot');
+        const line = marker.querySelector('.marker-line');
         
         if (index === activeIndex) {
             label.classList.add('active');
-            dot.classList.add('active');
+            line.classList.add('active');
         } else {
             label.classList.remove('active');
-            dot.classList.remove('active');
+            line.classList.remove('active');
         }
     });
 }

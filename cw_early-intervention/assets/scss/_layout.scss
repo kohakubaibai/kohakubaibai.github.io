@@ -58,13 +58,18 @@ body {
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
 	@include rwd-min(320px) {
-		padding: rem(12) rem(20);
+		padding: rem(5) 0 rem(5) rem(16);
 	}
 
 	@include rwd-min(991.98px) {
+		padding: rem(18) rem(10);
+	}
+
+	@include rwd-min(1201px) {
 		padding: rem(18) rem(0);
 	}
 
@@ -81,15 +86,12 @@ body {
 
 	.navbar-brand {
 		padding: 0;
+		margin-right: 0;
 
 		img {
 			width: auto;
 
 			@include rwd-min(320px) {
-				height: rem(30);
-			}
-
-			@include rwd-min(390px) {
 				height: rem(40);
 			}
 
@@ -163,7 +165,7 @@ body {
 
 /*Hamburger Menu to X css*/
 .navbarX {
-	width: rem(40);
+	width: rem(50);
 	height: rem(40);
 	background-color: transparent !important;
 	position: relative;
@@ -177,10 +179,12 @@ body {
 
 	i {
 		display: block;
-		background: #222222;
+		background: #434141;
 		border-radius: rem(3);
-		width: rem(37);
-		height: rem(3);
+		width: rem(24);
+		height: rem(2);
+		margin-left: auto;
+		margin-right: auto;
 
 		&:nth-child(1) {
 			animation: outT 0.8s backwards;  /*若要取消進場動畫*/
@@ -188,7 +192,8 @@ body {
 		}
 
 		&:nth-child(2) {
-			margin: rem(5) 0;
+			margin-top: rem(6);
+			margin-bottom: rem(6);
 			animation: outM 0.8s backwards;  /*若要取消進場動畫*/
 			animation-direction: reverse;
 		}
@@ -243,7 +248,7 @@ body {
 		transform: translateY(9px) rotate(0deg);
 	}
 	100% {
-		transform: translateY(7px) rotate(135deg);/*微上調2px*/
+		transform: translateY(8px) rotate(135deg);/*微上調2px*/
 	}
 }
 
@@ -255,7 +260,7 @@ body {
 		transform: translateY(9px) rotate(0deg);
 	}
 	100% {
-		transform: translateY(7px) rotate(135deg);
+		transform: translateY(8px) rotate(135deg);
 	}
 }
 
@@ -267,7 +272,7 @@ body {
 		transform: translateY(-9px) rotate(0deg);
 	}
 	100% {
-		transform: translateY(-9px) rotate(135deg);
+		transform: translateY(-8px) rotate(135deg);
 	}
 }
 
@@ -279,22 +284,21 @@ body {
 		transform: translateY(-9px) rotate(0deg);
 	}
 	100% {
-		transform: translateY(-9px) rotate(135deg);
+		transform: translateY(-8px) rotate(135deg);
 	}
 }
 
 /* ==================================================
-   footer 康健規範-白底黑字款
+   footer
 ================================================== */
 
 footer {
-	background-color: $white;
     width: 100%;
-	padding: rem(30) rem(20) rem(15);
+	padding: rem(30) rem(20);	
 
 	a {
 		transition: .3s;
-		color: $secondary-dark;
+		color: #222222;
 		text-decoration: none;
 	}
 
@@ -310,7 +314,7 @@ footer {
 		margin: 0;
 
 		li {
-			border-right: rem(1) solid $secondary-dark;
+			border-right: rem(1) solid #222222;
 			padding-right: rem(10);
 			margin: 0 rem(10) rem(10) 0;
 
@@ -322,7 +326,7 @@ footer {
 
 			a {
 				@include f-h5;
-				color: $secondary-dark;
+				color: #222222;
 
 
 				&:hover {
@@ -362,7 +366,7 @@ footer {
 
 	p {
 		@include f-h5;
-		color: $secondary-dark;
+		color: #222222;
 		text-align: center;
 		margin-top: 0;
 		margin-bottom: 10px;
