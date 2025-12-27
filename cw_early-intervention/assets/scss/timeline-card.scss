@@ -19,7 +19,7 @@
 
 	@include rwd-min(768px) {
 		top: 86px;
-		height: calc(100vh - 84px);
+		height: calc(100vh - rem(100));
 	}
 }
 
@@ -35,7 +35,7 @@
 	}
 
 	@include rwd-min(768px) {
-		height: calc(100vh - 84px);
+		height: calc(100vh - rem(100));
 	}
 }
 
@@ -53,7 +53,7 @@
 	}
 
 	@include rwd-min(768px) {
-		height: calc(100vh - 84px);
+		height: calc(100vh - rem(100));
 		grid-template-rows: auto;
 		grid-template-columns: rem(420) rem(486);
 		width: 996px;

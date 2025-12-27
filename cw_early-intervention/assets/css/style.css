@@ -491,7 +491,7 @@ body .scrollArea.anchorOffset {
 }
 @media (min-width: 768px) {
   .navbar .navbar-brand img {
-    height: 3.125rem;
+    height: 4rem;
   }
 }
 .navbar-expand-lg .navbar-nav .nav-item {
