@@ -1769,6 +1769,7 @@ footer p {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.7;
+  text-align: justify;
 }
 .section--about .keyBox__content div {
   margin-top: 0.875rem;
