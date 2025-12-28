@@ -82,6 +82,16 @@ body {
 		&.is-active {
 			color: $primary-dark;
 		}
+
+		&:hover {
+			color: $primary-dark;
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				color: #6D3526;
+			}
+		}
 	}
 
 	.navbar-brand {
@@ -300,6 +310,16 @@ footer {
 		transition: .3s;
 		color: #222222;
 		text-decoration: none;
+
+		&:hover {
+			color: #6D3526;
+		} 
+
+		@include rwd-not-hover {
+			&:hover {
+				color: #222222;
+			}
+		}
 	}
 
 	ul {
