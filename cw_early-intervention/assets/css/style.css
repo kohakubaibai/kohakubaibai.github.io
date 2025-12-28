@@ -1561,6 +1561,9 @@ footer p {
     padding: 0;
   }
 }
+.section--about .intro--top .heading {
+  margin-top: 3rem;
+}
 @media (min-width: 320px) {
   .section--about .intro--top .heading:before {
     content: "";
