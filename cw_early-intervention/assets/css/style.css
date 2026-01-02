@@ -2077,6 +2077,101 @@ footer p {
 .section--milestone .intro .professor .discList > li:before {
   top: 0.9125rem;
 }
+.section--care .cardRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 320px) {
+  .section--care .cardRow {
+    row-gap: 0;
+  }
+}
+@media (min-width: 768px) {
+  .section--care .cardRow {
+    row-gap: 1.25rem;
+  }
+}
+.section--care .cardRow .card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+}
+.section--care .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+}
+.section--care .card:before {
+  content: "";
+  display: block;
+  padding-top: 133.3333333333%;
+}
+.section--care .card__content {
+  position: absolute;
+  border-radius: 15px;
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -webkit-box-shadow: 3px 3px 6px #ccc;
+          box-shadow: 3px 3px 6px #ccc;
+}
+.section--care .card__content--front {
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+  padding: 20px 26px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  z-index: 1;
+}
+.section--care .card__content--back {
+  background: #fff;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  padding: 1.6em 1.6em 1em;
+  font-size: 17px;
+  line-height: 1.5;
+  background-size: cover;
+  display: table;
+}
+.section--care .card:hover .card__content--front {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.section--care .card:hover .card__content--back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
 .section--article {
   background-color: #FFFFFF;
   padding-top: 4rem;
