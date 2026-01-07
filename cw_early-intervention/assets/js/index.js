@@ -25,12 +25,12 @@ function createOrganizationItem(org) {
 	// 處理服務內容
 	const servicesHTML = Array.isArray(org.services) ?
 		`<ol class="course">${org.services.map(s => `<li>${s}</li>`).join('')}</ol>` :
-		`<div class="location">${org.services}</div>`;
+		`<div class="empty">${org.services}</div>`;
 
 	// 處理特色服務
 	const featuresHTML = Array.isArray(org.features) ?
 		`<ol class="course">${org.features.map(f => `<li>${f}</li>`).join('')}</ol>` :
-		`<div class="location">${org.features}</div>`;
+		`<div class="empty">${org.features}</div>`;
 
 	div.innerHTML = `
 		<div class="title js-collapse-switch">
@@ -80,13 +80,22 @@ function createAppItem(app) {
 	// 處理連結
 	let linksHTML = '';
 	if (app.links && Array.isArray(app.links)) {
-		// 多個連結（如 Google Play, App Store）
-		linksHTML = app.links.map(link =>
-			`<a href="${link.url}" class="link" target="_blank"><span class="link__text">${link.text}</span></a>`
-		).join('\n\t\t\t\t\t\t');
+		linksHTML = app.links.map((link, index) => {
+			const separator = index < app.links.length - 1 ? '、' : '';
+			return `<a href="${link.url}" class="link" target="_blank"><span class="link__text">${link.text}</span></a>${separator}`;
+		}).join('');
 	} else if (app.website) {
 		// 單一連結
 		linksHTML = `<a href="${app.website}" class="link" target="_blank"><span class="link__text">${app.linkText || '網站'}</span></a>`;
+	}
+
+	// 處理語言
+	let langsHTML = '';
+	if (app.langs && Array.isArray(app.langs)) {
+		langsHTML = app.langs.map((lang, index) => {
+			const separator = index < app.langs.length - 1 ? '、' : '';
+			return `<span class="lang">${lang.text}</span>${separator}`;
+		}).join('');
 	}
 
 	div.innerHTML = `
@@ -98,6 +107,12 @@ function createAppItem(app) {
 			<div class="content__link">
 				<span class="lead">工具：</span>
 				${linksHTML}
+			</div>
+			` : ''}
+			${langsHTML ? `
+			<div class="content__lang">
+				<span class="lead">語言：</span>
+				${langsHTML}
 			</div>
 			` : ''}
 			<div class="content__info">
@@ -112,6 +127,10 @@ function createAppItem(app) {
 
 $(function () {
 	loadData();
+
+	setTimeout(function() {
+        $('.js-collapse-switch').first().trigger('click');
+    }, 100);
 	// ==================== WOW ====================
 	new WOW().init();
 
@@ -324,8 +343,16 @@ $(function () {
 	});
 
 	$(document).on('click', '.js-collapse-switch', function(){
-        var target = $(this).next('.js-collapse-content');
-        $(this).toggleClass('is-open');
-        target.slideToggle();
+        var $this = $(this);
+		var $target = $this.next('.js-collapse-content');
+		var $group = $this.closest('.orgList__item');
+		
+		// 關閉同層級的其他項目
+		$('.orgList__item').not($group).find('.js-collapse-switch').removeClass('is-open');
+		$('.orgList__item').not($group).find('.js-collapse-content').slideUp();
+		
+		// 切換當前項目
+		$this.toggleClass('is-open');
+		$target.slideToggle();
     });
 });

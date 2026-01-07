@@ -179,9 +179,9 @@ body {
 	height: rem(40);
 	background-color: transparent !important;
 	position: relative;
-	float: right;
 	margin-right: 0;
 	cursor: pointer;
+	align-self: center;
 
 	@include rwd-min(1025px) {
 		display: none;

@@ -207,6 +207,20 @@
     font-weight: 500;
 }
 
+@mixin link-deco($size, $ml) {
+    &:after {
+        content: '';
+        display: block;
+        margin-left: rem($ml);
+        width: rem($size);
+        height: rem($size);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('#{$path}/deco-link.svg');
+        @include transition(all, .3s, ease-in);
+    }
+}
+
 
 //media query
 @mixin rwd-max($px) {

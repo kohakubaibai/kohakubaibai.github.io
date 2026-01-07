@@ -354,8 +354,11 @@ const DATA = {
 			"name": "DoBrain",
 			"description": "創辦人為韓國的認知心理治療師崔譽真，是目前唯一受到公部門及學術部門認證的兒童早療APP，曾獲聯合國支持成立的新創大獎，已幫助全球超過60萬名學習遲緩孩童，發展大腦認知功能。DoBrain以故事和動畫設計拼圖、記憶等闖關遊戲為主，訓練邏輯、數學、專注、記憶等八大能力，並獲 FDA 認可。美國哈佛研究證實可提升最高 18%學習能力。",
 			"links": [
-				{ "text": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.enuma.dobrain" },
-				{ "text": "App Store", "url": "https://apps.apple.com/app/dobrain/id123456789" }
+				{ "text": "Google Play", "url": "https://reurl.cc/YkQv5n" },
+				{ "text": "App Store", "url": "https://reurl.cc/R9Drlr" }
+			],
+			"langs": [
+				{"text": "英文版"}
 			]
 		},
 		{
@@ -364,6 +367,13 @@ const DATA = {
 			"description": "ABA（應用行為分析）透過系統化教學及影音，改善孩子行為與技能。家長可用手機 APP 將 ABA 生活化：如視覺時間表可幫孩子掌握流程與自理步驟；代幣制度獎勵正向行為；視覺計時器建立時間概念；學習故事訂製學習故事增進社交能力讓 ABA 融入日常，促進學習與成長。",
 			"website": "https://tw.abatogo.com/",
 			"linkText": "App及網站"
+		},
+		{
+			"id": 4,
+			"name": "育兒成｜全方位兒童發展整合照護平臺",
+			"description": "由成大醫學院小兒學科杜伊芳醫師 / 教授偕同多位具兒童療育醫療背景、遠距AI專長的職人們共同開發的整合性遠距平台，同步提供發展遲緩兒童家庭各個需求面向的指南與對策。期待讓發展遲緩兒童隨時隨地獲得療育的建議與練習，也讓任何發展遲緩兒童的家庭，獲得正向的助益。",
+			"website": "https://kidaid.org.tw/",
+			"linkText": "網站"
 		},
 	]
 };
