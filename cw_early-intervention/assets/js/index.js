@@ -1,4 +1,117 @@
+// ==================== resource ====================
+function loadData() {
+	try {
+		renderOrganizations(DATA.organizations);
+		renderApps(DATA.apps);
+	} catch (error) {
+		console.error('載入資料失敗:', error);
+	}
+}
+
+function renderOrganizations(organizations) {
+	const container = document.getElementById('orgList');
+	container.innerHTML = '';
+
+	organizations.forEach(org => {
+		const item = createOrganizationItem(org);
+		container.appendChild(item);
+	});
+}
+
+function createOrganizationItem(org) {
+	const div = document.createElement('div');
+	div.className = 'orgList__item js-collapse-group';
+
+	// 處理服務內容
+	const servicesHTML = Array.isArray(org.services) ?
+		`<ol class="course">${org.services.map(s => `<li>${s}</li>`).join('')}</ol>` :
+		`<div class="location">${org.services}</div>`;
+
+	// 處理特色服務
+	const featuresHTML = Array.isArray(org.features) ?
+		`<ol class="course">${org.features.map(f => `<li>${f}</li>`).join('')}</ol>` :
+		`<div class="location">${org.features}</div>`;
+
+	div.innerHTML = `
+		<div class="title js-collapse-switch">
+			<span class="title__text">${org.name}</span>
+		</div>
+		<div class="content js-collapse-content">
+			<div class="wrap">
+				<div class="content__feature content__feature--service">
+					<div class="lead">服務內容</div>
+					${servicesHTML}
+				</div>
+				<div class="content__feature content__feature--promo">
+					<div class="lead">特色服務</div>
+					${featuresHTML}
+				</div>
+				<div class="content__feature content__feature--location">
+					<div class="lead">服務據點</div>
+					<div class="location">${org.locations}</div>
+				</div>
+				<div class="content__link">
+					<a href="${org.website}" class="link" target="_blank">
+						<span class="link__text">官網</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	`;
+
+	return div;
+}
+
+function renderApps(apps) {
+	const container = document.getElementById('appList');
+
+	container.innerHTML = '';
+
+	apps.forEach(app => {
+		const item = createAppItem(app);
+		container.appendChild(item);
+	});
+}
+
+function createAppItem(app) {
+	const div = document.createElement('div');
+	div.className = 'appList__item';
+
+	// 處理連結
+	let linksHTML = '';
+	if (app.links && Array.isArray(app.links)) {
+		// 多個連結（如 Google Play, App Store）
+		linksHTML = app.links.map(link =>
+			`<a href="${link.url}" class="link" target="_blank"><span class="link__text">${link.text}</span></a>`
+		).join('\n\t\t\t\t\t\t');
+	} else if (app.website) {
+		// 單一連結
+		linksHTML = `<a href="${app.website}" class="link" target="_blank"><span class="link__text">${app.linkText || '網站'}</span></a>`;
+	}
+
+	div.innerHTML = `
+		<div class="title">
+			<span class="title__text">${app.name}</span>
+		</div>
+		<div class="content">
+			${linksHTML ? `
+			<div class="content__link">
+				<span class="lead">工具：</span>
+				${linksHTML}
+			</div>
+			` : ''}
+			<div class="content__info">
+				${app.description}
+			</div>
+
+		</div>
+	`;
+
+	return div;
+}
+
 $(function () {
+	loadData();
 	// ==================== WOW ====================
 	new WOW().init();
 
@@ -145,11 +258,11 @@ $(function () {
 	function applyDownState(slideIndex) {
 		$('.js-articleSlick .slickList__item').each(function () {
 			var slickIndex = parseInt($(this).attr('data-slick-index'));
-			
+
 			if (isNaN(slickIndex)) return;
-			
+
 			var shouldHaveDown = (slideIndex % 2 === 0) ? (slickIndex % 2 === 0) : (slickIndex % 2 !== 0);
-			
+
 			$(this).toggleClass('is-down', shouldHaveDown);
 		});
 	}
@@ -176,9 +289,9 @@ $(function () {
 		slickArticle.off('beforeChange.customToggle').on('beforeChange.customToggle', function (event, slick, currentSlide, nextSlide) {
 			isTransitioning = true;
 			currentSlideIndex = nextSlide;
-			
+
 			applyDownState(nextSlide);
-			
+
 			var checkInterval = setInterval(function() {
 				if (isTransitioning) {
 					applyDownState(currentSlideIndex);
@@ -191,10 +304,10 @@ $(function () {
 		slickArticle.off('afterChange.customToggle').on('afterChange.customToggle', function (event, slick, currentSlide) {
 			isTransitioning = false;
 			currentSlideIndex = currentSlide;
-			
+
 			applyDownState(currentSlide);
 		});
-		
+
 		slickArticle.off('setPosition.customToggle').on('setPosition.customToggle', function(event, slick) {
 			applyDownState(currentSlideIndex);
 		});
@@ -209,4 +322,10 @@ $(function () {
 			initSlick();
 		}, 250);
 	});
+
+	$(document).on('click', '.js-collapse-switch', function(){
+        var target = $(this).next('.js-collapse-content');
+        $(this).toggleClass('is-open');
+        target.slideToggle();
+    });
 });
