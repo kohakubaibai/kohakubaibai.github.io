@@ -2308,7 +2308,7 @@ footer p {
 }
 @media (min-width: 320px) {
   .section--care .abilityCard:before {
-    opacity: 0.9;
+    opacity: 0.7;
     padding-top: 94.4606413994%;
   }
 }
@@ -2415,15 +2415,14 @@ footer p {
 @media (min-width: 320px) {
   .section--care .abilityCard .abilityCard__content .topic {
     font-size: 2rem;
+    margin-bottom: 1.25rem;
   }
 }
 @media (min-width: 768px) {
   .section--care .abilityCard .abilityCard__content .topic {
     font-size: 2.9375rem;
+    margin-bottom: 1.875rem;
   }
-}
-.section--care .abilityCard .abilityCard__content .desc {
-  margin-top: 1.875rem;
 }
 .section--care .abilityCard .abilityCard__content .desc__paragraph, .section--care .abilityCard .abilityCard__content .desc__applicable {
   font-size: 1.125rem;
@@ -2436,17 +2435,21 @@ footer p {
 .section--care .abilityCard .abilityCard__content .desc__applicable {
   font-weight: 700;
 }
-.section--care .abilityCard--muscle:before {
-  background-image: url("../images/bg-card_muscle.png");
-}
 .section--care .abilityCard--muscle .abilityCard__title {
   background-color: #FBAE96;
 }
 .section--care .abilityCard--muscle .abilityCard__content .desc__applicable {
   color: #F5815D;
 }
-.section--care .abilityCard--understanding:before {
-  background-image: url("../images/bg-card_understanding.png");
+@media (min-width: 320px) {
+  .section--care .abilityCard--muscle:before {
+    background-image: url("../images/bg-card_muscle_m.png");
+  }
+}
+@media (min-width: 768px) {
+  .section--care .abilityCard--muscle:before {
+    background-image: url("../images/bg-card_muscle.png");
+  }
 }
 .section--care .abilityCard--understanding .abilityCard__title {
   background-color: #6FDBCE;
@@ -2454,8 +2457,15 @@ footer p {
 .section--care .abilityCard--understanding .abilityCard__content .desc__applicable {
   color: #34B3A4;
 }
-.section--care .abilityCard--emotion:before {
-  background-image: url("../images/bg-card_emotion.png");
+@media (min-width: 320px) {
+  .section--care .abilityCard--understanding:before {
+    background-image: url("../images/bg-card_understanding_m.png");
+  }
+}
+@media (min-width: 768px) {
+  .section--care .abilityCard--understanding:before {
+    background-image: url("../images/bg-card_understanding.png");
+  }
 }
 .section--care .abilityCard--emotion .abilityCard__title {
   background-color: #8BC0FD;
@@ -2463,14 +2473,31 @@ footer p {
 .section--care .abilityCard--emotion .abilityCard__content .desc__applicable {
   color: #6698D2;
 }
-.section--care .abilityCard--life:before {
-  background-image: url("../images/bg-card_life.png");
+@media (min-width: 320px) {
+  .section--care .abilityCard--emotion:before {
+    background-image: url("../images/bg-card_emotion_m.png");
+  }
+}
+@media (min-width: 768px) {
+  .section--care .abilityCard--emotion:before {
+    background-image: url("../images/bg-card_emotion.png");
+  }
 }
 .section--care .abilityCard--life .abilityCard__title {
   background-color: #ECD35E;
 }
 .section--care .abilityCard--life .abilityCard__content .desc__applicable {
   color: #C8AD31;
+}
+@media (min-width: 320px) {
+  .section--care .abilityCard--life:before {
+    background-image: url("../images/bg-card_life_m.png");
+  }
+}
+@media (min-width: 768px) {
+  .section--care .abilityCard--life:before {
+    background-image: url("../images/bg-card_life.png");
+  }
 }
 .section--resource {
   position: relative;
@@ -3439,17 +3466,26 @@ footer p {
 .quickBuy__link {
   display: block;
   font-size: 0;
-  width: 9.875rem;
-  height: 4.375rem;
-  background-image: url("../images/deco-buy_side.png");
   background-size: cover;
 }
-.quickBuy__link:hover {
-  background-image: url("../images/deco-buy_side_hover.png");
-}
-@media not screen and (hover: hover) {
+@media (min-width: 320px) {
+  .quickBuy__link {
+    width: 6.25rem;
+    height: 6.875rem;
+    background-image: url("../images/deco-buy_side_m.png");
+  }
   .quickBuy__link:hover {
+    background-image: url("../images/deco-buy_side_m.png");
+  }
+}
+@media (min-width: 991.98px) {
+  .quickBuy__link {
+    width: 9.875rem;
+    height: 4.375rem;
     background-image: url("../images/deco-buy_side.png");
+  }
+  .quickBuy__link:hover {
+    background-image: url("../images/deco-buy_side_hover.png");
   }
 }
 

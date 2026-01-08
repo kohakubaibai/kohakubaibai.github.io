@@ -1309,7 +1309,7 @@ main {
 
 			@include rwd-min(320px) {
 				&:before {
-					opacity: 0.9;
+					opacity: 0.7;
 					padding-top: calc((324 / 343) * 100%);
 				}
 			}
@@ -1409,15 +1409,16 @@ main {
 
 					@include rwd-min(320px) {
 						font-size: rem(32);
+						margin-bottom: rem(20);
 					}
 
 					@include rwd-min(768px) {
 						font-size: rem(47);
+						margin-bottom: rem(30);
 					}
 				}
 
 				.desc {
-					margin-top: rem(30);
 
 					&__paragraph,
 					&__applicable {
@@ -1439,9 +1440,7 @@ main {
 			@each $type, $bgcolor, $txtcolor in $type_colors {
 				&--#{$type} {
 
-					&:before {
-						background-image: url('#{$path}/bg-card_#{$type}.png');
-					}
+					
 
 					.abilityCard__title {
 						background-color: $bgcolor;
@@ -1450,6 +1449,18 @@ main {
 					.abilityCard__content {
 						.desc__applicable {
 							color: $txtcolor;
+						}
+					}
+
+
+					@include rwd-min(320px) {
+						&:before {
+							background-image: url('#{$path}/bg-card_#{$type}_m.png');
+						}
+					}
+					@include rwd-min(768px) {
+						&:before {
+							background-image: url('#{$path}/bg-card_#{$type}.png');
 						}
 					}
 				}
@@ -2386,20 +2397,29 @@ main {
 	&__link {
 		display: block;
 		font-size: 0;
-		width: rem(158);
-		height: rem(70);
-		background-image: url("#{$path}/deco-buy_side.png");
 		background-size: cover;
 
-		&:hover {
-			background-image: url("#{$path}/deco-buy_side_hover.png");
-		}
+		@include rwd-min(320px) {
+			width: rem(100);
+			height: rem(110);
+			background-image: url("#{$path}/deco-buy_side_m.png");
 
-		@include rwd-not-hover {
 			&:hover {
-				background-image: url("#{$path}/deco-buy_side.png");
+				background-image: url("#{$path}/deco-buy_side_m.png");
 			}
 		}
+
+		@include rwd-min(991.98px) {
+			width: rem(158);
+			height: rem(70);
+			background-image: url("#{$path}/deco-buy_side.png");
+			
+			&:hover {
+				background-image: url("#{$path}/deco-buy_side_hover.png");
+			}
+		}		
+
+		
 	}
 }
 
