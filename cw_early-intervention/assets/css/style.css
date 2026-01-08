@@ -1269,6 +1269,22 @@ footer p {
     background-position: center -10000px;
   }
 }
+@-webkit-keyframes starry {
+  0% {
+    background-position: -0.3125rem 8.125rem;
+  }
+  100% {
+    background-position: 0rem 8.125rem;
+  }
+}
+@keyframes starry {
+  0% {
+    background-position: -0.3125rem 8.125rem;
+  }
+  100% {
+    background-position: 0rem 8.125rem;
+  }
+}
 /* ==================================================
    Container
 ================================================== */
@@ -2272,7 +2288,7 @@ footer p {
             flex: 0 0 calc((100% - 1.5rem) / 2);
   }
 }
-.section--care .abilityCard--popup {
+.section--care .abilityCard {
   background-color: #FFFFFF;
   cursor: pointer;
   overflow: hidden;
@@ -2281,7 +2297,7 @@ footer p {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.section--care .abilityCard--popup:before {
+.section--care .abilityCard:before {
   content: "";
   display: block;
   background-size: cover;
@@ -2291,13 +2307,13 @@ footer p {
   transform-origin: center;
 }
 @media (min-width: 320px) {
-  .section--care .abilityCard--popup:before {
+  .section--care .abilityCard:before {
     opacity: 0.9;
     padding-top: 94.4606413994%;
   }
 }
 @media (min-width: 768px) {
-  .section--care .abilityCard--popup:before {
+  .section--care .abilityCard:before {
     padding-top: 58.5034013605%;
     -webkit-transform: scale(2);
     transform: scale(2);
@@ -2305,29 +2321,29 @@ footer p {
     transition: all 0.3s ease-in;
   }
 }
-.section--care .abilityCard--popup:hover {
+.section--care .abilityCard:hover {
   -webkit-box-shadow: 0 0 3.375rem #EDB8B8;
           box-shadow: 0 0 3.375rem #EDB8B8;
 }
-.section--care .abilityCard--popup:hover:before {
+.section--care .abilityCard:hover:before {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
 @media not screen and (hover: hover) {
-  .section--care .abilityCard--popup:before {
+  .section--care .abilityCard:before {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
-  .section--care .abilityCard--popup:hover {
+  .section--care .abilityCard:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .section--care .abilityCard--popup:hover:before {
+  .section--care .abilityCard:hover:before {
     -webkit-transform: scale(2);
     transform: scale(2);
   }
 }
-.section--care .abilityCard--popup .cardWrap {
+.section--care .abilityCard .cardWrap {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2341,17 +2357,17 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.section--care .abilityCard--popup .abilityCard__title {
+.section--care .abilityCard .abilityCard__title {
   padding: 0.46875rem 0;
   text-align: center;
 }
-.section--care .abilityCard--popup .abilityCard__title span {
+.section--care .abilityCard .abilityCard__title span {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.6;
   color: #FFFFFF;
 }
-.section--care .abilityCard--popup .abilityCard__content {
+.section--care .abilityCard .abilityCard__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2367,93 +2383,93 @@ footer p {
   height: 100%;
 }
 @media (min-width: 320px) {
-  .section--care .abilityCard--popup .abilityCard__content {
+  .section--care .abilityCard .abilityCard__content {
     padding: 0 1rem;
   }
 }
 @media (min-width: 768px) {
-  .section--care .abilityCard--popup .abilityCard__content {
+  .section--care .abilityCard .abilityCard__content {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     padding: 0 2.5rem;
   }
 }
-.section--care .abilityCard--popup .abilityCard__content .subTitle,
-.section--care .abilityCard--popup .abilityCard__content .topic {
+.section--care .abilityCard .abilityCard__content .subTitle,
+.section--care .abilityCard .abilityCard__content .topic {
   color: #6D3526;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
 }
 @media (min-width: 320px) {
-  .section--care .abilityCard--popup .abilityCard__content .subTitle {
+  .section--care .abilityCard .abilityCard__content .subTitle {
     font-size: 1.25rem;
   }
 }
 @media (min-width: 768px) {
-  .section--care .abilityCard--popup .abilityCard__content .subTitle {
+  .section--care .abilityCard .abilityCard__content .subTitle {
     font-size: 1.375rem;
   }
 }
 @media (min-width: 320px) {
-  .section--care .abilityCard--popup .abilityCard__content .topic {
+  .section--care .abilityCard .abilityCard__content .topic {
     font-size: 2rem;
   }
 }
 @media (min-width: 768px) {
-  .section--care .abilityCard--popup .abilityCard__content .topic {
+  .section--care .abilityCard .abilityCard__content .topic {
     font-size: 2.9375rem;
   }
 }
-.section--care .abilityCard--popup .abilityCard__content .desc {
+.section--care .abilityCard .abilityCard__content .desc {
   margin-top: 1.875rem;
 }
-.section--care .abilityCard--popup .abilityCard__content .desc__paragraph, .section--care .abilityCard--popup .abilityCard__content .desc__applicable {
+.section--care .abilityCard .abilityCard__content .desc__paragraph, .section--care .abilityCard .abilityCard__content .desc__applicable {
   font-size: 1.125rem;
   line-height: 1.6;
   margin: 0;
 }
-.section--care .abilityCard--popup .abilityCard__content .desc__paragraph {
+.section--care .abilityCard .abilityCard__content .desc__paragraph {
   font-weight: 400;
 }
-.section--care .abilityCard--popup .abilityCard__content .desc__applicable {
+.section--care .abilityCard .abilityCard__content .desc__applicable {
   font-weight: 700;
 }
-.section--care .abilityCard--popup.abilityCard--muscle:before {
+.section--care .abilityCard--muscle:before {
   background-image: url("../images/bg-card_muscle.png");
 }
-.section--care .abilityCard--popup.abilityCard--muscle .abilityCard__title {
+.section--care .abilityCard--muscle .abilityCard__title {
   background-color: #FBAE96;
 }
-.section--care .abilityCard--popup.abilityCard--muscle .abilityCard__content .desc__applicable {
+.section--care .abilityCard--muscle .abilityCard__content .desc__applicable {
   color: #F5815D;
 }
-.section--care .abilityCard--popup.abilityCard--understanding:before {
+.section--care .abilityCard--understanding:before {
   background-image: url("../images/bg-card_understanding.png");
 }
-.section--care .abilityCard--popup.abilityCard--understanding .abilityCard__title {
+.section--care .abilityCard--understanding .abilityCard__title {
   background-color: #6FDBCE;
 }
-.section--care .abilityCard--popup.abilityCard--understanding .abilityCard__content .desc__applicable {
+.section--care .abilityCard--understanding .abilityCard__content .desc__applicable {
   color: #34B3A4;
 }
-.section--care .abilityCard--popup.abilityCard--emotion:before {
+.section--care .abilityCard--emotion:before {
   background-image: url("../images/bg-card_emotion.png");
 }
-.section--care .abilityCard--popup.abilityCard--emotion .abilityCard__title {
+.section--care .abilityCard--emotion .abilityCard__title {
   background-color: #8BC0FD;
 }
-.section--care .abilityCard--popup.abilityCard--emotion .abilityCard__content .desc__applicable {
+.section--care .abilityCard--emotion .abilityCard__content .desc__applicable {
   color: #6698D2;
 }
-.section--care .abilityCard--popup.abilityCard--life:before {
+.section--care .abilityCard--life:before {
   background-image: url("../images/bg-card_life.png");
 }
-.section--care .abilityCard--popup.abilityCard--life .abilityCard__title {
+.section--care .abilityCard--life .abilityCard__title {
   background-color: #ECD35E;
 }
-.section--care .abilityCard--popup.abilityCard--life .abilityCard__content .desc__applicable {
+.section--care .abilityCard--life .abilityCard__content .desc__applicable {
   color: #C8AD31;
 }
 .section--resource {
@@ -2619,11 +2635,17 @@ footer p {
   .section--resource .section__content .promoSection--book {
     background-color: #FFFFFF;
     padding-bottom: 2.5rem;
+    background-image: url("../images/bg-starry_mb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-animation: starry 3s ease-in infinite alternate;
+            animation: starry 3s ease-in infinite alternate;
   }
 }
 @media (min-width: 768px) {
   .section--resource .section__content .promoSection--book {
     padding-bottom: 0;
+    background-image: none;
     background-color: transparent;
   }
 }
@@ -3408,6 +3430,29 @@ footer p {
   margin-left: 2rem;
 }
 
+.quickBuy {
+  position: fixed;
+  z-index: 100;
+  bottom: 6.25rem;
+  right: 0;
+}
+.quickBuy__link {
+  display: block;
+  font-size: 0;
+  width: 9.875rem;
+  height: 4.375rem;
+  background-image: url("../images/deco-buy_side.png");
+  background-size: cover;
+}
+.quickBuy__link:hover {
+  background-image: url("../images/deco-buy_side_hover.png");
+}
+@media not screen and (hover: hover) {
+  .quickBuy__link:hover {
+    background-image: url("../images/deco-buy_side.png");
+  }
+}
+
 /******************* slick start ******************/
 .slickList--article {
   --swiper-wrapper-transition-timing-function: cubic-bezier(.645, .045, .355, 1);
@@ -3482,3 +3527,297 @@ footer p {
 }
 
 /******************* slick end ********************/
+/******************* popup start ********************/
+.popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.popup.is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.popup.is-show {
+  opacity: 1;
+}
+.popup.is-show .popup__content {
+  -webkit-transform: scale(1) translateY(0);
+          transform: scale(1) translateY(0);
+  opacity: 1;
+}
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.popup__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 49.375rem;
+  max-height: calc(100dvh - 5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: scale(0.9) translateY(1.25rem);
+          transform: scale(0.9) translateY(1.25rem);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.popup .closeBtn {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  background-image: url("../images/btn-close.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.popup .closeBtn:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+@media not screen and (hover: hover) {
+  .popup .closeBtn:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.popup .popupWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.popup .popupCard {
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+@media (min-width: 320px) {
+  .popup .popupCard {
+    padding: 1.25rem 0.625rem;
+    background-size: 60%;
+  }
+}
+@media (min-width: 991.98px) {
+  .popup .popupCard {
+    padding: 1.25rem 2.125rem;
+    background-size: auto;
+  }
+}
+.popup .popupCard .topic {
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #6D3526;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 320px) {
+  .popup .popupCard .topic {
+    padding: 0 0.875rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .popup .popupCard .topic {
+    padding: 0;
+  }
+}
+.popup .popupCard .abilityWrap {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.popup .popupCard .abilityWrap .gradientDeco {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.popup .popupCard .abilityWrap .gradientDeco.is-visible {
+  opacity: 1;
+}
+.popup .popupCard .abilityWrap .gradientDeco--top {
+  top: 0;
+}
+.popup .popupCard .abilityWrap .gradientDeco--bottom {
+  bottom: 0;
+}
+.popup .popupCard .abilityInfo {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 320px) {
+  .popup .popupCard .abilityInfo {
+    padding: 0 0.875rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .popup .popupCard .abilityInfo {
+    padding: 0;
+  }
+}
+.popup .popupCard .abilityInfo::-webkit-scrollbar {
+  width: 0.375rem;
+}
+.popup .popupCard .abilityInfo::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 0.1875rem;
+}
+.popup .popupCard .abilityInfo::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.popup .popupCard .abilityInfo::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.1875rem;
+}
+.popup .popupCard .abilityInfo__feature {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #270C05;
+}
+.popup .popupCard .abilityInfo__notice .title {
+  margin-bottom: 0.5rem;
+  padding: 0.125rem 0.25rem;
+  background-color: #FFFFFF;
+  border-radius: 0.25rem;
+  line-height: 1.6;
+  font-weight: 700;
+  font-size: re, 18;
+  color: #6D3526;
+}
+.popup .popupCard .abilityInfo__notice .content {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #270C05;
+}
+.popup--muscle .popupCard {
+  background-color: #fbae96;
+  background-image: url("../images/bg-popup_muscle.png");
+}
+.popup--muscle .popupCard .abilityWrap .gradientDeco--top {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(251, 174, 150)), to(rgba(251, 174, 150, 0)));
+  background: linear-gradient(180deg, rgb(251, 174, 150) 0%, rgba(251, 174, 150, 0) 100%);
+}
+.popup--muscle .popupCard .abilityWrap .gradientDeco--bottom {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(251, 174, 150)), to(rgba(251, 174, 150, 0)));
+  background: linear-gradient(0deg, rgb(251, 174, 150) 0%, rgba(251, 174, 150, 0) 100%);
+}
+.popup--understanding .popupCard {
+  background-color: #87E2D7;
+  background-image: url("../images/bg-popup_understanding.png");
+}
+.popup--understanding .popupCard .abilityWrap .gradientDeco--top {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(135, 226, 215)), to(rgba(135, 226, 215, 0)));
+  background: linear-gradient(180deg, rgb(135, 226, 215) 0%, rgba(135, 226, 215, 0) 100%);
+}
+.popup--understanding .popupCard .abilityWrap .gradientDeco--bottom {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(135, 226, 215)), to(rgba(135, 226, 215, 0)));
+  background: linear-gradient(0deg, rgb(135, 226, 215) 0%, rgba(135, 226, 215, 0) 100%);
+}
+.popup--emotion .popupCard {
+  background-color: #93C5FF;
+  background-image: url("../images/bg-popup_emotion.png");
+}
+.popup--emotion .popupCard .abilityWrap .gradientDeco--top {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(147, 197, 255)), to(rgba(147, 197, 255, 0)));
+  background: linear-gradient(180deg, rgb(147, 197, 255) 0%, rgba(147, 197, 255, 0) 100%);
+}
+.popup--emotion .popupCard .abilityWrap .gradientDeco--bottom {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(147, 197, 255)), to(rgba(147, 197, 255, 0)));
+  background: linear-gradient(0deg, rgb(147, 197, 255) 0%, rgba(147, 197, 255, 0) 100%);
+}
+.popup--life .popupCard {
+  background-color: #F2DC73;
+  background-image: url("../images/bg-popup_life.png");
+}
+.popup--life .popupCard .abilityWrap .gradientDeco--top {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(242, 220, 115)), to(rgba(242, 220, 115, 0)));
+  background: linear-gradient(180deg, rgb(242, 220, 115) 0%, rgba(242, 220, 115, 0) 100%);
+}
+.popup--life .popupCard .abilityWrap .gradientDeco--bottom {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(242, 220, 115)), to(rgba(242, 220, 115, 0)));
+  background: linear-gradient(0deg, rgb(242, 220, 115) 0%, rgba(242, 220, 115, 0) 100%);
+}
+
+.is-openPopup {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/******************* popup end ********************/

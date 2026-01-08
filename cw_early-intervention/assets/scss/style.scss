@@ -220,11 +220,21 @@ $path: '../images';
   }
 }
 
+@keyframes starry {
+	0% {
+    	background-position: rem(-5) rem(130);
+	}
+
+	100% {
+	  	background-position: rem(0) rem(130);
+  	}
+}
+
 $type_colors:
-    "muscle" #FBAE96 #F5815D #FBAE96,
-    "understanding" #6FDBCE #34B3A4 #87E2D7,
-    "emotion" #8BC0FD #6698D2 #93C5FF,
-    "life" #ECD35E #C8AD31 #F2DC73;
+    "muscle" #FBAE96 #F5815D #fbae96 rgba(251, 174, 150, 1) rgba(251, 174, 150, 0),
+    "understanding" #6FDBCE #34B3A4 #87E2D7 rgba(135, 226, 215, 1) rgba(135, 226, 215, 0),
+    "emotion" #8BC0FD #6698D2 #93C5FF rgba(147, 197, 255, 1) rgba(147, 197, 255, 0),
+    "life" #ECD35E #C8AD31 #F2DC73 rgba(242, 220, 115, 1) rgba(242, 220, 115, 0);
 
 /* ==================================================
    Container
@@ -1280,169 +1290,166 @@ main {
 		}
 
 		.abilityCard {
+			background-color: #FFFFFF;
+			cursor: pointer;
+			overflow: hidden;
+			position: relative;
+			border-radius: rem(16);
+			@include transition(all, .3s, ease-in);
 
-			&--popup {
-				background-color: #FFFFFF;
-				cursor: pointer;
-				overflow: hidden;
-				position: relative;
-				border-radius: rem(16);
-				@include transition(all, .3s, ease-in);
+			&:before {
+				content: '';
+				display: block;
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				-webkit-transform-origin: center;
+				transform-origin: center;
+			}
+
+			@include rwd-min(320px) {
+				&:before {
+					opacity: 0.9;
+					padding-top: calc((324 / 343) * 100%);
+				}
+			}
+
+			@include rwd-min(768px) {
+				&:before {
+					padding-top: calc((344 / 588) * 100%);
+					-webkit-transform: scale(2);
+					transform: scale(2);
+					@include transition(all, .3s, ease-in);
+				}
+			}
+
+			&:hover {
+				box-shadow: 0 0 rem(54) #EDB8B8;
 
 				&:before {
-					content: '';
-					display: block;
-					background-size: cover;
-					background-position: center center;
-					background-repeat: no-repeat;
-					-webkit-transform-origin: center;
-					transform-origin: center;
+					-webkit-transform: scale(1);
+					transform: scale(1);
 				}
+			}
 
-				@include rwd-min(320px) {
-					&:before {
-						opacity: 0.9;
-						padding-top: calc((324 / 343) * 100%);
-					}
-				}
-
-				@include rwd-min(768px) {
-					&:before {
-						padding-top: calc((344 / 588) * 100%);
-						-webkit-transform: scale(2);
-						transform: scale(2);
-						@include transition(all, .3s, ease-in);
-					}
+			@include rwd-not-hover {
+				&:before {
+					-webkit-transform: scale(1) !important;
+					transform: scale(1) !important;
 				}
 
 				&:hover {
-					box-shadow: 0 0 rem(54) #EDB8B8;
+					box-shadow: none;
 
 					&:before {
-						-webkit-transform: scale(1);
-						transform: scale(1);
+						-webkit-transform: scale(2);
+						transform: scale(2);
 					}
 				}
+			}
 
-				@include rwd-not-hover {
-					&:before {
-						-webkit-transform: scale(1) !important;
-						transform: scale(1) !important;
-					}
+			.cardWrap {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: flex;
+				flex-direction: column;
+			}
 
-					&:hover {
-						box-shadow: none;
+			.abilityCard__title {
+				padding: rem(7.5) 0;
+				text-align: center;
 
-						&:before {
-							-webkit-transform: scale(2);
-							transform: scale(2);
-						}
-					}
+				span {
+					font-size: rem(24);
+					font-weight: 700;
+					line-height: 1.6;
+					color: #FFFFFF;
+				}
+			}
+
+			.abilityCard__content {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+
+				@include rwd-min(320px) {
+					padding: 0 rem(16);
 				}
 
-				.cardWrap {
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
-					display: flex;
-					flex-direction: column;
+				@include rwd-min(768px) {
+					flex: 1;
+					padding: 0 rem(40);
 				}
 
-				.abilityCard__title {
-					padding: rem(7.5) 0;
+				.subTitle,
+				.topic {
+					color: #6D3526;
+					font-weight: 700;
+					line-height: 1.6;
 					text-align: center;
-
-					span {
-						font-size: rem(24);
-						font-weight: 700;
-						line-height: 1.6;
-						color: #FFFFFF;
-					}
 				}
 
-				.abilityCard__content {
-					display: flex;
-					flex-wrap: wrap;
-					flex-direction: column;
-					justify-content: center;
-					height: 100%;
+				.subTitle {
 
 					@include rwd-min(320px) {
-						padding: 0 rem(16);
+						font-size: rem(20);
 					}
 
 					@include rwd-min(768px) {
-						flex: 1;
-						padding: 0 rem(40);
-					}
-
-					.subTitle,
-					.topic {
-						color: #6D3526;
-						font-weight: 700;
-						line-height: 1.6;
-						text-align: center;
-					}
-
-					.subTitle {
-						
-						@include rwd-min(320px) {
-							font-size: rem(20);
-						}
-						
-						@include rwd-min(768px) {
-							font-size: rem(22);
-						}
-					}
-
-					.topic {
-
-						@include rwd-min(320px) {
-							font-size: rem(32);
-						}
-						
-						@include rwd-min(768px) {
-							font-size: rem(47);
-						}
-					}
-
-					.desc {
-						margin-top: rem(30);
-
-						&__paragraph,
-						&__applicable {
-							font-size: rem(18);
-							line-height: 1.6;
-							margin: 0;
-						}
-
-						&__paragraph {
-							font-weight: 400;
-						}
-
-						&__applicable {
-							font-weight: 700;
-						}
+						font-size: rem(22);
 					}
 				}
 
-				@each $type, $bgcolor, $txtcolor, $popupcolor in $type_colors {
-					&.abilityCard--#{$type} {
+				.topic {
 
-						&:before {
-							background-image: url('#{$path}/bg-card_#{$type}.png');
-						}
+					@include rwd-min(320px) {
+						font-size: rem(32);
+					}
 
-						.abilityCard__title {
-							background-color: $bgcolor;
-						}
+					@include rwd-min(768px) {
+						font-size: rem(47);
+					}
+				}
 
-						.abilityCard__content {
-							.desc__applicable {
-								color: $txtcolor;
-							}
+				.desc {
+					margin-top: rem(30);
+
+					&__paragraph,
+					&__applicable {
+						font-size: rem(18);
+						line-height: 1.6;
+						margin: 0;
+					}
+
+					&__paragraph {
+						font-weight: 400;
+					}
+
+					&__applicable {
+						font-weight: 700;
+					}
+				}
+			}
+
+			@each $type, $bgcolor, $txtcolor in $type_colors {
+				&--#{$type} {
+
+					&:before {
+						background-image: url('#{$path}/bg-card_#{$type}.png');
+					}
+
+					.abilityCard__title {
+						background-color: $bgcolor;
+					}
+
+					.abilityCard__content {
+						.desc__applicable {
+							color: $txtcolor;
 						}
 					}
 				}
@@ -1519,7 +1526,7 @@ main {
 			.promoSection {
 
 				&--orgs {
-					
+
 					@include rwd-min(320px) {
 						position: relative;
 						padding-bottom: rem(126);
@@ -1539,14 +1546,14 @@ main {
 							background-size: cover;
 						}
 					}
-					
+
 					@include rwd-min(768px) {
 						padding-bottom: 0;
 						margin-bottom: rem(52);
 
 						&:after {
 							display: none;
-						} 
+						}
 					}
 
 					.wrapper {
@@ -1569,7 +1576,7 @@ main {
 					@include rwd-min(320px) {
 						background-color: #FFFFFF;
 					}
-					
+
 					@include rwd-min(768px) {
 						margin-bottom: rem(80);
 						background-color: transparent;
@@ -1622,10 +1629,15 @@ main {
 					@include rwd-min(320px) {
 						background-color: #FFFFFF;
 						padding-bottom: rem(40);
+						background-image: url('#{$path}/bg-starry_mb.png');
+						background-repeat: no-repeat;
+						background-size: contain;
+						animation: starry 3s ease-in infinite alternate;
 					}
-					
+
 					@include rwd-min(768px) {
 						padding-bottom: 0;
+						background-image: none;
 						background-color: transparent;
 					}
 
@@ -1751,7 +1763,7 @@ main {
 
 				.content {
 					display: none;
-					
+
 					.wrap {
 						background-color: #FFFFFF;
 						padding: rem(16);
@@ -1810,7 +1822,7 @@ main {
 								width: 100%;
 							}
 						}
-						
+
 
 						@include rwd-min(768px) {
 
@@ -1997,7 +2009,7 @@ main {
 				flex-wrap: wrap;
 				row-gap: rem(16);
 			}
-			
+
 			@include rwd-min(768px) {
 				align-items: center;
 				flex-direction: row;
@@ -2011,7 +2023,7 @@ main {
 					width: rem(180);
 					margin: 0 auto;
 				}
-				
+
 				@include rwd-min(768px) {
 					flex: 0 0 rem(220);
 					width: rem(220);
@@ -2024,7 +2036,7 @@ main {
 				@include rwd-min(320px) {
 					text-align: center;
 				}
-				
+
 				@include rwd-min(768px) {
 					text-align: left;
 				}
@@ -2365,6 +2377,32 @@ main {
 	}
 }
 
+.quickBuy {
+	position: fixed;
+	z-index: 100;
+	bottom: rem(100);
+	right: 0;
+
+	&__link {
+		display: block;
+		font-size: 0;
+		width: rem(158);
+		height: rem(70);
+		background-image: url("#{$path}/deco-buy_side.png");
+		background-size: cover;
+
+		&:hover {
+			background-image: url("#{$path}/deco-buy_side_hover.png");
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				background-image: url("#{$path}/deco-buy_side.png");
+			}
+		}
+	}
+}
+
 /******************* slick start ******************/
 .slickList {
 
@@ -2446,5 +2484,251 @@ main {
 .slick-slider {
 	margin-bottom: 0;
 }
-
 /******************* slick end ********************/
+
+/******************* popup start ********************/
+.popup {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	align-items: center;
+	justify-content: center;
+	padding: rem(16);
+	opacity: 0;
+	@include transition(all, .3s, ease);
+
+	&.is-active {
+		display: flex;
+	}
+
+	&.is-show {
+		opacity: 1;
+
+		.popup__content {
+			transform: scale(1) translateY(0);
+			opacity: 1;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		max-width: rem(790);
+		max-height: calc(100dvh - rem(80));
+		display: flex;
+		flex-direction: column;
+		transform: scale(0.9) translateY(rem(20));
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
+
+	.closeBtn {
+		position: absolute;
+		top: rem(-16);
+		right: rem(-16);
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10;
+		background-image: url('#{$path}/btn-close.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		@include scale(1);
+		@include transition(all, .3s, ease-in);
+
+		&:hover {
+			@include scale(1.1);
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				@include scale(1);
+			}
+		}
+	}
+
+	.popupWrap {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		overflow: hidden;
+		flex-direction: column;
+	}
+
+	.popupCard {
+		border-radius: rem(16);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		background-position: right top;
+		background-repeat: no-repeat;
+
+		@include rwd-min(320px) {
+			padding: rem(20) rem(10);
+			background-size: 60%;
+		}
+
+		@include rwd-min(991.98px) {
+			padding: rem(20) rem(34);
+			background-size: auto;
+		}
+
+		.topic {
+			font-size: rem(32);
+			line-height: 1.6;
+			font-weight: 700;
+			color: #6D3526;
+			flex-shrink: 0;
+			margin-bottom: rem(8);
+
+			@include rwd-min(320px) {
+				padding: 0 rem(14);
+			}
+
+			@include rwd-min(991.98px) {
+				padding: 0;
+			}
+		}
+
+		.abilityWrap {
+			position: relative;
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+			.gradientDeco {
+				position: absolute;
+				left: 0;
+				right: 0;
+				height: rem(48);
+				pointer-events: none;
+				z-index: 2;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+
+				&.is-visible {
+					opacity: 1;
+				}
+
+				&--top {
+					top: 0;
+				}
+
+				&--bottom {
+					bottom: 0;
+				}
+			}
+		}
+
+		.abilityInfo {
+			overflow-y: auto;
+			overflow-x: hidden;
+			flex: 1 1 auto;
+			height: 100%;
+			-webkit-overflow-scrolling: touch;
+
+			@include rwd-min(320px) {
+				padding: 0 rem(14);
+			}
+
+			@include rwd-min(991.98px) {
+				padding: 0;
+			}
+
+			&::-webkit-scrollbar {
+				width: rem(6);
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: rgba(255, 255, 255, 1);
+				border-radius: rem(3);
+
+				&:hover {
+					background: rgba(255, 255, 255, 0.3);
+				}
+			}
+
+			&::-webkit-scrollbar-track {
+				background: rgba(255, 255, 255, 0.05);
+				border-radius: rem(3);
+			}
+
+
+			&__feature {
+				margin-bottom: rem(8);
+				font-size: rem(18);
+				line-height: 1.6;
+				font-weight: 400;
+				color: #270C05;
+			}
+
+			&__notice {
+				.title {
+					margin-bottom: rem(8);
+					padding: rem(2) rem(4);
+					background-color: #FFFFFF;
+					border-radius: rem(4);
+					line-height: 1.6;
+					font-weight: 700;
+					font-size: re,(18);
+					color: #6D3526;
+				}
+				.content {
+					font-size: rem(18);
+					line-height: 1.6;
+					font-weight: 400;
+					color: #270C05;
+				}
+			}
+		}
+	}
+
+	@each $type, $bgcolor, $txtcolor, $popupcolor, $gradient1, $gradient0 in $type_colors {
+		&--#{$type} {
+			.popupCard {
+				background-color: $popupcolor;
+				background-image: url('#{$path}/bg-popup_#{$type}.png');
+
+				.abilityWrap {
+					.gradientDeco {
+						&--top {
+							background: linear-gradient(180deg, $gradient1 0%, $gradient0 100%);
+						}
+
+						&--bottom {
+							background: linear-gradient(0deg, $gradient1 0%, $gradient0 100%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.is-openPopup {
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/******************* popup end ********************/

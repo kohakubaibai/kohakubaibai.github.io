@@ -22,12 +22,10 @@ function createOrganizationItem(org) {
 	const div = document.createElement('div');
 	div.className = 'orgList__item js-collapse-group';
 
-	// 處理服務內容
 	const servicesHTML = Array.isArray(org.services) ?
 		`<ol class="course">${org.services.map(s => `<li>${s}</li>`).join('')}</ol>` :
 		`<div class="empty">${org.services}</div>`;
 
-	// 處理特色服務
 	const featuresHTML = Array.isArray(org.features) ?
 		`<ol class="course">${org.features.map(f => `<li>${f}</li>`).join('')}</ol>` :
 		`<div class="empty">${org.features}</div>`;
@@ -77,7 +75,6 @@ function createAppItem(app) {
 	const div = document.createElement('div');
 	div.className = 'appList__item';
 
-	// 處理連結
 	let linksHTML = '';
 	if (app.links && Array.isArray(app.links)) {
 		linksHTML = app.links.map((link, index) => {
@@ -85,11 +82,9 @@ function createAppItem(app) {
 			return `<a href="${link.url}" class="link" target="_blank"><span class="link__text">${link.text}</span></a>${separator}`;
 		}).join('');
 	} else if (app.website) {
-		// 單一連結
 		linksHTML = `<a href="${app.website}" class="link" target="_blank"><span class="link__text">${app.linkText || '網站'}</span></a>`;
 	}
 
-	// 處理語言
 	let langsHTML = '';
 	if (app.langs && Array.isArray(app.langs)) {
 		langsHTML = app.langs.map((lang, index) => {
@@ -125,12 +120,120 @@ function createAppItem(app) {
 	return div;
 }
 
+class ScrollGradientController {
+	constructor(popup) {
+		this.popup = popup;
+		this.scrollContent = popup.querySelector('[data-scroll-content]');
+		this.gradientTop = popup.querySelector('.gradientDeco--top');
+		this.gradientBottom = popup.querySelector('.gradientDeco--bottom');
+
+		this.init();
+	}
+
+	init() {
+		this.scrollContent.addEventListener('scroll', () => this.updateGradients());
+		window.addEventListener('resize', () => this.updateGradients());
+	}
+
+	updateGradients() {
+		const scrollTop = this.scrollContent.scrollTop;
+		const scrollHeight = this.scrollContent.scrollHeight;
+		const clientHeight = this.scrollContent.clientHeight;
+		const scrollBottom = scrollHeight - scrollTop - clientHeight;
+
+		if (scrollTop > 10) {
+			this.gradientTop.classList.add('is-visible');
+		} else {
+			this.gradientTop.classList.remove('is-visible');
+		}
+
+		if (scrollBottom > 10 && scrollHeight > clientHeight) {
+			this.gradientBottom.classList.add('is-visible');
+		} else {
+			this.gradientBottom.classList.remove('is-visible');
+		}
+	}
+
+	reset() {
+		this.scrollContent.scrollTop = 0;
+		setTimeout(() => this.updateGradients(), 100);
+	}
+}
+
+const popupControllers = new Map();
+
+document.querySelectorAll('[data-popup-item]').forEach(popup => {
+	const popupId = popup.dataset.popupId;
+	popupControllers.set(popupId, new ScrollGradientController(popup));
+});
+
+function openPopup(popupId) {
+	const popup = document.getElementById(`popup-${popupId}`);
+	if (!popup) return;
+
+	popup.classList.add('is-active');
+	document.body.classList.add('is-openPopup');
+
+	const controller = popupControllers.get(popupId);
+	if (controller) {
+		controller.reset();
+	}
+
+	requestAnimationFrame(() => {
+		requestAnimationFrame(() => {
+			popup.classList.add('is-show');
+		});
+	});
+}
+
+function closePopup(popupId) {
+	const popup = document.getElementById(`popup-${popupId}`);
+	if (!popup) return;
+
+	popup.classList.remove('is-show');
+
+
+	setTimeout(() => {
+		popup.classList.remove('is-active');
+		document.body.classList.remove('is-openPopup');
+	}, 300);
+}
+
+document.querySelectorAll('.closeBtn').forEach(btn => {
+	btn.addEventListener('click', function() {
+		const popup = this.closest('.popup');
+		const popupId = popup.dataset.popupId;
+		closePopup(popupId);
+	});
+});
+
+document.querySelectorAll('.popup__overlay').forEach(overlay => {
+	overlay.addEventListener('click', function() {
+		const popup = this.closest('.popup');
+		const popupId = popup.dataset.popupId;
+		closePopup(popupId);
+	});
+});
+
+document.addEventListener('keydown', function(e) {
+	if (e.key === 'Escape') {
+		document.querySelectorAll('.popup.active').forEach(popup => {
+			const popupId = popup.dataset.popupId;
+			closePopup(popupId);
+		});
+	}
+});
+
+
 $(function () {
+
+	// ==================== resource data and collapse ====================
 	loadData();
 
 	setTimeout(function() {
         $('.js-collapse-switch').first().trigger('click');
     }, 100);
+
 	// ==================== WOW ====================
 	new WOW().init();
 
@@ -346,12 +449,10 @@ $(function () {
         var $this = $(this);
 		var $target = $this.next('.js-collapse-content');
 		var $group = $this.closest('.orgList__item');
-		
-		// 關閉同層級的其他項目
+
 		$('.orgList__item').not($group).find('.js-collapse-switch').removeClass('is-open');
 		$('.orgList__item').not($group).find('.js-collapse-content').slideUp();
-		
-		// 切換當前項目
+
 		$this.toggleClass('is-open');
 		$target.slideToggle();
     });
