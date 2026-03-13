@@ -11,7 +11,7 @@
 @import 'modules/popup';
 
 .main {
-	padding-top: rem(76);
+	padding-top: rem(70);
 
 	@include rwd-min(769px) {
 		padding-top: rem(88);
