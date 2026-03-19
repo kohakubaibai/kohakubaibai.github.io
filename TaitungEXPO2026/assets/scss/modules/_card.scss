@@ -1,3 +1,6 @@
+
+$path: '../images';
+
 .cards {
 	position: relative;
 
@@ -43,9 +46,11 @@
 			height: rem(38);
 			background-size: rem(38);
 			background-repeat: no-repeat;
+			border-radius: 50%;
+			box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
 
 			&.swiper-button-disabled {
-				display: none;
+				// display: none;
 			}
 
 			&.swiper-button-lock {
@@ -58,12 +63,12 @@
 		}
 
 		.swiper-button-prev {
-			left: rem(-46);
+			left: rem(-55);
 			background-image: url('#{$path}/arrow_slide-prev.svg');
 		}
 
 		.swiper-button-next {
-			right: rem(-46);
+			right: rem(-55);
 			background-image: url('#{$path}/arrow_slide-next.svg');
 		}
 	}
@@ -102,22 +107,28 @@
 	}
 
 	&__text {
-		padding: rem(20);
+		padding: rem(26) rem(30);
 		background-color: $white;
 
 		.date {
 			@include f-unbounded;
-			color: #0A0C00;
+			font-size: rem(18);
+			line-height: calc(26 / 18);
+			margin-bottom: rem(10);
+		}
+
+		.time {
+			@include f-unbounded;
+			font-size: rem(20);
+			line-height: calc(26 / 20);
 			margin-bottom: rem(10);
 		}
 
 		.title {
-			color: #0A0C00;
 			@include line-clamp(2);
 		}
 
 		.desc {
-			color: #0A0C00;
 			margin-top: rem(10);
 			@include line-clamp(2);
 		}
@@ -150,21 +161,104 @@
 			}
 		}
 
-		.more {
-			margin-top: rem(12);
+        .project {
+            &__name {
+                @include ellipsis;
+
+                span {
+                    color: $secondary;
+                }
+            }
+
+            &__location {
+                margin-top: rem(6);
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+
+                span {
+                    @include ellipsis;
+                    color: $secondary;
+                }
+
+                &:before {
+                    content: '';
+                    display: block;
+                    flex: 0 0 rem(11);
+                    width: rem(11);
+                    height: rem(14);
+                    background-image: url('#{$path}/deco_location-fill.svg');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    margin-right: rem(10);
+                }
+            }
+
+            &__nature {
+                margin-top: rem(6);
+                display: inline-flex;
+                max-width: 100%;
+                align-items: center;
+                background-color: $bg-3;
+                padding: rem(4) rem(10);
+                overflow: hidden;
+
+                span {
+                    @include ellipsis;
+                    color: $white;
+                }
+            }
+        }
+
+		.action {
+            @include list-reset;
 			display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: rem(20);
 		}
 	}
 
 	&--news {
-		.more {
-			justify-content: flex-start;
+		border: rem(1) solid $secondary;
+
+		.cardItem__image {
+			border-bottom: rem(1) solid $secondary;
+		}
+
+		.cardItem__text {
+			.date {
+				color: $dark;
+			}
+
+			.title {
+				color: $dark;
+			}
+
+			.action {
+				margin-top: rem(40);
+				justify-content: flex-start;
+			}
 		}
 	}
 
-	&--event {
-		.more {
-			justify-content: flex-end;
+	&--dayOf {
+
+		.cardItem__text {
+			.date {
+				color: $primary-hover;
+			}
+
+			.title {
+				color: $primary-hover;
+			}
+
+            .project {
+                margin-top: rem(126);
+            }
 		}
 	}
 }

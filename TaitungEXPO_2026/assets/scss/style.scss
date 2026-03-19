@@ -1782,3 +1782,48 @@ h6 {
 }
 
 @import 'language';
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #FFFFFF;
+	border: 1px solid #EAEAEA;
+	box-shadow: 0 3px 0 #EAEAEA;
+
+	.btn__text {
+		color: #121212;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 22px;
+		margin-right: 3px;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		width: 18px;
+		height: 18px;
+		background-size: 18px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&--popularArea {
+		&:before {
+			background-image: url('/assets/images/icon-popularArea.svg');
+		}
+	}
+
+	&--city {
+		&:before {
+			background-image: url('/assets/images/icon-city.svg');
+		}
+	}
+
+	&--traffic {
+		&:before {
+			background-image: url('/assets/images/icon-traffic.svg');
+		}
+	}
+}

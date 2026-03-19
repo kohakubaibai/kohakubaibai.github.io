@@ -1,8 +1,11 @@
+$path: '../images';
 
 .btn {
     padding: 0;
 	border-radius: 0;
 	border: none;
+    line-height: calc(17 / 14);
+    @include box-sizing(border-box);
     @include transition(all, .3s, ease-in);
 
     .btn__text {
@@ -42,18 +45,20 @@
         }
     }
 
-    &--more {
+    &--goDetail {
         display: flex;
         align-items: center;
-        border-bottom: rem(1) solid #0A0C00;
+        padding-top: rem(10);
+        padding-bottom: rem(4);
+        border-bottom: rem(2) solid $dark;
 
         &:after {
             content: '';
             display: block;
-            width: rem(10);
-            height: rem(10);
-            background-image: url('../images/arrow_more.svg');
-            background-size: rem(10);
+            width: rem(13);
+            height: rem(13);
+            background-image: url('#{$path}/arrow_goDetail-dark.svg');
+            background-size: rem(13);
             background-repeat: no-repeat;
             margin-left: rem(12);
             @include transition(all, .3s, ease-in-out);
@@ -64,6 +69,75 @@
             font-size: rem(14);
             color: #0A0C00;
             font-weight: 600;
+        }
+
+        &:hover {
+            &:after {
+                @include rotate(45);
+            }
+        }
+        @include rwd-not-hover {
+            &:hover {
+                &:after {
+                    @include rotate(0);
+                }
+            }
+        }
+    }
+
+    &--goSubpage {
+        display: flex;
+        align-items: center;
+        padding: rem(9) rem(19);
+        border-width: rem(1);
+        border-style: solid;
+        border-radius: rem(32);
+
+        @include rwd-min(769px) {
+            padding: rem(12) rem(29);
+        }
+
+
+        &:after {
+            content: '';
+            display: block;
+            width: rem(13);
+            height: rem(13);
+            background-size: rem(13);
+            background-repeat: no-repeat;
+            margin-left: rem(10);
+            @include transition(all, .3s, ease-in-out);
+        }
+
+        .btn__text {
+            @include f-unbounded;
+            font-size: rem(14);
+            font-weight: 600;
+        }
+
+        &.is-dark {
+            border-color: $secondary;
+
+            &:after {
+                background-image: url('#{$path}/arrow_goSubpage-dark.svg');
+            }
+
+            .btn__text {
+                color: $secondary;
+            }
+        }
+
+
+        &.is-light {
+            border-color: $white;
+
+            &:after {
+                background-image: url('#{$path}/arrow_goSubpage-light.svg');
+            }
+
+            .btn__text {
+                color: $white;
+            }
         }
 
         &:hover {
@@ -85,13 +159,13 @@
         width: rem(30);
         height: rem(30);
         background-color: transparent;
-        background-image: url('../images/btn_popup-close.svg');
+        background-image: url('#{$path}/btn_popup-close.svg');
         background-size: rem(30);
         background-repeat: no-repeat;
 
         &:not(:disabled):not(.disabled).active,
         &:not(:disabled):not(.disabled):active {
-            background-image: url('../images/btn_popup-close.svg');
+            background-image: url('#{$path}/btn_popup-close.svg');
         }
     }
 
@@ -102,3 +176,4 @@
 
 
 }
+

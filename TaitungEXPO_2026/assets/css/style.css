@@ -2669,3 +2669,44 @@ body.lang--zh .cardItem__text .desc {
   min-height: 3.4rem;
   max-height: 3.4rem;
 }
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  -webkit-box-shadow: 0 3px 0 #EAEAEA;
+          box-shadow: 0 3px 0 #EAEAEA;
+}
+.btn .btn__text {
+  color: #121212;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-right: 3px;
+}
+.btn:before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn--popularArea:before {
+  background-image: url("/assets/images/icon-popularArea.svg");
+}
+.btn--city:before {
+  background-image: url("/assets/images/icon-city.svg");
+}
+.btn--traffic:before {
+  background-image: url("/assets/images/icon-traffic.svg");
+}
