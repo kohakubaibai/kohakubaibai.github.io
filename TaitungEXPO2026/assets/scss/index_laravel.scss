@@ -8,6 +8,7 @@
 @import 'common';
 @import 'modules/button';
 @import 'modules/card';
+@import 'modules/tab';
 @import 'modules/popup';
 
 .main {
@@ -96,6 +97,99 @@
 
 			@include rwd-min(561px) {
 				padding: 0 rem(40);
+			}
+		}
+	}
+}
+
+
+.section--exhibition {
+	padding: rem(80) 0 rem(0);
+	position: relative;
+	background-color: $white;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: rem(93);
+		bottom: rem(0);
+		background-image: url('#{$path}/deco_preview-mb.svg');
+		background-size: rem(390) auto;
+		background-repeat: repeat-x;
+		background-position: center bottom;
+		z-index: 0;
+	}
+
+	@include rwd-min(769px) {
+		padding: rem(100) 0 rem(230);
+
+		&:after {
+			height: rem(230);
+			background-image: url('#{$path}/deco_preview-pc.svg');
+			background-size: rem(511) auto;
+			background-position: 0 bottom;;
+		}
+	}
+
+	.section__title {
+		color: $secondary;
+		text-align: center;
+		margin-bottom: rem(50);
+	}
+
+	.section__content {
+		.container {
+			padding: 0 rem(30);
+
+			@include rwd-min(769px) {
+				padding: 0;
+			}
+		}
+
+		.exhMap {
+			@include rwd-min(1280px) {
+				display: grid;
+				grid-template-columns: 580px 1fr;
+			}
+
+			&__mapImage {
+				background: #e8e0d0;
+				border-right: 2px solid var(--ink);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				.image {
+					width: 100%;
+				}
+
+				@include rwd-min(1280px) {
+					min-height: 425px;
+				}
+			}
+
+			&__mapList {
+				position: relative;
+				min-height: rem(425);
+
+				&__item {
+					overflow: scroll;
+					position: absolute;
+					inset: 0;
+					padding: 2rem;
+					opacity: 0;
+					transform: translateY(8px);
+					pointer-events: none;
+					@include transition(all, .3s, ease-in);
+
+					&.is-active {
+						opacity: 1;
+						transform: translateY(0);
+						pointer-events: auto;
+					}
+				}
 			}
 		}
 	}

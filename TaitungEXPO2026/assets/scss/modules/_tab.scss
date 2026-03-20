@@ -1,0 +1,105 @@
+.tabGroup {
+    margin: 0 auto;
+
+    .tabGroup__selector {
+        position: relative;
+        z-index: 10;
+    }
+
+    &--select {
+        .tabSelect {
+            @include rwd-min(769px) {
+                display: none;
+            }
+        }
+
+        &.is-opened {
+            .tabGroup__selector {
+
+                .tabSelect {
+                    border-radius: rem(15) rem(15) 0 0;
+
+                    &:after {
+                        @include rotate(180);
+                    }
+                }
+
+                .tabOption {
+                    max-height: 400px;
+                    border: 2px solid #9D9D9D;
+                    border-top: 0;
+                }
+            }
+        }
+    }
+
+    &__selector {
+        .tabSelect {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: rem(15) rem(30);
+            border-radius: rem(15);
+            background: var(--ink);
+            user-select: none;
+            border: rem(2) solid #9D9D9D;
+
+            &:after {
+                @include transition(all, .3s, ease-in);
+
+            }
+
+            &__text {
+                color: $secondary-dark;
+            }
+
+            @include rwd-min(769px) {
+                display: none;
+            }
+        }
+
+        .tabOption {
+            @include list-reset;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $white;
+            border-radius: 0 0 rem(15) rem(15);
+            border-top: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            @include rwd-min(769px) {
+                border: 2px solid $secondary;
+                border-bottom: none;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                position: static;
+                background-color: transparent;
+                border: none;
+            }
+
+            &__item {
+                flex: 1;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                padding: rem(16) rem(30);
+                cursor: pointer;
+                background: $white;
+
+                .text {
+                    white-space: nowrap;
+                    color: $secondary-dark;
+                }
+            }
+        }
+    }
+}

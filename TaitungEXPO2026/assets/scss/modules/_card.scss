@@ -1,96 +1,99 @@
 
 $path: '../images';
 
-.cards {
+.cardsList {
 	position: relative;
 
-	.swiper-wrapper {
-		overflow-x: scroll;
-		padding-left: rem(30);
+    &--swiper {
+        .swiper-wrapper {
+            overflow-x: scroll;
+            padding-left: rem(30);
 
-		.swiper-slide {
-			width: rem(290);
-			margin-right: rem(20);
-			@include box-sizing(content-box);
+            .swiper-slide {
+                width: rem(290);
+                margin-right: rem(20);
+                @include box-sizing(content-box);
 
-			&:last-child {
-				padding-right: rem(30);
-			}
-		}
+                &:last-child {
+                    padding-right: rem(30);
+                }
+            }
 
-		@include rwd-min(561px) {
-			overflow-x: visible;
-			padding-left: 0;
-			@include box-sizing(border-box);
+            @include rwd-min(561px) {
+                overflow-x: visible;
+                padding-left: 0;
+                @include box-sizing(border-box);
 
-			.swiper-slide {
-				width: auto;
+                .swiper-slide {
+                    width: auto;
 
-				&:last-child {
-					padding-right: 0;
-				}
-			}
-		}
-	}
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
 
-	.swiper-button-next,
-	.swiper-button-prev {
-		display: none;
-	}
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
 
-	@include rwd-min(561px) {
-		.swiper-button-next,
-		.swiper-button-prev {
-			display: block;
-			width: rem(38);
-			height: rem(38);
-			background-size: rem(38);
-			background-repeat: no-repeat;
-			border-radius: 50%;
-			box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
+        @include rwd-min(561px) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: block;
+                width: rem(38);
+                height: rem(38);
+                background-size: rem(38);
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
 
-			&.swiper-button-disabled {
-				// display: none;
-			}
+                &.swiper-button-disabled {
+                    // display: none;
+                }
 
-			&.swiper-button-lock {
-				display: none;
-			}
+                &.swiper-button-lock {
+                    display: none;
+                }
 
-			&:after {
-				content: '';
-			}
-		}
+                &:after {
+                    content: '';
+                }
+            }
 
-		.swiper-button-prev {
-			left: rem(-55);
-			background-image: url('#{$path}/arrow_slide-prev.svg');
-		}
+            .swiper-button-prev {
+                left: rem(-55);
+                background-image: url('#{$path}/arrow_slide-prev.svg');
+            }
 
-		.swiper-button-next {
-			right: rem(-55);
-			background-image: url('#{$path}/arrow_slide-next.svg');
-		}
-	}
+            .swiper-button-next {
+                right: rem(-55);
+                background-image: url('#{$path}/arrow_slide-next.svg');
+            }
+        }
 
-	@include rwd-min(993px) {
-		.swiper-button-prev {
-			left: rem(-56);
-		}
+        @include rwd-min(993px) {
+            .swiper-button-prev {
+                left: rem(-56);
+            }
 
-		.swiper-button-next {
-			right: rem(-56);
-		}
-	}
+            .swiper-button-next {
+                right: rem(-56);
+            }
+        }
+    }
+
+    &--exhMap {
+        .cardItem {
+            padding: rem(20) 0;
+            border-bottom: rem(1) solid $secondary;
+        }
+    }
 }
 
 .cardItem {
-
-	&__date {
-		@include f-unbounded;
-		color: $white;
-		margin-bottom: rem(10);
-	}
 
 	&__image {
 		position: relative;
@@ -106,8 +109,42 @@ $path: '../images';
 		}
 	}
 
+    &__venue {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &:before {
+            content: '';
+            display: block;
+            width: rem(18);
+            height: rem(45);
+            flex: 0 0 rem(18);
+            background-image: url('#{$path}/deco-venue.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-right: rem(16);
+        }
+
+        .text {
+            display: flex;
+            @include f-unbounded;
+            color: $secondary;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 rem(50);
+            width: rem(50);
+            height: rem(50);
+            background-color: transparent;
+            border: rem(1) solid $secondary;
+            border-radius: rem(4);
+            font-size: rem(18);
+            font-weight: 500;
+        }
+    }
+
 	&__text {
-		padding: rem(26) rem(30);
 		background-color: $white;
 
 		.date {
@@ -125,7 +162,6 @@ $path: '../images';
 		}
 
 		.title {
-			@include line-clamp(2);
 		}
 
 		.desc {
@@ -162,6 +198,7 @@ $path: '../images';
 		}
 
         .project {
+
             &__name {
                 @include ellipsis;
 
@@ -171,7 +208,6 @@ $path: '../images';
             }
 
             &__location {
-                margin-top: rem(6);
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -198,7 +234,6 @@ $path: '../images';
             }
 
             &__nature {
-                margin-top: rem(6);
                 display: inline-flex;
                 max-width: 100%;
                 align-items: center;
@@ -209,6 +244,18 @@ $path: '../images';
                 span {
                     @include ellipsis;
                     color: $white;
+                }
+            }
+
+            &__type {
+                display: inline-flex;
+                max-width: 100%;
+                align-items: center;
+                overflow: hidden;
+
+                span {
+                    @include ellipsis;
+                    color: $bg-2;
                 }
             }
         }
@@ -230,12 +277,15 @@ $path: '../images';
 		}
 
 		.cardItem__text {
+            padding: rem(26) rem(30);
+
 			.date {
 				color: $dark;
 			}
 
 			.title {
 				color: $dark;
+                @include line-clamp(2);
 			}
 
 			.action {
@@ -248,17 +298,97 @@ $path: '../images';
 	&--dayOf {
 
 		.cardItem__text {
+            padding: rem(26) rem(30);
+
 			.date {
 				color: $primary-hover;
 			}
 
 			.title {
 				color: $primary-hover;
+                @include line-clamp(2);
 			}
 
             .project {
                 margin-top: rem(126);
+
+                .project__location {
+                    margin-top: rem(6);
+                }
+                .project__nature {
+                    margin-top: rem(6);
+                }
             }
 		}
 	}
+
+    &--exhMap {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: flex-start;
+        column-gap: rem(16);
+        @include transition(opacity, 0.3s, ease-in);
+
+        .cardItem__venue {
+            flex: 0 0 rem(84);
+
+            .text {
+                @include transition(all, .3s, ease-in);
+            }
+        }
+
+        .cardItem__text {
+            min-width: 0;
+            flex: 0 0 calc(100% - rem(100));
+            width: calc(100% - rem(100));
+
+            .title {
+                color: $black;
+                @include line-clamp(2);
+            }
+
+            .project {
+                min-width: 0;
+                width: 100%;
+                column-gap: rem(8);
+                display: flex;
+                align-items: center;
+
+                &__location {
+                    flex: 1;
+                    min-width: 0;
+                }
+
+                &__type {
+                    flex-shrink: 0;
+                    max-width: 50%;
+                    min-width: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .cardItem__venue {
+                .text {
+                    background-color: $primary-hover;
+                    color: $white;
+                    border-color: $primary-hover;
+                }
+            }
+        }
+
+        @include rwd-not-hover {
+            &:hover {
+                .cardItem__venue {
+                    .text {
+                        background-color: transparent;
+                        color: $secondary;
+                        border-color: $secondary;
+                    }
+                }
+            }
+        }
+    }
 }
