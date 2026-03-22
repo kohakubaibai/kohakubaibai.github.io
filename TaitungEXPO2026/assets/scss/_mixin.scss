@@ -128,11 +128,11 @@
 }
 
 @mixin scaleX($valueX) {
-    @include transform(scale($valueX));
+    @include transform(scaleX($valueX));
 }
 
 @mixin scaleY($valueY) {
-    @include transform(scale($valueY));
+    @include transform(scaleY($valueY));
 }
 
 @mixin scaleXY($valueX,$valueY) {

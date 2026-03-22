@@ -20,6 +20,12 @@ h6 {
 	overflow: hidden;
 }
 
+@media (min-width: 1280px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1180px;
+    }
+}
+
 @keyframes marquee {
 	0% {
 		transform: translateX(0);
@@ -73,7 +79,7 @@ body {
 	width: 100%;
 	overflow: hidden;
 	display: flex;
-	background-color: $white;
+	background-color: #EFF5F9;
 	padding: rem(8) 0;
 
 	.marquee__content {
@@ -127,7 +133,9 @@ body {
 		display: block;
 	}
 
-	iframe {
+	iframe,
+	img,
+	video {
 		@include fit-cover;
 	}
 }

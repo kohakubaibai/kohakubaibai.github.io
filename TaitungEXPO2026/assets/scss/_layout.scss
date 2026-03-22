@@ -21,6 +21,7 @@ $path: '../images';
     right: 0;
 	z-index: 100;
 	background-color: $white;
+	box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
 
 	.sticky-wrapper {
 		background-color: $white;
@@ -119,10 +120,14 @@ $path: '../images';
 			flex-shrink: 0;
     		margin-left: rem(18);
 		}
+
 		.lang-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			cursor: pointer;
-			border: rem(2) solid #717071;
-			color: #717071;
+			border: rem(2) solid $secondary;
+			color: $secondary;
 			font-size: rem(14);
 			text-align: center;
 			background-color: transparent;
@@ -138,12 +143,16 @@ $path: '../images';
 			}
 
 			&:hover {
-				@include scale(1.05);
+				border: rem(2) solid $primary-hover;
+				background-color: $primary-hover;
+				color: $white
 			}
 
 			@include rwd-not-hover {
 				&:hover {
-					@include scale(1);
+					border: rem(2) solid $secondary;
+					background-color: transparent;
+					color: $secondary;
 				}
 			}
 		}
@@ -182,24 +191,6 @@ $path: '../images';
 		}
 
 		.navToggler {
-			width: 100%;
-			display: flex;
-			justify-items: flex-end;
-			flex-direction: row-reverse;
-
-			.menuSwitcher {
-				@include transition(all, .3s, ease-in);
-
-				&:hover {
-					@include scale(1.05);
-				}
-
-				@include rwd-not-hover {
-					&:hover {
-						@include scale(1);
-					}
-				}
-			}
 
 			@include rwd-min(1280px) {
 				display: none;
@@ -344,6 +335,8 @@ $path: '../images';
 	}
 
 	&:hover {
+		text-decoration: none;
+
 		span {
 			top: -3px;
 			color: $primary-hover;
@@ -353,6 +346,7 @@ $path: '../images';
 	@include rwd-not-hover {
 		&:hover {
 			span {
+				color: $secondary;
 				top: 0;
 			}
 		}
@@ -418,19 +412,42 @@ $path: '../images';
 //footer
 .l-footer {
 	position: relative;
-	background: #001D4D;
+	background: #003893;
 	padding: rem(80) 0 rem(30);
 	color: $white;
 	font-size: rem(14);
+	letter-spacing: rem(2);
 	font-weight: 300;
 	text-align: center;
 
-	.logo {
-		a {
-			margin-right: rem(30);
+	.blankLogo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+		column-gap: rem(30);
+
+		.logo__item {
+			display: block;
+
+			img {
+				width: 100%;
+			}
 
 			&:last-child {
 				margin-right: 0;
+			}
+
+			&--icon {
+				width: rem(30);
+			}
+
+			&--text {
+				width: rem(91);
+			}
+
+			@include rwd-min(769px) {
+				width: auto;
 			}
 		}
 	}
@@ -468,5 +485,6 @@ $path: '../images';
 		line-height: 1.5;
 		font-weight: 300;
 		margin-top: rem(30);
+		letter-spacing: normal;
 	}
 }

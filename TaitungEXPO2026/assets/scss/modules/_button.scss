@@ -92,6 +92,7 @@ $path: '../images';
         border-width: rem(1);
         border-style: solid;
         border-radius: rem(32);
+        background-color: transparent;
 
         @include rwd-min(769px) {
             padding: rem(12) rem(29);
@@ -125,6 +126,34 @@ $path: '../images';
             .btn__text {
                 color: $secondary;
             }
+
+            &:hover {
+                border-color: $primary-hover;
+                background-color: $primary-hover;
+
+                &:after {
+                    background-image: url('#{$path}/arrow_goSubpage-light.svg');
+                }
+
+                .btn__text {
+                    color: $white;
+                }
+            }
+
+            @include rwd-not-hover {
+                &:hover {
+                    border-color: $secondary;
+                    background-color: transparent;
+
+                    &:after {
+                        background-image: url('#{$path}/arrow_goSubpage-dark.svg');
+                    }
+
+                    .btn__text {
+                        color: $secondary;
+                    }
+                }
+            }
         }
 
 
@@ -137,6 +166,18 @@ $path: '../images';
 
             .btn__text {
                 color: $white;
+            }
+
+            &:hover {
+                border-color: $primary-hover;
+                background-color: $primary-hover;
+            }
+
+            @include rwd-not-hover {
+                &:hover {
+                    border-color: $white;
+                    background-color: transparent;
+                }
             }
         }
 
@@ -173,7 +214,4 @@ $path: '../images';
         outline: none;
         box-shadow: none;
     }
-
-
 }
-
