@@ -1,10 +1,11 @@
-$path: '../images';
+$path: '/assets/images';
 
 .btn {
     padding: 0;
 	border-radius: 0;
 	border: none;
     line-height: calc(17 / 14);
+    cursor: pointer;
     @include box-sizing(border-box);
     @include transition(all, .3s, ease-in);
 
@@ -85,7 +86,8 @@ $path: '../images';
         }
     }
 
-    &--goSubpage {
+    &--goSubpage,
+    &--blankPage {
         display: flex;
         align-items: center;
         padding: rem(9) rem(19);
@@ -97,7 +99,6 @@ $path: '../images';
         @include rwd-min(769px) {
             padding: rem(12) rem(29);
         }
-
 
         &:after {
             content: '';
@@ -155,7 +156,6 @@ $path: '../images';
                 }
             }
         }
-
 
         &.is-light {
             border-color: $white;

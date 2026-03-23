@@ -53,13 +53,17 @@ $path: '../../images/about';
 	background-image: url('#{$path}/bg_themes-topic-mb.jpg');
 	background-position: center bottom;
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: cover;
 	padding: rem(80) 0 rem(260);
-	
+
 	@include rwd-min(769px) {
 		background-image: url('#{$path}/bg_themes-topic-pc.jpg');
-		height: calc(100dvw* (4311 / 3842));
-		padding: rem(100) 0 rem(715);
+		height: calc(100% + rem(715));
+		padding-bottom: rem(715);
+	}
+
+	@include rwd-min(1600px) {
+		height: calc(100dvh + rem(715));
 	}
 
 	.section__title {
@@ -94,7 +98,7 @@ $path: '../../images/about';
 
 		&__paragraph {
 			color: $bg-1;
-			
+
 			& > p {
 				margin-bottom: rem(20);
 
@@ -121,7 +125,7 @@ $path: '../../images/about';
 		width: 100%;
 		height: rem(123);
 		z-index: 1;
-		
+
 		@include rwd-min(768px) {
 			width: rem(175);
 			height: 100%;
@@ -131,7 +135,7 @@ $path: '../../images/about';
 			top: 0;
 			left: 0;
 		}
-		
+
 		&--after {
 			right: 0;
 			bottom: 0;
@@ -195,6 +199,40 @@ $path: '../../images/about';
 					margin-bottom: 0;
 				}
 			}
+		}
+	}
+}
+
+.section--file {
+	padding: rem(80) 0;
+
+	@include rwd-min(769px) {
+		padding: rem(100) 0;
+	}
+
+	.file {
+		max-width: rem(776);
+		margin: 0 auto;
+
+		&__cover {
+			margin-bottom: rem(30);
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&__name {
+			color: $secondary;
+			text-align: center;
+		}
+
+		&__action {
+			@include list-reset;
+			margin-top: rem(20);
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }
@@ -281,148 +319,5 @@ $path: '../../images/about';
 				}
 			}
 		}
-	}
-}
-
-body {
-	&.lang--en {
-
-        .section--preview {
-            .curatingMap {
-                .wheel-container {
-                    background-image: url('#{$path}/img_curating-en.svg');
-                }
-            }
-
-            .featuresList {
-                & > li {
-                    .featureText {
-                        &--front {
-                            font-size: rem(16);
-                            font-weight: 500;
-                            line-height: 1.35;
-
-                            span {
-                                display: inline-block;
-                            }
-                        }
-
-                        &--back {
-                            a {
-                                font-size: rem(12);
-                                font-weight: 500;
-                                line-height: 2;
-                            }
-                        }
-
-                        @include rwd-min(769px) {
-                            &--front {
-                                font-size: rem(20);
-                                line-height: 1.3;
-
-                                span {
-                                    display: contents;
-                                }
-                            }
-
-                            &--back {
-                                a {
-                                    font-size: rem(20);
-                                    line-height: 1.3;
-                                    margin-bottom: rem(15);
-
-                                    &:last-child {
-                                        margin-bottom: 0;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .section--participation,
-        .section--authorization {
-            .rule {
-                &__title {
-                    font-weight: 600;
-                }
-
-                &__list {
-                    &--li {
-                        & > li {
-                            &:before {
-                                top: rem(8);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-	}
-
-	&.lang--zh {
-		@include f-noto;
-
-        .section--preview {
-            .curatingMap {
-                .wheel-container {
-                    background-image: url('#{$path}/img_curating-zh.svg');
-                }
-            }
-            .featuresList {
-                & > li {
-                    .featureText {
-
-                        &--front {
-                            font-size: rem(20);
-                            line-height: 1.75;
-                            font-weight: 700;
-                        }
-
-                        &--back {
-                            a {
-                                font-size: rem(18);
-                                font-weight: 500;
-                                line-height: 2;
-                            }
-                        }
-
-                        @include rwd-min(769px) {
-                            &--front {
-                                font-size: rem(26);
-                            }
-
-                            &--back {
-                                a {
-                                    font-size: rem(20);
-                                    line-height: 3;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .section--participation,
-        .section--authorization {
-            .rule {
-                &__title {
-                    font-weight: 500;
-                }
-
-                &__list {
-                    &--li {
-                        & > li {
-                            &:before {
-                                top: rem(12);
-                            }
-                        }
-                    }
-                }
-            }
-        }
 	}
 }
