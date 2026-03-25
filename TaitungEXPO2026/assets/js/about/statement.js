@@ -33,7 +33,27 @@ class PopupManager {
         const container = document.getElementById('popupDynamicContent');
         if (!container) return;
 
-        const previewHtml = item.previews.map(text => `<p class="f-h5">${text}</p>`).join('');
+        const tagsHtml = item.tags.map(text => `<li class="f-h5">${text}</li>`).join('');
+
+        let eventsListHtml = '';
+        if (item.events && item.events.length > 0) {
+            const itemsHtml = item.events.map(event => {
+                const isLink = !!event.url;
+                const tag = isLink ? 'a' : 'span';
+                const attr = isLink ? `href="${event.url}" target="_blank"` : '';
+
+                return `
+                    <li>
+                        <${tag} ${attr} class="eventLink">
+                            <span class="eventLink__locate">${event.locate}</span>
+                            <span class="eventLink__name">${event.name}</span>
+                        </${tag}>
+                    </li>
+                `;
+            }).join('');
+
+            eventsListHtml = `<ul class="text__events">${itemsHtml}</ul>`;
+        }
 
         container.innerHTML = `
             <div class="popupBox__content" style="display:block">
@@ -42,14 +62,13 @@ class PopupManager {
                     <div class="text">
                         <div class="text__title f-h4">${item.title}</div>
                         <div class="text__desc f-p">${item.desc}</div>
-                        <dl class="text__tags">
-                            <dt class="f-h5">策展議題</dt>
-                            <dd class="f-h5">${item.tags}</dd>
-                        </dl>
-                        <div class="text__preview">
-                            <div class="previewTitle f-h5">亮點預告</div>
-                            <div class="previewContent">${previewHtml}</div>
+                        <div class="text__tags">
+                            <span class="title">策展議題</span>
+                            <ul class="tags">
+                                ${tagsHtml}
+                            </ul>
                         </div>
+                        ${eventsListHtml}
                     </div>
                 </div>
             </div>

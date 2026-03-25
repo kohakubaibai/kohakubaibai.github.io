@@ -1,4 +1,3 @@
-
 body {
 	&.lang--en {
 		@include f-poppins;
@@ -143,7 +142,7 @@ body {
                         letter-spacing: normal;
                     }
                 }
-                
+
                 &.is-active {
                     .text {
                         font-weight: 600;
@@ -165,6 +164,23 @@ body {
 
                     @include rwd-min(768px) {
                         font-size: rem(14);
+                    }
+                }
+            }
+        }
+
+        .popupBox {
+            .text {
+                &__tags {
+                    .title {
+                        font-size: rem(14);
+                        font-weight: 600;
+                        line-height: 1.35;
+                    }
+
+                    .tags {
+                        flex-direction: column;
+                        flex-wrap: wrap;
                     }
                 }
             }
@@ -308,7 +324,7 @@ body {
                         letter-spacing: rem(1.5);
                     }
                 }
-                
+
                 &.is-active {
                     .text {
                         font-weight: 600;
@@ -332,6 +348,23 @@ body {
                         font-size: rem(15);
                         font-weight: bold;
                         letter-spacing: rem(1.5);
+                    }
+                }
+            }
+        }
+
+        .popupBox {
+            .text {
+                &__tags {
+                    .title {
+                        font-size: rem(16);
+                        font-weight: 500;
+                        line-height: 1.5;
+                        letter-spacing: rem(1.6);
+                    }
+
+                    .tags {
+                        flex-wrap: nowrap;
                     }
                 }
             }
