@@ -56,8 +56,11 @@ $path: "../../images/about";
 	}
 }
 
+
 .section--preview {
+
 	.previewGroup {
+
 		.previewGroup__title {
 			display: flex;
 			flex-direction: column;
@@ -115,7 +118,7 @@ $path: "../../images/about";
 			padding: rem(216) 0 rem(212);
 
 			&:before {
-				content: "";
+				content: '';
 				display: block;
 				z-index: -1;
 				position: fixed;
@@ -124,9 +127,9 @@ $path: "../../images/about";
 				right: 0;
 				width: 100dvw;
 				height: 100dvh;
-				background-image: url("#{$path}/bg_curating-mb.png");
+				background-image: url('#{$path}/bg_curating-mb.png');
 				background-size: 100% auto;
-				background-position: center rem(76);
+				background-position: center rem(70);
 				background-repeat: no-repeat;
 			}
 
@@ -134,7 +137,7 @@ $path: "../../images/about";
 				padding: rem(180) 0 rem(200);
 
 				&:before {
-					background-image: url("#{$path}/bg_curating-pc.png");
+					background-image: url('#{$path}/bg_curating-pc.png');
 					background-position: center;
 					background-size: cover;
 				}
@@ -184,34 +187,35 @@ $path: "../../images/about";
 			position: relative;
 			z-index: 10;
 			background-color: $white;
-			padding-top: rem(30);
+			padding-top: rem(78);
 			padding-bottom: rem(80);
 
 			&:before {
-				content: "";
+				content: '';
 				display: block;
 				position: absolute;
 				left: 0;
-				top: rem(-122);
+				top: rem(-80);
 				width: 100%;
-				height: rem(224);
-				z-index: 0;
-				background-image: url("#{$path}/deco_features-mb.svg");
+				padding-top: calc((158 / 390) * 100%);
+				z-index: 1;
+				background-image: url('#{$path}/deco_curating-mb.svg');
 				background-position: center top;
-				background-repeat: repeat-x;
-				background-size: auto rem(224);
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 
 			@include rwd-min(769px) {
-				padding-top: rem(0);
+				padding-top: rem(100);
 				padding-bottom: rem(100);
 
 				&:before {
-					background-image: url("#{$path}/deco_curating-pc.svg");
-					height: rem(288);
-					top: rem(-122);
-					background-position-x: right;
-					background-size: auto;
+					background-image: url('#{$path}/deco_curating-pc.svg');
+					padding-top: rem(295);
+					top: rem(-90);
+					background-repeat: repeat-x;
+					background-size: auto rem(295);
+					background-position: left top;
 				}
 			}
 
@@ -226,7 +230,7 @@ $path: "../../images/about";
 			}
 
 			.previewGroup__title {
-				color: #4d4d4d;
+				color: #4D4D4D;
 				margin-bottom: rem(50);
 
 				span {
@@ -274,7 +278,7 @@ $path: "../../images/about";
 					top: 0;
 					left: 50%;
 					transform: translate(-50%, -50%);
-					background-image: url("#{$path}/arrow_down.svg");
+					background-image: url('#{$path}/arrow_down.svg');
 					background-size: rem(16);
 					background-repeat: no-repeat;
 					background-position: center;
@@ -397,7 +401,7 @@ $path: "../../images/about";
 			flex: 0 0 calc((100% - rem(14)) / 2);
 
 			&:after {
-				content: "";
+				content: '';
 				display: block;
 				position: absolute;
 				width: 100%;
@@ -405,8 +409,8 @@ $path: "../../images/about";
 				top: 0;
 				left: 0;
 				z-index: 10;
-				background-color: rgba(0, 0, 0, 0.5);
-				@include transition(all, 0.3s, ease-in-out);
+				background-color: rgba(0, 0, 0, .5);
+				@include transition(all, .3s, ease-in-out);
 			}
 
 			.featureImage {
@@ -433,7 +437,7 @@ $path: "../../images/about";
 					a {
 						color: $white;
 						text-decoration: underline;
-						@include transition(all, 0.3s, ease-in-out);
+						@include transition(all, .3s, ease-in-out);
 					}
 				}
 			}
@@ -442,26 +446,27 @@ $path: "../../images/about";
 				margin-right: 0;
 			}
 
-			&:nth-last-child(-2n + 1),
-			&:nth-last-child(-2n + 2) {
+			&:nth-last-child(-2n+1),
+			&:nth-last-child(-2n+2) {
 				margin-bottom: 0;
 			}
 
 			&:hover {
 				&:after {
-					background-color: rgba(0, 0, 0, 0.3);
+					background-color: rgba(0, 0, 0, .3);
 				}
 			}
 
 			@include rwd-not-hover {
 				&:hover {
 					&:after {
-						background-color: rgba(0, 0, 0, 0.5);
+						background-color: rgba(0, 0, 0, .5);
 					}
 				}
 			}
 
 			&.multiple {
+
 				.featureText--back {
 					display: none;
 				}
@@ -493,24 +498,27 @@ $path: "../../images/about";
 				flex: 0 0 calc((100% - rem(60)) / 4);
 
 				&.multiple {
+
 					.featureText {
+
 						&--back {
+
 							a {
 								opacity: 0;
-								animation-duration: 0.3s;
+								animation-duration: .3s;
 								animation-fill-mode: both;
 								animation-name: linkFadeInUp;
 
 								&:nth-child(1) {
-									animation-delay: 0.3s;
+									animation-delay: .3s;
 								}
 
 								&:nth-child(2) {
-									animation-delay: 0.5s;
+									animation-delay: .5s;
 								}
 
 								&:nth-child(3) {
-									animation-delay: 0.7s;
+									animation-delay: .7s;
 								}
 							}
 						}
@@ -579,7 +587,7 @@ $path: "../../images/about";
 
 			&::-webkit-scrollbar-thumb {
 				border-radius: rem(5);
-				background-color: $primary-hover;
+				background-color: $primary;
 			}
 
 			.text__title {
@@ -602,10 +610,12 @@ $path: "../../images/about";
 				.tags {
 					@include list-reset;
 					display: flex;
+					flex-wrap: wrap;
 					column-gap: rem(6);
 
 					& > li {
 						color: $white;
+						white-space: nowrap;
 					}
 				}
 			}

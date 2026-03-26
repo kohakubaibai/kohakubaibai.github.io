@@ -1,0 +1,76 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(14);
+
+    .pagination__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+
+        .text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $secondary;
+        }
+
+        &--prev,
+        &--num,
+        &--next {
+            border-width: rem(1);
+            border-style: solid;
+            border-color: $secondary;
+            border-radius: 50%;
+            width: rem(38);
+            background-color: $white;
+
+            &.is-disabled {
+                border-color: $gray-700;
+
+                .text {
+                    color: $gray-700;
+                }
+            }
+        }
+
+        &--num {
+            &.is-current {
+                background-color: $primary-hover;
+
+                .text {
+                    color: $white;
+                }
+            }
+        }
+
+        &--ellipsis {
+
+            width: rem(19);
+            height: rem(3);
+            &:before {
+                padding-top: rem(3);
+                width: rem(19);
+            }
+        }
+
+        &--next {
+
+        }
+    }
+}
