@@ -58,7 +58,7 @@ class PopupManager {
         container.innerHTML = `
             <div class="popupBox__content" style="display:block">
                 <div class="flexBox">
-                    <div class="image"><img src="/assets/images/about/curating/${item.id}.svg"></div>
+                    <div class="image"><img src="../assets/images/about/curating/${item.id}.svg"></div>
                     <div class="text">
                         <div class="text__title f-h4">${item.title}</div>
                         <div class="text__desc f-p">${item.desc}</div>
