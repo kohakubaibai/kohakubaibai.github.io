@@ -81,6 +81,8 @@ class PopupManager {
     hide() {
         document.getElementById('popup').classList.remove('active');
         document.body.classList.remove('openPopup');
+        const container = document.getElementById('popupDynamicContent');
+        container.innerHTML = ""
     }
 }
 
