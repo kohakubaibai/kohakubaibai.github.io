@@ -528,7 +528,7 @@ a:focus {
   .subMenu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -0.625rem;
     min-width: 10rem;
     background: #fff;
     padding: 0.5rem 1.125rem;

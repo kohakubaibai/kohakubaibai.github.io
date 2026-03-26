@@ -316,7 +316,7 @@ $path: '../images';
 	@include rwd-min(1280px) {
 		position: absolute;
 		top: 100%;
-		left: 0;
+		left: rem(-10);
 		min-width: rem(160);
 		background: $white;
 		padding: rem(8) rem(18);
