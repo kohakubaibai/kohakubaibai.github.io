@@ -1,5 +1,5 @@
 
-$path: '../images';
+$path: '../../images';
 
 .cardsList {
 	position: relative;
@@ -239,7 +239,7 @@ $path: '../images';
 
             .project {
                 margin-top: rem(82);
-                
+
                 @include rwd-min(769px) {
                     margin-top: rem(126);
                 }

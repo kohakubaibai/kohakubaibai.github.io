@@ -1512,7 +1512,7 @@ body.openNav, body.openPopup {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1.125rem;
           flex: 0 0 1.125rem;
-  background-image: url("../images/deco_venue.svg");
+  background-image: url("../../images/deco_venue.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1582,7 +1582,7 @@ body.openNav, body.openPopup {
   width: 0.625rem;
   height: 0.8125rem;
   margin-top: 0.625rem;
-  background-image: url("../images/deco_location.svg");
+  background-image: url("../../images/deco_location.svg");
   background-size: 0.625rem 0.8125rem;
   background-repeat: no-repeat;
   margin-right: 0.625rem;
@@ -1633,7 +1633,7 @@ body.openNav, body.openPopup {
           flex: 0 0 0.6875rem;
   width: 0.6875rem;
   height: 0.875rem;
-  background-image: url("../images/deco_location-fill.svg");
+  background-image: url("../../images/deco_location-fill.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1868,7 +1868,7 @@ body.openNav, body.openPopup {
   position: relative;
   background-color: #003A94;
   background-repeat: no-repeat;
-  background-image: url("../images/opening/layer_1-mb.jpg");
+  background-image: url("../../images/opening/layer_1-mb.jpg");
   background-size: contain;
 }
 .opening:before {
@@ -1892,7 +1892,7 @@ body.openNav, body.openPopup {
 }
 @media (min-width: 769px) {
   .opening {
-    background-image: url("../images/opening/layer_1-pc.jpg");
+    background-image: url("../../images/opening/layer_1-pc.jpg");
   }
   .opening:before {
     padding-top: 56.25%;
@@ -1941,13 +1941,13 @@ body.openNav, body.openPopup {
   width: 100%;
   height: 100%;
   font-size: 0;
-  background-image: url("../images/opening/layer_2-mb.svg");
+  background-image: url("../../images/opening/layer_2-mb.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 @media (min-width: 769px) {
   .opening .hero__layer--1 {
-    background-image: url("../images/opening/layer_2-pc.svg");
+    background-image: url("../../images/opening/layer_2-pc.svg");
   }
 }
 .opening .hero__layer--2 {
@@ -2119,7 +2119,7 @@ body.openNav, body.openPopup {
   padding-top: 4.5rem;
   padding-bottom: 8.125rem;
   background-color: #5D97C4;
-  background-image: url("../images/deco_news.svg");
+  background-image: url("../../images/deco_news.svg");
   background-size: 13.5rem auto;
   background-repeat: repeat-x;
   background-position: -4.5rem bottom;
@@ -2155,7 +2155,7 @@ body.openNav, body.openPopup {
   width: 100%;
   height: 18.8125rem;
   bottom: -6.875rem;
-  background-image: url("../images/deco_preview-mb.svg");
+  background-image: url("../../images/deco_preview-mb.svg");
   background-size: 24.375rem auto;
   background-repeat: repeat-x;
   background-position: center bottom;
@@ -2168,7 +2168,7 @@ body.openNav, body.openPopup {
   .section--event:after {
     bottom: -2.625rem;
     height: 34.25rem;
-    background-image: url("../images/deco_preview-pc.svg");
+    background-image: url("../../images/deco_preview-pc.svg");
     background-size: 31.9375rem auto;
     background-position: 0 bottom;
   }
@@ -2264,7 +2264,7 @@ body.openNav, body.openPopup {
   right: 0;
   width: 100dvw;
   height: 100dvh;
-  background-image: url("../images/bg_curating-mb.png");
+  background-image: url("../../images/bg_curating-mb.png");
   background-size: 100% auto;
   background-position: center 4.75rem;
   background-repeat: no-repeat;
@@ -2274,7 +2274,7 @@ body.openNav, body.openPopup {
     padding: 11.25rem 0 12.5rem;
   }
   .section--preview .previewGroup--curating:before {
-    background-image: url("../images/bg_curating-pc.png");
+    background-image: url("../../images/bg_curating-pc.png");
     background-position: center;
     background-size: cover;
   }
@@ -2318,7 +2318,7 @@ body.openNav, body.openPopup {
   background-color: #fff;
   padding-top: 1.875rem;
   padding-bottom: 8.5625rem;
-  background-image: url("../images/deco_feature-mb.svg");
+  background-image: url("../../images/deco_feature-mb.svg");
   background-position: center bottom;
   background-repeat: repeat-x;
   background-size: auto 13.25rem;
@@ -2332,7 +2332,7 @@ body.openNav, body.openPopup {
   width: 100%;
   height: 14rem;
   z-index: 0;
-  background-image: url("../images/deco_features-mb.svg");
+  background-image: url("../../images/deco_features-mb.svg");
   background-position: center top;
   background-repeat: repeat-x;
   background-size: auto 14rem;
@@ -2344,7 +2344,7 @@ body.openNav, body.openPopup {
     background-size: auto 18rem;
   }
   .section--preview .previewGroup--features:before {
-    background-image: url("../images/deco_curating-pc.svg");
+    background-image: url("../../images/deco_curating-pc.svg");
     height: 18rem;
     top: -7.625rem;
     background-position-x: right;
@@ -2396,7 +2396,7 @@ body.openNav, body.openPopup {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../images/arrow_down.svg");
+  background-image: url("../../images/arrow_down.svg");
   background-size: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -2644,7 +2644,7 @@ body.openNav, body.openPopup {
   background-color: #fff;
   padding-top: 5rem;
   padding-bottom: 5.625rem;
-  background-image: url("../images/bg_vi-mb.svg");
+  background-image: url("../../images/bg_vi-mb.svg");
   background-position: center bottom;
   background-repeat: repeat-x;
   background-size: auto 13.25rem;
@@ -2653,7 +2653,7 @@ body.openNav, body.openPopup {
   .section--vi {
     padding-top: 10rem;
     padding-bottom: 7.5rem;
-    background-image: url("../images/bg_vi-pc.svg");
+    background-image: url("../../images/bg_vi-pc.svg");
     background-size: auto 18.5rem;
   }
 }
@@ -2681,7 +2681,7 @@ body.openNav, body.openPopup {
 }
 .section--vi .viGroup--intro {
   padding-bottom: 8.75rem;
-  background-image: url("../images/deco_vi-intro-mb.svg");
+  background-image: url("../../images/deco_vi-intro-mb.svg");
   background-position: center bottom;
   background-repeat: repeat-x;
   background-size: auto 8.125rem;
@@ -2689,7 +2689,7 @@ body.openNav, body.openPopup {
 @media (min-width: 769px) {
   .section--vi .viGroup--intro {
     padding-bottom: 12.5rem;
-    background-image: url("../images/deco_vi-intro-pc.svg");
+    background-image: url("../../images/deco_vi-intro-pc.svg");
     background-size: auto 9.5625rem;
   }
 }
@@ -2851,7 +2851,7 @@ body.openNav, body.openPopup {
   background-color: #5D97C4;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-image: url("../images/deco-participation.svg");
+  background-image: url("../../images/deco-participation.svg");
   background-size: auto 4.9375rem;
   background-repeat: repeat-x;
   background-position: center bottom;
@@ -2983,7 +2983,7 @@ body.openNav, body.openPopup {
   padding: 6.25rem 0;
   position: relative;
   background-color: #003A94;
-  background-image: url("../images/deco-authorization.svg");
+  background-image: url("../../images/deco-authorization.svg");
   background-size: auto 4.875rem;
   background-repeat: repeat-x;
   background-position: center bottom;
@@ -2997,7 +2997,7 @@ body.openNav, body.openPopup {
   right: 0;
   width: 100%;
   height: 4.875rem;
-  background-image: url("../images/deco-authorization.svg");
+  background-image: url("../../images/deco-authorization.svg");
   background-size: auto 4.875rem;
   background-repeat: repeat-x;
   background-position: center;

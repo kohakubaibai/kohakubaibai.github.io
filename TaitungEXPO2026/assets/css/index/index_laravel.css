@@ -1512,7 +1512,7 @@ body.openNav, body.openPopup {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1.125rem;
           flex: 0 0 1.125rem;
-  background-image: url("../images/deco_venue.svg");
+  background-image: url("../../images/deco_venue.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1582,7 +1582,7 @@ body.openNav, body.openPopup {
   width: 0.625rem;
   height: 0.8125rem;
   margin-top: 0.625rem;
-  background-image: url("../images/deco_location.svg");
+  background-image: url("../../images/deco_location.svg");
   background-size: 0.625rem 0.8125rem;
   background-repeat: no-repeat;
   margin-right: 0.625rem;
@@ -1633,7 +1633,7 @@ body.openNav, body.openPopup {
           flex: 0 0 0.6875rem;
   width: 0.6875rem;
   height: 0.875rem;
-  background-image: url("../images/deco_location-fill.svg");
+  background-image: url("../../images/deco_location-fill.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
