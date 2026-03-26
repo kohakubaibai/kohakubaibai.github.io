@@ -2773,9 +2773,24 @@ body.openNav, body.openPopup {
 .popupBox .flexBox .text .text__events a.eventLink:after {
   content: "";
   display: block;
-  width: 0.625rem;
-  height: 0.625rem;
-  background-color: #5792C2;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  background-image: url("../../images/about/arrow_eventLink.svg");
+  background-size: 0.8125rem;
+  background-repeat: no-repeat;
+  margin-left: 0.625rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.popupBox .flexBox .text .text__events a.eventLink:hover:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media not screen and (hover: hover) {
+  .popupBox .flexBox .text .text__events a.eventLink:hover:after {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }
 
 body.lang--en .section--preview .curatingMap .wheel-container {
