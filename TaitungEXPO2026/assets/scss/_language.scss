@@ -169,6 +169,20 @@ body {
             }
         }
 
+        .filterGroup--default {
+            .filterOption__item {
+                .text {
+                    font-size: rem(13);
+                    line-height: 1.35;
+                    font-weight: 500;
+
+                    @include rwd-min(768px) {
+                        font-size: rem(14);
+                    }
+                }
+            }
+        }
+
         .popupBox {
             .text {
                 &__tags {
@@ -339,6 +353,22 @@ body {
 
         .tabGroup--default {
             .tabOption__item {
+                .text {
+                    font-size: rem(14);
+                    line-height: 1;
+                    font-weight: 600;
+
+                    @include rwd-min(1280px) {
+                        font-size: rem(15);
+                        font-weight: bold;
+                        letter-spacing: rem(1.5);
+                    }
+                }
+            }
+        }
+
+        .filterGroup--default {
+            .filterOption__item {
                 .text {
                     font-size: rem(14);
                     line-height: 1;

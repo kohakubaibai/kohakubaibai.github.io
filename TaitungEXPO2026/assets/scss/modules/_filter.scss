@@ -1,0 +1,123 @@
+
+@mixin filter-button-style {
+    .text {
+        padding: rem(13) rem(21);
+        border-radius: rem(32);
+        border: rem(1) solid $secondary-dark;
+        color: $primary-dark;
+        background: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        @include transition(all, 0.3s, ease-in);
+    }
+
+    &.is-active,
+    &:hover {
+        .text {
+            border: rem(1) solid $primary-dark;
+            background-color: $primary-hover;
+            color: $white;
+            box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
+        }
+    }
+
+    @include rwd-not-hover {
+        &:hover:not(.is-active) {
+            .text {
+                border: rem(1) solid $secondary-dark;
+                background-color: $primary-hover;
+                color: $primary-dark;
+            }
+        }
+    }
+}
+
+.filterGroup {
+    width: 100%;
+    margin: 0 auto;
+
+    &__selector {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__content {
+    }
+
+    .filterOption {
+        @include list-reset;
+        display: flex;
+        transition: all 0.3s ease-in;
+
+        &__item {
+            .text {
+                @include transition(all, 0.3s, ease-in);
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &.jc-center {
+            justify-content: center;
+        }
+        &.jc-start {
+            justify-content: flex-start;
+        }
+    }
+
+    .filterContent {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(rem(10));
+        pointer-events: none;
+        height: 0;
+        overflow: hidden;
+        @include transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+            height: auto;
+        }
+    }
+
+    &--default {
+        .filterOption {
+            flex-wrap: wrap;
+            column-gap: rem(12);
+            row-gap: rem(12);
+
+            @include rwd-min(768px) {
+                flex-wrap: nowrap;
+                column-gap: rem(20);
+            }
+
+            &__item {
+                display: flex;
+                justify-content: center;
+
+                &:first-child {
+                    flex: 0 0 100%;
+                    @include rwd-min(768px) {
+                        flex: initial;
+                        width: auto;
+                    }
+                }
+
+                @include filter-button-style;
+
+                .text {
+                    @include rwd-max(767px) {
+                        padding: rem(11) rem(15);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -878,6 +878,16 @@ body.lang--en .tabGroup--default .tabOption__item .text {
     font-size: 0.875rem;
   }
 }
+body.lang--en .filterGroup--default .filterOption__item .text {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  body.lang--en .filterGroup--default .filterOption__item .text {
+    font-size: 0.875rem;
+  }
+}
 body.lang--en .popupBox .text__tags .title {
   font-size: 0.875rem;
   font-weight: 600;
@@ -1016,6 +1026,18 @@ body.lang--zh .tabGroup--default .tabOption__item .text {
 }
 @media (min-width: 1280px) {
   body.lang--zh .tabGroup--default .tabOption__item .text {
+    font-size: 0.9375rem;
+    font-weight: bold;
+    letter-spacing: 0.09375rem;
+  }
+}
+body.lang--zh .filterGroup--default .filterOption__item .text {
+  font-size: 0.875rem;
+  line-height: 1;
+  font-weight: 600;
+}
+@media (min-width: 1280px) {
+  body.lang--zh .filterGroup--default .filterOption__item .text {
     font-size: 0.9375rem;
     font-weight: bold;
     letter-spacing: 0.09375rem;
@@ -1461,6 +1483,32 @@ body.openNav, body.openPopup {
 
 .cardsList {
   position: relative;
+}
+.cardsList--default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.875rem;
+}
+@media (min-width: 769px) {
+  .cardsList--default {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cardsList--default .cardItem {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc((100% - 3.75rem) / 3);
+            flex: 0 0 calc((100% - 3.75rem) / 3);
+    width: calc((100% - 3.75rem) / 3);
+  }
 }
 .cardsList--exhMap .cardItem {
   padding: 1.25rem 0;

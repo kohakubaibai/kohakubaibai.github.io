@@ -4,6 +4,22 @@ $path: '../../images';
 .cardsList {
 	position: relative;
 
+    &--default {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: rem(30);
+
+        @include rwd-min(769px) {
+            flex-direction: row;
+
+            .cardItem {
+                flex: 0 0 calc((100% - rem(60)) / 3);
+                width: calc((100% - rem(60)) / 3)
+            }
+        }
+    }
+
     &--exhMap {
         .cardItem {
             padding: rem(20) 0;

@@ -1,12 +1,10 @@
-@use "../variables" as *;
-@use "../mixin" as *;
 
 .pagination {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     column-gap: rem(14);
 
     .pagination__item {
@@ -31,8 +29,58 @@
         }
 
         &--prev,
-        &--num,
         &--next {
+            font-size: 0;
+            width: rem(38);
+            @include transition(all, .3s, ease-in);
+            background-size: rem(38);
+        }
+
+        &--prev {
+            background-image: url('#{$path}/arrow_slide-prev-w.svg');
+
+            &.is-disabled {
+                background-image: url('#{$path}/arrow_slide-prev-g.svg');
+
+                &:hover {
+                    background-image: url('#{$path}/arrow_slide-prev-g.svg');
+                }
+            }
+
+            &:hover {
+                background-image: url('#{$path}/arrow_slide-prev-b.svg');
+            }
+
+            @include rwd-not-hover {
+                &:hover {
+                    background-image: url('#{$path}/arrow_slide-prev-w.svg');
+                }
+            }
+        }
+
+        &--next {
+            background-image: url('#{$path}/arrow_slide-next-w.svg');
+
+            &.is-disabled {
+                background-image: url('#{$path}/arrow_slide-next-g.svg');
+
+                &:hover {
+                    background-image: url('#{$path}/arrow_slide-next-g.svg');
+                }
+            }
+
+            &:hover {
+                background-image: url('#{$path}/arrow_slide-next-b.svg');
+            }
+
+            @include rwd-not-hover {
+                &:hover {
+                    background-image: url('#{$path}/arrow_slide-next-w.svg');
+                }
+            }
+        }
+
+        &--num {
             border-width: rem(1);
             border-style: solid;
             border-color: $secondary;
@@ -47,9 +95,7 @@
                     color: $gray-700;
                 }
             }
-        }
 
-        &--num {
             &.is-current {
                 background-color: $primary-hover;
 
@@ -60,17 +106,13 @@
         }
 
         &--ellipsis {
-
             width: rem(19);
             height: rem(3);
             &:before {
                 padding-top: rem(3);
                 width: rem(19);
+                background-image: url('#{$path}/pagination_ellipsis.svg');
             }
-        }
-
-        &--next {
-
         }
     }
 }
