@@ -1325,7 +1325,7 @@ body.openNav, body.openPopup {
   display: block;
   width: 0.8125rem;
   height: 0.8125rem;
-  background-image: url("/assets/images/arrow_goDetail-dark.svg");
+  background-image: url("../../images/images/arrow_goDetail-dark.svg");
   background-size: 0.8125rem;
   background-repeat: no-repeat;
   margin-left: 0.75rem;
@@ -1386,7 +1386,7 @@ body.openNav, body.openPopup {
   border-color: #4D4D4D;
 }
 .btn--goSubpage.is-dark:after, .btn--blankPage.is-dark:after {
-  background-image: url("/assets/images/arrow_goSubpage-dark.svg");
+  background-image: url("../../images/images/arrow_goSubpage-dark.svg");
 }
 .btn--goSubpage.is-dark .btn__text, .btn--blankPage.is-dark .btn__text {
   color: #4D4D4D;
@@ -1396,7 +1396,7 @@ body.openNav, body.openPopup {
   background-color: #003893;
 }
 .btn--goSubpage.is-dark:hover:after, .btn--blankPage.is-dark:hover:after {
-  background-image: url("/assets/images/arrow_goSubpage-light.svg");
+  background-image: url("../../images/images/arrow_goSubpage-light.svg");
 }
 .btn--goSubpage.is-dark:hover .btn__text, .btn--blankPage.is-dark:hover .btn__text {
   color: #fff;
@@ -1407,7 +1407,7 @@ body.openNav, body.openPopup {
     background-color: transparent;
   }
   .btn--goSubpage.is-dark:hover:after, .btn--blankPage.is-dark:hover:after {
-    background-image: url("/assets/images/arrow_goSubpage-dark.svg");
+    background-image: url("../../images/images/arrow_goSubpage-dark.svg");
   }
   .btn--goSubpage.is-dark:hover .btn__text, .btn--blankPage.is-dark:hover .btn__text {
     color: #4D4D4D;
@@ -1417,7 +1417,7 @@ body.openNav, body.openPopup {
   border-color: #fff;
 }
 .btn--goSubpage.is-light:after, .btn--blankPage.is-light:after {
-  background-image: url("/assets/images/arrow_goSubpage-light.svg");
+  background-image: url("../../images/images/arrow_goSubpage-light.svg");
 }
 .btn--goSubpage.is-light .btn__text, .btn--blankPage.is-light .btn__text {
   color: #fff;
@@ -1446,12 +1446,12 @@ body.openNav, body.openPopup {
   width: 1.875rem;
   height: 1.875rem;
   background-color: transparent;
-  background-image: url("/assets/images/btn_popup-close.svg");
+  background-image: url("../../images/images/btn_popup-close.svg");
   background-size: 1.875rem;
   background-repeat: no-repeat;
 }
 .btn--closePopup:not(:disabled):not(.disabled).active, .btn--closePopup:not(:disabled):not(.disabled):active {
-  background-image: url("/assets/images/btn_popup-close.svg");
+  background-image: url("../../images/images/btn_popup-close.svg");
 }
 .btn:focus {
   outline: none;
