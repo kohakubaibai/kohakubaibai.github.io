@@ -271,8 +271,6 @@
 
 		@include rwd-min(769px) {
 			position: absolute;
-			top: 50%;
-			@include translateY(-50%);
 			margin-top: 0;
 			padding: 0 rem(20);
 			justify-content: space-between;

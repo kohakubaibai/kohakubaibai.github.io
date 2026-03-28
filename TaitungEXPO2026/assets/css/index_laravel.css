@@ -2436,9 +2436,6 @@ body.openNav, body.openPopup {
 @media (min-width: 769px) {
   .videoSwiper .swiper-nav {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
     margin-top: 0;
     padding: 0 1.25rem;
     -webkit-box-pack: justify;

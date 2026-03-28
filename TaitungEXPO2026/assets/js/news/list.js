@@ -1,153 +1,94 @@
-class NewsFilter {
-  constructor() {
-    this.currentFilter = 'all';
-    this.currentPage = 1;
-    this.cardsPerPage = 9;
-    this.cards = document.querySelectorAll('.cardItem--news');
-    this.init();
-  }
+$(function () {
+	const eventDays = ["2026-3-5", "2026-3-12", "2026-3-19", "2026-3-28", "2026-7-23", "2026-7-26", "2026-7-31", "2026-8-15"];
 
-  init() {
-    this.bindEvents();
-    this.render();
-  }
+	const startLimit = new Date(2026, 2, 1);
+	const endLimit = new Date(2026, 8, 30);
 
-  bindEvents() {
-    const filterOptions = document.querySelectorAll('.js-filterOption-item');
-    filterOptions.forEach(option => {
-      option.addEventListener('click', (e) => {
-        filterOptions.forEach(opt => opt.classList.remove('is-active'));
-        e.currentTarget.classList.add('is-active');
-        this.currentFilter = e.currentTarget.dataset.filterId;
-        this.currentPage = 1;
-        this.render();
-      });
-    });
-  }
+	function getMonday(d) {
+		d = new Date(d);
+		const day = d.getDay();
+		const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+		return new Date(d.setDate(diff));
+	}
 
-  getFilteredCards() {
-    return Array.from(this.cards).filter(card => {
-      if (this.currentFilter === 'all') return true;
-      return card.dataset.filterTarget === this.currentFilter;
-    });
-  }
+	const firstMonday = getMonday(startLimit);
 
-  render() {
-    this.renderCards();
-    this.renderPagination();
-  }
+	function initSwiperSlides() {
+		let html = "";
+		let currentIterateDate = new Date(firstMonday);
+		const weekDays = ["日", "一", "二", "三", "四", "五", "六"];
 
-  renderCards() {
-    const filtered = this.getFilteredCards();
-    const start = (this.currentPage - 1) * this.cardsPerPage;
-    const pageCards = filtered.slice(start, start + this.cardsPerPage);
+		while (currentIterateDate <= endLimit) {
+			html += '<div class="swiper-slide"><ul class="weekList">';
+			for (let i = 0; i < 7; i++) {
+				let d = new Date(currentIterateDate);
+				d.setDate(currentIterateDate.getDate() + i);
 
-    this.cards.forEach(card => card.style.display = 'none');
-    pageCards.forEach(card => card.style.display = '');
-  }
+				let w = d.getDay();
+        		let weekName = weekDays[w];
+				let m = d.getMonth() + 1;
+				let day = d.getDate();
+				let fullStr = `${d.getFullYear()}-${m}-${day}`;
 
-  renderPagination() {
-    const totalPages = Math.ceil(this.getFilteredCards().length / this.cardsPerPage);
-    const pagination = document.querySelector('.pagination');
-    if (!pagination) return;
+				let isDisabled = d < startLimit || d > endLimit ? "disabled" : "";
+				let hasEventClass = eventDays.includes(fullStr) ? "is-active" : "";
 
-    pagination.querySelectorAll('.pagination__item--num, .pagination__item--ellipsis').forEach(el => el.remove());
+				html += `
+					<li class="weekList__item ${hasEventClass}">
+						<button class="dateBtn ${hasEventClass}" ${isDisabled} data-date="${fullStr}">
+							<div class="dateBtn__text dateBtn__text--weekday f-p">${weekName}</div>
+							<div class="dateBtn__text dateBtn__text--day">${m}/${day}</div>
+						</button>
+					</li>`;
+			}
+			html += "</ul></div>";
+			currentIterateDate.setDate(currentIterateDate.getDate() + 7);
+		}
+		$(".js-calendarSwiper .swiper-wrapper").html(html);
+	}
 
-    const prevItem = pagination.querySelector('.pagination__item--prev');
-    const nextItem = pagination.querySelector('.pagination__item--next');
+	initSwiperSlides();
 
-    this.buildPageItems(totalPages).forEach(item => {
-      nextItem.insertAdjacentElement('beforebegin', item);
-    });
+	const calendarSwiper = new Swiper(".js-calendarSwiper", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
 
-    this.updatePrevNext(prevItem, nextItem, totalPages);
-  }
+	const $datepicker = $('[data-toggle="datepicker"]');
+	$datepicker
+		.datepicker({
+			format: "mm-dd-yyyy",
+			startDate: startLimit,
+			endDate: endLimit,
+			autoHide: true,
+		})
+		.on("pick.datepicker", function (e) {
+			syncToSwiper(e.date);
+		});
 
-  buildPageItems(totalPages) {
-    return this.calcPageRange(totalPages).map(p =>
-      p === '...' ? this.createEllipsis() : this.createPageItem(p, p === this.currentPage)
-    );
-  }
+	function syncToSwiper(targetDate) {
+		const timeDiff = targetDate.getTime() - firstMonday.getTime();
+		const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+		const weekIndex = Math.floor(daysDiff / 7);
 
-  calcPageRange(totalPages) {
-    if (totalPages <= 4) {
-      return Array.from({ length: totalPages }, (_, i) => i + 1);
-    }
+		calendarSwiper.slideTo(weekIndex, 500);
 
-    const pages = [1];
-    let start = Math.max(2, this.currentPage - 1);
-    let end = Math.min(totalPages - 1, this.currentPage + 1);
+		// 高亮選中按鈕
+		const dateStr = `${targetDate.getFullYear()}-${targetDate.getMonth() + 1}-${targetDate.getDate()}`;
+		$(".calendarItem button").removeClass("active");
+		$(`.calendarItem button[data-date="${dateStr}"]`).addClass("active");
+	}
 
-    if (this.currentPage <= 3) { start = 2; end = Math.min(4, totalPages - 1); }
-    if (this.currentPage >= totalPages - 2) { start = Math.max(2, totalPages - 3); end = totalPages - 1; }
+	$(document).on("click", ".calendarItem button:not(:disabled)", function () {
+		const dateStr = $(this).data("date");
+		const selectedDate = new Date(dateStr);
 
-    if (start > 2) pages.push('...');
-    for (let i = start; i <= end; i++) pages.push(i);
-    if (end < totalPages - 1) pages.push('...');
-    pages.push(totalPages);
+		$datepicker.datepicker("setDate", selectedDate);
+		$(".calendarItem button").removeClass("active");
+		$(this).addClass("active");
+	});
 
-    return pages;
-  }
-
-  createPageItem(num, isActive) {
-    const li = document.createElement('li');
-    li.className = 'pagination__item pagination__item--num' + (isActive ? ' is-current' : '');
-    if (isActive) {
-      li.innerHTML = `<span class="text">${num}</span>`;
-    } else {
-      li.innerHTML = `<a href="#" class="text">${num}</a>`;
-      li.querySelector('a').addEventListener('click', (e) => {
-        e.preventDefault();
-        this.goToPage(num);
-      });
-    }
-    return li;
-  }
-
-  createEllipsis() {
-    const li = document.createElement('li');
-    li.className = 'pagination__item pagination__item--ellipsis';
-    li.innerHTML = '<span class="text"></span>';
-    return li;
-  }
-
-  updatePrevNext(prevItem, nextItem, totalPages) {
-    if (this.currentPage <= 1) {
-      prevItem.classList.add('is-disabled');
-      prevItem.innerHTML = '<span class="text">PREV</span>';
-    } else {
-      prevItem.classList.remove('is-disabled');
-      prevItem.innerHTML = '<a href="#" class="text">PREV</a>';
-      prevItem.querySelector('a').addEventListener('click', (e) => {
-        e.preventDefault();
-        this.goToPage(this.currentPage - 1);
-      });
-    }
-
-    if (this.currentPage >= totalPages) {
-      nextItem.classList.add('is-disabled');
-      nextItem.innerHTML = '<span class="text">NEXT</span>';
-    } else {
-      nextItem.classList.remove('is-disabled');
-      nextItem.innerHTML = '<a href="#" class="text">NEXT</a>';
-      nextItem.querySelector('a').addEventListener('click', (e) => {
-        e.preventDefault();
-        this.goToPage(this.currentPage + 1);
-      });
-    }
-  }
-
-  goToPage(page) {
-    this.currentPage = page;
-    this.render();
-    this.scrollToList();
-  }
-
-  scrollToList() {
-    const headerHeight = window.innerWidth >= 1280 ? 88 : 70;
-    const listTop = document.querySelector('.js-filterGroup-content').getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top: listTop - headerHeight, behavior: 'smooth' });
-    }
-}
-
-new NewsFilter();
+	syncToSwiper(new Date() < startLimit ? startLimit : new Date());
+});

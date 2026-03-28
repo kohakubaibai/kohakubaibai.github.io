@@ -272,9 +272,7 @@ $path: "../../images";
 		column-gap: rem(20);
 
 		@include rwd-min(769px) {
-			position: absolute;
-			top: 50%;
-			@include translateY(-50%);
+			position: static;
 			margin-top: 0;
 			padding: 0 rem(20);
 			justify-content: space-between;
@@ -284,6 +282,12 @@ $path: "../../images";
 		.swiper-button-prev {
 			margin-top: 0;
 			position: static;
+
+			@include rwd-min(769px) {
+				position: absolute;
+				top: 50%;
+				@include translateY(-50%);
+			}
 		}
 	}
 

@@ -2435,10 +2435,7 @@ body.openNav, body.openPopup {
 }
 @media (min-width: 769px) {
   .videoSwiper .swiper-nav {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    position: static;
     margin-top: 0;
     padding: 0 1.25rem;
     -webkit-box-pack: justify;
@@ -2450,6 +2447,15 @@ body.openNav, body.openPopup {
 .videoSwiper .swiper-nav .swiper-button-prev {
   margin-top: 0;
   position: static;
+}
+@media (min-width: 769px) {
+  .videoSwiper .swiper-nav .swiper-button-next,
+  .videoSwiper .swiper-nav .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 .videoSwiper .swiper-button-next,
 .videoSwiper .swiper-button-prev {

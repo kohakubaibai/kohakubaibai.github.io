@@ -533,7 +533,7 @@ $path: "../../images/about";
 	width: calc(100% - rem(30));
 	max-width: rem(781);
 	position: absolute;
-	top: 50%;
+	top: calc(50% + rem(88) / 2);
 	left: 50%;
 	z-index: 10;
 	@include translate(-50%, -50%);
@@ -560,7 +560,7 @@ $path: "../../images/about";
 		@include rwd-min(769px) {
 			flex-direction: row;
 			padding: rem(45) rem(90) rem(30) rem(75);
-			max-height: rem(595);
+			max-height: calc(100dvh - rem(200));
 		}
 
 		.image {
@@ -574,9 +574,9 @@ $path: "../../images/about";
 		}
 
 		.text {
-			max-height: calc(100dvh - rem(270));
+			max-height: calc(90dvh);
 			overflow-y: auto;
-			padding-right: rem(10);
+			padding-right: rem(30);
 
 			&::-webkit-scrollbar {
 				-webkit-appearance: none;
@@ -662,12 +662,12 @@ $path: "../../images/about";
 					&:after {
 						content: '';
 						display: block;
+						flex: 0 0 rem(13);
 						width: rem(13);
 						height: rem(13);
 						background-image: url("#{$path}/arrow_eventLink.svg");
 						background-size: rem(13);
 						background-repeat: no-repeat;
-						margin-left: rem(10);
 						@include transition(all, .3s, ease-in);
 					}
 

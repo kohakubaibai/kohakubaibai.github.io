@@ -2668,7 +2668,7 @@ body.openNav, body.openPopup {
   width: calc(100% - 1.875rem);
   max-width: 48.8125rem;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 5.5rem / 2);
   left: 50%;
   z-index: 10;
   -webkit-transform: translate(-50%, -50%);
@@ -2704,7 +2704,7 @@ body.openNav, body.openPopup {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 2.8125rem 5.625rem 1.875rem 4.6875rem;
-    max-height: 37.1875rem;
+    max-height: calc(100dvh - 12.5rem);
   }
 }
 .popupBox .flexBox .image {
@@ -2718,9 +2718,9 @@ body.openNav, body.openPopup {
   }
 }
 .popupBox .flexBox .text {
-  max-height: calc(100dvh - 16.875rem);
+  max-height: 90dvh;
   overflow-y: auto;
-  padding-right: 0.625rem;
+  padding-right: 1.875rem;
 }
 .popupBox .flexBox .text::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -2821,12 +2821,14 @@ body.openNav, body.openPopup {
 .popupBox .flexBox .text .text__events a.eventLink:after {
   content: "";
   display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0.8125rem;
+          flex: 0 0 0.8125rem;
   width: 0.8125rem;
   height: 0.8125rem;
   background-image: url("../../images/about/arrow_eventLink.svg");
   background-size: 0.8125rem;
   background-repeat: no-repeat;
-  margin-left: 0.625rem;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
