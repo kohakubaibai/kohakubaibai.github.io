@@ -1,0 +1,250 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap');
+@import '../variables';
+@import '../mixin';
+@import '../normalize';
+@import '../layout';
+@import '../language';
+@import '../common';
+@import '../modules/button';
+@import '../modules/card';
+@import '../modules/filter';
+@import '../modules/pagination';
+
+$modulePath: '../../images';
+$path: '../../images/participation';
+
+.main {
+	padding-top: rem(70);
+
+	@include rwd-min(1280px) {
+		padding-top: rem(88);
+	}
+}
+
+
+.imageSwiper {
+    position: relative;
+
+    .swiper-button-next,
+	.swiper-button-prev {
+		display: block;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
+		width: rem(30);
+		height: rem(30);
+		background-size: rem(30);
+		@include transition(all, .3s, ease-in);
+
+		&.swiper-button-lock {
+			display: none;
+		}
+
+		&:after {
+			content: '';
+		}
+
+		@include rwd-min(769px) {
+			width: rem(38);
+			height: rem(38);
+			background-size: rem(38);
+		}
+	}
+
+    .swiper-button-prev {
+		background-image: url('#{$modulePath}/arrow_slide-prev-w.svg');
+
+		&:hover {
+			background-image: url('#{$modulePath}/arrow_slide-prev-b.svg');
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				background-image: url('#{$modulePath}/arrow_slide-prev-w.svg');
+			}
+		}
+	}
+
+	.swiper-button-next {
+		background-image: url('#{$modulePath}/arrow_slide-next-w.svg');
+
+		&:hover {
+			background-image: url('#{$modulePath}/arrow_slide-next-b.svg');
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				background-image: url('#{$modulePath}/arrow_slide-next-w.svg');
+			}
+		}
+	}
+}
+
+.section {
+
+	.container {
+		@include rwd-min(769px) {
+			max-width: rem(780);
+			padding: 0;
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__content {
+
+		.intro {
+			.paragraph {
+				margin-bottom: rem(20);
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.imageList {
+			margin-top: rem(30);
+
+			@include rwd-min(769px) {
+				margin-top: rem(40);
+			}
+		}
+
+		.action {
+			@include list-reset;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: nowrap;
+			gap: rem(20);
+			margin-top: rem(30);
+
+			@include rwd-min(769px) {
+				margin-top: rem(40);
+			}
+		}
+	}
+
+	.imgWrap {
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			padding-top: calc((439 / 780) * 100%);
+		}
+
+		img {
+			@include fit-cover;
+		}
+	}
+
+	.swiper-button-prev {
+		left: rem(15);
+
+		@include rwd-min(769px) {
+			left: rem(-58);
+		}
+	}
+
+	.swiper-button-next {
+		right: rem(15);
+
+		@include rwd-min(769px) {
+			right: rem(-58);
+		}
+	}
+}
+
+.section--intro {
+	position: relative;
+	background-color: #5D97C4;
+	padding: rem(80) 0 rem(115);
+
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		padding-top: calc((35 / 390) * 100%);
+		background-image: url('#{$path}/deco_curve-mb.svg');
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		position: absolute;
+		background-size: contain;
+		left: 0;
+		bottom: 0;
+	}
+
+	@include rwd-min(769px) {
+		padding: rem(100) 0 rem(280);
+
+		&:after {
+			padding-top: calc((180 / 1280) * 100%);
+			background-image: url('#{$path}/deco_curve-pc.svg');
+		}
+	}
+
+	.section__title {
+		margin-bottom: rem(50);
+
+		.title {
+			color: $white;
+		}
+	}
+
+	.section__content {
+
+		.intro {
+			.paragraph {
+				color: $white;
+			}
+		}
+	}
+}
+
+.section--review {
+	.container {
+		padding-top: rem(60);
+		padding-bottom: rem(80);
+
+		@include rwd-min(769px) {
+			padding-top: 0;
+			padding-bottom: rem(100);
+		}
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		padding-top: calc((96 / 390) * 100%);
+		background-image: url('#{$path}/deco_review.svg');
+		background-size: contain;
+		background-repeat: repeat-x;
+		background-position: rem(-45) top;
+
+		@include rwd-min(769px) {
+			padding-top: rem(180);
+			background-position: center;
+		}
+	}
+
+	.section__title {
+		margin-bottom: rem(30);
+
+		.title {
+			color: $secondary
+		}
+	}
+
+	.section__content {
+		.intro {
+			.paragraph {
+				color: $secondary;
+			}
+		}
+	}
+}

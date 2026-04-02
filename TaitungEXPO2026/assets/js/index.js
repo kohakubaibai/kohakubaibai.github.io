@@ -104,7 +104,6 @@ class CardSwiper {
         });
     }
 }
-
 class CarouselSlider {
     constructor(selector, options = {}) {
         this.selector = selector;

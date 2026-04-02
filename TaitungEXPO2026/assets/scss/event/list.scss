@@ -11,6 +11,7 @@
 @import '../modules/filter';
 @import '../modules/pagination';
 
+$commonPath: '../../images';
 $path: '../../images/event';
 
 .main {
@@ -50,6 +51,13 @@ $path: '../../images/event';
 	}
 
 	.section__content {
+		.searchBar {
+			margin-bottom: rem(50);
+
+			@include rwd-min(769px) {
+				margin-bottom: rem(20);
+			}
+		}
 
 		.pagination {
 			margin-top: rem(40);
@@ -58,23 +66,36 @@ $path: '../../images/event';
 
 	.searchBar {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		flex-wrap: nowrap;
+		gap: rem(20);
+
+		@include rwd-min(769px) {
+			justify-content: center;
+			flex-wrap: nowrap;
+		}
 
 		&__content {
 			display: flex;
+			flex-wrap: wrap;
+			gap: rem(10);
 			align-items: center;
-		}
-	}
 
-	.barItem {
-		&__tool {
-			position: relative;
+			.action {
+				position: relative;
+			}
 		}
 	}
 
 	.calendar {
+		max-width: 830px;
+		margin: 0 auto;
 		position: relative;
+	}
+
+	.result {
+		max-width: rem(786);
+		margin: rem(50) auto 0;
 	}
 
 	.datepickerItem {
@@ -83,9 +104,12 @@ $path: '../../images/event';
 		&--icon {
 			display: block;
 			border-radius: 50%;
-			width: rem(30);
-			height: rem(30);
-			background-color: $bg-1;
+			width: rem(50);
+			height: rem(50);
+			background-image: url('#{$path}/deco_calendar.svg');
+			background-size: rem(50);
+			background-repeat: no-repeat;
+			background-position: center;
 			margin-bottom: 0;
 		}
 
@@ -94,10 +118,10 @@ $path: '../../images/event';
 			left: 0;
 			top: 0;
 			opacity: 0;
-
 			border-radius: 50%;
-			width: rem(30);
-			height: rem(30);
+			width: rem(50);
+			height: rem(50);
+			cursor: pointer;
 		}
 	}
 
@@ -106,8 +130,19 @@ $path: '../../images/event';
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
-		justify-content: center;
-		column-gap: rem(20);
+		justify-content: flex-start;
+		overflow-x: auto;
+		width: calc(100% - rem(74));
+		margin: 0 auto;
+
+		@include rwd-min(768px) {
+			column-gap: rem(10);
+			justify-content: center;
+		}
+
+		@include rwd-min(769px) {
+			width: 100%;
+		}
 
 		&__item {
 			display: flex;
@@ -122,7 +157,7 @@ $path: '../../images/event';
 				width: rem(12);
 				height: rem(12);
 				border-radius: 50%;
-				margin-top: rem(22);
+				margin-top: rem(10);
 				background-color: transparent;
 			}
 
@@ -137,13 +172,18 @@ $path: '../../images/event';
 
 	.dateBtn {
 		display: flex;
-		padding: rem(12) rem(18);
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		border: none;
 		background-color: $white;
+		width: rem(70);
+		padding: rem(10) 0;
+
+		@include rwd-min(769px) {
+			width: rem(110);
+		}
 
 		.dateBtn__text {
 			&--weekday {
@@ -152,11 +192,16 @@ $path: '../../images/event';
 			}
 			&--day {
 				@include f-unbounded;
-				font-size: rem(30);
+				font-size: rem(18);
 				font-weight: bold;
 				line-height: 1;
-				letter-spacing: rem(2.5);
+				letter-spacing: rem(1.8);
 				color: $secondary;
+
+				@include rwd-min(769px) {
+					font-size: rem(26);
+					letter-spacing: rem(2.6);
+				}
 			}
 		}
 
@@ -166,7 +211,7 @@ $path: '../../images/event';
 		.dateBtn__day {
 		}
 
-		&.is-active {
+		&.is-selected {
 			border-radius: rem(10);
 			background-color: $bg-3;
 
@@ -175,5 +220,70 @@ $path: '../../images/event';
 			}
 		}
 
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: rem(31);
+		height: rem(31);
+		background-size: rem(31);
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
+		@include transition(all, .3s, ease-in);
+
+		&:after {
+			content: '';
+		}
+	}
+
+	.swiper-button-prev {
+		left: 0;
+		background-image: url('#{$commonPath}/arrow_slide-prev-w.svg');
+
+		&:hover {
+			background-image: url('#{$commonPath}/arrow_slide-prev-b.svg');
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				background-image: url('#{$commonPath}/arrow_slide-prev-w.svg');
+			}
+		}
+	}
+
+	.swiper-button-next {
+		right: 0;
+		background-image: url('#{$commonPath}/arrow_slide-next-w.svg');
+
+		&:hover {
+			background-image: url('#{$commonPath}/arrow_slide-next-b.svg');
+		}
+
+		@include rwd-not-hover {
+			&:hover {
+				background-image: url('#{$commonPath}/arrow_slide-next-w.svg');
+			}
+		}
+	}
+
+	@include rwd-min(769px) {
+		.swiper-button-next,
+		.swiper-button-prev {
+			width: rem(31);
+			height: rem(31);
+			background-size: rem(31);
+		}
+
+		.swiper-button-prev {
+			left: rem(-55);
+		}
+
+		.swiper-button-next {
+			right: rem(-55);
+		}
 	}
 }

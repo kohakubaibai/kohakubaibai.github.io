@@ -72,8 +72,8 @@
 							</div>
 						</div>
 						<ul class="navbar mainMenu">
-							<li class="mainMenu__item mainMenu__item--single"><a href="./list.html" class="menuText"><span>最新消息</span></a></li>
-							<li class="mainMenu__item mainMenu__item--single"><a href="#" class="menuText"><span>活動行事曆</span></a></li>
+							<li class="mainMenu__item mainMenu__item--single"><a href="../news/list.html" class="menuText"><span>最新消息</span></a></li>
+							<li class="mainMenu__item mainMenu__item--single"><a href="./list.html" class="menuText"><span>活動行事曆</span></a></li>
 							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>交通資訊</span></div>
 								<ul class="subMenu">
@@ -84,17 +84,17 @@
 							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>展會資訊</span></div>
 								<ul class="subMenu">
-									<li class="subMenu__item"><a href="./themes.html" class="menuText"><span>主題介紹</span></a></li>
-									<li class="subMenu__item"><a href="./statement.html" class="menuText"><span>策展論述</span></a></li>
-									<li class="subMenu__item"><a href="./vi.html" class="menuText"><span>品牌視覺系統</span></a></li>
+									<li class="subMenu__item"><a href="../about/themes.html" class="menuText"><span>主題介紹</span></a></li>
+									<li class="subMenu__item"><a href="../about/statement.html" class="menuText"><span>策展論述</span></a></li>
+									<li class="subMenu__item"><a href="../about/vi.html" class="menuText"><span>品牌視覺系統</span></a></li>
 									<li class="subMenu__item"><a href="#" class="menuText"><span>展會概覽</span></a></li>
 								</ul>
 							</li>
 							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>民間參與計畫</span></div>
 								<ul class="subMenu">
-									<li class="subMenu__item"><a href="#" class="menuText"><span>計畫介紹</span></a></li>
-									<li class="subMenu__item"><a href="#" class="menuText"><span>計畫一覽</span></a></li>
+									<li class="subMenu__item"><a href="../participation/list.html" class="menuText"><span>計畫介紹</span></a></li>
+									<li class="subMenu__item"><a href="../participation/list.html#list" class="menuText"><span>計畫一覽</span></a></li>
 								</ul>
 							</li>
 							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
@@ -129,10 +129,10 @@
 	</header>
 	<!-- header end -->
     <main class="main">
-        <section class="section section--calendar">
+		<section class="section section--calendar">
 			<div class="section__title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
 				<div class="container">
-					<span class="title f-title-primary">活動行事曆</span>
+					<span class="title f-title-primary is-pageTitle">活動行事曆</span>
 				</div>
 			</div>
 			<div class="section__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">
@@ -148,6 +148,7 @@
 						<div class="searchBar__content searchBar__content--links">
 							<div class="text f-p">如需瀏覽常態展覽資訊，請前往</div>
 							<div class="action"><a href="#" class="btn btn--inside"><span class="btn__text">展覽概覽</span></a></div>
+							<div class="text f-p">頁面</div>
 						</div>
 					</div>
 					<div class="calendar calendarSwiper">
@@ -160,22 +161,41 @@
 						<div class="swiper-button-prev"></div>
 					</div>
 					<div class="result">
-						<div class="result__hint f-p">本日無活動。</div>
+						<div class="result__hint f-p">本日無活動</div>
 						<div class="result__list">
-							<div class="cardsList cardsList--default">
-								<div class="cardItem cardItem--news" data-filter-target="event">
-									<div class="cardItem__image">
-										<img src="https://picsum.photos/id/236/300/300" alt="縣府辦理《冠軍之路》電影欣賞 預告2026台東博覽會：紅土之上棒球特展">
+							<div class="cardsList cardsList--column">
+								<div class="cardItem cardItem--event" data-filter-target="event">
+									<div class="cardWrap">
+										<div class="cardItem__image">
+											<img src="https://picsum.photos/id/236/580/435" alt="縣府辦理《冠軍之路》電影欣賞 預告2026台東博覽會：紅土之上棒球特展">
+										</div>
+										<div class="cardItem__text">
+											<div class="time">10:00-12:00</div>
+											<div class="type"><span>#計畫類型</span></div>
+											<div class="title f-h4">活動名稱/計畫名稱</div>
+											<ul class="natures">
+												<li>#活動性質</li>
+												<li>#活動性質</li>
+												<li>#活動性質</li>
+												<li>#活動性質</li>
+												<li>#活動性質</li>
+											</ul>
+											<ul class="links">
+												<li class="f-h5"><a href="#" class="map">地點地點地點有連結</a></li>
+												<li class="f-h5"><span class="map">地點地點地點無連結</span></li>
+												<li class="f-h5">開放團體導覽預約<a href="#" class="reserveLink" target="_blank"><span class="reserveLink__text">團體導覽預約</span></a></li>
+												<li class="f-h5">自由參加</li>
+												<li class="f-h5">預約參加<a href="#" class="reserveLink" target="_blank"><span class="reserveLink__text">預約</span></a></li>
+												<li class="f-h5">事前報名<a href="#" class="reserveLink" target="_blank"><span class="reserveLink__text">報名</span></a></li>
+												<li class="f-h5">需購票<a href="#" class="reserveLink" target="_blank"><span class="reserveLink__text">購票</span></a></li>
+											</ul>
+										</div>
 									</div>
-									<div class="cardItem__text">
-										<div class="date">2026.2.25</div>
-										<div class="title f-h4">【活動消息】縣府辦理《冠軍之路》電影欣賞 預告2026台東博覽會：紅土之上棒球特展</div>
-										<ul class="action">
-											<li>
-												<a href="#" class="btn btn--goDetail" target="_blank"><span class="btn__text">READ MORE</span></a>
-											</li>
-										</ul>
-									</div>
+									<ul class="cardItem__action">
+										<li>
+											<a href="#" class="btn btn--goDetail" target="_blank"><span class="btn__text">READ MORE</span></a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -190,7 +210,7 @@
 			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
 			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
 		</h3>
-    </main>
+	</main>
 
 	<footer id="contact" class="l-footer">
 		<div class="container">
@@ -227,7 +247,8 @@
 	<script src="../assets/js/index.js"></script>
 	<script src="../assets/js/navbar.js"></script>
 	<script src="../assets/js/datepicker-master/dist/datepicker.js"></script>
-	<script src="../assets/js/news/list.js"></script>
+	<script src="../assets/js/event/weeklyCalendar.js"></script>
+	<script src="../assets/js/event/list.js"></script>
 </body>
 
 </html>

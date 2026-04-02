@@ -14,33 +14,64 @@ $path: '../../images';
     }
 
     &--blank {
-        padding: rem(14) rem(30);
-        border-radius: rem(30);
-        background-color: $white;
-
-        .btn__text {
-            display: block;
-            font-size: rem(14);
-            color: $primary-dark;
-            @include transition(opacity, .3s, ease-in-out);
-        }
+        display: flex;
+        align-items: center;
+        padding: rem(9) rem(19);
+        border-width: rem(1);
+        border-style: solid;
+        border-radius: rem(44);
+        background-color: transparent;
 
         @include rwd-min(769px) {
+            padding: rem(12) rem(29);
+        }
+
+        &.is-dark {
+            border-color: $secondary;
+
             .btn__text {
-                font-size: rem(16);
+                color: $secondary;
+            }
+        }
+
+        &.is-light {
+            border-color: $white;
+
+            .btn__text {
+                color: $white;
             }
         }
 
         &:hover {
+            text-decoration: none;
+            border-color: $primary-hover;
+            background-color: $primary-hover;
+
             .btn__text {
-                opacity: 0.7;
+                color: $white;
             }
         }
 
         @include rwd-not-hover {
-            &:hover {
-                .btn__text {
-                    opacity: 1;
+            &.is-dark {
+                &:hover {
+                    background-color: transparent;
+                    border-color: $secondary;
+
+                    .btn__text {
+                        color: $secondary;
+                    }
+                }
+            }
+
+
+            &.is-light {
+                &:hover {
+                    border-color: $white;
+
+                    .btn__text {
+                        color: $white;
+                    }
                 }
             }
         }
@@ -119,6 +150,7 @@ $path: '../../images';
 
         &.is-dark {
             border-color: $secondary;
+            background-color: $white;
 
             &:after {
                 background-image: url('#{$path}/arrow_goSubpage-dark.svg');
@@ -144,7 +176,7 @@ $path: '../../images';
             @include rwd-not-hover {
                 &:hover {
                     border-color: $secondary;
-                    background-color: transparent;
+                    background-color: white;
 
                     &:after {
                         background-image: url('#{$path}/arrow_goSubpage-dark.svg');
@@ -196,12 +228,138 @@ $path: '../../images';
         }
     }
 
+    &--inside {
+        display: flex;
+        align-items: center;
+        padding: rem(11) rem(19);
+        border: rem(1) solid $secondary-dark;
+        border-radius: rem(32);
+        background-color: transparent;
+
+        @include rwd-min(769px) {
+            padding: rem(13) rem(21);
+        }
+
+        .btn__text {
+            @include f-unbounded;
+            font-size: rem(14);
+            font-weight: 600;
+            color: $primary-dark;
+
+            @include rwd-min(769px) {
+                font-size: rem(15);
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            border: rem(1) solid $primary-hover;
+            background-color: $primary-hover;
+            box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
+
+            .btn__text {
+                color: $white;
+            }
+        }
+
+        @include rwd-not-hover {
+            &:hover {
+                background-color: transparent;
+                border: rem(1) solid $secondary-dark;
+                box-shadow: none;
+                .btn__text {
+                    color: $primary-dark;
+                }
+            }
+        }
+    }
+
+    &--customLink {
+        display: flex;
+        align-items: center;
+        padding: rem(9) rem(19);
+        border: rem(1) solid $secondary;
+        border-radius: rem(44);
+        background-color: transparent;
+
+        @include rwd-min(769px) {
+            padding: rem(12) rem(29);
+        }
+
+        .btn__text {
+            color: $secondary;
+        }
+
+        &:hover {
+            text-decoration: none;
+            border: rem(1) solid $primary-hover;
+            background-color: $primary-hover;
+
+            .btn__text {
+                color: $white;
+            }
+        }
+
+        @include rwd-not-hover {
+            &:hover {
+                background-color: transparent;
+                border: rem(1) solid $secondary;
+                box-shadow: none;
+
+                .btn__text {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+
+    &--eventDetail {
+        display: flex;
+        align-items: center;
+        padding-top: rem(10);
+        padding-bottom: rem(4);
+        border-bottom: rem(2) solid $dark;
+
+        &:after {
+            content: '';
+            display: block;
+            width: rem(13);
+            height: rem(13);
+            background-image: url('#{$path}/arrow_goDetail-dark.svg');
+            background-size: rem(13);
+            background-repeat: no-repeat;
+            margin-left: rem(12);
+            @include transition(all, .3s, ease-in-out);
+        }
+
+        .btn__text {
+            @include f-unbounded;
+            font-size: rem(14);
+            color: #0A0C00;
+            font-weight: 600;
+        }
+
+        &:hover {
+            &:after {
+                @include rotate(45);
+            }
+        }
+
+        @include rwd-not-hover {
+            &:hover {
+                &:after {
+                    @include rotate(0);
+                }
+            }
+        }
+    }
+
     &--closePopup {
-        width: rem(30);
+        width: rem(31);
         height: rem(30);
         background-color: transparent;
         background-image: url('#{$path}/btn_popup-close.svg');
-        background-size: rem(30);
+        background-size: rem(31) rem(30);
         background-repeat: no-repeat;
 
         &:not(:disabled):not(.disabled).active,

@@ -1,6 +1,11 @@
+
 body {
 	&.lang--en {
 		@include f-poppins;
+
+        .f-unbonded {
+            @include f-unbounded;
+        }
 
 		.display--en {
 			display: block;
@@ -20,6 +25,24 @@ body {
 
         .l-footer {
 	        line-height: 1.35;
+
+            .info {
+                & > li {
+                    font-size: rem(14);
+                    font-weight: 300;
+                    line-height: 1.75;
+                    letter-spacing: normal;
+                }
+            }
+
+            .sectors {
+                & > li {
+                    font-size: rem(14);
+                    font-weight: 300;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                }
+            }
         }
 
         .btn {
@@ -34,6 +57,22 @@ body {
                     font-size: rem(16);
                 }
             }
+
+            &--customLink {
+
+                .btn__text {
+
+                    @include f-unbounded;
+                    font-size: rem(14);
+                    font-weight: 600;
+                    line-height: 1.5;
+                    letter-spacing: rem(0.56);
+
+                    @include rwd-min(769px) {
+                        letter-spacing: rem(1.4);
+                    }
+                }
+            }
         }
 
         .f-title-primary {
@@ -45,6 +84,10 @@ body {
             @include rwd-min(769px) {
                 font-size: rem(28);
                 letter-spacing: rem(2.8);
+            }
+
+            &.is-pageTitle {
+                @include f-unbounded;
             }
         }
 
@@ -125,6 +168,25 @@ body {
                     }
                 }
             }
+
+            &--event {
+                .cardItem__text {
+                    .links {
+                        & > li {
+                            &:before {
+                                top: rem(4);
+                            }
+                        }
+
+                        .reserveLink {
+                            .reserveLink__text {
+                                font-size: rem(14);
+                                line-height: 1.35;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .tabGroup--select {
@@ -169,20 +231,6 @@ body {
             }
         }
 
-        .filterGroup--default {
-            .filterOption__item {
-                .text {
-                    font-size: rem(13);
-                    line-height: 1.35;
-                    font-weight: 500;
-
-                    @include rwd-min(768px) {
-                        font-size: rem(14);
-                    }
-                }
-            }
-        }
-
         .popupBox {
             .text {
                 &__tags {
@@ -196,6 +244,73 @@ body {
                         flex-direction: column;
                         flex-wrap: wrap;
                     }
+                }
+            }
+        }
+
+        .m-subPage {
+            &__head {
+                .pageLabel {
+
+                    .pageLabel__text {
+                        font-size: rem(14);
+                        line-height: 1.35;
+                        font-weight: 300;
+                    }
+                }
+
+                .team,
+                .newsDate {
+                    line-height: 1.5;
+                    letter-spacing: rem(1.6);
+                }
+            }
+
+            &__summary {
+                .list {
+                    & > li {
+                        &:before {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section--preview {
+            .previewGroup {
+                .previewGroup__title {
+                    & > span {
+                        @include f-poppins;
+                        font-size: rem(16);
+                        line-height: 1.35;
+                        font-weight: 600;
+                        letter-spacing: rem(1.6);
+
+                        @include rwd-min(769px) {
+                            @include f-unbounded;
+                            font-size: rem(24);
+                            font-weight: bold;
+                            line-height: 1.4;
+                            letter-spacing: rem(2.4);
+                        }
+                    }
+                }
+
+                &--curating {
+                    .hero {
+                        .container {
+                            max-width: rem(924);
+                        }
+                    }
+                }
+            }
+        }
+
+        .section--review {
+            .section__title {
+                .title {
+                    @include f-unbounded;
                 }
             }
         }
@@ -222,6 +337,24 @@ body {
 
         .l-footer {
 	        line-height: 1.5;
+
+            .info {
+                & > li {
+                    font-size: rem(14);
+                    font-weight: 300;
+                    line-height: 1.75;
+                    letter-spacing: rem(2);
+                }
+            }
+
+            .sectors {
+                & > li {
+                    font-size: rem(14);
+                    font-weight: 300;
+                    line-height: 1.5;
+                    letter-spacing: rem(2);
+                }
+            }
         }
 
         .btn {
@@ -232,6 +365,22 @@ body {
                     line-height: 1;
                 }
             }
+
+            &--customLink {
+
+                .btn__text {
+                    font-size: rem(14);
+                    font-weight: 600;
+                    line-height: 1.42;
+                    letter-spacing: normal;
+
+                    @include rwd-min(769px) {
+                        font-size: rem(15);
+                        line-height: 1.46;
+                        letter-spacing: rem(1.5);
+                    }
+                }
+            }
         }
 
         .f-title-primary {
@@ -239,6 +388,11 @@ body {
             letter-spacing: normal;
             line-height: 1.5;
             font-weight: bold;
+
+            &.is-pageTitle {
+                font-size: rem(30);
+                letter-spacing: rem(3);
+            }
 
             @include rwd-min(769px) {
                 font-size: rem(30);
@@ -321,6 +475,25 @@ body {
                     }
                 }
             }
+
+            &--event {
+                .cardItem__text {
+                    .links {
+                        & > li {
+                            &:before {
+                                top: rem(8)
+                            }
+                        }
+
+                        .reserveLink {
+                            .reserveLink__text {
+                                font-size: rem(16);
+                                line-height: 1.7;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .tabGroup--select {
@@ -367,22 +540,6 @@ body {
             }
         }
 
-        .filterGroup--default {
-            .filterOption__item {
-                .text {
-                    font-size: rem(14);
-                    line-height: 1;
-                    font-weight: 600;
-
-                    @include rwd-min(1280px) {
-                        font-size: rem(15);
-                        font-weight: bold;
-                        letter-spacing: rem(1.5);
-                    }
-                }
-            }
-        }
-
         .popupBox {
             .text {
                 &__tags {
@@ -398,6 +555,61 @@ body {
                     }
                 }
             }
+        }
+
+        .m-subPage {
+            &__head {
+                .pageLabel {
+
+                    .pageLabel__text {
+                        font-size: rem(15);
+                        font-weight: 400;
+                        line-height: 1.2;
+                        letter-spacing: rem(1.5);
+                    }
+                }
+
+                .team,
+                .newsDate {
+                    line-height: 1.7;
+                    letter-spacing: normal;
+                }
+            }
+
+            &__summary {
+                .list {
+                    & > li {
+                        &:before {
+                            top: rem(6);
+                        }
+                    }
+                }
+            }
+        }
+
+        .section--preview {
+             .previewGroup {
+                .previewGroup__title {
+                    & > span {
+                        font-size: rem(22);
+                        line-height: 1.5;
+                        font-weight: bold;
+                        word-break: break-all;
+
+                        @include rwd-min(769px) {
+                            font-size: rem(25);
+                        }
+                    }
+                }
+
+                &--curating {
+                    .hero {
+                        .container {
+                            max-width: rem(880);
+                        }
+                    }
+                }
+             }
         }
 	}
 }
