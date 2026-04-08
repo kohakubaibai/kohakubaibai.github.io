@@ -41,20 +41,63 @@ $path: '../../images';
 			}
         }
     }
+
+    &--collapseScroll {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: rem(20);
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+
+        @include rwd-min(769px) {
+            overflow: hidden;
+            flex-wrap: wrap;
+            gap: rem(30);
+            transition: max-height 0.4s ease;
+
+            .cardItem {
+                &:nth-child(n+4) {
+                    display: none;
+                }
+            }
+
+            &.is-active {
+
+                .cardItem {
+                    &:nth-child(n+4) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .cardItem {
+            width: rem(290);
+            flex: 0 0 rem(290);
+
+            @include rwd-min(769px) {
+                flex: 0 0 calc((100% - rem(60)) / 3);
+                width: calc((100% - rem(60)) / 3);
+            }
+        }
+    }
 }
 
 .cardItem {
 
 	&__image {
 		position: relative;
+        overflow: hidden;
 
 		&:before {
-			content: '';
+            content: '';
 			display: block;
 		}
 
 		img {
-			@include fit-cover;
+            @include fit-cover;
+            @include transition(all, .3s, ease-in);
 		}
 	}
 
@@ -66,14 +109,20 @@ $path: '../../images';
         &:before {
             content: '';
             display: block;
-            width: rem(18);
-            height: rem(45);
-            flex: 0 0 rem(18);
+            width: rem(16);
+            height: rem(39);
+            flex: 0 0 rem(16);
             background-image: url('#{$path}/deco_venue.svg');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             margin-right: rem(16);
+
+            @include rwd-min(769px) {
+                width: rem(18);
+                flex: 0 0 rem(18);
+                height: rem(45);
+            }
         }
 
         .text {
@@ -82,19 +131,30 @@ $path: '../../images';
             color: $secondary;
             justify-content: center;
             align-items: center;
-            flex: 0 0 rem(50);
-            width: rem(50);
-            height: rem(50);
+            flex: 0 0 rem(40);
+            width: rem(40);
+            height: rem(40);
             background-color: transparent;
             border: rem(1) solid $secondary;
             border-radius: rem(4);
-            font-size: rem(18);
+            font-size: rem(16);
             font-weight: 500;
+
+            @include rwd-min(769px) {
+                width: rem(50);
+                flex: 0 0 rem(50);
+                height: rem(50);
+                font-size: rem(18);
+            }
         }
     }
 
 	&__text {
 		background-color: $white;
+
+        .title {
+            word-break: break-all;
+        }
 
 		.date,
         .time {
@@ -102,8 +162,36 @@ $path: '../../images';
 			@include f-unbounded;
 		}
 
-		.title {
-		}
+		.venue {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: rem(10);
+            column-gap: rem(16);
+
+            .venue__deco {
+                img {}
+            }
+
+            .venue__label {
+                display: flex;
+                @include f-unbounded;
+                color: $secondary;
+                justify-content: center;
+                align-items: center;
+                flex: 0 0 rem(50);
+                width: rem(50);
+                height: rem(50);
+                background-color: transparent;
+                border: rem(1) solid $secondary;
+                border-radius: rem(4);
+                font-size: rem(18);
+                font-weight: 500;
+                @include transition(all, .3s, ease-in);
+            }
+        }
 
 		.desc {
 			margin-top: rem(10);
@@ -206,6 +294,12 @@ $path: '../../images';
                     color: $bg-2;
                 }
             }
+
+            &__theme {
+                span {
+                    color: $bg-2
+                }
+            }
         }
 
 		.action {
@@ -215,6 +309,12 @@ $path: '../../images';
             flex-wrap: nowrap;
             column-gap: rem(20);
 		}
+
+        .department {
+            margin-top: rem(10);
+            color: $secondary;
+            @include ellipsis;
+        }
 	}
 
 	&--news {
@@ -253,7 +353,10 @@ $path: '../../images';
 	&--dayOf {
 
 		.cardItem__text {
+            position: relative;
+            height: rem(364);
             padding: rem(26) rem(30);
+            @include box-sizing(border-box);
 
 			.time {
 				color: $primary-hover;
@@ -268,6 +371,14 @@ $path: '../../images';
 			}
 
             .project {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 0 rem(30) rem(26);
                 margin-top: rem(82);
 
                 @include rwd-min(769px) {
@@ -279,6 +390,8 @@ $path: '../../images';
                 }
                 .project__nature {
                     margin-top: rem(6);
+                    overflow: hidden;
+                    align-items: flex-start;
                 }
             }
 		}
@@ -294,7 +407,11 @@ $path: '../../images';
         @include transition(opacity, 0.3s, ease-in);
 
         .cardItem__venue {
-            flex: 0 0 rem(84);
+            flex: 0 0 rem(72);
+
+            @include rwd-min(769px) {
+                flex: 0 0 rem(84);
+            }
 
             .text {
                 @include transition(all, .3s, ease-in);
@@ -303,8 +420,13 @@ $path: '../../images';
 
         .cardItem__text {
             min-width: 0;
-            flex: 0 0 calc(100% - rem(100));
-            width: calc(100% - rem(100));
+            flex: 0 0 calc(100% - rem(84));
+            width: calc(100% - rem(84));
+
+            @include rwd-min(769px) {
+                flex: 0 0 calc(100% - rem(100));
+                width: calc(100% - rem(100));
+            }
 
             .title {
                 color: $black;
@@ -312,11 +434,11 @@ $path: '../../images';
             }
 
             .project {
+                margin-top: rem(6);
                 min-width: 0;
                 width: 100%;
                 column-gap: rem(8);
                 display: flex;
-                align-items: center;
 
                 &__location {
                     flex: 1;
@@ -641,6 +763,7 @@ $path: '../../images';
     }
 
     &--participation {
+        display: block;
 		border: rem(1) solid $secondary;
 
 		.cardItem__image {
@@ -654,11 +777,74 @@ $path: '../../images';
 		.cardItem__text {
             padding: rem(20);
 
-            .venue {
-                &__label {
+			.title {
+				color: $dark;
+                @include line-clamp(2);
+			}
 
+			.action {
+				margin-top: rem(40);
+				justify-content: flex-start;
+			}
+		}
+
+        &:hover {
+            text-decoration: none;
+
+            .cardItem__image {
+                img {
+                    @include scale(1.02);
                 }
             }
+
+            .cardItem__text {
+                .venue {
+                    .venue__label {
+                        background-color: $primary-hover;
+                        color: $white;
+                        border-color: $primary-hover;
+                    }
+                }
+            }
+        }
+
+        @include rwd-not-hover {
+            &:hover {
+                .cardItem__image {
+                    img {
+                        @include scale(1);
+                    }
+                }
+                .cardItem__text {
+                    .venue {
+                        .venue__text {
+                            background-color: transparent;
+                            color: $secondary;
+                            border-color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+	}
+
+    &--brand {
+		border: rem(1) solid $secondary;
+
+		.cardItem__image {
+			border-bottom: rem(1) solid $secondary;
+
+            &:before {
+                padding-top: 100%;
+            }
+
+            img {
+                filter: grayscale(1);
+            }
+		}
+
+		.cardItem__text {
+            padding: rem(20);
 
 			.title {
 				color: $dark;
@@ -670,5 +856,91 @@ $path: '../../images';
 				justify-content: flex-start;
 			}
 		}
+
+        &:hover {
+
+            .cardItem__image {
+                img {
+                    filter: grayscale(0);
+                }
+            }
+        }
+
+        @include rwd-not-hover {
+
+            &:hover {
+
+                .cardItem__image {
+                    img {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+	}
+
+    &--overview {
+        display: block;
+
+		.cardItem__image {
+
+            &:before {
+                padding-top: 100%;
+            }
+		}
+
+		.cardItem__text {
+            background-color: $white;
+            padding: rem(20);
+
+            .venue {
+                &__icon {
+                    width: rem(18);
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+			.title {
+				color: $dark;
+                @include line-clamp(2);
+			}
+
+            .project {
+                margin-top: rem(10);
+                min-width: 0;
+                width: 100%;
+                column-gap: rem(8);
+                display: flex;
+
+                &__location {
+                    flex: 1;
+                    min-width: 0;
+                }
+
+                &__theme {
+                    flex-shrink: 0;
+                    max-width: 30%;
+                    min-width: 0;
+                }
+            }
+
+			.action {
+				margin-top: rem(40);
+				justify-content: flex-start;
+			}
+		}
+
+        &:hover {
+            text-decoration: none;
+
+            .cardItem__image {
+                img {
+                    @include scale(1.02);
+                }
+            }
+        }
 	}
 }

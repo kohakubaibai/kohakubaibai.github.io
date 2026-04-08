@@ -1,4 +1,4 @@
-$path: '../../images';
+$btnPath: '../../images';
 
 .btn {
     padding: 0;
@@ -89,7 +89,7 @@ $path: '../../images';
             display: block;
             width: rem(13);
             height: rem(13);
-            background-image: url('#{$path}/arrow_goDetail-dark.svg');
+            background-image: url('#{$btnPath}/arrow_goDetail-dark.svg');
             background-size: rem(13);
             background-repeat: no-repeat;
             margin-left: rem(12);
@@ -153,7 +153,7 @@ $path: '../../images';
             background-color: $white;
 
             &:after {
-                background-image: url('#{$path}/arrow_goSubpage-dark.svg');
+                background-image: url('#{$btnPath}/arrow_goSubpage-dark.svg');
             }
 
             .btn__text {
@@ -165,7 +165,7 @@ $path: '../../images';
                 background-color: $primary-hover;
 
                 &:after {
-                    background-image: url('#{$path}/arrow_goSubpage-light.svg');
+                    background-image: url('#{$btnPath}/arrow_goSubpage-light.svg');
                 }
 
                 .btn__text {
@@ -179,7 +179,7 @@ $path: '../../images';
                     background-color: white;
 
                     &:after {
-                        background-image: url('#{$path}/arrow_goSubpage-dark.svg');
+                        background-image: url('#{$btnPath}/arrow_goSubpage-dark.svg');
                     }
 
                     .btn__text {
@@ -193,7 +193,7 @@ $path: '../../images';
             border-color: $white;
 
             &:after {
-                background-image: url('#{$path}/arrow_goSubpage-light.svg');
+                background-image: url('#{$btnPath}/arrow_goSubpage-light.svg');
             }
 
             .btn__text {
@@ -209,6 +209,47 @@ $path: '../../images';
                 &:hover {
                     border-color: $white;
                     background-color: transparent;
+                }
+            }
+        }
+
+        &.is-yellow {
+            border-color: $secondary;
+            background-color: $yellow;
+
+            &:after {
+                background-image: url('#{$btnPath}/arrow_goSubpage-dark.svg');
+            }
+
+            .btn__text {
+                color: $secondary;
+            }
+
+            &:hover {
+                border-color: $primary-hover;
+                background-color: $primary-hover;
+
+                &:after {
+                    background-image: url('#{$btnPath}/arrow_goSubpage-light.svg');
+                }
+
+                .btn__text {
+                    color: $white;
+                }
+            }
+
+            @include rwd-not-hover {
+                &:hover {
+                    border-color: $secondary;
+                    background-color: $yellow;
+
+                    &:after {
+                        background-image: url('#{$btnPath}/arrow_goSubpage-dark.svg');
+                    }
+
+                    .btn__text {
+                        color: $secondary;
+                    }
                 }
             }
         }
@@ -294,6 +335,7 @@ $path: '../../images';
             text-decoration: none;
             border: rem(1) solid $primary-hover;
             background-color: $primary-hover;
+            box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
 
             .btn__text {
                 color: $white;
@@ -325,7 +367,7 @@ $path: '../../images';
             display: block;
             width: rem(13);
             height: rem(13);
-            background-image: url('#{$path}/arrow_goDetail-dark.svg');
+            background-image: url('#{$btnPath}/arrow_goDetail-dark.svg');
             background-size: rem(13);
             background-repeat: no-repeat;
             margin-left: rem(12);
@@ -358,13 +400,83 @@ $path: '../../images';
         width: rem(31);
         height: rem(30);
         background-color: transparent;
-        background-image: url('#{$path}/btn_popup-close.svg');
+        background-image: url('#{$btnPath}/btn_popup-close.svg');
         background-size: rem(31) rem(30);
         background-repeat: no-repeat;
 
         &:not(:disabled):not(.disabled).active,
         &:not(:disabled):not(.disabled):active {
-            background-image: url('#{$path}/btn_popup-close.svg');
+            background-image: url('#{$btnPath}/btn_popup-close.svg');
+        }
+    }
+
+    &--collapse {
+        display: flex;
+        align-items: center;
+        padding: rem(9) rem(19);
+        border-width: rem(1);
+        border-style: solid;
+        border-radius: rem(32);
+        background-color: transparent;
+
+        @include rwd-min(769px) {
+            padding: rem(12) rem(29);
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: rem(19);
+            height: rem(19);
+            background-size: rem(19);
+            background-repeat: no-repeat;
+            margin-left: rem(10);
+            @include transition(all, .3s, ease-in-out);
+        }
+
+        .btn__text {
+            @include f-unbounded;
+            font-size: rem(15);
+            font-weight: 600;
+        }
+
+        &.is-light {
+            border-color: $white;
+
+            &:after {
+                background-image: url('#{$btnPath}/arrow_collapse-w.svg');
+            }
+
+            .btn__text {
+                color: $white;
+            }
+
+            &:hover {
+                border-color: $primary-hover;
+                background-color: $primary-hover;
+            }
+
+            @include rwd-not-hover {
+                &:hover {
+                    border-color: $white;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        &:hover,
+        &.is-active {
+            &:after {
+                @include rotate(-180);
+            }
+        }
+
+        @include rwd-not-hover {
+            &:hover {
+                &:after {
+                    @include rotate(0);
+                }
+            }
         }
     }
 
