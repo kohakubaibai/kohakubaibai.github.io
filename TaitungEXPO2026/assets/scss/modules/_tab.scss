@@ -1,3 +1,4 @@
+$decoPath: '../images';
 
 @mixin tab-button-style {
     .text {
@@ -16,6 +17,7 @@
     &.is-active,
     &:hover {
         .text {
+            text-decoration: none;
             border: rem(1) solid $primary-dark;
             background-color: $primary-hover;
             color: $white;
@@ -62,10 +64,14 @@
         }
 
         &.jc-center {
-            justify-content: center;
+            @include rwd-min(1280px) {
+                justify-content: center;
+            }
         }
         &.jc-start {
-            justify-content: flex-start;
+            @include rwd-min(1280px) {
+                justify-content: flex-start;
+            }
         }
     }
 
@@ -74,7 +80,7 @@
         visibility: hidden;
         transform: translateY(rem(10));
         pointer-events: none;
-        height: 0; 
+        height: 0;
         overflow: hidden;
         @include transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
 
@@ -83,7 +89,7 @@
             visibility: visible;
             transform: translateY(0);
             pointer-events: auto;
-            height: auto; 
+            height: auto;
         }
     }
 
@@ -101,15 +107,6 @@
             &__item {
                 display: flex;
                 justify-content: center;
-
-                &:first-child {
-                    flex: 0 0 100%;
-                    @include rwd-min(768px) {
-                        flex: initial;
-                        width: auto;
-                    }
-                }
-
                 @include tab-button-style;
 
                 .text {
@@ -126,18 +123,29 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: rem(14) rem(29);
+            padding: rem(10) rem(29);
             border-radius: rem(15);
             background: $white;
             border: rem(2) solid #9d9d9d;
             user-select: none;
+            box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
+
             @include rwd-min(1280px) {
                 display: none;
             }
 
             &:after {
+                content: '';
+                display: block;
+                width: rem(39);
+                height: rem(39);
+                background-image: url('#{$decoPath}/deco_select.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: rem(39);
                 @include transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
             }
+
             &__text {
                 color: $secondary-dark;
             }
@@ -187,9 +195,10 @@
             }
         }
 
-        &.is-opened {
+        &.is-open {
             .tabSelect {
                 border-radius: rem(15) rem(15) 0 0;
+
                 &:after {
                     @include rotate(180);
                 }

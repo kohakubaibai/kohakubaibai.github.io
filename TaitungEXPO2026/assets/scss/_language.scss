@@ -23,6 +23,75 @@ body {
 			}
 		}
 
+        .mainMenu {
+            & > .mainMenu__item {
+                & > .menuText {
+
+                    @include rwd-min(1280px) {
+                        padding: rem(35) rem(10);
+                    }
+
+                    & > span {
+                        font-size: rem(18);
+                        line-height: 1.3;
+                        font-weight: 500;
+                        letter-spacing: normal;
+
+                        @include rwd-min(1280px) {
+                            font-size: rem(14);
+                            line-height: 1.5;
+                        }
+
+
+                    }
+
+                    &.is-current,
+                    &:hover {
+                        & > span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    @include rwd-not-hover {
+                        & > span {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            & > .subMenu__item {
+                & > .menuText {
+                    & > span {
+                        font-size: rem(16);
+                        line-height: 1.5;
+                        font-weight: 400;
+                        letter-spacing: normal;
+
+                        @include rwd-min(1280px) {
+                            font-size: rem(14);
+                            font-weight: 500;
+                        }
+                    }
+
+                    &.is-current,
+                    &:hover {
+                        & > span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    @include rwd-not-hover {
+                        & > span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
         .l-footer {
 	        line-height: 1.35;
 
@@ -47,6 +116,8 @@ body {
 
         .btn {
             &--blank {
+                @include f-unbounded;
+
                 .btn__text {
                     font-weight: 500;
                     font-size: rem(14);
@@ -106,7 +177,7 @@ body {
         .f-h4 {
             font-size: rem(16);
             line-height: 1.35;
-            font-weight: 600;
+            font-weight: 500;
             letter-spacing: rem(1.6);
 
             @include rwd-min(769px) {
@@ -121,6 +192,10 @@ body {
             line-height: 1.5;
             font-weight: 300;
             letter-spacing: rem(1.5);
+
+            .highlight {
+                font-weight: bold;
+            }
 
             @include rwd-min(769px) {
                 font-size: rem(16);
@@ -143,7 +218,10 @@ body {
         .cardItem {
 
             &--news,
-            &--dayOf {
+            &--dayOf,
+            &--participation,
+            &--brand,
+            &--overview {
                 .title {
                     min-height: rem(16*2*1.35);
                     max-height: rem(16*2*1.35);
@@ -166,6 +244,10 @@ body {
                             max-height: unset;
                         }
                     }
+
+                    .project {
+                        flex-direction: column;
+                    }
                 }
             }
 
@@ -187,45 +269,100 @@ body {
                     }
                 }
             }
-        }
 
-        .tabGroup--select {
-            .tabOption__item {
-                .text {
-                    font-size: rem(16);
-                    line-height: 1.5;
-                    font-weight: 300;
-                    letter-spacing: rem(1.6);
-
-                    @include rwd-min(1280px) {
-                        font-size: rem(14);
-                        line-height: 1.35;
-                        font-weight: 500;
-                        letter-spacing: normal;
+            &--overview {
+                .cardItem__text {
+                    .project {
+                        flex-direction: column;
                     }
                 }
+            }
+        }
 
-                &.is-active {
+        .tabGroup {
+            &--select {
+                .tabOption__item {
                     .text {
-                        font-weight: 600;
+                        font-size: rem(16);
+                        line-height: 1.5;
+                        font-weight: 300;
+                        letter-spacing: rem(1.6);
 
                         @include rwd-min(1280px) {
+                            font-size: rem(14);
+                            line-height: 1.35;
                             font-weight: 500;
+                            letter-spacing: normal;
+                        }
+                    }
+
+                    &.is-active {
+                        .text {
+                            font-weight: 600;
+
+                            @include rwd-min(1280px) {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--default {
+                .tabOption__item {
+                    .text {
+                        font-size: rem(13);
+                        line-height: 1.35;
+                        font-weight: 500;
+
+                        @include rwd-min(1280px) {
+                            font-size: rem(14);
                         }
                     }
                 }
             }
         }
 
-        .tabGroup--default {
-            .tabOption__item {
-                .text {
-                    font-size: rem(13);
-                    line-height: 1.35;
-                    font-weight: 500;
+        .filterGroup {
+            &--fakeSelect,
+            &--overview {
+                .filterOption__item {
+                    .text {
+                        font-size: rem(16);
+                        line-height: 1.5;
+                        font-weight: 300;
+                        letter-spacing: rem(1.6);
 
-                    @include rwd-min(768px) {
-                        font-size: rem(14);
+                        @include rwd-min(1280px) {
+                            font-size: rem(14);
+                            line-height: 1.35;
+                            font-weight: 500;
+                            letter-spacing: normal;
+                        }
+                    }
+
+                    &.is-active {
+                        .text {
+                            font-weight: 600;
+
+                            @include rwd-min(1280px) {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--default {
+                .filterOption__item {
+                    .text {
+                        font-size: rem(13);
+                        line-height: 1.35;
+                        font-weight: 500;
+
+                        @include rwd-min(1280px) {
+                            font-size: rem(14);
+                        }
                     }
                 }
             }
@@ -276,44 +413,6 @@ body {
                 }
             }
         }
-
-        .section--preview {
-            .previewGroup {
-                .previewGroup__title {
-                    & > span {
-                        @include f-poppins;
-                        font-size: rem(16);
-                        line-height: 1.35;
-                        font-weight: 600;
-                        letter-spacing: rem(1.6);
-
-                        @include rwd-min(769px) {
-                            @include f-unbounded;
-                            font-size: rem(24);
-                            font-weight: bold;
-                            line-height: 1.4;
-                            letter-spacing: rem(2.4);
-                        }
-                    }
-                }
-
-                &--curating {
-                    .hero {
-                        .container {
-                            max-width: rem(924);
-                        }
-                    }
-                }
-            }
-        }
-
-        .section--review {
-            .section__title {
-                .title {
-                    @include f-unbounded;
-                }
-            }
-        }
 	}
 
 	&.lang--zh {
@@ -334,6 +433,72 @@ body {
 				}
 			}
 		}
+
+        .mainMenu {
+            & > .mainMenu__item {
+                & > .menuText {
+
+                    @include rwd-min(1280px) {
+                        padding: rem(35) rem(18);
+                    }
+
+                    & > span {
+                        font-size: rem(16);
+                        line-height: calc(19 / 16);
+                        font-weight: 500;
+                        letter-spacing: rem(1);
+
+                        @include rwd-min(1280px) {
+                            font-size: rem(15);
+                            line-height: calc(18 / 15);
+                        }
+                    }
+
+                    &.is-current,
+                    &:hover {
+                        & > span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    @include rwd-not-hover {
+                        & > span {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            & > .subMenu__item {
+                & > .menuText {
+                    & > span {
+                        font-size: rem(15);
+                        line-height: calc(22 / 15);
+                        font-weight: 500;
+                        letter-spacing: rem(1);
+
+                        @include rwd-min(1280px) {
+                            line-height: calc(18 / 15);
+                        }
+                    }
+
+                    &.is-current,
+                    &:hover {
+                        & > span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    @include rwd-not-hover {
+                        & > span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
 
         .l-footer {
 	        line-height: 1.5;
@@ -360,9 +525,10 @@ body {
         .btn {
             &--blank {
                 .btn__text {
-                    font-weight: 700;
+                    font-weight: 600;
                     font-size: rem(15);
                     line-height: 1;
+                    letter-spacing: rem(1.5);
                 }
             }
 
@@ -413,7 +579,7 @@ body {
         .f-h4 {
             font-size: rem(18);
             line-height: 1.5;
-            font-weight: 600;
+            font-weight: 500;
 
             @include rwd-min(769px) {
                 font-size: rem(20);
@@ -427,6 +593,10 @@ body {
             font-weight: 300;
             letter-spacing: rem(1.7);
             text-align: justify;
+
+            .highlight {
+                font-weight: bold;
+            }
 
             @include rwd-min(769px) {
                 font-size: rem(18);
@@ -448,7 +618,10 @@ body {
 
         .cardItem {
             &--news,
-            &--dayOf {
+            &--dayOf,
+            &--participation,
+            &--brand,
+            &--overview {
                 .cardItem__text {
                     .title {
                         min-height: rem(18*2*1.5);
@@ -473,6 +646,10 @@ body {
                             max-height: unset;
                         }
                     }
+
+                    .project {
+                        flex-direction: row;
+                    }
                 }
             }
 
@@ -494,47 +671,105 @@ body {
                     }
                 }
             }
-        }
 
-        .tabGroup--select {
-            .tabOption__item {
-                .text {
-                    font-size: rem(18);
-                    line-height: 1.75;
-                    font-weight: 300;
-                    letter-spacing: rem(1.8);
-
-                    @include rwd-min(1280px) {
-                        font-size: rem(15);
-                        line-height: 1;
-                        font-weight: bold;
-                        letter-spacing: rem(1.5);
+            &--overview {
+                .cardItem__text {
+                    .project {
+                        flex-direction: row;
                     }
                 }
+            }
+        }
 
-                &.is-active {
+        .tabGroup {
+
+            &--default {
+                .tabOption__item {
                     .text {
+                        font-size: rem(14);
+                        line-height: 1;
                         font-weight: 600;
 
                         @include rwd-min(1280px) {
-                            font-weight: bold;
+                            font-size: rem(15);
+                            font-weight: 700;
+                            letter-spacing: rem(1.5);
+                        }
+                    }
+                }
+            }
+
+            &--select {
+                .tabOption__item {
+                    .text {
+                        font-size: rem(18);
+                        line-height: 1.75;
+                        font-weight: 300;
+                        letter-spacing: rem(1.8);
+
+                        @include rwd-min(1280px) {
+                            font-size: rem(15);
+                            line-height: 1;
+                            font-weight: 700;
+                            letter-spacing: rem(1.5);
+                        }
+                    }
+
+                    &.is-active {
+                        .text {
+                            font-weight: 600;
+
+                            @include rwd-min(1280px) {
+                                font-weight: 700;
+                            }
                         }
                     }
                 }
             }
         }
 
-        .tabGroup--default {
-            .tabOption__item {
-                .text {
-                    font-size: rem(14);
-                    line-height: 1;
-                    font-weight: 600;
+        .filterGroup {
+            &--fakeSelect,
+            &--overview  {
+                .filterOption__item {
+                    .text {
+                        font-size: rem(18);
+                        line-height: 1.75;
+                        font-weight: 300;
+                        letter-spacing: rem(1.8);
 
-                    @include rwd-min(1280px) {
-                        font-size: rem(15);
-                        font-weight: bold;
-                        letter-spacing: rem(1.5);
+                        @include rwd-min(1280px) {
+                            font-size: rem(15);
+                            line-height: 1;
+                            font-weight: 700;
+                            letter-spacing: rem(1.5);
+                        }
+                    }
+
+                    &.is-active {
+                        .text {
+                            font-weight: 600;
+
+                            @include rwd-min(1280px) {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--default{
+                .filterOption__item {
+                    .text {
+                        font-size: rem(14);
+                        line-height: 1;
+                        font-weight: 600;
+
+                        @include rwd-min(1280px) {
+                            font-size: rem(15);
+                            font-weight: 700;
+                            letter-spacing: rem(1.5);
+                        }
                     }
                 }
             }
@@ -585,31 +820,6 @@ body {
                     }
                 }
             }
-        }
-
-        .section--preview {
-             .previewGroup {
-                .previewGroup__title {
-                    & > span {
-                        font-size: rem(22);
-                        line-height: 1.5;
-                        font-weight: bold;
-                        word-break: break-all;
-
-                        @include rwd-min(769px) {
-                            font-size: rem(25);
-                        }
-                    }
-                }
-
-                &--curating {
-                    .hero {
-                        .container {
-                            max-width: rem(880);
-                        }
-                    }
-                }
-             }
         }
 	}
 }

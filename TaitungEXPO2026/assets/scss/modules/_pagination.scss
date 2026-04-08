@@ -1,3 +1,5 @@
+$pagePath: '../images';
+
 .pagination {
     display: flex;
     flex-direction: row;
@@ -33,6 +35,7 @@
             border-width: rem(1);
             border-style: solid;
             border-color: $secondary;
+            background-color: $white;
             @include transition(all, .3s, ease-in);
             border-radius: 50%;
             background-size: contain;
@@ -41,53 +44,56 @@
         }
 
         &--prev {
-            background-image: url('#{$path}/arrow_pager-prev-w.svg');
+            background-image: url('#{$pagePath}/arrow_pager-prev-w.svg');
 
             &.is-disabled {
                 border-color: #adb5bd;
-                background-image: url('#{$path}/arrow_pager-prev-g.svg');
+                background-image: url('#{$pagePath}/arrow_pager-prev-g.svg');
 
                 &:hover {
                     border-color: #adb5bd;
-                    background-image: url('#{$path}/arrow_pager-prev-g.svg');
+                    background-image: url('#{$pagePath}/arrow_pager-prev-g.svg');
                 }
             }
 
             &:hover {
-                border-color: #003893;
-                background-image: url('#{$path}/arrow_pager-prev-b.svg');
+                border-color: $primary-hover;
+                background-color: $primary-hover;
+                background-image: url('#{$pagePath}/arrow_pager-prev-b.svg');
             }
 
             @include rwd-not-hover {
                 &:hover {
                     border-color: $secondary;
-                    background-image: url('#{$path}/arrow_pager-prev-w.svg');
+                    background-color: $white;
+                    background-image: url('#{$pagePath}/arrow_pager-prev-w.svg');
                 }
             }
         }
 
         &--next {
-            background-image: url('#{$path}/arrow_pager-next-w.svg');
+            background-image: url('#{$pagePath}/arrow_pager-next-w.svg');
 
             &.is-disabled {
                 border-color: #adb5bd;
-                background-image: url('#{$path}/arrow_pager-next-g.svg');
+                background-image: url('#{$pagePath}/arrow_pager-next-g.svg');
 
                 &:hover {
                     border-color: #adb5bd;
-                    background-image: url('#{$path}/arrow_pager-next-g.svg');
+                    background-image: url('#{$pagePath}/arrow_pager-next-g.svg');
                 }
             }
 
             &:hover {
-                border-color: #003893;
-                background-image: url('#{$path}/arrow_pager-next-b.svg');
+                border-color: $primary-hover;
+                background-color: $primary-hover;
+                background-image: url('#{$pagePath}/arrow_pager-next-b.svg');
             }
 
             @include rwd-not-hover {
                 &:hover {
                     border-color: $secondary;
-                    background-image: url('#{$path}/arrow_pager-next-w.svg');
+                    background-image: url('#{$pagePath}/arrow_pager-next-w.svg');
                 }
             }
         }
@@ -144,10 +150,15 @@
         &--ellipsis {
             width: rem(19);
             height: rem(3);
+
+            .text {
+                font-size: 0;
+            }
+
             &:before {
                 padding-top: rem(3);
                 width: rem(19);
-                background-image: url('#{$path}/pagination_ellipsis.svg');
+                background-image: url('#{$pagePath}/pagination_ellipsis.svg');
             }
         }
     }

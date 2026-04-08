@@ -1,24 +1,54 @@
-@mixin filter-button-style {
+$decoPath: '../images';
+
+$filter-themes: (
+    "default": (
+        "bg": $white,
+        "hover-bg": $primary-hover,
+        "border": $secondary-dark,
+        "text-color": $primary-dark,
+        "text-hover": $white,
+    ),
+    "overview": (
+        "bg": $primary-hover,
+        "hover-bg": $bg-3,
+        "border": $white,
+        "text-color": $white,
+        "text-hover": $white,
+    )
+);
+
+@mixin filter-button-style($theme-name: "default") {
+    $theme: map-get($filter-themes, $theme-name);
+    $bg-color: map-get($theme, "bg");
+    $border-color: map-get($theme, "border");
+    $hover-bg: map-get($theme, "hover-bg");
+    $text-color: map-get($theme, "text-color");
+    $text-hover: map-get($theme, "text-hover");
+
     .text {
         padding: rem(13) rem(21);
         border-radius: rem(32);
-        border: rem(1) solid $secondary-dark;
-        color: $primary-dark;
-        background: $white;
+        border: rem(1) solid $border-color;
+        color: $text-color;
+        background: $bg-color;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         @include transition(all, 0.3s, ease-in);
+
+        @include rwd-min(769px) {
+            letter-spacing: normal;
+        }
     }
 
     &.is-active,
     &:hover {
         .text {
             text-decoration: none;
-            border: rem(1) solid $primary-hover;
-            background-color: $primary-hover;
-            color: $white;
+            border: rem(1) solid $hover-bg;
+            background-color: $hover-bg;
+            color: $text-hover;
             box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
         }
     }
@@ -26,10 +56,106 @@
     @include rwd-not-hover {
         &:hover:not(.is-active) {
             .text {
-                border: rem(1) solid $secondary-dark;
-                background-color: $primary-hover;
-                color: $primary-dark;
+                border: rem(1) solid $border-color;
+                background-color: $bg-color;
+                color: $text-color;
             }
+        }
+    }
+}
+
+@mixin fake-select-layout($theme-name: "default") {
+    $theme: map-get($filter-themes, $theme-name);
+
+    .filterSelect {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(10) rem(29);
+        border-radius: rem(15);
+        background: $white;
+        border: rem(2) solid #9d9d9d;
+        user-select: none;
+        box-shadow: 0 rem(4) rem(4) rgba(16, 55, 141, 0.08);
+
+        @include rwd-min(1280px) {
+            display: none;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: rem(39);
+            height: rem(39);
+            background-image: url('#{$decoPath}/deco_select.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: rem(39);
+            @include transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
+        }
+
+        &__text {
+            color: $secondary-dark;
+        }
+    }
+
+    .filterOption {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: $white;
+        border: rem(2) solid #9d9d9d;
+        border-radius: 0 0 rem(15) rem(15);
+        border-top: none;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        @include transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
+
+        @include rwd-min(1280px) {
+            position: static;
+            flex-direction: row;
+            column-gap: rem(20);
+            row-gap: rem(20);
+            background: transparent;
+            border: none;
+            max-height: unset;
+            opacity: 1;
+            overflow: visible;
+        }
+
+        &__item {
+            .text {
+                width: 100%;
+                padding: rem(17) rem(30);
+                color: $secondary-dark;
+                display: block;
+            }
+
+            &.is-active .text {
+                color: $primary-hover;
+            }
+
+            @include rwd-min(1280px) {
+                @include filter-button-style($theme-name);
+            }
+        }
+    }
+
+    &.is-open {
+        .filterSelect {
+            border-radius: rem(15) rem(15) 0 0;
+
+            &:after {
+                @include rotate(180);
+            }
+        }
+        .filterOption {
+            max-height: rem(300);
+            opacity: 1;
+            overflow-y: auto;
         }
     }
 }
@@ -62,10 +188,15 @@
         }
 
         &.jc-center {
-            justify-content: center;
+            @include rwd-min(1280px) {
+                justify-content: center;
+            }
         }
+
         &.jc-start {
-            justify-content: flex-start;
+            @include rwd-min(1280px) {
+                justify-content: flex-start;
+            }
         }
     }
 
@@ -101,22 +232,28 @@
             &__item {
                 display: flex;
                 justify-content: center;
-
-                &:first-child {
-                    flex: 0 0 100%;
-                    @include rwd-min(768px) {
-                        flex: initial;
-                        width: auto;
-                    }
-                }
-
-                @include filter-button-style;
+                @include filter-button-style("default");
 
                 .text {
                     @include rwd-max(767px) {
                         padding: rem(11) rem(15);
                     }
                 }
+            }
+        }
+    }
+
+    &--fakeSelect {
+        @include fake-select-layout("default");
+    }
+
+    &--overview {
+        @include fake-select-layout("overview");
+
+        .filterOption {
+
+            @include rwd-min(768px) {
+                flex-wrap: wrap;
             }
         }
     }

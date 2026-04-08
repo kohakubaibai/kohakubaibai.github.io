@@ -145,7 +145,8 @@ $path: '../images';
 			&:hover {
 				border: rem(2) solid $primary-hover;
 				background-color: $primary-hover;
-				color: $white
+				color: $white;
+				text-decoration: none;
 			}
 
 			@include rwd-not-hover {
@@ -177,7 +178,7 @@ $path: '../images';
 		justify-content: flex-start;
 		position: absolute;
 		background-color: $white;
-		padding: rem(20);
+		padding: rem(20) rem(20) rem(20) rem(34);
 		top: 0;
 		left: -100%;
 		width: 77%;
@@ -255,10 +256,6 @@ $path: '../images';
 
 		& > .menuText {
 			padding: rem(20) 0;
-
-			@include rwd-min(1280px) {
-				padding: rem(35) rem(18);
-			}
 		}
 
 		&--parent {
@@ -279,6 +276,10 @@ $path: '../images';
 			&.is-open {
 
 				& > .menuText {
+					span {
+						color: $primary-hover;
+					}
+
 					&:after {
 						@include rotate(-180);
 						background-image: url('#{$path}/arrow_nav-active.svg');
@@ -311,12 +312,12 @@ $path: '../images';
 	display: none;
 	border-left: rem(1) solid $secondary;
 	padding-left: rem(10);
-	margin-left: rem(18);
+	margin-left: rem(8);
 
 	@include rwd-min(1280px) {
 		position: absolute;
 		top: 100%;
-		left: rem(-10);
+		left: 0;
 		min-width: rem(160);
 		background: $white;
 		padding: rem(8) rem(18);
@@ -363,21 +364,24 @@ $path: '../images';
 
 	span {
 		display: block;
-		font-size: rem(15);
-		line-height: 1.2;
 		position: relative;
 		top: 0;
 		transition: .3s;
-		font-weight: 500;
 		color: $secondary;
 		white-space: nowrap;
 	}
 
-	&:hover {
+	&:hover{
 		text-decoration: none;
 
 		span {
 			top: -3px;
+			color: $primary-hover;
+		}
+	}
+
+	&.is-current {
+		span {
 			color: $primary-hover;
 		}
 	}
@@ -436,16 +440,70 @@ $path: '../images';
 	}
 }
 
-.gotop {
+.stickyBtn {
+	@include list-reset;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
     position: fixed;
-    display: block;
-    width: 50px;
-    height: 50px;
-    text-indent: -9999px;
-    background-size: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
     z-index: 1000;
+	right: rem(10);
+	bottom: rem(100);
+	gap: rem(10);
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+
+	.quickBtn {
+		display: block;
+		@include transition(all, .3s, ease-in);
+
+		img {
+			width: 100%;
+		}
+
+		&--traffic {
+			width: rem(80);
+
+			@include rwd-min(769px) {
+				width: rem(90);
+			}
+
+			&:hover {
+				@include scale(1.066666);
+			}
+
+			@include rwd-not-hover {
+				&:hover {
+					@include scale(1);
+				}
+
+				@include rwd-min(769px) {
+					&:hover {
+						@include scale(1);
+					}
+				}
+			}
+		}
+
+		&--goTop {
+			width: rem(50);
+
+			&:hover {
+				@include scale(1.08);
+			}
+
+			@include rwd-not-hover {
+				&:hover {
+					@include scale(1);
+				}
+
+				@include rwd-min(769px) {
+					&:hover {
+						@include scale(1);
+					}
+				}
+			}
+		}
+	}
 }
 
 //footer
@@ -459,12 +517,17 @@ $path: '../images';
 	font-weight: 300;
 	text-align: center;
 
+	.sponsorLogo {
+
+	}
+
 	.blankLogo {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: nowrap;
 		column-gap: rem(30);
+		margin-top: rem(30);
 
 		.logo__item {
 			display: block;
@@ -483,6 +546,13 @@ $path: '../images';
 
 			&--text {
 				width: rem(91);
+			}
+
+			&--ndc {
+				width: rem(131)
+			}
+			&--bp {
+				width: rem(79);
 			}
 
 			@include rwd-min(769px) {

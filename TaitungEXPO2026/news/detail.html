@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, min-scale=1, max-scale=1, shrink-to-fit=no">
@@ -29,7 +28,7 @@
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/animate.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/about/statement.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/news/detail.css">
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G4YR7BNNTX"></script>
@@ -43,7 +42,6 @@
 </head>
 
 <body class="lang--zh" data-spy="scroll" data-target=".navbar-collapse">
-
 	<!-- header start -->
 	<header id="header" class="l-header">
 		<div class="sticky-wrapper">
@@ -56,8 +54,8 @@
 					</div>
 				</div>
 				<div class="l-header__logo d-flex">
-					<a class="logoItem" href="#" rel="noopener noreferrer">
-						<img src="/assets/images/logo_expo.svg" alt="2026 Taitung EXPO 台東博覽會">
+					<a class="logoItem" href="../index.html" rel="noopener noreferrer">
+						<img src="../assets/images/logo_expo.svg" alt="2026 Taitung EXPO 台東博覽會">
 					</a>
 				</div>
 				<!-- nav start -->
@@ -71,39 +69,39 @@
 							</div>
 						</div>
 						<ul class="navbar mainMenu">
-							<li class="mainMenu__item"><a href="#about" class="menuText"><span>最新消息</span></a></li>
-							<li class="mainMenu__item"><a href="#event" class="menuText"><span>活動行事曆</span></a></li>
-							<li class="mainMenu__item js-submenu-switcher">
+							<li class="mainMenu__item mainMenu__item--single"><a href="../news/list.html" class="menuText"><span>最新消息</span></a></li>
+							<li class="mainMenu__item mainMenu__item--single"><a href="../event/list.html" class="menuText"><span>活動行事曆</span></a></li>
+							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>交通資訊</span></div>
 								<ul class="subMenu">
 									<li class="subMenu__item"><a href="#" class="menuText"><span>交通資訊</span></a></li>
 									<li class="subMenu__item"><a href="#" class="menuText"><span>建議路線</span></a></li>
 								</ul>
 							</li>
-							<li class="mainMenu__item js-submenu-switcher">
+							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>展會資訊</span></div>
 								<ul class="subMenu">
-									<li class="subMenu__item"><a href="#" class="menuText"><span>主題介紹</span></a></li>
-									<li class="subMenu__item"><a href="#" class="menuText"><span>建議路線</span></a></li>
-									<li class="subMenu__item"><a href="#" class="menuText"><span>品牌視覺系統</span></a></li>
+									<li class="subMenu__item"><a href="../about/themes.html" class="menuText"><span>主題介紹</span></a></li>
+									<li class="subMenu__item"><a href="../about/statement.html" class="menuText"><span>策展論述</span></a></li>
+									<li class="subMenu__item"><a href="../about/vi.html" class="menuText"><span>品牌視覺系統</span></a></li>
 									<li class="subMenu__item"><a href="#" class="menuText"><span>展會概覽</span></a></li>
 								</ul>
 							</li>
-							<li class="mainMenu__item js-submenu-switcher">
+							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>民間參與計畫</span></div>
 								<ul class="subMenu">
-									<li class="subMenu__item"><a href="#" class="menuText"><span>計畫介紹</span></a></li>
-									<li class="subMenu__item"><a href="#" class="menuText"><span>計畫一覽</span></a></li>
+									<li class="subMenu__item"><a href="./list.html" class="menuText"><span>計畫介紹</span></a></li>
+									<li class="subMenu__item"><a href="./list.html#list" class="menuText"><span>計畫一覽</span></a></li>
 								</ul>
 							</li>
-							<li class="mainMenu__item js-submenu-switcher">
+							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>品牌授權專區</span></div>
 								<ul class="subMenu">
 									<li class="subMenu__item"><a href="#" class="menuText"><span>計畫介紹</span></a></li>
 									<li class="subMenu__item"><a href="#" class="menuText"><span>商品專區</span></a></li>
 								</ul>
 							</li>
-							<li class="mainMenu__item js-submenu-switcher">
+							<li class="mainMenu__item mainMenu__item--parent js-submenu-switcher">
 								<div class="menuText"><span>東博STYLE</span></div>
 								<ul class="subMenu">
 									<li class="subMenu__item"><a href="#" class="menuText"><span>台東博覽會形象影片</span></a></li>
@@ -128,202 +126,165 @@
 	</header>
 	<!-- header end -->
     <main class="main">
-        <!-- preview start -->
-		<div id="preview" class="section section--preview">
-			<div class="section__content">
-				<div class="previewGroup previewGroup--curating">
-					<div class="hero">
-						<div class="container">
-							<div class="previewGroup__title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
-								<span class="f-title-primary">
-									<span>10大策展議題 X </span><span>超過13場大型展覽與活動 <i class="break-mb">X</i> </span><br class="display--pc">
-									<i class="break-pc">X</i> 台東12知名活動品牌聯動
-								</span>
-								<span class="f-title-primary">
-									<span><i class="break-mb">——</i>2026年，邀您一起體驗</span><span>台東的多元精彩！</span>
-								</span>
-							</div>
-							<div class="previewGroup__content">
-								<div class="intro wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
-									<p class="f-p">由一顆落下台東土地的慢經濟種子開始，向下扎根，向上展望，逐漸萌芽、延展出「空氣」、「水」、「自然力量」、「聲音」、「漂流」、「生活」、「慢經濟體」、「台東品牌」與「永續台東」等策展議題，一層層勾勒出台東獨有的慢經濟想像藍圖。</p>
-								</div>
-								<div class="hint wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">
-									<span class="hint__text">點擊策展議題查看詳情</span>
-									<a href="#curatingMap" class="hint__icon js-anchor"><span class="arrow"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="curatingMap" class="curatingMap wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
-						<div class="wheel-container">
-							<div class="click-overlay">
-								<svg class="wheel-svg" viewBox="0 0 500 639">
-									<!-- 扇形區域 1: 空氣 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="1"
-										  data-name="空氣"
-										  d="M 250 250 L 250 2 A 248 248 0 0 1 425.3 74.7 Z"/>
+        <div class="m-subPage">
+            <div class="m-element m-subPage__head">
+                <div class="container">
+                    <div class="pageLabel"><span class="pageLabel__text">#活動類型</span></div>
+                    <div class="wrapper">
+                        <div class="newsDate">2026.3.30</div>
+                        <div class="title f-title-primary is-pageTitle">新聞標題</div>
+                    </div>
+                </div>
+            </div>
+			<!-- 消息內容：有圖片輪播 -->
+			<div class="m-element m-subPage__summary">
+                <div class="container">
+                    <div class="summary">
+                        <div class="summary__image">
+                            <div class="imageList imageList--editor imageSwiper">
+                                <div class="swiper js-editorImgSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="imgWrap">
+                                                <img src="https://picsum.photos/id/158/300/300" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="imgWrap">
+                                                <img src="https://picsum.photos/id/157/300/300" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="imgWrap">
+                                                <img src="https://picsum.photos/id/156/300/300" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                        <div class="summary__text">
+                            <!-- {{-- 標題 --}} -->
+                            <div class="title"><span class="f-title-secondary">標題一</span></div>
+                            <!-- {{-- 內文 --}} -->
+                            <div class="intro">
+                                <div class="customEditor">
+                                    <p class="f-p">介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字</p>
+                                    <p class="f-p">介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字</p>
+                                </div>
+                            </div>
+                            <!-- {{-- 項目 --}} -->
+                            <ul class="list">
+                                <li><span class="f-h5">補充說明文字</span></li>
+                            </ul>
+                            <!-- {{-- 連結按鈕 --}} -->
+                            <ul class="links">
+                                <li><a href="#" class="btn btn--customLink"><span class="btn__text">自定義按鈕</span></a></li>
+                                <li><a href="#" class="btn btn--customLink"><span class="btn__text">按鈕</span></a></li>
+                                <li><a href="#" class="btn btn--customLink"><span class="btn__text">BTN</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- {{-- 消息內容：無圖片輪播 --}} -->
+            <div class="m-element m-subPage__summary">
+                <div class="container">
+                    <div class="summary">
+                        <div class="summary__text">
+                            <!-- {{-- 標題 --}} -->
+                            <div class="title"><span class="f-title-secondary">標題一</span></div>
+                            <!-- {{-- 內文 --}} -->
+                            <div class="intro">
+                                <div class="customEditor">
+                                    <p class="f-p">介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字</p>
+                                    <p class="f-p">介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字</p>
+                                </div>
+                            </div>
+                            <!-- {{-- 項目 --}} -->
+                            <ul class="list">
+                                <li><span class="f-h5">補充說明文字</span></li>
+                            </ul>
+                            <!-- {{-- 連結按鈕 --}} -->
+                            <ul class="links">
+                                <li><a href="#" class="btn btn--customLink"><span class="btn__text">自定義按鈕</span></a></li>
+                                <li><a href="#" class="btn btn--customLink"><span class="btn__text">按鈕</span></a></li>
+                                <li><a href="#" class="btn btn--customLink"><span class="btn__text">沒有限字數啊哈哈哈哈</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- {{-- 相簿 --}} -->
+            <div class="m-element m-subPage__gallery">
+                <div class="imageList imageList--gallery imageSwiper">
+                    <div class="swiper js-galleryImgSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="imgWrap">
+                                    <img src="https://picsum.photos/id/236/626/469" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="imgWrap">
+                                    <img src="https://picsum.photos/id/238/626/469" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="imgWrap">
+                                    <img src="https://picsum.photos/id/240/626/469" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="imgWrap">
+                                    <img src="https://picsum.photos/id/242/626/469" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-									<!-- 扇形區域 2: 水 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="2"
-										  data-name="水"
-										  d="M 250 250 L 425.3 74.7 A 248 248 0 0 1 498 250 Z"/>
-
-									<!-- 扇形區域 3: 自然力量 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="3"
-										  data-name="自然力量"
-										  d="M 250 250 L 498 250 A 248 248 0 0 1 425.3 425.3 Z"/>
-
-									<!-- 扇形區域 4: 聲音 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="4"
-										  data-name="聲音"
-										  d="M 250 250 L 425.3 425.3 A 248 248 0 0 1 250 498 Z"/>
-
-									<!-- 扇形區域 5: 香氣 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="5"
-										  data-name="香氣"
-										  d="M 250 250 L 250 498 A 248 248 0 0 1 74.7 425.3 Z"/>
-
-									<!-- 扇形區域 6: 生活 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="6"
-										  data-name="生活"
-										  d="M 250 250 L 74.7 425.3 A 248 248 0 0 1 2 250 Z"/>
-
-									<!-- 扇形區域 7: 慢經濟 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="7"
-										  data-name="慢經濟"
-										  d="M 250 250 L 2 250 A 248 248 0 0 1 74.7 74.7 Z"/>
-
-									<!-- 扇形區域 8: 台東品牌 -->
-									<path class="wheel-section js-curatingBtn"
-										  data-section="8"
-										  data-name="台東品牌"
-										  d="M 250 250 L 74.7 74.7 A 248 248 0 0 1 250 2 Z"/>
-
-									<!-- 中心圓圈: 種子 -->
-									<circle class="center-circle js-curatingBtn"
-											cx="250" cy="250" r="80"
-											data-section="center"
-											data-name="種子"/>
-
-									<!-- 底部圓圈 9: 永續台東-->
-									<circle class="bottom-circle js-curatingBtn"
-											cx="250" cy="543" r="96"
-											data-section="9"
-											data-name="永續台東"/>
-								</svg>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="previewGroup previewGroup--features">
-					<div class="container">
-						<div class="previewGroup__title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
-							<span class="f-title-primary">
-								串連台東山海與特色活動品牌<br>
-								打造整年度的精彩！
-							</span>
-						</div>
-						<div class="previewGroup__content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">
-							<ul class="featuresList">
-								<li>
-									<img src="/assets/images/about/features/img_feature-1.png" alt="台東炮炸寒單爺" class="featureImage">
-									<a href="https://www.zztaitung.com/20114/taitung-bombhandan-2" class="featureText featureText--front" target="_blank">台東炮炸<br>寒單爺</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-2.png" alt="自然醒慢活祭" class="featureImage">
-									<a href="https://www.taitungspiritfestival.tw" class="featureText featureText--front" target="_blank">自然醒<br>慢活祭</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-3.png" alt="臺東慢食節" class="featureImage">
-									<a href="https://slowfoodtaitung.tw/festival" class="featureText featureText--front" target="_blank">臺東慢食節</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-4.png" alt="PASIWALI原住民族國際音樂節" class="featureImage">
-									<a href="https://taiwanpasiwalifestival.com" class="featureText featureText--front" target="_blank">PASIWALI<br>原住民族<br>國際音樂節</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-5.png" alt="台東最美星空" class="featureImage">
-									<a href="https://www.facebook.com/StarryTaitung/?locale=zh_TW" class="featureText featureText--front" target="_blank">台東<br>最美星空</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-6.png" alt="臺灣國際熱氣球嘉年華" class="featureImage">
-									<a href="https://balloontaiwan.taitung.gov.tw/zh-tw" class="featureText featureText--front" target="_blank">臺灣國際<br>熱氣球嘉年華</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-7.png" alt="臺灣國際衝浪公開賽" class="featureImage">
-									<a href="https://www.facebook.com/taiwanopenofsurfing/" class="featureText featureText--front" target="_blank">臺灣國際<br>衝浪公開賽</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-8.png" alt="東海岸大地藝術節" class="featureImage">
-									<a href="https://www.eastcoast-nsa.gov.tw/teclandart/" class="featureText featureText--front" target="_blank">東海岸<br>大地藝術節</a>
-								</li>
-								<li class="multiple">
-									<img src="/assets/images/about/features/img_feature-9.png" alt="南迴藝術季 縱谷大地藝術季" class="featureImage">
-									<div class="featureText featureText--front">
-										南迴藝術季<br>縱谷大地藝術季
-									</div>
-									<div class="featureText featureText--back">
-										<a href="https://www.facebook.com/NanhuiArtProject/?locale=zh_TW" target="_blank">南迴藝術季</a>
-										<a href="https://www.eastcoast-nsa.gov.tw/teclandart/" target="_blank">縱谷大地藝術季</a>
-									</div>
-								</li>
-								<li class="multiple">
-									<img src="/assets/images/about/features/img_feature-10.png" alt="臺東藝術節 臺東藝穗節" class="featureImage">
-									<div class="featureText featureText--front">
-										臺東藝術節<br>臺東藝穗節
-									</div>
-									<div class="featureText featureText--back">
-										<a href="https://www.facebook.com/Taitungartsfestival/?locale=zh_TW" target="_blank">臺東藝術節</a>
-										<a href="https://www.taitungfringefestival.com" target="_blank">臺東藝穗節</a>
-									</div>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-11.png" alt="池上秋收稻穗藝術節" class="featureImage">
-									<a href="https://www.facebook.com/Chishangarts.org" class="featureText featureText--front" target="_blank">池上秋收<br>稻穗藝術節</a>
-								</li>
-								<li>
-									<img src="/assets/images/about/features/img_feature-12.png" alt="台東光祭" class="featureImage">
-									<a href="https://www.facebook.com/TaitungLightFestival/?locale=zh_TW" class="featureText featureText--front" target="_blank">台東光祭</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+	<div id="popup" class="popup">
+		<div class="popup__overlay"></div>
+		<div class="popupBox">
+			<div class="popupBox__close">
+				<button class="btn btn--closePopup"></button>
+			</div>
+			<div class="popupBox__content" >
+				<div class="flexBox">
+					<div class="imgWrap"><img src="" alt=""/></div>
 				</div>
 			</div>
 		</div>
-		<!-- preview end -->
-		<h3 class="marquee">
-			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
-			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
-			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
-			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
-			<div class="marquee__content"><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span><span class="title">EXPO 2026</span><span class="slogan">SLOW FOR LIFE</span></div>
-		</h3>
-    </main>
+	</div>
 
 	<footer id="contact" class="l-footer">
 		<div class="container">
 			<div class="logo logo--government">
-				<a href="https://www.taitung.gov.tw" target="_blank"><img src="/assets/images/logo_taitungGov.svg" alt="臺東縣政府"></a>
+				<a href="https://www.taitung.gov.tw" target="_blank"><img src="../assets/images/logo_taitungGov.svg" alt="臺東縣政府"></a>
 			</div>
 			<div class="department">2026台東博覽會-專案管理辦公室</div>
 			<ul class="info">
-				<li class="f-h5">電-primary子郵件：<a href="mailto:info@taitungexpo2026.com.tw">info@taitungexpo2026.com.tw</a></li>
-				<li class="f-h5">官-primary方LINE:<a href="https://lin.ee/xC0cxGi" target="_blank">@ttexpo</a></li>
-				<li class="f-h5">服-primary務時間：週一至週五，9:00-18:00</li>
+				<li class="f-h5">電子郵件：<a href="mailto:info@taitungexpo2026.com.tw">info@taitungexpo2026.com.tw</a></li>
+				<li class="f-h5">官方LINE:<a href="https://lin.ee/xC0cxGi" target="_blank">@ttexpo</a></li>
+				<li class="f-h5">服務時間：週一至週五，9:00-18:00</li>
 			</ul>
 			<ul class="sectors">
-				<li class="f-h5">指-primary導單位｜國家發展委員會、文化部</li>
-				<li class="f-h5">主-primary辦單位｜臺東縣政府</li>
-				<li class="f-h5">執-primary行單位｜玩美文創設計工作室</li>
+				<li class="f-h5">指導單位｜國家發展委員會、文化部</li>
+				<li class="f-h5">主辦單位｜臺東縣政府</li>
+				<li class="f-h5">執行單位｜玩美文創設計工作室</li>
 			</ul>
+			<div class="blankLogo">
+				<span class="logo__item logo__item--ndc" target="_blank"><img src="../assets/images/logo_ndc.svg" alt="國家發展會"></span>
+				<span class="logo__item logo__item--bp" target="_blank"><img src="../assets/images/logo_ndc.svg" alt="雙語政策"></span>
+			</div>
 			<div class="blankLogo">
 				<a href="https://www.facebook.com/taitungexpo2026/" class="logo__item logo__item--icon" target="_blank"><img src="../assets/images/logo_sns-fb.svg" alt="2026台東博覽會 Taitung Expo Facebook"></a>
 				<a href="https://www.instagram.com/2026taitungexpo/" class="logo__item logo__item--icon" target="_blank"><img src="../assets/images/logo_sns-ig.svg" alt="2026台東博覽會TAITUNG EXPO Instagram"></a>
@@ -333,17 +294,6 @@
 			<div class="copyright">Copyright &copy; 2025 臺東縣政府. All rights reserved</div>
 		</div>
 	</footer>
-
-	<div id="popup" class="popup">
-		<div class="popup__overlay"></div>
-		<div class="popupBox">
-			<div class="popupBox__close">
-				<button class="btn btn--closePopup"></button>
-			</div>
-			<div id="popupDynamicContent"></div>
-		</div>
-	</div>
-
 	<script src="../assets/js/jquery-latest.min.js"></script>
 	<script src="../assets/js/jquery.mobile.custom.js"></script>
 	<script src="../assets/js/popper.min.js"></script>
@@ -352,7 +302,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="../assets/js/index.js"></script>
 	<script src="../assets/js/navbar.js"></script>
-	<script type="module" src="../assets/js/about/statement.js"></script>
+	<script src="../assets/js/news/detail.js"></script>
 </body>
-
 </html>
