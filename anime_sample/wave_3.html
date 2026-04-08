@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>波浪無縫動畫</title>
+    <style>
+        :root {
+            /* 調整波浪在網頁上顯示的寬度 */
+            --wave-display-width: 175px; 
+            /* 調整波浪流動速度 */
+            --wave-speed: 8s;
+            /* 根據你的 SVG viewBox 高度設定 (重要) */
+            --wave-native-height: 864px;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f8f9fa;
+            font-family: sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            /* 內容撐開高度，或設為 100vh */
+            min-height: 100vh; 
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container__main {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        /* 波浪容器：絕對定位並撐滿父層 */
+        .svg-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: var(--wave-display-width);
+            z-index: 1;
+        }
+
+        .svg-container--left { left: 0; }
+        .svg-container--right { 
+            right: 0; 
+            transform: scaleX(-1); /* 鏡射左側，達成對稱 */
+        }
+
+        /* 使用偽元素實現背景重複與動畫 */
+        .svg-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* 將你的 SVG 路徑轉為 Data URI */
+            background-image: url('./p2-1-wave-l.svg');
+            
+            background-repeat: repeat-y;
+            background-size: 100% var(--wave-native-height);
+            animation: waveFlow var(--wave-speed) linear infinite;
+        }
+
+        /* 讓背景位移剛好一個循環高度 */
+        @keyframes waveFlow {
+            from { background-position-y: 0; }
+            to { background-position-y: calc(-1 * var(--wave-native-height)); }
+        }
+
+        h2 { margin: 0; font-size: 2rem; }
+        p { font-size: 1.2rem; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="svg-container svg-container--left"></div>
+
+        <div class="container__main">
+            <section>
+                <h2>Title 1</h2>
+                <p>文字</p>
+                <br>
+                <h2>Title 2</h2>
+                <p>文字</p>
+                <p style="margin-top: 50px; color: #aaa; font-size: 0.9rem;">
+                    (嘗試捲動頁面或增加文字，波浪將永遠持續且不中斷)
+                </p>
+            </section>
+        </div>
+
+        <div class="svg-container svg-container--right"></div>
+    </div>
+
+</body>
+</html>
