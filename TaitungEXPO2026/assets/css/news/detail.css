@@ -666,7 +666,7 @@ a:focus {
   z-index: 1000;
   right: 0.625rem;
   bottom: 6.25rem;
-  gap: 0.625rem;
+  gap: 1.875rem;
   -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
@@ -2069,6 +2069,31 @@ body.openNav, body.openPopup {
           box-shadow: none;
 }
 
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__overlay {
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
 .m-subPage {
   padding: 1.875rem 0 0;
 }
@@ -2529,6 +2554,9 @@ body.openNav, body.openPopup {
 }
 .m-subPage__gallery .imgWrap {
   position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .m-subPage__gallery .imgWrap:before {
   content: "";
@@ -2545,9 +2573,25 @@ body.openNav, body.openPopup {
   -o-object-fit: cover;
   object-fit: cover;
 }
+.m-subPage__gallery .imgWrap:hover {
+  -webkit-transform: translateY(-0.3125rem);
+  transform: translateY(-0.3125rem);
+}
+@media not screen and (hover: hover) {
+  .m-subPage__gallery .imgWrap:hover {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 .m-subPage__gallery .swiper-wrapper {
   overflow-x: scroll;
   padding-left: 1.875rem;
+  padding-top: 0.3125rem;
+}
+@media not screen and (hover: hover) {
+  .m-subPage__gallery .swiper-wrapper {
+    padding-top: 0;
+  }
 }
 .m-subPage__gallery .swiper-wrapper .swiper-slide {
   width: 19.5625rem;
@@ -2664,6 +2708,10 @@ body.openNav, body.openPopup {
   display: block;
 }
 
+.popup__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .popupBox {
   width: calc(100% - 1.875rem);
   max-width: 42.875rem;
@@ -2673,10 +2721,6 @@ body.openNav, body.openPopup {
   z-index: 10;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  border-radius: 0.625rem;
-  background-color: rgba(0, 0, 0, 0.87);
-  -webkit-box-shadow: 0.125rem 0.1875rem 0.25rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0.125rem 0.1875rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 .popupBox__close {
   position: absolute;
@@ -2725,31 +2769,6 @@ body.openNav, body.openPopup {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.popup {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-.popup.active {
-  opacity: 1;
-  visibility: visible;
-}
-.popup__overlay {
-  background-color: transparent;
-  cursor: pointer;
-  position: absolute;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
 }
 
 .main {

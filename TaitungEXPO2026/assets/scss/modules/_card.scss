@@ -82,6 +82,28 @@ $path: '../../images';
             }
         }
     }
+
+    &--swiper {
+
+        @include rwd-min(769px) {
+
+            .swiper-disabled {
+                & ~ .swiper-button-prev,
+                & ~ .swiper-button-next {
+                    display: none;
+                }
+
+                .swiper-wrapper {
+                    justify-content: center;
+                }
+
+                .swiper-slide {
+                    flex: 0 0 calc((100% - rem(60)) / 3);
+                    width: calc((100% - rem(60)) / 3)
+                }
+            }
+        }
+    }
 }
 
 .cardItem {

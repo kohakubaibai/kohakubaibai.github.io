@@ -666,7 +666,7 @@ a:focus {
   z-index: 1000;
   right: 0.625rem;
   bottom: 6.25rem;
-  gap: 0.625rem;
+  gap: 1.875rem;
   -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
@@ -2155,6 +2155,22 @@ body.openNav, body.openPopup {
 }
 @media (min-width: 769px) {
   .cardsList--collapseScroll .cardItem {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc((100% - 3.75rem) / 3);
+            flex: 0 0 calc((100% - 3.75rem) / 3);
+    width: calc((100% - 3.75rem) / 3);
+  }
+}
+@media (min-width: 769px) {
+  .cardsList--swiper .swiper-disabled ~ .swiper-button-prev, .cardsList--swiper .swiper-disabled ~ .swiper-button-next {
+    display: none;
+  }
+  .cardsList--swiper .swiper-disabled .swiper-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cardsList--swiper .swiper-disabled .swiper-slide {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc((100% - 3.75rem) / 3);
             flex: 0 0 calc((100% - 3.75rem) / 3);
