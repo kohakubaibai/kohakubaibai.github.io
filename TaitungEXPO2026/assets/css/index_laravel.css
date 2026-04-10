@@ -890,13 +890,14 @@ body.lang--en .btn--blank {
   font-family: "Unbounded", sans-serif;
 }
 body.lang--en .btn--blank .btn__text {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.875rem;
-  line-height: 1.35;
+  line-height: 1.5;
+  letter-spacing: 0.035rem;
 }
 @media (min-width: 769px) {
   body.lang--en .btn--blank {
-    font-size: 1rem;
+    letter-spacing: 0.0875rem;
   }
 }
 body.lang--en .btn--customLink .btn__text {
@@ -1177,10 +1178,17 @@ body.lang--zh .l-footer .sectors > li {
   letter-spacing: 0.125rem;
 }
 body.lang--zh .btn--blank .btn__text {
-  font-weight: 600;
-  font-size: 0.9375rem;
-  line-height: 1;
-  letter-spacing: 0.09375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4285;
+  letter-spacing: normal;
+}
+@media (min-width: 769px) {
+  body.lang--zh .btn--blank .btn__text {
+    font-size: 0.9375rem;
+    line-height: 1.4266;
+    letter-spacing: 0.09375rem;
+  }
 }
 body.lang--zh .btn--customLink .btn__text {
   font-size: 0.875rem;
@@ -2996,9 +3004,11 @@ body.openNav, body.openPopup {
 .cardItem--brand .cardItem__image:before {
   padding-top: 100%;
 }
-.cardItem--brand .cardItem__image img {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+@media (min-width: 769px) {
+  .cardItem--brand .cardItem__image img {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
 }
 .cardItem--brand .cardItem__text {
   padding: 1.25rem;

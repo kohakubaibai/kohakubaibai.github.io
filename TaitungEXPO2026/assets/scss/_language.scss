@@ -119,13 +119,14 @@ body {
                 @include f-unbounded;
 
                 .btn__text {
-                    font-weight: 500;
+                    font-weight: 600;
                     font-size: rem(14);
-                    line-height: 1.35;
+                    line-height: 1.5;
+                    letter-spacing: rem(0.56);
                 }
 
                 @include rwd-min(769px) {
-                    font-size: rem(16);
+                    letter-spacing: rem(1.4)
                 }
             }
 
@@ -525,10 +526,16 @@ body {
         .btn {
             &--blank {
                 .btn__text {
-                    font-weight: 600;
-                    font-size: rem(15);
-                    line-height: 1;
-                    letter-spacing: rem(1.5);
+                    font-size: rem(14);
+                    font-weight: 500;
+                    line-height: 1.4285;
+                    letter-spacing: normal;
+
+                    @include rwd-min(769px) {
+                        font-size: rem(15);
+                        line-height: 1.4266;
+                        letter-spacing: rem(1.5);
+                    }
                 }
             }
 
