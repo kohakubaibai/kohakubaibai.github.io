@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../normalize';
+@use '../layout';
+@use '../language';
+@use '../common';
+
+$commonPath: '../../../images';
+$path: '../../../images/reservation';

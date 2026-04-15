@@ -118,7 +118,8 @@ $btnPath: '../../images';
     }
 
     &--goSubpage,
-    &--blankPage {
+    &--blankPage,
+    &--submit {
         display: flex;
         align-items: center;
         padding: rem(9) rem(19);
@@ -476,6 +477,28 @@ $btnPath: '../../images';
                 &:after {
                     @include rotate(0);
                 }
+            }
+        }
+    }
+
+    &--refresh {
+        width: rem(30);
+        height: rem(30);
+        background-color: $bg-4;
+        background-image: url('#{$btnPath}/icon_refresh.svg');
+        background-repeat: no-repeat;
+        background-size: rem(30);
+        background-position: center;
+        font-size: 0;
+        border-radius: rem(6);
+
+        &:hover {
+            background-color: $primary-hover;
+        }
+
+        @include rwd-not-hover {
+            &:hover {
+                background-color: $bg-4;
             }
         }
     }

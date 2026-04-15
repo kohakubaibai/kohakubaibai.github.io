@@ -1741,7 +1741,7 @@ body.openNav, body.openPopup {
     transform: rotate(0deg);
   }
 }
-.btn--goSubpage, .btn--blankPage {
+.btn--goSubpage, .btn--blankPage, .btn--submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1755,11 +1755,11 @@ body.openNav, body.openPopup {
   background-color: transparent;
 }
 @media (min-width: 769px) {
-  .btn--goSubpage, .btn--blankPage {
+  .btn--goSubpage, .btn--blankPage, .btn--submit {
     padding: 0.75rem 1.8125rem;
   }
 }
-.btn--goSubpage:after, .btn--blankPage:after {
+.btn--goSubpage:after, .btn--blankPage:after, .btn--submit:after {
   content: "";
   display: block;
   width: 0.8125rem;
@@ -1770,100 +1770,100 @@ body.openNav, body.openPopup {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.btn--goSubpage .btn__text, .btn--blankPage .btn__text {
+.btn--goSubpage .btn__text, .btn--blankPage .btn__text, .btn--submit .btn__text {
   font-family: "Unbounded", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
 }
-.btn--goSubpage.is-dark, .btn--blankPage.is-dark {
+.btn--goSubpage.is-dark, .btn--blankPage.is-dark, .btn--submit.is-dark {
   border-color: #4D4D4D;
   background-color: #fff;
 }
-.btn--goSubpage.is-dark:after, .btn--blankPage.is-dark:after {
+.btn--goSubpage.is-dark:after, .btn--blankPage.is-dark:after, .btn--submit.is-dark:after {
   background-image: url("../../images/arrow_goSubpage-dark.svg");
 }
-.btn--goSubpage.is-dark .btn__text, .btn--blankPage.is-dark .btn__text {
+.btn--goSubpage.is-dark .btn__text, .btn--blankPage.is-dark .btn__text, .btn--submit.is-dark .btn__text {
   color: #4D4D4D;
 }
-.btn--goSubpage.is-dark:hover, .btn--blankPage.is-dark:hover {
+.btn--goSubpage.is-dark:hover, .btn--blankPage.is-dark:hover, .btn--submit.is-dark:hover {
   border-color: #003893;
   background-color: #003893;
 }
-.btn--goSubpage.is-dark:hover:after, .btn--blankPage.is-dark:hover:after {
+.btn--goSubpage.is-dark:hover:after, .btn--blankPage.is-dark:hover:after, .btn--submit.is-dark:hover:after {
   background-image: url("../../images/arrow_goSubpage-light.svg");
 }
-.btn--goSubpage.is-dark:hover .btn__text, .btn--blankPage.is-dark:hover .btn__text {
+.btn--goSubpage.is-dark:hover .btn__text, .btn--blankPage.is-dark:hover .btn__text, .btn--submit.is-dark:hover .btn__text {
   color: #fff;
 }
 @media not screen and (hover: hover) {
-  .btn--goSubpage.is-dark:hover, .btn--blankPage.is-dark:hover {
+  .btn--goSubpage.is-dark:hover, .btn--blankPage.is-dark:hover, .btn--submit.is-dark:hover {
     border-color: #4D4D4D;
     background-color: white;
   }
-  .btn--goSubpage.is-dark:hover:after, .btn--blankPage.is-dark:hover:after {
+  .btn--goSubpage.is-dark:hover:after, .btn--blankPage.is-dark:hover:after, .btn--submit.is-dark:hover:after {
     background-image: url("../../images/arrow_goSubpage-dark.svg");
   }
-  .btn--goSubpage.is-dark:hover .btn__text, .btn--blankPage.is-dark:hover .btn__text {
+  .btn--goSubpage.is-dark:hover .btn__text, .btn--blankPage.is-dark:hover .btn__text, .btn--submit.is-dark:hover .btn__text {
     color: #4D4D4D;
   }
 }
-.btn--goSubpage.is-light, .btn--blankPage.is-light {
+.btn--goSubpage.is-light, .btn--blankPage.is-light, .btn--submit.is-light {
   border-color: #fff;
 }
-.btn--goSubpage.is-light:after, .btn--blankPage.is-light:after {
+.btn--goSubpage.is-light:after, .btn--blankPage.is-light:after, .btn--submit.is-light:after {
   background-image: url("../../images/arrow_goSubpage-light.svg");
 }
-.btn--goSubpage.is-light .btn__text, .btn--blankPage.is-light .btn__text {
+.btn--goSubpage.is-light .btn__text, .btn--blankPage.is-light .btn__text, .btn--submit.is-light .btn__text {
   color: #fff;
 }
-.btn--goSubpage.is-light:hover, .btn--blankPage.is-light:hover {
+.btn--goSubpage.is-light:hover, .btn--blankPage.is-light:hover, .btn--submit.is-light:hover {
   border-color: #003893;
   background-color: #003893;
 }
 @media not screen and (hover: hover) {
-  .btn--goSubpage.is-light:hover, .btn--blankPage.is-light:hover {
+  .btn--goSubpage.is-light:hover, .btn--blankPage.is-light:hover, .btn--submit.is-light:hover {
     border-color: #fff;
     background-color: transparent;
   }
 }
-.btn--goSubpage.is-yellow, .btn--blankPage.is-yellow {
+.btn--goSubpage.is-yellow, .btn--blankPage.is-yellow, .btn--submit.is-yellow {
   border-color: #4D4D4D;
   background-color: #F1E462;
 }
-.btn--goSubpage.is-yellow:after, .btn--blankPage.is-yellow:after {
+.btn--goSubpage.is-yellow:after, .btn--blankPage.is-yellow:after, .btn--submit.is-yellow:after {
   background-image: url("../../images/arrow_goSubpage-dark.svg");
 }
-.btn--goSubpage.is-yellow .btn__text, .btn--blankPage.is-yellow .btn__text {
+.btn--goSubpage.is-yellow .btn__text, .btn--blankPage.is-yellow .btn__text, .btn--submit.is-yellow .btn__text {
   color: #4D4D4D;
 }
-.btn--goSubpage.is-yellow:hover, .btn--blankPage.is-yellow:hover {
+.btn--goSubpage.is-yellow:hover, .btn--blankPage.is-yellow:hover, .btn--submit.is-yellow:hover {
   border-color: #003893;
   background-color: #003893;
 }
-.btn--goSubpage.is-yellow:hover:after, .btn--blankPage.is-yellow:hover:after {
+.btn--goSubpage.is-yellow:hover:after, .btn--blankPage.is-yellow:hover:after, .btn--submit.is-yellow:hover:after {
   background-image: url("../../images/arrow_goSubpage-light.svg");
 }
-.btn--goSubpage.is-yellow:hover .btn__text, .btn--blankPage.is-yellow:hover .btn__text {
+.btn--goSubpage.is-yellow:hover .btn__text, .btn--blankPage.is-yellow:hover .btn__text, .btn--submit.is-yellow:hover .btn__text {
   color: #fff;
 }
 @media not screen and (hover: hover) {
-  .btn--goSubpage.is-yellow:hover, .btn--blankPage.is-yellow:hover {
+  .btn--goSubpage.is-yellow:hover, .btn--blankPage.is-yellow:hover, .btn--submit.is-yellow:hover {
     border-color: #4D4D4D;
     background-color: #F1E462;
   }
-  .btn--goSubpage.is-yellow:hover:after, .btn--blankPage.is-yellow:hover:after {
+  .btn--goSubpage.is-yellow:hover:after, .btn--blankPage.is-yellow:hover:after, .btn--submit.is-yellow:hover:after {
     background-image: url("../../images/arrow_goSubpage-dark.svg");
   }
-  .btn--goSubpage.is-yellow:hover .btn__text, .btn--blankPage.is-yellow:hover .btn__text {
+  .btn--goSubpage.is-yellow:hover .btn__text, .btn--blankPage.is-yellow:hover .btn__text, .btn--submit.is-yellow:hover .btn__text {
     color: #4D4D4D;
   }
 }
-.btn--goSubpage:hover:after, .btn--blankPage:hover:after {
+.btn--goSubpage:hover:after, .btn--blankPage:hover:after, .btn--submit:hover:after {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 @media not screen and (hover: hover) {
-  .btn--goSubpage:hover:after, .btn--blankPage:hover:after {
+  .btn--goSubpage:hover:after, .btn--blankPage:hover:after, .btn--submit:hover:after {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
@@ -2069,6 +2069,25 @@ body.openNav, body.openPopup {
   .btn--collapse:hover:after {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+  }
+}
+.btn--refresh {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: #B6D5EC;
+  background-image: url("../../images/icon_refresh.svg");
+  background-repeat: no-repeat;
+  background-size: 1.875rem;
+  background-position: center;
+  font-size: 0;
+  border-radius: 0.375rem;
+}
+.btn--refresh:hover {
+  background-color: #003893;
+}
+@media not screen and (hover: hover) {
+  .btn--refresh:hover {
+    background-color: #B6D5EC;
   }
 }
 .btn:focus {

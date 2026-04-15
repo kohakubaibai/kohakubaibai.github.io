@@ -1,0 +1,224 @@
+$decoPath: '../../images';
+
+.formRow {
+    &__title {
+        margin-bottom: rem(6);
+
+        .text {
+            color: $secondary;
+        }
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+
+        @include rwd-min(768px) {
+            align-items: flex-end;
+            flex-direction: row;
+
+        }
+
+        .formElement {
+            width: 100%;
+            display: flex;
+            position: relative;
+
+            &--datepicker {
+                .fancyInput {
+                    background-size: rem(22);
+                    background-repeat: no-repeat;
+                    background-position: right rem(29) center;
+                    background-image: url('#{$decoPath}/icon_datepicker.svg');
+                }
+            }
+
+            &--select {
+                .fancySelect {
+                    background-size: rem(22);
+                    background-repeat: no-repeat;
+                    background-position: right rem(29) center;
+                    background-image: url('#{$decoPath}/deco_select-form-inactive.svg');
+                }
+            }
+        }
+
+        .capacity {
+            display: flex;
+            gap: rem(6);
+            flex-wrap: nowrap;
+
+            &__deco {
+                color: $primary-hover;
+            }
+
+            &__text {
+                color: $secondary;
+            }
+        }
+
+        .paragraph {
+            color: $primary-hover;
+        }
+    }
+
+    &__hint {
+        margin-top: rem(10);
+
+        .errMsg {
+            display: none;
+            color: #D40000;
+        }
+    }
+}
+
+.fancyInput {
+    &--datepicker,
+    &--text {
+        border: none;
+        width: 100%;
+        padding: rem(9.5) rem(20);
+        border-radius: rem(20);
+    }
+
+    &--captcha {
+        border: rem(1) solid $secondary;
+        padding: rem(8.5) rem(20);
+        width: 100%;
+        border-radius: rem(10);
+    }
+
+    &--radio {
+        display: none;
+
+        &:checked {
+            & + .fancyLabel {
+                &:before {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.fancySelect {
+    @include appearance(none);
+    border: none;
+    width: 100%;
+    padding: rem(9.5) rem(20);
+    border-radius: rem(20);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.fancyTextarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    width: 100%;
+    border-radius: rem(20);
+    padding: rem(9.5) rem(20);
+    height: rem(97);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.radioGroup {
+    display: flex;
+    gap: rem(20);
+
+    @include rwd-min(769px) {
+        gap: rem(10);
+    }
+
+    &--gender {
+        flex-wrap: nowrap;
+    }
+}
+
+.fancyLabel {
+    position: relative;
+    padding-left: rem(26);
+    margin-bottom: 0;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    &:before {
+        display: none;
+        width: rem(12);
+        height: rem(12);
+        z-index: 10;
+        left: rem(4);
+        background-color: $secondary;
+    }
+
+    &:after {
+        display: block;
+        width: rem(20);
+        height: rem(20);
+        z-index: 5;
+        left: 0;
+        background-color: $white;
+    }
+
+    .fancyLabel__text {
+        display: block;
+        color: $secondary;
+        word-break: keep-all;
+    }
+}
+
+
+.captcha {
+    max-width: rem(183);
+    margin-left: auto;
+    margin-right: auto;
+
+    &__image {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        column-gap: rem(10);
+
+        .img {
+            width: rem(143);
+            flex: 0 0 rem(143)
+        }
+    }
+
+    &__input {
+        margin-top: rem(10);
+    }
+}
+
+.lang--en {
+    .fancyLabel{
+        &:before {}
+        &:after {}
+    }
+}
+.lang--zh {
+    .fancyLabel{
+        &:before {
+            top: rem(10);
+        }
+        &:after {
+            top: rem(6)
+        }
+    }
+}
