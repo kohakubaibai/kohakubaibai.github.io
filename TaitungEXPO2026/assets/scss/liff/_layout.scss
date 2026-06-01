@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixin';
+
+$path: '/resources/images/liff';
+
+header {
+    line-height: 1;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.wrapper {
+    padding: 0 3rem;
+}

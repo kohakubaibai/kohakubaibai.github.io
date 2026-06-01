@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixin';
+
+$btnPath: '/resources/images/liff';
+
+
+.btn {
+    padding: 0;
+	border-radius: 0;
+	border: none;
+    @include box-sizing(border-box);
+
+    &--collect {
+        border-radius: 1rem;
+        display: block;
+        padding: 1.6rem 0;
+        text-align: center;
+        background-color: $bg-3;
+
+        .btn__text {
+            color: $white;
+            font-size: 2rem;
+            line-height: 1.5;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+        }
+    }
+}

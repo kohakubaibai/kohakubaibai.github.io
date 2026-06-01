@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import 'variables';
+@import 'mixin';
+@import 'normalize';
+@import 'layout';
+@import 'common';
+@import 'button';
+
+$commonPath: '../../images/liff';
+
+body {
+    background-color: $white;
+}
+
+.pageTitle {
+    &__text {
+        color: $bg-1;
+    }
+}
+
+.pageDesc {
+    &__text {
+        color: $secondary;
+    }
+}
+
+.noteList {
+
+    & > li {
+        &:before {
+            background-color: $secondary;
+        }
+
+        span {
+            color: $secondary;
+        }
+    }
+}
+
+main {
+    .awardWall {
+        margin-top: 3rem;
+    }
+}
+
+
+.processBox {
+    &__text {
+        .topic {
+            color: $white;
+            font-size: 2rem;
+            line-height: 1.5;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+        }
+
+        .count {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.awardWall {
+    @include list-reset;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3.2rem;
+
+    & > li {
+        display: block;
+        width: 2.8rem;
+        flex: 0 0 2.8rem;
+
+        .icon {
+            display: block;
+            width: 2.8rem;
+            height: 6.9rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .venue {
+            margin-top: 0.8rem;
+            text-align: center;
+            @include f-unbounded;
+            font-size: 1.4rem;
+            font-weight: bold;
+            line-height: 1.5;
+            letter-spacing: 0.14rem;
+            color: #C9CACA;
+        }
+
+        &.is-active {
+            .venue {
+                color: $primary-hover;
+            }
+        }
+    }
+
+
+
+
+}

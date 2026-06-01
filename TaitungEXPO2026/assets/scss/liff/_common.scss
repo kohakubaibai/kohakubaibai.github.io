@@ -1,0 +1,162 @@
+@import 'variables';
+@import 'mixin';
+
+$path: '../../images/liff';
+
+
+@keyframes waveFlow {
+	from { background-position-X: 0; }
+	to { background-position-X: calc(-1 * 39rem); }
+}
+
+.pageTitle {
+    &__text {
+        display: block;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 1.5;
+        letter-spacing: 0.3rem;
+        font-weight: bold;
+
+        &--en {
+            @include f-unbounded;
+        }
+
+        &--zh {
+            @include f-noto;
+        }
+    }
+}
+
+.pageDesc {
+    &__text {
+        display: block;
+        text-align: center;
+
+        &--topic {
+            font-size: 1.7rem;
+            font-weight: bold;
+            line-height: 1.75;
+            letter-spacing: 0.17rem;
+        }
+
+        &--memo {
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+}
+
+.pageAction {
+    @include list-reset;
+    display: flex;
+
+    & > li {
+        flex: 0 0 100%;
+    }
+}
+
+.noteList {
+    @include list-reset;
+
+    & > li {
+        position: relative;
+        padding-left: 2.4rem;
+        margin-bottom: 0.6rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            width: 0.3rem;
+            height: 0.3rem;
+            position: absolute;
+            left: 1rem;
+            top: 1.2rem;
+        }
+
+        span {
+            font-size: 1.6rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+    }
+}
+
+.processBox {
+    padding: 1.6rem;
+    background-color: $bg-1;
+    border-radius: 1rem;
+    background-image: url('#{$path}/bg-process.webp');
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    animation: waveFlow 20s linear infinite;
+
+    &__text {
+        .topic {
+            color: $white;
+            font-size: 2rem;
+            line-height: 1.5;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+
+            &__num,
+            &__hr {
+                @include f-unbounded;
+                font-weight: bold;
+            }
+
+            &__hr {
+                color: $white;
+                font-size: 2rem;
+                letter-spacing: 0.2rem;
+            }
+
+            &__num {
+                &--current {
+                    color: $yellow;
+                    font-size: 4rem;
+                    letter-spacing: 0.4rem;
+                }
+
+                &--total {
+                    color: $white;
+                    font-size: 2rem;
+                    letter-spacing: 0.2rem;
+                }
+            }
+        }
+    }
+}
+
+main {
+    position: relative;
+    z-index: 5;
+    padding: 2rem 0 3rem;
+
+    .pageDesc {
+        margin-top: 2rem;
+    }
+
+    .processBox {
+        margin-top: 3rem;
+    }
+
+    .pageAction {
+        margin-top: 3rem;
+    }
+
+    .noteList {
+        margin-top: 3rem;
+    }
+}
