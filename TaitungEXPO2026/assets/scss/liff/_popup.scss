@@ -1,0 +1,230 @@
+@import 'variables';
+@import 'mixin';
+
+$popupPath: '../../images/liff';
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+body {
+    &.is-openPopup {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.popup {
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    @include transition(opacity, .4s, ease-in);
+
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+
+        .wrapper {
+            height: 100%;
+            position: relative;
+        }
+    }
+
+    .closePopup {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 5rem;
+        height: 5rem;
+        z-index: 10;
+        background-image: url('#{$popupPath}/btn-popup_close.svg');
+        background-size: 5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        box-shadow: 0 0.4rem 0.4rem rgba(16, 55, 141, 0.08);
+    }
+
+    .popupTitle {
+        text-align: center;
+        color: $bg-1;
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 0.3rem;
+    }
+
+    .balloonBox {
+        &__cover {
+            position: relative;
+
+            canvas {
+                position: absolute;
+                top: -1rem;
+                left: 0;
+                z-index: 1;
+            }
+
+            .image {
+                position: relative;
+                z-index: 5;
+                display: flex;
+                margin: 0 auto;
+                width: 25rem;
+                height: 25rem;
+                background-color: $white;
+                overflow: hidden;
+                border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+
+                .exclamation {
+                    width: 6rem;
+                    height: auto;
+                    animation: bounceIn 0.75s ease 0.8s 1 both, pulse 1s ease 1.55s infinite;
+                }
+            }
+        }
+
+        &__text {
+            position: relative;
+            z-index: 10;
+            margin-top: 2rem;
+            text-align: center;
+
+            .venue {
+                @include f-unbounded;
+                color: $bg-1;
+                font-size: 4rem;
+                font-weight: bold;
+                line-height: 1.5;
+                letter-spacing: 0.4rem;
+            }
+
+            .topic {
+                margin-top: 1rem;
+                color: $bg-1;
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 1.5;
+                letter-spacing: 0.2rem;
+            }
+        }
+    }
+
+    .action {
+       @include list-reset;
+        display: flex;
+
+        & > li {
+            flex: 0 0 100%;
+        }
+    }
+
+    .failAlert {
+        position: relative;
+        height: 100%;
+
+        &__msg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            @include translate(-50%, -50%);
+            padding: 4rem 6rem;
+            border-radius: 1rem;
+            background-color: $bg-3;
+            text-align: center;
+            color: $white;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.5;
+            @include box-sizing(border-box);
+        }
+    }
+
+    &--success {
+        background-color: #E4EFF9;
+
+        .wrapper {
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+
+            .popupTitle {
+                margin-bottom: 3rem;
+            }
+
+            .processBox {
+                margin-top: 3rem;
+
+                .processBox__text {
+                    .count {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+
+            .action {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    &--fail {
+        background-color: rgba(0, 0, 0, .7);
+    }
+
+    &.is-hide {
+        opacity: 0;
+    }
+}

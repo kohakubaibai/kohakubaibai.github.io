@@ -5,6 +5,7 @@
 @import 'layout';
 @import 'common';
 @import 'button';
+@import 'popup';
 
 $commonPath: '../../images/liff';
 
@@ -41,21 +42,13 @@ main {
     .awardWall {
         margin-top: 3rem;
     }
-}
 
 
-.processBox {
-    &__text {
-        .topic {
-            color: $white;
-            font-size: 2rem;
-            line-height: 1.5;
-            font-weight: 600;
-            letter-spacing: 0.2rem;
-        }
-
-        .count {
-            justify-content: flex-end;
+    .processBox {
+        .processBox__text {
+            .count {
+                justify-content: flex-end;
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ $path: '../../images/liff';
 
 @keyframes waveFlow {
 	from { background-position-X: 0; }
-	to { background-position-X: calc(-1 * 39rem); }
+	to { background-position-X: calc(-1 * 26.4rem); }
 }
 
 .pageTitle {
@@ -88,22 +88,9 @@ $path: '../../images/liff';
 
 .processBox {
     padding: 1.6rem;
-    background-color: $bg-1;
     border-radius: 1rem;
-    background-image: url('#{$path}/bg-process.webp');
-    background-size: 100% auto;
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    animation: waveFlow 20s linear infinite;
 
     &__text {
-        .topic {
-            color: $white;
-            font-size: 2rem;
-            line-height: 1.5;
-            font-weight: 600;
-            letter-spacing: 0.2rem;
-        }
 
         .count {
             display: flex;
@@ -126,16 +113,133 @@ $path: '../../images/liff';
                 &--current {
                     color: $yellow;
                     font-size: 4rem;
+                    line-height: 4rem;
                     letter-spacing: 0.4rem;
                 }
 
                 &--total {
                     color: $white;
                     font-size: 2rem;
+                    line-height: 2rem;
                     letter-spacing: 0.2rem;
                 }
             }
         }
+
+        .memo {
+            margin-top: 1.6rem;
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .bar {
+            position: relative;
+            width: 100%;
+            height: 1rem;
+            margin-top: 1rem;
+            background-color: #EFEFEF;
+            border-radius: 0.5rem;
+
+            &__value {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1rem;
+                background-color: #003891;
+                border-radius: 0.5rem;
+
+            }
+        }
+    }
+
+    &--default {
+        background-color: $bg-1;
+        background-image: url('#{$path}/bg-process.webp');
+        background-size: 26.4rem auto;
+        background-position: center bottom;
+        background-repeat: repeat-x;
+        animation: waveFlow 20s linear infinite;
+
+        .processBox__text {
+            .topic {
+                font-size: 2rem;
+                color: $white;
+                font-weight: 600;
+                line-height: 1.5;
+                letter-spacing: 0.2rem;
+            }
+
+            .count {
+                margin-top: 1.6rem;
+
+                &__hr {
+                    color: $white;
+                }
+
+                &__num {
+                    &--current {
+                        color: $yellow;
+                    }
+
+                    &--total {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &--popup {
+        background-color: $white;
+
+        .processBox__text {
+            .topic {
+                color: $secondary;
+                font-size: 1.7rem;
+                font-weight: 300;
+                line-height: 1.75;
+                letter-spacing: 0.17rem;
+            }
+
+            .count {
+                margin-top: 1rem;
+
+                &__hr {
+                    color: $secondary;
+                }
+
+                &__num {
+                    &--current {
+                        color: $primary-hover;
+                    }
+
+                    &--total {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stickyBtn {
+    position: sticky;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.6rem 0;
+    background-color: $white;
+    box-shadow: 0 -0.4rem 1rem rgba(16, 55, 141, .13);
+
+    .actions {
+        @include list-reset;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 }
 

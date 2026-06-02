@@ -1,8 +1,7 @@
 @import 'variables';
 @import 'mixin';
 
-$btnPath: '/resources/images/liff';
-
+$btnPath: '../../images/liff';
 
 .btn {
     padding: 0;
@@ -23,6 +22,93 @@ $btnPath: '/resources/images/liff';
             line-height: 1.5;
             font-weight: 600;
             letter-spacing: 0.2rem;
+        }
+    }
+
+    &--scan {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+        padding: 1.6rem;
+        background-color: $bg-1;
+        column-gap: 1.6rem;
+        border-radius: 1rem;
+
+        &:before {
+            content: '';
+            display: block;
+            flex: 0 0 5rem;
+            width: 5rem;
+            height: 5rem;
+            background-image: url('#{$btnPath}/btn-icon_scan.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 5rem;
+        }
+
+        .btn__text {
+            color: $white;
+            line-height: 1.5;
+
+            .topic {
+                display: block;
+                font-size: 2rem;
+                font-weight: 600;
+                letter-spacing: 0.15rem;
+            }
+
+            .memo {
+                display: block;
+                margin-top: 1rem;
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &--fixFunc {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 6rem;
+            height: 6rem;
+            background-size: 6rem;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .btn__text {
+            display: block;
+            margin-top: 0.6rem;
+            color: $secondary;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+
+        &.is-collection {
+            &:before {
+                background-image: url('#{$btnPath}/btn-docking_collection.svg');
+            }
+        }
+
+        &.is-scan {
+            &:before {
+                background-image: url('#{$btnPath}/btn-docking_scan.svg');
+            }
+        }
+
+        &.is-prize {
+            &:before {
+                background-image: url('#{$btnPath}/btn-docking_prize.svg');
+            }
         }
     }
 }

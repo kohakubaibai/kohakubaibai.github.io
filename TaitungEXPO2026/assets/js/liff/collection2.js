@@ -20,7 +20,7 @@ function parsePath(d) {
     const nums = [...d.matchAll(/-?\d+\.?\d*/g)].map(m => parseFloat(m[0]));
     const pts = [];
     for (let i = 0; i < nums.length; i += 2) {
-    pts.push([nums[i], nums[i + 1]]);
+        pts.push([nums[i], nums[i + 1]]);
     }
     const cx = pts.reduce((s, p) => s + p[0], 0) / pts.length;
     const cy = pts.reduce((s, p) => s + p[1], 0) / pts.length;
@@ -28,15 +28,15 @@ function parsePath(d) {
     return { cx, cy, local };
 }
 
-const FADE_START = 0.50;
+const FADE_START = 0.60;
 const W = 330;
 const H = 321;
 
 const particles = svgShapes.map((s, i) => {
-    const { cx, local } = parsePath(s.d);
+    const { cx, cy, local } = parsePath(s.d);
     const duration = (1.8 + (i % 7) * 0.3) * 1000; // 每顆速度略不同
     const startOffset = (i * 0.41 * 1000) % duration; // 錯開起始
-    return { cx, local, color: s.color, duration, t: startOffset };
+    return { cx, cy, local, color: s.color, duration, t: startOffset };
 });
 
 const cv = document.getElementById('cv');
@@ -51,30 +51,34 @@ function draw(ts) {
     ctx.clearRect(0, 0, W, H);
 
     for (const p of particles) {
-    p.t = (p.t + dt) % p.duration;
-    const progress = p.t / p.duration;
+        p.t = (p.t + dt) % p.duration;
+        const progress = p.t / p.duration;
 
-    const y = -20 + (H + 40) * progress;
+        // 以畫布中心為噴射原點，依原始位置決定方向
+        const angle_out = Math.atan2(p.cy - H / 2, p.cx - W / 2);
+        const dist = progress * 220;
+        const x = W / 2 + Math.cos(angle_out) * dist;
+        const y = H / 2 + Math.sin(angle_out) * dist;
 
-    const angle = progress * (420 * Math.PI / 180);
+        const angle = progress * (420 * Math.PI / 180);
 
-    const opacity = progress >= FADE_START
-        ? 1 - (progress - FADE_START) / (1 - FADE_START)
-        : 1;
+        const opacity = progress >= FADE_START
+            ? 1 - (progress - FADE_START) / (1 - FADE_START)
+            : 1;
 
-    ctx.save();
-    ctx.globalAlpha = opacity;
-    ctx.translate(p.cx, y);
-    ctx.rotate(angle);
-    ctx.fillStyle = p.color;
+        ctx.save();
+        ctx.globalAlpha = opacity;
+        ctx.translate(x, y);
+        ctx.rotate(angle);
+        ctx.fillStyle = p.color;
 
-    ctx.beginPath();
-    p.local.forEach(([lx, ly], idx) => {
-        idx === 0 ? ctx.moveTo(lx, ly) : ctx.lineTo(lx, ly);
-    });
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
+        ctx.beginPath();
+        p.local.forEach(([lx, ly], idx) => {
+            idx === 0 ? ctx.moveTo(lx, ly) : ctx.lineTo(lx, ly);
+        });
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
     }
 
     requestAnimationFrame(draw);
@@ -82,47 +86,9 @@ function draw(ts) {
 
 requestAnimationFrame(draw);
 
-function showSuccessPopup() {
-    document.body.classList.add('is-openPopup');
-
-    const popup = document.querySelector('.js-popup-success');
-    if (!popup) return;
-
-    popup.style.display = 'block';
-    popup.classList.remove('is-hide');
-}
-
-function closeSuccessPopup() {
-    document.body.classList.remove('is-openPopup');
-
-    document.querySelectorAll('.js-closePopup').forEach(el => {
-        el.addEventListener('click', () => {
-            document.querySelectorAll('.js-popup-success').forEach(popup => {
-                popup.classList.add('is-hide');
-                popup.addEventListener('transitionend', () => {
-                    popup.style.display = 'none';
-                    popup.classList.remove('is-hide');
-                }, { once: true });
-            });
-        });
-    });
-}
-closeSuccessPopup();
-
-function showFailPopup() {
-    document.body.classList.add('is-openPopup');
-    const popup = document.querySelector('.js-popup-fail');
-    if (!popup) return;
-
-    setTimeout(() => {
-        document.body.classList.remove('is-openPopup');
-        popup.classList.add('is-hide');
-        popup.addEventListener('transitionend', () => {
-            popup.style.display = 'none';
-            popup.classList.remove('is-hide');
-        }, { once: true });
-    }, 2000);
-}
-showFailPopup();
+$('.js-closePopup').on('click', function(){
+    $('body').removeClass('is-openPopup');
+    $('.popup').fadeOut();
+});
 
 new WOW().init();
