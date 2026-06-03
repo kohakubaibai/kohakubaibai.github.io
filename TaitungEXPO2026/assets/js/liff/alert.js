@@ -1,6 +1,5 @@
 document.body.classList.add('is-lock');
 const alert = document.querySelector('.js-alert');
-if (!alert) return;
 
 setTimeout(() => {
     document.body.classList.remove('is-lock');

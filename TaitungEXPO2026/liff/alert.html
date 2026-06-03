@@ -163,7 +163,7 @@
 		<div class="wrapper">
 			<ul class="actions">
 				<li>
-					<span class="btn btn--fixFunc is-collection"><span class="btn__text">集章牆</span></span>
+					<a href="collection.html" class="btn btn--fixFunc is-collection"><span class="btn__text">集章牆</span></a>
 				</li>
 				<li>
 					<button type="button" href="#" class="btn btn--fixFunc is-scan"><span class="btn__text">掃描</span></button>
@@ -174,39 +174,19 @@
 			</ul>
 		</div>
 	</div>
-	<div class="popup popup--success js-popup-success">
+	<div class="popup popup--alert js-alert">
 		<div class="popup__content">
-			<div class="closePopup js-closePopup"></div>
 			<div class="wrapper">
-				<h2 class="popupTitle">集章成功</h2>
-				<div class="balloonBox">
-					<div class="balloonBox__cover">
-						<canvas id="cv" width="330" height="321"></canvas>
-						<div class="image">
-							<img src="../assets/images/liff/exclamation/img-exclamation_A1.webp" alt="A1-台東博覽會主場館：活的學校" class="exclamation">
-						</div>
-					</div>
-					<div class="balloonBox__text">
-						<div class="venue">A1</div>
-						<div class="topic">台東博覽會主場館：活的學校</div>
+				<div class="failAlert">
+					<div class="failAlert__msg">
+						<!-- case1 -->
+						此探索已完成蒐集，<br>前往下一站吧！
+						<!-- case2 -->
+						<!-- QR Code無法辨識，<br>請重新嘗試。 -->
+						<!-- case3 -->
+						<!-- 未允許定位Message -->
 					</div>
 				</div>
-				<div class="processBox processBox--popup">
-					<div class="processBox__text">
-						<div class="topic">我的集章進度</div>
-						<div class="count">
-							<span class="count__num count__num--current">7</span>
-							<i class="count__hr">/</i>
-							<span class="count__num count__num--total">23</span>
-						</div>
-						<div class="bar">
-							<div class="bar__value" style="width: calc((7 / 23) * 100%);"></div>
-						</div>
-					</div>
-				</div>
-				<ul class="action">
-					<li><a href="#" class="btn btn--collect js-closePopup"><span class="btn__text">查看集章牆</span></a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
@@ -215,7 +195,7 @@
 	<script src="../assets/js/popper.min.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script src="../assets/js/wow.js"></script>
-	<script src="../assets/js/liff/collection.js"></script>
+	<script src="../assets/js/liff/alert.js"></script>
 </body>
 
 </html>

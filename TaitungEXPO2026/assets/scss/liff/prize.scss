@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@import 'variables';
+@import 'mixin';
+@import 'normalize';
+@import 'layout';
+@import 'common';
+@import 'button';
+@import 'popup';
+@import 'form';
+
+$commonPath: '../../images/liff';
+
+@keyframes knobSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    18% {
+        transform: rotate(200deg);
+    }
+    30%,
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+body {
+    background-color: $white;
+}
+
+.main {
+    min-height: calc(100dvh - 26.4rem);
+
+    .exchange {
+        margin-top: 3rem;
+    }
+}
+
+.pageTitle {
+    &__text {
+        color: $bg-1;
+    }
+}
+
+.processBox {
+    &--default {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        column-gap: 1.6rem;
+
+        .processBox__text {
+            .count {
+                justify-content: flex-start;
+            }
+        }
+
+        .processBox__deco {
+            width: 8rem;
+            flex: 0 0 8rem;
+        }
+    }
+}
+
+.gachapon {
+    position: relative;
+    z-index: 1;
+    width: 8rem;
+    flex-shrink: 0;
+
+    svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        overflow: visible;
+    }
+
+    #knob {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: knobSpin 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+}
+
+.exchange {
+    .exchange__msg {
+        text-align: center;
+        color: $bg-1;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .exchange__intro {
+        margin-top: 3rem;
+        background-color: #e4eff9;
+        padding: 1.6rem;
+        border-radius: 1rem;
+
+        .introGroup {
+            margin-bottom: 1.6rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &__title {
+                color: $primary-hover;
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 1.5;
+            }
+
+            &__content {
+                color: $secondary;
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 1.7;
+            }
+        }
+    }
+
+    .exchange__form {
+        margin-top: 3rem;
+    }
+
+    .exchange__ticket {
+        margin-top: 3rem;
+
+        .ticket {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            background-color: #D2D2D2;
+            border-radius: 1rem;
+            padding: 1.6rem;
+            column-gap: 1.6rem;
+            margin-bottom: 3rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &__text {
+                color: $white;
+                flex: 1;
+
+                .timestamp {
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    line-height: 1.5;
+                }
+
+                .topic {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    letter-spacing: 0.2rem;
+                }
+            }
+
+            &__status {
+                padding: 0.6rem 1rem;
+                border-radius: 3rem;
+                background-color: $white;
+                color: $secondary;
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 1.5;
+            }
+        }
+    }
+}

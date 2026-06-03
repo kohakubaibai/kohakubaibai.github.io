@@ -23,26 +23,149 @@
 
 <body>
     <header>
-		<img src="/assets/images/liff/logo-b.svg" alt="台東博覽會 Taitung EXPO">
+		<img src="../assets/images/liff/logo-b.svg" alt="台東博覽會 Taitung EXPO">
 	</header>
 	<main class="main">
 		<div class="wrapper">
 			<h1 class="pageTitle">
 				<span class="pageTitle__text pageTitle__text--zh">兌換獎勵</span>
 			</h1>
-			<div class="processBox">
+			<div class="processBox processBox--default">
 				<div class="processBox__text">
-					<div class="topic"></div>
+					<div class="topic">可兌換次數</div>
 					<div class="count">
-						<span class="count__num count__num--current">1</span>
+						<span class="count__num count__num--current">0</span>
 						<i class="count__hr">/</i>
-						<span class="count__num count__num--total">23</span>
+						<span class="count__num count__num--total">2</span>
 					</div>
 					<div class="memo">探索章X10：<br>可兌換抽獎機會乙次</div>
+				</div>
+				<div class="processBox__deco">
+					<div class="gachapon" id="gachapon">
+						<svg id="machineSvg" width="80" height="127" viewBox="0 0 80 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+							<clipPath id="globeClip">
+								<circle cx="40" cy="45.84" r="39"/>
+							</clipPath>
+							</defs>
+							<g clip-path="url(#clip0_main)">
+							<path d="M39.9974 85.8114C62.0873 85.8114 79.9947 67.9137 79.9947 45.8357C79.9947 23.7578 62.0873 5.86008 39.9974 5.86008C17.9074 5.86008 0 23.7578 0 45.8357C0 67.9137 17.9074 85.8114 39.9974 85.8114Z" fill="white"/>
+							<g clip-path="url(#globeClip)">
+								<path id="ball-1"  d="M23.506 49.424C26.1773 46.754 26.1773 42.4252 23.506 39.7553C20.8346 37.0854 16.5034 37.0854 13.8321 39.7553C11.1607 42.4252 11.1607 46.754 13.8321 49.424C16.5034 52.0939 20.8346 52.0939 23.506 49.424Z"  fill="#2D59A5"/>
+								<path id="ball-2"  d="M39.0983 68.4936C39.7017 64.7663 37.1675 61.2558 33.4381 60.6527C29.7087 60.0497 26.1963 62.5825 25.593 66.3099C24.9896 70.0372 27.5238 73.5477 31.2532 74.1508C34.9826 74.7538 38.495 72.221 39.0983 68.4936Z"  fill="#F3E143"/>
+								<path id="ball-3"  d="M54.404 52.5118C55.0074 48.7844 52.4732 45.2739 48.7438 44.6709C45.0144 44.0678 41.502 46.6006 40.8986 50.328C40.2953 54.0554 42.8294 57.5659 46.5588 58.1689C50.2882 58.7719 53.8006 56.2391 54.404 52.5118Z"  fill="#2D59A5"/>
+								<path id="ball-4"  d="M25.3287 61.6318C26.1933 57.9561 23.9129 54.2759 20.2353 53.4118C16.5576 52.5476 12.8754 54.8268 12.0108 58.5024C11.1462 62.1781 13.4266 65.8583 17.1042 66.7224C20.7819 67.5866 24.4641 65.3074 25.3287 61.6318Z"  fill="#4898C7"/>
+								<path id="ball-5"  d="M67.9902 46.1691C68.8619 42.4952 66.5886 38.8106 62.9126 37.9394C59.2366 37.0682 55.5501 39.3403 54.6784 43.0142C53.8067 46.6882 56.0801 50.3728 59.756 51.244C63.432 52.1152 67.1185 49.8431 67.9902 46.1691Z"  fill="#003891"/>
+								<path id="ball-6"  d="M66.1632 64.903C68.8346 62.2331 68.8346 57.9043 66.1632 55.2343C63.4918 52.5644 59.1607 52.5644 56.4893 55.2343C53.8179 57.9043 53.8179 62.2331 56.4893 64.903C59.1607 67.5729 63.4918 67.5729 66.1632 64.903Z"  fill="#4898C7"/>
+								<path id="ball-7"  d="M54.4025 37.5196C55.0059 33.7922 52.4717 30.2817 48.7423 29.6787C45.0129 29.0756 41.5005 31.6084 40.8972 35.3358C40.2938 39.0631 42.828 42.5736 46.5574 43.1767C50.2868 43.7797 53.7992 41.2469 54.4025 37.5196Z"  fill="#F3E143"/>
+								<path id="ball-8"  d="M39.0988 52.5097C39.7022 48.7823 37.168 45.2719 33.4386 44.6688C29.7092 44.0658 26.1968 46.5986 25.5935 50.3259C24.9901 54.0533 27.5243 57.5638 31.2537 58.1668C34.9831 58.7699 38.4954 56.2371 39.0988 52.5097Z"  fill="#003891"/>
+								<path id="ball-9"  d="M47.6525 74.2382C51.4304 74.2382 54.493 71.1773 54.493 67.4015C54.493 63.6256 51.4304 60.5647 47.6525 60.5647C43.8746 60.5647 40.812 63.6256 40.812 67.4015C40.812 71.1773 43.8746 74.2382 47.6525 74.2382Z"  fill="#83B7DD"/>
+								<path id="ball-10" d="M38.1543 36.7958C39.026 33.1219 36.7526 29.4373 33.0767 28.5661C29.4007 27.6949 25.7141 29.967 24.8425 33.6409C23.9708 37.3149 26.2441 40.9995 29.9201 41.8707C33.596 42.7419 37.2826 40.4698 38.1543 36.7958Z"  fill="#83B7DD"/>
+							</g>
+							<g>
+								<path d="M54.9864 5.85483H46.6748C46.6748 2.62023 44.0532 0 40.8168 0H39.1829C35.9465 0 33.3248 2.62023 33.3248 5.85483H25.0133C21.7769 5.85483 19.1553 8.47507 19.1553 11.7149H60.8549C60.8549 8.48032 58.2332 5.85483 54.9969 5.85483H54.9864Z" fill="#003891"/>
+								<path d="M45.4926 6.22765H34.5068C34.3019 6.22765 34.1338 6.05962 34.1338 5.85483C34.1338 5.65004 34.3019 5.48201 34.5068 5.48201H45.4926C45.6975 5.48201 45.8656 5.65004 45.8656 5.85483C45.8656 6.05962 45.6975 6.22765 45.4926 6.22765Z" fill="white"/>
+							</g>
+							<path d="M73.9422 120.179H73.5429L64.4748 84.0471V77.226H15.5249V84.0471L6.45679 120.179H6.0575C4.50762 120.179 3.25195 121.434 3.25195 122.983V124.191C3.25195 125.74 4.50762 126.995 6.0575 126.995H73.9422C75.4921 126.995 76.7477 125.74 76.7477 124.191V122.983C76.7477 121.434 75.4921 120.179 73.9422 120.179Z" fill="#003891"/>
+							<g id="knob">
+								<path d="M46.1434 94.5429C46.9409 91.1524 44.8374 87.7577 41.4451 86.9606C38.0527 86.1635 34.6562 88.2658 33.8586 91.6563C33.0611 95.0468 35.1646 98.4416 38.5569 99.2387C41.9493 100.036 45.3458 97.9334 46.1434 94.5429Z" fill="#83B7DD"/>
+								<path d="M33.0466 96.6651C32.4056 96.6651 31.8119 96.2451 31.6175 95.5992C31.3811 94.8115 31.8329 93.9819 32.621 93.7456L46.5226 89.6078C47.3107 89.3715 48.1408 89.8231 48.3772 90.6108C48.6136 91.3984 48.1618 92.2281 47.3737 92.4644L33.4721 96.6021C33.3303 96.6441 33.1884 96.6651 33.0466 96.6651Z" fill="white"/>
+							</g>
+							<path d="M62.4573 84.4199H17.5371C17.3322 84.4199 17.1641 84.2518 17.1641 84.047C17.1641 83.8423 17.3322 83.6742 17.5371 83.6742H62.4573C62.6622 83.6742 62.8303 83.8423 62.8303 84.047C62.8303 84.2518 62.6622 84.4199 62.4573 84.4199Z" fill="white"/>
+							<path d="M72.3923 120.552H7.6074C7.4025 120.552 7.23438 120.384 7.23438 120.179C7.23438 119.974 7.4025 119.806 7.6074 119.806H72.3923C72.5972 119.806 72.7653 119.974 72.7653 120.179C72.7653 120.384 72.5972 120.552 72.3923 120.552Z" fill="white"/>
+							<path d="M48.4453 117.055L47.3841 117.044V109.157C47.3841 105.082 44.0794 101.78 40.0024 101.78C35.9255 101.78 32.6208 105.082 32.6208 109.157V117.044L31.5595 117.055C31.3546 117.055 31.1865 117.223 31.1865 117.427C31.1865 117.632 31.3546 117.8 31.5595 117.8H48.4453C48.6502 117.8 48.8184 117.632 48.8184 117.427C48.8184 117.223 48.6502 117.055 48.4453 117.055Z" fill="white"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_main">
+								<rect width="80" height="127" fill="white"/>
+							</clipPath>
+							</defs>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="exchange">
+				<div class="exchange__msg">
+					<!-- 【🔺可換 0／已換 0】 -->
+					探索章數量不足，再蒐集更多探索章，<br>即可兌換抽獎機會！
+
+					<!-- 【🔺可換 1／已換 0】 -->
+					<!-- 恭喜獲得 1 次抽獎機會，<br>快前往官方商店兌換限定驚喜！ -->
+
+					<!-- 【🔺可換 2／已換 0】 -->
+					<!-- 恭喜獲得 2 次抽獎機會，<br>快前往官方商店兌換限定驚喜！ -->
+
+					<!-- 【🔺可換 1／已換 1】 -->
+					<!-- 您已完成本次獎勵兌換，<br>歡迎繼續蒐集探索章，兌換更多限定獎勵！ -->
+
+					<!-- 【🔺可換 2／已換 1】 -->
+					<!-- 您尚有 1 次抽獎機會，<br>快前往官方商店兌換限定驚喜！ -->
+
+					<!-- 【🔺可換 2／已換 2】 -->
+					<!-- 您已完成所有獎勵兌換，<br>感謝您的參與！ -->
+				</div>
+				<div class="exchange__intro">
+					<div class="introGroup">
+						<div class="introGroup__title">兌換地點</div>
+						<div class="introGroup__content">
+							A1 台東博覽會主場館-大會官方商店櫃檯<br>
+							（台東縣立體育館北門-台東縣台東市新興里桂林北路124號）
+						</div>
+					</div>
+					<div class="introGroup">
+						<div class="introGroup__title">兌換規則</div>
+						<div class="introGroup__content">
+							每累積10枚數位探索章，向工作人員出示集章畫面，即可兌換限定好禮抽獎機會乙次。數量有限，換完為止。
+						</div>
+					</div>
+				</div>
+				<form id="exchange" class="exchange__form">
+					<div class="formRow formRow--exchange">
+						<span class="formRow__label">兌換序號</span>
+						<div class="formRow__content">
+							<input type="text" id="codeInput" class="fancyInput fancyInput--exchange" autocomplete="off" spellcheck="false">
+							<button id="submitBtn" class="btn btn--submit" aria-label="兌換">submit</button>
+						</div>
+					</div>
+				</form>
+				<div class="exchange__ticket">
+					<div class="ticket">
+						<div class="ticket__text">
+							<div class="timestamp">2026/06/03 16:37</div>
+							<div class="topic">獲得抽獎機會乙次</div>
+						</div>
+						<div class="ticket__status">
+							<span class="status">已兌換</span>
+						</div>
+					</div>
+					<div class="ticket">
+						<div class="ticket__text">
+							<div class="timestamp">2026/06/03 16:37</div>
+							<div class="topic">獲得抽獎機會乙次</div>
+						</div>
+						<div class="ticket__status">
+							<span class="status">已兌換</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</main>
+	<div class="stickyBtn">
+		<div class="wrapper">
+			<ul class="actions">
+				<li>
+					<a href="collection.html" class="btn btn--fixFunc is-collection"><span class="btn__text">集章牆</span></a>
+				</li>
+				<li>
+					<button type="button" href="#" class="btn btn--fixFunc is-scan"><span class="btn__text">掃描</span></button>
+				</li>
+				<li>
+					<span class="btn btn--fixFunc is-prize"><span class="btn__text">兌換獎勵</span></span>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<script src="../assets/js/jquery-latest.min.js"></script>
 	<script src="../assets/js/jquery.mobile.custom.js"></script>
 	<script src="../assets/js/popper.min.js"></script>
@@ -50,5 +173,4 @@
 	<script src="../assets/js/wow.js"></script>
 	<script src="../assets/js/liff/prize.js"></script>
 </body>
-
 </html>

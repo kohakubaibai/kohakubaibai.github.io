@@ -83,7 +83,7 @@ function draw(ts) {
 requestAnimationFrame(draw);
 
 function showSuccessPopup() {
-    document.body.classList.add('is-openPopup');
+    document.body.classList.add('is-lock');
 
     const popup = document.querySelector('.js-popup-success');
     if (!popup) return;
@@ -92,11 +92,14 @@ function showSuccessPopup() {
     popup.classList.remove('is-hide');
 }
 
+showSuccessPopup();
+
 function closeSuccessPopup() {
-    document.body.classList.remove('is-openPopup');
 
     document.querySelectorAll('.js-closePopup').forEach(el => {
         el.addEventListener('click', () => {
+            document.body.classList.remove('is-lock');
+
             document.querySelectorAll('.js-popup-success').forEach(popup => {
                 popup.classList.add('is-hide');
                 popup.addEventListener('transitionend', () => {
@@ -108,21 +111,5 @@ function closeSuccessPopup() {
     });
 }
 closeSuccessPopup();
-
-function showFailPopup() {
-    document.body.classList.add('is-openPopup');
-    const popup = document.querySelector('.js-popup-fail');
-    if (!popup) return;
-
-    setTimeout(() => {
-        document.body.classList.remove('is-openPopup');
-        popup.classList.add('is-hide');
-        popup.addEventListener('transitionend', () => {
-            popup.style.display = 'none';
-            popup.classList.remove('is-hide');
-        }, { once: true });
-    }, 2000);
-}
-showFailPopup();
 
 new WOW().init();
