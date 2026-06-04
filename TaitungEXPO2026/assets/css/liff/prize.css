@@ -906,19 +906,6 @@ body.is-lock {
   -webkit-box-shadow: 0 0.4rem 0.4rem rgba(16, 55, 141, 0.08);
           box-shadow: 0 0.4rem 0.4rem rgba(16, 55, 141, 0.08);
 }
-.formRow--exchange .formRow__label {
-  width: 8.4rem;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 8.4rem;
-          flex: 0 0 8.4rem;
-  color: #4D4D4D;
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.7;
-  white-space: nowrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
 .formRow--exchange .formRow__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -929,9 +916,8 @@ body.is-lock {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(100% - 8.4rem);
-          flex: 0 0 calc(100% - 8.4rem);
-  width: calc(100% - 8.4rem);
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   height: 100%;
 }
 .formRow--exchange .formRow__content .fancyInput {
@@ -939,7 +925,7 @@ body.is-lock {
       -ms-flex: 0 0 calc(100% - 6.8rem);
           flex: 0 0 calc(100% - 6.8rem);
   width: calc(100% - 6.8rem);
-  padding: 0 1.8rem 0 1rem;
+  padding: 0 1.8rem 0 1.8rem;
   height: 100%;
   border-right: 1px solid #4D4D4D;
   -webkit-box-sizing: border-box;
@@ -958,15 +944,24 @@ body.is-lock {
   background: transparent;
 }
 .fancyInput--exchange {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  text-align: right;
+  text-align: left;
   font-family: "Unbounded", sans-serif;
   font-size: 4rem;
   font-weight: bold;
   color: #003893;
   letter-spacing: 0.4rem;
+}
+.fancyInput--exchange::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  font-weight: 300;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @-webkit-keyframes knobSpin {
