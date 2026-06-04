@@ -906,7 +906,6 @@ body.is-lock {
   border: 1px solid #4D4D4D;
   height: 7.2rem;
   overflow: hidden;
-  text-align: right;
   -webkit-box-shadow: 0 0.4rem 0.4rem rgba(16, 55, 141, 0.08);
           box-shadow: 0 0.4rem 0.4rem rgba(16, 55, 141, 0.08);
 }
@@ -922,26 +921,61 @@ body.is-lock {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  width: 100%;
   height: 100%;
 }
-.formRow--exchange .formRow__content .fancyInput {
+.formRow--exchange .formRow__content .inputCol {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% - 6.8rem);
           flex: 0 0 calc(100% - 6.8rem);
   width: calc(100% - 6.8rem);
-  padding: 0 1.8rem 0 1.8rem;
   height: 100%;
   border-right: 1px solid #4D4D4D;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
-.formRow--exchange .formRow__content .btn {
+.formRow--exchange .formRow__content .inputCol .fancyLabel {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #4D4D4D;
+  position: absolute;
+  top: 50%;
+  left: 1.8rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.formRow--exchange .formRow__content .inputCol .fancyInput {
+  padding: 0 1.8rem;
+  height: 100%;
+}
+.formRow--exchange .formRow__content .inputCol .fancyInput::-moz-placeholder {
+  color: transparent !important;
+}
+.formRow--exchange .formRow__content .inputCol .fancyInput::placeholder, .formRow--exchange .formRow__content .inputCol .fancyInput::-moz-placeholder, .formRow--exchange .formRow__content .inputCol .fancyInput::-webkit-input-placeholder {
+  color: transparent !important;
+}
+.formRow--exchange .formRow__content .inputCol .fancyInput:not(:-moz-placeholder) + label {
+  opacity: 0;
+}
+.formRow--exchange .formRow__content .inputCol .fancyInput:not(:-ms-input-placeholder) + label {
+  opacity: 0;
+}
+.formRow--exchange .formRow__content .inputCol .fancyInput:not(:placeholder-shown) + label, .formRow--exchange .formRow__content .inputCol .fancyInput:focus + label {
+  opacity: 0;
+}
+.formRow--exchange .formRow__content .submitCol {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 6.8rem;
           flex: 0 0 6.8rem;
   width: 6.8rem;
   height: 100%;
 }
+.formRow--exchange .formRow__content .submitCol .btn {
+  width: 100%;
+  height: 100%;
+}
+
 .fancyInput {
   border: none;
   outline: none;
@@ -958,14 +992,6 @@ body.is-lock {
   font-weight: bold;
   color: #003893;
   letter-spacing: 0.4rem;
-}
-.fancyInput--exchange::-webkit-input-placeholder {
-  font-size: 1.6rem;
-  font-weight: 300;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 @-webkit-keyframes knobSpin {
