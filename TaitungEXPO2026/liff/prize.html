@@ -121,10 +121,14 @@
 				</div>
 				<form id="exchange" class="exchange__form">
 					<div class="formRow formRow--exchange">
-						<span class="formRow__label">兌換序號</span>
 						<div class="formRow__content">
-							<input type="text" id="codeInput" class="fancyInput fancyInput--exchange" autocomplete="off" spellcheck="false">
-							<button id="submitBtn" class="btn btn--submit" aria-label="兌換">submit</button>
+							<div class="inputCol">
+								<input type="text" id="codeInput" class="fancyInput fancyInput--exchange" autocomplete="off" spellcheck="false" placeholder=" ">
+								<label for="codeInput" class="fancyLabel">兌換序號</label>
+							</div>
+							<div class="submitCol">
+								<button id="submitBtn" class="btn btn--submit" aria-label="兌換">submit</button>
+							</div>
 						</div>
 					</div>
 				</form>
