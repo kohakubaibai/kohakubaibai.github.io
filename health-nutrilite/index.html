@@ -43,12 +43,21 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<header id="mainNavbar" class="navbar navbar-expand-lg">
 		<div class="wrapper">
-			<a href="https://www.commonhealth.com.tw/" target="_blank" class="navbar-brand imp_event" data-title="" data-label="">
-				<span class="logo">
-					<img src="assets/images/logo.png" alt="康建 For a better life" />
-				</span>
-				<h1 class="d-none">康建 For a better life 早療</h1>
-			</a>
+			<div class="logos">
+				<a href="https://www.commonhealth.com.tw/" target="_blank" class="navbar-brand imp_event" data-title="" data-label="">
+					<span class="logoImg logoImg--ch">
+						<img src="assets/images/logo_CH.png" alt="康建 For a better life" />
+					</span>
+					<div class="d-none">康建 For a better life</div>
+				</a>
+				<i class="featDeco featDeco--logo"></i>
+				<a href="#" target="_blank" class="navbar-brand imp_event" data-title="" data-label="">
+					<span class="logoImg logoImg--feat">
+						<img src="assets/images/logo_nutrilite.png" alt="紐崔萊 Nutrilite" />
+					</span>
+					<div class="d-none">紐崔萊 Nutrilite</div>
+				</a>
+			</div>
 			<button type="button" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbarX" data-bs-target="#navbarScroll" data-bs-toggle="collapse">
 				<i></i>
 				<i></i>
@@ -56,12 +65,12 @@
 			</button>
 			<nav class="collapse navbar-collapse" id="navbarScroll">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
-					<li class="nav-item"><a class="nav-link click_event" href="#about" data-title="" data-label="">蛋白質是什麼</a></li>
-					<li class="nav-item"><a class="nav-link click_event" href="#calculate" data-title="" data-label="">一天要吃多少</a></li>
-					<li class="nav-item"><a class="nav-link click_event" href="#categories" data-title="" data-label="">蛋白質食物有哪些</a></li>
-					<li class="nav-item"><a class="nav-link click_event" href="#features" data-title="" data-label="">攝取不足怎麼辦</a></li>
-					<li class="nav-item"><a class="nav-link click_event" href="#faq" data-title="" data-label="">資源</a></li>
-					<li class="nav-item"><a class="nav-link click_event" href="#articles" data-title="" data-label="">文章</a></li>
+					<li class="nav-item"><a class="nav-link click_event" href="#intro" data-title="" data-label="">蛋白質是什麼？</a></li>
+					<li class="nav-item"><a class="nav-link click_event" href="#amount" data-title="" data-label="">一天要吃多少？</a></li>
+					<li class="nav-item"><a class="nav-link click_event" href="#foods" data-title="" data-label="">蛋白質食物有哪些？</a></li>
+					<li class="nav-item"><a class="nav-link click_event" href="#effects" data-title="" data-label="">攝取不足怎麼辦？</a></li>
+					<li class="nav-item"><a class="nav-link click_event" href="" data-title="" data-label="">分享臉書</a></li>
+					<li class="nav-item"><a class="nav-link click_event" href="" data-title="" data-label="">分享Line</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -70,32 +79,143 @@
 		<!--主視覺-->
 		<section id="hero" class="hero imp_event" data-title="" data-label="">
 			<div class="wrapper">
-				主視覺
+				<div class="heroBox">
+					<div class="heroBox__text">
+						<h1>蛋白質，吃對才算數</h1>
+						<h2>
+							<span>攝取量</span>
+							<i class="featDeco featDeco--hero"></i>
+							<span>食物來源</span>
+							<i class="featDeco featDeco--hero"></i>
+							<span>營養補充完整解析</span>
+						</h2>
+						<h3>
+							蛋白質每天要吃多少？吃什麼補最快？<br>
+							從蛋白質功能、一日攝取量計算、十大高蛋白食物到各族群補充策略，這一頁讓你完整讀懂蛋白質。
+						</h3>
+					</div>
+					<div class="heroBox__image">
+						<div class="armWrap">
+							<div class="armWrap__body">
+								<img src="assets/images/hero_arms.svg" alt="">
+							</div>
+							<div class="armWrap__shadow">
+								<img src="assets/images/hero_shadow.svg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
-		<section class="section section--about imp_event" data-title="" data-label="">
-			<div id="about" class="anchorOffset scrollArea"></div>
-			<div class="section__title"><span class="text">蛋白質是什麼</span></div>
+		<section class="section section--intro imp_event" data-title="" data-label="">
+			<div id="intro" class="anchorOffset scrollArea"></div>
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">蛋白質是什麼？<br>為什麼每個人都需要它</span>
+				</div>
+				<i class="quotationDeco">
+					<img src="assets/images/icon_quotation.svg">
+				</i>
+				<div class="section__intro">
+					<p>
+						蛋白質（英文：Protein）是由胺基酸組成的大分子營養素，是構成肌肉、免疫細胞、酵素與荷爾蒙的基礎原料，參與人體每日的組織修復、代謝調節與免疫運作，是無論年齡與生活型態都不可或缺的三大營養素之一。
+					</p>
+				</div>
+			</div>
 		</section>
-		<section class="section section--calculate imp_event" data-title="" data-label="">
-			<div id="calculate" class="anchorOffset scrollArea"></div>
-			<div class="section__title"><span class="text">一天要吃多少</span></div>
+		<section class="section section--amount imp_event" data-title="" data-label="">
+			<div id="amount" class="anchorOffset scrollArea"></div>
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">蛋白質一天要吃多少？<br>攝取量計算完整說明</span>
+				</div>
+				<i class="quotationDeco">
+					<img src="assets/images/icon_quotation.svg">
+				</i>
+				<div class="section__intro">
+					<p>
+						根據衛福部2026年第九版「國人膳食營養素參考攝取量」（草案）的最新建議，19-64歲一般健康成人的一天蛋白質攝取量約為每公斤體重1.1公克；以60公斤成人為例，每日約需66公克，65歲以上銀髮族與運動族群則建議提高至每公斤1.2～1.6公克，且應分散於三餐均勻攝取以提升利用率。
+					</p>
+				</div>
+			</div>
 		</section>
-		<section class="section section--categories imp_event" data-title="" data-label="">
-			<div id="categories" class="anchorOffset scrollArea"></div>
-			<div class="section__title"><span class="text">蛋白質食物有哪些</span></div>
+		<section class="section section--foods imp_event" data-title="" data-label="">
+			<div id="foods" class="anchorOffset scrollArea"></div>
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">蛋白質食物有哪些？<br>十大高含量排名速查表</span>
+				</div>
+				<i class="quotationDeco">
+					<img src="assets/images/icon_quotation.svg">
+				</i>
+				<div class="section__intro">
+					<p>
+						蛋白質含量高的食物依來源可分為動物性與植物性兩大類：動物性包含雞胸肉（每 100 克約23.3 公克）、鮪魚（每 100 克約 23.3 公克）、雞蛋（每顆約 7 公克）；植物性則以大豆（每100 克約 35.6 公克）、板豆腐（每 100 克約8.5 公克）、無糖豆漿（每 250 毫升約 9 公克）為代表。
+					</p>
+				</div>
+			</div>
 		</section>
-		<section class="section section--features imp_event" data-title="" data-label="">
-			<div id="features" class="anchorOffset scrollArea"></div>
-			<div class="section__title"><span class="text">攝取不足怎麼辦</span></div>
+		<section class="section section--morning imp_event" data-title="" data-label="">
+			<div id="effects" class="anchorOffset scrollArea"></div>
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">蛋白質攝取不足或過多會怎樣？</span>
+					<span class="subTitle">蛋白質不足有什麼影響？怎麼知道自己不夠？</span>
+				</div>
+				<i class="quotationDeco">
+					<img src="assets/images/icon_quotation.svg">
+				</i>
+				<div class="section__intro">
+					<p>
+						長期蛋白質攝取不足的常見症狀包括：肌肉量下降與無力感、傷口癒合速度變慢、免疫力下降反覆感冒、頭髮變細易斷、情緒低落與睡眠障礙、身體水腫；銀髮族、女性、長期外食族、素食者是蛋白質攝取不足的高風險族群。
+					</p>
+				</div>
+			</div>
 		</section>
+		<section class="section section--groups imp_event" data-title="" data-label="">
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">各族群蛋白質補充策略</span>
+				</div>
+				<i class="quotationDeco">
+					<img src="assets/images/icon_quotation.svg">
+				</i>
+				<div class="section__intro">
+					<p>
+						經過一整晚禁食，肝醣耗盡、皮質醇升高，早晨是人體肌肉蛋白質合成訊號最強的時間點；研究顯示早餐攝取 15 ～ 25 公克蛋白質，有助於啟動全日代謝、穩定血糖並延長飽足感，是讓同樣份量的蛋白質發揮更大效益的關鍵時機。
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="section section--strategy imp_event" data-title="" data-label="">
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">早晨是補充蛋白質的黃金時機</span>
+				</div>
+				<i class="quotationDeco">
+					<img src="assets/images/icon_quotation.svg">
+				</i>
+			</div>
+		</section>
+		<!-- 關於蛋白質最多人想問的6件事 -->
 		<section class="section section--faq imp_event" data-title="" data-label="">
-			<div id="faq" class="anchorOffset scrollArea"></div>
-			<div class="section__title"><span class="text">資源</span></div>
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">關於蛋白質最多人想問的6件事</span>
+				</div>
+			</div>
 		</section>
-		<section class="section section--articles imp_event" data-title="" data-label="">
-			<div id="articles" class="anchorOffset scrollArea"></div>
-			<div class="section__title"><span class="text">文章</span></div>
+		<!-- 相關文章 -->
+		<section class="section section--related imp_event" data-title="" data-label="">
+			<div class="wrapper">
+				<div class="section__title">
+					<span class="mainTitle">相關文章</span>
+				</div>
+				<i class="quotationDeco">
+					<img src="assets/images/icon_quotation.svg">
+				</i>
+			</div>
 		</section>
 	</main>
 	<div class="quickBuy">

@@ -1,0 +1,20 @@
+$path: '../images';
+
+.featDeco {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--logo {
+        width: rem(24);
+        height: rem(24);
+        background-image: url('#{$path}/deco_feat-logo.svg');
+    }
+
+    &--hero {
+        width: rem(30);
+        height: rem(30);
+        background-image: url('#{$path}/deco_feat-hero.svg');
+    }
+}

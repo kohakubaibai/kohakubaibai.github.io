@@ -15,7 +15,7 @@ body {
 	font-family: "Noto Sans TC",-apple-system, Segoe UI, Roboto, "微軟正黑體", "Helvetica Neue", Arial, sans-serif; /*無襯線字體sans-serif*/
 	font-weight: bold;
 	margin: 0 auto;
-	background-color: $primary-light;
+	background-color: $white;
 	color: $dark;
 
 
@@ -39,6 +39,13 @@ body {
 			}
 		}
 	}
+}
+
+.wrapper {
+	position: relative;
+	max-width: 1200px;
+	min-height: 100%;
+	margin: 0 auto;
 }
 
 /* ==================================================
@@ -73,10 +80,40 @@ body {
 		padding: rem(18) rem(0);
 	}
 
+	.logos {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+
+		.featDeco {
+			margin: 0 rem(12);
+		}
+	}
+
+	.navbar-brand {
+		padding: 0;
+		margin-right: 0;
+	}
+
+	.logoImg {
+		display: block;
+
+		img {
+			width: 100%;
+		}
+
+		&--ch {
+			width: rem(79.5);
+		}
+		&--feat {
+			width: rem(158);
+		}
+	}
+
 	.nav-link {
 		@include f-p;
 		display: block;
-		color: #6D3526;
+		color: $dark;
 		text-decoration: none;
 
 		&.is-active {
@@ -94,22 +131,6 @@ body {
 		}
 	}
 
-	.navbar-brand {
-		padding: 0;
-		margin-right: 0;
-
-		img {
-			width: auto;
-
-			@include rwd-min(320px) {
-				height: rem(40);
-			}
-
-			@include rwd-min(768px) {
-				height: rem(64);
-			}
-		}
-	}
 
 	&-expand-lg {
 		.navbar-nav {
@@ -304,7 +325,7 @@ body {
 
 footer {
     width: 100%;
-	padding: rem(30) rem(20);	
+	padding: rem(30) rem(20);
 
 	a {
 		transition: .3s;
@@ -313,7 +334,7 @@ footer {
 
 		&:hover {
 			color: #6D3526;
-		} 
+		}
 
 		@include rwd-not-hover {
 			&:hover {
