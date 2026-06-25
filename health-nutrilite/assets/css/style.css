@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   padding: 0 !important;
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.15;
@@ -45,13 +45,9 @@ section {
 body {
   margin: 0;
   padding: 0 !important;
-  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  color: #222222;
   text-align: left;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   scroll-behavior: smooth;
   position: relative;
 }
@@ -407,6 +403,45 @@ ul {
   background-image: url("../images/deco_feat-hero.svg");
 }
 
+.quotationDeco {
+  display: block;
+  width: 2.5rem;
+  height: 2.1875rem;
+  margin: 1rem auto;
+}
+.quotationDeco img {
+  width: 100%;
+}
+
+.gridWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.gridWrap--proteinFunction {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 0.25rem;
+  -webkit-column-gap: 1.5rem;
+     -moz-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 1.625rem;
+}
+.gridWrap--proteinFunction .gridWrap__item {
+  width: calc((100% - 1.5rem) / 2);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc((100% - 1.5rem) / 2);
+          flex: 0 0 calc((100% - 1.5rem) / 2);
+}
+
 /* ==================================================
    BS內建
 ================================================== */
@@ -418,7 +453,6 @@ ul {
 }
 
 body {
-  font-family: "Noto Sans TC", -apple-system, Segoe UI, Roboto, "微軟正黑體", "Helvetica Neue", Arial, sans-serif; /*無襯線字體sans-serif*/
   font-weight: bold;
   margin: 0 auto;
   background-color: #fff;
@@ -1383,14 +1417,62 @@ footer p {
     opacity: 0.35;
   }
 }
+@-webkit-keyframes breath {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes breath {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframes revealLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 593px;
+  }
+}
+@keyframes revealLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 593px;
+  }
+}
 .hero {
   padding: 8rem 0 3.875rem;
   position: relative;
-  background-repeat: no-repeat;
-  background-position: center top;
   background: linear-gradient(107.35deg, #F6F8FD 0%, #E0E8ED 100%);
   width: 100dvw;
   overflow: hidden;
+}
+.hero .heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: 1920px auto;
+  background-image: url("../images/bg_hero.webp");
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 }
 .hero .heroBox {
   display: -webkit-box;
@@ -1401,6 +1483,44 @@ footer p {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero .heroBox__text h1 {
+  font-size: 0;
+}
+.hero .heroBox__text h2 {
+  margin-top: -3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero .heroBox__text h2 span {
+  display: block;
+  color: #064BBA;
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.7;
+}
+.hero .heroBox__text h2 .featDeco {
+  margin: 0 0.75rem;
+}
+.hero .heroBox__text h3 {
+  margin-top: 1.75rem;
+  max-width: 33.6875rem;
+  color: #222222;
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.hero .heroBox__text h3 .highlight {
+  color: #388EFF;
 }
 .hero .heroBox__image {
   width: 34.75rem;
@@ -1428,19 +1548,64 @@ footer p {
   -webkit-animation: shadowPulse 3s ease-in-out infinite;
           animation: shadowPulse 3s ease-in-out infinite;
 }
+.hero {
+  /* 預設不動 */
+}
+.hero #reveal-rect-1 {
+  width: 0;
+}
+.hero #reveal-rect-2 {
+  width: 0;
+}
+.hero #flash1, .hero #flash2, .hero #flash3,
+.hero #flash4, .hero #flash5, .hero #flash6 {
+  opacity: 0;
+}
+.hero {
+  /* 加上 .animate 才開始跑 */
+}
+.hero #kvText.animate #reveal-rect-1 {
+  -webkit-animation: revealLine 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+          animation: revealLine 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+}
+.hero #kvText.animate #reveal-rect-2 {
+  -webkit-animation: revealLine 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.45s forwards;
+          animation: revealLine 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.45s forwards;
+}
+.hero #flash1 {
+  -webkit-animation: breath 2.4s ease-in-out 1.2s infinite;
+          animation: breath 2.4s ease-in-out 1.2s infinite;
+  opacity: 0;
+}
+.hero #flash2 {
+  -webkit-animation: breath 3.1s ease-in-out 1.5s infinite;
+          animation: breath 3.1s ease-in-out 1.5s infinite;
+  opacity: 0;
+}
+.hero #flash3 {
+  -webkit-animation: breath 1.9s ease-in-out 1.3s infinite;
+          animation: breath 1.9s ease-in-out 1.3s infinite;
+  opacity: 0;
+}
+.hero #flash4 {
+  -webkit-animation: breath 2.6s ease-in-out 1.6s infinite;
+          animation: breath 2.6s ease-in-out 1.6s infinite;
+  opacity: 0;
+}
+.hero #flash5 {
+  -webkit-animation: breath 3s ease-in-out 1.1s infinite;
+          animation: breath 3s ease-in-out 1.1s infinite;
+  opacity: 0;
+}
+.hero #flash6 {
+  -webkit-animation: breath 3s ease-in-out 1.1s infinite;
+          animation: breath 3s ease-in-out 1.1s infinite;
+  opacity: 0;
+}
 
 .section {
   position: relative;
   padding: 5rem 0;
-}
-.section .quotationDeco {
-  display: block;
-  width: 2.5rem;
-  height: 2.1875rem;
-  margin: 1rem auto;
-}
-.section .quotationDeco img {
-  width: 100%;
 }
 .section .section__title {
   overflow: hidden;
@@ -1515,16 +1680,24 @@ footer p {
 .section .section__content .wrapper .heading:last-child {
   margin-bottom: 0;
 }
+.section .section__content .paragraph {
+  max-width: 36.875rem;
+  margin: 0 auto;
+}
 .section .section__content .paragraph p {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #270C05;
-  font-size: 1.25rem;
+  color: #222222;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 1.7;
 }
 .section .section__content .paragraph p:last-child {
   margin-bottom: 0;
+}
+.section .section__content .paragraph p a {
+  color: #EF8200;
+  text-decoration: underline;
 }
 .section .section__content .heading__text {
   text-align: center;
@@ -1562,6 +1735,21 @@ footer p {
 .section--intro {
   background-color: #FFFFFF;
 }
+.section--intro .proteinFunction {
+  margin: 3rem 0 1.5rem;
+}
+.section--intro .proteinFunction__title {
+  text-align: center;
+}
+.section--intro .proteinFunction__title span {
+  font-size: 1.75rem;
+  color: #1354BD;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.section--intro .proteinFunction__content {
+  margin-top: 1.625rem;
+}
 .section--amount {
   background-color: #F3F6FB;
 }
@@ -1579,6 +1767,41 @@ footer p {
 }
 .section--faq {
   background-color: #FFFFFF;
+}
+
+.functionItem__topic {
+  text-align: center;
+}
+.functionItem__topic .title {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  border-radius: 4.375rem;
+  padding: 0.25rem 1.875rem;
+  background-color: #388EFF;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.7;
+  letter-spacing: 0.0375rem;
+}
+.functionItem__topic .media {
+  position: relative;
+  margin-top: -1.3125rem;
+  z-index: 5;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 0.125rem solid #388EFF;
+  overflow: hidden;
+}
+.functionItem__desc {
+  margin-top: 0.1875rem;
+}
+.functionItem__desc p {
+  color: #616161;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .quickBuy {

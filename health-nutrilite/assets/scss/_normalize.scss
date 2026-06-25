@@ -15,13 +15,12 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   padding: 0 !important;
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
   scroll-behavior: smooth;
 }
 
@@ -48,15 +47,9 @@ section {
 body {
   margin: 0;
   padding: 0 !important;
-  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "PingFang TC", "Helvetica Neue", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  color: #222222;
   text-align: left;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   scroll-behavior: smooth;
   position: relative;
 }

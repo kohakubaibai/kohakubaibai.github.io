@@ -18,3 +18,34 @@ $path: '../images';
         background-image: url('#{$path}/deco_feat-hero.svg');
     }
 }
+
+.quotationDeco {
+    display: block;
+    width: rem(40);
+    height: rem(35);
+    margin: rem(16) auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.gridWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &--proteinFunction {
+        max-width: rem(800);
+        margin: 0 auto;
+        padding: 0 rem(4);
+        column-gap: rem(24);
+        row-gap: rem(26);
+
+        .gridWrap__item {
+            width: calc((100% - rem(24)) / 2);
+            flex: 0 0 calc((100% - rem(24)) / 2);
+        }
+    }
+}

@@ -1,3 +1,6 @@
+window.addEventListener('load', () => {
+  	document.querySelector('#kvText').classList.add('animate');
+});
 $(function () {
 
 	// ==================== WOW ====================
@@ -5,10 +8,9 @@ $(function () {
 
 	// ==================== Navbar Scroll Effect ====================
 	const $nav = $("#mainNavbar");
-	const $hero = $("#hero");
 
 	function checkScroll() {
-		$nav.toggleClass("is-scrolled", $(window).scrollTop() > $hero.height());
+		$nav.toggleClass("is-scrolled", $(window).scrollTop() > $nav.height());
 	}
 
 	checkScroll();
