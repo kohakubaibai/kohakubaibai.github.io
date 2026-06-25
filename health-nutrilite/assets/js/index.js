@@ -1,5 +1,7 @@
 window.addEventListener('load', () => {
-  	document.querySelector('#kvText').classList.add('animate');
+	setTimeout(() => {
+		document.querySelector('#kvText').classList.add('animate');
+	}, 600);
 });
 $(function () {
 

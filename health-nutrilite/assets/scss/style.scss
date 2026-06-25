@@ -18,224 +18,6 @@ $path: '../images';
    動畫 animation
 ================================================== */
 
-@keyframes rotate1 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(-5deg);
-		transform: rotate(-5deg)
-	}
-
-	50% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(5deg);
-		transform: rotate(5deg)
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(-5deg);
-		transform: rotate(-5deg)
-	}
-}
-@keyframes rotate2 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(3deg);
-		transform: rotate(3deg)
-	}
-
-	50% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(-3deg);
-		transform: rotate(-3deg)
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(3deg);
-		transform: rotate(3deg)
-	}
-}
-@keyframes rotate3 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(-8deg);
-		transform: rotate(-8deg)
-	}
-
-	50% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(8deg);
-		transform: rotate(8deg)
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: rotate(8deg);
-		transform: rotate(8deg)
-	}
-}
-
-.customShake1 {
-	animation: rotate1 1.5s step-end infinite alternate;
-}
-.customShake2 {
-	animation: rotate2 2s step-end infinite alternate;
-}
-.customShake3 {
-	animation: rotate3 1s step-end infinite alternate;
-}
-
-@keyframes jump {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateY(rem(2));
-		transform: translateY(rem(2))
-	}
-
-	50% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateY(rem(0));
-		transform: translateY(rem(0))
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateY(rem(2));
-		transform: translateY(rem(2))
-	}
-}
-
-@keyframes float1 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-5));
-		transform: translateX(rem(-5))
-	}
-
-	50% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(5));
-		transform: translateX(rem(5))
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-5));
-		transform: translateX(rem(-5))
-	}
-}
-@keyframes float2 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-8));
-		transform: translateX(rem(-8))
-	}
-
-	50% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(8));
-		transform: translateX(rem(8))
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-8));
-		transform: translateX(rem(-8))
-	}
-}
-
-@keyframes cloud1 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-20));
-		transform: translateX(rem(-20))
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-10));
-		transform: translateX(rem(-10))
-	}
-}
-
-@keyframes cloud2 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-15));
-		transform: translateX(rem(-15))
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-5));
-		transform: translateX(rem(-5))
-	}
-}
-
-@keyframes cloud3 {
-	0% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-20));
-		transform: translateX(rem(-20))
-	}
-
-	100% {
-		-webkit-transform-origin: center;
-		transform-origin: center;
-		-webkit-transform: translateX(rem(-10));
-		transform: translateX(rem(-10))
-	}
-}
-
-@keyframes balloon {
-  0% {
-    background-position: center rem(182);
-  }
-
-  100% {
-    background-position: center -10000px;
-  }
-}
-
-@keyframes starry {
-	0% {
-    	background-position: rem(-5) rem(130);
-	}
-
-	100% {
-	  	background-position: rem(0) rem(130);
-  	}
-}
-
-$type_colors:
-    "muscle" #FBAE96 #F5815D #fbae96 rgba(251, 174, 150, 1) rgba(251, 174, 150, 0),
-    "understanding" #6FDBCE #34B3A4 #87E2D7 rgba(135, 226, 215, 1) rgba(135, 226, 215, 0),
-    "emotion" #8BC0FD #6698D2 #93C5FF rgba(147, 197, 255, 1) rgba(147, 197, 255, 0),
-    "life" #ECD35E #C8AD31 #F2DC73 rgba(242, 220, 115, 1) rgba(242, 220, 115, 0);
 
 /* ==================================================
    Container
@@ -307,10 +89,10 @@ main {
 
 		&__text {
 
-			h1 {
+			.h1 {
 				font-size: 0;
 			}
-			h2 {
+			.subTitle {
 				margin-top: rem(-50);
 				display: flex;
 				flex-wrap: nowrap;
@@ -329,7 +111,7 @@ main {
 				}
 			}
 
-			h3 {
+			.aiTopic {
 				margin-top: rem(28);
 				max-width: rem(539);
 				color: $dark;
@@ -389,44 +171,22 @@ main {
 	padding: rem(80) 0;
 
 	.section__title {
-		overflow: hidden;
-		position: relative;
-
-		.wrapper {
-			@include rwd-min(320px) {
-				padding: 0 rem(16);
-			}
-
-			@include rwd-min(768px) {
-				margin: 0 auto;
-				max-width: rem(590);
-				padding: 0;
-			}
-		}
-
-		.mainTitle,
-		.subTitle {
-			display: block;
-		}
-
-		.mainTitle {
-			font-size: rem(34);
-			font-weight: 700;
-			text-align: center;
-			color: #222222;
-			line-height: 1.5;
-		}
-
-		.subTitle {
-			margin-top: rem(24);
-			font-size: rem(20);
-			font-weight: 400;
-			color: #064BBA;
-			line-height: 1.5;
-		}
+		font-size: rem(34);
+		font-weight: 700;
+		text-align: center;
+		color: #222222;
+		line-height: 1.5;
 	}
 
-	.section__intro {
+	.heading {
+		text-align: center;
+		font-size: rem(28);
+		font-weight: bold;
+		color: $primary-dark;
+		line-height: 1.5;
+	}
+
+	.aiTopic {
 		width: 300px;
 		margin: 0 auto;
 
@@ -440,36 +200,9 @@ main {
 	}
 
 	.section__content {
-		.wrapper {
-			position: relative;
-			max-width: 1200px;
-			min-height: 100%;
-			margin: 0 auto;
-
-			@include rwd-min(320px) {
-				padding: 0 rem(16);
-			}
-
-			@include rwd-min(768px) {
-				padding: 0 rem(8.5);
-			}
-
-			.paragraph,
-			.heading {
-				max-width: rem(590);
-				margin-left: auto;
-				margin-right: auto;
-				margin-bottom: rem(24);
-
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-
 		.paragraph {
 			max-width: rem(590);
-			margin: 0 auto;
+			margin: rem(24) auto;
 
 			p {
 				margin-top: 0;
@@ -479,7 +212,7 @@ main {
 				font-weight: 400;
 				line-height: 1.7;
 
-				&:last-child {
+				&:last-of-type {
 					margin-bottom: 0;
 				}
 
@@ -490,50 +223,17 @@ main {
 			}
 		}
 
-		.heading {
-
-			&__text {
-				text-align: center;
-				display: block;
-				color: #6D3526;
-				line-height: 1.3;
-				font-weight: 700;
-
-				@include rwd-min(320px) {
-					font-size: rem(28);
-
-					br {
-						display: block;
-					}
-				}
-				@include rwd-min(768px) {
-					font-size: rem(32);
-
-					br {
-						display: none;
-					}
-				}
-			}
-
-			&__highlight {
-				color: #EE6C48;
-				font-size: rem(26);
-				font-weight: 700;
-				text-align: center;
-
-				span {
-					font-family: Roboto;
-					margin: 0 rem(5);
-				}
-			}
+		& + .section__content {
+			margin-top: rem(48);
 		}
 	}
 
 	&--intro {
 		background-color: #FFFFFF;
 
-		.proteinFunction {
-			margin: rem(48) 0 rem(24);
+		.functBox {
+			margin-top: rem(48);
+			margin-bottom: rem(48);
 
 			&__title {
 				text-align: center;
@@ -562,6 +262,10 @@ main {
 
 	&--morning {
 		background-color: #FFFFFF;
+
+		.adviceBox {
+			margin-top: rem(24);
+		}
 	}
 
 	&--groups {
@@ -574,6 +278,32 @@ main {
 
 	&--faq {
 		background-color: #FFFFFF;
+	}
+}
+
+.functBox {
+	padding: 0 rem(4);
+	max-width: rem(800);
+	margin-left: auto;
+	margin-right: auto;
+
+	&__title {
+		text-align: center;
+		margin-bottom: rem(26);
+
+		.topic {
+			font-size: rem(28);
+			color: $primary;
+			font-weight: 700;
+			line-height: 1.7;
+		}
+
+		.memo {
+			color: #616161;
+			font-size: rem(16);
+			font-weight: 400;
+			line-height: 1.7;
+		}
 	}
 }
 
@@ -949,27 +679,6 @@ main {
 					line-height: 1.6;
 					font-weight: 400;
 					color: #270C05;
-				}
-			}
-		}
-	}
-
-	@each $type, $bgcolor, $txtcolor, $popupcolor, $gradient1, $gradient0 in $type_colors {
-		&--#{$type} {
-			.popupCard {
-				background-color: $popupcolor;
-				background-image: url('#{$path}/bg-popup_#{$type}.png');
-
-				.abilityWrap {
-					.gradientDeco {
-						&--top {
-							background: linear-gradient(180deg, $gradient1 0%, $gradient0 100%);
-						}
-
-						&--bottom {
-							background: linear-gradient(0deg, $gradient1 0%, $gradient0 100%);
-						}
-					}
 				}
 			}
 		}

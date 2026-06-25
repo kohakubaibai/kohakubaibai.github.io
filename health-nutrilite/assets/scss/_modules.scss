@@ -30,16 +30,39 @@ $path: '../images';
     }
 }
 
+.adviceBox {
+    position: relative;
+    padding-top: rem(29);
+
+    &__deco {
+        position: absolute;
+        top: 0;
+        left: rem(-19);
+        width: rem(84);
+        height: rem(77);
+    }
+
+    &__content {
+        background-color: #FFD19A;
+        border-radius: rem(8);
+        padding: rem(8) rem(16) rem(8) rem(70);
+
+        p {
+            color: $dark;
+            font-size: rem(18);
+            font-weight: 400;
+            line-height: 1.7;
+        }
+    }
+}
+
 .gridWrap {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
-    &--proteinFunction {
-        max-width: rem(800);
-        margin: 0 auto;
-        padding: 0 rem(4);
+    &--function {
         column-gap: rem(24);
         row-gap: rem(26);
 
