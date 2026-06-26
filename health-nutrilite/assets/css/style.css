@@ -383,7 +383,7 @@ template {
 ul {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 0 !important;
+  margin: 0;
 }
 
 .featDeco {
@@ -415,25 +415,28 @@ ul {
 
 .adviceBox {
   position: relative;
-  padding-top: 1.8125rem;
+  padding-top: 1.875rem;
 }
 .adviceBox__deco {
   position: absolute;
-  top: 0;
-  left: -1.1875rem;
+  top: 0.875rem;
+  left: -0.5625rem;
   width: 5.25rem;
   height: 4.8125rem;
 }
 .adviceBox__content {
   background-color: #FFD19A;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 4.375rem;
+  padding: 0.5rem 1rem 0.5rem 5rem;
 }
 .adviceBox__content p {
   color: #222222;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.7;
+}
+.adviceBox__content p:last-child {
+  margin-bottom: 0;
 }
 
 .gridWrap {
@@ -1153,7 +1156,7 @@ footer p {
   display: block;
   color: #064BBA;
   font-size: 1.75rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.7;
 }
 .hero .heroBox__text .subTitle .featDeco {
@@ -1265,7 +1268,7 @@ footer p {
 .section .heading {
   text-align: center;
   font-size: 1.75rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #064BBA;
   line-height: 1.5;
 }
@@ -1331,8 +1334,11 @@ footer p {
 .section--morning {
   background-color: #FFFFFF;
 }
-.section--morning .adviceBox {
+.section--morning .section__content .adviceBox {
   margin-top: 1.5rem;
+}
+.section--morning .section__content .paragraph:last-of-type {
+  margin-bottom: 0;
 }
 .section--groups {
   background-color: #F3F6FB;
@@ -1342,6 +1348,32 @@ footer p {
 }
 .section--faq {
   background-color: #FFFFFF;
+}
+.section--article .section__title {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1875;
+}
+.section--article .section__title {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1875;
+}
+.section--reference {
+  background-color: #ebf4ff;
+}
+.section--reference .wrapper {
+  max-width: 36.875rem;
+  margin: 0 auto;
+}
+.section--reference .section__title {
+  text-align: left;
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .functBox {
@@ -1366,6 +1398,17 @@ footer p {
   font-weight: 400;
   line-height: 1.7;
 }
+.functBox__content .remark {
+  color: #616161;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: justify;
+}
+.functBox__content .tipList {
+  max-width: 36.875rem;
+  margin: 0 auto;
+}
 
 .functionItem__topic {
   text-align: center;
@@ -1379,7 +1422,7 @@ footer p {
   background-color: #388EFF;
   color: #fff;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.7;
   letter-spacing: 0.0375rem;
 }
@@ -1400,6 +1443,87 @@ footer p {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.7;
+}
+
+.tipList .tipList__item {
+  margin-bottom: 1.5rem;
+}
+.tipList .tipList__item:last-child {
+  margin-bottom: 0;
+}
+
+.tipBox {
+  padding: 1.25rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.tipBox__title {
+  color: #388EFF;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.7;
+  margin-bottom: 0.625rem;
+}
+.tipBox__content p {
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.tipBox__content p:last-of-type {
+  margin-bottom: 0;
+}
+.tipBox__content ul {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  color: #222222;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+.tipBox__content ul > li {
+  position: relative;
+  padding-left: 1.6875rem;
+}
+.tipBox__content ul > li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0.875rem;
+  left: 0.6875rem;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  background-color: #222222;
+  border-radius: 50%;
+}
+.tipBox__content ul .label {
+  font-weight: 700;
+}
+.tipBox__content ul .txt {
+  font-weight: 400;
+}
+
+.references .references__item {
+  margin-bottom: 0.625rem;
+}
+.references .references__item p {
+  color: #616161;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.references .references__item p .highlight {
+  color: #EF8200;
+}
+.references .references__item a {
+  color: #EF8200;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration: underline;
+}
+.references .references__item:last-child {
+  margin-bottom: 0;
 }
 
 .quickBuy {

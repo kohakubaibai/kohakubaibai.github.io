@@ -1,8 +1,8 @@
 <svg width="84" height="77" viewBox="0 0 84 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="17.1744" y="15.8555" width="60" height="60" rx="30" fill="white"/>
+<rect x="17.1744" y="15.8555" width="60" height="60" rx="30" fill="#f8cfad"/>
 <rect x="19.4244" y="18.1055" width="55.5" height="55.5" rx="27.75" stroke="#EF8200" stroke-opacity="0.4" stroke-width="4.5"/>
 <g clip-path="url(#clip0_73_22576)">
-<rect x="17.1744" y="16.3555" width="60" height="60" rx="30" fill="white"/>
+<rect x="17.1744" y="16.3555" width="60" height="60" rx="30" fill="#f8cfad"/>
 <rect class="animate-megaphone" x="17.1744" y="16.3555" width="60" height="59.7638" fill="url(#pattern0_73_22576)"/>
 </g>
 <rect x="19.4244" y="18.6055" width="55.5" height="55.5" rx="27.75" stroke="#EF8200" stroke-opacity="0.4" stroke-width="4.5"/>
@@ -28,16 +28,16 @@
     transform: scaleX(-1) scale(1);
   }
   25% {
-    -webkit-transform: scaleX(-1) scale(1.05);
-    transform: scaleX(-1) scale(1.05);
+    -webkit-transform: scaleX(-1) scale(1.1);
+    transform: scaleX(-1) scale(1.1);
   }
   50% {
     -webkit-transform: scaleX(-1) scale(1);
     transform: scaleX(-1) scale(1);
   }
   75% {
-    -webkit-transform: scaleX(-1) scale(1.05);
-    transform: scaleX(-1) scale(1.05);
+    -webkit-transform: scaleX(-1) scale(1.1);
+    transform: scaleX(-1) scale(1.1);
   }
   100% {
     -webkit-transform: scaleX(-1) scale(1);
@@ -50,13 +50,13 @@
     transform: scaleX(-1) scale(1);
   }
   25% {
-    transform: scaleX(-1) scale(1.05);
+    transform: scaleX(-1) scale(1.1);
   }
   50% {
     transform: scaleX(-1) scale(1);
   }
   75% {
-    transform: scaleX(-1) scale(1.05);
+    transform: scaleX(-1) scale(1.1);
   }
   100% {
     transform: scaleX(-1) scale(1);

@@ -15,8 +15,7 @@ body {
 	font-weight: bold;
 	margin: 0 auto;
 	background-color: $white;
-	color: $dark;
-
+	color: $text-dark;
 
 	&.openNav {
 		width: 100%;
@@ -112,7 +111,7 @@ body {
 	.nav-link {
 		@include f-p;
 		display: block;
-		color: $dark;
+		color: $text-dark;
 		text-decoration: none;
 
 		&.is-active {

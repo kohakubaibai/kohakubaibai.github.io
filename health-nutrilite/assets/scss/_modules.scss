@@ -32,12 +32,12 @@ $path: '../images';
 
 .adviceBox {
     position: relative;
-    padding-top: rem(29);
+    padding-top: rem(30);
 
     &__deco {
         position: absolute;
-        top: 0;
-        left: rem(-19);
+        top: rem(14);
+        left: rem(-9);
         width: rem(84);
         height: rem(77);
     }
@@ -45,13 +45,17 @@ $path: '../images';
     &__content {
         background-color: #FFD19A;
         border-radius: rem(8);
-        padding: rem(8) rem(16) rem(8) rem(70);
+        padding: rem(8) rem(16) rem(8) rem(80);
 
         p {
-            color: $dark;
+            color: $text-dark;
             font-size: rem(18);
             font-weight: 400;
             line-height: 1.7;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }

@@ -102,7 +102,7 @@ main {
 					display: block;
 					color: $primary-dark;
 					font-size: rem(28);
-					font-weight: bold;
+					font-weight: 700;
 					line-height: 1.7;
 				}
 
@@ -114,7 +114,7 @@ main {
 			.aiTopic {
 				margin-top: rem(28);
 				max-width: rem(539);
-				color: $dark;
+				color: $text-dark;
 				font-size: rem(22);
 				font-weight: 400;
 				line-height: 1.7;
@@ -181,7 +181,7 @@ main {
 	.heading {
 		text-align: center;
 		font-size: rem(28);
-		font-weight: bold;
+		font-weight: 700;
 		color: $primary-dark;
 		line-height: 1.5;
 	}
@@ -207,7 +207,7 @@ main {
 			p {
 				margin-top: 0;
 				margin-bottom: rem(24);
-				color: $dark;
+				color: $text-dark;
 				font-size: rem(18);
 				font-weight: 400;
 				line-height: 1.7;
@@ -263,8 +263,16 @@ main {
 	&--morning {
 		background-color: #FFFFFF;
 
-		.adviceBox {
-			margin-top: rem(24);
+		.section__content {
+			.adviceBox {
+				margin-top: rem(24);
+			}
+
+			.paragraph {
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 
@@ -278,6 +286,44 @@ main {
 
 	&--faq {
 		background-color: #FFFFFF;
+	}
+
+	&--article {
+		.section__title {
+			color: $black;
+			font-size: rem(32);
+			font-weight: 400;
+			line-height: 1.1875;
+		}
+	}
+
+	&--article {
+		.section__title {
+			color: $black;
+			font-size: rem(32);
+			font-weight: 400;
+			line-height: 1.1875;
+		}
+
+		.section__content {
+
+		}
+	}
+
+	&--reference {
+		background-color: #ebf4ff;
+
+		.wrapper {
+			max-width: rem(590);
+			margin: 0 auto;
+		}
+		.section__title {
+			text-align: left;
+			color: $text-dark;
+			font-size: rem(18);
+			font-weight: 500;
+			line-height: 1.6;
+		}
 	}
 }
 
@@ -299,10 +345,25 @@ main {
 		}
 
 		.memo {
-			color: #616161;
+			color: $text-light;
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: 1.7;
+		}
+	}
+
+	&__content {
+		.remark {
+			color: $text-light;
+			font-size: rem(16);
+			font-weight: 400;
+			line-height: 1.7;
+			text-align: justify;
+		}
+
+		.tipList {
+			max-width: rem(590);
+			margin: 0 auto;
 		}
 	}
 }
@@ -320,7 +381,7 @@ main {
 			background-color: $secondary;
 			color: $white;
 			font-size: rem(20);
-			font-weight: bold;
+			font-weight: 700;
 			line-height: 1.7;
 			letter-spacing: rem(0.6);
 		}
@@ -340,10 +401,110 @@ main {
 		margin-top: rem(3);
 
 		p {
-			color: #616161;
+			color: $text-light;
 			font-size: rem(18);
 			font-weight: 400;
 			line-height: 1.7;
+		}
+	}
+}
+
+.tipList {
+	.tipList__item {
+		margin-bottom: rem(24);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.tipBox {
+	padding: rem(20);
+	background-color: $white;
+	border-radius: rem(16);
+
+	&__title {
+		color: $secondary;
+		font-size: rem(20);
+		font-weight: 700;
+		line-height: 1.7;
+		margin-bottom: rem(10);
+	}
+
+	&__content {
+		p {
+			color: $text-dark;
+			font-size: rem(18);
+			font-weight: 400;
+			line-height: 1.7;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		ul {
+			margin-top: rem(10);
+			margin-bottom: rem(10);
+			color: $text-dark;
+			font-size: rem(18);
+			line-height: 1.7;
+
+			& > li {
+				position: relative;
+				padding-left: rem(27);
+
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					top: rem(14);
+					left: rem(11);
+					width: rem(5);
+					height: rem(5);
+					background-color: $text-dark;
+					border-radius: 50%;
+				}
+			}
+
+			.label {
+				font-weight: 700;
+			}
+
+			.txt {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+.references {
+	.references__item {
+		margin-bottom: rem(10);
+
+		p {
+			color: $text-light;
+			font-size: rem(16);
+			font-weight: 400;
+			line-height: 1.6;
+			margin-bottom: 0;
+
+			.highlight {
+				color: $tertiary;
+			}
+		}
+
+		a {
+			color: $tertiary;
+			font-size: rem(16);
+			font-weight: 400;
+			line-height: 1.6;
+			text-decoration: underline;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
