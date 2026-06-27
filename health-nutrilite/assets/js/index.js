@@ -3,6 +3,72 @@ window.addEventListener('load', () => {
 		document.querySelector('#kvText').classList.add('animate');
 	}, 600);
 });
+
+// 蛋白質計算機
+const GROUPS = [
+  { key: 'general',  label: '一般成人',    note: '每公斤 含1.1g蛋白質', coef: [1.1, 1.1] },
+  { key: 'senior',   label: '銀髮族',      note: '每公斤 含1.2g蛋白質', coef: [1.2, 1.2] },
+  { key: 'athlete',  label: '運動/增肌族', note: '每公斤 含1.3～1.6g 蛋白質', coef: [1.3, 1.6] },
+  { key: 'maternal', label: '孕哺期女性',  note: '每公斤 含1.1g蛋白質', coef: [1.1, 1.1] },
+];
+
+const slider      = document.getElementById('weightSlider');
+const weightLabel = document.getElementById('weightLabel');
+const grid        = document.getElementById('groupsGrid');
+const resultVal   = document.getElementById('resultVal');
+const perMeal     = document.getElementById('perMeal');
+
+let activeKey = 'general';
+
+// build group cards
+GROUPS.forEach(g => {
+  const card = document.createElement('div');
+  card.className = 'gridWrap__item crowdCard' + (g.key === activeKey ? ' is-active' : '');
+  card.dataset.key = g.key;
+  card.innerHTML = `<div class="crowdCard__name">${g.label}</div><div class="crowdCard__note">${g.note}</div>`;
+  card.addEventListener('click', () => {
+    activeKey = g.key;
+    document.querySelectorAll('.crowdCard').forEach(c => c.classList.remove('is-active'));
+    card.classList.add('is-active');
+    render();
+  });
+  grid.appendChild(card);
+});
+
+function updateSliderTrack() {
+  const min = +slider.min, max = +slider.max, val = +slider.value;
+  const pct = ((val - min) / (max - min) * 100).toFixed(1) + '%';
+  slider.style.setProperty('--pct', pct);
+}
+
+function render() {
+  const w = +slider.value;
+
+  // label
+  weightLabel.innerHTML = `體重：<span>${w}</span> 公斤`;
+
+  // find active group
+  const g = GROUPS.find(x => x.key === activeKey);
+  const [lo, hi] = [w * g.coef[0], w * g.coef[1]];
+  const isRange = g.coef[0] !== g.coef[1];
+
+  if (isRange) {
+    resultVal.className = 'count';
+    resultVal.textContent = lo.toFixed(0) + '~' + hi.toFixed(0);
+    const loM = (lo / 3).toFixed(0), hiM = (hi / 3).toFixed(0);
+    perMeal.innerHTML = `平均三餐，每餐約 <strong>${loM}~${hiM}g</strong>`;
+  } else {
+    resultVal.className = 'count';
+    resultVal.textContent = lo.toFixed(0);
+    perMeal.innerHTML = `平均三餐，每餐約 <strong>${(lo / 3).toFixed(0)}g</strong>`;
+  }
+
+  updateSliderTrack();
+}
+
+slider.addEventListener('input', render);
+render();
+
 $(function () {
 
 	// ==================== WOW ====================
@@ -22,6 +88,7 @@ $(function () {
 	// ==================== Mobile Navbar Toggle ====================
 	var navbarX = $(".navbarX");
 	navbarX.click(function () {
+		$nav.toggleClass('is-opened');
 		navbarX.toggleClass('active');
 		$('body').toggleClass('openNav');
 	});

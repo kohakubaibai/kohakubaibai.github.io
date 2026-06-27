@@ -67,15 +67,11 @@ body {
 	}
 
 	@include rwd-min(320px) {
-		padding: rem(5) 0 rem(5) rem(16);
+		padding: rem(12) rem(16);
 	}
 
 	@include rwd-min(991.98px) {
-		padding: rem(18) rem(10);
-	}
-
-	@include rwd-min(1201px) {
-		padding: rem(18) rem(0);
+		padding: rem(10) rem(10);
 	}
 
 	.logos {
@@ -101,10 +97,18 @@ body {
 		}
 
 		&--ch {
-			width: rem(79.5);
+			width: rem(53);
+
+			@include rwd-min(991.98px) {
+				width: rem(79.5);
+			}
 		}
 		&--feat {
-			width: rem(158);
+			width: rem(119);
+
+			@include rwd-min(991.98px) {
+				width: rem(158);
+			}
 		}
 	}
 
@@ -128,7 +132,6 @@ body {
 			}
 		}
 	}
-
 
 	&-expand-lg {
 		.navbar-nav {
@@ -169,6 +172,7 @@ body {
 		@include rwd-min(991.98px) {
 			margin-top: 0;
 			height: auto;
+			background-color: transparent;
 		}
 	}
 
@@ -176,6 +180,10 @@ body {
       background-color: $white;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
     }
+
+	&.is-opened {
+		background-color: $white;
+	}
 }
 
 /* ==================================================
@@ -327,7 +335,7 @@ footer {
 
 	a {
 		transition: .3s;
-		color: #222222;
+		color: $text-dark;
 		text-decoration: none;
 
 		&:hover {
@@ -336,7 +344,7 @@ footer {
 
 		@include rwd-not-hover {
 			&:hover {
-				color: #222222;
+				color: $text-dark;
 			}
 		}
 	}
@@ -353,7 +361,7 @@ footer {
 		margin: 0;
 
 		li {
-			border-right: rem(1) solid #222222;
+			border-right: rem(1) solid $text-dark;
 			padding-right: rem(10);
 			margin: 0 rem(10) rem(10) 0;
 
@@ -365,7 +373,7 @@ footer {
 
 			a {
 				@include f-h5;
-				color: #222222;
+				color: $text-dark;
 
 
 				&:hover {
@@ -405,7 +413,7 @@ footer {
 
 	p {
 		@include f-h5;
-		color: #222222;
+		color: $text-dark;
 		text-align: center;
 		margin-top: 0;
 		margin-bottom: 10px;
