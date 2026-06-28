@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
 const GROUPS = [
   { key: 'general',  label: '一般成人',    note: '每公斤 含1.1g蛋白質', coef: [1.1, 1.1] },
   { key: 'senior',   label: '銀髮族',      note: '每公斤 含1.2g蛋白質', coef: [1.2, 1.2] },
-  { key: 'athlete',  label: '運動/增肌族', note: '每公斤 含1.3～1.6g 蛋白質', coef: [1.3, 1.6] },
+  { key: 'athlete',  label: '運動/增肌族', note: '每公斤 含1.3~1.6g 蛋白質', coef: [1.3, 1.6] },
   { key: 'maternal', label: '孕哺期女性',  note: '每公斤 含1.1g蛋白質', coef: [1.1, 1.1] },
 ];
 

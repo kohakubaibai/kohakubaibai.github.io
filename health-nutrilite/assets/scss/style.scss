@@ -906,6 +906,316 @@ main {
 	}
 }
 
+.crowdTable {
+	margin: 0 auto;
+
+	&__thead {
+		
+		@include rwd-min(320px) {
+			display: none;
+		}
+		
+		@include rwd-min(991.98px) {
+			display: grid;
+			grid-template-columns: rem(156) rem(189) rem(205) rem(240);
+			background-color: $secondary;
+			border-top-left-radius: rem(16);
+			border-top-right-radius: rem(16);
+			overflow: hidden;
+		}
+
+		.theadCell {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			padding: rem(8) 0;
+			
+			&__text {
+				font-size: rem(18);
+				font-weight: 700;
+				line-height: 1.4;
+				color: $white;
+				text-align: center;
+			}
+			.unit {
+				font-family: Arial, sans-serif;
+				font-size: rem(16);
+				font-weight: 400;
+				color: $white;
+			}
+		}
+	}
+
+	&__tbody {
+		@include rwd-min(320px) {
+			display: flex;
+			flex-direction: column;
+			gap: rem(16);
+		}
+
+		@include rwd-min(991.98px) {
+			border: rem(1) solid $secondary;
+			border-bottom-left-radius: rem(16);
+			border-bottom-right-radius: rem(16);
+			overflow: hidden;
+			gap: 0;
+		}
+
+		.tbodyRow {
+			border-width: rem(1);
+			border-style: solid;
+			
+			@include rwd-min(320px) {
+				display: flex;
+				flex-direction: column;
+				background-color: $white;
+				border-radius: rem(16);
+				overflow: hidden;
+				padding-bottom: rem(8);
+
+				&:nth-child(odd) {
+					border-color: $primary;
+					
+					.tbodyCell--title {
+						background-color: $primary;
+					}
+				}
+				
+				&:nth-child(even) {
+					border-color: $secondary;
+
+					.tbodyCell--title {
+						background-color: $secondary;
+					}
+				}
+			}
+
+			@include rwd-min(991.98px) {
+				display: grid;
+				grid-template-columns: rem(156) rem(189) rem(205) rem(240);
+				border-top: none;
+				border-left: none;
+				border-right: none;
+				border-radius: 0;
+				padding-bottom: 0;
+				
+				&:nth-child(odd) {
+					background-color: #F0F0F0;
+					border-bottom-color: $secondary;
+					
+					.tbodyCell--title {
+						background-color: #F0F0F0;
+					}
+				}
+				
+				&:nth-child(even) {
+					background-color: $white;
+					border-bottom-color: $secondary;
+					
+					.tbodyCell--title {
+						background-color: $white;
+					}
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				.tbodyCell {
+					border-right: rem(1) solid $secondary;
+
+					&:last-child {
+						border-right: none;
+					}
+				}
+			}
+		}
+
+		.tbodyCell {
+			display: flex;
+			align-items: center;
+
+			@include rwd-min(320px) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			@include rwd-min(991.98px) {
+				justify-content: center;
+			}
+
+			&--title,
+			&--content {
+				@include rwd-min(320px) {
+					text-align: left;
+				}
+
+				@include rwd-min(991.98px) {
+					text-align: center;
+				}
+			}
+
+			&--content, 
+			&--memo {
+				.crowdText {
+					color: $text-dark;
+				}
+
+				@include rwd-min(320px) {
+					padding: rem(9.5) rem(16);
+
+					&:before {
+						content: attr(data-label);
+						display: inline-block;
+						flex-shrink: 0;
+						min-width: rem(108);
+						color: $text-dark;
+						font-size: rem(18);
+						font-weight: 700;
+						line-height: 1.7;
+						white-space: nowrap;
+						align-self: flex-start;
+					}
+				}
+
+				@include rwd-min(991.98px) {
+					padding: rem(8) rem(16);
+
+					&:before {
+						display: none;
+					}
+				}
+			}
+
+			&--title {
+				width: 100%;
+				flex: 0 0 100%;
+
+				@include rwd-min(320px) {
+					padding: rem(8) rem(16) rem(4);
+					margin-bottom: rem(8);
+
+					.crowdText {
+						color: $white;
+						font-size: rem(20);
+						font-weight: 700;
+
+						.memo {
+							color: $white;
+							font-weight: 400;
+
+							i {
+								display: none;
+							}
+						}
+					}					
+				}
+
+				@include rwd-min(991.98px) {
+					padding: rem(8) rem(16);
+					margin-bottom: 0;
+
+					.crowdText {
+						color: $text-dark;
+						font-size: rem(18);
+						font-weight: 400;
+
+						.memo {
+							color: $text-light;
+
+							i {
+								display: inline;
+								font-style: normal;
+							}
+						}
+					}
+
+					
+				}
+			}
+
+			&--content {
+
+				@include rwd-min(320px) {
+
+					.crowdText {
+						font-size: rem(18);
+					}
+
+					.perUnit,
+					.unit {
+						font-family: Arial, sans-serif;
+						font-size: rem(18);
+					}
+				}
+				
+				@include rwd-min(991.98px) {
+
+					.crowdText {
+						font-size: rem(18);
+					}
+
+					.perUnit {
+						display: none;
+					}
+				}
+				
+			}
+
+			&--memo {
+				text-align: left;
+				flex-wrap: wrap;
+				
+				&:before {
+					margin-bottom: rem(8);
+				}
+
+				.crowdText {
+					width: 100%;
+					flex: 0 0 100%;
+					font-size: rem(18);
+					color: $text-light;
+
+
+				}
+
+				@include rwd-min(320px) {
+					.crowdText {
+						color: $text-light;
+
+						br {
+							display: block;
+						}
+					}
+				}
+				
+				@include rwd-min(991.98px) {
+					.crowdText {
+						color: $text-dark;
+
+						br {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.crowdText {
+		font-weight: 400;
+		line-height: 1.7;
+
+		.memo {
+			font-size: rem(16);
+			font-weight: 400;
+		}
+	}
+}
+
 /******************* slick start ******************/
 .slickList {
 
