@@ -1327,6 +1327,7 @@ footer p {
   }
 }
 .hero .heroBox__text .subTitle {
+  visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1381,6 +1382,7 @@ footer p {
   }
 }
 .hero .heroBox__text .aiTopic {
+  visibility: hidden;
   max-width: 33.6875rem;
   color: #222222;
   font-weight: 400;

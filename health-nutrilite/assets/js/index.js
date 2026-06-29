@@ -1,6 +1,20 @@
 window.addEventListener('load', () => {
 	setTimeout(() => {
 		document.querySelector('#kvText').classList.add('animate');
+
+		document.querySelector('#reveal-rect-2').addEventListener('animationend', () => {
+			const subTitle = document.querySelector('#hero .subTitle');
+			subTitle.style.animationDuration = '0.5s';
+			subTitle.style.visibility = 'visible';
+			subTitle.classList.add('animated', 'fadeInUp');
+
+			setTimeout(() => {
+				const aiTopic = document.querySelector('#hero .heroBox__text .aiTopic');
+				aiTopic.style.animationDuration = '0.5s';
+				aiTopic.style.visibility = 'visible';
+				aiTopic.classList.add('animated', 'fadeIn');
+			}, 500);
+		}, { once: true });
 	}, 600);
 });
 

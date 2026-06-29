@@ -134,6 +134,7 @@ main {
 			}
 
 			.subTitle {
+				visibility: hidden;
 				display: flex;
 				flex-wrap: nowrap;
 				align-items: center;
@@ -178,6 +179,7 @@ main {
 			}
 
 			.aiTopic {
+				visibility: hidden;
 				max-width: rem(539);
 				color: $text-dark;
 				font-weight: 400;
