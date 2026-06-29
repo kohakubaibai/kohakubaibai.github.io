@@ -20,7 +20,6 @@ const perMeal     = document.getElementById('perMeal');
 
 let activeKey = 'general';
 
-// build group cards
 GROUPS.forEach(g => {
   const card = document.createElement('div');
   card.className = 'gridWrap__item crowdCard' + (g.key === activeKey ? ' is-active' : '');
@@ -68,6 +67,65 @@ function render() {
 
 slider.addEventListener('input', render);
 render();
+
+// 蛋白質排行榜
+(function () {
+  const table = document.getElementById('protein-ranking');
+  const targets = table.querySelectorAll('[data-target]');
+  let animated = false;
+
+  function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  function runCountUp() {
+    if (animated) return;
+    animated = true;
+    const duration = 1400;
+    const start = performance.now();
+
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = easeOutQuart(progress);
+
+      targets.forEach(el => {
+        const target = parseFloat(el.dataset.target);
+        const current = target * ease;
+        el.textContent = (Number.isInteger(target)
+          ? Math.round(current)
+          : current.toFixed(1));
+      });
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        targets.forEach(el => {
+          const target = parseFloat(el.dataset.target);
+          el.textContent = (Number.isInteger(target)
+            ? target
+            : target.toFixed(1));
+        });
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          runCountUp();
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(table);
+})();
 
 $(function () {
 
@@ -205,7 +263,7 @@ $(function () {
 			{
 				breakpoint: 768,
 				settings: {
-					centerPadding: '1rem',
+					centerPadding: '25px',
 					slidesToShow: 1
 				}
 			},

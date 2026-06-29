@@ -83,7 +83,7 @@
 				<div class="heroBox">
 					<div class="heroBox__text">
 						<h1 class="h1">蛋白質完整指南｜蛋白質攝取量、食物來源與優質蛋白質補充全攻略</h1>
-						<div class="mainTitle">	
+						<div class="mainTitle">
 							<svg id="kvText" width="593" height="271" viewBox="0 0 593 271" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<mask id="mask0_1395_1142" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="593" height="271">
 								<rect width="593" height="271" fill="#D9D9D9"/>
@@ -234,7 +234,7 @@
 			<div class="wrapper">
 				<h2 class="section__title">蛋白質是什麼？<br>為什麼每個人都需要它</h2>
 				<div class="section__content">
-					<i class="quotationDeco"><img src="assets/images/icon_quotation.svg"></i>
+					<i class="quotationDeco"><img src="assets/images/icon_quotation.png"></i>
 					<div class="aiTopic">
 						<p>
 							蛋白質（英文：Protein）是由胺基酸組成的大分子營養素，是構成肌肉、免疫細胞、酵素與荷爾蒙的基礎原料，參與人體每日的組織修復、代謝調節與免疫運作，是無論年齡與生活型態都不可或缺的三大營養素之一。
@@ -314,7 +314,7 @@
 			<div class="wrapper">
 				<h2 class="section__title">蛋白質一天要吃多少？<br>攝取量計算完整說明</h2>
 				<div class="section__content">
-					<i class="quotationDeco"><img src="assets/images/icon_quotation.svg"></i>
+					<i class="quotationDeco"><img src="assets/images/icon_quotation.png"></i>
 					<div class="aiTopic">
 						<p>
 							根據衛福部2026年第九版「國人膳食營養素參考攝取量」（草案）的最新建議，19-64歲一般健康成人的一天蛋白質攝取量約為每公斤體重1.1公克；以60公斤成人為例，每日約需66公克，65歲以上銀髮族與運動族群則建議提高至每公斤1.2～1.6公克，且應分散於三餐均勻攝取以提升利用率。
@@ -333,9 +333,9 @@
 						<div class="funcBox__content">
 							<div class="calculator">
 								<div class="calculator__widget">
-									<div id="weightLabel" class="widgetLabel">體重：<span>65</span> 公斤</div>
+									<div id="weightLabel" class="widgetLabel">體重：<span>60</span> 公斤</div>
 									<div class="widgetItem widgetItem--bar">
-										<input id="weightSlider" class="weightSlider" type="range" min="30" max="120" value="65" step="1">
+										<input id="weightSlider" class="weightSlider" type="range" min="30" max="120" value="60" step="1">
 									</div>
 								</div>
 								<div class="calculator__widget">
@@ -487,7 +487,7 @@
 							蛋白質含量高的食物依來源可分為動物性與植物性兩大類：動物性包含雞胸肉（每 100 克約23.3 公克）、鮪魚（每 100 克約 23.3 公克）、雞蛋（每顆約 7 公克）；植物性則以大豆（每100 克約 35.6 公克）、板豆腐（每 100 克約8.5 公克）、無糖豆漿（每 250 毫升約 9 公克）為代表。
 						</p>
 					</div>
-					<i class="quotationDeco"><img src="assets/images/icon_quotation.svg"></i>
+					<i class="quotationDeco"><img src="assets/images/icon_quotation.png"></i>
 					<div class="paragraph">
 						<p>
 							在選擇蛋白質食物時，除了看「量」，更要看「質」。根據台灣2026年新版飲食指南草案，蛋白質的優先選擇順序為「豆 > 魚 > 蛋 > 肉」。政策鼓勵大家多從植物性蛋白質（豆類）及脂肪含量較低的海鮮、禽肉中攝取，以減輕心血管與身體負擔。
@@ -509,12 +509,127 @@
 							<div class="topic">蛋白質食物含量排名速查表</div>
 						</div>
 						<div class="funcBox__content">
-							<div class="rankingList">
-								<div class="rankingList__item">
-									<div class="rankingTable rankingTable--plant"></div>
+							<div id="protein-ranking" class="ranks">
+								<div class="ranks__item">
+									<div class="rankingTable rankingTable--animal">
+										<div class="rankingTable__title">
+											<div class="topic">動物性高蛋白質食物</div>
+											<div class="memo">每 100 公克含蛋白質量</div>
+										</div>
+										<ul class="rankingTable__list foodList">
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">雞胸肉</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="23.3">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">鮪魚</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="23.3">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">牛排</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="20.6">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">鮭魚</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="20.2">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">豬里肌</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="19.2">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+										</ul>
+									</div>
 								</div>
-								<div class="rankingList__item">
-									<div class="rankingTable rankingTable--animal"></div>
+								<div class="ranks__item">
+									<div class="rankingTable rankingTable--plant">
+										<div class="rankingTable__title">
+											<div class="topic">植物性蛋白質代表</div>
+											<div class="memo">每 100 公克含蛋白質量</div>
+										</div>
+										<ul class="rankingTable__list foodList">
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">黑豆 (乾)</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="37.0">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">大豆</span>
+												</div>
+
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="35.6">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">毛豆仁</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="14.6">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">板豆腐</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="8.5">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+											<li class="foodList__item">
+												<div class="foodName">
+													<i class="foodName__icon"></i>
+													<span class="foodName__text">無糖豆漿（250ml）</span>
+												</div>
+												<div class="foodAmount">
+													<span class="foodAmount__number" data-target="9">0</span>
+													<span class="foodAmount__unit">g</span>
+												</div>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="remark">
@@ -567,7 +682,7 @@
 				<h2 class="section__title">蛋白質攝取不足或過多會怎樣？</h2>
 				<div class="section__content">
 					<h3 class="heading">蛋白質不足有什麼影響？怎麼知道自己不夠？</h3>
-					<i class="quotationDeco"><img src="assets/images/icon_quotation.svg"></i>
+					<i class="quotationDeco"><img src="assets/images/icon_quotation.png"></i>
 					<div class="aiTopic">
 						<p>
 							長期蛋白質攝取不足的常見症狀包括：肌肉量下降與無力感、傷口癒合速度變慢、免疫力下降反覆感冒、頭髮變細易斷、情緒低落與睡眠障礙、身體水腫；銀髮族、女性、長期外食族、素食者是蛋白質攝取不足的高風險族群。
@@ -667,7 +782,7 @@
 				</div>
 				<div class="section__content">
 					<h3 class="heading">蛋白質吃太多會怎樣？傷腎是真的嗎？</h3>
-					<i class="quotationDeco"><img src="assets/images/icon_quotation.svg"></i>
+					<i class="quotationDeco"><img src="assets/images/icon_quotation.png"></i>
 					<div class="aiTopic">
 						<p>
 							對腎功能正常的健康成年人，每日蛋白質攝取在每公斤體重 2 公克以內並不會增加腎臟負擔；蛋白質攝取過多的主要影響是多餘熱量轉為脂肪堆積，以及可能伴隨的消化負擔，慢性腎臟病患者則應依醫師建議控制攝取量。
@@ -691,7 +806,7 @@
 			<div class="wrapper">
 				<h2 class="section__title">各族群蛋白質補充策略</h2>
 				<div class="section__content">
-					<i class="quotationDeco"><img src="assets/images/icon_quotation.svg"></i>
+					<i class="quotationDeco"><img src="assets/images/icon_quotation.png"></i>
 					<div class="aiTopic">
 						<p>
 							經過一整晚禁食，肝醣耗盡、皮質醇升高，早晨是人體肌肉蛋白質合成訊號最強的時間點；研究顯示早餐攝取 15 ～ 25 公克蛋白質，有助於啟動全日代謝、穩定血糖並延長飽足感，是讓同樣份量的蛋白質發揮更大效益的關鍵時機。
@@ -729,7 +844,7 @@
 			<div class="wrapper">
 				<h2 class="section__title">早晨是補充蛋白質的黃金時機</h2>
 				<div class="section__content">
-					<i class="quotationDeco"><img src="assets/images/icon_quotation.svg"></i>
+					<i class="quotationDeco"><img src="assets/images/icon_quotation.png"></i>
 				</div>
 			</div>
 		</section>
@@ -744,6 +859,48 @@
 		<section class="section section--article imp_event" data-title="" data-label="">
 			<div class="section__title">推薦文章</div>
 			<div class="section__content">
+				<div class="slickList slickList--article js-articleSlick">
+					<div class="slickList__item">
+						<a class="articleItem imp_event" href="#" target="_blank">
+							<div class="articleItem__img"><img src="https://picsum.photos/id/200/364/223" class="articleItem__img img-fluid" alt="article_title"></div>
+							<div class="articleItem__txt">
+								<div class="title">行動力不掉速，蛋白質先補足！</div>
+							</div>
+						</a>
+					</div>
+					<div class="slickList__item">
+						<a class="articleItem imp_event" href="#" target="_blank">
+							<div class="articleItem__img"><img src="https://picsum.photos/id/199/364/223" class="articleItem__img img-fluid" alt="article_title"></div>
+							<div class="articleItem__txt">
+								<div class="title">腎不好還能吃蛋白質？醫師公開10大護腎食物，這類蛋白質竟上榜！</div>
+							</div>
+						</a>
+					</div>
+					<div class="slickList__item">
+						<a class="articleItem imp_event" href="#" target="_blank">
+							<div class="articleItem__img"><img src="https://picsum.photos/id/198/364/223" class="articleItem__img img-fluid" alt="article_title"></div>
+							<div class="articleItem__txt">
+								<div class="title">腸道三防線 植物蛋白質幫助養好腸</div>
+							</div>
+						</a>
+					</div>
+					<div class="slickList__item">
+						<a class="articleItem imp_event" href="#" target="_blank">
+							<div class="articleItem__img"><img src="https://picsum.photos/id/197/364/223" class="articleItem__img img-fluid" alt="article_title"></div>
+							<div class="articleItem__txt">
+								<div class="title">癌友營養關鍵：為何蛋白質補充不可忽視</div>
+							</div>
+						</a>
+					</div>
+					<div class="slickList__item">
+						<a class="articleItem imp_event" href="#" target="_blank">
+							<div class="articleItem__img"><img src="https://picsum.photos/id/196/364/223" class="articleItem__img img-fluid" alt="article_title"></div>
+							<div class="articleItem__txt">
+								<div class="title">PDCAAS=1是什麼？蛋白質評分表、食物清單與蛋白粉怎麼選一次看</div>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- 參考資料 -->
@@ -765,7 +922,7 @@
 							<a href="https://www.hpa.gov.tw/EngPages/Detail.aspx?nodeid=3999&pid=15562" target="_blank">https://www.hpa.gov.tw/EngPages/Detail.aspx?nodeid=3999&pid=15562</a>
 						</div>
 						<div class="references__item">
-							<p>衛福部食藥署。「食品營養成分資料庫2025版」。</p>
+							<p>衛福部食藥署。「<span class="highlight">食品營養成分資料庫2025版</span>」。</p>
 							<a href="https://consumer.fda.gov.tw/Food/TFND.aspx?nodeID=178" target="_blank">https://consumer.fda.gov.tw/Food/TFND.aspx?nodeID=178</a>
 						</div>
 					</div>
@@ -782,6 +939,8 @@
 			<li><a href="https://www.commonhealth.com.tw/" target="_blank">康健雜誌</a></li>
 			<li><a href="https://www.commonhealth.com.tw/book/index.action" target="_blank">康健出版</a></li>
 			<li><a href="https://www.youtube.com/user/CommonHealthTV" target="_blank">康健影音</a></li>
+			<li><a href="https://line.me/ti/p/@commonhealth" target="_blank">康健LINE</a></li>
+			<li><a href="https://www.facebook.com/commonhealth/" target="_blank">康健FB</a></li>
 			<li><a href="https://kb.commonhealth.com.tw/" target="_blank">康健知識庫</a></li>
 			<li><a href="https://club.commonhealth.com.tw/" target="_blank">大人社團</a></li>
 			<li><a href="https://cancer.commonhealth.com.tw/" target="_blank">癌症問康健</a></li>

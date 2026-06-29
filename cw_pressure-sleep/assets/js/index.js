@@ -400,10 +400,8 @@ $(function () {
 		dots: false,
 		autoplaySpeed: 5000,
 		infinite: true,
-		prevArrow:
-			'<div class="btn-arrowL effect-moveL"></div>',
-		nextArrow:
-			'<div class="btn-arrowR effect-moveR"></div>',
+		arrows: false,
+		centerMode: true
 	};
 
 	var slickArticleSetting = {
@@ -423,15 +421,15 @@ $(function () {
 
 	function initSlick() {
 		var slickArticle = $(".js-articleSlick");
-		
+
 		if (slickArticle.length === 0) {
 			return;
 		}
-		
+
 		if (slickArticle.hasClass('slick-initialized')) {
 			slickArticle.slick('unslick');
 		}
-		
+
 		slickArticle.slick($.extend({}, slickBasicSetting, slickArticleSetting));
 	}
 
