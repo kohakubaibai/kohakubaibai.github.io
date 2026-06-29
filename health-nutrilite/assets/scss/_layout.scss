@@ -112,6 +112,20 @@ body {
 		}
 	}
 
+	.nav-item {
+		&.nav-item-share {
+			display: flex;
+			flex-wrap: nowrap;
+			.nav-link {
+				margin-left: rem(24);
+
+				&:first-child {
+					margin-left: 0
+				}
+			}
+		}
+	}
+
 	.nav-link {
 		@include f-p;
 		display: block;
@@ -128,8 +142,12 @@ body {
 
 		@include rwd-not-hover {
 			&:hover {
-				color: #6D3526;
+				color: $text-dark;
 			}
+		}
+
+		img {
+			width: rem(32);
 		}
 	}
 
