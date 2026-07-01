@@ -85,11 +85,18 @@ main {
 }
 
 .hero {
-	padding: rem(128) 0 rem(62);
 	position: relative;
 	background: linear-gradient(107.35deg, #F6F8FD 0%, #E0E8ED 100%);
 	width: 100dvw;
 	overflow: hidden;
+
+	@include rwd-min(320px) {
+		padding: rem(44) 0 rem(62)
+
+	}
+	@include rwd-min(991.98px) {
+		padding: rem(128) 0 rem(62)
+	}
 
 	.heroBg {
 		position: absolute;
@@ -237,7 +244,7 @@ main {
 				max-width: rem(360);
 				flex: 0 0 rem(360);
 			}
-			@include rwd-min(991.98) {
+			@include rwd-min(991.98px) {
 				margin-top: 0;
 				max-width: rem(556);
 				flex: 0 0 rem(556);
@@ -325,6 +332,7 @@ main {
 	}
 
 	.section__title {
+		margin: 0;
 		position: relative;
 		z-index: 5;
 		font-weight: 700;
@@ -395,6 +403,16 @@ main {
 				a {
 					color: $tertiary-dark;
 					text-decoration: underline;
+
+					@include rwd-not-hover {
+						&:hover {
+							color: $tertiary-dark;
+						}
+					}
+
+					&:hover {
+						color: $secondary;
+					}
 				}
 			}
 		}
@@ -482,7 +500,7 @@ main {
 		}
 	}
 
-	&--groups {
+	&--breakfast {
 		background-color: #F3F6FB;
 
 		.section__content {
@@ -490,7 +508,7 @@ main {
 			.funcBox--breakfast {
 				max-width: rem(800);
 			}
-			
+
 			.funcBox--improvement {
 				max-width: rem(590);
 				margin-top: 0;
@@ -502,10 +520,35 @@ main {
 
 	&--strategy {
 		background-color: #ebf4ff;
+
+		.section__content {
+			.funcBox--strategy {
+				max-width: rem(800);
+			}
+		}
 	}
 
 	&--faq {
 		background-color: #FFFFFF;
+
+		.section__title {
+			&:before {
+				content: '';
+				margin: 0 auto rem(3);
+				display: block;
+				width: rem(86);
+				height: rem(54);
+				background-image: url('#{$path}/deco-title_faq.svg');
+				background-size: rem(86) rem(54);
+				background-repeat: no-repeat;
+			}
+		}
+
+		.section__content {
+			.funcBox--faqAccordion {
+				max-width: rem(800);
+			}
+		}
 	}
 
 	&--article {
@@ -630,7 +673,7 @@ main {
 			color: $primary;
 			font-weight: 700;
 			line-height: 1.7;
-			
+
 			@include rwd-min(320px) {
 				font-size: rem(24);
 			}
@@ -1436,37 +1479,37 @@ main {
 			.breakfastBox__deco {
 				animation: breakfast 1.2s step-end infinite alternate;
 			}
-		} 
+		}
 
 		&:nth-child(2) {
 			.breakfastBox__deco {
 				animation: breakfast 1s step-end infinite alternate;
 			}
-		} 
+		}
 
 		&:nth-child(3) {
 			.breakfastBox__deco {
 				animation: breakfast 1.3s step-end infinite alternate;
 			}
-		} 
+		}
 
 		&:nth-child(4) {
 			.breakfastBox__deco {
 				animation: breakfast 0.9s step-end infinite alternate;
 			}
-		} 
+		}
 
 		&:nth-child(5) {
 			.breakfastBox__deco {
 				animation: breakfast 1.1s step-end infinite alternate;
 			}
-		} 
+		}
 
 		&:nth-child(6) {
 			.breakfastBox__deco {
 				animation: breakfast 0.8s step-end infinite alternate;
 			}
-		} 
+		}
 	}
 }
 
@@ -1475,7 +1518,7 @@ main {
 	background-color: $white;
 	border-radius: rem(16);
 	padding-bottom: rem(16);
-	
+
 	@include rwd-min(320px) {
 		padding-top: rem(14);
 	}
@@ -1519,7 +1562,7 @@ main {
 			}
 		}
 	}
-	
+
 	&__body {
 		padding-left: rem(16);
 		padding-right: rem(16);
@@ -1561,11 +1604,11 @@ main {
 		position: relative;
 		background-color: $white;
 		border-radius: rem(16);
-		
+
 		@include rwd-min(320px) {
 			padding: rem(8) rem(16) rem(8) rem(64);
 		}
-		
+
 		@include rwd-min(768px) {
 			padding: rem(8) rem(16) rem(8) rem(72);
 		}
@@ -1593,7 +1636,7 @@ main {
 				font-size: rem(40);
 				background-size: rem(48);
 			}
-			
+
 			@include rwd-min(768px) {
 				top: rem(-6);
 				left: rem(-14);
@@ -1618,6 +1661,187 @@ main {
 				font-size: rem(18);
 				font-weight: 400;
 				line-height: 1.7;
+			}
+		}
+	}
+}
+
+
+.strategyTab {
+
+	.nav--strategy {
+		& > .nav-item {
+			width: 25%;
+
+			&:first-child {
+				.tabBtn {
+					border-top-left-radius: rem(16);
+				}
+			}
+			&:last-child {
+				.tabBtn {
+					border-top-right-radius: rem(16);
+				}
+			}
+		}
+	}
+
+	.tabBtn {
+		width: 100%;
+		padding: rem(8) 0;
+		background-color: $tertiary-light;
+
+		.tabBtn__image {
+			margin: 0 auto;
+			@include transition(all,.3s, ease-in);
+
+			@include rwd-min(320px) {
+				width: rem(49);
+			}
+
+			@include rwd-min(768px) {
+				width: rem(55);
+			}
+		}
+
+		.tabBtn__text {
+			display: block;
+			margin-top: rem(4);
+			font-size: rem(20);
+			font-weight: 400;
+			color: $text-dark;
+			line-height: 1.2;
+			@include transition(all,.3s, ease-in);
+		}
+
+		&.active {
+			background-color: $tertiary-dark;
+
+			.tabBtn__text {
+				font-weight: 700;
+				color: $white;
+			}
+
+			.tabBtn__image {
+
+				@include rwd-min(320px) {
+					@include scale(1.2448);
+				}
+
+				@include rwd-min(768px) {
+					@include scale(1.6666);
+				}
+				-webkit-transform-origin: center bottom;
+				transform-origin: center bottom;
+			}
+		}
+	}
+}
+
+.strategyBox {
+	padding: rem(40) rem(24);
+	background-color: $white;
+	border-bottom-left-radius: rem(16);
+	border-bottom-right-radius: rem(16);
+
+	&__title {
+		color: $primary-dark;
+		font-weight: 700;
+		line-height: 1.45;
+
+		@include rwd-min(320px) {
+			font-size: rem(24);
+		}
+
+		@include rwd-min(768px) {
+			font-size: rem(28);
+		}
+	}
+
+	&__content {
+		margin-top: rem(20);
+		border-left: rem(4) solid $tertiary-dark;
+
+		p {
+			color: $text-dark;
+			font-size: rem(18);
+			line-height: 1.7;
+			font-weight: 500;
+		}
+
+		@include rwd-min(320px) {
+			padding-left: rem(14);
+		}
+
+		@include rwd-min(768px) {
+			padding-left: rem(22);
+		}
+	}
+
+	&__paragraph {
+		margin-top: rem(20);
+
+		p {
+			margin: 0;
+			color: $text-light;
+			font-size: rem(18);
+			line-height: 1.7;
+			font-weight: 400;
+
+			.highlight {
+				color: $text-dark;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.faqAccordion {
+	.accordion-item {
+		border: none;
+		border-radius: 0;
+		border-bottom: rem(1) solid #E0E0E0;
+	}
+
+	.accordion-button {
+		background-color: transparent;
+		color: $primary-dark;
+		font-size: rem(22);
+		line-height: 1.5;
+		font-weight: 700;
+		padding: rem(20) rem(16);
+
+		&:after {
+			width: rem(18);
+			height: rem(18);
+			background-size: rem(18);
+			background-image: url('#{$path}/icon-accordion_inactive.svg');
+		}
+
+		&:not(.collapsed) {
+			background-color: transparent;
+			color: $primary-dark;
+			box-shadow: none;
+
+			&:after {
+				background-image: url('#{$path}/icon-accordion_active.svg');
+			}
+		}
+	}
+	.accordion-body {
+		p {
+			color: $text-dark;
+			font-size: rem(20);
+			line-height: 1.6;
+			font-weight: 400;
+			margin-bottom: rem(10);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.highlight {
+				font-weight: 500;
 			}
 		}
 	}

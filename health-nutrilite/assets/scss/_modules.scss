@@ -14,7 +14,7 @@ $path: '../images';
             width: rem(20);
             height: rem(20);
         }
-        
+
         @include rwd-min(991.98px) {
             flex: 0 0 rem(24);
             width: rem(24);
@@ -30,7 +30,7 @@ $path: '../images';
             width: rem(16);
             height: rem(16);
         }
-        
+
         @include rwd-min(991.98px) {
             flex: 0 0 rem(30);
             width: rem(30);
@@ -50,7 +50,7 @@ $path: '../images';
         margin-top: rem(8);
         margin-bottom: rem(8);
     }
-    
+
     @include rwd-min(991.98px) {
         margin-top: rem(16);
         margin-bottom: rem(16);
@@ -100,7 +100,7 @@ $path: '../images';
     @include rwd-min(320px) {
         row-gap: rem(10);
     }
-    
+
     @include rwd-min(768px) {
         column-gap: rem(24);
         row-gap: rem(26);
@@ -111,12 +111,12 @@ $path: '../images';
         @include rwd-min(320px) {
             row-gap: rem(10);
         }
-        
+
         @include rwd-min(768px) {
             column-gap: rem(24);
             row-gap: rem(26);
         }
-        
+
 
         .gridWrap__item {
 
@@ -124,7 +124,7 @@ $path: '../images';
                 width: 100%;
                 flex: 0 0 100%;
             }
-            
+
             @include rwd-min(768px) {
                 width: calc((100% - rem(24)) / 2);
                 flex: 0 0 calc((100% - rem(24)) / 2);
@@ -136,7 +136,7 @@ $path: '../images';
         @include rwd-min(320px) {
             gap: rem(8);
         }
-        
+
         @include rwd-min(768px) {
             gap: rem(16);
         }
@@ -147,7 +147,7 @@ $path: '../images';
                 width: 100%;
                 flex: 0 0 100%;
             }
-            
+
             @include rwd-min(768px) {
                 width: calc((100% - rem(16)) / 2);
                 flex: 0 0 calc((100% - rem(16)) / 2);
@@ -156,11 +156,11 @@ $path: '../images';
     }
 
     &--defect {
-        
+
         @include rwd-min(320px) {
             gap: rem(8);
         }
-        
+
         @include rwd-min(768px) {
             gap: rem(16);
         }
@@ -171,12 +171,26 @@ $path: '../images';
                 width: calc((100% - rem(8)) / 2);
                 flex: 0 0 calc((100% - rem(8)) / 2);
             }
-            
+
             @include rwd-min(768px) {
                 width: calc((100% - rem(32)) / 3);
                 flex: 0 0 calc((100% - rem(32)) / 3);
             }
-            
+
         }
+    }
+}
+
+.tabBlock {
+    .tabBtn {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.accordion-button {
+    &:focus {
+        box-shadow: none;
+        border: none;
     }
 }

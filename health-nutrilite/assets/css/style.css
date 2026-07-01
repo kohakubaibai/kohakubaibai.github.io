@@ -596,6 +596,17 @@ p {
   }
 }
 
+.tabBlock .tabBtn {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
 /* ==================================================
    BS內建
 ================================================== */
@@ -652,7 +663,6 @@ body .scrollArea.anchorOffset {
   transition: background-color 0.3s ease-in;
 }
 .navbar .wrapper {
-  width: 1200px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -662,6 +672,17 @@ body .scrollArea.anchorOffset {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media (min-width: 320px) {
+  .navbar .wrapper {
+    width: 100%;
+    min-height: auto;
+  }
+}
+@media (min-width: 991.98px) {
+  .navbar .wrapper {
+    width: 1200px;
+  }
 }
 @media (min-width: 320px) {
   .navbar {
@@ -701,7 +722,7 @@ body .scrollArea.anchorOffset {
 }
 @media (min-width: 991.98px) {
   .navbar .logoImg--ch {
-    width: 4.96875rem;
+    width: 5rem;
   }
 }
 .navbar .logoImg--feat {
@@ -712,6 +733,17 @@ body .scrollArea.anchorOffset {
     width: 9.875rem;
   }
 }
+.navbar .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .navbar .nav-item.nav-item-share {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -720,24 +752,21 @@ body .scrollArea.anchorOffset {
       flex-wrap: nowrap;
 }
 .navbar .nav-item.nav-item-share .nav-link {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 .navbar .nav-item.nav-item-share .nav-link:first-child {
   margin-left: 0;
 }
 .navbar .nav-link {
   font-size: 1.125rem;
-  line-height: 1.4444444444;
-  font-weight: 500;
+  line-height: 1.2222222222;
+  font-weight: 400;
   display: block;
   color: #222222;
   text-decoration: none;
 }
-.navbar .nav-link.is-active {
-  color: #064BBA;
-}
-.navbar .nav-link:hover {
-  color: #064BBA;
+.navbar .nav-link.is-active, .navbar .nav-link:hover {
+  color: #388EFF;
 }
 @media not screen and (hover: hover) {
   .navbar .nav-link:hover {
@@ -747,16 +776,18 @@ body .scrollArea.anchorOffset {
 .navbar .nav-link img {
   width: 2rem;
 }
-.navbar-expand-lg .navbar-nav .nav-item {
-  margin-top: 1.25rem;
+@media (min-width: 320px) {
+  .navbar-expand-lg .navbar-nav .nav-item {
+    margin-top: 1.5rem;
+  }
+  .navbar-expand-lg .navbar-nav .nav-item:first-child {
+    margin-top: 0;
+  }
 }
-.navbar-expand-lg .navbar-nav .nav-item:first-child {
-  margin-top: 0;
-}
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
   .navbar-expand-lg .navbar-nav .nav-item {
     margin-top: 0;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
   }
   .navbar-expand-lg .navbar-nav .nav-item:first-child {
     margin-left: 0;
@@ -765,10 +796,10 @@ body .scrollArea.anchorOffset {
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 0;
 }
-.navbar .navbar-collapse {
-  margin-top: 1.25rem;
-}
 @media (min-width: 320px) {
+  .navbar .navbar-collapse {
+    margin-top: 3rem;
+  }
   .navbar .navbar-collapse.show {
     -webkit-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
@@ -787,7 +818,18 @@ body .scrollArea.anchorOffset {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
 }
 .navbar.is-opened {
-  background-color: #fff;
+  background-color: #EF8200;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.navbar.is-opened .logos {
+  width: 0;
+  overflow: hidden;
+}
+.navbar.is-opened .nav-link {
+  color: #fff;
 }
 
 /* ==================================================
@@ -823,7 +865,7 @@ body .scrollArea.anchorOffset {
 }
 .navbarX i {
   display: block;
-  background: #434141;
+  background-color: #434141;
   border-radius: 0.1875rem;
   width: 1.5rem;
   height: 0.125rem;
@@ -846,6 +888,9 @@ body .scrollArea.anchorOffset {
   -webkit-animation: outBtm 0.8s backwards;
           animation: outBtm 0.8s backwards; /*若要取消進場動畫*/
   animation-direction: reverse;
+}
+.navbarX.active i {
+  background-color: #fff;
 }
 .navbarX.active i:nth-child(1) {
   -webkit-animation: inT 0.8s forwards;
@@ -1303,11 +1348,20 @@ footer p {
   }
 }
 .hero {
-  padding: 8rem 0 3.875rem;
   position: relative;
   background: linear-gradient(107.35deg, #F6F8FD 0%, #E0E8ED 100%);
   width: 100dvw;
   overflow: hidden;
+}
+@media (min-width: 320px) {
+  .hero {
+    padding: 2.75rem 0 3.875rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero {
+    padding: 8rem 0 3.875rem;
+  }
 }
 .hero .heroBg {
   position: absolute;
@@ -1478,7 +1532,7 @@ footer p {
             flex: 0 0 22.5rem;
   }
 }
-@media (min-width: 991.98) {
+@media (min-width: 991.98px) {
   .hero .heroBox__image {
     margin-top: 0;
     max-width: 34.75rem;
@@ -1598,6 +1652,7 @@ footer p {
   opacity: 0.8;
 }
 .section .section__title {
+  margin: 0;
   position: relative;
   z-index: 5;
   font-weight: 700;
@@ -1669,6 +1724,14 @@ footer p {
   color: #EF8200;
   text-decoration: underline;
 }
+@media not screen and (hover: hover) {
+  .section .section__content > .paragraph p a:hover {
+    color: #EF8200;
+  }
+}
+.section .section__content > .paragraph p a:hover {
+  color: #388EFF;
+}
 .section .section__content + .section__content {
   margin-top: 3rem;
 }
@@ -1732,13 +1795,13 @@ footer p {
 .section--effects .section__content .funcBox--shortcoming {
   max-width: 50rem;
 }
-.section--groups {
+.section--breakfast {
   background-color: #F3F6FB;
 }
-.section--groups .section__content .funcBox--breakfast {
+.section--breakfast .section__content .funcBox--breakfast {
   max-width: 50rem;
 }
-.section--groups .section__content .funcBox--improvement {
+.section--breakfast .section__content .funcBox--improvement {
   max-width: 36.875rem;
   margin-top: 0;
   padding-left: 0;
@@ -1747,8 +1810,24 @@ footer p {
 .section--strategy {
   background-color: #ebf4ff;
 }
+.section--strategy .section__content .funcBox--strategy {
+  max-width: 50rem;
+}
 .section--faq {
   background-color: #FFFFFF;
+}
+.section--faq .section__title:before {
+  content: "";
+  margin: 0 auto 0.1875rem;
+  display: block;
+  width: 5.375rem;
+  height: 3.375rem;
+  background-image: url("../images/deco-title_faq.svg");
+  background-size: 5.375rem 3.375rem;
+  background-repeat: no-repeat;
+}
+.section--faq .section__content .funcBox--faqAccordion {
+  max-width: 50rem;
 }
 .section--article {
   padding: 3rem 0;
@@ -2830,6 +2909,167 @@ footer p {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.7;
+}
+
+.strategyTab .nav--strategy > .nav-item {
+  width: 25%;
+}
+.strategyTab .nav--strategy > .nav-item:first-child .tabBtn {
+  border-top-left-radius: 1rem;
+}
+.strategyTab .nav--strategy > .nav-item:last-child .tabBtn {
+  border-top-right-radius: 1rem;
+}
+.strategyTab .tabBtn {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #FFD19A;
+}
+.strategyTab .tabBtn .tabBtn__image {
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+@media (min-width: 320px) {
+  .strategyTab .tabBtn .tabBtn__image {
+    width: 3.0625rem;
+  }
+}
+@media (min-width: 768px) {
+  .strategyTab .tabBtn .tabBtn__image {
+    width: 3.4375rem;
+  }
+}
+.strategyTab .tabBtn .tabBtn__text {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #222222;
+  line-height: 1.2;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.strategyTab .tabBtn.active {
+  background-color: #EF8200;
+}
+.strategyTab .tabBtn.active .tabBtn__text {
+  font-weight: 700;
+  color: #fff;
+}
+@media (min-width: 320px) {
+  .strategyTab .tabBtn.active .tabBtn__image {
+    -webkit-transform: scale(1.2448);
+    transform: scale(1.2448);
+  }
+}
+@media (min-width: 768px) {
+  .strategyTab .tabBtn.active .tabBtn__image {
+    -webkit-transform: scale(1.6666);
+    transform: scale(1.6666);
+  }
+}
+.strategyTab .tabBtn.active .tabBtn__image {
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.strategyBox {
+  padding: 2.5rem 1.5rem;
+  background-color: #fff;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.strategyBox__title {
+  color: #064BBA;
+  font-weight: 700;
+  line-height: 1.45;
+}
+@media (min-width: 320px) {
+  .strategyBox__title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .strategyBox__title {
+    font-size: 1.75rem;
+  }
+}
+.strategyBox__content {
+  margin-top: 1.25rem;
+  border-left: 0.25rem solid #EF8200;
+}
+.strategyBox__content p {
+  color: #222222;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+@media (min-width: 320px) {
+  .strategyBox__content {
+    padding-left: 0.875rem;
+  }
+}
+@media (min-width: 768px) {
+  .strategyBox__content {
+    padding-left: 1.375rem;
+  }
+}
+.strategyBox__paragraph {
+  margin-top: 1.25rem;
+}
+.strategyBox__paragraph p {
+  margin: 0;
+  color: #616161;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+.strategyBox__paragraph p .highlight {
+  color: #222222;
+  font-weight: 700;
+}
+
+.faqAccordion .accordion-item {
+  border: none;
+  border-radius: 0;
+  border-bottom: 0.0625rem solid #E0E0E0;
+}
+.faqAccordion .accordion-button {
+  background-color: transparent;
+  color: #064BBA;
+  font-size: 1.375rem;
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 1.25rem 1rem;
+}
+.faqAccordion .accordion-button:after {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-size: 1.125rem;
+  background-image: url("../images/icon-accordion_inactive.svg");
+}
+.faqAccordion .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: #064BBA;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.faqAccordion .accordion-button:not(.collapsed):after {
+  background-image: url("../images/icon-accordion_active.svg");
+}
+.faqAccordion .accordion-body p {
+  color: #222222;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+}
+.faqAccordion .accordion-body p:last-child {
+  margin-bottom: 0;
+}
+.faqAccordion .accordion-body p .highlight {
+  font-weight: 500;
 }
 
 .references .references__item {

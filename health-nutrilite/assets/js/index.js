@@ -355,15 +355,37 @@ $(function () {
 		}, 250);
 	});
 
-	$(document).on('click', '.js-collapse-switch', function(){
-        var $this = $(this);
-		var $target = $this.next('.js-collapse-content');
-		var $group = $this.closest('.orgList__item');
+	// ==================== Equalize Strategy Tab Pane Heights ====================
+	function equalizeStrategyTabPanes() {
+		var $tabContent = $('.tabContent--strategy');
+		if (!$tabContent.length) return;
 
-		$('.orgList__item').not($group).find('.js-collapse-switch').removeClass('is-open');
-		$('.orgList__item').not($group).find('.js-collapse-content').slideUp();
+		var $panes = $tabContent.find('.strategyBox');
+		var containerWidth = $tabContent.width();
 
-		$this.toggleClass('is-open');
-		$target.slideToggle();
-    });
+		$panes.css('min-height', '');
+
+		var maxHeight = 0;
+		$panes.each(function () {
+			var $pane = $(this);
+			var wasHidden = !$pane.hasClass('active');
+			if (wasHidden) {
+				$pane.css({ display: 'block', visibility: 'hidden', position: 'absolute', width: containerWidth + 'px' });
+			}
+			maxHeight = Math.max(maxHeight, $pane.outerHeight());
+			if (wasHidden) {
+				$pane.css({ display: '', visibility: '', position: '', width: '' });
+			}
+		});
+
+		$panes.css('min-height', maxHeight + 'px');
+	}
+
+	equalizeStrategyTabPanes();
+
+	var strategyTabResizeTimer;
+	$(window).on('resize', function () {
+		clearTimeout(strategyTabResizeTimer);
+		strategyTabResizeTimer = setTimeout(equalizeStrategyTabPanes, 250);
+	});
 });
