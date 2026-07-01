@@ -403,6 +403,7 @@ main {
 				a {
 					color: $tertiary-dark;
 					text-decoration: underline;
+					@include transition(all, .3s, ease-in);
 
 					@include rwd-not-hover {
 						&:hover {
@@ -698,6 +699,21 @@ main {
 			font-weight: 400;
 			line-height: 1.7;
 			text-align: justify;
+
+			a {
+				color: $tertiary-dark;
+				@include transition(all, .3s, ease-in);
+
+				@include rwd-not-hover {
+					&:hover {
+						color: $tertiary-dark;
+					}
+				}
+
+				&:hover {
+					color: $secondary;
+				}
+			}
 		}
 	}
 }
@@ -1263,8 +1279,16 @@ main {
 		}
 
 		.foodName {
-			&__icon {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			gap: rem(4);
 
+			&__icon {
+				display: block;
+				width: rem(34);
+				flex: 0 0 rem(34);
 			}
 
 			&__text {
@@ -1532,6 +1556,15 @@ main {
 		right: 0;
 		top: rem(-30);
 		right: rem(-3);
+
+		@include rwd-min(320px) {
+			width: rem(105);
+			height: rem(81);
+		}
+		@include rwd-min(768px) {
+			width: rem(110);
+			height: rem(85);
+		}
 	}
 
 	&__head {

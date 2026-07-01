@@ -1727,6 +1727,8 @@ footer p {
 .section .section__content > .paragraph p a {
   color: #EF8200;
   text-decoration: underline;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 @media not screen and (hover: hover) {
   .section .section__content > .paragraph p a:hover {
@@ -1964,6 +1966,19 @@ footer p {
   font-weight: 400;
   line-height: 1.7;
   text-align: justify;
+}
+.funcBox__content .remark a {
+  color: #EF8200;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+@media not screen and (hover: hover) {
+  .funcBox__content .remark a:hover {
+    color: #EF8200;
+  }
+}
+.funcBox__content .remark a:hover {
+  color: #388EFF;
 }
 
 .functionItem__topic {
@@ -2525,6 +2540,28 @@ footer p {
   font-weight: 400;
   line-height: 1.7;
 }
+.rankingTable .foodList .foodName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+.rankingTable .foodList .foodName__icon {
+  display: block;
+  width: 2.125rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.125rem;
+          flex: 0 0 2.125rem;
+}
 .rankingTable .foodList .foodName__text {
   font-size: 1.125rem;
 }
@@ -2770,6 +2807,18 @@ footer p {
   right: 0;
   top: -1.875rem;
   right: -0.1875rem;
+}
+@media (min-width: 320px) {
+  .breakfastBox .breakfastBox__deco {
+    width: 6.5625rem;
+    height: 5.0625rem;
+  }
+}
+@media (min-width: 768px) {
+  .breakfastBox .breakfastBox__deco {
+    width: 6.875rem;
+    height: 5.3125rem;
+  }
 }
 .breakfastBox__head {
   padding-left: 0.625rem;
