@@ -91,11 +91,11 @@ main {
 	overflow: hidden;
 
 	@include rwd-min(320px) {
-		padding: rem(44) 0 rem(62)
+		padding: rem(120) 0 rem(62);
 
 	}
 	@include rwd-min(991.98px) {
-		padding: rem(128) 0 rem(62)
+		padding: rem(128) 0 rem(62);
 	}
 
 	.heroBg {
