@@ -18,28 +18,6 @@ $path: '../images';
    動畫 animation
 ================================================== */
 
-
-/* ==================================================
-   Container
-================================================== */
-.container {
-	@include rwd-min(320px) {
-		padding: 0 rem(20);
-	}
-	@include rwd-min(1200px) {
-		max-width: 1000px;
-		padding: 0;
-	}
-}
-
-/* ==================================================
-   Sections
-================================================== */
-
-main {
-	// overflow: hidden;
-}
-
 @keyframes armFloat {
 	0%, 100% { transform: translateY(0); }
 	50%       { transform: translateY(-18px); }
@@ -61,7 +39,7 @@ main {
     to   { width: 593px; }
 }
 
-@keyframes breakfast {
+@keyframes shake5deg {
 	0% {
 		-webkit-transform-origin: center;
 		transform-origin: center;
@@ -82,6 +60,27 @@ main {
 		-webkit-transform: rotate(-5deg);
 		transform: rotate(-5deg)
 	}
+}
+
+/* ==================================================
+   Container
+================================================== */
+.container {
+	@include rwd-min(320px) {
+		padding: 0 rem(20);
+	}
+	@include rwd-min(1200px) {
+		max-width: 1000px;
+		padding: 0;
+	}
+}
+
+/* ==================================================
+   Sections
+================================================== */
+
+main {
+	// overflow: hidden;
 }
 
 .hero {
@@ -546,8 +545,52 @@ main {
 		}
 
 		.section__content {
+
 			.funcBox--faqAccordion {
+				position: relative;
 				max-width: rem(800);
+
+				.funcBox__content {
+					position: relative;
+				}
+
+				.decoItem {
+
+					&--tr {
+						display: block;
+						background-image: url('#{$path}/deco-faq_tr.png');
+						animation: shake5deg 1.5s step-end infinite alternate;
+
+
+						@include rwd-min(320px) {
+							right: rem(-61);
+							top: rem(-61);
+							width: rem(121);
+							height: rem(99);
+						}
+						@include rwd-min(991.98px) {
+							right: rem(-304);
+							top: rem(-38);
+							width: rem(299);
+							height: rem(245);
+						}
+					}
+
+					&--ml {
+						background-image: url('#{$path}/deco-faq_ml.png');				animation: shake5deg 1.2s step-end infinite alternate;
+
+						@include rwd-min(320px) {
+							display: none;
+						}
+						@include rwd-min(991.98px) {
+							display: block;
+							left: rem(-240);
+							top: rem(201);
+							width: rem(175);
+							height: rem(173);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -642,12 +685,40 @@ main {
 	}
 
 	&--reference {
-		padding: rem(40) 0;
 		background-color: #F3F6FB;
+
+		@include rwd-min(320px) {
+			padding: rem(40) 0 rem(80);
+		}
+		@include rwd-min(768px) {
+			padding: rem(40) 0;
+		}
 
 		.wrapper {
 			max-width: rem(590);
 			margin: 0 auto;
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: rem(28);
+				left: rem(-268);
+				z-index: 5;
+
+				@include rwd-min(320px) {
+					display: none;
+				}
+				@include rwd-min(768px) {
+					display: block;
+					width: rem(186);
+					height: rem(169);
+					background-image: url('#{$path}/deco-reference.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+					animation: shake5deg 0.9s step-end infinite alternate;
+				}
+			}
 		}
 
 		.section__title {
@@ -661,10 +732,89 @@ main {
 	}
 }
 
+.middleDeco {
+	.decoWrap {
+		position: absolute;
+		overflow: hidden;
+		z-index: 5;
+	}
+
+	.decoItem {
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		animation: shake5deg 0.9s step-end infinite alternate;
+	}
+
+	&--faq {
+		.decoWrap {
+			display: block;
+			top: 50%;
+
+			@include rwd-min(320px) {
+				left: rem(-44);
+				-webkit-transform: scaleX(-1) translateY(-50%);
+				transform: scaleX(-1) translateY(-50%);
+			}
+			@include rwd-min(991.98px) {
+				left: auto;
+				right: rem(-34);
+				-webkit-transform: scaleX(1) translateY(-50%);
+				transform: scaleX(1) translateY(-50%);
+			}
+		}
+
+		.decoItem {
+			background-image: url('#{$path}/deco-faq_br.png');
+
+			@include rwd-min(320px) {
+				width: rem(132);
+				height: rem(98);
+			}
+			@include rwd-min(991.98px) {
+				width: rem(278);
+				height: rem(206);
+			}
+		}
+	}
+
+	&--reference {
+		.decoWrap {
+
+			@include rwd-min(320px) {
+				bottom: rem(-18);
+				right: rem(0);
+			}
+
+			@include rwd-min(768px) {
+				display: none;
+			}
+		}
+
+		.decoItem {
+			background-image: url('#{$path}/deco-reference.png');
+
+			@include rwd-min(320px) {
+				width: rem(122);
+				height: rem(111);
+			}
+		}
+	}
+}
+
 .funcBox {
 	padding: rem(24) rem(4) 0;
 	margin-left: auto;
 	margin-right: auto;
+
+	@include rwd-min(320px) {
+		padding: rem(24) 0 0;
+	}
+
+	@include rwd-min(768px) {
+		padding: rem(24) rem(4) 0;
+	}
 
 	&__title {
 		text-align: center;
@@ -744,6 +894,19 @@ main {
 			background-color: $white;
 			border: rem(2) solid $secondary;
 			overflow: hidden;
+			padding: rem(12) 0 rem(11);
+
+			img {
+				height: auto;
+				margin: 0 auto;
+
+				@include rwd-min(320px) {
+					width: rem(243);
+				}
+				@include rwd-min(768px) {
+					width: rem(270);
+				}
+			}
 		}
 	}
 
@@ -1245,6 +1408,9 @@ main {
 }
 
 .rankingTable {
+	border-radius: rem(16);
+	overflow: hidden;
+
 	&__title {
 		padding: rem(16) rem(24) rem(8);
 		line-height: 1.7;
@@ -1309,12 +1475,16 @@ main {
 	}
 
 	&--animal {
+		border: rem(2) solid $primary;
+
 		.rankingTable__title {
 			background-color: $primary;
 		}
 	}
 
 	&--plant {
+		border: rem(2) solid $secondary;
+
 		.rankingTable__title {
 			background-color: $secondary;
 		}
@@ -1323,10 +1493,69 @@ main {
 
 .tipList {
 	.tipList__item {
+		position: relative;
 		margin-bottom: rem(24);
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			z-index: 5;
+		}
+
+		&--egg {
+			&:before {
+				background-image: url('#{$path}/deco-tips_egg.png');
+				animation: shake5deg 1.2s step-end infinite alternate;
+			}
+
+			@include rwd-min(320px) {
+				&:before {
+					width: rem(128);
+					height: rem(114);
+					top: rem(-35);
+					right: rem(-27);
+				}
+			}
+			@include rwd-min(768px) {
+				&:before {
+					width: rem(196);
+					height: rem(175);
+					top: rem(-83);
+					right: rem(-70);
+				}
+			}
+		}
+
+		&--judge {
+			&:before {
+				background-image: url('#{$path}/deco-tips_edamame.png');
+				animation: shake5deg 1s step-end infinite alternate;
+			}
+
+			@include rwd-min(320px) {
+				&:before {
+					width: rem(161);
+					height: rem(133);
+					bottom: rem(-37);
+					right: rem(-32);
+				}
+			}
+			@include rwd-min(768px) {
+				&:before {
+					width: rem(183);
+					height: rem(151);
+					bottom: rem(-72);
+					right: rem(-65);
+				}
+			}
 		}
 	}
 }
@@ -1429,6 +1658,11 @@ main {
 		}
 
 		.media {
+			position: relative;
+			width: rem(100);
+			height: rem(100);
+			margin-left: auto;
+			margin-right: auto;
 			margin-bottom: rem(8);
 		}
 
@@ -1501,37 +1735,37 @@ main {
 
 		&:nth-child(1) {
 			.breakfastBox__deco {
-				animation: breakfast 1.2s step-end infinite alternate;
+				animation: shake5deg 1.2s step-end infinite alternate;
 			}
 		}
 
 		&:nth-child(2) {
 			.breakfastBox__deco {
-				animation: breakfast 1s step-end infinite alternate;
+				animation: shake5deg 1s step-end infinite alternate;
 			}
 		}
 
 		&:nth-child(3) {
 			.breakfastBox__deco {
-				animation: breakfast 1.3s step-end infinite alternate;
+				animation: shake5deg 1.3s step-end infinite alternate;
 			}
 		}
 
 		&:nth-child(4) {
 			.breakfastBox__deco {
-				animation: breakfast 0.9s step-end infinite alternate;
+				animation: shake5deg 0.9s step-end infinite alternate;
 			}
 		}
 
 		&:nth-child(5) {
 			.breakfastBox__deco {
-				animation: breakfast 1.1s step-end infinite alternate;
+				animation: shake5deg 1.1s step-end infinite alternate;
 			}
 		}
 
 		&:nth-child(6) {
 			.breakfastBox__deco {
-				animation: breakfast 0.8s step-end infinite alternate;
+				animation: shake5deg 0.8s step-end infinite alternate;
 			}
 		}
 	}
@@ -1902,6 +2136,7 @@ main {
 			font-weight: 400;
 			line-height: 1.6;
 			text-decoration: underline;
+			word-wrap: break-word;
 
 			&:hover {
 				color: #FFD19A;

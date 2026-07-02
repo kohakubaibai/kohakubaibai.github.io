@@ -20,10 +20,10 @@ window.addEventListener('load', () => {
 
 // 蛋白質計算機
 const GROUPS = [
-  { key: 'general',  label: '一般成人',    note: '每公斤 含1.1g蛋白質', coef: [1.1, 1.1] },
-  { key: 'senior',   label: '銀髮族',      note: '每公斤 含1.2g蛋白質', coef: [1.2, 1.2] },
-  { key: 'athlete',  label: '運動/增肌族', note: '每公斤 含1.3~1.6g 蛋白質', coef: [1.3, 1.6] },
-  { key: 'maternal', label: '孕哺期女性',  note: '每公斤 含1.1g蛋白質', coef: [1.1, 1.1] },
+  { key: 'general',  label: '一般成人',    note: '每公斤 需攝取1.1g蛋白質', coef: [1.1, 1.1] },
+  { key: 'senior',   label: '銀髮族',      note: '每公斤 需攝取1.2g蛋白質', coef: [1.2, 1.2] },
+  { key: 'athlete',  label: '運動/增肌族', note: '每公斤 需攝取1.3~1.6g 蛋白質', coef: [1.3, 1.6] },
+  { key: 'maternal', label: '孕哺期女性',  note: '每公斤 需攝取1.1g蛋白質', coef: [1.1, 1.1] },
 ];
 
 const slider      = document.getElementById('weightSlider');
@@ -361,6 +361,12 @@ $(function () {
 		if (!$tabContent.length) return;
 
 		var $panes = $tabContent.find('.strategyBox');
+
+		if ($(window).width() < 768) {
+			$panes.css('min-height', '');
+			return;
+		}
+
 		var containerWidth = $tabContent.width();
 
 		$panes.css('min-height', '');
@@ -384,6 +390,7 @@ $(function () {
 	equalizeStrategyTabPanes();
 
 	var strategyTabResizeTimer;
+
 	$(window).on('resize', function () {
 		clearTimeout(strategyTabResizeTimer);
 		strategyTabResizeTimer = setTimeout(equalizeStrategyTabPanes, 250);

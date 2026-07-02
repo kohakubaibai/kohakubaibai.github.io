@@ -611,6 +611,13 @@ p {
   border: none;
 }
 
+.decoItem {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 /* ==================================================
    BS內建
 ================================================== */
@@ -1211,24 +1218,6 @@ footer p {
 /* ==================================================
    動畫 animation
 ================================================== */
-/* ==================================================
-   Container
-================================================== */
-@media (min-width: 320px) {
-  .container {
-    padding: 0 1.25rem;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1000px;
-    padding: 0;
-  }
-}
-
-/* ==================================================
-   Sections
-================================================== */
 @-webkit-keyframes armFloat {
   0%, 100% {
     -webkit-transform: translateY(0);
@@ -1311,7 +1300,7 @@ footer p {
     width: 593px;
   }
 }
-@-webkit-keyframes breakfast {
+@-webkit-keyframes shake5deg {
   0% {
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -1331,7 +1320,7 @@ footer p {
     transform: rotate(-5deg);
   }
 }
-@keyframes breakfast {
+@keyframes shake5deg {
   0% {
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -1351,6 +1340,24 @@ footer p {
     transform: rotate(-5deg);
   }
 }
+/* ==================================================
+   Container
+================================================== */
+@media (min-width: 320px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+    padding: 0;
+  }
+}
+
+/* ==================================================
+   Sections
+================================================== */
 .hero {
   position: relative;
   background: linear-gradient(107.35deg, #F6F8FD 0%, #E0E8ED 100%);
@@ -1833,7 +1840,52 @@ footer p {
   background-repeat: no-repeat;
 }
 .section--faq .section__content .funcBox--faqAccordion {
+  position: relative;
   max-width: 50rem;
+}
+.section--faq .section__content .funcBox--faqAccordion .funcBox__content {
+  position: relative;
+}
+.section--faq .section__content .funcBox--faqAccordion .decoItem--tr {
+  display: block;
+  background-image: url("../images/deco-faq_tr.png");
+  -webkit-animation: shake5deg 1.5s step-end infinite alternate;
+          animation: shake5deg 1.5s step-end infinite alternate;
+}
+@media (min-width: 320px) {
+  .section--faq .section__content .funcBox--faqAccordion .decoItem--tr {
+    right: -3.8125rem;
+    top: -3.8125rem;
+    width: 7.5625rem;
+    height: 6.1875rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .section--faq .section__content .funcBox--faqAccordion .decoItem--tr {
+    right: -19rem;
+    top: -2.375rem;
+    width: 18.6875rem;
+    height: 15.3125rem;
+  }
+}
+.section--faq .section__content .funcBox--faqAccordion .decoItem--ml {
+  background-image: url("../images/deco-faq_ml.png");
+  -webkit-animation: shake5deg 1.2s step-end infinite alternate;
+          animation: shake5deg 1.2s step-end infinite alternate;
+}
+@media (min-width: 320px) {
+  .section--faq .section__content .funcBox--faqAccordion .decoItem--ml {
+    display: none;
+  }
+}
+@media (min-width: 991.98px) {
+  .section--faq .section__content .funcBox--faqAccordion .decoItem--ml {
+    display: block;
+    left: -15rem;
+    top: 12.5625rem;
+    width: 10.9375rem;
+    height: 10.8125rem;
+  }
 }
 .section--article {
   padding: 3rem 0;
@@ -1913,12 +1965,46 @@ footer p {
   color: #1354BD;
 }
 .section--reference {
-  padding: 2.5rem 0;
   background-color: #F3F6FB;
+}
+@media (min-width: 320px) {
+  .section--reference {
+    padding: 2.5rem 0 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .section--reference {
+    padding: 2.5rem 0;
+  }
 }
 .section--reference .wrapper {
   max-width: 36.875rem;
   margin: 0 auto;
+}
+.section--reference .wrapper:before {
+  content: "";
+  position: absolute;
+  bottom: 1.75rem;
+  left: -16.75rem;
+  z-index: 5;
+}
+@media (min-width: 320px) {
+  .section--reference .wrapper:before {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .section--reference .wrapper:before {
+    display: block;
+    width: 11.625rem;
+    height: 10.5625rem;
+    background-image: url("../images/deco-reference.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    -webkit-animation: shake5deg 0.9s step-end infinite alternate;
+            animation: shake5deg 0.9s step-end infinite alternate;
+  }
 }
 .section--reference .section__title {
   text-align: left;
@@ -1929,10 +2015,88 @@ footer p {
   margin-bottom: 0.625rem;
 }
 
+.middleDeco .decoWrap {
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+.middleDeco .decoItem {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: shake5deg 0.9s step-end infinite alternate;
+          animation: shake5deg 0.9s step-end infinite alternate;
+}
+.middleDeco--faq .decoWrap {
+  display: block;
+  top: 50%;
+}
+@media (min-width: 320px) {
+  .middleDeco--faq .decoWrap {
+    left: -2.75rem;
+    -webkit-transform: scaleX(-1) translateY(-50%);
+    transform: scaleX(-1) translateY(-50%);
+  }
+}
+@media (min-width: 991.98px) {
+  .middleDeco--faq .decoWrap {
+    left: auto;
+    right: -2.125rem;
+    -webkit-transform: scaleX(1) translateY(-50%);
+    transform: scaleX(1) translateY(-50%);
+  }
+}
+.middleDeco--faq .decoItem {
+  background-image: url("../images/deco-faq_br.png");
+}
+@media (min-width: 320px) {
+  .middleDeco--faq .decoItem {
+    width: 8.25rem;
+    height: 6.125rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .middleDeco--faq .decoItem {
+    width: 17.375rem;
+    height: 12.875rem;
+  }
+}
+@media (min-width: 320px) {
+  .middleDeco--reference .decoWrap {
+    bottom: -1.125rem;
+    right: 0rem;
+  }
+}
+@media (min-width: 768px) {
+  .middleDeco--reference .decoWrap {
+    display: none;
+  }
+}
+.middleDeco--reference .decoItem {
+  background-image: url("../images/deco-reference.png");
+}
+@media (min-width: 320px) {
+  .middleDeco--reference .decoItem {
+    width: 7.625rem;
+    height: 6.9375rem;
+  }
+}
+
 .funcBox {
   padding: 1.5rem 0.25rem 0;
   margin-left: auto;
   margin-right: auto;
+}
+@media (min-width: 320px) {
+  .funcBox {
+    padding: 1.5rem 0 0;
+  }
+}
+@media (min-width: 768px) {
+  .funcBox {
+    padding: 1.5rem 0.25rem 0;
+  }
 }
 .funcBox__title {
   text-align: center;
@@ -2005,6 +2169,21 @@ footer p {
   background-color: #fff;
   border: 0.125rem solid #388EFF;
   overflow: hidden;
+  padding: 0.75rem 0 0.6875rem;
+}
+.functionItem__topic .media img {
+  height: auto;
+  margin: 0 auto;
+}
+@media (min-width: 320px) {
+  .functionItem__topic .media img {
+    width: 15.1875rem;
+  }
+}
+@media (min-width: 768px) {
+  .functionItem__topic .media img {
+    width: 16.875rem;
+  }
 }
 .functionItem__desc {
   margin-top: 0.1875rem;
@@ -2508,6 +2687,10 @@ footer p {
   }
 }
 
+.rankingTable {
+  border-radius: 1rem;
+  overflow: hidden;
+}
 .rankingTable__title {
   padding: 1rem 1.5rem 0.5rem;
   line-height: 1.7;
@@ -2574,18 +2757,76 @@ footer p {
 .rankingTable .foodList .foodAmount__unit {
   font-size: 1.125rem;
 }
+.rankingTable--animal {
+  border: 0.125rem solid #1354BD;
+}
 .rankingTable--animal .rankingTable__title {
   background-color: #1354BD;
+}
+.rankingTable--plant {
+  border: 0.125rem solid #388EFF;
 }
 .rankingTable--plant .rankingTable__title {
   background-color: #388EFF;
 }
 
 .tipList .tipList__item {
+  position: relative;
   margin-bottom: 1.5rem;
 }
 .tipList .tipList__item:last-child {
   margin-bottom: 0;
+}
+.tipList .tipList__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 5;
+}
+.tipList .tipList__item--egg:before {
+  background-image: url("../images/deco-tips_egg.png");
+  -webkit-animation: shake5deg 1.2s step-end infinite alternate;
+          animation: shake5deg 1.2s step-end infinite alternate;
+}
+@media (min-width: 320px) {
+  .tipList .tipList__item--egg:before {
+    width: 8rem;
+    height: 7.125rem;
+    top: -2.1875rem;
+    right: -1.6875rem;
+  }
+}
+@media (min-width: 768px) {
+  .tipList .tipList__item--egg:before {
+    width: 12.25rem;
+    height: 10.9375rem;
+    top: -5.1875rem;
+    right: -4.375rem;
+  }
+}
+.tipList .tipList__item--judge:before {
+  background-image: url("../images/deco-tips_edamame.png");
+  -webkit-animation: shake5deg 1s step-end infinite alternate;
+          animation: shake5deg 1s step-end infinite alternate;
+}
+@media (min-width: 320px) {
+  .tipList .tipList__item--judge:before {
+    width: 10.0625rem;
+    height: 8.3125rem;
+    bottom: -2.3125rem;
+    right: -2rem;
+  }
+}
+@media (min-width: 768px) {
+  .tipList .tipList__item--judge:before {
+    width: 11.4375rem;
+    height: 9.4375rem;
+    bottom: -4.5rem;
+    right: -4.0625rem;
+  }
 }
 
 .tipBox {
@@ -2685,6 +2926,11 @@ footer p {
   }
 }
 .defectCard .defectCard__front .media {
+  position: relative;
+  width: 6.25rem;
+  height: 6.25rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 0.5rem;
 }
 .defectCard .defectCard__front .topic {
@@ -2762,28 +3008,28 @@ footer p {
   }
 }
 .breakfast__item:nth-child(1) .breakfastBox__deco {
-  -webkit-animation: breakfast 1.2s step-end infinite alternate;
-          animation: breakfast 1.2s step-end infinite alternate;
+  -webkit-animation: shake5deg 1.2s step-end infinite alternate;
+          animation: shake5deg 1.2s step-end infinite alternate;
 }
 .breakfast__item:nth-child(2) .breakfastBox__deco {
-  -webkit-animation: breakfast 1s step-end infinite alternate;
-          animation: breakfast 1s step-end infinite alternate;
+  -webkit-animation: shake5deg 1s step-end infinite alternate;
+          animation: shake5deg 1s step-end infinite alternate;
 }
 .breakfast__item:nth-child(3) .breakfastBox__deco {
-  -webkit-animation: breakfast 1.3s step-end infinite alternate;
-          animation: breakfast 1.3s step-end infinite alternate;
+  -webkit-animation: shake5deg 1.3s step-end infinite alternate;
+          animation: shake5deg 1.3s step-end infinite alternate;
 }
 .breakfast__item:nth-child(4) .breakfastBox__deco {
-  -webkit-animation: breakfast 0.9s step-end infinite alternate;
-          animation: breakfast 0.9s step-end infinite alternate;
+  -webkit-animation: shake5deg 0.9s step-end infinite alternate;
+          animation: shake5deg 0.9s step-end infinite alternate;
 }
 .breakfast__item:nth-child(5) .breakfastBox__deco {
-  -webkit-animation: breakfast 1.1s step-end infinite alternate;
-          animation: breakfast 1.1s step-end infinite alternate;
+  -webkit-animation: shake5deg 1.1s step-end infinite alternate;
+          animation: shake5deg 1.1s step-end infinite alternate;
 }
 .breakfast__item:nth-child(6) .breakfastBox__deco {
-  -webkit-animation: breakfast 0.8s step-end infinite alternate;
-          animation: breakfast 0.8s step-end infinite alternate;
+  -webkit-animation: shake5deg 0.8s step-end infinite alternate;
+          animation: shake5deg 0.8s step-end infinite alternate;
 }
 
 .breakfastBox {
@@ -3144,6 +3390,7 @@ footer p {
   font-weight: 400;
   line-height: 1.6;
   text-decoration: underline;
+  word-wrap: break-word;
 }
 .references .references__item a:hover {
   color: #FFD19A;
