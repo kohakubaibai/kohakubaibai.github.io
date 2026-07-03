@@ -715,7 +715,7 @@ main {
 				@include rwd-min(320px) {
 					display: none;
 				}
-				@include rwd-min(768px) {
+				@include rwd-min(991.98px) {
 					display: block;
 					width: rem(186);
 					height: rem(169);
@@ -785,7 +785,7 @@ main {
 				height: rem(98);
 			}
 
-			@include rwd-min(320px) {
+			@include rwd-min(768px) {
 				width: rem(198);
 				height: rem(147);
 			}
@@ -805,7 +805,7 @@ main {
 				right: rem(0);
 			}
 
-			@include rwd-min(768px) {
+			@include rwd-min(991.98px) {
 				display: none;
 			}
 		}
@@ -816,6 +816,11 @@ main {
 			@include rwd-min(320px) {
 				width: rem(122);
 				height: rem(111);
+			}
+
+			@include rwd-min(768px) {
+				width: rem(165);
+				height: rem(150);
 			}
 		}
 	}

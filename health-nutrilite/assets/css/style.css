@@ -2000,7 +2000,7 @@ footer p {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 991.98px) {
   .section--reference .wrapper:before {
     display: block;
     width: 11.625rem;
@@ -2069,7 +2069,7 @@ footer p {
     height: 6.125rem;
   }
 }
-@media (min-width: 320px) {
+@media (min-width: 768px) {
   .middleDeco--faq .decoItem {
     width: 12.375rem;
     height: 9.1875rem;
@@ -2087,7 +2087,7 @@ footer p {
     right: 0rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 991.98px) {
   .middleDeco--reference .decoWrap {
     display: none;
   }
@@ -2099,6 +2099,12 @@ footer p {
   .middleDeco--reference .decoItem {
     width: 7.625rem;
     height: 6.9375rem;
+  }
+}
+@media (min-width: 768px) {
+  .middleDeco--reference .decoItem {
+    width: 10.3125rem;
+    height: 9.375rem;
   }
 }
 
