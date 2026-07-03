@@ -561,13 +561,20 @@ main {
 						background-image: url('#{$path}/deco-faq_tr.png');
 						animation: shake5deg 1.5s step-end infinite alternate;
 
-
 						@include rwd-min(320px) {
 							right: rem(-61);
 							top: rem(-61);
 							width: rem(121);
 							height: rem(99);
 						}
+
+						@include rwd-min(768px) {
+							right: rem(-61);
+							top: rem(-100);
+							width: rem(182);
+							height: rem(149);
+						}
+
 						@include rwd-min(991.98px) {
 							right: rem(-304);
 							top: rem(-38);
@@ -582,6 +589,7 @@ main {
 						@include rwd-min(320px) {
 							display: none;
 						}
+
 						@include rwd-min(991.98px) {
 							display: block;
 							left: rem(-240);
@@ -702,7 +710,6 @@ main {
 				content: '';
 				position: absolute;
 				bottom: rem(28);
-				left: rem(-268);
 				z-index: 5;
 
 				@include rwd-min(320px) {
@@ -712,11 +719,16 @@ main {
 					display: block;
 					width: rem(186);
 					height: rem(169);
+					left: rem(-180);
 					background-image: url('#{$path}/deco-reference.png');
 					background-repeat: no-repeat;
 					background-size: contain;
 					background-position: center;
 					animation: shake5deg 0.9s step-end infinite alternate;
+				}
+
+				@include rwd-min(991.98px) {
+					left: rem(-268);
 				}
 			}
 		}
@@ -772,6 +784,12 @@ main {
 				width: rem(132);
 				height: rem(98);
 			}
+
+			@include rwd-min(320px) {
+				width: rem(198);
+				height: rem(147);
+			}
+
 			@include rwd-min(991.98px) {
 				width: rem(278);
 				height: rem(206);

@@ -1860,6 +1860,14 @@ footer p {
     height: 6.1875rem;
   }
 }
+@media (min-width: 768px) {
+  .section--faq .section__content .funcBox--faqAccordion .decoItem--tr {
+    right: -3.8125rem;
+    top: -6.25rem;
+    width: 11.375rem;
+    height: 9.3125rem;
+  }
+}
 @media (min-width: 991.98px) {
   .section--faq .section__content .funcBox--faqAccordion .decoItem--tr {
     right: -19rem;
@@ -1985,7 +1993,6 @@ footer p {
   content: "";
   position: absolute;
   bottom: 1.75rem;
-  left: -16.75rem;
   z-index: 5;
 }
 @media (min-width: 320px) {
@@ -1998,12 +2005,18 @@ footer p {
     display: block;
     width: 11.625rem;
     height: 10.5625rem;
+    left: -11.25rem;
     background-image: url("../images/deco-reference.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     -webkit-animation: shake5deg 0.9s step-end infinite alternate;
             animation: shake5deg 0.9s step-end infinite alternate;
+  }
+}
+@media (min-width: 991.98px) {
+  .section--reference .wrapper:before {
+    left: -16.75rem;
   }
 }
 .section--reference .section__title {
@@ -2054,6 +2067,12 @@ footer p {
   .middleDeco--faq .decoItem {
     width: 8.25rem;
     height: 6.125rem;
+  }
+}
+@media (min-width: 320px) {
+  .middleDeco--faq .decoItem {
+    width: 12.375rem;
+    height: 9.1875rem;
   }
 }
 @media (min-width: 991.98px) {
