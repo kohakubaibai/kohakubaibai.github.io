@@ -85,7 +85,7 @@ main {
 
 .hero {
 	position: relative;
-	background: linear-gradient(107.35deg, #F6F8FD 0%, #E0E8ED 100%);
+	background: linear-gradient(107.35deg, #F6FDF7 0%, #E1EDE0 100%);
 	width: 100dvw;
 	overflow: hidden;
 
@@ -210,7 +210,7 @@ main {
 			.aiTopic {
 				visibility: hidden;
 				max-width: rem(539);
-				color: $text-dark;
+				color: $monochrome22;
 				font-weight: 400;
 				line-height: 1.7;
 
@@ -227,7 +227,7 @@ main {
 				}
 
 				.highlight {
-					color: $secondary;
+					color: $primary;
 				}
 			}
 		}
@@ -336,7 +336,7 @@ main {
 		z-index: 5;
 		font-weight: 700;
 		text-align: center;
-		color: $text-dark;
+		color: $monochrome22;
 		line-height: 1.5;
 
 		@include rwd-min(320px) {
@@ -368,11 +368,11 @@ main {
 		margin: 0 auto;
 
 		p {
-			background: linear-gradient(rgba(56, 142, 255, 0.25), rgba(56, 142, 255, 0.25)) 0 55% / 100% 13px no-repeat;
+			background: linear-gradient(rgba(124, 179, 41, 0.25), rgba(124, 179, 41, 0.25)) 0 55% / 100% 13px no-repeat;
 			-webkit-box-decoration-break: clone;
 			box-decoration-break: clone;
 			display: inline;
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(18);
 			font-weight: 500;
 			line-height: 1.7;
@@ -390,7 +390,7 @@ main {
 			p {
 				margin-top: 0;
 				margin-bottom: rem(24);
-				color: $text-dark;
+				color: $monochrome22;
 				font-size: rem(18);
 				font-weight: 400;
 				line-height: 1.7;
@@ -442,7 +442,7 @@ main {
 	}
 
 	&--amount {
-		background-color: #F3F6FB;
+		background-color: #E9F2ED;
 
 		.section__content {
 			.funcBox--calculator {
@@ -458,7 +458,7 @@ main {
 	}
 
 	&--foods {
-		background-color: #ebf4ff;
+		background-color: #E9EEE0;
 
 		.section__content {
 			.funcBox--ranking {
@@ -501,7 +501,7 @@ main {
 	}
 
 	&--breakfast {
-		background-color: #F3F6FB;
+		background-color: #E9F2ED;
 
 		.section__content {
 
@@ -519,7 +519,7 @@ main {
 	}
 
 	&--strategy {
-		background-color: #ebf4ff;
+		background-color: #E9EEE0;
 
 		.section__content {
 			.funcBox--strategy {
@@ -605,10 +605,10 @@ main {
 
 	&--article {
 		padding: rem(48) 0;
-		background-color: #ebf4ff;
+		background-color: #E9EEE0;
 
 		.section__title {
-			color: $black;
+			color: $monochrome00;
 			line-height: 1.441;
 		}
 
@@ -652,7 +652,7 @@ main {
 				text-align: left;
 
 				.title {
-					color: $text-dark;
+					color: $monochrome22;
 					font-size: rem(18);
 					font-weight: 400;
 					line-height: 1.45;
@@ -670,7 +670,7 @@ main {
 
 					.articleItem__txt {
 						.title {
-							color: $text-dark;
+							color: $monochrome22;
 						}
 					}
 				}
@@ -693,11 +693,12 @@ main {
 	}
 
 	&--reference {
-		background-color: #F3F6FB;
+		background-color: #E9F2ED;
 
 		@include rwd-min(320px) {
 			padding: rem(40) 0 rem(80);
 		}
+
 		@include rwd-min(768px) {
 			padding: rem(40) 0;
 		}
@@ -735,7 +736,7 @@ main {
 
 		.section__title {
 			text-align: left;
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(18);
 			font-weight: 500;
 			line-height: 1.6;
@@ -844,7 +845,7 @@ main {
 		margin-bottom: rem(26);
 
 		.topic {
-			color: $primary;
+			color: $primary-dark;
 			font-weight: 700;
 			line-height: 1.7;
 
@@ -857,7 +858,7 @@ main {
 		}
 
 		.memo {
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: 1.7;
@@ -867,7 +868,7 @@ main {
 	&__content {
 		.remark {
 			margin-top: rem(16);
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: 1.7;
@@ -901,8 +902,8 @@ main {
 			z-index: 10;
 			border-radius: rem(70);
 			padding: rem(4) rem(30);
-			background-color: $secondary;
-			color: $white;
+			background-color: $primary;
+			color: $monochromeFF;
 			font-size: rem(20);
 			font-weight: 700;
 			line-height: 1.7;
@@ -914,7 +915,7 @@ main {
 			margin-top: rem(-21);
 			z-index: 5;
 			border-radius: rem(16);
-			background-color: $white;
+			background-color: $monochromeFF;
 			border: rem(2) solid $secondary;
 			overflow: hidden;
 			padding: rem(12) 0 rem(11);
@@ -937,7 +938,7 @@ main {
 		margin-top: rem(3);
 
 		p {
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(18);
 			font-weight: 400;
 			line-height: 1.7;
@@ -946,7 +947,7 @@ main {
 }
 
 .calculator {
-	background-color: $white;
+	background-color: $monochromeFF;
 	border-radius: rem(16);
 
 	@include rwd-min(320px) {
@@ -967,7 +968,7 @@ main {
 	&__widget {
 
 		.widgetLabel {
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(18);
 			font-weight: 500;
 			line-height: 1.7;
@@ -1022,19 +1023,19 @@ main {
 	.crowdCard {
 		cursor: pointer;
 		padding: rem(8) rem(16);
-		background-color: $white;
+		background-color: $monochromeFF;
 		border: rem(1) solid #E0E0E0;
 		border-radius: rem(16);
 
 		&__name {
-			color: $black;
+			color: $monochrome00;
 			font-size: rem(20);
 			font-weight: 500;
 			line-height: 1.7;
 		}
 
 		&__note {
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: 1.7;
@@ -1071,7 +1072,7 @@ main {
 			display: flex;
 			flex-wrap: nowrap;
 			align-items: flex-end;
-			color: $black;
+			color: $monochrome00;
 
 			.count {
 				font-size: rem(40);
@@ -1087,7 +1088,7 @@ main {
 		}
 
 		&__suggestion {
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(16);
 			font-weight: 500;
 			line-height: 1.7;
@@ -1107,7 +1108,7 @@ main {
 		@include rwd-min(991.98px) {
 			display: grid;
 			grid-template-columns: rem(156) rem(189) rem(205) rem(240);
-			background-color: $secondary;
+			background-color: $primary;
 			border-top-left-radius: rem(16);
 			border-top-right-radius: rem(16);
 			overflow: hidden;
@@ -1126,14 +1127,14 @@ main {
 				font-size: rem(18);
 				font-weight: 700;
 				line-height: 1.4;
-				color: $white;
+				color: $monochromeFF;
 				text-align: center;
 			}
 			.unit {
 				font-family: Arial, sans-serif;
 				font-size: rem(16);
 				font-weight: 400;
-				color: $white;
+				color: $monochromeFF;
 			}
 		}
 	}
@@ -1146,7 +1147,7 @@ main {
 		}
 
 		@include rwd-min(991.98px) {
-			border: rem(1) solid $secondary;
+			border: rem(1) solid $primary;
 			border-bottom-left-radius: rem(16);
 			border-bottom-right-radius: rem(16);
 			overflow: hidden;
@@ -1160,7 +1161,7 @@ main {
 			@include rwd-min(320px) {
 				display: flex;
 				flex-direction: column;
-				background-color: $white;
+				background-color: $monochromeFF;
 				border-radius: rem(16);
 				overflow: hidden;
 				padding-bottom: rem(8);
@@ -1174,10 +1175,10 @@ main {
 				}
 
 				&:nth-child(even) {
-					border-color: $secondary;
+					border-color: $primary;
 
 					.tbodyCell--title {
-						background-color: $secondary;
+						background-color: $primary;
 					}
 				}
 			}
@@ -1193,7 +1194,7 @@ main {
 
 				&:nth-child(odd) {
 					background-color: #F0F0F0;
-					border-bottom-color: $secondary;
+					border-bottom-color: $primary;
 
 					.tbodyCell--title {
 						background-color: #F0F0F0;
@@ -1201,11 +1202,11 @@ main {
 				}
 
 				&:nth-child(even) {
-					background-color: $white;
-					border-bottom-color: $secondary;
+					background-color: $monochromeFF;
+					border-bottom-color: $primary;
 
 					.tbodyCell--title {
-						background-color: $white;
+						background-color: $monochromeFF;
 					}
 				}
 
@@ -1214,7 +1215,7 @@ main {
 				}
 
 				.tbodyCell {
-					border-right: rem(1) solid $secondary;
+					border-right: rem(1) solid $primary;
 
 					&:last-child {
 						border-right: none;
@@ -1250,7 +1251,7 @@ main {
 			&--content,
 			&--memo {
 				.crowdText {
-					color: $text-dark;
+					color: $monochrome22;
 				}
 
 				@include rwd-min(320px) {
@@ -1261,7 +1262,7 @@ main {
 						display: inline-block;
 						flex-shrink: 0;
 						min-width: rem(108);
-						color: $text-dark;
+						color: $monochrome22;
 						font-size: rem(18);
 						font-weight: 700;
 						line-height: 1.7;
@@ -1288,12 +1289,12 @@ main {
 					margin-bottom: rem(8);
 
 					.crowdText {
-						color: $white;
+						color: $monochromeFF;
 						font-size: rem(20);
 						font-weight: 700;
 
 						.memo {
-							color: $white;
+							color: $monochromeFF;
 							font-weight: 400;
 
 							i {
@@ -1308,12 +1309,12 @@ main {
 					margin-bottom: 0;
 
 					.crowdText {
-						color: $text-dark;
+						color: $monochrome22;
 						font-size: rem(18);
 						font-weight: 400;
 
 						.memo {
-							color: $text-light;
+							color: $monochrome61;
 
 							i {
 								display: inline;
@@ -1366,14 +1367,14 @@ main {
 					width: 100%;
 					flex: 0 0 100%;
 					font-size: rem(18);
-					color: $text-light;
+					color: $monochrome61;
 
 
 				}
 
 				@include rwd-min(320px) {
 					.crowdText {
-						color: $text-light;
+						color: $monochrome61;
 
 						br {
 							display: block;
@@ -1383,7 +1384,7 @@ main {
 
 				@include rwd-min(991.98px) {
 					.crowdText {
-						color: $text-dark;
+						color: $monochrome22;
 
 						br {
 							display: none;
@@ -1439,19 +1440,19 @@ main {
 		line-height: 1.7;
 
 		.topic {
-			color: $white;
+			color: $monochromeFF;
 			font-size: rem(20);
 			font-weight: 700;
 		}
 		.memo {
-			color: $white;
+			color: $monochromeFF;
 			font-size: rem(16);
 			font-weight: 400;
 		}
 	}
 
 	&__list {
-		background-color: $white;
+		background-color: $monochromeFF;
 		padding: rem(16) rem(24);
 	}
 
@@ -1462,7 +1463,7 @@ main {
 			display: flex;
 			flex-wrap: nowrap;
 			justify-content: space-between;
-			color: $text-dark;
+			color: $monochrome22;
 			font-weight: 400;
 			line-height: 1.7;
 		}
@@ -1498,18 +1499,18 @@ main {
 	}
 
 	&--animal {
-		border: rem(2) solid $primary;
+		border: rem(2) solid $primary-dark;
 
 		.rankingTable__title {
-			background-color: $primary;
+			background-color: $primary-dark;
 		}
 	}
 
 	&--plant {
-		border: rem(2) solid $secondary;
+		border: rem(2) solid $primary;
 
 		.rankingTable__title {
-			background-color: $secondary;
+			background-color: $primary;
 		}
 	}
 }
@@ -1585,11 +1586,11 @@ main {
 
 .tipBox {
 	padding: rem(20);
-	background-color: $white;
+	background-color: $monochromeFF;
 	border-radius: rem(16);
 
 	&__title {
-		color: $secondary;
+		color: $primary-dark;
 		font-size: rem(20);
 		font-weight: 700;
 		line-height: 1.7;
@@ -1598,7 +1599,7 @@ main {
 
 	&__content {
 		p {
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(18);
 			font-weight: 400;
 			line-height: 1.7;
@@ -1611,7 +1612,7 @@ main {
 		ul {
 			margin-top: rem(10);
 			margin-bottom: rem(10);
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(18);
 			line-height: 1.7;
 
@@ -1627,7 +1628,7 @@ main {
 					left: rem(11);
 					width: rem(5);
 					height: rem(5);
-					background-color: $text-dark;
+					background-color: $monochrome22;
 					border-radius: 50%;
 				}
 			}
@@ -1647,8 +1648,8 @@ main {
 	position: relative;
 	cursor: pointer;
 	height: rem(187);
-	-webkit-perspective: 1000px;
-	perspective: 1000px;
+	-webkit-perspective: rem(1000);
+	perspective: rem(1000);
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 
@@ -1661,9 +1662,9 @@ main {
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		background-color: $white;
+		background-color: $monochromeFF;
 		border-radius: rem(30);
-		border: rem(2) solid $secondary;
+		border: rem(2) solid $primary;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		will-change: transform;
@@ -1707,7 +1708,7 @@ main {
 
 		p {
 			text-align: justify;
-			color: $text-light;
+			color: $monochrome61;
 			font-weight: 400;
 			letter-spacing: rem(0.54);
 
@@ -1796,7 +1797,7 @@ main {
 
 .breakfastBox {
 	position: relative;
-	background-color: $white;
+	background-color: $monochromeFF;
 	border-radius: rem(16);
 	padding-bottom: rem(16);
 
@@ -1837,7 +1838,7 @@ main {
 
 		.status {
 			display: inline-block;
-			color: $black;
+			color: $monochrome00;
 			font-size: rem(18);
 			font-weight: 400;
 			line-height: 1.2;
@@ -1867,7 +1868,7 @@ main {
 
 		.mealAmount {
 			margin-top: rem(4);
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(18);
 			font-weight: 700;
 			line-height: 1.7;
@@ -1875,7 +1876,7 @@ main {
 		}
 		.desc {
 			margin-top: rem(4);
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(18);
 			font-weight: 400;
 			line-height: 1.7;
@@ -1892,7 +1893,7 @@ main {
 
 	&__item {
 		position: relative;
-		background-color: $white;
+		background-color: $monochromeFF;
 		border-radius: rem(16);
 
 		@include rwd-min(320px) {
@@ -1910,7 +1911,7 @@ main {
 			justify-content: center;
 			align-items: center;
 			font-family: Arial, sans-serif;
-			color: $white;
+			color: $monochromeFF;
 			font-weight: 700;
 			font-style: italic;
 			line-height: 1;
@@ -1947,7 +1948,7 @@ main {
 		.content {
 			p {
 				margin: 0;
-				color: $black;
+				color: $monochrome00;
 				font-size: rem(18);
 				font-weight: 400;
 				line-height: 1.7;
@@ -1955,7 +1956,6 @@ main {
 		}
 	}
 }
-
 
 .strategyTab {
 
@@ -1999,7 +1999,7 @@ main {
 			margin-top: rem(4);
 			font-size: rem(20);
 			font-weight: 400;
-			color: $text-dark;
+			color: $monochrome22;
 			line-height: 1.2;
 			@include transition(all,.3s, ease-in);
 		}
@@ -2009,7 +2009,7 @@ main {
 
 			.tabBtn__text {
 				font-weight: 700;
-				color: $white;
+				color: $monochromeFF;
 			}
 
 			.tabBtn__image {
@@ -2030,7 +2030,7 @@ main {
 
 .strategyBox {
 	padding: rem(40) rem(24);
-	background-color: $white;
+	background-color: $monochromeFF;
 	border-bottom-left-radius: rem(16);
 	border-bottom-right-radius: rem(16);
 
@@ -2053,7 +2053,7 @@ main {
 		border-left: rem(4) solid $tertiary-dark;
 
 		p {
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(18);
 			line-height: 1.7;
 			font-weight: 500;
@@ -2073,13 +2073,13 @@ main {
 
 		p {
 			margin: 0;
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(18);
 			line-height: 1.7;
 			font-weight: 400;
 
 			.highlight {
-				color: $text-dark;
+				color: $monochrome22;
 				font-weight: 700;
 			}
 		}
@@ -2120,7 +2120,7 @@ main {
 	}
 	.accordion-body {
 		p {
-			color: $text-dark;
+			color: $monochrome22;
 			font-size: rem(20);
 			line-height: 1.6;
 			font-weight: 400;
@@ -2142,7 +2142,7 @@ main {
 		margin-bottom: rem(10);
 
 		p {
-			color: $text-light;
+			color: $monochrome61;
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: 1.6;

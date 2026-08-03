@@ -14,8 +14,8 @@ $path: '../images';
 body {
 	font-weight: bold;
 	margin: 0 auto;
-	background-color: $white;
-	color: $text-dark;
+	background-color: $monochromeFF;
+	color: $monochrome22;
 
 	&.openNav {
 		width: 100%;
@@ -144,7 +144,7 @@ body {
 		line-height: calc(22/18);
 		font-weight: 400;
 		display: block;
-		color: $text-dark;
+		color: $monochrome22;
 		text-decoration: none;
 
 		&.is-active,
@@ -154,7 +154,7 @@ body {
 
 		@include rwd-not-hover {
 			&:hover {
-				color: $text-dark;
+				color: $monochrome22;
 			}
 		}
 
@@ -210,7 +210,7 @@ body {
 	}
 
 	&.is-scrolled {
-      background-color: $white;
+      background-color: $monochromeFF;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
     }
 
@@ -225,7 +225,7 @@ body {
 		}
 
 		.nav-link {
-			color: $white;
+			color: $monochromeFF;
 		}
 	}
 }
@@ -287,7 +287,7 @@ body {
 
 	&.active {
 		i {
-			background-color: $white;
+			background-color: $monochromeFF;
 
 			&:nth-child(1) {
 				animation: inT 0.8s forwards;
@@ -381,7 +381,7 @@ footer {
 
 	a {
 		transition: .3s;
-		color: $text-dark;
+		color: $monochrome22;
 		text-decoration: none;
 
 		&:hover {
@@ -390,7 +390,7 @@ footer {
 
 		@include rwd-not-hover {
 			&:hover {
-				color: $text-dark;
+				color: $monochrome22;
 			}
 		}
 	}
@@ -407,7 +407,7 @@ footer {
 		margin: 0;
 
 		li {
-			border-right: rem(1) solid $text-dark;
+			border-right: rem(1) solid $monochrome22;
 			padding-right: rem(10);
 			margin: 0 rem(10) rem(10) 0;
 
@@ -419,7 +419,7 @@ footer {
 
 			a {
 				@include f-h5;
-				color: $text-dark;
+				color: $monochrome22;
 
 
 				&:hover {
@@ -459,7 +459,7 @@ footer {
 
 	p {
 		@include f-h5;
-		color: $text-dark;
+		color: $monochrome22;
 		text-align: center;
 		margin-top: 0;
 		margin-bottom: 10px;
