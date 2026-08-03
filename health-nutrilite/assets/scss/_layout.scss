@@ -149,7 +149,7 @@ body {
 
 		&.is-active,
 		&:hover {
-			color: $secondary;
+			color: $primary;
 		}
 
 		@include rwd-not-hover {

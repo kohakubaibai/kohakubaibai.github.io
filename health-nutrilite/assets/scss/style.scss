@@ -454,6 +454,17 @@ main {
 			.funcBox--comparison {
 				max-width: rem(800);
 			}
+
+			.remark {
+				margin-top: rem(24);
+				color: $monochrome61;
+				font-size: rem(16);
+				font-weight: 400;
+				line-height: 1.7;
+				max-width: rem(590);
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
 
@@ -983,6 +994,16 @@ main {
 			&--bar {
 				line-height: rem(4);
 				margin-top: rem(2);
+
+				.minmax {
+					display: flex;
+					justify-content: space-between;
+					margin-top: rem(10);
+					color: $monochrome61;
+					font-size: rem(16);
+					line-height: 1.7;
+					font-weight: 400;
+				}
 			}
 
 			&--option,
@@ -999,7 +1020,7 @@ main {
 		width: 100%;
 		height: 4px;
 		outline: none;
-		background: linear-gradient(to right, #3b7de8 var(--pct, 25%), #e2e8f2 var(--pct, 25%));
+		background: linear-gradient(to right, $primary var(--pct, 25%), #e2e8f2 var(--pct, 25%));
 	}
 
 	input[type=range]::-webkit-slider-thumb {
@@ -1009,7 +1030,7 @@ main {
 		width: rem(16);
 		height: rem(16);
 		border-radius: 50%;
-		background-color: #3b7de8;
+		background-color: $primary;
 	}
 
 	input[type=range]::-moz-range-thumb {
@@ -1017,7 +1038,7 @@ main {
 		width: rem(16);
 		height: rem(16);
 		border-radius: 50%;
-		background-color: #3b7de8;
+		background-color: $primary;
 	}
 
 	.crowdCard {
@@ -1026,6 +1047,7 @@ main {
 		background-color: $monochromeFF;
 		border: rem(1) solid #E0E0E0;
 		border-radius: rem(16);
+		@include transition(all, .3s, ease-in);
 
 		&__name {
 			color: $monochrome00;
@@ -1041,14 +1063,10 @@ main {
 			line-height: 1.7;
 		}
 
-		&.is-active {
-			border: rem(1) solid $secondary;
-			background-color: #DFEDFF;
-
-			.crowdCard__note {
-				font-weight: 500;
-			}
-
+		&.is-active,
+		&:hover {
+			border: rem(1) solid $primary;
+			background-color: $secondary;
 		}
 	}
 
@@ -1367,9 +1385,11 @@ main {
 					width: 100%;
 					flex: 0 0 100%;
 					font-size: rem(18);
-					color: $monochrome61;
 
-
+					a {
+						color: $tertiary-dark;
+						text-decoration: underline;
+					}
 				}
 
 				@include rwd-min(320px) {
@@ -1800,56 +1820,48 @@ main {
 	background-color: $monochromeFF;
 	border-radius: rem(16);
 	padding-bottom: rem(16);
-
-	@include rwd-min(320px) {
-		padding-top: rem(14);
-	}
-
-	@include rwd-min(768px) {
-		padding-top: rem(26);
-	}
+	padding-top: rem(56);
 
 	.breakfastBox__deco {
 		position: absolute;
-		right: 0;
-		top: rem(-30);
-		right: rem(-3);
 
 		@include rwd-min(320px) {
 			width: rem(105);
 			height: rem(81);
+			top: rem(-30);
+			right: rem(-3);
 		}
+
 		@include rwd-min(768px) {
-			width: rem(110);
-			height: rem(85);
+			width: rem(90);
+			height: rem(70);
+			top: rem(-12);
+			right: 0;
 		}
 	}
 
 	&__head {
-		padding-left: rem(10);
-		padding-right: rem(10);
-
-		@include rwd-min(320px) {
-			margin-bottom: rem(24);
-		}
-		@include rwd-min(768px) {
-			margin-bottom: rem(14);
-		}
+		position: absolute;
+		top: rem(8);
+		left: rem(-8);
 
 		.status {
 			display: inline-block;
 			color: $monochrome00;
 			font-size: rem(18);
 			font-weight: 400;
-			line-height: 1.2;
-			@include rotate(-9.3);
+			line-height: rem(22);
 			transform-origin: bottom left;
+			letter-spacing: rem(0.54);
+			padding: rem(4) rem(4) rem(4) rem(8);
+			border-radius: rem(50);
 
-			@include rwd-min(320px) {
-				letter-spacing: rem(0.54);
+			&--warning {
+				background-color: #FFD1D1;
 			}
-			@include rwd-min(768px) {
-				letter-spacing: 0;
+
+			&--standard {
+				background-color: rgba(124, 179, 41, 0.2);
 			}
 		}
 	}
