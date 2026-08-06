@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1112,8 +1113,8 @@ footer ul li:last-child {
   margin: 0;
 }
 footer ul li a {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-weight: 400;
   color: #222222;
 }
@@ -1143,9 +1144,9 @@ footer ul:last-child {
   margin: 0;
 }
 footer p {
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5rem;
   color: #222222;
   text-align: center;
   margin-top: 0;
@@ -1380,11 +1381,21 @@ footer p {
   left: 0;
   z-index: 0;
   background-repeat: no-repeat;
-  background-size: 1920px auto;
-  background-image: url("../images/bg_hero.webp");
   background-position: center center;
   width: 100%;
   height: 100%;
+}
+@media (min-width: 320px) {
+  .hero .heroBg {
+    background-image: url("../images/bg-hero_mb.webp");
+    background-size: cover;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero .heroBg {
+    background-image: url("../images/bg-hero_pc.webp");
+    background-size: 1920px auto;
+  }
 }
 .hero .heroBox {
   display: -webkit-box;
@@ -1480,7 +1491,7 @@ footer p {
   display: block;
   color: #006A45;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 @media (min-width: 320px) {
   .hero .heroBox__text .subTitle span {
@@ -1507,7 +1518,7 @@ footer p {
   max-width: 33.6875rem;
   color: #222222;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 @media (min-width: 320px) {
   .hero .heroBox__text .aiTopic {
@@ -1624,15 +1635,23 @@ footer p {
 .section {
   position: relative;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 @media (min-width: 320px) {
   .section {
     padding: 3.5rem 0;
+    background-size: cover;
   }
 }
 @media (min-width: 768px) {
   .section {
     padding: 5rem 0;
+  }
+}
+@media (min-width: 991.98px) {
+  .section {
+    background-size: auto;
   }
 }
 @media (min-width: 320px) {
@@ -1700,6 +1719,7 @@ footer p {
 .section .aiTopic {
   max-width: 386px;
   margin: 0 auto;
+  text-align: justify;
 }
 .section .aiTopic p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(124, 179, 41, 0.25)), to(rgba(124, 179, 41, 0.25))) 0 55%/100% 13px no-repeat;
@@ -1710,7 +1730,7 @@ footer p {
   color: #222222;
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .section .section__content {
   position: relative;
@@ -1726,7 +1746,7 @@ footer p {
   color: #222222;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .section .section__content > .paragraph p:last-of-type {
   margin-bottom: 0;
@@ -1761,11 +1781,31 @@ footer p {
 .section--intro {
   background-color: #FFFFFF;
 }
+@media (min-width: 320px) {
+  .section--intro {
+    background-image: url("../images/bg-intro_mb.webp");
+  }
+}
+@media (min-width: 991.98px) {
+  .section--intro {
+    background-image: url("../images/bg-intro_pc.webp");
+  }
+}
 .section--intro .section__content .funcBox--function {
   max-width: 50rem;
 }
 .section--amount {
   background-color: #E9F2ED;
+}
+@media (min-width: 320px) {
+  .section--amount {
+    background-image: url("../images/bg-amount_mb.webp");
+  }
+}
+@media (min-width: 991.98px) {
+  .section--amount {
+    background-image: url("../images/bg-amount_pc.webp");
+  }
 }
 .section--amount .section__content .funcBox--calculator {
   max-width: 36.875rem;
@@ -1780,13 +1820,23 @@ footer p {
   color: #616161;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
   max-width: 36.875rem;
   margin-left: auto;
   margin-right: auto;
 }
 .section--foods {
   background-color: #E9EEE0;
+}
+@media (min-width: 320px) {
+  .section--foods {
+    background-image: url("../images/bg-foods_mb.webp");
+  }
+}
+@media (min-width: 991.98px) {
+  .section--foods {
+    background-image: url("../images/bg-foods_pc.webp");
+  }
 }
 .section--foods .section__content .funcBox--ranking {
   max-width: 50rem;
@@ -1809,6 +1859,16 @@ footer p {
 .section--effects {
   background-color: #FFFFFF;
 }
+@media (min-width: 320px) {
+  .section--effects {
+    background-image: url("../images/bg-effects_mb.webp");
+  }
+}
+@media (min-width: 991.98px) {
+  .section--effects {
+    background-image: url("../images/bg-effects_pc.webp");
+  }
+}
 .section--effects .section__content .adviceBox {
   margin-top: 1.5rem;
 }
@@ -1821,6 +1881,16 @@ footer p {
 .section--breakfast {
   background-color: #E9F2ED;
 }
+@media (min-width: 320px) {
+  .section--breakfast {
+    background-image: url("../images/bg-breakfast_mb.webp");
+  }
+}
+@media (min-width: 991.98px) {
+  .section--breakfast {
+    background-image: url("../images/bg-breakfast_pc.webp");
+  }
+}
 .section--breakfast .section__content .funcBox--breakfast {
   max-width: 50rem;
 }
@@ -1832,6 +1902,16 @@ footer p {
 }
 .section--strategy {
   background-color: #E9EEE0;
+}
+@media (min-width: 320px) {
+  .section--strategy {
+    background-image: url("../images/bg-strategy_mb.webp");
+  }
+}
+@media (min-width: 991.98px) {
+  .section--strategy {
+    background-image: url("../images/bg-strategy_pc.webp");
+  }
 }
 .section--strategy .section__content .funcBox--strategy {
   max-width: 50rem;
@@ -2140,7 +2220,7 @@ footer p {
 .funcBox__title .topic {
   color: #006A45;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 @media (min-width: 320px) {
   .funcBox__title .topic {
@@ -2156,14 +2236,14 @@ footer p {
   color: #616161;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .funcBox__content .remark {
   margin-top: 1rem;
   color: #616161;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
   text-align: justify;
 }
 .funcBox__content .remark a {
@@ -2193,7 +2273,7 @@ footer p {
   color: #FFFFFF;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.72;
   letter-spacing: 0.0375rem;
 }
 .functionItem__topic .media {
@@ -2227,7 +2307,7 @@ footer p {
   color: #616161;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .calculator {
@@ -2254,7 +2334,7 @@ footer p {
   color: #222222;
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .calculator__widget .widgetLabel span {
   margin-left: 0.5rem;
@@ -2273,7 +2353,7 @@ footer p {
   margin-top: 0.625rem;
   color: #616161;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.72;
   font-weight: 400;
 }
 .calculator__widget .widgetItem--option, .calculator__widget .widgetItem--result {
@@ -2319,13 +2399,13 @@ footer p {
   color: #000000;
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .calculator .crowdCard__note {
   color: #616161;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .calculator .crowdCard.is-active, .calculator .crowdCard:hover {
   border: 0.0625rem solid #7CB329;
@@ -2374,13 +2454,13 @@ footer p {
 .calculator .resultBox__amount .unit {
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .calculator .resultBox__suggestion {
   color: #616161;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .crowdTable {
@@ -2575,7 +2655,7 @@ footer p {
     color: #222222;
     font-size: 1.125rem;
     font-weight: 700;
-    line-height: 1.7;
+    line-height: 1.72;
     white-space: nowrap;
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -2688,7 +2768,7 @@ footer p {
 }
 .crowdTable .crowdText {
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .crowdTable .crowdText .memo {
   font-size: 1rem;
@@ -2743,7 +2823,7 @@ footer p {
 }
 .rankingTable__title {
   padding: 1rem 1.5rem 0.5rem;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .rankingTable__title .topic {
   color: #FFFFFF;
@@ -2771,7 +2851,7 @@ footer p {
           justify-content: space-between;
   color: #222222;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .rankingTable .foodList .foodName {
   display: -webkit-box;
@@ -2888,14 +2968,14 @@ footer p {
   color: #006A45;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.72;
   margin-bottom: 0.625rem;
 }
 .tipBox__content p {
   color: #222222;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .tipBox__content p:last-of-type {
   margin-bottom: 0;
@@ -2905,7 +2985,7 @@ footer p {
   margin-bottom: 0.625rem;
   color: #222222;
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .tipBox__content ul > li {
   position: relative;
@@ -3013,7 +3093,7 @@ footer p {
 @media (min-width: 768px) {
   .defectCard .defectCard__back p {
     font-size: 1.125rem;
-    line-height: 1.7;
+    line-height: 1.72;
   }
 }
 .defectCard:hover .defectCard__front {
@@ -3125,6 +3205,10 @@ footer p {
   padding: 0.25rem 0.25rem 0.25rem 0.5rem;
   border-radius: 3.125rem;
 }
+.breakfastBox__head .status .emoji {
+  font-family: "Nerko One", cursive;
+  margin-right: 2px;
+}
 .breakfastBox__head .status--warning {
   background-color: #FFD1D1;
 }
@@ -3139,7 +3223,7 @@ footer p {
   color: #006A45;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.72;
   letter-spacing: 0.0375rem;
 }
 .breakfastBox__body .mealAmount {
@@ -3147,7 +3231,7 @@ footer p {
   color: #222222;
   font-size: 1.125rem;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.72;
   letter-spacing: 0.03375rem;
 }
 .breakfastBox__body .desc {
@@ -3155,7 +3239,7 @@ footer p {
   color: #616161;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
   letter-spacing: -0.0125rem;
   text-align: justify;
 }
@@ -3230,14 +3314,14 @@ footer p {
   color: #EF8200;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .improvement__item .content p {
   margin: 0;
   color: #000000;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .strategyTab .nav--strategy > .nav-item {
@@ -3331,7 +3415,7 @@ footer p {
 .strategyBox__content p {
   color: #222222;
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.72;
   font-weight: 500;
 }
 @media (min-width: 320px) {
@@ -3351,7 +3435,7 @@ footer p {
   margin: 0;
   color: #616161;
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.72;
   font-weight: 400;
 }
 .strategyBox__paragraph p .highlight {

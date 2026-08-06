@@ -418,7 +418,9 @@ footer {
 			}
 
 			a {
-				@include f-h5;
+				font-size: rem(15);
+				line-height: rem(18);
+				font-weight: 400;
 				color: $monochrome22;
 
 
@@ -458,7 +460,9 @@ footer {
 	}
 
 	p {
-		@include f-h5;
+		font-size: rem(14);
+		font-weight: 300;
+		line-height: rem(24);
 		color: $monochrome22;
 		text-align: center;
 		margin-top: 0;
