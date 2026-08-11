@@ -67,30 +67,38 @@ $path: '../images';
 
 .adviceBox {
     position: relative;
-    padding-top: rem(30);
+    padding: rem(16);
+    background-color: #FFD19A;
+    border-radius: rem(8);
 
-    &__deco {
-        position: absolute;
-        top: rem(14);
-        left: rem(-9);
-        width: rem(84);
-        height: rem(77);
+    &__title {
+        margin-bottom: rem(4);
+        color: $monochrome22;
+        font-size: rem(18);
+        font-weight: 700;
+        line-height: 1.72;
     }
 
     &__content {
-        background-color: #FFD19A;
-        border-radius: rem(8);
-        padding: rem(8) rem(16) rem(8) rem(80);
 
         p {
             color: $monochrome22;
             font-size: rem(18);
             font-weight: 400;
-            line-height: 1.7;
+            line-height: 1.72;
 
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    &__deco {
+        text-align: right;
+        margin-top: rem(4);
+
+        img {
+            width: rem(98);
         }
     }
 }
