@@ -34,6 +34,36 @@
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-MCMN77');</script>
 	<!-- End Google Tag Manager -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+			appId: '788399774562640',
+			cookie: true,
+			xfbml: false,
+			version: 'v24.0'
+			});
+			console.log('Facebook SDK ready');
+		};
+		(function(d, s, id) {
+			var js,
+			fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {
+			return;
+			}
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://connect.facebook.net/zh_TW/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		// 點擊分享
+		document.getElementById('facebookShare').onclick = function() {
+			FB.ui({
+			display: 'popup',
+			method: 'share',
+			href: 'https://event.commonhealth.com.tw/2026protein/',
+			}, function(response) {});
+		}
+		</script>
 </head>
 
 <body>
@@ -72,7 +102,7 @@
 					<li class="nav-item"><a class="nav-link click_event" href="#faq" data-title="2026protein" data-label="menu_常見問題">常見問題</a></li>
 					<li class="nav-item"><a class="nav-link click_event" href="#article" data-title="2026protein" data-label="menu_相關文章">相關文章</a></li>
 					<li class="nav-item nav-item-share">
-						<a class="nav-link nav-link-share click_event" href="https://www.facebook.com/sharer/sharer.php?u=https://event.commonhealth.com.tw/2026protein" data-title="2026protein" data-label="menu_臉書分享" target="_blank"><img src="assets/images/icon-share_fb.png" alt="臉書分享"></a>
+						<a id="facebookShare" class="nav-link nav-link-share click_event" href="https://www.facebook.com/sharer/sharer.php?u=https://event.commonhealth.com.tw/2026protein" data-title="2026protein" data-label="menu_臉書分享" target="_blank"><img src="assets/images/icon-share_fb.png" alt="臉書分享"></a>
 						<a class="nav-link nav-link-share click_event" href="https://line.me/R/msg/text/蛋白質完整指南｜蛋白質攝取量、食物來源與優質蛋白質補充全攻略" data-title="2026protein" data-label="menu_Line分享" target="_blank"><img src="assets/images/icon-share_line.png" alt="Line分享"></a>
 					</li>
 				</ul>
@@ -782,7 +812,9 @@
 							<div class="adviceBox__content">
 								<p>可選擇植物蛋白質且有即溶設計的補充品，加入豆漿或水中30秒即可飲用，正是忙碌時快速補足蛋白質缺口的實用選項。</p>
 							</div>
-							<div class="adviceBox__deco"><img src="assets/images/logo_nutrilite.png" class="image" alt="紐崔萊建議"></div>
+							<div class="adviceBox__deco">
+								<img src="assets/images/logo_nutrilite.png" class="image" alt="紐崔萊建議">
+							</div>
 						</div>
 					</div>
 				</div>
