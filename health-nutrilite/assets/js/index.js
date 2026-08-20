@@ -23,7 +23,7 @@ const GROUPS = [
   { key: 'general',  label: '一般成人',    note: '每公斤 需攝取1.1g蛋白質', coef: [1.1, 1.1] },
   { key: 'senior',   label: '銀髮族',      note: '每公斤 需攝取1.2g蛋白質', coef: [1.2, 1.2] },
   { key: 'athlete',  label: '運動/增肌族', note: '每公斤 需攝取1.3~1.6g 蛋白質', coef: [1.3, 1.6] },
-  { key: 'maternal', label: '孕哺期女性',  note: '每公斤 需攝取1.1g蛋白質', coef: [1.1, 1.1] },
+  { key: 'maternal', label: '孕哺期女性',  note: '每公斤 需攝取1.1g蛋白質<br>額外增加10~15g', coef: [1.1, 1.1], extra: [10, 15] },
 ];
 
 const slider      = document.getElementById('weightSlider');
@@ -62,8 +62,10 @@ function render() {
 
   // find active group
   const g = GROUPS.find(x => x.key === activeKey);
-  const [lo, hi] = [w * g.coef[0], w * g.coef[1]];
-  const isRange = g.coef[0] !== g.coef[1];
+  const [exLo, exHi] = g.extra || [0, 0];
+  const lo = w * g.coef[0] + exLo;
+  const hi = w * g.coef[1] + exHi;
+  const isRange = lo !== hi;
 
   if (isRange) {
     resultVal.className = 'count';
@@ -394,5 +396,11 @@ $(function () {
 	$(window).on('resize', function () {
 		clearTimeout(strategyTabResizeTimer);
 		strategyTabResizeTimer = setTimeout(equalizeStrategyTabPanes, 250);
+	});
+
+
+	//蛋白質攝取卡片翻轉
+	$('.js-defectCard').on('click', function(){
+		$(this).toggleClass('is-active');
 	});
 });
