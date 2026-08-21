@@ -2344,6 +2344,21 @@ footer p {
   font-weight: 500;
   line-height: 1.72;
 }
+.calculator__widget .widgetLabel .stepLabel {
+  display: inline-block;
+  background-color: #DFF8B9;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  text-align: center;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  font-weight: 500;
+}
 .calculator__widget .widgetLabel span {
   margin-left: 0.5rem;
 }

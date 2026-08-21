@@ -58,7 +58,7 @@ function render() {
   const w = +slider.value;
 
   // label
-  weightLabel.innerHTML = `體重：<span>${w}</span> 公斤`;
+  weightLabel.innerHTML = `${w}`;
 
   // find active group
   const g = GROUPS.find(x => x.key === activeKey);

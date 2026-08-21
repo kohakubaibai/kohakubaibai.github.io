@@ -34,36 +34,6 @@
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-MCMN77');</script>
 	<!-- End Google Tag Manager -->
-	<script>
-		window.fbAsyncInit = function() {
-			FB.init({
-			appId: '788399774562640',
-			cookie: true,
-			xfbml: false,
-			version: 'v24.0'
-			});
-			console.log('Facebook SDK ready');
-		};
-		(function(d, s, id) {
-			var js,
-			fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {
-			return;
-			}
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "https://connect.facebook.net/zh_TW/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-		// 點擊分享
-		document.getElementById('facebookShare').onclick = function() {
-			FB.ui({
-			display: 'popup',
-			method: 'share',
-			href: 'https://event.commonhealth.com.tw/2026protein/',
-			}, function(response) {});
-		}
-		</script>
 </head>
 
 <body>
@@ -470,20 +440,20 @@
 						<div class="funcBox__content wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".2s">
 							<div class="calculator">
 								<div class="calculator__widget">
-									<div id="weightLabel" class="widgetLabel">體重：<span>60</span> 公斤</div>
+									<div class="widgetLabel"><i class="stepLabel">1</i>體重：<span id="weightLabel" >60</span> 公斤</div>
 									<div class="widgetItem widgetItem--bar">
 										<input id="weightSlider" class="weightSlider" type="range" min="30" max="120" value="60" step="1">
 										<div class="minmax"><span>30 kg</span><span>120 kg</span></div>
 									</div>
 								</div>
 								<div class="calculator__widget">
-									<div class="widgetLabel">選擇族群</div>
+									<div class="widgetLabel"><i class="stepLabel">2</i>選擇族群</div>
 									<div class="widgetItem widgetItem--option">
 										<div id="groupsGrid" class="gridWrap gridWrap--calculator"></div>
 									</div>
 								</div>
 								<div class="calculator__widget">
-									<div class="widgetLabel">每日建議攝取量</div>
+									<div class="widgetLabel"><i class="stepLabel">3</i>每日建議攝取量</div>
 									<div class="widgetItem widgetItem--result">
 										<div class="resultBox">
 											<div class="resultBox__amount">

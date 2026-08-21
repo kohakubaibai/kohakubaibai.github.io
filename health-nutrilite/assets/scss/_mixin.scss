@@ -2,6 +2,10 @@
     font-family: "Noto Sans TC", serif;
 }
 
+@mixin f-roboto {
+    font-family: "Roboto", sans-serif;
+}
+
 @mixin box-sizing($type) {
     -moz-box-sizing: $type;
     -webkit-box-sizing: $type;

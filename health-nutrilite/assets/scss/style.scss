@@ -1060,6 +1060,22 @@ main {
 			font-weight: 500;
 			line-height: 1.72;
 
+			.stepLabel {
+				display: inline-block;
+				background-color: $secondary;
+				width: rem(30);
+				height: rem(30);
+				border-radius: 50%;
+				margin-right: rem(8);
+				text-align: center;
+				color: $monochrome00;
+				@include f-roboto;
+				font-style: normal;
+				font-size: rem(18);
+				line-height: rem(30);
+				font-weight: 500;
+			}
+
 			span {
 				margin-left: rem(8);
 			}
